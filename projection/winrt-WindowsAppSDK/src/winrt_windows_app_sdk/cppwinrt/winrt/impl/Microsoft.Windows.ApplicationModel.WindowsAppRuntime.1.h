@@ -48,5 +48,26 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::ApplicationModel::WindowsAppRu
         IDeploymentResultFactory(std::nullptr_t = nullptr) noexcept {}
         IDeploymentResultFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IReleaseInfoStatics :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IReleaseInfoStatics>
+    {
+        IReleaseInfoStatics(std::nullptr_t = nullptr) noexcept {}
+        IReleaseInfoStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IRuntimeCompatibilityOptions :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IRuntimeCompatibilityOptions>
+    {
+        IRuntimeCompatibilityOptions(std::nullptr_t = nullptr) noexcept {}
+        IRuntimeCompatibilityOptions(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IRuntimeInfoStatics :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IRuntimeInfoStatics>
+    {
+        IRuntimeInfoStatics(std::nullptr_t = nullptr) noexcept {}
+        IRuntimeInfoStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
 }
 #endif

@@ -4,6 +4,9 @@
 
 ## [Unreleased]
 
+### Changed
+- Updated Windows App SDK to 1.7.250310001.
+
 ### Fixed
 - Fixed ``IIterator.__iter__()`` returning an object without taking a reference.
 - Fixed ``IIterator.__iter__()`` returning an invalid object pointer, leading to a crash.

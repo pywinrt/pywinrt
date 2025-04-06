@@ -55,6 +55,13 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::Widgets::Providers
         IWidgetInfo(std::nullptr_t = nullptr) noexcept {}
         IWidgetInfo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IWidgetInfo2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IWidgetInfo2>
+    {
+        IWidgetInfo2(std::nullptr_t = nullptr) noexcept {}
+        IWidgetInfo2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IWidgetManager :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IWidgetManager>
@@ -62,12 +69,26 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::Widgets::Providers
         IWidgetManager(std::nullptr_t = nullptr) noexcept {}
         IWidgetManager(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IWidgetManager2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IWidgetManager2>
+    {
+        IWidgetManager2(std::nullptr_t = nullptr) noexcept {}
+        IWidgetManager2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IWidgetManagerStatics :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IWidgetManagerStatics>
     {
         IWidgetManagerStatics(std::nullptr_t = nullptr) noexcept {}
         IWidgetManagerStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IWidgetMessageReceivedArgs :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IWidgetMessageReceivedArgs>
+    {
+        IWidgetMessageReceivedArgs(std::nullptr_t = nullptr) noexcept {}
+        IWidgetMessageReceivedArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IWidgetProvider :
         winrt::Windows::Foundation::IInspectable,
@@ -97,12 +118,61 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::Widgets::Providers
         IWidgetProviderErrors(std::nullptr_t = nullptr) noexcept {}
         IWidgetProviderErrors(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IWidgetProviderMessage :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IWidgetProviderMessage>
+    {
+        IWidgetProviderMessage(std::nullptr_t = nullptr) noexcept {}
+        IWidgetProviderMessage(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IWidgetResourceProvider :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IWidgetResourceProvider>
+    {
+        IWidgetResourceProvider(std::nullptr_t = nullptr) noexcept {}
+        IWidgetResourceProvider(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IWidgetResourceRequest :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IWidgetResourceRequest>
+    {
+        IWidgetResourceRequest(std::nullptr_t = nullptr) noexcept {}
+        IWidgetResourceRequest(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IWidgetResourceRequestedArgs :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IWidgetResourceRequestedArgs>
+    {
+        IWidgetResourceRequestedArgs(std::nullptr_t = nullptr) noexcept {}
+        IWidgetResourceRequestedArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IWidgetResourceResponse :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IWidgetResourceResponse>
+    {
+        IWidgetResourceResponse(std::nullptr_t = nullptr) noexcept {}
+        IWidgetResourceResponse(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IWidgetResourceResponseFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IWidgetResourceResponseFactory>
+    {
+        IWidgetResourceResponseFactory(std::nullptr_t = nullptr) noexcept {}
+        IWidgetResourceResponseFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IWidgetUpdateRequestOptions :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IWidgetUpdateRequestOptions>
     {
         IWidgetUpdateRequestOptions(std::nullptr_t = nullptr) noexcept {}
         IWidgetUpdateRequestOptions(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IWidgetUpdateRequestOptions2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IWidgetUpdateRequestOptions2>
+    {
+        IWidgetUpdateRequestOptions2(std::nullptr_t = nullptr) noexcept {}
+        IWidgetUpdateRequestOptions2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IWidgetUpdateRequestOptionsFactory :
         winrt::Windows::Foundation::IInspectable,

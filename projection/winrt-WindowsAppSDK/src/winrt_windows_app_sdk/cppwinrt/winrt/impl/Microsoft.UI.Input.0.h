@@ -11,6 +11,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Content
 {
     struct ContentIsland;
     struct IContentSiteBridge;
+    struct IContentSiteLink;
 }
 WINRT_EXPORT namespace winrt::Microsoft::UI::Dispatching
 {
@@ -219,6 +220,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
     struct IInputFocusControllerStatics;
     struct IInputFocusNavigationHost;
     struct IInputFocusNavigationHostStatics;
+    struct IInputFocusNavigationHostStatics2;
     struct IInputKeyboardSource;
     struct IInputKeyboardSource2;
     struct IInputKeyboardSourceStatics;
@@ -339,6 +341,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Input::IInputFocusControllerStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IInputFocusNavigationHost>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IInputFocusNavigationHostStatics>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::IInputFocusNavigationHostStatics2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IInputKeyboardSource>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IInputKeyboardSource2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IInputKeyboardSourceStatics>{ using type = interface_category; };
@@ -533,6 +536,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputFocusControllerStatics> = L"Microsoft.UI.Input.IInputFocusControllerStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputFocusNavigationHost> = L"Microsoft.UI.Input.IInputFocusNavigationHost";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputFocusNavigationHostStatics> = L"Microsoft.UI.Input.IInputFocusNavigationHostStatics";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputFocusNavigationHostStatics2> = L"Microsoft.UI.Input.IInputFocusNavigationHostStatics2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputKeyboardSource> = L"Microsoft.UI.Input.IInputKeyboardSource";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputKeyboardSource2> = L"Microsoft.UI.Input.IInputKeyboardSource2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputKeyboardSourceStatics> = L"Microsoft.UI.Input.IInputKeyboardSourceStatics";
@@ -601,6 +605,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputFocusControllerStatics>{ 0xAEB311DA,0xDA9B,0x5A1B,{ 0x92,0xF4,0x83,0xDD,0xDE,0x93,0x3E,0x00 } }; // AEB311DA-DA9B-5A1B-92F4-83DDDE933E00
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputFocusNavigationHost>{ 0x53C2A147,0x932C,0x5486,{ 0xA9,0xC6,0xF6,0xC5,0xA9,0xC6,0x59,0x56 } }; // 53C2A147-932C-5486-A9C6-F6C5A9C65956
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputFocusNavigationHostStatics>{ 0xC9C62CD1,0x73DB,0x5AA9,{ 0xB8,0x9D,0x14,0x35,0x09,0xDB,0x8F,0x37 } }; // C9C62CD1-73DB-5AA9-B89D-143509DB8F37
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputFocusNavigationHostStatics2>{ 0x82505F60,0xEF7B,0x55D8,{ 0x83,0x62,0x8C,0xC2,0x84,0x02,0x66,0xA1 } }; // 82505F60-EF7B-55D8-8362-8CC2840266A1
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputKeyboardSource>{ 0xED61B906,0x16AD,0x5DF7,{ 0xA5,0x50,0x5E,0x6F,0x7D,0x22,0x29,0xF7 } }; // ED61B906-16AD-5DF7-A550-5E6F7D2229F7
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputKeyboardSource2>{ 0x79D1C9B6,0xB3C9,0x5EC2,{ 0x8A,0x5B,0x70,0x70,0x88,0x78,0x7F,0x78 } }; // 79D1C9B6-B3C9-5EC2-8A5B-707088787F78
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputKeyboardSourceStatics>{ 0xF4E1563D,0x8C2E,0x5BCD,{ 0xB7,0x84,0x47,0xAD,0xEA,0xA3,0xCD,0x7E } }; // F4E1563D-8C2E-5BCD-B784-47ADEAA3CD7E
@@ -988,6 +993,13 @@ namespace winrt::impl
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
             virtual int32_t __stdcall GetForSiteBridge(void*, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Input::IInputFocusNavigationHostStatics2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall GetForSiteLink(void*, void**) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Input::IInputKeyboardSource>
@@ -1782,6 +1794,15 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Input::IInputFocusNavigationHostStatics>
     {
         template <typename D> using type = consume_Microsoft_UI_Input_IInputFocusNavigationHostStatics<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Input_IInputFocusNavigationHostStatics2
+    {
+        auto GetForSiteLink(winrt::Microsoft::UI::Content::IContentSiteLink const& contentSiteLink) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Input::IInputFocusNavigationHostStatics2>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Input_IInputFocusNavigationHostStatics2<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Input_IInputKeyboardSource

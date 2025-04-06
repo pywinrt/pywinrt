@@ -204,6 +204,22 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Windowing::IAppWindow3)->get_DispatcherQueue(&value));
         return winrt::Microsoft::UI::Dispatching::DispatcherQueue{ value, take_ownership_from_abi };
     }
+    template <typename D> auto consume_Microsoft_UI_Windowing_IAppWindow4<D>::SetTaskbarIcon(param::hstring const& iconPath) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Windowing::IAppWindow4)->SetTaskbarIcon(*(void**)(&iconPath)));
+    }
+    template <typename D> auto consume_Microsoft_UI_Windowing_IAppWindow4<D>::SetTaskbarIcon(winrt::Microsoft::UI::IconId const& iconId) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Windowing::IAppWindow4)->SetTaskbarIconWithIconId(impl::bind_in(iconId)));
+    }
+    template <typename D> auto consume_Microsoft_UI_Windowing_IAppWindow4<D>::SetTitleBarIcon(param::hstring const& iconPath) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Windowing::IAppWindow4)->SetTitleBarIcon(*(void**)(&iconPath)));
+    }
+    template <typename D> auto consume_Microsoft_UI_Windowing_IAppWindow4<D>::SetTitleBarIcon(winrt::Microsoft::UI::IconId const& iconId) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Windowing::IAppWindow4)->SetTitleBarIconWithIconId(impl::bind_in(iconId)));
+    }
     template <typename D> auto consume_Microsoft_UI_Windowing_IAppWindowChangedEventArgs<D>::DidPositionChange() const
     {
         bool value{};
@@ -474,6 +490,16 @@ namespace winrt::impl
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Windowing::IAppWindowTitleBar2)->put_PreferredHeightOption(static_cast<int32_t>(value)));
     }
+    template <typename D> auto consume_Microsoft_UI_Windowing_IAppWindowTitleBar3<D>::PreferredTheme() const
+    {
+        winrt::Microsoft::UI::Windowing::TitleBarTheme value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Windowing::IAppWindowTitleBar3)->get_PreferredTheme(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Windowing_IAppWindowTitleBar3<D>::PreferredTheme(winrt::Microsoft::UI::Windowing::TitleBarTheme const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Windowing::IAppWindowTitleBar3)->put_PreferredTheme(static_cast<int32_t>(value)));
+    }
     template <typename D> auto consume_Microsoft_UI_Windowing_IAppWindowTitleBarStatics<D>::IsCustomizationSupported() const
     {
         bool result{};
@@ -743,6 +769,46 @@ namespace winrt::impl
     template <typename D> auto consume_Microsoft_UI_Windowing_IOverlappedPresenter2<D>::Restore(bool activateWindow) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Windowing::IOverlappedPresenter2)->RestoreWithActivation(activateWindow));
+    }
+    template <typename D> auto consume_Microsoft_UI_Windowing_IOverlappedPresenter3<D>::PreferredMinimumHeight() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Windowing::IOverlappedPresenter3)->get_PreferredMinimumHeight(&value));
+        return winrt::Windows::Foundation::IReference<int32_t>{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Windowing_IOverlappedPresenter3<D>::PreferredMinimumHeight(winrt::Windows::Foundation::IReference<int32_t> const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Windowing::IOverlappedPresenter3)->put_PreferredMinimumHeight(*(void**)(&value)));
+    }
+    template <typename D> auto consume_Microsoft_UI_Windowing_IOverlappedPresenter3<D>::PreferredMinimumWidth() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Windowing::IOverlappedPresenter3)->get_PreferredMinimumWidth(&value));
+        return winrt::Windows::Foundation::IReference<int32_t>{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Windowing_IOverlappedPresenter3<D>::PreferredMinimumWidth(winrt::Windows::Foundation::IReference<int32_t> const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Windowing::IOverlappedPresenter3)->put_PreferredMinimumWidth(*(void**)(&value)));
+    }
+    template <typename D> auto consume_Microsoft_UI_Windowing_IOverlappedPresenter3<D>::PreferredMaximumWidth() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Windowing::IOverlappedPresenter3)->get_PreferredMaximumWidth(&value));
+        return winrt::Windows::Foundation::IReference<int32_t>{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Windowing_IOverlappedPresenter3<D>::PreferredMaximumWidth(winrt::Windows::Foundation::IReference<int32_t> const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Windowing::IOverlappedPresenter3)->put_PreferredMaximumWidth(*(void**)(&value)));
+    }
+    template <typename D> auto consume_Microsoft_UI_Windowing_IOverlappedPresenter3<D>::PreferredMaximumHeight() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Windowing::IOverlappedPresenter3)->get_PreferredMaximumHeight(&value));
+        return winrt::Windows::Foundation::IReference<int32_t>{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Windowing_IOverlappedPresenter3<D>::PreferredMaximumHeight(winrt::Windows::Foundation::IReference<int32_t> const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Windowing::IOverlappedPresenter3)->put_PreferredMaximumHeight(*(void**)(&value)));
     }
     template <typename D> auto consume_Microsoft_UI_Windowing_IOverlappedPresenterStatics<D>::Create() const
     {
@@ -1055,6 +1121,40 @@ namespace winrt::impl
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
             *value = detach_from<winrt::Microsoft::UI::Dispatching::DispatcherQueue>(this->shim().DispatcherQueue());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Windowing::IAppWindow4> : produce_base<D, winrt::Microsoft::UI::Windowing::IAppWindow4>
+    {
+        int32_t __stdcall SetTaskbarIcon(void* iconPath) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SetTaskbarIcon(*reinterpret_cast<hstring const*>(&iconPath));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall SetTaskbarIconWithIconId(struct struct_Microsoft_UI_IconId iconId) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SetTaskbarIcon(*reinterpret_cast<winrt::Microsoft::UI::IconId const*>(&iconId));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall SetTitleBarIcon(void* iconPath) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SetTitleBarIcon(*reinterpret_cast<hstring const*>(&iconPath));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall SetTitleBarIconWithIconId(struct struct_Microsoft_UI_IconId iconId) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SetTitleBarIcon(*reinterpret_cast<winrt::Microsoft::UI::IconId const*>(&iconId));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1491,6 +1591,26 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Windowing::IAppWindowTitleBar3> : produce_base<D, winrt::Microsoft::UI::Windowing::IAppWindowTitleBar3>
+    {
+        int32_t __stdcall get_PreferredTheme(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Windowing::TitleBarTheme>(this->shim().PreferredTheme());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_PreferredTheme(int32_t value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().PreferredTheme(*reinterpret_cast<winrt::Microsoft::UI::Windowing::TitleBarTheme const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::UI::Windowing::IAppWindowTitleBarStatics> : produce_base<D, winrt::Microsoft::UI::Windowing::IAppWindowTitleBarStatics>
     {
         int32_t __stdcall IsCustomizationSupported(bool* result) noexcept final try
@@ -1905,6 +2025,72 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Windowing::IOverlappedPresenter3> : produce_base<D, winrt::Microsoft::UI::Windowing::IOverlappedPresenter3>
+    {
+        int32_t __stdcall get_PreferredMinimumHeight(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::IReference<int32_t>>(this->shim().PreferredMinimumHeight());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_PreferredMinimumHeight(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().PreferredMinimumHeight(*reinterpret_cast<winrt::Windows::Foundation::IReference<int32_t> const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_PreferredMinimumWidth(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::IReference<int32_t>>(this->shim().PreferredMinimumWidth());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_PreferredMinimumWidth(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().PreferredMinimumWidth(*reinterpret_cast<winrt::Windows::Foundation::IReference<int32_t> const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_PreferredMaximumWidth(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::IReference<int32_t>>(this->shim().PreferredMaximumWidth());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_PreferredMaximumWidth(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().PreferredMaximumWidth(*reinterpret_cast<winrt::Windows::Foundation::IReference<int32_t> const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_PreferredMaximumHeight(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::IReference<int32_t>>(this->shim().PreferredMaximumHeight());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_PreferredMaximumHeight(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().PreferredMaximumHeight(*reinterpret_cast<winrt::Windows::Foundation::IReference<int32_t> const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::UI::Windowing::IOverlappedPresenterStatics> : produce_base<D, winrt::Microsoft::UI::Windowing::IOverlappedPresenterStatics>
     {
         int32_t __stdcall Create(void** result) noexcept final try
@@ -2044,6 +2230,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Windowing::IAppWindow> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Windowing::IAppWindow2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Windowing::IAppWindow3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Windowing::IAppWindow4> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Windowing::IAppWindowChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Windowing::IAppWindowChangedEventArgs2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Windowing::IAppWindowClosingEventArgs> : winrt::impl::hash_base {};
@@ -2053,6 +2240,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Windowing::IAppWindowStatics2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Windowing::IAppWindowTitleBar> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Windowing::IAppWindowTitleBar2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Windowing::IAppWindowTitleBar3> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Windowing::IAppWindowTitleBarStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Windowing::ICompactOverlayPresenter> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Windowing::ICompactOverlayPresenterStatics> : winrt::impl::hash_base {};
@@ -2064,6 +2252,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Windowing::IFullScreenPresenterStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Windowing::IOverlappedPresenter> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Windowing::IOverlappedPresenter2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Windowing::IOverlappedPresenter3> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Windowing::IOverlappedPresenterStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Windowing::IOverlappedPresenterStatics2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Windowing::AppWindow> : winrt::impl::hash_base {};

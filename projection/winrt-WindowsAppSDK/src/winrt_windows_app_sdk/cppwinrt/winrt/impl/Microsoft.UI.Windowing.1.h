@@ -27,6 +27,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Windowing
         IAppWindow3(std::nullptr_t = nullptr) noexcept {}
         IAppWindow3(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IAppWindow4 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IAppWindow4>
+    {
+        IAppWindow4(std::nullptr_t = nullptr) noexcept {}
+        IAppWindow4(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IAppWindowChangedEventArgs :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IAppWindowChangedEventArgs>
@@ -89,6 +96,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Windowing
     {
         IAppWindowTitleBar2(std::nullptr_t = nullptr) noexcept {}
         IAppWindowTitleBar2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IAppWindowTitleBar3 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IAppWindowTitleBar3>
+    {
+        IAppWindowTitleBar3(std::nullptr_t = nullptr) noexcept {}
+        IAppWindowTitleBar3(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IAppWindowTitleBarStatics :
         winrt::Windows::Foundation::IInspectable,
@@ -166,6 +180,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Windowing
     {
         IOverlappedPresenter2(std::nullptr_t = nullptr) noexcept {}
         IOverlappedPresenter2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IOverlappedPresenter3 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IOverlappedPresenter3>
+    {
+        IOverlappedPresenter3(std::nullptr_t = nullptr) noexcept {}
+        IOverlappedPresenter3(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IOverlappedPresenterStatics :
         winrt::Windows::Foundation::IInspectable,

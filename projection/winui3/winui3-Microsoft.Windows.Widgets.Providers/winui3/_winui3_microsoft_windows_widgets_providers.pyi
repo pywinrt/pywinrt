@@ -11,6 +11,8 @@ from abc import abstractmethod
 import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
+import winrt.windows.foundation.collections as windows_foundation_collections
+import winrt.windows.storage.streams as windows_storage_streams
 import winui3.microsoft.windows.widgets as microsoft_windows_widgets
 
 Self = typing.TypeVar('Self')
@@ -95,6 +97,9 @@ class WidgetInfo(winrt.system.Object):
     # Microsoft.Windows.Widgets.Providers.WidgetContext Microsoft.Windows.Widgets.Providers.WidgetInfo::get_WidgetContext()
     @_property
     def widget_context(self) -> WidgetContext: ...
+    # System.Boolean Microsoft.Windows.Widgets.Providers.WidgetInfo::get_IsPlaceholderContent()
+    @_property
+    def is_placeholder_content(self) -> bool: ...
 
 @typing.final
 class WidgetManager_Static(winrt._winrt.IInspectable_Static):
@@ -102,7 +107,7 @@ class WidgetManager_Static(winrt._winrt.IInspectable_Static):
     def get_default(cls) -> WidgetManager: ...
 
 @typing.final
-class WidgetManager(winrt.system.Object, IWidgetManager, metaclass=WidgetManager_Static):
+class WidgetManager(winrt.system.Object, IWidgetManager2, IWidgetManager, metaclass=WidgetManager_Static):
     # System.Void Microsoft.Windows.Widgets.Providers.WidgetManager::DeleteWidget(System.String)
     def delete_widget(self, widget_id: str, /) -> None: ...
     # System.String[] Microsoft.Windows.Widgets.Providers.WidgetManager::GetWidgetIds()
@@ -111,8 +116,73 @@ class WidgetManager(winrt.system.Object, IWidgetManager, metaclass=WidgetManager
     def get_widget_info(self, widget_id: str, /) -> WidgetInfo: ...
     # Microsoft.Windows.Widgets.Providers.WidgetInfo[] Microsoft.Windows.Widgets.Providers.WidgetManager::GetWidgetInfos()
     def get_widget_infos(self) -> winrt.system.Array[WidgetInfo]: ...
+    # System.Void Microsoft.Windows.Widgets.Providers.WidgetManager::SendMessageToContent(System.String,System.String)
+    def send_message_to_content(self, widget_id: str, message: str, /) -> None: ...
     # System.Void Microsoft.Windows.Widgets.Providers.WidgetManager::UpdateWidget(Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions)
     def update_widget(self, widget_update_request_options: WidgetUpdateRequestOptions, /) -> None: ...
+
+@typing.final
+class WidgetMessageReceivedArgs(winrt.system.Object):
+    # System.String Microsoft.Windows.Widgets.Providers.WidgetMessageReceivedArgs::get_Message()
+    @_property
+    def message(self) -> str: ...
+    # Microsoft.Windows.Widgets.Providers.WidgetContext Microsoft.Windows.Widgets.Providers.WidgetMessageReceivedArgs::get_WidgetContext()
+    @_property
+    def widget_context(self) -> WidgetContext: ...
+
+@typing.final
+class WidgetResourceRequest(winrt.system.Object):
+    # System.String Microsoft.Windows.Widgets.Providers.WidgetResourceRequest::get_Method()
+    @_property
+    def method(self) -> str: ...
+    # System.Void Microsoft.Windows.Widgets.Providers.WidgetResourceRequest::put_Method(System.String)
+    @method.setter
+    def method(self, value: str) -> None: ...
+    # Windows.Storage.Streams.IRandomAccessStreamReference Microsoft.Windows.Widgets.Providers.WidgetResourceRequest::get_Content()
+    @_property
+    def content(self) -> windows_storage_streams.IRandomAccessStreamReference: ...
+    # System.Void Microsoft.Windows.Widgets.Providers.WidgetResourceRequest::put_Content(Windows.Storage.Streams.IRandomAccessStreamReference)
+    @content.setter
+    def content(self, value: windows_storage_streams.IRandomAccessStreamReference) -> None: ...
+    # Windows.Foundation.Collections.IMap`2<System.String,System.String> Microsoft.Windows.Widgets.Providers.WidgetResourceRequest::get_Headers()
+    @_property
+    def headers(self) -> typing.MutableMapping[str, str]: ...
+    # System.String Microsoft.Windows.Widgets.Providers.WidgetResourceRequest::get_Uri()
+    @_property
+    def uri(self) -> str: ...
+
+@typing.final
+class WidgetResourceRequestedArgs(winrt.system.Object):
+    # Windows.Foundation.Deferral Microsoft.Windows.Widgets.Providers.WidgetResourceRequestedArgs::GetDeferral()
+    def get_deferral(self) -> windows_foundation.Deferral: ...
+    # Microsoft.Windows.Widgets.Providers.WidgetResourceResponse Microsoft.Windows.Widgets.Providers.WidgetResourceRequestedArgs::get_Response()
+    @_property
+    def response(self) -> WidgetResourceResponse: ...
+    # System.Void Microsoft.Windows.Widgets.Providers.WidgetResourceRequestedArgs::put_Response(Microsoft.Windows.Widgets.Providers.WidgetResourceResponse)
+    @response.setter
+    def response(self, value: WidgetResourceResponse) -> None: ...
+    # Microsoft.Windows.Widgets.Providers.WidgetResourceRequest Microsoft.Windows.Widgets.Providers.WidgetResourceRequestedArgs::get_Request()
+    @_property
+    def request(self) -> WidgetResourceRequest: ...
+    # Microsoft.Windows.Widgets.Providers.WidgetContext Microsoft.Windows.Widgets.Providers.WidgetResourceRequestedArgs::get_WidgetContext()
+    @_property
+    def widget_context(self) -> WidgetContext: ...
+
+@typing.final
+class WidgetResourceResponse(winrt.system.Object):
+    def __new__(cls: typing.Type[Self], content: windows_storage_streams.IRandomAccessStreamReference, reason_phrase: str, status_code: winrt.system.Int32) -> Self: ...
+    # Windows.Storage.Streams.IRandomAccessStreamReference Microsoft.Windows.Widgets.Providers.WidgetResourceResponse::get_Content()
+    @_property
+    def content(self) -> windows_storage_streams.IRandomAccessStreamReference: ...
+    # Windows.Foundation.Collections.IMap`2<System.String,System.String> Microsoft.Windows.Widgets.Providers.WidgetResourceResponse::get_Headers()
+    @_property
+    def headers(self) -> typing.MutableMapping[str, str]: ...
+    # System.String Microsoft.Windows.Widgets.Providers.WidgetResourceResponse::get_ReasonPhrase()
+    @_property
+    def reason_phrase(self) -> str: ...
+    # System.Int32 Microsoft.Windows.Widgets.Providers.WidgetResourceResponse::get_StatusCode()
+    @_property
+    def status_code(self) -> winrt.system.Int32: ...
 
 @typing.final
 class WidgetUpdateRequestOptions_Static(winrt._winrt.IInspectable_Static):
@@ -144,6 +214,12 @@ class WidgetUpdateRequestOptions(winrt.system.Object, metaclass=WidgetUpdateRequ
     # System.String Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions::get_WidgetId()
     @_property
     def widget_id(self) -> str: ...
+    # Windows.Foundation.IReference`1<System.Boolean> Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions::get_IsPlaceholderContent()
+    @_property
+    def is_placeholder_content(self) -> typing.Optional[bool]: ...
+    # System.Void Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions::put_IsPlaceholderContent(Windows.Foundation.IReference`1<System.Boolean>)
+    @is_placeholder_content.setter
+    def is_placeholder_content(self, value: typing.Optional[bool]) -> None: ...
 
 @typing.final
 class _IWidgetManager: ...
@@ -164,6 +240,14 @@ class IWidgetManager(winrt._winrt.IInspectable):
     # System.Void Microsoft.Windows.Widgets.Providers.IWidgetManager::UpdateWidget(Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions)
     @abstractmethod
     def update_widget(self, widget_update_request_options: WidgetUpdateRequestOptions, /) -> None: ...
+
+@typing.final
+class _IWidgetManager2: ...
+
+class IWidgetManager2(winrt._winrt.IInspectable):
+    # System.Void Microsoft.Windows.Widgets.Providers.IWidgetManager2::SendMessageToContent(System.String,System.String)
+    @abstractmethod
+    def send_message_to_content(self, widget_id: str, message: str, /) -> None: ...
 
 @typing.final
 class _IWidgetProvider: ...
@@ -211,4 +295,20 @@ class IWidgetProviderErrors(winrt._winrt.IInspectable):
     # System.Void Microsoft.Windows.Widgets.Providers.IWidgetProviderErrors::OnErrorInfoReported(Microsoft.Windows.Widgets.Providers.WidgetErrorInfoReportedArgs)
     @abstractmethod
     def on_error_info_reported(self, args: WidgetErrorInfoReportedArgs, /) -> None: ...
+
+@typing.final
+class _IWidgetProviderMessage: ...
+
+class IWidgetProviderMessage(winrt._winrt.IInspectable):
+    # System.Void Microsoft.Windows.Widgets.Providers.IWidgetProviderMessage::OnMessageReceived(Microsoft.Windows.Widgets.Providers.WidgetMessageReceivedArgs)
+    @abstractmethod
+    def on_message_received(self, args: WidgetMessageReceivedArgs, /) -> None: ...
+
+@typing.final
+class _IWidgetResourceProvider: ...
+
+class IWidgetResourceProvider(winrt._winrt.IInspectable):
+    # System.Void Microsoft.Windows.Widgets.Providers.IWidgetResourceProvider::OnResourceRequested(Microsoft.Windows.Widgets.Providers.WidgetResourceRequestedArgs)
+    @abstractmethod
+    def on_resource_requested(self, args: WidgetResourceRequestedArgs, /) -> None: ...
 

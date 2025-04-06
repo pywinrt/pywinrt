@@ -4554,6 +4554,62 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         ITimePickerValueChangedEventArgs(std::nullptr_t = nullptr) noexcept {}
         ITimePickerValueChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES ITitleBar :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ITitleBar>
+    {
+        ITitleBar(std::nullptr_t = nullptr) noexcept {}
+        ITitleBar(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ITitleBarAutomationPeer :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ITitleBarAutomationPeer>
+    {
+        ITitleBarAutomationPeer(std::nullptr_t = nullptr) noexcept {}
+        ITitleBarAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ITitleBarAutomationPeerFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ITitleBarAutomationPeerFactory>
+    {
+        ITitleBarAutomationPeerFactory(std::nullptr_t = nullptr) noexcept {}
+        ITitleBarAutomationPeerFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ITitleBarFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ITitleBarFactory>
+    {
+        ITitleBarFactory(std::nullptr_t = nullptr) noexcept {}
+        ITitleBarFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ITitleBarStatics :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ITitleBarStatics>
+    {
+        ITitleBarStatics(std::nullptr_t = nullptr) noexcept {}
+        ITitleBarStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ITitleBarTemplateSettings :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ITitleBarTemplateSettings>
+    {
+        ITitleBarTemplateSettings(std::nullptr_t = nullptr) noexcept {}
+        ITitleBarTemplateSettings(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ITitleBarTemplateSettingsFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ITitleBarTemplateSettingsFactory>
+    {
+        ITitleBarTemplateSettingsFactory(std::nullptr_t = nullptr) noexcept {}
+        ITitleBarTemplateSettingsFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ITitleBarTemplateSettingsStatics :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ITitleBarTemplateSettingsStatics>
+    {
+        ITitleBarTemplateSettingsStatics(std::nullptr_t = nullptr) noexcept {}
+        ITitleBarTemplateSettingsStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IToggleMenuFlyoutItem :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IToggleMenuFlyoutItem>

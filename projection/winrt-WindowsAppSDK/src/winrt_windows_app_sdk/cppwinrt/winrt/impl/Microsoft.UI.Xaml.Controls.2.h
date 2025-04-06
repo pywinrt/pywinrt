@@ -5,6 +5,7 @@
 #define WINRT_Microsoft_UI_Xaml_Controls_2_H
 #include "winrt/impl/Microsoft.UI.Composition.1.h"
 #include "winrt/impl/Microsoft.UI.Xaml.1.h"
+#include "winrt/impl/Microsoft.UI.Xaml.Automation.Peers.1.h"
 #include "winrt/impl/Microsoft.UI.Xaml.Controls.Primitives.1.h"
 #include "winrt/impl/Microsoft.UI.Xaml.Data.1.h"
 #include "winrt/impl/Microsoft.UI.Xaml.Input.1.h"
@@ -3410,6 +3411,41 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     {
         TimePickerValueChangedEventArgs(std::nullptr_t) noexcept {}
         TimePickerValueChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::ITimePickerValueChangedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES TitleBar : winrt::Microsoft::UI::Xaml::Controls::ITitleBar,
+        impl::base<TitleBar, winrt::Microsoft::UI::Xaml::Controls::Control, winrt::Microsoft::UI::Xaml::FrameworkElement, winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::DependencyObject>,
+        impl::require<TitleBar, winrt::Microsoft::UI::Xaml::Controls::IControl, winrt::Microsoft::UI::Xaml::IFrameworkElement, winrt::Microsoft::UI::Xaml::IUIElement, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Composition::IVisualElement, winrt::Microsoft::UI::Composition::IVisualElement2, winrt::Microsoft::UI::Xaml::IDependencyObject>
+    {
+        TitleBar(std::nullptr_t) noexcept {}
+        TitleBar(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::ITitleBar(ptr, take_ownership_from_abi) {}
+        TitleBar();
+        [[nodiscard]] static auto TitleProperty();
+        [[nodiscard]] static auto SubtitleProperty();
+        [[nodiscard]] static auto IconSourceProperty();
+        [[nodiscard]] static auto LeftHeaderProperty();
+        [[nodiscard]] static auto ContentProperty();
+        [[nodiscard]] static auto RightHeaderProperty();
+        [[nodiscard]] static auto IsBackButtonVisibleProperty();
+        [[nodiscard]] static auto IsBackButtonEnabledProperty();
+        [[nodiscard]] static auto IsPaneToggleButtonVisibleProperty();
+        [[nodiscard]] static auto TemplateSettingsProperty();
+    };
+    struct WINRT_IMPL_EMPTY_BASES TitleBarAutomationPeer : winrt::Microsoft::UI::Xaml::Controls::ITitleBarAutomationPeer,
+        impl::base<TitleBarAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer, winrt::Microsoft::UI::Xaml::DependencyObject>,
+        impl::require<TitleBarAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::IFrameworkElementAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::IAutomationPeer, winrt::Microsoft::UI::Xaml::IDependencyObject>
+    {
+        TitleBarAutomationPeer(std::nullptr_t) noexcept {}
+        TitleBarAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::ITitleBarAutomationPeer(ptr, take_ownership_from_abi) {}
+        explicit TitleBarAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::TitleBar const& owner);
+    };
+    struct WINRT_IMPL_EMPTY_BASES TitleBarTemplateSettings : winrt::Microsoft::UI::Xaml::Controls::ITitleBarTemplateSettings,
+        impl::base<TitleBarTemplateSettings, winrt::Microsoft::UI::Xaml::DependencyObject>,
+        impl::require<TitleBarTemplateSettings, winrt::Microsoft::UI::Xaml::IDependencyObject>
+    {
+        TitleBarTemplateSettings(std::nullptr_t) noexcept {}
+        TitleBarTemplateSettings(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::ITitleBarTemplateSettings(ptr, take_ownership_from_abi) {}
+        TitleBarTemplateSettings();
+        [[nodiscard]] static auto IconElementProperty();
     };
     struct WINRT_IMPL_EMPTY_BASES ToggleMenuFlyoutItem : winrt::Microsoft::UI::Xaml::Controls::IToggleMenuFlyoutItem,
         impl::base<ToggleMenuFlyoutItem, winrt::Microsoft::UI::Xaml::Controls::MenuFlyoutItem, winrt::Microsoft::UI::Xaml::Controls::MenuFlyoutItemBase, winrt::Microsoft::UI::Xaml::Controls::Control, winrt::Microsoft::UI::Xaml::FrameworkElement, winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::DependencyObject>,

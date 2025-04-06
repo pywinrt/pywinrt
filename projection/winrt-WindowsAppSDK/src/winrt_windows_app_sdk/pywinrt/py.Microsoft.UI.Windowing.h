@@ -40,6 +40,9 @@ namespace py
     template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::UI::Windowing::TitleBarHeightOption> = "i";
 
+    template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Windowing::TitleBarTheme> = "i";
+
 
     template<>
     struct py_type<winrt::Microsoft::UI::Windowing::AppWindowPresenterKind>
@@ -95,6 +98,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.windowing.TitleBarHeightOption";
         static constexpr const char* module_name = "winui3.microsoft.ui.windowing";
         static constexpr const char* type_name = "TitleBarHeightOption";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Windowing::TitleBarTheme>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.windowing.TitleBarTheme";
+        static constexpr const char* module_name = "winui3.microsoft.ui.windowing";
+        static constexpr const char* type_name = "TitleBarTheme";
     };
 
     template<>

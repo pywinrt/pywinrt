@@ -23,6 +23,7 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Microsoft.UI.Input.h>
 #include <winrt/Microsoft.UI.Text.h>
 #include <winrt/Microsoft.UI.Xaml.h>
+#include <winrt/Microsoft.UI.Xaml.Automation.Peers.h>
 #include <winrt/Microsoft.UI.Xaml.Controls.Primitives.h>
 #include <winrt/Microsoft.UI.Xaml.Data.h>
 #include <winrt/Microsoft.UI.Xaml.Documents.h>
@@ -3495,6 +3496,30 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::TitleBar>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TitleBar";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "TitleBar";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::TitleBarAutomationPeer>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TitleBarAutomationPeer";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "TitleBarAutomationPeer";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::TitleBarTemplateSettings>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TitleBarTemplateSettings";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "TitleBarTemplateSettings";
+    };
+
+    template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ToggleMenuFlyoutItem>
     {
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ToggleMenuFlyoutItem";
@@ -3913,6 +3938,10 @@ namespace py
 
 #if __has_include("py.Microsoft.UI.Xaml.h")
 #include "py.Microsoft.UI.Xaml.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Xaml.Automation.Peers.h")
+#include "py.Microsoft.UI.Xaml.Automation.Peers.h"
 #endif
 
 #if __has_include("py.Microsoft.UI.Xaml.Controls.Primitives.h")
@@ -4805,6 +4834,9 @@ namespace py::wrapper::Microsoft::UI::Xaml::Controls
     using TimePickerFlyoutPresenter = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::TimePickerFlyoutPresenter>;
     using TimePickerSelectedValueChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::TimePickerSelectedValueChangedEventArgs>;
     using TimePickerValueChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::TimePickerValueChangedEventArgs>;
+    using TitleBar = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::TitleBar>;
+    using TitleBarAutomationPeer = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::TitleBarAutomationPeer>;
+    using TitleBarTemplateSettings = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::TitleBarTemplateSettings>;
     using ToggleMenuFlyoutItem = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::ToggleMenuFlyoutItem>;
     using ToggleSplitButton = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::ToggleSplitButton>;
     using ToggleSplitButtonIsCheckedChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::ToggleSplitButtonIsCheckedChangedEventArgs>;

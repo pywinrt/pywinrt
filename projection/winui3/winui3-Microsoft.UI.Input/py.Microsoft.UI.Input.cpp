@@ -5564,6 +5564,48 @@ namespace py::cpp::Microsoft::UI::Input
         }
     }
 
+    static PyObject* InputFocusNavigationHost_GetForSiteLink(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.InputFocusNavigationHost", L"GetForSiteLink", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Content::IContentSiteLink>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Input::InputFocusNavigationHost::GetForSiteLink(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* InputFocusNavigationHost_NavigateFocus(py::wrapper::Microsoft::UI::Input::InputFocusNavigationHost* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
@@ -5756,6 +5798,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static PyMethodDef methods_InputFocusNavigationHost_Static[] = {
         { "get_for_site_bridge", reinterpret_cast<PyCFunction>(InputFocusNavigationHost_GetForSiteBridge), METH_VARARGS, nullptr },
+        { "get_for_site_link", reinterpret_cast<PyCFunction>(InputFocusNavigationHost_GetForSiteLink), METH_VARARGS, nullptr },
         { }};
 
     static PyType_Slot type_slots_InputFocusNavigationHost_Static[] = 

@@ -16,7 +16,7 @@ import winrt.windows.ui as windows_ui
 import winui3.microsoft.ui as microsoft_ui
 import winui3.microsoft.ui.dispatching as microsoft_ui_dispatching
 
-from winui3.microsoft.ui.windowing import AppWindowPresenterKind, CompactOverlaySize, DisplayAreaFallback, DisplayAreaWatcherStatus, IconShowOptions, OverlappedPresenterState, TitleBarHeightOption
+from winui3.microsoft.ui.windowing import AppWindowPresenterKind, CompactOverlaySize, DisplayAreaFallback, DisplayAreaWatcherStatus, IconShowOptions, OverlappedPresenterState, TitleBarHeightOption, TitleBarTheme
 
 Self = typing.TypeVar('Self')
 
@@ -65,6 +65,14 @@ class AppWindow(winrt.system.Object, metaclass=AppWindow_Static):
     def set_presenter(self, app_window_presenter: AppWindowPresenter, /) -> None: ...
     # System.Void Microsoft.UI.Windowing.AppWindow::SetPresenter(Microsoft.UI.Windowing.AppWindowPresenterKind)
     def set_presenter_by_kind(self, app_window_presenter_kind: AppWindowPresenterKind, /) -> None: ...
+    # System.Void Microsoft.UI.Windowing.AppWindow::SetTaskbarIcon(System.String)
+    def set_taskbar_icon(self, icon_path: str, /) -> None: ...
+    # System.Void Microsoft.UI.Windowing.AppWindow::SetTaskbarIcon(Microsoft.UI.IconId)
+    def set_taskbar_icon_with_icon_id(self, icon_id: typing.Union[microsoft_ui.IconId, typing.Tuple[winrt.system.UInt64]], /) -> None: ...
+    # System.Void Microsoft.UI.Windowing.AppWindow::SetTitleBarIcon(System.String)
+    def set_title_bar_icon(self, icon_path: str, /) -> None: ...
+    # System.Void Microsoft.UI.Windowing.AppWindow::SetTitleBarIcon(Microsoft.UI.IconId)
+    def set_title_bar_icon_with_icon_id(self, icon_id: typing.Union[microsoft_ui.IconId, typing.Tuple[winrt.system.UInt64]], /) -> None: ...
     # System.Void Microsoft.UI.Windowing.AppWindow::Show()
     def show(self) -> None: ...
     # System.Void Microsoft.UI.Windowing.AppWindow::ShowOnceWithRequestedStartupState()
@@ -279,6 +287,12 @@ class AppWindowTitleBar(winrt.system.Object, metaclass=AppWindowTitleBar_Static)
     # System.Void Microsoft.UI.Windowing.AppWindowTitleBar::put_PreferredHeightOption(Microsoft.UI.Windowing.TitleBarHeightOption)
     @preferred_height_option.setter
     def preferred_height_option(self, value: TitleBarHeightOption) -> None: ...
+    # Microsoft.UI.Windowing.TitleBarTheme Microsoft.UI.Windowing.AppWindowTitleBar::get_PreferredTheme()
+    @_property
+    def preferred_theme(self) -> TitleBarTheme: ...
+    # System.Void Microsoft.UI.Windowing.AppWindowTitleBar::put_PreferredTheme(Microsoft.UI.Windowing.TitleBarTheme)
+    @preferred_theme.setter
+    def preferred_theme(self, value: TitleBarTheme) -> None: ...
 
 @typing.final
 class CompactOverlayPresenter_Static(AppWindowPresenter_Static):
@@ -433,4 +447,28 @@ class OverlappedPresenter(AppWindowPresenter, metaclass=OverlappedPresenter_Stat
     # Microsoft.UI.Windowing.OverlappedPresenterState Microsoft.UI.Windowing.OverlappedPresenter::get_State()
     @_property
     def state(self) -> OverlappedPresenterState: ...
+    # Windows.Foundation.IReference`1<System.Int32> Microsoft.UI.Windowing.OverlappedPresenter::get_PreferredMinimumWidth()
+    @_property
+    def preferred_minimum_width(self) -> typing.Optional[winrt.system.Int32]: ...
+    # System.Void Microsoft.UI.Windowing.OverlappedPresenter::put_PreferredMinimumWidth(Windows.Foundation.IReference`1<System.Int32>)
+    @preferred_minimum_width.setter
+    def preferred_minimum_width(self, value: typing.Optional[winrt.system.Int32]) -> None: ...
+    # Windows.Foundation.IReference`1<System.Int32> Microsoft.UI.Windowing.OverlappedPresenter::get_PreferredMinimumHeight()
+    @_property
+    def preferred_minimum_height(self) -> typing.Optional[winrt.system.Int32]: ...
+    # System.Void Microsoft.UI.Windowing.OverlappedPresenter::put_PreferredMinimumHeight(Windows.Foundation.IReference`1<System.Int32>)
+    @preferred_minimum_height.setter
+    def preferred_minimum_height(self, value: typing.Optional[winrt.system.Int32]) -> None: ...
+    # Windows.Foundation.IReference`1<System.Int32> Microsoft.UI.Windowing.OverlappedPresenter::get_PreferredMaximumWidth()
+    @_property
+    def preferred_maximum_width(self) -> typing.Optional[winrt.system.Int32]: ...
+    # System.Void Microsoft.UI.Windowing.OverlappedPresenter::put_PreferredMaximumWidth(Windows.Foundation.IReference`1<System.Int32>)
+    @preferred_maximum_width.setter
+    def preferred_maximum_width(self, value: typing.Optional[winrt.system.Int32]) -> None: ...
+    # Windows.Foundation.IReference`1<System.Int32> Microsoft.UI.Windowing.OverlappedPresenter::get_PreferredMaximumHeight()
+    @_property
+    def preferred_maximum_height(self) -> typing.Optional[winrt.system.Int32]: ...
+    # System.Void Microsoft.UI.Windowing.OverlappedPresenter::put_PreferredMaximumHeight(Windows.Foundation.IReference`1<System.Int32>)
+    @preferred_maximum_height.setter
+    def preferred_maximum_height(self, value: typing.Optional[winrt.system.Int32]) -> None: ...
 

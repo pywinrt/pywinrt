@@ -29,6 +29,7 @@ __all__ = [
     "IconShowOptions",
     "OverlappedPresenterState",
     "TitleBarHeightOption",
+    "TitleBarTheme",
     "AppWindow",
     "AppWindowChangedEventArgs",
     "AppWindowClosingEventArgs",
@@ -78,4 +79,10 @@ class TitleBarHeightOption(enum.IntEnum):
     STANDARD = 0
     TALL = 1
     COLLAPSED = 2
+
+class TitleBarTheme(enum.IntEnum):
+    LEGACY = 0
+    USE_DEFAULT_APP_MODE = 1
+    LIGHT = 2
+    DARK = 3
 

@@ -197,6 +197,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
         InputFocusNavigationHost(std::nullptr_t) noexcept {}
         InputFocusNavigationHost(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Input::IInputFocusNavigationHost(ptr, take_ownership_from_abi) {}
         static auto GetForSiteBridge(winrt::Microsoft::UI::Content::IContentSiteBridge const& site);
+        static auto GetForSiteLink(winrt::Microsoft::UI::Content::IContentSiteLink const& contentSiteLink);
     };
     struct WINRT_IMPL_EMPTY_BASES InputKeyboardSource : winrt::Microsoft::UI::Input::IInputKeyboardSource,
         impl::base<InputKeyboardSource, winrt::Microsoft::UI::Input::InputObject>,

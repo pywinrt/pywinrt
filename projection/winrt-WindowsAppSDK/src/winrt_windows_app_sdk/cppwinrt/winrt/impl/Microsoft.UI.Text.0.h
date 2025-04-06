@@ -360,6 +360,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Text
     struct ITextCharacterFormat;
     struct ITextConstantsStatics;
     struct ITextDocument;
+    struct ITextDocument2;
     struct ITextParagraphFormat;
     struct ITextRange;
     struct ITextSelection;
@@ -367,6 +368,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Text
     struct RichEditTextDocument;
     struct RichEditTextRange;
     struct TextConstants;
+    struct TextApiContract;
 }
 namespace winrt::impl
 {
@@ -375,6 +377,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Text::ITextCharacterFormat>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Text::ITextConstantsStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Text::ITextDocument>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Text::ITextDocument2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Text::ITextParagraphFormat>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Text::ITextRange>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Text::ITextSelection>{ using type = interface_category; };
@@ -441,14 +444,17 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Text::ITextCharacterFormat> = L"Microsoft.UI.Text.ITextCharacterFormat";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Text::ITextConstantsStatics> = L"Microsoft.UI.Text.ITextConstantsStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Text::ITextDocument> = L"Microsoft.UI.Text.ITextDocument";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Text::ITextDocument2> = L"Microsoft.UI.Text.ITextDocument2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Text::ITextParagraphFormat> = L"Microsoft.UI.Text.ITextParagraphFormat";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Text::ITextRange> = L"Microsoft.UI.Text.ITextRange";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Text::ITextSelection> = L"Microsoft.UI.Text.ITextSelection";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Text::TextApiContract> = L"Microsoft.UI.Text.TextApiContract";
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Text::IFontWeights>{ 0x386CD040,0x5404,0x5A8D,{ 0x8B,0xC7,0x2C,0xA9,0x89,0xF5,0xC0,0x65 } }; // 386CD040-5404-5A8D-8BC7-2CA989F5C065
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Text::IFontWeightsStatics>{ 0xCC390DF6,0x76B0,0x5807,{ 0x8B,0x9D,0xE9,0x49,0xA4,0xE6,0x23,0xAE } }; // CC390DF6-76B0-5807-8B9D-E949A4E623AE
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Text::ITextCharacterFormat>{ 0xF5710050,0x98E5,0x5788,{ 0xB1,0xE3,0x32,0x19,0x1E,0xEB,0xF9,0x4D } }; // F5710050-98E5-5788-B1E3-32191EEBF94D
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Text::ITextConstantsStatics>{ 0xCD353B3C,0xAF63,0x5CFB,{ 0x91,0x8C,0x0F,0x9C,0x89,0x31,0xA1,0x61 } }; // CD353B3C-AF63-5CFB-918C-0F9C8931A161
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Text::ITextDocument>{ 0x1149D57D,0x86A6,0x59DD,{ 0x88,0xD9,0x19,0x6F,0x27,0xBC,0x5C,0x85 } }; // 1149D57D-86A6-59DD-88D9-196F27BC5C85
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Text::ITextDocument2>{ 0x21FEBCF1,0x2110,0x5879,{ 0xB1,0xDA,0xB3,0x43,0x09,0x7E,0x71,0xE1 } }; // 21FEBCF1-2110-5879-B1DA-B343097E71E1
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Text::ITextParagraphFormat>{ 0x219B6CDF,0x0D0B,0x5701,{ 0xB8,0xA1,0x6C,0x90,0x6B,0x3E,0xBB,0xE1 } }; // 219B6CDF-0D0B-5701-B8A1-6C906B3EBBE1
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Text::ITextRange>{ 0x06D4ABCF,0x0C06,0x5D12,{ 0xA7,0x43,0x85,0x53,0x7E,0xFD,0x09,0xEA } }; // 06D4ABCF-0C06-5D12-A743-85537EFD09EA
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Text::ITextSelection>{ 0x8F5E6CB1,0x2B04,0x589F,{ 0xBD,0x24,0x54,0xE5,0xCD,0x8D,0xD3,0x99 } }; // 8F5E6CB1-2B04-589F-BD24-54E5CD8DD399
@@ -584,6 +590,16 @@ namespace winrt::impl
             virtual int32_t __stdcall get_IgnoreTrailingCharacterSpacing(bool*) noexcept = 0;
             virtual int32_t __stdcall put_IgnoreTrailingCharacterSpacing(bool) noexcept = 0;
             virtual int32_t __stdcall ClearUndoRedoHistory() noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Text::ITextDocument2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall GetMathMode(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall SetMathMode(int32_t) noexcept = 0;
+            virtual int32_t __stdcall GetMathML(void**) noexcept = 0;
+            virtual int32_t __stdcall SetMathML(void*) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Text::ITextParagraphFormat>
@@ -854,6 +870,18 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Text::ITextDocument>
     {
         template <typename D> using type = consume_Microsoft_UI_Text_ITextDocument<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Text_ITextDocument2
+    {
+        auto GetMathMode() const;
+        auto SetMathMode(winrt::Microsoft::UI::Text::RichEditMathMode const& mode) const;
+        auto GetMathML(hstring& value) const;
+        auto SetMathML(param::hstring const& value) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Text::ITextDocument2>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Text_ITextDocument2<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Text_ITextParagraphFormat

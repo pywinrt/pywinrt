@@ -918,13 +918,20 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml
         WindowVisibilityChangedEventArgs(std::nullptr_t) noexcept {}
         WindowVisibilityChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::IWindowVisibilityChangedEventArgs(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES XamlIsland : winrt::Microsoft::UI::Xaml::IXamlIsland,
+        impl::require<XamlIsland, winrt::Windows::Foundation::IClosable>
+    {
+        XamlIsland(std::nullptr_t) noexcept {}
+        XamlIsland(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::IXamlIsland(ptr, take_ownership_from_abi) {}
+        XamlIsland();
+    };
     struct WINRT_IMPL_EMPTY_BASES XamlResourceReferenceFailedEventArgs : winrt::Microsoft::UI::Xaml::IXamlResourceReferenceFailedEventArgs
     {
         XamlResourceReferenceFailedEventArgs(std::nullptr_t) noexcept {}
         XamlResourceReferenceFailedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::IXamlResourceReferenceFailedEventArgs(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES XamlRoot : winrt::Microsoft::UI::Xaml::IXamlRoot,
-        impl::require<XamlRoot, winrt::Microsoft::UI::Xaml::IXamlRoot2, winrt::Microsoft::UI::Xaml::IXamlRoot3>
+        impl::require<XamlRoot, winrt::Microsoft::UI::Xaml::IXamlRoot2, winrt::Microsoft::UI::Xaml::IXamlRoot3, winrt::Microsoft::UI::Xaml::IXamlRoot4>
     {
         XamlRoot(std::nullptr_t) noexcept {}
         XamlRoot(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::IXamlRoot(ptr, take_ownership_from_abi) {}

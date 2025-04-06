@@ -7,6 +7,20 @@
 #include "winrt/impl/Microsoft.Windows.ApplicationModel.WindowsAppRuntime.1.h"
 WINRT_EXPORT namespace winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
 {
+    struct WindowsAppRuntimeVersion
+    {
+        uint32_t Major;
+        uint32_t Minor;
+        uint32_t Patch;
+    };
+    inline bool operator==(WindowsAppRuntimeVersion const& left, WindowsAppRuntimeVersion const& right) noexcept
+    {
+        return left.Major == right.Major && left.Minor == right.Minor && left.Patch == right.Patch;
+    }
+    inline bool operator!=(WindowsAppRuntimeVersion const& left, WindowsAppRuntimeVersion const& right) noexcept
+    {
+        return !(left == right);
+    }
     struct WINRT_IMPL_EMPTY_BASES DeploymentInitializeOptions : winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentInitializeOptions,
         impl::require<DeploymentInitializeOptions, winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentInitializeOptions2>
     {
@@ -26,6 +40,27 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::ApplicationModel::WindowsAppRu
         DeploymentResult(std::nullptr_t) noexcept {}
         DeploymentResult(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentResult(ptr, take_ownership_from_abi) {}
         DeploymentResult(winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentStatus const& status, winrt::hresult const& extendedError);
+    };
+    struct ReleaseInfo
+    {
+        ReleaseInfo() = delete;
+        [[nodiscard]] static auto Major();
+        [[nodiscard]] static auto Minor();
+        [[nodiscard]] static auto Patch();
+        [[nodiscard]] static auto VersionTag();
+        [[nodiscard]] static auto AsString();
+    };
+    struct WINRT_IMPL_EMPTY_BASES RuntimeCompatibilityOptions : winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IRuntimeCompatibilityOptions
+    {
+        RuntimeCompatibilityOptions(std::nullptr_t) noexcept {}
+        RuntimeCompatibilityOptions(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IRuntimeCompatibilityOptions(ptr, take_ownership_from_abi) {}
+        RuntimeCompatibilityOptions();
+    };
+    struct RuntimeInfo
+    {
+        RuntimeInfo() = delete;
+        [[nodiscard]] static auto Version();
+        [[nodiscard]] static auto AsString();
     };
 }
 #endif

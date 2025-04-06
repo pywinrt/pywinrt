@@ -4,7 +4,9 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#include <winrt/Windows.ApplicationModel.h>
 #include <winrt/Windows.Foundation.h>
+#include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Microsoft.Windows.ApplicationModel.WindowsAppRuntime.h>
 
@@ -17,6 +19,12 @@ namespace py
     template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentStatus> = "i";
 
+    template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::RuntimeCompatibilityChange> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::WindowsAppRuntimeVersion> = "T{I:major:I:minor:I:patch:}";
+
 
     template<>
     struct py_type<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentStatus>
@@ -24,6 +32,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winui3.microsoft.windows.applicationmodel.windowsappruntime.DeploymentStatus";
         static constexpr const char* module_name = "winui3.microsoft.windows.applicationmodel.windowsappruntime";
         static constexpr const char* type_name = "DeploymentStatus";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::RuntimeCompatibilityChange>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.applicationmodel.windowsappruntime.RuntimeCompatibilityChange";
+        static constexpr const char* module_name = "winui3.microsoft.windows.applicationmodel.windowsappruntime";
+        static constexpr const char* type_name = "RuntimeCompatibilityChange";
     };
 
     template<>
@@ -49,10 +65,51 @@ namespace py
         static constexpr const char* module_name = "winui3.microsoft.windows.applicationmodel.windowsappruntime";
         static constexpr const char* type_name = "DeploymentResult";
     };
+
+    template<>
+    struct py_type<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::ReleaseInfo>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.applicationmodel.windowsappruntime.ReleaseInfo";
+        static constexpr const char* module_name = "winui3.microsoft.windows.applicationmodel.windowsappruntime";
+        static constexpr const char* type_name = "ReleaseInfo";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::RuntimeCompatibilityOptions>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.applicationmodel.windowsappruntime.RuntimeCompatibilityOptions";
+        static constexpr const char* module_name = "winui3.microsoft.windows.applicationmodel.windowsappruntime";
+        static constexpr const char* type_name = "RuntimeCompatibilityOptions";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::RuntimeInfo>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.applicationmodel.windowsappruntime.RuntimeInfo";
+        static constexpr const char* module_name = "winui3.microsoft.windows.applicationmodel.windowsappruntime";
+        static constexpr const char* type_name = "RuntimeInfo";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::WindowsAppRuntimeVersion>
+    {
+        static constexpr std::string_view from_tuple = "winui3._winui3_microsoft_windows_applicationmodel_windowsappruntime.WindowsAppRuntimeVersion_from_tuple";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.applicationmodel.windowsappruntime.WindowsAppRuntimeVersion";
+        static constexpr const char* module_name = "winui3.microsoft.windows.applicationmodel.windowsappruntime";
+        static constexpr const char* type_name = "WindowsAppRuntimeVersion";
+    };
 }
+
+#if __has_include("py.Windows.ApplicationModel.h")
+#include "py.Windows.ApplicationModel.h"
+#endif
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
 #endif
 
 namespace py::impl::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
@@ -64,6 +121,10 @@ namespace py::wrapper::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
     using DeploymentInitializeOptions = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentInitializeOptions>;
     using DeploymentManager = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentManager>;
     using DeploymentResult = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentResult>;
+    using ReleaseInfo = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::ReleaseInfo>;
+    using RuntimeCompatibilityOptions = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::RuntimeCompatibilityOptions>;
+    using RuntimeInfo = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::RuntimeInfo>;
+    using WindowsAppRuntimeVersion = py::winrt_struct_wrapper<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::WindowsAppRuntimeVersion>;
 }
 
 namespace py

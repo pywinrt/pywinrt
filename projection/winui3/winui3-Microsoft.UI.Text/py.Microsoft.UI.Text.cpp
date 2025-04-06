@@ -889,6 +889,95 @@ namespace py::cpp::Microsoft::UI::Text
         }
     }
 
+    static PyObject* RichEditTextDocument_GetMathML(py::wrapper::Microsoft::UI::Text::RichEditTextDocument* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Text.RichEditTextDocument", L"GetMathML", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                winrt::hstring param0{};
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.GetMathML(param0);
+                }
+
+                py::pyobj_handle out0{ py::convert(param0) };
+                if (!out0)
+                {
+                    return nullptr;
+                }
+
+                return out0.detach();
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* RichEditTextDocument_GetMathMode(py::wrapper::Microsoft::UI::Text::RichEditTextDocument* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Text.RichEditTextDocument", L"GetMathMode", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetMathMode();
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* RichEditTextDocument_GetRange(py::wrapper::Microsoft::UI::Text::RichEditTextDocument* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
@@ -1223,6 +1312,92 @@ namespace py::cpp::Microsoft::UI::Text
                 {
                     auto _gil = release_gil();
                     self->obj.SetDefaultParagraphFormat(param0);
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* RichEditTextDocument_SetMathML(py::wrapper::Microsoft::UI::Text::RichEditTextDocument* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Text.RichEditTextDocument", L"SetMathML", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetMathML(param0);
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* RichEditTextDocument_SetMathMode(py::wrapper::Microsoft::UI::Text::RichEditTextDocument* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Text.RichEditTextDocument", L"SetMathMode", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Text::RichEditMathMode>(args, 0);
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetMathMode(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -1736,6 +1911,8 @@ namespace py::cpp::Microsoft::UI::Text
         { "end_undo_group", reinterpret_cast<PyCFunction>(RichEditTextDocument_EndUndoGroup), METH_VARARGS, nullptr },
         { "get_default_character_format", reinterpret_cast<PyCFunction>(RichEditTextDocument_GetDefaultCharacterFormat), METH_VARARGS, nullptr },
         { "get_default_paragraph_format", reinterpret_cast<PyCFunction>(RichEditTextDocument_GetDefaultParagraphFormat), METH_VARARGS, nullptr },
+        { "get_math_ml", reinterpret_cast<PyCFunction>(RichEditTextDocument_GetMathML), METH_VARARGS, nullptr },
+        { "get_math_mode", reinterpret_cast<PyCFunction>(RichEditTextDocument_GetMathMode), METH_VARARGS, nullptr },
         { "get_range", reinterpret_cast<PyCFunction>(RichEditTextDocument_GetRange), METH_VARARGS, nullptr },
         { "get_range_from_point", reinterpret_cast<PyCFunction>(RichEditTextDocument_GetRangeFromPoint), METH_VARARGS, nullptr },
         { "get_text", reinterpret_cast<PyCFunction>(RichEditTextDocument_GetText), METH_VARARGS, nullptr },
@@ -1744,6 +1921,8 @@ namespace py::cpp::Microsoft::UI::Text
         { "save_to_stream", reinterpret_cast<PyCFunction>(RichEditTextDocument_SaveToStream), METH_VARARGS, nullptr },
         { "set_default_character_format", reinterpret_cast<PyCFunction>(RichEditTextDocument_SetDefaultCharacterFormat), METH_VARARGS, nullptr },
         { "set_default_paragraph_format", reinterpret_cast<PyCFunction>(RichEditTextDocument_SetDefaultParagraphFormat), METH_VARARGS, nullptr },
+        { "set_math_ml", reinterpret_cast<PyCFunction>(RichEditTextDocument_SetMathML), METH_VARARGS, nullptr },
+        { "set_math_mode", reinterpret_cast<PyCFunction>(RichEditTextDocument_SetMathMode), METH_VARARGS, nullptr },
         { "set_text", reinterpret_cast<PyCFunction>(RichEditTextDocument_SetText), METH_VARARGS, nullptr },
         { "undo", reinterpret_cast<PyCFunction>(RichEditTextDocument_Undo), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_RichEditTextDocument, METH_O | METH_STATIC, nullptr },

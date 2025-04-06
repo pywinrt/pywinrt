@@ -10,7 +10,7 @@
 WINRT_EXPORT namespace winrt::Microsoft::UI::Windowing
 {
     struct WINRT_IMPL_EMPTY_BASES AppWindow : winrt::Microsoft::UI::Windowing::IAppWindow,
-        impl::require<AppWindow, winrt::Microsoft::UI::Windowing::IAppWindow2, winrt::Microsoft::UI::Windowing::IAppWindow3>
+        impl::require<AppWindow, winrt::Microsoft::UI::Windowing::IAppWindow2, winrt::Microsoft::UI::Windowing::IAppWindow3, winrt::Microsoft::UI::Windowing::IAppWindow4>
     {
         AppWindow(std::nullptr_t) noexcept {}
         AppWindow(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Windowing::IAppWindow(ptr, take_ownership_from_abi) {}
@@ -37,7 +37,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Windowing
         AppWindowPresenter(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Windowing::IAppWindowPresenter(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES AppWindowTitleBar : winrt::Microsoft::UI::Windowing::IAppWindowTitleBar,
-        impl::require<AppWindowTitleBar, winrt::Microsoft::UI::Windowing::IAppWindowTitleBar2>
+        impl::require<AppWindowTitleBar, winrt::Microsoft::UI::Windowing::IAppWindowTitleBar2, winrt::Microsoft::UI::Windowing::IAppWindowTitleBar3>
     {
         AppWindowTitleBar(std::nullptr_t) noexcept {}
         AppWindowTitleBar(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Windowing::IAppWindowTitleBar(ptr, take_ownership_from_abi) {}
@@ -78,7 +78,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Windowing
     };
     struct WINRT_IMPL_EMPTY_BASES OverlappedPresenter : winrt::Microsoft::UI::Windowing::IOverlappedPresenter,
         impl::base<OverlappedPresenter, winrt::Microsoft::UI::Windowing::AppWindowPresenter>,
-        impl::require<OverlappedPresenter, winrt::Microsoft::UI::Windowing::IOverlappedPresenter2, winrt::Microsoft::UI::Windowing::IAppWindowPresenter>
+        impl::require<OverlappedPresenter, winrt::Microsoft::UI::Windowing::IOverlappedPresenter2, winrt::Microsoft::UI::Windowing::IOverlappedPresenter3, winrt::Microsoft::UI::Windowing::IAppWindowPresenter>
     {
         OverlappedPresenter(std::nullptr_t) noexcept {}
         OverlappedPresenter(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Windowing::IOverlappedPresenter(ptr, take_ownership_from_abi) {}

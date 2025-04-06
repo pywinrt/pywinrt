@@ -4723,6 +4723,38 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Xaml::IWindowVisibilityChangedEventArgs)->get_Visible(&value));
         return value;
     }
+    template <typename D> auto consume_Microsoft_UI_Xaml_IXamlIsland<D>::Content() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Xaml::IXamlIsland)->get_Content(&value));
+        return winrt::Microsoft::UI::Xaml::UIElement{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_IXamlIsland<D>::Content(winrt::Microsoft::UI::Xaml::UIElement const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Xaml::IXamlIsland)->put_Content(*(void**)(&value)));
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_IXamlIsland<D>::ContentIsland() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Xaml::IXamlIsland)->get_ContentIsland(&value));
+        return winrt::Microsoft::UI::Content::ContentIsland{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_IXamlIsland<D>::SystemBackdrop() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Xaml::IXamlIsland)->get_SystemBackdrop(&value));
+        return winrt::Microsoft::UI::Xaml::Media::SystemBackdrop{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_IXamlIsland<D>::SystemBackdrop(winrt::Microsoft::UI::Xaml::Media::SystemBackdrop const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Xaml::IXamlIsland)->put_SystemBackdrop(*(void**)(&value)));
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_IXamlIslandFactory<D>::CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Xaml::IXamlIslandFactory)->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
+        return winrt::Microsoft::UI::Xaml::XamlIsland{ value, take_ownership_from_abi };
+    }
     template <typename D> auto consume_Microsoft_UI_Xaml_IXamlResourceReferenceFailedEventArgs<D>::Message() const
     {
         void* value{};
@@ -4778,6 +4810,12 @@ namespace winrt::impl
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Xaml::IXamlRoot3)->get_CoordinateConverter(&value));
         return winrt::Microsoft::UI::Content::ContentCoordinateConverter{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_IXamlRoot4<D>::ContentIsland() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Xaml::IXamlRoot4)->get_ContentIsland(&value));
+        return winrt::Microsoft::UI::Content::ContentIsland{ value, take_ownership_from_abi };
     }
     template <typename D> auto consume_Microsoft_UI_Xaml_IXamlServiceProvider<D>::GetService(winrt::Windows::UI::Xaml::Interop::TypeName const& type) const
     {
@@ -12084,6 +12122,67 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Xaml::IXamlIsland> : produce_base<D, winrt::Microsoft::UI::Xaml::IXamlIsland>
+    {
+        int32_t __stdcall get_Content(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Xaml::UIElement>(this->shim().Content());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_Content(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Content(*reinterpret_cast<winrt::Microsoft::UI::Xaml::UIElement const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_ContentIsland(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Content::ContentIsland>(this->shim().ContentIsland());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_SystemBackdrop(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Xaml::Media::SystemBackdrop>(this->shim().SystemBackdrop());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_SystemBackdrop(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SystemBackdrop(*reinterpret_cast<winrt::Microsoft::UI::Xaml::Media::SystemBackdrop const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Xaml::IXamlIslandFactory> : produce_base<D, winrt::Microsoft::UI::Xaml::IXamlIslandFactory>
+    {
+        int32_t __stdcall CreateInstance(void* baseInterface, void** innerInterface, void** value) noexcept final try
+        {
+            if (innerInterface) *innerInterface = nullptr;
+            winrt::Windows::Foundation::IInspectable winrt_impl_innerInterface;
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Xaml::XamlIsland>(this->shim().CreateInstance(*reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&baseInterface), winrt_impl_innerInterface));
+                if (innerInterface) *innerInterface = detach_abi(winrt_impl_innerInterface);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::UI::Xaml::IXamlResourceReferenceFailedEventArgs> : produce_base<D, winrt::Microsoft::UI::Xaml::IXamlResourceReferenceFailedEventArgs>
     {
         int32_t __stdcall get_Message(void** value) noexcept final try
@@ -12169,6 +12268,20 @@ namespace winrt::impl
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
             *value = detach_from<winrt::Microsoft::UI::Content::ContentCoordinateConverter>(this->shim().CoordinateConverter());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Xaml::IXamlRoot4> : produce_base<D, winrt::Microsoft::UI::Xaml::IXamlRoot4>
+    {
+        int32_t __stdcall get_ContentIsland(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Content::ContentIsland>(this->shim().ContentIsland());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -13315,6 +13428,11 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml
     {
         return impl::call_factory_cast<winrt::Microsoft::UI::Xaml::Window(*)(IWindowStatics const&), Window, IWindowStatics>([](IWindowStatics const& f) { return f.Current(); });
     }
+    inline XamlIsland::XamlIsland()
+    {
+        winrt::Windows::Foundation::IInspectable baseInterface, innerInterface;
+        *this = impl::call_factory<XamlIsland, IXamlIslandFactory>([&](IXamlIslandFactory const& f) { return f.CreateInstance(baseInterface, innerInterface); });
+    }
     template <typename L> ApplicationInitializationCallback::ApplicationInitializationCallback(L handler) :
         ApplicationInitializationCallback(impl::make_delegate<ApplicationInitializationCallback>(std::forward<L>(handler)))
     {
@@ -14267,6 +14385,19 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml
             impl::call_factory<Window, IWindowFactory>([&](IWindowFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
         }
     };
+    template <typename D, typename... Interfaces>
+    struct XamlIslandT :
+        implements<D, winrt::Windows::Foundation::IInspectable, composing, Interfaces...>,
+        impl::require<D, winrt::Microsoft::UI::Xaml::IXamlIsland, winrt::Windows::Foundation::IClosable>,
+        impl::base<D, XamlIsland>
+    {
+        using composable = XamlIsland;
+    protected:
+        XamlIslandT()
+        {
+            impl::call_factory<XamlIsland, IXamlIslandFactory>([&](IXamlIslandFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
+        }
+    };
 }
 namespace std
 {
@@ -14407,10 +14538,13 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Xaml::IWindowSizeChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::IWindowStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::IWindowVisibilityChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Xaml::IXamlIsland> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Xaml::IXamlIslandFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::IXamlResourceReferenceFailedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::IXamlRoot> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::IXamlRoot2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::IXamlRoot3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Xaml::IXamlRoot4> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::IXamlRootChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::IXamlServiceProvider> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::AdaptiveTrigger> : winrt::impl::hash_base {};
@@ -14488,6 +14622,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Xaml::WindowEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::WindowSizeChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::WindowVisibilityChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Xaml::XamlIsland> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::XamlResourceReferenceFailedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::XamlRoot> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::XamlRootChangedEventArgs> : winrt::impl::hash_base {};

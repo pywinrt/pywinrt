@@ -29,6 +29,7 @@ import winui3.microsoft.ui.composition as microsoft_ui_composition
 import winui3.microsoft.ui.input as microsoft_ui_input
 import winui3.microsoft.ui.text as microsoft_ui_text
 import winui3.microsoft.ui.xaml as microsoft_ui_xaml
+import winui3.microsoft.ui.xaml.automation.peers as microsoft_ui_xaml_automation_peers
 import winui3.microsoft.ui.xaml.controls.primitives as microsoft_ui_xaml_controls_primitives
 import winui3.microsoft.ui.xaml.data as microsoft_ui_xaml_data
 import winui3.microsoft.ui.xaml.documents as microsoft_ui_xaml_documents
@@ -14247,6 +14248,152 @@ class TimePickerValueChangedEventArgs(winrt.system.Object):
     # Windows.Foundation.TimeSpan Microsoft.UI.Xaml.Controls.TimePickerValueChangedEventArgs::get_OldTime()
     @_property
     def old_time(self) -> datetime.timedelta: ...
+
+class TitleBar_Static(Control_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TitleBar::get_ContentProperty()
+    @_property
+    @typing.final
+    def content_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TitleBar::get_IconSourceProperty()
+    @_property
+    @typing.final
+    def icon_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TitleBar::get_IsBackButtonEnabledProperty()
+    @_property
+    @typing.final
+    def is_back_button_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TitleBar::get_IsBackButtonVisibleProperty()
+    @_property
+    @typing.final
+    def is_back_button_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TitleBar::get_IsPaneToggleButtonVisibleProperty()
+    @_property
+    @typing.final
+    def is_pane_toggle_button_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TitleBar::get_LeftHeaderProperty()
+    @_property
+    @typing.final
+    def left_header_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TitleBar::get_RightHeaderProperty()
+    @_property
+    @typing.final
+    def right_header_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TitleBar::get_SubtitleProperty()
+    @_property
+    @typing.final
+    def subtitle_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TitleBar::get_TemplateSettingsProperty()
+    @_property
+    @typing.final
+    def template_settings_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TitleBar::get_TitleProperty()
+    @_property
+    @typing.final
+    def title_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+
+class TitleBar(Control, metaclass=TitleBar_Static):
+    def __new__(cls: typing.Type[Self]) -> Self: ...
+    @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TitleBar::add_BackRequested(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.TitleBar,System.Object>)
+    def add_back_requested(self, handler: windows_foundation.TypedEventHandler[TitleBar, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TitleBar::remove_BackRequested(Windows.Foundation.EventRegistrationToken)
+    def remove_back_requested(self, token: typing.Union[windows_foundation.EventRegistrationToken, typing.Tuple[winrt.system.Int64]], /) -> None: ...
+    @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TitleBar::add_PaneToggleRequested(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.TitleBar,System.Object>)
+    def add_pane_toggle_requested(self, handler: windows_foundation.TypedEventHandler[TitleBar, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TitleBar::remove_PaneToggleRequested(Windows.Foundation.EventRegistrationToken)
+    def remove_pane_toggle_requested(self, token: typing.Union[windows_foundation.EventRegistrationToken, typing.Tuple[winrt.system.Int64]], /) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.TitleBar::get_Title()
+    @_property
+    def title(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TitleBar::put_Title(System.String)
+    @title.setter
+    @typing.final
+    def title(self, value: str) -> None: ...
+    # System.String Microsoft.UI.Xaml.Controls.TitleBar::get_Subtitle()
+    @_property
+    def subtitle(self) -> str: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TitleBar::put_Subtitle(System.String)
+    @subtitle.setter
+    @typing.final
+    def subtitle(self, value: str) -> None: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.TitleBar::get_RightHeader()
+    @_property
+    def right_header(self) -> microsoft_ui_xaml.UIElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TitleBar::put_RightHeader(Microsoft.UI.Xaml.UIElement)
+    @right_header.setter
+    @typing.final
+    def right_header(self, value: microsoft_ui_xaml.UIElement) -> None: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.TitleBar::get_LeftHeader()
+    @_property
+    def left_header(self) -> microsoft_ui_xaml.UIElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TitleBar::put_LeftHeader(Microsoft.UI.Xaml.UIElement)
+    @left_header.setter
+    @typing.final
+    def left_header(self, value: microsoft_ui_xaml.UIElement) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.TitleBar::get_IsPaneToggleButtonVisible()
+    @_property
+    def is_pane_toggle_button_visible(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TitleBar::put_IsPaneToggleButtonVisible(System.Boolean)
+    @is_pane_toggle_button_visible.setter
+    @typing.final
+    def is_pane_toggle_button_visible(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.TitleBar::get_IsBackButtonVisible()
+    @_property
+    def is_back_button_visible(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TitleBar::put_IsBackButtonVisible(System.Boolean)
+    @is_back_button_visible.setter
+    @typing.final
+    def is_back_button_visible(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.TitleBar::get_IsBackButtonEnabled()
+    @_property
+    def is_back_button_enabled(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TitleBar::put_IsBackButtonEnabled(System.Boolean)
+    @is_back_button_enabled.setter
+    @typing.final
+    def is_back_button_enabled(self, value: bool) -> None: ...
+    # Microsoft.UI.Xaml.Controls.IconSource Microsoft.UI.Xaml.Controls.TitleBar::get_IconSource()
+    @_property
+    def icon_source(self) -> IconSource: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TitleBar::put_IconSource(Microsoft.UI.Xaml.Controls.IconSource)
+    @icon_source.setter
+    @typing.final
+    def icon_source(self, value: IconSource) -> None: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.TitleBar::get_Content()
+    @_property
+    def content(self) -> microsoft_ui_xaml.UIElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TitleBar::put_Content(Microsoft.UI.Xaml.UIElement)
+    @content.setter
+    @typing.final
+    def content(self, value: microsoft_ui_xaml.UIElement) -> None: ...
+    # Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings Microsoft.UI.Xaml.Controls.TitleBar::get_TemplateSettings()
+    @_property
+    @typing.final
+    def template_settings(self) -> TitleBarTemplateSettings: ...
+
+class TitleBarAutomationPeer_Static(microsoft_ui_xaml_automation_peers.FrameworkElementAutomationPeer_Static):
+    pass
+
+class TitleBarAutomationPeer(microsoft_ui_xaml_automation_peers.FrameworkElementAutomationPeer, metaclass=TitleBarAutomationPeer_Static):
+    def __new__(cls: typing.Type[Self], owner: TitleBar) -> Self: ...
+
+class TitleBarTemplateSettings_Static(microsoft_ui_xaml.DependencyObject_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings::get_IconElementProperty()
+    @_property
+    @typing.final
+    def icon_element_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+
+class TitleBarTemplateSettings(microsoft_ui_xaml.DependencyObject, metaclass=TitleBarTemplateSettings_Static):
+    def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Microsoft.UI.Xaml.Controls.IconElement Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings::get_IconElement()
+    @_property
+    def icon_element(self) -> IconElement: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings::put_IconElement(Microsoft.UI.Xaml.Controls.IconElement)
+    @icon_element.setter
+    @typing.final
+    def icon_element(self, value: IconElement) -> None: ...
 
 class ToggleMenuFlyoutItem_Static(MenuFlyoutItem_Static):
     # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ToggleMenuFlyoutItem::get_IsCheckedProperty()

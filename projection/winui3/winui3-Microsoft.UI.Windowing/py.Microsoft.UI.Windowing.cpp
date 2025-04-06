@@ -870,6 +870,178 @@ namespace py::cpp::Microsoft::UI::Windowing
         }
     }
 
+    static PyObject* AppWindow_SetTaskbarIcon(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindow", L"SetTaskbarIcon", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetTaskbarIcon(param0);
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppWindow_SetTaskbarIconWithIconId(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindow", L"SetTaskbarIcon", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::IconId>(args, 0);
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetTaskbarIcon(param0);
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppWindow_SetTitleBarIcon(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindow", L"SetTitleBarIcon", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetTitleBarIcon(param0);
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppWindow_SetTitleBarIconWithIconId(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindow", L"SetTitleBarIcon", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::IconId>(args, 0);
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetTitleBarIcon(param0);
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* AppWindow_Show(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
@@ -1638,6 +1810,10 @@ namespace py::cpp::Microsoft::UI::Windowing
         { "set_icon_with_icon_id", reinterpret_cast<PyCFunction>(AppWindow_SetIconWithIconId), METH_VARARGS, nullptr },
         { "set_presenter", reinterpret_cast<PyCFunction>(AppWindow_SetPresenter), METH_VARARGS, nullptr },
         { "set_presenter_by_kind", reinterpret_cast<PyCFunction>(AppWindow_SetPresenterByKind), METH_VARARGS, nullptr },
+        { "set_taskbar_icon", reinterpret_cast<PyCFunction>(AppWindow_SetTaskbarIcon), METH_VARARGS, nullptr },
+        { "set_taskbar_icon_with_icon_id", reinterpret_cast<PyCFunction>(AppWindow_SetTaskbarIconWithIconId), METH_VARARGS, nullptr },
+        { "set_title_bar_icon", reinterpret_cast<PyCFunction>(AppWindow_SetTitleBarIcon), METH_VARARGS, nullptr },
+        { "set_title_bar_icon_with_icon_id", reinterpret_cast<PyCFunction>(AppWindow_SetTitleBarIconWithIconId), METH_VARARGS, nullptr },
         { "show", reinterpret_cast<PyCFunction>(AppWindow_Show), METH_VARARGS, nullptr },
         { "show_once_with_requested_startup_state", reinterpret_cast<PyCFunction>(AppWindow_ShowOnceWithRequestedStartupState), METH_VARARGS, nullptr },
         { "show_with_activation", reinterpret_cast<PyCFunction>(AppWindow_ShowWithActivation), METH_VARARGS, nullptr },
@@ -3530,6 +3706,75 @@ namespace py::cpp::Microsoft::UI::Windowing
         }
     }
 
+    static PyObject* AppWindowTitleBar_get_PreferredTheme(py::wrapper::Microsoft::UI::Windowing::AppWindowTitleBar* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"PreferredTheme");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreferredTheme();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int AppWindowTitleBar_put_PreferredTheme(py::wrapper::Microsoft::UI::Windowing::AppWindowTitleBar* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowTitleBar", L"PreferredTheme");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Windowing::TitleBarTheme>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.PreferredTheme(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
     static PyObject* _assign_array_AppWindowTitleBar(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Windowing::AppWindowTitleBar>>();
@@ -3580,6 +3825,7 @@ namespace py::cpp::Microsoft::UI::Windowing
         { "left_inset", reinterpret_cast<getter>(AppWindowTitleBar_get_LeftInset), nullptr, nullptr, nullptr },
         { "right_inset", reinterpret_cast<getter>(AppWindowTitleBar_get_RightInset), nullptr, nullptr, nullptr },
         { "preferred_height_option", reinterpret_cast<getter>(AppWindowTitleBar_get_PreferredHeightOption), reinterpret_cast<setter>(AppWindowTitleBar_put_PreferredHeightOption), nullptr, nullptr },
+        { "preferred_theme", reinterpret_cast<getter>(AppWindowTitleBar_get_PreferredTheme), reinterpret_cast<setter>(AppWindowTitleBar_put_PreferredTheme), nullptr, nullptr },
         { }};
 
     static PyType_Slot _type_slots_AppWindowTitleBar[] = {
@@ -5812,6 +6058,282 @@ namespace py::cpp::Microsoft::UI::Windowing
         }
     }
 
+    static PyObject* OverlappedPresenter_get_PreferredMinimumWidth(py::wrapper::Microsoft::UI::Windowing::OverlappedPresenter* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.OverlappedPresenter", L"PreferredMinimumWidth");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreferredMinimumWidth();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int OverlappedPresenter_put_PreferredMinimumWidth(py::wrapper::Microsoft::UI::Windowing::OverlappedPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.OverlappedPresenter", L"PreferredMinimumWidth");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.PreferredMinimumWidth(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* OverlappedPresenter_get_PreferredMinimumHeight(py::wrapper::Microsoft::UI::Windowing::OverlappedPresenter* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.OverlappedPresenter", L"PreferredMinimumHeight");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreferredMinimumHeight();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int OverlappedPresenter_put_PreferredMinimumHeight(py::wrapper::Microsoft::UI::Windowing::OverlappedPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.OverlappedPresenter", L"PreferredMinimumHeight");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.PreferredMinimumHeight(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* OverlappedPresenter_get_PreferredMaximumWidth(py::wrapper::Microsoft::UI::Windowing::OverlappedPresenter* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.OverlappedPresenter", L"PreferredMaximumWidth");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreferredMaximumWidth();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int OverlappedPresenter_put_PreferredMaximumWidth(py::wrapper::Microsoft::UI::Windowing::OverlappedPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.OverlappedPresenter", L"PreferredMaximumWidth");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.PreferredMaximumWidth(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* OverlappedPresenter_get_PreferredMaximumHeight(py::wrapper::Microsoft::UI::Windowing::OverlappedPresenter* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.OverlappedPresenter", L"PreferredMaximumHeight");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreferredMaximumHeight();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int OverlappedPresenter_put_PreferredMaximumHeight(py::wrapper::Microsoft::UI::Windowing::OverlappedPresenter* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.OverlappedPresenter", L"PreferredMaximumHeight");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.PreferredMaximumHeight(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
     static PyObject* OverlappedPresenter_get_RequestedStartupState(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
         try
@@ -5886,6 +6408,10 @@ namespace py::cpp::Microsoft::UI::Windowing
         { "has_border", reinterpret_cast<getter>(OverlappedPresenter_get_HasBorder), nullptr, nullptr, nullptr },
         { "has_title_bar", reinterpret_cast<getter>(OverlappedPresenter_get_HasTitleBar), nullptr, nullptr, nullptr },
         { "state", reinterpret_cast<getter>(OverlappedPresenter_get_State), nullptr, nullptr, nullptr },
+        { "preferred_minimum_width", reinterpret_cast<getter>(OverlappedPresenter_get_PreferredMinimumWidth), reinterpret_cast<setter>(OverlappedPresenter_put_PreferredMinimumWidth), nullptr, nullptr },
+        { "preferred_minimum_height", reinterpret_cast<getter>(OverlappedPresenter_get_PreferredMinimumHeight), reinterpret_cast<setter>(OverlappedPresenter_put_PreferredMinimumHeight), nullptr, nullptr },
+        { "preferred_maximum_width", reinterpret_cast<getter>(OverlappedPresenter_get_PreferredMaximumWidth), reinterpret_cast<setter>(OverlappedPresenter_put_PreferredMaximumWidth), nullptr, nullptr },
+        { "preferred_maximum_height", reinterpret_cast<getter>(OverlappedPresenter_get_PreferredMaximumHeight), reinterpret_cast<setter>(OverlappedPresenter_put_PreferredMaximumHeight), nullptr, nullptr },
         { }};
 
     static PyType_Slot _type_slots_OverlappedPresenter[] = {

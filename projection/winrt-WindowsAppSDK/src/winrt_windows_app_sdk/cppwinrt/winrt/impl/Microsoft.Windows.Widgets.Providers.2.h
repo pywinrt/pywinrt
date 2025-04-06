@@ -3,6 +3,7 @@
 #pragma once
 #ifndef WINRT_Microsoft_Windows_Widgets_Providers_2_H
 #define WINRT_Microsoft_Windows_Widgets_Providers_2_H
+#include "winrt/impl/Windows.Storage.Streams.1.h"
 #include "winrt/impl/Microsoft.Windows.Widgets.Providers.1.h"
 WINRT_EXPORT namespace winrt::Microsoft::Windows::Widgets::Providers
 {
@@ -36,18 +37,42 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::Widgets::Providers
         WidgetErrorInfoReportedArgs(std::nullptr_t) noexcept {}
         WidgetErrorInfoReportedArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Windows::Widgets::Providers::IWidgetErrorInfoReportedArgs(ptr, take_ownership_from_abi) {}
     };
-    struct WINRT_IMPL_EMPTY_BASES WidgetInfo : winrt::Microsoft::Windows::Widgets::Providers::IWidgetInfo
+    struct WINRT_IMPL_EMPTY_BASES WidgetInfo : winrt::Microsoft::Windows::Widgets::Providers::IWidgetInfo,
+        impl::require<WidgetInfo, winrt::Microsoft::Windows::Widgets::Providers::IWidgetInfo2>
     {
         WidgetInfo(std::nullptr_t) noexcept {}
         WidgetInfo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Windows::Widgets::Providers::IWidgetInfo(ptr, take_ownership_from_abi) {}
     };
-    struct WINRT_IMPL_EMPTY_BASES WidgetManager : winrt::Microsoft::Windows::Widgets::Providers::IWidgetManager
+    struct WINRT_IMPL_EMPTY_BASES WidgetManager : winrt::Microsoft::Windows::Widgets::Providers::IWidgetManager,
+        impl::require<WidgetManager, winrt::Microsoft::Windows::Widgets::Providers::IWidgetManager2>
     {
         WidgetManager(std::nullptr_t) noexcept {}
         WidgetManager(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Windows::Widgets::Providers::IWidgetManager(ptr, take_ownership_from_abi) {}
         static auto GetDefault();
     };
-    struct WINRT_IMPL_EMPTY_BASES WidgetUpdateRequestOptions : winrt::Microsoft::Windows::Widgets::Providers::IWidgetUpdateRequestOptions
+    struct WINRT_IMPL_EMPTY_BASES WidgetMessageReceivedArgs : winrt::Microsoft::Windows::Widgets::Providers::IWidgetMessageReceivedArgs
+    {
+        WidgetMessageReceivedArgs(std::nullptr_t) noexcept {}
+        WidgetMessageReceivedArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Windows::Widgets::Providers::IWidgetMessageReceivedArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES WidgetResourceRequest : winrt::Microsoft::Windows::Widgets::Providers::IWidgetResourceRequest
+    {
+        WidgetResourceRequest(std::nullptr_t) noexcept {}
+        WidgetResourceRequest(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Windows::Widgets::Providers::IWidgetResourceRequest(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES WidgetResourceRequestedArgs : winrt::Microsoft::Windows::Widgets::Providers::IWidgetResourceRequestedArgs
+    {
+        WidgetResourceRequestedArgs(std::nullptr_t) noexcept {}
+        WidgetResourceRequestedArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Windows::Widgets::Providers::IWidgetResourceRequestedArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES WidgetResourceResponse : winrt::Microsoft::Windows::Widgets::Providers::IWidgetResourceResponse
+    {
+        WidgetResourceResponse(std::nullptr_t) noexcept {}
+        WidgetResourceResponse(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Windows::Widgets::Providers::IWidgetResourceResponse(ptr, take_ownership_from_abi) {}
+        WidgetResourceResponse(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& content, param::hstring const& reasonPhrase, int32_t statusCode);
+    };
+    struct WINRT_IMPL_EMPTY_BASES WidgetUpdateRequestOptions : winrt::Microsoft::Windows::Widgets::Providers::IWidgetUpdateRequestOptions,
+        impl::require<WidgetUpdateRequestOptions, winrt::Microsoft::Windows::Widgets::Providers::IWidgetUpdateRequestOptions2>
     {
         WidgetUpdateRequestOptions(std::nullptr_t) noexcept {}
         WidgetUpdateRequestOptions(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Windows::Widgets::Providers::IWidgetUpdateRequestOptions(ptr, take_ownership_from_abi) {}

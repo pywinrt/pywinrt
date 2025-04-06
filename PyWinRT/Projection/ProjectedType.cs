@@ -355,6 +355,18 @@ class ProjectedType
             return "static_cast<winrt::Windows::UI::Xaml::Controls::Maps::IMapControl>(self->obj).";
         }
 
+        // HACK: another similar workaround for an explicit interface
+        // implementation in the Windows App SDK.
+        // https://github.com/microsoft/cppwinrt/issues/1485
+        if (
+            Namespace == "Microsoft.Windows.ApplicationModel.Background.UniversalBGTask"
+            && Name == "Task"
+            && method.Name == "Run"
+        )
+        {
+            return "static_cast<winrt::Microsoft::Windows::ApplicationModel::Background::UniversalBGTask::ITask>(self->obj).";
+        }
+
         return "self->obj.";
     }
 
@@ -418,7 +430,7 @@ class ProjectedType
             IReadOnlyDictionary<GenericParameter, TypeReference>? map
         )
         {
-            foreach (var method in methods.Where(m => !m.IsSpecialName))
+            foreach (var method in methods.Where(m => !m.IsSpecialName && !m.IsPrivate))
             {
                 var projected = new ProjectedMethod(method, inheritance, map);
 

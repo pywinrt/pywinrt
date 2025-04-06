@@ -223,6 +223,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
         IInputFocusNavigationHostStatics(std::nullptr_t = nullptr) noexcept {}
         IInputFocusNavigationHostStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IInputFocusNavigationHostStatics2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IInputFocusNavigationHostStatics2>
+    {
+        IInputFocusNavigationHostStatics2(std::nullptr_t = nullptr) noexcept {}
+        IInputFocusNavigationHostStatics2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IInputKeyboardSource :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IInputKeyboardSource>
