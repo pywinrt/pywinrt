@@ -58,6 +58,8 @@ from webview2._webview2_microsoft_web_webview2_core import (
     CoreWebView2ProcessInfo,
     CoreWebView2Profile,
     CoreWebView2SaveAsUIShowingEventArgs,
+    CoreWebView2SaveFileSecurityCheckStartingEventArgs,
+    CoreWebView2ScreenCaptureStartingEventArgs,
     CoreWebView2ScriptDialogOpeningEventArgs,
     CoreWebView2ScriptException,
     CoreWebView2ServerCertificateErrorDetectedEventArgs,
@@ -188,6 +190,8 @@ __all__ = [
     "CoreWebView2ProcessInfo",
     "CoreWebView2Profile",
     "CoreWebView2SaveAsUIShowingEventArgs",
+    "CoreWebView2SaveFileSecurityCheckStartingEventArgs",
+    "CoreWebView2ScreenCaptureStartingEventArgs",
     "CoreWebView2ScriptDialogOpeningEventArgs",
     "CoreWebView2ScriptException",
     "CoreWebView2ServerCertificateErrorDetectedEventArgs",
@@ -383,6 +387,9 @@ class CoreWebView2NonClientRegionKind(enum.IntEnum):
     NOWHERE = 0
     CLIENT = 1
     CAPTION = 2
+    MINIMIZE = 8
+    MAXIMIZE = 9
+    CLOSE = 20
 
 class CoreWebView2PdfToolbarItems(enum.IntFlag):
     NONE = 0x0

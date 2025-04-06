@@ -6,6 +6,7 @@
 
 ### Changed
 - Updated Windows App SDK to 1.7.250310001.
+- Updated WebView2 to 1.0.3124.44.
 
 ### Fixed
 - Fixed ``IIterator.__iter__()`` returning an object without taking a reference.

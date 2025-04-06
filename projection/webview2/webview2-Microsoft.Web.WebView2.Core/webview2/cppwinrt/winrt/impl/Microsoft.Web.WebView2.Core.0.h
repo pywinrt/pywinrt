@@ -249,6 +249,9 @@ WINRT_EXPORT namespace winrt::Microsoft::Web::WebView2::Core
         Nowhere = 0,
         Client = 1,
         Caption = 2,
+        Minimize = 8,
+        Maximize = 9,
+        Close = 20,
     };
     enum class CoreWebView2PdfToolbarItems : uint32_t
     {
@@ -569,6 +572,7 @@ WINRT_EXPORT namespace winrt::Microsoft::Web::WebView2::Core
     struct ICoreWebView2Frame3;
     struct ICoreWebView2Frame4;
     struct ICoreWebView2Frame5;
+    struct ICoreWebView2Frame6;
     struct ICoreWebView2FrameCreatedEventArgs;
     struct ICoreWebView2FrameInfo;
     struct ICoreWebView2FrameInfo2;
@@ -612,6 +616,8 @@ WINRT_EXPORT namespace winrt::Microsoft::Web::WebView2::Core
     struct ICoreWebView2Profile7;
     struct ICoreWebView2Profile8;
     struct ICoreWebView2SaveAsUIShowingEventArgs;
+    struct ICoreWebView2SaveFileSecurityCheckStartingEventArgs;
+    struct ICoreWebView2ScreenCaptureStartingEventArgs;
     struct ICoreWebView2ScriptDialogOpeningEventArgs;
     struct ICoreWebView2ScriptException;
     struct ICoreWebView2ServerCertificateErrorDetectedEventArgs;
@@ -654,6 +660,8 @@ WINRT_EXPORT namespace winrt::Microsoft::Web::WebView2::Core
     struct ICoreWebView2_23;
     struct ICoreWebView2_24;
     struct ICoreWebView2_25;
+    struct ICoreWebView2_26;
+    struct ICoreWebView2_27;
     struct ICoreWebView2_3;
     struct ICoreWebView2_4;
     struct ICoreWebView2_5;
@@ -716,6 +724,8 @@ WINRT_EXPORT namespace winrt::Microsoft::Web::WebView2::Core
     struct CoreWebView2ProcessInfo;
     struct CoreWebView2Profile;
     struct CoreWebView2SaveAsUIShowingEventArgs;
+    struct CoreWebView2SaveFileSecurityCheckStartingEventArgs;
+    struct CoreWebView2ScreenCaptureStartingEventArgs;
     struct CoreWebView2ScriptDialogOpeningEventArgs;
     struct CoreWebView2ScriptException;
     struct CoreWebView2ServerCertificateErrorDetectedEventArgs;
@@ -816,6 +826,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame3>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame4>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame5>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame6>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FrameCreatedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FrameInfo>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FrameInfo2>{ using type = interface_category; };
@@ -859,6 +870,8 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Profile7>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Profile8>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveAsUIShowingEventArgs>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveFileSecurityCheckStartingEventArgs>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScreenCaptureStartingEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScriptDialogOpeningEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScriptException>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ServerCertificateErrorDetectedEventArgs>{ using type = interface_category; };
@@ -901,6 +914,8 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_23>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_24>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_25>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_26>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_27>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_3>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_4>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_5>{ using type = interface_category; };
@@ -963,6 +978,8 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ProcessInfo>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Profile>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::Web::WebView2::Core::CoreWebView2SaveAsUIShowingEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::Web::WebView2::Core::CoreWebView2SaveFileSecurityCheckStartingEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScreenCaptureStartingEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScriptDialogOpeningEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScriptException>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ServerCertificateErrorDetectedEventArgs>{ using type = class_category; };
@@ -1081,6 +1098,8 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ProcessInfo> = L"Microsoft.Web.WebView2.Core.CoreWebView2ProcessInfo";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Profile> = L"Microsoft.Web.WebView2.Core.CoreWebView2Profile";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::CoreWebView2SaveAsUIShowingEventArgs> = L"Microsoft.Web.WebView2.Core.CoreWebView2SaveAsUIShowingEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::CoreWebView2SaveFileSecurityCheckStartingEventArgs> = L"Microsoft.Web.WebView2.Core.CoreWebView2SaveFileSecurityCheckStartingEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScreenCaptureStartingEventArgs> = L"Microsoft.Web.WebView2.Core.CoreWebView2ScreenCaptureStartingEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScriptDialogOpeningEventArgs> = L"Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScriptException> = L"Microsoft.Web.WebView2.Core.CoreWebView2ScriptException";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ServerCertificateErrorDetectedEventArgs> = L"Microsoft.Web.WebView2.Core.CoreWebView2ServerCertificateErrorDetectedEventArgs";
@@ -1229,6 +1248,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame3> = L"Microsoft.Web.WebView2.Core.ICoreWebView2Frame3";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame4> = L"Microsoft.Web.WebView2.Core.ICoreWebView2Frame4";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame5> = L"Microsoft.Web.WebView2.Core.ICoreWebView2Frame5";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame6> = L"Microsoft.Web.WebView2.Core.ICoreWebView2Frame6";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FrameCreatedEventArgs> = L"Microsoft.Web.WebView2.Core.ICoreWebView2FrameCreatedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FrameInfo> = L"Microsoft.Web.WebView2.Core.ICoreWebView2FrameInfo";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FrameInfo2> = L"Microsoft.Web.WebView2.Core.ICoreWebView2FrameInfo2";
@@ -1272,6 +1292,8 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Profile7> = L"Microsoft.Web.WebView2.Core.ICoreWebView2Profile7";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Profile8> = L"Microsoft.Web.WebView2.Core.ICoreWebView2Profile8";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveAsUIShowingEventArgs> = L"Microsoft.Web.WebView2.Core.ICoreWebView2SaveAsUIShowingEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveFileSecurityCheckStartingEventArgs> = L"Microsoft.Web.WebView2.Core.ICoreWebView2SaveFileSecurityCheckStartingEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScreenCaptureStartingEventArgs> = L"Microsoft.Web.WebView2.Core.ICoreWebView2ScreenCaptureStartingEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScriptDialogOpeningEventArgs> = L"Microsoft.Web.WebView2.Core.ICoreWebView2ScriptDialogOpeningEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScriptException> = L"Microsoft.Web.WebView2.Core.ICoreWebView2ScriptException";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ServerCertificateErrorDetectedEventArgs> = L"Microsoft.Web.WebView2.Core.ICoreWebView2ServerCertificateErrorDetectedEventArgs";
@@ -1314,6 +1336,8 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_23> = L"Microsoft.Web.WebView2.Core.ICoreWebView2_23";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_24> = L"Microsoft.Web.WebView2.Core.ICoreWebView2_24";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_25> = L"Microsoft.Web.WebView2.Core.ICoreWebView2_25";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_26> = L"Microsoft.Web.WebView2.Core.ICoreWebView2_26";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_27> = L"Microsoft.Web.WebView2.Core.ICoreWebView2_27";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_3> = L"Microsoft.Web.WebView2.Core.ICoreWebView2_3";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_4> = L"Microsoft.Web.WebView2.Core.ICoreWebView2_4";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_5> = L"Microsoft.Web.WebView2.Core.ICoreWebView2_5";
@@ -1406,6 +1430,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame3>{ 0x6545DAC4,0x1666,0x50A5,{ 0xBB,0xE8,0xEC,0x04,0x84,0x2A,0x46,0x6F } }; // 6545DAC4-1666-50A5-BBE8-EC04842A466F
     template <> inline constexpr guid guid_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame4>{ 0xD46CD758,0x64B9,0x543E,{ 0xA7,0xB8,0xCA,0xC9,0xB4,0xC0,0x59,0xA7 } }; // D46CD758-64B9-543E-A7B8-CAC9B4C059A7
     template <> inline constexpr guid guid_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame5>{ 0x27C4803D,0x9A7F,0x599A,{ 0xBF,0x72,0x07,0xE8,0xDC,0x96,0x4A,0x5B } }; // 27C4803D-9A7F-599A-BF72-07E8DC964A5B
+    template <> inline constexpr guid guid_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame6>{ 0xBA197DAD,0xD2F4,0x5127,{ 0x80,0xB8,0xFA,0xAB,0x02,0xEC,0x21,0x1E } }; // BA197DAD-D2F4-5127-80B8-FAAB02EC211E
     template <> inline constexpr guid guid_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FrameCreatedEventArgs>{ 0x527B01B8,0xFC6D,0x5543,{ 0x8D,0xCE,0x96,0xCD,0xFD,0xB3,0x2C,0x81 } }; // 527B01B8-FC6D-5543-8DCE-96CDFDB32C81
     template <> inline constexpr guid guid_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FrameInfo>{ 0xF9B82E06,0x73F3,0x513B,{ 0xBC,0x2C,0x44,0x5D,0xDE,0xDB,0xA9,0x76 } }; // F9B82E06-73F3-513B-BC2C-445DDEDBA976
     template <> inline constexpr guid guid_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FrameInfo2>{ 0x7F0770C6,0x0D5E,0x529B,{ 0xB0,0x0C,0xF1,0x56,0x56,0xF6,0x05,0xC4 } }; // 7F0770C6-0D5E-529B-B00C-F15656F605C4
@@ -1449,6 +1474,8 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Profile7>{ 0x5F665761,0x5C12,0x5F39,{ 0xB9,0xFE,0x60,0x7E,0x6E,0x94,0xAD,0xD1 } }; // 5F665761-5C12-5F39-B9FE-607E6E94ADD1
     template <> inline constexpr guid guid_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Profile8>{ 0x9362D39C,0xD521,0x59E9,{ 0x88,0xFD,0x7C,0x5A,0xA1,0x16,0x7D,0xA6 } }; // 9362D39C-D521-59E9-88FD-7C5AA1167DA6
     template <> inline constexpr guid guid_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveAsUIShowingEventArgs>{ 0xCC39A250,0x2B4C,0x5608,{ 0x90,0x97,0xC5,0x9B,0x8A,0x82,0x31,0xB9 } }; // CC39A250-2B4C-5608-9097-C59B8A8231B9
+    template <> inline constexpr guid guid_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveFileSecurityCheckStartingEventArgs>{ 0x6F6B50FF,0x3EAE,0x5C4C,{ 0xA2,0x9F,0x6F,0xCE,0x82,0x2A,0x04,0xE0 } }; // 6F6B50FF-3EAE-5C4C-A29F-6FCE822A04E0
+    template <> inline constexpr guid guid_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScreenCaptureStartingEventArgs>{ 0x35F0E2BB,0x94B0,0x5BE7,{ 0xB6,0x33,0xF8,0x72,0x44,0xE3,0x8B,0xFE } }; // 35F0E2BB-94B0-5BE7-B633-F87244E38BFE
     template <> inline constexpr guid guid_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScriptDialogOpeningEventArgs>{ 0xA4315212,0xC7EB,0x568A,{ 0x86,0xE4,0xC6,0x1E,0x31,0xBA,0x6C,0xDA } }; // A4315212-C7EB-568A-86E4-C61E31BA6CDA
     template <> inline constexpr guid guid_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScriptException>{ 0x09BC3CE3,0x3978,0x50A5,{ 0x86,0xAE,0x5C,0x59,0x6D,0x37,0x1C,0x4E } }; // 09BC3CE3-3978-50A5-86AE-5C596D371C4E
     template <> inline constexpr guid guid_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ServerCertificateErrorDetectedEventArgs>{ 0x90FDC703,0x5A9E,0x56F6,{ 0xA4,0x22,0x7C,0x11,0x4C,0x73,0x64,0x20 } }; // 90FDC703-5A9E-56F6-A422-7C114C736420
@@ -1491,6 +1518,8 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_23>{ 0xD6767391,0xFDFE,0x5B95,{ 0x96,0xAE,0x11,0xDE,0x6B,0x87,0x26,0xDD } }; // D6767391-FDFE-5B95-96AE-11DE6B8726DD
     template <> inline constexpr guid guid_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_24>{ 0x469056B8,0xE78D,0x55ED,{ 0x9A,0xF1,0x20,0x7A,0x7F,0x60,0x91,0x1F } }; // 469056B8-E78D-55ED-9AF1-207A7F60911F
     template <> inline constexpr guid guid_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_25>{ 0xB8E2EDCE,0xD943,0x5871,{ 0x83,0x97,0x48,0x3D,0xBD,0x6C,0x0F,0x9E } }; // B8E2EDCE-D943-5871-8397-483DBD6C0F9E
+    template <> inline constexpr guid guid_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_26>{ 0xE7D803DD,0xB2F4,0x5FA3,{ 0x8E,0x63,0x11,0x44,0x89,0xD4,0x06,0x3D } }; // E7D803DD-B2F4-5FA3-8E63-114489D4063D
+    template <> inline constexpr guid guid_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_27>{ 0xD964F497,0xFFDF,0x5BCD,{ 0xBF,0x52,0xFF,0x45,0x85,0xF2,0xEB,0xC2 } }; // D964F497-FFDF-5BCD-BF52-FF4585F2EBC2
     template <> inline constexpr guid guid_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_3>{ 0xA8C76AE7,0x6170,0x5DFE,{ 0x8F,0x00,0x79,0xCD,0x76,0xA9,0xB4,0xD9 } }; // A8C76AE7-6170-5DFE-8F00-79CD76A9B4D9
     template <> inline constexpr guid guid_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_4>{ 0x4AC595CE,0x1502,0x5775,{ 0xB2,0xC8,0x22,0xC1,0x1A,0x36,0x9C,0x25 } }; // 4AC595CE-1502-5775-B2C8-22C11A369C25
     template <> inline constexpr guid guid_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_5>{ 0xDD6AF643,0x220C,0x5DC6,{ 0xB0,0xA8,0x22,0xC4,0x1E,0x47,0x25,0x95 } }; // DD6AF643-220C-5DC6-B0A8-22C41E472595
@@ -1553,6 +1582,8 @@ namespace winrt::impl
     template <> struct default_interface<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ProcessInfo>{ using type = winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ProcessInfo; };
     template <> struct default_interface<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Profile>{ using type = winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Profile; };
     template <> struct default_interface<winrt::Microsoft::Web::WebView2::Core::CoreWebView2SaveAsUIShowingEventArgs>{ using type = winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveAsUIShowingEventArgs; };
+    template <> struct default_interface<winrt::Microsoft::Web::WebView2::Core::CoreWebView2SaveFileSecurityCheckStartingEventArgs>{ using type = winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveFileSecurityCheckStartingEventArgs; };
+    template <> struct default_interface<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScreenCaptureStartingEventArgs>{ using type = winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScreenCaptureStartingEventArgs; };
     template <> struct default_interface<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScriptDialogOpeningEventArgs>{ using type = winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScriptDialogOpeningEventArgs; };
     template <> struct default_interface<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScriptException>{ using type = winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScriptException; };
     template <> struct default_interface<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ServerCertificateErrorDetectedEventArgs>{ using type = winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ServerCertificateErrorDetectedEventArgs; };
@@ -2429,6 +2460,14 @@ namespace winrt::impl
             virtual int32_t __stdcall get_FrameId(uint32_t*) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame6>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall add_ScreenCaptureStarting(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_ScreenCaptureStarting(winrt::event_token) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FrameCreatedEventArgs>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -2913,6 +2952,32 @@ namespace winrt::impl
             virtual int32_t __stdcall GetDeferral(void**) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveFileSecurityCheckStartingEventArgs>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_CancelSave(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_CancelSave(bool) noexcept = 0;
+            virtual int32_t __stdcall get_DocumentOriginUri(void**) noexcept = 0;
+            virtual int32_t __stdcall get_FileExtension(void**) noexcept = 0;
+            virtual int32_t __stdcall get_FilePath(void**) noexcept = 0;
+            virtual int32_t __stdcall get_SuppressDefaultPolicy(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_SuppressDefaultPolicy(bool) noexcept = 0;
+            virtual int32_t __stdcall GetDeferral(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScreenCaptureStartingEventArgs>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_Cancel(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_Cancel(bool) noexcept = 0;
+            virtual int32_t __stdcall get_Handled(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_Handled(bool) noexcept = 0;
+            virtual int32_t __stdcall get_OriginalSourceFrameInfo(void**) noexcept = 0;
+            virtual int32_t __stdcall GetDeferral(void**) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScriptDialogOpeningEventArgs>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -3302,6 +3367,22 @@ namespace winrt::impl
             virtual int32_t __stdcall add_SaveAsUIShowing(void*, winrt::event_token*) noexcept = 0;
             virtual int32_t __stdcall remove_SaveAsUIShowing(winrt::event_token) noexcept = 0;
             virtual int32_t __stdcall ShowSaveAsUIAsync(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_26>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall add_SaveFileSecurityCheckStarting(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_SaveFileSecurityCheckStarting(winrt::event_token) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_27>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall add_ScreenCaptureStarting(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_ScreenCaptureStarting(winrt::event_token) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_3>
@@ -4500,6 +4581,18 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_Web_WebView2_Core_ICoreWebView2Frame5<D>;
     };
     template <typename D>
+    struct consume_Microsoft_Web_WebView2_Core_ICoreWebView2Frame6
+    {
+        auto ScreenCaptureStarting(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Frame, winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScreenCaptureStartingEventArgs> const& handler) const;
+        using ScreenCaptureStarting_revoker = impl::event_revoker<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame6, &impl::abi_t<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame6>::remove_ScreenCaptureStarting>;
+        [[nodiscard]] auto ScreenCaptureStarting(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Frame, winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScreenCaptureStartingEventArgs> const& handler) const;
+        auto ScreenCaptureStarting(winrt::event_token const& token) const noexcept;
+    };
+    template <> struct consume<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame6>
+    {
+        template <typename D> using type = consume_Microsoft_Web_WebView2_Core_ICoreWebView2Frame6<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_Web_WebView2_Core_ICoreWebView2FrameCreatedEventArgs
     {
         [[nodiscard]] auto Frame() const;
@@ -5074,6 +5167,36 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_Web_WebView2_Core_ICoreWebView2SaveAsUIShowingEventArgs<D>;
     };
     template <typename D>
+    struct consume_Microsoft_Web_WebView2_Core_ICoreWebView2SaveFileSecurityCheckStartingEventArgs
+    {
+        [[nodiscard]] auto CancelSave() const;
+        auto CancelSave(bool value) const;
+        [[nodiscard]] auto DocumentOriginUri() const;
+        [[nodiscard]] auto FileExtension() const;
+        [[nodiscard]] auto FilePath() const;
+        [[nodiscard]] auto SuppressDefaultPolicy() const;
+        auto SuppressDefaultPolicy(bool value) const;
+        auto GetDeferral() const;
+    };
+    template <> struct consume<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveFileSecurityCheckStartingEventArgs>
+    {
+        template <typename D> using type = consume_Microsoft_Web_WebView2_Core_ICoreWebView2SaveFileSecurityCheckStartingEventArgs<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_Web_WebView2_Core_ICoreWebView2ScreenCaptureStartingEventArgs
+    {
+        [[nodiscard]] auto Cancel() const;
+        auto Cancel(bool value) const;
+        [[nodiscard]] auto Handled() const;
+        auto Handled(bool value) const;
+        [[nodiscard]] auto OriginalSourceFrameInfo() const;
+        auto GetDeferral() const;
+    };
+    template <> struct consume<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScreenCaptureStartingEventArgs>
+    {
+        template <typename D> using type = consume_Microsoft_Web_WebView2_Core_ICoreWebView2ScreenCaptureStartingEventArgs<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_Web_WebView2_Core_ICoreWebView2ScriptDialogOpeningEventArgs
     {
         [[nodiscard]] auto Uri() const;
@@ -5567,6 +5690,30 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_25>
     {
         template <typename D> using type = consume_Microsoft_Web_WebView2_Core_ICoreWebView2_25<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_Web_WebView2_Core_ICoreWebView2_26
+    {
+        auto SaveFileSecurityCheckStarting(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2SaveFileSecurityCheckStartingEventArgs> const& handler) const;
+        using SaveFileSecurityCheckStarting_revoker = impl::event_revoker<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_26, &impl::abi_t<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_26>::remove_SaveFileSecurityCheckStarting>;
+        [[nodiscard]] auto SaveFileSecurityCheckStarting(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2SaveFileSecurityCheckStartingEventArgs> const& handler) const;
+        auto SaveFileSecurityCheckStarting(winrt::event_token const& token) const noexcept;
+    };
+    template <> struct consume<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_26>
+    {
+        template <typename D> using type = consume_Microsoft_Web_WebView2_Core_ICoreWebView2_26<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_Web_WebView2_Core_ICoreWebView2_27
+    {
+        auto ScreenCaptureStarting(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScreenCaptureStartingEventArgs> const& handler) const;
+        using ScreenCaptureStarting_revoker = impl::event_revoker<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_27, &impl::abi_t<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_27>::remove_ScreenCaptureStarting>;
+        [[nodiscard]] auto ScreenCaptureStarting(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScreenCaptureStartingEventArgs> const& handler) const;
+        auto ScreenCaptureStarting(winrt::event_token const& token) const noexcept;
+    };
+    template <> struct consume<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_27>
+    {
+        template <typename D> using type = consume_Microsoft_Web_WebView2_Core_ICoreWebView2_27<D>;
     };
     template <typename D>
     struct consume_Microsoft_Web_WebView2_Core_ICoreWebView2_3
