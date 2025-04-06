@@ -43,7 +43,7 @@ find_package(Python3 REQUIRED COMPONENTS Development.Module)
 set(WINRT_SDK_PATH "winrt-sdk/src/winrt_sdk")
 set(WINRT_MICROSOFT_UI_XAML_PATH "winrt-Microsoft.UI.Xaml/src/winrt_microsoft_ui_xaml")
 set(WINRT_WINDOWS_APP_SDK_PATH "winrt-WindowsAppSDK/src/winrt_windows_app_sdk")
-set(WINRT_WEBVIEW2_PATH "webview2/webview2-Microsoft.Web.WebView2.Core")
+set(WINRT_WEBVIEW2_PATH "webview2/webview2-Microsoft.Web.WebView2.Core/webview2")
 set(WINDOWS_APP_SDK_PATH "../_tools/Microsoft.WindowsAppSDK")
 set(WEBVIEW2_PATH "../_tools/Microsoft.Web.WebView2")
 
@@ -246,7 +246,7 @@ foreach(package ${packages} ${winui2_packages} ${winui3_packages} ${webview2_pac
             "${WINRT_MICROSOFT_UI_XAML_PATH}/cppwinrt"
             "${WINRT_MICROSOFT_UI_XAML_PATH}/pywinrt"
             "${WINRT_WEBVIEW2_PATH}/cppwinrt"
-            "${WINRT_WEBVIEW2_PATH}"
+            "${WINRT_WEBVIEW2_PATH}/pywinrt"
         )
     endif()
 
@@ -256,14 +256,14 @@ foreach(package ${packages} ${winui2_packages} ${winui3_packages} ${webview2_pac
             "${WINRT_WINDOWS_APP_SDK_PATH}/cppwinrt"
             "${WINRT_WINDOWS_APP_SDK_PATH}/pywinrt"
             "${WINRT_WEBVIEW2_PATH}/cppwinrt"
-            "${WINRT_WEBVIEW2_PATH}"
+            "${WINRT_WEBVIEW2_PATH}/pywinrt"
         )
         if (${package} IN_LIST circular_dependency_packages)
             target_include_directories(${package_target}_2 PRIVATE
                 "${WINRT_WINDOWS_APP_SDK_PATH}/cppwinrt"
                 "${WINRT_WINDOWS_APP_SDK_PATH}/pywinrt"
                 "${WINRT_WEBVIEW2_PATH}/cppwinrt"
-                "${WINRT_WEBVIEW2_PATH}"
+                "${WINRT_WEBVIEW2_PATH}/pywinrt"
             )
         endif()
     endif()
