@@ -2001,6 +2001,84 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
+    static PyObject* CoreWebView2_add_SaveFileSecurityCheckStarting(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2SaveFileSecurityCheckStartingEventArgs>>(arg);
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SaveFileSecurityCheckStarting(param0);
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWebView2_remove_SaveFileSecurityCheckStarting(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.SaveFileSecurityCheckStarting(param0);
+            }
+
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWebView2_add_ScreenCaptureStarting(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScreenCaptureStartingEventArgs>>(arg);
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ScreenCaptureStarting(param0);
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWebView2_remove_ScreenCaptureStarting(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.ScreenCaptureStarting(param0);
+            }
+
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* CoreWebView2_add_DownloadStarting(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* arg) noexcept
     {
         try
@@ -2941,6 +3019,10 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "remove_notification_received", reinterpret_cast<PyCFunction>(CoreWebView2_remove_NotificationReceived), METH_O, nullptr },
         { "add_save_as_ui_showing", reinterpret_cast<PyCFunction>(CoreWebView2_add_SaveAsUIShowing), METH_O, nullptr },
         { "remove_save_as_ui_showing", reinterpret_cast<PyCFunction>(CoreWebView2_remove_SaveAsUIShowing), METH_O, nullptr },
+        { "add_save_file_security_check_starting", reinterpret_cast<PyCFunction>(CoreWebView2_add_SaveFileSecurityCheckStarting), METH_O, nullptr },
+        { "remove_save_file_security_check_starting", reinterpret_cast<PyCFunction>(CoreWebView2_remove_SaveFileSecurityCheckStarting), METH_O, nullptr },
+        { "add_screen_capture_starting", reinterpret_cast<PyCFunction>(CoreWebView2_add_ScreenCaptureStarting), METH_O, nullptr },
+        { "remove_screen_capture_starting", reinterpret_cast<PyCFunction>(CoreWebView2_remove_ScreenCaptureStarting), METH_O, nullptr },
         { "add_download_starting", reinterpret_cast<PyCFunction>(CoreWebView2_add_DownloadStarting), METH_O, nullptr },
         { "remove_download_starting", reinterpret_cast<PyCFunction>(CoreWebView2_remove_DownloadStarting), METH_O, nullptr },
         { "add_frame_created", reinterpret_cast<PyCFunction>(CoreWebView2_add_FrameCreated), METH_O, nullptr },
@@ -11502,6 +11584,45 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
+    static PyObject* CoreWebView2Frame_add_ScreenCaptureStarting(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Frame* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Frame, winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScreenCaptureStartingEventArgs>>(arg);
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ScreenCaptureStarting(param0);
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWebView2Frame_remove_ScreenCaptureStarting(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Frame* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.ScreenCaptureStarting(param0);
+            }
+
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* CoreWebView2Frame_add_Destroyed(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Frame* self, PyObject* arg) noexcept
     {
         try
@@ -11623,6 +11744,8 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "remove_web_message_received", reinterpret_cast<PyCFunction>(CoreWebView2Frame_remove_WebMessageReceived), METH_O, nullptr },
         { "add_permission_requested", reinterpret_cast<PyCFunction>(CoreWebView2Frame_add_PermissionRequested), METH_O, nullptr },
         { "remove_permission_requested", reinterpret_cast<PyCFunction>(CoreWebView2Frame_remove_PermissionRequested), METH_O, nullptr },
+        { "add_screen_capture_starting", reinterpret_cast<PyCFunction>(CoreWebView2Frame_add_ScreenCaptureStarting), METH_O, nullptr },
+        { "remove_screen_capture_starting", reinterpret_cast<PyCFunction>(CoreWebView2Frame_remove_ScreenCaptureStarting), METH_O, nullptr },
         { "add_destroyed", reinterpret_cast<PyCFunction>(CoreWebView2Frame_add_Destroyed), METH_O, nullptr },
         { "remove_destroyed", reinterpret_cast<PyCFunction>(CoreWebView2Frame_remove_Destroyed), METH_O, nullptr },
         { "add_name_changed", reinterpret_cast<PyCFunction>(CoreWebView2Frame_add_NameChanged), METH_O, nullptr },
@@ -18216,6 +18339,436 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         Py_TPFLAGS_DEFAULT,
         _type_slots_CoreWebView2SaveAsUIShowingEventArgs};
 
+    // ----- CoreWebView2SaveFileSecurityCheckStartingEventArgs class --------------------
+
+    static PyObject* _new_CoreWebView2SaveFileSecurityCheckStartingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::Web::WebView2::Core::CoreWebView2SaveFileSecurityCheckStartingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Web::WebView2::Core::CoreWebView2SaveFileSecurityCheckStartingEventArgs>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_CoreWebView2SaveFileSecurityCheckStartingEventArgs(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2SaveFileSecurityCheckStartingEventArgs* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* CoreWebView2SaveFileSecurityCheckStartingEventArgs_GetDeferral(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2SaveFileSecurityCheckStartingEventArgs* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWebView2SaveFileSecurityCheckStartingEventArgs_get_SuppressDefaultPolicy(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2SaveFileSecurityCheckStartingEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SuppressDefaultPolicy();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int CoreWebView2SaveFileSecurityCheckStartingEventArgs_put_SuppressDefaultPolicy(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2SaveFileSecurityCheckStartingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            auto param0 = py::convert_to<bool>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.SuppressDefaultPolicy(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* CoreWebView2SaveFileSecurityCheckStartingEventArgs_get_CancelSave(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2SaveFileSecurityCheckStartingEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.CancelSave();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int CoreWebView2SaveFileSecurityCheckStartingEventArgs_put_CancelSave(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2SaveFileSecurityCheckStartingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            auto param0 = py::convert_to<bool>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.CancelSave(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* CoreWebView2SaveFileSecurityCheckStartingEventArgs_get_DocumentOriginUri(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2SaveFileSecurityCheckStartingEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DocumentOriginUri();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWebView2SaveFileSecurityCheckStartingEventArgs_get_FileExtension(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2SaveFileSecurityCheckStartingEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FileExtension();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWebView2SaveFileSecurityCheckStartingEventArgs_get_FilePath(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2SaveFileSecurityCheckStartingEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FilePath();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_CoreWebView2SaveFileSecurityCheckStartingEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Web::WebView2::Core::CoreWebView2SaveFileSecurityCheckStartingEventArgs>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_CoreWebView2SaveFileSecurityCheckStartingEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2SaveFileSecurityCheckStartingEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_CoreWebView2SaveFileSecurityCheckStartingEventArgs[] = {
+        { "get_deferral", reinterpret_cast<PyCFunction>(CoreWebView2SaveFileSecurityCheckStartingEventArgs_GetDeferral), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_CoreWebView2SaveFileSecurityCheckStartingEventArgs, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2SaveFileSecurityCheckStartingEventArgs), METH_O | METH_STATIC, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_CoreWebView2SaveFileSecurityCheckStartingEventArgs[] = {
+        { "suppress_default_policy", reinterpret_cast<getter>(CoreWebView2SaveFileSecurityCheckStartingEventArgs_get_SuppressDefaultPolicy), reinterpret_cast<setter>(CoreWebView2SaveFileSecurityCheckStartingEventArgs_put_SuppressDefaultPolicy), nullptr, nullptr },
+        { "cancel_save", reinterpret_cast<getter>(CoreWebView2SaveFileSecurityCheckStartingEventArgs_get_CancelSave), reinterpret_cast<setter>(CoreWebView2SaveFileSecurityCheckStartingEventArgs_put_CancelSave), nullptr, nullptr },
+        { "document_origin_uri", reinterpret_cast<getter>(CoreWebView2SaveFileSecurityCheckStartingEventArgs_get_DocumentOriginUri), nullptr, nullptr, nullptr },
+        { "file_extension", reinterpret_cast<getter>(CoreWebView2SaveFileSecurityCheckStartingEventArgs_get_FileExtension), nullptr, nullptr, nullptr },
+        { "file_path", reinterpret_cast<getter>(CoreWebView2SaveFileSecurityCheckStartingEventArgs_get_FilePath), nullptr, nullptr, nullptr },
+        { }};
+
+    static PyType_Slot _type_slots_CoreWebView2SaveFileSecurityCheckStartingEventArgs[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2SaveFileSecurityCheckStartingEventArgs) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2SaveFileSecurityCheckStartingEventArgs) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2SaveFileSecurityCheckStartingEventArgs) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2SaveFileSecurityCheckStartingEventArgs) },
+        { }};
+
+    static PyType_Spec type_spec_CoreWebView2SaveFileSecurityCheckStartingEventArgs = {
+        "webview2._webview2_microsoft_web_webview2_core.CoreWebView2SaveFileSecurityCheckStartingEventArgs",
+        sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2SaveFileSecurityCheckStartingEventArgs),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_CoreWebView2SaveFileSecurityCheckStartingEventArgs};
+
+    // ----- CoreWebView2ScreenCaptureStartingEventArgs class --------------------
+
+    static PyObject* _new_CoreWebView2ScreenCaptureStartingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScreenCaptureStartingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScreenCaptureStartingEventArgs>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_CoreWebView2ScreenCaptureStartingEventArgs(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ScreenCaptureStartingEventArgs* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* CoreWebView2ScreenCaptureStartingEventArgs_GetDeferral(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ScreenCaptureStartingEventArgs* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWebView2ScreenCaptureStartingEventArgs_get_Handled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ScreenCaptureStartingEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int CoreWebView2ScreenCaptureStartingEventArgs_put_Handled(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ScreenCaptureStartingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            auto param0 = py::convert_to<bool>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* CoreWebView2ScreenCaptureStartingEventArgs_get_Cancel(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ScreenCaptureStartingEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Cancel();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int CoreWebView2ScreenCaptureStartingEventArgs_put_Cancel(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ScreenCaptureStartingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            auto param0 = py::convert_to<bool>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.Cancel(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* CoreWebView2ScreenCaptureStartingEventArgs_get_OriginalSourceFrameInfo(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ScreenCaptureStartingEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OriginalSourceFrameInfo();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_CoreWebView2ScreenCaptureStartingEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScreenCaptureStartingEventArgs>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_CoreWebView2ScreenCaptureStartingEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScreenCaptureStartingEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_CoreWebView2ScreenCaptureStartingEventArgs[] = {
+        { "get_deferral", reinterpret_cast<PyCFunction>(CoreWebView2ScreenCaptureStartingEventArgs_GetDeferral), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_CoreWebView2ScreenCaptureStartingEventArgs, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_CoreWebView2ScreenCaptureStartingEventArgs), METH_O | METH_STATIC, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_CoreWebView2ScreenCaptureStartingEventArgs[] = {
+        { "handled", reinterpret_cast<getter>(CoreWebView2ScreenCaptureStartingEventArgs_get_Handled), reinterpret_cast<setter>(CoreWebView2ScreenCaptureStartingEventArgs_put_Handled), nullptr, nullptr },
+        { "cancel", reinterpret_cast<getter>(CoreWebView2ScreenCaptureStartingEventArgs_get_Cancel), reinterpret_cast<setter>(CoreWebView2ScreenCaptureStartingEventArgs_put_Cancel), nullptr, nullptr },
+        { "original_source_frame_info", reinterpret_cast<getter>(CoreWebView2ScreenCaptureStartingEventArgs_get_OriginalSourceFrameInfo), nullptr, nullptr, nullptr },
+        { }};
+
+    static PyType_Slot _type_slots_CoreWebView2ScreenCaptureStartingEventArgs[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2ScreenCaptureStartingEventArgs) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2ScreenCaptureStartingEventArgs) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2ScreenCaptureStartingEventArgs) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2ScreenCaptureStartingEventArgs) },
+        { }};
+
+    static PyType_Spec type_spec_CoreWebView2ScreenCaptureStartingEventArgs = {
+        "webview2._webview2_microsoft_web_webview2_core.CoreWebView2ScreenCaptureStartingEventArgs",
+        sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ScreenCaptureStartingEventArgs),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_CoreWebView2ScreenCaptureStartingEventArgs};
+
     // ----- CoreWebView2ScriptDialogOpeningEventArgs class --------------------
 
     static PyObject* _new_CoreWebView2ScriptDialogOpeningEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -22370,6 +22923,18 @@ PyMODINIT_FUNC PyInit__webview2_microsoft_web_webview2_core(void) noexcept
 
     py::pytype_handle CoreWebView2SaveAsUIShowingEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreWebView2SaveAsUIShowingEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!CoreWebView2SaveAsUIShowingEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CoreWebView2SaveFileSecurityCheckStartingEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreWebView2SaveFileSecurityCheckStartingEventArgs, object_bases.get(), inspectable_meta_type)};
+    if (!CoreWebView2SaveFileSecurityCheckStartingEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CoreWebView2ScreenCaptureStartingEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreWebView2ScreenCaptureStartingEventArgs, object_bases.get(), inspectable_meta_type)};
+    if (!CoreWebView2ScreenCaptureStartingEventArgs_type)
     {
         return nullptr;
     }

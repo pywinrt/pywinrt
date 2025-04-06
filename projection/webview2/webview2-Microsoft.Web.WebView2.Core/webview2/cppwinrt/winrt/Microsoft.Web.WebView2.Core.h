@@ -2125,6 +2125,20 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame5)->get_FrameId(&value));
         return value;
     }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2Frame6<D>::ScreenCaptureStarting(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Frame, winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScreenCaptureStartingEventArgs> const& handler) const
+    {
+        winrt::event_token token{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame6)->add_ScreenCaptureStarting(*(void**)(&handler), put_abi(token)));
+        return token;
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2Frame6<D>::ScreenCaptureStarting(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Frame, winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScreenCaptureStartingEventArgs> const& handler) const
+    {
+        return impl::make_event_revoker<D, ScreenCaptureStarting_revoker>(this, ScreenCaptureStarting(handler));
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2Frame6<D>::ScreenCaptureStarting(winrt::event_token const& token) const noexcept
+    {
+        WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame6)->remove_ScreenCaptureStarting(impl::bind_in(token));
+    }
     template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2FrameCreatedEventArgs<D>::Frame() const
     {
         void* value{};
@@ -3333,6 +3347,82 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveAsUIShowingEventArgs)->GetDeferral(&result));
         return winrt::Windows::Foundation::Deferral{ result, take_ownership_from_abi };
     }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2SaveFileSecurityCheckStartingEventArgs<D>::CancelSave() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveFileSecurityCheckStartingEventArgs)->get_CancelSave(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2SaveFileSecurityCheckStartingEventArgs<D>::CancelSave(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveFileSecurityCheckStartingEventArgs)->put_CancelSave(value));
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2SaveFileSecurityCheckStartingEventArgs<D>::DocumentOriginUri() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveFileSecurityCheckStartingEventArgs)->get_DocumentOriginUri(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2SaveFileSecurityCheckStartingEventArgs<D>::FileExtension() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveFileSecurityCheckStartingEventArgs)->get_FileExtension(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2SaveFileSecurityCheckStartingEventArgs<D>::FilePath() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveFileSecurityCheckStartingEventArgs)->get_FilePath(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2SaveFileSecurityCheckStartingEventArgs<D>::SuppressDefaultPolicy() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveFileSecurityCheckStartingEventArgs)->get_SuppressDefaultPolicy(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2SaveFileSecurityCheckStartingEventArgs<D>::SuppressDefaultPolicy(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveFileSecurityCheckStartingEventArgs)->put_SuppressDefaultPolicy(value));
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2SaveFileSecurityCheckStartingEventArgs<D>::GetDeferral() const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveFileSecurityCheckStartingEventArgs)->GetDeferral(&result));
+        return winrt::Windows::Foundation::Deferral{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2ScreenCaptureStartingEventArgs<D>::Cancel() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScreenCaptureStartingEventArgs)->get_Cancel(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2ScreenCaptureStartingEventArgs<D>::Cancel(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScreenCaptureStartingEventArgs)->put_Cancel(value));
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2ScreenCaptureStartingEventArgs<D>::Handled() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScreenCaptureStartingEventArgs)->get_Handled(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2ScreenCaptureStartingEventArgs<D>::Handled(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScreenCaptureStartingEventArgs)->put_Handled(value));
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2ScreenCaptureStartingEventArgs<D>::OriginalSourceFrameInfo() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScreenCaptureStartingEventArgs)->get_OriginalSourceFrameInfo(&value));
+        return winrt::Microsoft::Web::WebView2::Core::CoreWebView2FrameInfo{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2ScreenCaptureStartingEventArgs<D>::GetDeferral() const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScreenCaptureStartingEventArgs)->GetDeferral(&result));
+        return winrt::Windows::Foundation::Deferral{ result, take_ownership_from_abi };
+    }
     template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2ScriptDialogOpeningEventArgs<D>::Uri() const
     {
         void* value{};
@@ -4120,6 +4210,34 @@ namespace winrt::impl
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_25)->ShowSaveAsUIAsync(&operation));
         return winrt::Windows::Foundation::IAsyncOperation<winrt::Microsoft::Web::WebView2::Core::CoreWebView2SaveAsUIResult>{ operation, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2_26<D>::SaveFileSecurityCheckStarting(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2SaveFileSecurityCheckStartingEventArgs> const& handler) const
+    {
+        winrt::event_token token{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_26)->add_SaveFileSecurityCheckStarting(*(void**)(&handler), put_abi(token)));
+        return token;
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2_26<D>::SaveFileSecurityCheckStarting(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2SaveFileSecurityCheckStartingEventArgs> const& handler) const
+    {
+        return impl::make_event_revoker<D, SaveFileSecurityCheckStarting_revoker>(this, SaveFileSecurityCheckStarting(handler));
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2_26<D>::SaveFileSecurityCheckStarting(winrt::event_token const& token) const noexcept
+    {
+        WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_26)->remove_SaveFileSecurityCheckStarting(impl::bind_in(token));
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2_27<D>::ScreenCaptureStarting(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScreenCaptureStartingEventArgs> const& handler) const
+    {
+        winrt::event_token token{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_27)->add_ScreenCaptureStarting(*(void**)(&handler), put_abi(token)));
+        return token;
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2_27<D>::ScreenCaptureStarting(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScreenCaptureStartingEventArgs> const& handler) const
+    {
+        return impl::make_event_revoker<D, ScreenCaptureStarting_revoker>(this, ScreenCaptureStarting(handler));
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2_27<D>::ScreenCaptureStarting(winrt::event_token const& token) const noexcept
+    {
+        WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_27)->remove_ScreenCaptureStarting(impl::bind_in(token));
     }
     template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2_3<D>::IsSuspended() const
     {
@@ -7480,6 +7598,26 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame6> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame6>
+    {
+        int32_t __stdcall add_ScreenCaptureStarting(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().ScreenCaptureStarting(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Frame, winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScreenCaptureStartingEventArgs> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_ScreenCaptureStarting(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ScreenCaptureStarting(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FrameCreatedEventArgs> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FrameCreatedEventArgs>
     {
         int32_t __stdcall get_Frame(void** value) noexcept final try
@@ -9381,6 +9519,122 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveFileSecurityCheckStartingEventArgs> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveFileSecurityCheckStartingEventArgs>
+    {
+        int32_t __stdcall get_CancelSave(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().CancelSave());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_CancelSave(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().CancelSave(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_DocumentOriginUri(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().DocumentOriginUri());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_FileExtension(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().FileExtension());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_FilePath(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().FilePath());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_SuppressDefaultPolicy(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().SuppressDefaultPolicy());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_SuppressDefaultPolicy(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SuppressDefaultPolicy(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetDeferral(void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::Deferral>(this->shim().GetDeferral());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScreenCaptureStartingEventArgs> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScreenCaptureStartingEventArgs>
+    {
+        int32_t __stdcall get_Cancel(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().Cancel());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_Cancel(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Cancel(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Handled(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().Handled());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_Handled(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Handled(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_OriginalSourceFrameInfo(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::Web::WebView2::Core::CoreWebView2FrameInfo>(this->shim().OriginalSourceFrameInfo());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetDeferral(void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::Deferral>(this->shim().GetDeferral());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScriptDialogOpeningEventArgs> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScriptDialogOpeningEventArgs>
     {
         int32_t __stdcall get_Uri(void** value) noexcept final try
@@ -10652,6 +10906,46 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_26> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_26>
+    {
+        int32_t __stdcall add_SaveFileSecurityCheckStarting(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().SaveFileSecurityCheckStarting(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2SaveFileSecurityCheckStartingEventArgs> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_SaveFileSecurityCheckStarting(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SaveFileSecurityCheckStarting(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_27> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_27>
+    {
+        int32_t __stdcall add_ScreenCaptureStarting(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().ScreenCaptureStarting(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScreenCaptureStartingEventArgs> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_ScreenCaptureStarting(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ScreenCaptureStarting(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_3> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_3>
     {
         int32_t __stdcall get_IsSuspended(bool* value) noexcept final try
@@ -11216,6 +11510,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame3> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame4> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame5> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame6> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FrameCreatedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FrameInfo> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FrameInfo2> : winrt::impl::hash_base {};
@@ -11259,6 +11554,8 @@ namespace std
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Profile7> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Profile8> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveAsUIShowingEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveFileSecurityCheckStartingEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScreenCaptureStartingEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScriptDialogOpeningEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScriptException> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ServerCertificateErrorDetectedEventArgs> : winrt::impl::hash_base {};
@@ -11301,6 +11598,8 @@ namespace std
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_23> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_24> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_25> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_26> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_27> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_3> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_4> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_5> : winrt::impl::hash_base {};
@@ -11363,6 +11662,8 @@ namespace std
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ProcessInfo> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Profile> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2SaveAsUIShowingEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2SaveFileSecurityCheckStartingEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScreenCaptureStartingEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScriptDialogOpeningEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScriptException> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ServerCertificateErrorDetectedEventArgs> : winrt::impl::hash_base {};

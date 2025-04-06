@@ -1011,6 +1011,22 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Microsoft::Web::WebView2::Core::CoreWebView2SaveFileSecurityCheckStartingEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "webview2.microsoft.web.webview2.core.CoreWebView2SaveFileSecurityCheckStartingEventArgs";
+        static constexpr const char* module_name = "webview2.microsoft.web.webview2.core";
+        static constexpr const char* type_name = "CoreWebView2SaveFileSecurityCheckStartingEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScreenCaptureStartingEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "webview2.microsoft.web.webview2.core.CoreWebView2ScreenCaptureStartingEventArgs";
+        static constexpr const char* module_name = "webview2.microsoft.web.webview2.core";
+        static constexpr const char* type_name = "CoreWebView2ScreenCaptureStartingEventArgs";
+    };
+
+    template<>
     struct py_type<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScriptDialogOpeningEventArgs>
     {
         static constexpr std::string_view qualified_name = "webview2.microsoft.web.webview2.core.CoreWebView2ScriptDialogOpeningEventArgs";
@@ -1223,6 +1239,8 @@ namespace py::wrapper::Microsoft::Web::WebView2::Core
     using CoreWebView2ProcessInfo = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ProcessInfo>;
     using CoreWebView2Profile = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Profile>;
     using CoreWebView2SaveAsUIShowingEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2SaveAsUIShowingEventArgs>;
+    using CoreWebView2SaveFileSecurityCheckStartingEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2SaveFileSecurityCheckStartingEventArgs>;
+    using CoreWebView2ScreenCaptureStartingEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScreenCaptureStartingEventArgs>;
     using CoreWebView2ScriptDialogOpeningEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScriptDialogOpeningEventArgs>;
     using CoreWebView2ScriptException = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScriptException>;
     using CoreWebView2ServerCertificateErrorDetectedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ServerCertificateErrorDetectedEventArgs>;

@@ -587,6 +587,13 @@ WINRT_EXPORT namespace winrt::Microsoft::Web::WebView2::Core
         ICoreWebView2Frame5(std::nullptr_t = nullptr) noexcept {}
         ICoreWebView2Frame5(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES ICoreWebView2Frame6 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ICoreWebView2Frame6>
+    {
+        ICoreWebView2Frame6(std::nullptr_t = nullptr) noexcept {}
+        ICoreWebView2Frame6(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES ICoreWebView2FrameCreatedEventArgs :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ICoreWebView2FrameCreatedEventArgs>
@@ -888,6 +895,20 @@ WINRT_EXPORT namespace winrt::Microsoft::Web::WebView2::Core
         ICoreWebView2SaveAsUIShowingEventArgs(std::nullptr_t = nullptr) noexcept {}
         ICoreWebView2SaveAsUIShowingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES ICoreWebView2SaveFileSecurityCheckStartingEventArgs :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ICoreWebView2SaveFileSecurityCheckStartingEventArgs>
+    {
+        ICoreWebView2SaveFileSecurityCheckStartingEventArgs(std::nullptr_t = nullptr) noexcept {}
+        ICoreWebView2SaveFileSecurityCheckStartingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ICoreWebView2ScreenCaptureStartingEventArgs :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ICoreWebView2ScreenCaptureStartingEventArgs>
+    {
+        ICoreWebView2ScreenCaptureStartingEventArgs(std::nullptr_t = nullptr) noexcept {}
+        ICoreWebView2ScreenCaptureStartingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES ICoreWebView2ScriptDialogOpeningEventArgs :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ICoreWebView2ScriptDialogOpeningEventArgs>
@@ -1181,6 +1202,20 @@ WINRT_EXPORT namespace winrt::Microsoft::Web::WebView2::Core
     {
         ICoreWebView2_25(std::nullptr_t = nullptr) noexcept {}
         ICoreWebView2_25(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ICoreWebView2_26 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ICoreWebView2_26>
+    {
+        ICoreWebView2_26(std::nullptr_t = nullptr) noexcept {}
+        ICoreWebView2_26(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ICoreWebView2_27 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ICoreWebView2_27>
+    {
+        ICoreWebView2_27(std::nullptr_t = nullptr) noexcept {}
+        ICoreWebView2_27(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES ICoreWebView2_3 :
         winrt::Windows::Foundation::IInspectable,

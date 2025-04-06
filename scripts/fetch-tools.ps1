@@ -17,7 +17,7 @@ param(
 
     # WebView2
     [Parameter(Mandatory=$false)]
-    [string]$WebView2Version = "1.0.2739.15",
+    [string]$WebView2Version = "1.0.3124.44",
     [switch]$noWebView2,
 
     # TestWinRT
