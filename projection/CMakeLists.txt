@@ -181,6 +181,7 @@ else()
         "winrt/winrt-Windows.Graphics.DirectX"
         "winrt/winrt-Windows.Graphics.DirectX.Direct3D11"
         "winrt/winrt-Windows.Graphics.Imaging"
+        "winrt/winrt-Windows.Media"
         "winrt/winrt-Windows.Storage"
         "winrt/winrt-Windows.Storage.Streams"
         "winrt/winrt-Windows.System"
@@ -197,6 +198,7 @@ else()
     set(interop_packages
         "interop/winrt-Windows.Graphics.Capture.Interop"
         "interop/winrt-Windows.Graphics.DirectX.Direct3D11.Interop"
+        "interop/winrt-Windows.Media.Interop"
         "interop/winrt-Windows.System.Interop"
         "interop/winrt-Windows.UI.Composition.Interop"
         "interop/winrt-Windows.UI.Xaml.Hosting.Interop"

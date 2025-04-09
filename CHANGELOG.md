@@ -4,6 +4,9 @@
 
 ## [Unreleased]
 
+### Added
+- Added `winrt.windows.media.interop` package.
+
 ### Changed
 - Updated Windows App SDK to 1.7.250310001.
 - Updated WebView2 to 1.0.3124.44.
