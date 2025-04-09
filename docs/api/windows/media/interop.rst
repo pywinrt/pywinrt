@@ -15,4 +15,6 @@ APIs for desktop interop with the `Windows.Media
     :return: Receives the ``ISystemMediaTransportControls`` that corresponds to the appWindow window.
     :rtype: :obj:`winrt.windows.media.SystemMediaTransportControls`
 
+    .. versionadded:: unreleased
+
     .. seealso:: https://learn.microsoft.com/en-us/windows/win32/api/systemmediatransportcontrolsinterop/nf-systemmediatransportcontrolsinterop-isystemmediatransportcontrolsinterop-getforwindow
