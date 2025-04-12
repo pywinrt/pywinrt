@@ -4,6 +4,8 @@
 
 ## [Unreleased]
 
+## [v3.1.0] - 2025-04-11
+
 ### Added
 - Added `winrt.windows.media.interop` package.
 
@@ -358,7 +360,8 @@ package only.
 ### Removed
 - Removed selecting apartment thread type during module init.
 
-[Unreleased]: https://github.com/pywinrt/pywinrt/compare/v3.0.0...HEAD
+[Unreleased]: https://github.com/pywinrt/pywinrt/compare/v3.1.0...HEAD
+[v3.1.0]: https://github.com/pywinrt/pywinrt/compare/v3.0.0...v3.1.0
 [v3.0.0]: https://github.com/pywinrt/pywinrt/compare/v2.3.0...v3.0.0
 [v2.3.0]: https://github.com/pywinrt/pywinrt/compare/v2.2.0...v2.3.0
 [v2.2.0]: https://github.com/pywinrt/pywinrt/compare/v2.1.0...v2.2.0
