@@ -1,2 +1,2 @@
-cibuildwheel[uv]==2.20.0
-wheel==0.44.0
+cibuildwheel[uv]==2.23.2
+wheel==0.45.1
