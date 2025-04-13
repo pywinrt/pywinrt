@@ -1,0 +1,2 @@
+comtypes
+typing_extensions
