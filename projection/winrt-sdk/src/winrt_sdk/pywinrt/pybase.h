@@ -14,6 +14,7 @@
 #include <unknwn.h>
 #undef GetCurrentTime
 #include <winrt/Windows.Foundation.h>
+#include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Foundation.Metadata.h>
 
 static_assert(PY_VERSION_HEX >= 0x03090000, "Python 3.9 or later is required");
@@ -2346,48 +2347,6 @@ namespace py
     };
 
     template<typename K, typename V>
-    struct python_key_value_pair
-        : python_implements<
-              python_key_value_pair<K, V>,
-              winrt::Windows::Foundation::Collections::IKeyValuePair<K, V>>
-    {
-        K _key;
-        V _value;
-
-        python_key_value_pair(K key, V value) : _key(key), _value(value)
-        {
-        }
-
-        K Key() const
-        {
-            auto gil = ensure_gil();
-
-            try
-            {
-                return _key;
-            }
-            catch (python_exception)
-            {
-                write_unraisable_and_throw();
-            }
-        }
-
-        V Value() const
-        {
-            auto gil = ensure_gil();
-
-            try
-            {
-                return _value;
-            }
-            catch (python_exception)
-            {
-                write_unraisable_and_throw();
-            }
-        }
-    };
-
-    template<typename K, typename V>
     struct python_mapping_iterator
         : python_implements<
               python_mapping_iterator<K, V>,
@@ -2425,7 +2384,9 @@ namespace py
             auto key = converter<K>::convert_to(next_key.get());
             auto value = converter<V>::convert_to(next_value.get());
 
-            return winrt::make<python_key_value_pair<K, V>>(key, value);
+            return winrt::make<winrt::impl::key_value_pair<
+                winrt::Windows::Foundation::Collections::IKeyValuePair<K, V>>>(
+                key, value);
         }
 
         python_mapping_iterator(PyObject* mapping) : _mapping(mapping)
