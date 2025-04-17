@@ -358,7 +358,7 @@ class DisplayPath(winrt.system.Object):
 @typing.final
 class DisplayPrimaryDescription_Static(winrt._winrt.IInspectable_Static):
     # Windows.Devices.Display.Core.DisplayPrimaryDescription Windows.Devices.Display.Core.DisplayPrimaryDescription::CreateWithProperties(Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.Guid,System.Object>>,System.UInt32,System.UInt32,Windows.Graphics.DirectX.DirectXPixelFormat,Windows.Graphics.DirectX.DirectXColorSpace,System.Boolean,Windows.Graphics.DirectX.Direct3D11.Direct3DMultisampleDescription)
-    def create_with_properties(cls, extra_properties: typing.Iterable[windows_foundation_collections.IKeyValuePair[_uuid.UUID, winrt.system.Object]], width: winrt.system.UInt32, height: winrt.system.UInt32, pixel_format: windows_graphics_directx.DirectXPixelFormat, color_space: windows_graphics_directx.DirectXColorSpace, is_stereo: bool, multisample_description: typing.Union[windows_graphics_directx_direct3d11.Direct3DMultisampleDescription, typing.Tuple[winrt.system.Int32, winrt.system.Int32]], /) -> DisplayPrimaryDescription: ...
+    def create_with_properties(cls, extra_properties: typing.Union[typing.Mapping[_uuid.UUID, winrt.system.Object], typing.Iterable[windows_foundation_collections.IKeyValuePair[_uuid.UUID, winrt.system.Object]]], width: winrt.system.UInt32, height: winrt.system.UInt32, pixel_format: windows_graphics_directx.DirectXPixelFormat, color_space: windows_graphics_directx.DirectXColorSpace, is_stereo: bool, multisample_description: typing.Union[windows_graphics_directx_direct3d11.Direct3DMultisampleDescription, typing.Tuple[winrt.system.Int32, winrt.system.Int32]], /) -> DisplayPrimaryDescription: ...
 
 @typing.final
 class DisplayPrimaryDescription(winrt.system.Object, metaclass=DisplayPrimaryDescription_Static):
@@ -549,7 +549,7 @@ class DisplayView(winrt.system.Object):
 @typing.final
 class DisplayWireFormat_Static(winrt._winrt.IInspectable_Static):
     # Windows.Devices.Display.Core.DisplayWireFormat Windows.Devices.Display.Core.DisplayWireFormat::CreateWithProperties(Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.Guid,System.Object>>,Windows.Devices.Display.Core.DisplayWireFormatPixelEncoding,System.Int32,Windows.Devices.Display.Core.DisplayWireFormatColorSpace,Windows.Devices.Display.Core.DisplayWireFormatEotf,Windows.Devices.Display.Core.DisplayWireFormatHdrMetadata)
-    def create_with_properties(cls, extra_properties: typing.Iterable[windows_foundation_collections.IKeyValuePair[_uuid.UUID, winrt.system.Object]], pixel_encoding: DisplayWireFormatPixelEncoding, bits_per_channel: winrt.system.Int32, color_space: DisplayWireFormatColorSpace, eotf: DisplayWireFormatEotf, hdr_metadata: DisplayWireFormatHdrMetadata, /) -> DisplayWireFormat: ...
+    def create_with_properties(cls, extra_properties: typing.Union[typing.Mapping[_uuid.UUID, winrt.system.Object], typing.Iterable[windows_foundation_collections.IKeyValuePair[_uuid.UUID, winrt.system.Object]]], pixel_encoding: DisplayWireFormatPixelEncoding, bits_per_channel: winrt.system.Int32, color_space: DisplayWireFormatColorSpace, eotf: DisplayWireFormatEotf, hdr_metadata: DisplayWireFormatHdrMetadata, /) -> DisplayWireFormat: ...
 
 @typing.final
 class DisplayWireFormat(winrt.system.Object, metaclass=DisplayWireFormat_Static):
