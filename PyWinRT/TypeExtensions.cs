@@ -377,6 +377,7 @@ static class TypeExtensions
         bool quoteImportedTypes = false,
         bool usePythonCollectionTypes = true,
         bool useStructTupleUnion = false,
+        bool useKeyValuePairIterMappingUnion = false,
         bool isUnpack = false
     ) =>
         string.Format(
@@ -399,6 +400,14 @@ static class TypeExtensions
                 GenericInstanceType gen
                     when gen.ElementType.FullName == "Windows.Foundation.IReference`1"
                     => $"typing.Optional[{gen.GenericArguments[0].ToPyTypeName(ns, nullabilityInfo.Args![0], packageMap, map, quoteImportedTypes)}]",
+                GenericInstanceType gen
+                    when useKeyValuePairIterMappingUnion
+                        && usePythonCollectionTypes
+                        && gen.ElementType.FullName == "Windows.Foundation.Collections.IIterable`1"
+                        && gen.GenericArguments[0] is GenericInstanceType gen2
+                        && gen2.ElementType.FullName
+                            == "Windows.Foundation.Collections.IKeyValuePair`2"
+                    => $"typing.Union[typing.Mapping[{string.Join(", ", gen2.GenericArguments.Select((p, i) => p.ToPyTypeName(ns, nullabilityInfo.Args![0].Args![i], packageMap, map, quoteImportedTypes)))}], {type.ToPyTypeName(ns, nullabilityInfo, packageMap, map, quoteImportedTypes, usePythonCollectionTypes, useStructTupleUnion)}]",
                 GenericInstanceType gen
                     when usePythonCollectionTypes
                         && gen.ElementType.FullName == "Windows.Foundation.Collections.IIterable`1"
@@ -499,7 +508,8 @@ static class TypeExtensions
                     packageMap,
                     map,
                     quoteImportedTypes,
-                    useStructTupleUnion: true
+                    useStructTupleUnion: true,
+                    useKeyValuePairIterMappingUnion: true
                 ),
             ParamCategory.PassArray
                 => $"typing.Union[winrt.system.Array[{param.ParameterType.ToPyTypeName(ns, nullabilityInfo, packageMap, map, quoteImportedTypes)}], winrt.system.ReadableBuffer]",

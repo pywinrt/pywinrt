@@ -4,6 +4,9 @@
 
 ## [Unreleased]
 
+### Added
+- Allow passing Python mapping as arguments of type `Iterable[IKeyValuePair[K, V]]`.
+
 ## [v3.1.0] - 2025-04-11
 
 ### Added

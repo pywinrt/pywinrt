@@ -591,3 +591,10 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(x, "b")
         self.assertEqual(y, "c")
         self.assertEqual(z, 4)
+
+    def test_dict_to_iter_of_ikeyvaluepair(self):
+        arg = {"1": "2", "3": "4"}
+        tests = tc.TestRunner.make_tests()
+        ret, out = tests.collection2(arg)
+        self.assertDictEqual({i.key: i.value for i in ret}, arg)
+        self.assertDictEqual({i.key: i.value for i in out}, arg)

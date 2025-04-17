@@ -2858,6 +2858,21 @@ namespace py
             ->obj.as<T>();
     }
 
+    template<typename T>
+    inline constexpr bool is_key_value_pair_v
+        = winrt::impl::is_key_value_pair<T>::value;
+
+    template<typename T>
+    struct key_value_pair_type;
+
+    template<typename K, typename V>
+    struct key_value_pair_type<
+        winrt::Windows::Foundation::Collections::IKeyValuePair<K, V>>
+    {
+        using key_type = K;
+        using value_type = V;
+    };
+
     template<typename TItem>
     struct converter<winrt::Windows::Foundation::Collections::IIterable<TItem>>
     {
@@ -2868,11 +2883,21 @@ namespace py
             return wrap(instance);
         }
 
-        static auto convert_to(PyObject* obj)
+        static TCollection convert_to(PyObject* obj)
         {
             if (auto result = convert_interface_to<TCollection>(obj))
             {
                 return result.value();
+            }
+
+            if constexpr (is_key_value_pair_v<TItem>)
+            {
+                if (PyMapping_Check(obj))
+                {
+                    using K = key_value_pair_type<TItem>::key_type;
+                    using V = key_value_pair_type<TItem>::value_type;
+                    return winrt::make<python_map_view<K, V>>(obj);
+                }
             }
 
             pyobj_handle iterator{PyObject_GetIter(obj)};
