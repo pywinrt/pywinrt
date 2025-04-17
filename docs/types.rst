@@ -237,9 +237,96 @@ Buffers
 Collections
 ===========
 
-.. todo:: document Iterable, Sequence, Map
+Most of the generic types in `Windows.Foundation.Collections`_ are projected
+as `collections.abc`_ types. The WinRT runtime types are still present behind
+the scenes, bute the type hints use only the Python standard library types to
+encourage users to use the Pythonic APIs. Furthermore, types that inherit from
+these interfaces are also extended to support the Pythonic APIs.
 
-    https://github.com/pywinrt/pywinrt/blob/main/projection/readme.md#collection-protocols
+.. _Windows.Foundation.Collections: https://learn.microsoft.com/en-us/uwp/api/windows.foundation.collections
+.. _collections.abc: https://docs.python.org/3/library/collections.abc.html
+
+Sequences
+---------
+
+`IVector<T>`_ is projected as `MutableSequence[T]`_ and `IVectorView<T>`_ is
+projected as `Sequence[T]`_. These types behave very much like Python lists, so
+you can iterate them with a ``for`` loop, index them ``seq[0]``, slice them
+``seq[:3]`` use them with ``len(seq)`` and search with ``value in seq``.
+
+For mutable sequences, items can be modified with ``seq[0] = value``, deleted
+with ``del seq[0]``, appended with ``seq.append(value)`` or ``seq.extend(seq2)``,
+inserted with ``seq.insert(0, value)``, removed with ``seq.remove(value)``, and
+cleared with ``seq.clear()``. You can also reverse the sequence in place with
+``seq.reverse()``, pop an item at a specific index using ``seq.pop(index)``
+(or the last item with ``seq.pop()``), or add items using the ``+=`` operator
+like ``seq += [value1, value2]``.
+
+.. _IVector<T>: https://learn.microsoft.com/en-us/uwp/api/windows.foundation.collections.ivector-1
+.. _MutableSequence[T]: https://docs.python.org/3/library/collections.abc.html#collections.abc.MutableSequence
+.. _IVectorView<T>: https://learn.microsoft.com/en-us/uwp/api/windows.foundation.collections.ivectorview-1
+.. _Sequence[T]: https://docs.python.org/3/library/collections.abc.html#collections.abc.Sequence
+
+Mappings
+--------
+
+`IMap<K, V>`_ is projected as `MutableMapping[K, V]`_ and `IMapView<K, V>`_ is
+projected as `Mapping[K, V]`_. These types behave like Python dictionaries, so
+you can access values with ``map[key]`` or ``map.get(key)``, check for keys with
+``key in map``, and iterate over keys with a ``for`` loop. You can also retrieve
+all keys, values, or key/value pairs using ``map.keys()``, ``map.values()``, and
+``map.items()`` respectively. Equality operators (``==`` and ``!=``) can be used
+to compare mappings for equality based on their key-value pairs. You can also
+use ``len(map)`` to get the number of keys in the mapping.
+
+.. note:: Python iterates over the keys only which might not be what you expect
+    if you are used to using the same types in .NET. In Python, you will write::
+
+        for key in map:
+            print(key)
+
+    To get both the keys and values, use the ``items()`` method::
+
+        for key, value in map.items():
+            print(key, value)
+
+For mutable mappings, you can add or update items with ``map[key] = value``,
+use ``value = map.setdefault(key, default)`` to insert a key with a default
+value if it doesn't exist, delete items with ``del map[key]``, and clear all
+items with ``map.clear()``. You can also remove and return a value while
+removing the key using ``map.pop(key)`` or ``map.popitem()``. Multiple values
+can be set at the same time using ``map.update(other)``.
+
+There is also a special handling for ``IIterable<IKeyValuePair<K, V>>`` when
+used as an argument to methods where a Python mapping is allowed. This means you
+can pass a Python dictionary as the argument.
+
+Example::
+
+    data = NotificationData({"my_key": "my_value"})
+
+.. _IMap<K, V>: https://learn.microsoft.com/en-us/uwp/api/windows.foundation.collections.imap-2
+.. _MutableMapping[K, V]: https://docs.python.org/3/library/collections.abc.html#collections.abc.MutableMapping
+.. _IMapView<K, V>: https://learn.microsoft.com/en-us/uwp/api/windows.foundation.collections.imapview-2
+.. _Mapping[K, V]: https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping
+
+Iterators
+---------
+
+`IIterable<T>`_ becomes `Iterable[T]`_. Any iterable Python type can be used
+as an argument and return values can be used as any other iterable in Python.
+Don't use the WinRT ``first()`` method to get an iterator, instead use the
+built-in ``iter()`` function or other Python features like ``for`` loops.
+
+`IIterator<T>`_ is projected as `Iterator[T]`_ however these objects are rarely
+used directly in Python. Intead, use ``for`` loops or generator expressions to
+do the iterating for you. In rare cases, iterators might be used with ``next()``.
+The WinRT methods on this object should be avoided.
+
+.. _IIterable<T>: https://learn.microsoft.com/en-us/uwp/api/windows.foundation.collections.iiterable-1
+.. _Iterable[T]: https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterable
+.. _IIterator<T>: https://learn.microsoft.com/en-us/uwp/api/windows.foundation.collections.iiterator-1
+.. _Iterator[T]: https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterator
 
 
 Context managers
