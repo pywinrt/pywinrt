@@ -35,6 +35,15 @@ your program:
         # your main entry point code here
         ...
 
+.. warning:: If you are using a Python runtime installed rom the Microsoft Store,
+    this method will fail with ``OSError(winerror=-2147009196)`` (``ERROR_NOT_SUPPORTED = -2147009196``).
+    This happens because the Microsoft Store version of Python is a "packaged" app
+    and expects the dependency to be included in the package manifest. This should
+    be able to be worked around using other dynamic dependency APIs, but this has
+    not been extensively tested yet. See `Microsoft's Docs`_ for more information.
+
+.. _Microsoft's Docs: https://learn.microsoft.com/en-us/windows/apps/desktop/modernize/framework-packages/use-the-dynamic-dependency-api
+
 ---------------
 Interop modules
 ---------------
