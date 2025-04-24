@@ -2,6 +2,12 @@
 :mod:`winui3` namespace
 =======================
 
+.. danger:: None of the packages in this namespace can be used if the Windows
+    App Runtime is not installed! You must manually install this from `here <download>`_.
+    Also read the `Boostrapping`_ section below for how to initialize the runtime.
+
+.. _download: https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads
+
 The :mod:`winui3` namespace package contains the automatically generated
 bindings for the Windows App SDK, also known as WinUI 3. Each API namespace is
 distributed as a separate package on PyPI. For example, the ``winui3-Microsoft.UI.Xaml``
