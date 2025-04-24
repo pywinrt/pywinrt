@@ -140,9 +140,17 @@ README_TEMPLATE = """\
 """
 
 BINARY_README_TEMPLATE = """\
-Windows Runtime (WinRT) APIs for for the `{namespace}` namespace.
+{important}Windows Runtime (WinRT) APIs for for the `{namespace}` namespace.
 
 This package provides the `{module_name}` module.
+"""
+
+WINUI3_README_IMPORTANT = """\
+**IMPORTANT**: Packages in the `winui3-*` namespace cannot be used without the
+Windows App Runtime. This has to be installed manually by the end user. Read the
+[PyWinRT winui3 documentation](https://pywinrt.readthedocs.io/en/latest/api/winui3/index.html)
+for more information.
+
 """
 
 SDK_README_TEMPLATE = """\
@@ -293,22 +301,26 @@ def write_project_files(
                     else ""
                 ),
                 package_name=package_name,
-                description="Windows Runtime SDK for Python header files"
-                if is_sdk_package(package_name)
-                else "Python projection of Windows Runtime (WinRT) APIs",
+                description=(
+                    "Windows Runtime SDK for Python header files"
+                    if is_sdk_package(package_name)
+                    else "Python projection of Windows Runtime (WinRT) APIs"
+                ),
                 module_name=module_name,
                 extra_dynamic=(', "dependencies"' if has_requirements else "")
                 + (', "optional-dependencies"' if has_all_requirements else ""),
                 dependencies=DEPENDENCIES if has_requirements else "",
-                optional_dependencies=OPTIONAL_DEPENDENCIES
-                if has_all_requirements
-                else "",
-                find_src=FIND_SRC
-                if (package_path / "src").exists()
-                else (
-                    COMPONENT_PACKAGE_FIND_SRC
-                    if is_component_package(package_name)
-                    else ""
+                optional_dependencies=(
+                    OPTIONAL_DEPENDENCIES if has_all_requirements else ""
+                ),
+                find_src=(
+                    FIND_SRC
+                    if (package_path / "src").exists()
+                    else (
+                        COMPONENT_PACKAGE_FIND_SRC
+                        if is_component_package(package_name)
+                        else ""
+                    )
                 ),
             )
         )
@@ -318,9 +330,9 @@ def write_project_files(
         else:
             f.write(
                 BINARY_PACKAGE_TEMPLATE.format(
-                    component_package_data=', "*.h"'
-                    if is_component_package(package_name)
-                    else "",
+                    component_package_data=(
+                        ', "*.h"' if is_component_package(package_name) else ""
+                    ),
                     relative=relative,
                     extra_python_path=(
                         f";{relative}/winrt-Microsoft.UI.Xaml/src"
@@ -332,15 +344,17 @@ def write_project_files(
                         if is_windows_app_package(package_name)
                         else ""
                     ),
-                    extra_cibuildwheel_windows='\nrepair-wheel-command = "python scripts/add_msvcp140_dll.py {wheel} {dest_dir}"'
-                    if package_name == "winrt-runtime"
-                    else (
-                        '\nrepair-wheel-command = "python scripts/add_bootstrap_dll.py {wheel} {dest_dir}"'
-                        if is_app_sdk_bootstrap_package(package_name)
+                    extra_cibuildwheel_windows=(
+                        '\nrepair-wheel-command = "python scripts/add_msvcp140_dll.py {wheel} {dest_dir}"'
+                        if package_name == "winrt-runtime"
                         else (
-                            '\nrepair-wheel-command = "python scripts/add_webview2_dll.py {wheel} {dest_dir}"'
-                            if is_webview2_package(package_name)
-                            else ""
+                            '\nrepair-wheel-command = "python scripts/add_bootstrap_dll.py {wheel} {dest_dir}"'
+                            if is_app_sdk_bootstrap_package(package_name)
+                            else (
+                                '\nrepair-wheel-command = "python scripts/add_webview2_dll.py {wheel} {dest_dir}"'
+                                if is_webview2_package(package_name)
+                                else ""
+                            )
                         )
                     ),
                 )
@@ -350,9 +364,9 @@ def write_project_files(
         with open(package_path / "setup.py", "w", newline="\n") as f:
             f.write(
                 SETUP_PY_TEMPLATE.format(
-                    extra_init=APP_SDK_INIT
-                    if is_app_sdk_interop_package(package_name)
-                    else "",
+                    extra_init=(
+                        APP_SDK_INIT if is_app_sdk_interop_package(package_name) else ""
+                    ),
                     root_package=root_package,
                     ext_module=ext_module_name,
                     sources=", ".join(f'"{x}"' for x in sources),
@@ -386,9 +400,11 @@ def write_project_files(
                         if is_component_package(package_name)
                         else ""
                     ),
-                    extra_build=APP_SDK_EXTRA_BUILD
-                    if is_app_sdk_interop_package(package_name)
-                    else "",
+                    extra_build=(
+                        APP_SDK_EXTRA_BUILD
+                        if is_app_sdk_interop_package(package_name)
+                        else ""
+                    ),
                     extra_libraries=(
                         ', "Microsoft.WindowsAppRuntime.Bootstrap"'
                         if is_app_sdk_bootstrap_package(package_name)
@@ -442,12 +458,14 @@ def write_project_files(
             if is_sdk_package(package_name):
                 f.write(
                     SDK_README_TEMPLATE.format(
-                        sdk_name="the Windows SDK"
-                        if package_name == "winrt-sdk"
-                        else package_name.removeprefix("winrt-"),
-                        extra_requires=""
-                        if package_name == "winrt-sdk"
-                        else f', "{package_name}"',
+                        sdk_name=(
+                            "the Windows SDK"
+                            if package_name == "winrt-sdk"
+                            else package_name.removeprefix("winrt-")
+                        ),
+                        extra_requires=(
+                            "" if package_name == "winrt-sdk" else f', "{package_name}"'
+                        ),
                         extra_imports=(
                             "\nfrom winrt_microsoft_ui_xaml import get_include_dirs as get_winui2_include_dirs"
                             if is_microsoft_ui_xaml_package(package_name)
@@ -473,6 +491,11 @@ def write_project_files(
             else:
                 f.write(
                     BINARY_README_TEMPLATE.format(
+                        important=(
+                            WINUI3_README_IMPORTANT
+                            if is_windows_app_package(package_name)
+                            else ""
+                        ),
                         namespace=package_name.removeprefix("winrt-"),
                         module_name=module_name,
                     )
