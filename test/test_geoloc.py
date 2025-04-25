@@ -1,6 +1,6 @@
 import os
 import unittest
-from concurrent.futures import Future, wait
+from concurrent.futures import Future
 from datetime import datetime
 
 import winrt.windows.devices.geolocation as wdg
@@ -66,12 +66,7 @@ class TestGeolocation(unittest.TestCase):
         op = locator.get_geoposition_async()
         op.completed = callback
 
-        done, not_done = wait([op_future], 10)
-
-        assert len(done) == 1
-        assert not any(not_done)
-
-        pos = op_future.result()
+        pos = op_future.result(10)
 
         self.assertEqual(type(pos), wdg.Geoposition)
 

@@ -1,11 +1,11 @@
 # SPDX-License-Identifier: MIT
 # Copyright 2024 David Lechner <david@pybricks.com>
 
+from concurrent.futures import Future
 from ctypes import WinError
-from concurrent.futures import Future, wait
 from typing import Optional, TypeVar, Union, overload
 
-from winrt.windows.foundation import IAsyncOperation, AsyncStatus, IAsyncAction
+from winrt.windows.foundation import AsyncStatus, IAsyncAction, IAsyncOperation
 
 T = TypeVar("T")
 
@@ -36,7 +36,5 @@ def wait_for(operation: Union[IAsyncOperation[T], IAsyncAction]) -> Optional[T]:
             future.set_exception(e)
 
     operation.completed = completed
-
-    wait([future])
 
     return future.result()
