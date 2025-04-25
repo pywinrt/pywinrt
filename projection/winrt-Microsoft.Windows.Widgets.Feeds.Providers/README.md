@@ -2,6 +2,10 @@
 
 # winrt-Microsoft.Windows.Widgets.Feeds.Providers
 
+ATTENTION: This package has been renamed to
+[winui3-Microsoft.Windows.Widgets.Feeds.Providers](https://pypi.org/project/winui3-Microsoft.Windows.Widgets.Feeds.Providers/).
+Use the new package for the latest updates.
+
 Windows Runtime (WinRT) APIs for for the `Microsoft.Windows.Widgets.Feeds.Providers` namespace.
 
 This package provides the `winrt.microsoft.windows.widgets.feeds.providers` module.

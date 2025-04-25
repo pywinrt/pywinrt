@@ -2,6 +2,10 @@
 
 # winrt-Microsoft.UI.Xaml.Printing
 
+ATTENTION: This package has been renamed to
+[winui3-Microsoft.UI.Xaml.Printing](https://pypi.org/project/winui3-Microsoft.UI.Xaml.Printing/).
+Use the new package for the latest updates.
+
 Windows Runtime (WinRT) APIs for for the `Microsoft.UI.Xaml.Printing` namespace.
 
 This package provides the `winrt.microsoft.ui.xaml.printing` module.

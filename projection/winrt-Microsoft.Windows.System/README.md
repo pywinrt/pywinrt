@@ -2,6 +2,10 @@
 
 # winrt-Microsoft.Windows.System
 
+ATTENTION: This package has been renamed to
+[winui3-Microsoft.Windows.System](https://pypi.org/project/winui3-Microsoft.Windows.System/).
+Use the new package for the latest updates.
+
 Windows Runtime (WinRT) APIs for for the `Microsoft.Windows.System` namespace.
 
 This package provides the `winrt.microsoft.windows.system` module.
