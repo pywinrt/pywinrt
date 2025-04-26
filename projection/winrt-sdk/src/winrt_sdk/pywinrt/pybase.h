@@ -3394,9 +3394,13 @@ namespace py
         {
             // Set error to get same behavior as non-async
             PyErr_SetFromWindowsErr(operation.ErrorCode());
+#if PY_VERSION_HEX >= 0x030C0000
+            return PyErr_GetRaisedException();
+#else
             pyobj_handle type, value, trace;
             PyErr_Fetch(type.put(), value.put(), trace.put());
             return value.detach();
+#endif
         }
         catch (...)
         {
