@@ -110,9 +110,13 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency::Boot
 
         if (self->shutdown)
         {
+#if PY_VERSION_HEX < 0x030C0000
             PyObject *error_type, *error_value, *error_traceback;
 
             PyErr_Fetch(&error_type, &error_value, &error_traceback);
+#else
+            pyobj_handle error{PyErr_GetRaisedException()};
+#endif
 
             if (PyErr_WarnEx(
                     PyExc_RuntimeWarning,
@@ -123,7 +127,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency::Boot
                 PyErr_WriteUnraisable(reinterpret_cast<PyObject*>(self));
             }
 
+#if PY_VERSION_HEX < 0x030C0000
             PyErr_Restore(error_type, error_value, error_traceback);
+#else
+            if (error)
+            {
+                PyErr_SetRaisedException(error.detach());
+            }
+#endif
         }
 
         std::destroy_at(&self->shutdown);
