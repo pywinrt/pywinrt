@@ -5141,6 +5141,272 @@
             ]
           },
           {
+            "signature": "Windows.Foundation.IAsyncAction TestComponent.TestRunner::CreateAsyncActionWithError(System.UInt32,System.Int32)",
+            "name": "CreateAsyncActionWithError",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.IAsyncAction"
+              }
+            },
+            "parameters": [
+              {
+                "name": "milliseconds",
+                "kind": "in",
+                "type": {
+                  "name": "System.UInt32"
+                }
+              },
+              {
+                "name": "error",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.IAsyncActionWithProgress`1<System.Int32> TestComponent.TestRunner::CreateAsyncActionWithProgress(System.UInt32,Windows.Foundation.Collections.IVectorView`1<System.Int32>)",
+            "name": "CreateAsyncActionWithProgress",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.IAsyncActionWithProgress`1",
+                "args": [
+                  {
+                    "name": "System.Int32"
+                  }
+                ]
+              }
+            },
+            "parameters": [
+              {
+                "name": "milliseconds",
+                "kind": "in",
+                "type": {
+                  "name": "System.UInt32"
+                }
+              },
+              {
+                "name": "items",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.Collections.IVectorView`1",
+                  "args": [
+                    {
+                      "name": "System.Int32"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.IAsyncActionWithProgress`1<System.Int32> TestComponent.TestRunner::CreateAsyncActionWithProgressWithError(System.UInt32,Windows.Foundation.Collections.IVectorView`1<System.Int32>,System.Int32)",
+            "name": "CreateAsyncActionWithProgressWithError",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.IAsyncActionWithProgress`1",
+                "args": [
+                  {
+                    "name": "System.Int32"
+                  }
+                ]
+              }
+            },
+            "parameters": [
+              {
+                "name": "milliseconds",
+                "kind": "in",
+                "type": {
+                  "name": "System.UInt32"
+                }
+              },
+              {
+                "name": "items",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.Collections.IVectorView`1",
+                  "args": [
+                    {
+                      "name": "System.Int32"
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "error",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.IAsyncOperation`1<System.Int32> TestComponent.TestRunner::CreateAsyncOperation(System.UInt32,System.Int32)",
+            "name": "CreateAsyncOperation",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.IAsyncOperation`1",
+                "args": [
+                  {
+                    "name": "System.Int32"
+                  }
+                ]
+              }
+            },
+            "parameters": [
+              {
+                "name": "milliseconds",
+                "kind": "in",
+                "type": {
+                  "name": "System.UInt32"
+                }
+              },
+              {
+                "name": "result",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.IAsyncOperation`1<System.Int32> TestComponent.TestRunner::CreateAsyncOperationWithError(System.UInt32,System.Int32,System.Int32)",
+            "name": "CreateAsyncOperationWithError",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.IAsyncOperation`1",
+                "args": [
+                  {
+                    "name": "System.Int32"
+                  }
+                ]
+              }
+            },
+            "parameters": [
+              {
+                "name": "milliseconds",
+                "kind": "in",
+                "type": {
+                  "name": "System.UInt32"
+                }
+              },
+              {
+                "name": "result",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              },
+              {
+                "name": "error",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.IAsyncOperationWithProgress`2<System.Int32,System.Int32> TestComponent.TestRunner::CreateAsyncOperationWithProgress(System.UInt32,Windows.Foundation.Collections.IVectorView`1<System.Int32>,System.Int32)",
+            "name": "CreateAsyncOperationWithProgress",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.IAsyncOperationWithProgress`2",
+                "args": [
+                  {
+                    "name": "System.Int32"
+                  },
+                  {
+                    "name": "System.Int32"
+                  }
+                ]
+              }
+            },
+            "parameters": [
+              {
+                "name": "milliseconds",
+                "kind": "in",
+                "type": {
+                  "name": "System.UInt32"
+                }
+              },
+              {
+                "name": "items",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.Collections.IVectorView`1",
+                  "args": [
+                    {
+                      "name": "System.Int32"
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "result",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.IAsyncOperationWithProgress`2<System.Int32,System.Int32> TestComponent.TestRunner::CreateAsyncOperationWithProgressWithError(System.UInt32,Windows.Foundation.Collections.IVectorView`1<System.Int32>,System.Int32,System.Int32)",
+            "name": "CreateAsyncOperationWithProgressWithError",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.IAsyncOperationWithProgress`2",
+                "args": [
+                  {
+                    "name": "System.Int32"
+                  },
+                  {
+                    "name": "System.Int32"
+                  }
+                ]
+              }
+            },
+            "parameters": [
+              {
+                "name": "milliseconds",
+                "kind": "in",
+                "type": {
+                  "name": "System.UInt32"
+                }
+              },
+              {
+                "name": "items",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.Collections.IVectorView`1",
+                  "args": [
+                    {
+                      "name": "System.Int32"
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "result",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              },
+              {
+                "name": "error",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              }
+            ]
+          },
+          {
             "signature": "Windows.Foundation.Collections.IVector`1<System.Int32> TestComponent.TestRunner::CreateInt32Vector()",
             "name": "CreateInt32Vector",
             "return": {

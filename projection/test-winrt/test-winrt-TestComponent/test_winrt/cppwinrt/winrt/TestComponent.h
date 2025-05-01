@@ -215,6 +215,48 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITestRunnerStatics)->CreateAsyncAction(milliseconds, &operation));
         return winrt::Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
+    template <typename D> auto consume_TestComponent_ITestRunnerStatics<D>::CreateAsyncActionWithError(uint32_t milliseconds, int32_t error) const
+    {
+        void* operation{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITestRunnerStatics)->CreateAsyncActionWithError(milliseconds, error, &operation));
+        return winrt::Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_ITestRunnerStatics<D>::CreateAsyncOperation(uint32_t milliseconds, int32_t result) const
+    {
+        void* operation{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITestRunnerStatics)->CreateAsyncOperation(milliseconds, result, &operation));
+        return winrt::Windows::Foundation::IAsyncOperation<int32_t>{ operation, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_ITestRunnerStatics<D>::CreateAsyncOperationWithError(uint32_t milliseconds, int32_t result, int32_t error) const
+    {
+        void* operation{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITestRunnerStatics)->CreateAsyncOperationWithError(milliseconds, result, error, &operation));
+        return winrt::Windows::Foundation::IAsyncOperation<int32_t>{ operation, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_ITestRunnerStatics<D>::CreateAsyncActionWithProgress(uint32_t milliseconds, param::async_vector_view<int32_t> const& items) const
+    {
+        void* operation{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITestRunnerStatics)->CreateAsyncActionWithProgress(milliseconds, *(void**)(&items), &operation));
+        return winrt::Windows::Foundation::IAsyncActionWithProgress<int32_t>{ operation, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_ITestRunnerStatics<D>::CreateAsyncActionWithProgressWithError(uint32_t milliseconds, param::async_vector_view<int32_t> const& items, int32_t error) const
+    {
+        void* operation{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITestRunnerStatics)->CreateAsyncActionWithProgressWithError(milliseconds, *(void**)(&items), error, &operation));
+        return winrt::Windows::Foundation::IAsyncActionWithProgress<int32_t>{ operation, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_ITestRunnerStatics<D>::CreateAsyncOperationWithProgress(uint32_t milliseconds, param::async_vector_view<int32_t> const& items, int32_t result) const
+    {
+        void* operation{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITestRunnerStatics)->CreateAsyncOperationWithProgress(milliseconds, *(void**)(&items), result, &operation));
+        return winrt::Windows::Foundation::IAsyncOperationWithProgress<int32_t, int32_t>{ operation, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_ITestRunnerStatics<D>::CreateAsyncOperationWithProgressWithError(uint32_t milliseconds, param::async_vector_view<int32_t> const& items, int32_t result, int32_t error) const
+    {
+        void* operation{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITestRunnerStatics)->CreateAsyncOperationWithProgressWithError(milliseconds, *(void**)(&items), result, error, &operation));
+        return winrt::Windows::Foundation::IAsyncOperationWithProgress<int32_t, int32_t>{ operation, take_ownership_from_abi };
+    }
     template <typename D> auto consume_TestComponent_ITestRunnerStatics<D>::ExpectObject(winrt::Windows::Foundation::IInspectable const& value) const
     {
         void* result{};
@@ -1779,6 +1821,62 @@ namespace winrt::impl
             return 0;
         }
         catch (...) { return to_hresult(); }
+        int32_t __stdcall CreateAsyncActionWithError(uint32_t milliseconds, int32_t error, void** operation) noexcept final try
+        {
+            clear_abi(operation);
+            typename D::abi_guard guard(this->shim());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncAction>(this->shim().CreateAsyncActionWithError(milliseconds, error));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall CreateAsyncOperation(uint32_t milliseconds, int32_t result, void** operation) noexcept final try
+        {
+            clear_abi(operation);
+            typename D::abi_guard guard(this->shim());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<int32_t>>(this->shim().CreateAsyncOperation(milliseconds, result));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall CreateAsyncOperationWithError(uint32_t milliseconds, int32_t result, int32_t error, void** operation) noexcept final try
+        {
+            clear_abi(operation);
+            typename D::abi_guard guard(this->shim());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<int32_t>>(this->shim().CreateAsyncOperationWithError(milliseconds, result, error));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall CreateAsyncActionWithProgress(uint32_t milliseconds, void* items, void** operation) noexcept final try
+        {
+            clear_abi(operation);
+            typename D::abi_guard guard(this->shim());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncActionWithProgress<int32_t>>(this->shim().CreateAsyncActionWithProgress(milliseconds, *reinterpret_cast<winrt::Windows::Foundation::Collections::IVectorView<int32_t> const*>(&items)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall CreateAsyncActionWithProgressWithError(uint32_t milliseconds, void* items, int32_t error, void** operation) noexcept final try
+        {
+            clear_abi(operation);
+            typename D::abi_guard guard(this->shim());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncActionWithProgress<int32_t>>(this->shim().CreateAsyncActionWithProgressWithError(milliseconds, *reinterpret_cast<winrt::Windows::Foundation::Collections::IVectorView<int32_t> const*>(&items), error));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall CreateAsyncOperationWithProgress(uint32_t milliseconds, void* items, int32_t result, void** operation) noexcept final try
+        {
+            clear_abi(operation);
+            typename D::abi_guard guard(this->shim());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperationWithProgress<int32_t, int32_t>>(this->shim().CreateAsyncOperationWithProgress(milliseconds, *reinterpret_cast<winrt::Windows::Foundation::Collections::IVectorView<int32_t> const*>(&items), result));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall CreateAsyncOperationWithProgressWithError(uint32_t milliseconds, void* items, int32_t result, int32_t error, void** operation) noexcept final try
+        {
+            clear_abi(operation);
+            typename D::abi_guard guard(this->shim());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperationWithProgress<int32_t, int32_t>>(this->shim().CreateAsyncOperationWithProgressWithError(milliseconds, *reinterpret_cast<winrt::Windows::Foundation::Collections::IVectorView<int32_t> const*>(&items), result, error));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
         int32_t __stdcall ExpectObject(void* value, void** result) noexcept final try
         {
             clear_abi(result);
@@ -2845,6 +2943,34 @@ WINRT_EXPORT namespace winrt::TestComponent
     inline auto TestRunner::CreateAsyncAction(uint32_t milliseconds)
     {
         return impl::call_factory<TestRunner, ITestRunnerStatics>([&](ITestRunnerStatics const& f) { return f.CreateAsyncAction(milliseconds); });
+    }
+    inline auto TestRunner::CreateAsyncActionWithError(uint32_t milliseconds, int32_t error)
+    {
+        return impl::call_factory<TestRunner, ITestRunnerStatics>([&](ITestRunnerStatics const& f) { return f.CreateAsyncActionWithError(milliseconds, error); });
+    }
+    inline auto TestRunner::CreateAsyncOperation(uint32_t milliseconds, int32_t result)
+    {
+        return impl::call_factory<TestRunner, ITestRunnerStatics>([&](ITestRunnerStatics const& f) { return f.CreateAsyncOperation(milliseconds, result); });
+    }
+    inline auto TestRunner::CreateAsyncOperationWithError(uint32_t milliseconds, int32_t result, int32_t error)
+    {
+        return impl::call_factory<TestRunner, ITestRunnerStatics>([&](ITestRunnerStatics const& f) { return f.CreateAsyncOperationWithError(milliseconds, result, error); });
+    }
+    inline auto TestRunner::CreateAsyncActionWithProgress(uint32_t milliseconds, param::async_vector_view<int32_t> const& items)
+    {
+        return impl::call_factory<TestRunner, ITestRunnerStatics>([&](ITestRunnerStatics const& f) { return f.CreateAsyncActionWithProgress(milliseconds, items); });
+    }
+    inline auto TestRunner::CreateAsyncActionWithProgressWithError(uint32_t milliseconds, param::async_vector_view<int32_t> const& items, int32_t error)
+    {
+        return impl::call_factory<TestRunner, ITestRunnerStatics>([&](ITestRunnerStatics const& f) { return f.CreateAsyncActionWithProgressWithError(milliseconds, items, error); });
+    }
+    inline auto TestRunner::CreateAsyncOperationWithProgress(uint32_t milliseconds, param::async_vector_view<int32_t> const& items, int32_t result)
+    {
+        return impl::call_factory<TestRunner, ITestRunnerStatics>([&](ITestRunnerStatics const& f) { return f.CreateAsyncOperationWithProgress(milliseconds, items, result); });
+    }
+    inline auto TestRunner::CreateAsyncOperationWithProgressWithError(uint32_t milliseconds, param::async_vector_view<int32_t> const& items, int32_t result, int32_t error)
+    {
+        return impl::call_factory<TestRunner, ITestRunnerStatics>([&](ITestRunnerStatics const& f) { return f.CreateAsyncOperationWithProgressWithError(milliseconds, items, result, error); });
     }
     inline auto TestRunner::ExpectObject(winrt::Windows::Foundation::IInspectable const& value)
     {
