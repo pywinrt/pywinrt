@@ -22,7 +22,7 @@ param(
 
     # TestWinRT
     [Parameter(Mandatory=$false)]
-    [string]$TestWinRTVersion = "1.2.0",
+    [string]$TestWinRTVersion = "1.3.0",
     [switch]$noTestWinRT
 )
 

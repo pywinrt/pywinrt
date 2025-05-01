@@ -655,6 +655,13 @@ WINRT_EXPORT namespace winrt::TestComponent
         static auto CreateStringableVector();
         static auto CreateTimeSpan(uint32_t milliseconds);
         static auto CreateAsyncAction(uint32_t milliseconds);
+        static auto CreateAsyncActionWithError(uint32_t milliseconds, int32_t error);
+        static auto CreateAsyncOperation(uint32_t milliseconds, int32_t result);
+        static auto CreateAsyncOperationWithError(uint32_t milliseconds, int32_t result, int32_t error);
+        static auto CreateAsyncActionWithProgress(uint32_t milliseconds, param::async_vector_view<int32_t> const& items);
+        static auto CreateAsyncActionWithProgressWithError(uint32_t milliseconds, param::async_vector_view<int32_t> const& items, int32_t error);
+        static auto CreateAsyncOperationWithProgress(uint32_t milliseconds, param::async_vector_view<int32_t> const& items, int32_t result);
+        static auto CreateAsyncOperationWithProgressWithError(uint32_t milliseconds, param::async_vector_view<int32_t> const& items, int32_t result, int32_t error);
         static auto ExpectObject(winrt::Windows::Foundation::IInspectable const& value);
     };
     template <typename D>

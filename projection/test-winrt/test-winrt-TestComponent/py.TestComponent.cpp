@@ -1609,6 +1609,221 @@ namespace py::cpp::TestComponent
         }
     }
 
+    static PyObject* TestRunner_CreateAsyncActionWithError(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                auto param0 = py::convert_to<uint32_t>(args, 0);
+                auto param1 = py::convert_to<int32_t>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::TestComponent::TestRunner::CreateAsyncActionWithError(param0, param1);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TestRunner_CreateAsyncActionWithProgress(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                auto param0 = py::convert_to<uint32_t>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<int32_t>>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::TestComponent::TestRunner::CreateAsyncActionWithProgress(param0, param1);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TestRunner_CreateAsyncActionWithProgressWithError(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                auto param0 = py::convert_to<uint32_t>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<int32_t>>(args, 1);
+                auto param2 = py::convert_to<int32_t>(args, 2);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::TestComponent::TestRunner::CreateAsyncActionWithProgressWithError(param0, param1, param2);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TestRunner_CreateAsyncOperation(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                auto param0 = py::convert_to<uint32_t>(args, 0);
+                auto param1 = py::convert_to<int32_t>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::TestComponent::TestRunner::CreateAsyncOperation(param0, param1);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TestRunner_CreateAsyncOperationWithError(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                auto param0 = py::convert_to<uint32_t>(args, 0);
+                auto param1 = py::convert_to<int32_t>(args, 1);
+                auto param2 = py::convert_to<int32_t>(args, 2);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::TestComponent::TestRunner::CreateAsyncOperationWithError(param0, param1, param2);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TestRunner_CreateAsyncOperationWithProgress(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                auto param0 = py::convert_to<uint32_t>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<int32_t>>(args, 1);
+                auto param2 = py::convert_to<int32_t>(args, 2);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::TestComponent::TestRunner::CreateAsyncOperationWithProgress(param0, param1, param2);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TestRunner_CreateAsyncOperationWithProgressWithError(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 4)
+        {
+            try
+            {
+                auto param0 = py::convert_to<uint32_t>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<int32_t>>(args, 1);
+                auto param2 = py::convert_to<int32_t>(args, 2);
+                auto param3 = py::convert_to<int32_t>(args, 3);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::TestComponent::TestRunner::CreateAsyncOperationWithProgressWithError(param0, param1, param2, param3);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* TestRunner_CreateInt32Vector(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
@@ -1886,6 +2101,13 @@ namespace py::cpp::TestComponent
 
     static PyMethodDef methods_TestRunner_Static[] = {
         { "create_async_action", reinterpret_cast<PyCFunction>(TestRunner_CreateAsyncAction), METH_VARARGS, nullptr },
+        { "create_async_action_with_error", reinterpret_cast<PyCFunction>(TestRunner_CreateAsyncActionWithError), METH_VARARGS, nullptr },
+        { "create_async_action_with_progress", reinterpret_cast<PyCFunction>(TestRunner_CreateAsyncActionWithProgress), METH_VARARGS, nullptr },
+        { "create_async_action_with_progress_with_error", reinterpret_cast<PyCFunction>(TestRunner_CreateAsyncActionWithProgressWithError), METH_VARARGS, nullptr },
+        { "create_async_operation", reinterpret_cast<PyCFunction>(TestRunner_CreateAsyncOperation), METH_VARARGS, nullptr },
+        { "create_async_operation_with_error", reinterpret_cast<PyCFunction>(TestRunner_CreateAsyncOperationWithError), METH_VARARGS, nullptr },
+        { "create_async_operation_with_progress", reinterpret_cast<PyCFunction>(TestRunner_CreateAsyncOperationWithProgress), METH_VARARGS, nullptr },
+        { "create_async_operation_with_progress_with_error", reinterpret_cast<PyCFunction>(TestRunner_CreateAsyncOperationWithProgressWithError), METH_VARARGS, nullptr },
         { "create_int32_vector", reinterpret_cast<PyCFunction>(TestRunner_CreateInt32Vector), METH_VARARGS, nullptr },
         { "create_string_vector", reinterpret_cast<PyCFunction>(TestRunner_CreateStringVector), METH_VARARGS, nullptr },
         { "create_stringable_vector", reinterpret_cast<PyCFunction>(TestRunner_CreateStringableVector), METH_VARARGS, nullptr },

@@ -261,7 +261,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::TestComponent::IRequiredOne>{ 0x9CDEFEE9,0x59A9,0x5329,{ 0xA7,0xF3,0x59,0x35,0xD9,0xCA,0x27,0x11 } }; // 9CDEFEE9-59A9-5329-A7F3-5935D9CA2711
     template <> inline constexpr guid guid_v<winrt::TestComponent::IRequiredThree>{ 0x541F26D9,0x3083,0x50AE,{ 0x9F,0x32,0x26,0xF9,0x24,0x40,0x36,0x88 } }; // 541F26D9-3083-50AE-9F32-26F924403688
     template <> inline constexpr guid guid_v<winrt::TestComponent::IRequiredTwo>{ 0x3A307125,0x2148,0x532D,{ 0xB7,0x9B,0xE8,0xCD,0xDF,0x5C,0xA8,0x62 } }; // 3A307125-2148-532D-B79B-E8CDDF5CA862
-    template <> inline constexpr guid guid_v<winrt::TestComponent::ITestRunnerStatics>{ 0xF9962DCC,0xBF90,0x537D,{ 0xA9,0x43,0x4B,0xEC,0xCA,0xCD,0xE7,0x61 } }; // F9962DCC-BF90-537D-A943-4BECCACDE761
+    template <> inline constexpr guid guid_v<winrt::TestComponent::ITestRunnerStatics>{ 0xDF1F4D1E,0x63B5,0x581C,{ 0x9E,0xB6,0x57,0xD3,0xC6,0xCA,0x77,0x93 } }; // DF1F4D1E-63B5-581C-9EB6-57D3C6CA7793
     template <> inline constexpr guid guid_v<winrt::TestComponent::ITests>{ 0xBB28BCA1,0xA46D,0x5897,{ 0xA3,0xE9,0xF9,0xEC,0x16,0x93,0x08,0x75 } }; // BB28BCA1-A46D-5897-A3E9-F9EC16930875
     template <> inline constexpr guid guid_v<winrt::TestComponent::Array10Handler>{ 0xC901DD1B,0x433D,0x565E,{ 0xA8,0xE7,0x0D,0xBD,0x77,0x76,0x1A,0xEA } }; // C901DD1B-433D-565E-A8E7-0DBD77761AEA
     template <> inline constexpr guid guid_v<winrt::TestComponent::Array11Handler>{ 0xB4D851CD,0x5C24,0x5511,{ 0xA6,0xAC,0xF5,0x65,0x85,0x00,0x2A,0x46 } }; // B4D851CD-5C24-5511-A6AC-F56585002A46
@@ -465,6 +465,13 @@ namespace winrt::impl
             virtual int32_t __stdcall CreateStringableVector(void**) noexcept = 0;
             virtual int32_t __stdcall CreateTimeSpan(uint32_t, int64_t*) noexcept = 0;
             virtual int32_t __stdcall CreateAsyncAction(uint32_t, void**) noexcept = 0;
+            virtual int32_t __stdcall CreateAsyncActionWithError(uint32_t, int32_t, void**) noexcept = 0;
+            virtual int32_t __stdcall CreateAsyncOperation(uint32_t, int32_t, void**) noexcept = 0;
+            virtual int32_t __stdcall CreateAsyncOperationWithError(uint32_t, int32_t, int32_t, void**) noexcept = 0;
+            virtual int32_t __stdcall CreateAsyncActionWithProgress(uint32_t, void*, void**) noexcept = 0;
+            virtual int32_t __stdcall CreateAsyncActionWithProgressWithError(uint32_t, void*, int32_t, void**) noexcept = 0;
+            virtual int32_t __stdcall CreateAsyncOperationWithProgress(uint32_t, void*, int32_t, void**) noexcept = 0;
+            virtual int32_t __stdcall CreateAsyncOperationWithProgressWithError(uint32_t, void*, int32_t, int32_t, void**) noexcept = 0;
             virtual int32_t __stdcall ExpectObject(void*, void**) noexcept = 0;
         };
     };
@@ -1083,6 +1090,13 @@ namespace winrt::impl
         auto CreateStringableVector() const;
         auto CreateTimeSpan(uint32_t milliseconds) const;
         auto CreateAsyncAction(uint32_t milliseconds) const;
+        auto CreateAsyncActionWithError(uint32_t milliseconds, int32_t error) const;
+        auto CreateAsyncOperation(uint32_t milliseconds, int32_t result) const;
+        auto CreateAsyncOperationWithError(uint32_t milliseconds, int32_t result, int32_t error) const;
+        auto CreateAsyncActionWithProgress(uint32_t milliseconds, param::async_vector_view<int32_t> const& items) const;
+        auto CreateAsyncActionWithProgressWithError(uint32_t milliseconds, param::async_vector_view<int32_t> const& items, int32_t error) const;
+        auto CreateAsyncOperationWithProgress(uint32_t milliseconds, param::async_vector_view<int32_t> const& items, int32_t result) const;
+        auto CreateAsyncOperationWithProgressWithError(uint32_t milliseconds, param::async_vector_view<int32_t> const& items, int32_t result, int32_t error) const;
         auto ExpectObject(winrt::Windows::Foundation::IInspectable const& value) const;
     };
     template <> struct consume<winrt::TestComponent::ITestRunnerStatics>
