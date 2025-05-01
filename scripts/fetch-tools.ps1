@@ -44,7 +44,7 @@ if (!$noCppWinRT) {
 }
 
 if (!$noMicrosoftUiXaml) {
-    & nuget install Microsoft.UI.Xaml -Version $MicrosoftUiXaml -ExcludeVersion -DependencyVersion Ignore -OutputDirectory "$repoRootPath/_tools"
+    & nuget install Microsoft.UI.Xaml -Version $MicrosoftUiXaml -ExcludeVersion -DependencyVersion Ignore -OutputDirectory "$repoRootPath/_tools" -NoHttpCache
 
     if ($LASTEXITCODE -ne 0) {
         exit $LASTEXITCODE
@@ -52,7 +52,7 @@ if (!$noMicrosoftUiXaml) {
 }
 
 if (!$noWindowsAppSDK) {
-    & nuget install Microsoft.WindowsAppSDK -Version $WindowsAppSDKVersion -ExcludeVersion -DependencyVersion Ignore -OutputDirectory "$repoRootPath/_tools"
+    & nuget install Microsoft.WindowsAppSDK -Version $WindowsAppSDKVersion -ExcludeVersion -DependencyVersion Ignore -OutputDirectory "$repoRootPath/_tools" -NoHttpCache
 
     if ($LASTEXITCODE -ne 0) {
         exit $LASTEXITCODE
@@ -60,7 +60,7 @@ if (!$noWindowsAppSDK) {
 }
 
 if (!$noWebView2) {
-    & nuget install Microsoft.Web.WebView2 -Version $WebView2Version -ExcludeVersion -DependencyVersion Ignore -OutputDirectory "$repoRootPath/_tools"
+    & nuget install Microsoft.Web.WebView2 -Version $WebView2Version -ExcludeVersion -DependencyVersion Ignore -OutputDirectory "$repoRootPath/_tools" -NoHttpCache
 
     if ($LASTEXITCODE -ne 0) {
         exit $LASTEXITCODE
@@ -68,7 +68,7 @@ if (!$noWebView2) {
 }
 
 if (!$noTestWinRT) {
-    & nuget install PyWinRT.TestWinRT -Version $TestWinRTVersion -ExcludeVersion -DependencyVersion Ignore -OutputDirectory "$repoRootPath/_tools"
+    & nuget install PyWinRT.TestWinRT -Version $TestWinRTVersion -ExcludeVersion -DependencyVersion Ignore -OutputDirectory "$repoRootPath/_tools" -NoHttpCache
 
     if ($LASTEXITCODE -ne 0) {
         exit $LASTEXITCODE
