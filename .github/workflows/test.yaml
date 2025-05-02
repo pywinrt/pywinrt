@@ -88,20 +88,13 @@ jobs:
           PYTHONPATH: _install/projection
         run: ${MINGW_PREFIX}/bin/python -X dev -m unittest -v
   lint:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
       - name: merge packages
         run: |
-          mkdir -p _install/lint
-          find projection/interop/* -type d -name "cppwinrt" -prune -o -type d -name ".mypy_cache" -prune -o -type d -name "winrt" -exec cp -r {} _install/lint/ \;
-          find projection/interop/* -type d -name "cppwinrt" -prune -o -type d -name ".mypy_cache" -prune -o -type d -name "winui3" -exec cp -r {} _install/lint/ \;
-          find projection/winrt-runtime/* -type d -name "cppwinrt" -prune -o -type d -name ".mypy_cache" -prune -o -type d -name "winrt" -exec cp -r {} _install/lint/ \;
-          find projection/winrt/* -type d -name "cppwinrt" -prune -o -type d -name ".mypy_cache" -prune -o -type d -name "winrt" -exec cp -r {} _install/lint/ \;
-          find projection/winui2/* -type d -name "cppwinrt" -prune -o -type d -name ".mypy_cache" -prune -o -type d -name "winui2" -exec cp -r {} _install/lint/ \;
-          find projection/winui3/* -type d -name "cppwinrt" -prune -o -type d -name ".mypy_cache" -prune -o -type d -name "winui3" -exec cp -r {} _install/lint/ \;
-          find projection/webview2/* -type d -name "cppwinrt" -prune -o -type d -name ".mypy_cache" -prune -o -type d -name "webview2" -exec cp -r {} _install/lint/ \;
-          find projection/test-winrt/* -type d -name "cppwinrt" -prune -o -type d -name ".mypy_cache" -prune -o -type d -name "test_winrt" -exec cp -r {} _install/lint/ \;
+          mkdir _install/lint -Force
+          Get-ChildItem -Path projection/*/* -Directory -Recurse | Where-Object Name -IN "winrt", "webview2", "winui2", "winui3", "test_winrt" | ForEach-Object { Copy-Item -Path $_.FullName -Filter "*.py*" -Destination _install/lint/ -Recurse -Force  }
       - name: Run mypy on winrt
         env:
           MYPYPATH: _install/lint
