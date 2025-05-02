@@ -24,6 +24,8 @@ namespace py::proj::Windows::Foundation
         virtual PyObject* get_Id() noexcept = 0;
         virtual PyObject* get_Status() noexcept = 0;
         virtual PyObject* dunder_await() noexcept = 0;
+        virtual PyObject* async_get() noexcept = 0;
+        virtual PyObject* async_wait(PyObject* arg) noexcept = 0;
     };
 
     struct IAsyncOperationWithProgress
@@ -40,6 +42,8 @@ namespace py::proj::Windows::Foundation
         virtual PyObject* get_Id() noexcept = 0;
         virtual PyObject* get_Status() noexcept = 0;
         virtual PyObject* dunder_await() noexcept = 0;
+        virtual PyObject* async_get() noexcept = 0;
+        virtual PyObject* async_wait(PyObject* arg) noexcept = 0;
     };
 
     struct IAsyncOperation
@@ -54,6 +58,8 @@ namespace py::proj::Windows::Foundation
         virtual PyObject* get_Id() noexcept = 0;
         virtual PyObject* get_Status() noexcept = 0;
         virtual PyObject* dunder_await() noexcept = 0;
+        virtual PyObject* async_get() noexcept = 0;
+        virtual PyObject* async_wait(PyObject* arg) noexcept = 0;
     };
 
     struct IReferenceArray
@@ -1066,6 +1072,58 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* dunder_await() noexcept override { return py::dunder_await(_obj); }
 
+        PyObject* async_get() noexcept override
+        {
+            if (winrt::impl::is_sta_thread())
+            {
+                PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
+                return nullptr;
+            }
+
+            try
+            {
+                auto _gil = py::release_gil();
+                _obj.get();
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+
+            Py_RETURN_NONE;
+        }
+
+        PyObject* async_wait(PyObject* arg) noexcept override
+        {
+            if (winrt::impl::is_sta_thread())
+            {
+                PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
+                return nullptr;
+            }
+
+            auto timeout = PyFloat_AsDouble(arg);
+            if (timeout == -1.0 && PyErr_Occurred())
+            {
+                return nullptr;
+            }
+
+            try
+            {
+                return py::convert([&]()
+                {
+                    auto _gil = py::release_gil();
+                    auto duration = std::chrono::duration_cast<winrt::Windows::Foundation::TimeSpan>(std::chrono::duration<double>(timeout));
+                    return _obj.wait_for(duration);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+
         winrt::Windows::Foundation::IAsyncActionWithProgress<TProgress> _obj{ nullptr };
     };
 
@@ -1324,6 +1382,59 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* dunder_await() noexcept override { return py::dunder_await(_obj); }
 
+        PyObject* async_get() noexcept override
+        {
+            if (winrt::impl::is_sta_thread())
+            {
+                PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
+                return nullptr;
+            }
+
+            try
+            {
+                return py::convert([&]()
+                {
+                    auto _gil = py::release_gil();
+                    return _obj.get();
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+
+        PyObject* async_wait(PyObject* arg) noexcept override
+        {
+            if (winrt::impl::is_sta_thread())
+            {
+                PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
+                return nullptr;
+            }
+
+            auto timeout = PyFloat_AsDouble(arg);
+            if (timeout == -1.0 && PyErr_Occurred())
+            {
+                return nullptr;
+            }
+
+            try
+            {
+                return py::convert([&]()
+                {
+                    auto _gil = py::release_gil();
+                    auto duration = std::chrono::duration_cast<winrt::Windows::Foundation::TimeSpan>(std::chrono::duration<double>(timeout));
+                    return _obj.wait_for(duration);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+
         winrt::Windows::Foundation::IAsyncOperationWithProgress<TResult, TProgress> _obj{ nullptr };
     };
 
@@ -1540,6 +1651,59 @@ namespace py::impl::Windows::Foundation
             }
         }
         PyObject* dunder_await() noexcept override { return py::dunder_await(_obj); }
+
+        PyObject* async_get() noexcept override
+        {
+            if (winrt::impl::is_sta_thread())
+            {
+                PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
+                return nullptr;
+            }
+
+            try
+            {
+                return py::convert([&]()
+                {
+                    auto _gil = py::release_gil();
+                    return _obj.get();
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+
+        PyObject* async_wait(PyObject* arg) noexcept override
+        {
+            if (winrt::impl::is_sta_thread())
+            {
+                PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
+                return nullptr;
+            }
+
+            auto timeout = PyFloat_AsDouble(arg);
+            if (timeout == -1.0 && PyErr_Occurred())
+            {
+                return nullptr;
+            }
+
+            try
+            {
+                return py::convert([&]()
+                {
+                    auto _gil = py::release_gil();
+                    auto duration = std::chrono::duration_cast<winrt::Windows::Foundation::TimeSpan>(std::chrono::duration<double>(timeout));
+                    return _obj.wait_for(duration);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
 
         winrt::Windows::Foundation::IAsyncOperation<TResult> _obj{ nullptr };
     };

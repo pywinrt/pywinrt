@@ -223,7 +223,71 @@ above.
 Awaitables
 ==========
 
-.. todo:: document IAsync*
+WinRT has many ``_async`` methods that that perform background operations and
+return a type that derives from ``Windows.Foundation.IAsyncInfo`` to be able to
+wait for the result. There are four fundamental types that derive from this:
+
+- `IAsyncAction <https://learn.microsoft.com/en-us/uwp/api/windows.foundation.iasyncaction>`_
+  \- represents an operation that does not return a value
+- `IAsyncOperation<TResult> <https://learn.microsoft.com/en-us/uwp/api/windows.foundation.iasyncoperation-1>`_
+  \- represents an operation that returns a value of type ``TResult``
+- `IAsyncOperationWithProgress<TResult, TProgress> <https://learn.microsoft.com/en-us/uwp/api/windows.foundation.iasyncactionwithprogress-1>`_
+  \- represents an operation that returns a value of type ``TResult`` and reports
+  progress of type ``TProgress``
+- `IAsyncActionWithProgress<U> <https://learn.microsoft.com/en-us/uwp/api/windows.foundation.iasyncoperationwithprogress-2>`_
+  \- represents an operation that does not return a value and reports progress
+  of type ``TProgress``
+
+PyWinRT also exposes the CppWinRT extension methods for calling these methods
+synchronously (i.e. when not using ``asyncio``).
+
+.. method:: IAsyncAction.get() -> None
+    IAsyncOperation.get() -> TResult
+    IAsyncActionWithProgress.get() -> None
+    IAsyncOperationWithProgress.get() -> TResult
+
+    These methods block until the operation is complete.
+
+    Returns:
+        The result of the operation.
+
+    Raises:
+        :class:`OSError` if the operation failed or was canceled.
+        :class:`RuntimeError` if called from a single-threaded apartment (i.e.
+        a GUI thread).
+
+    .. versionadded:: unreleased
+
+.. method:: IAsyncAction.wait(timeout: float) -> AsyncStatus
+    IAsyncOperation.wait(timeout: float) -> AsyncStatus
+    IAsyncActionWithProgress.wait(timeout: float) -> AsyncStatus
+    IAsyncOperationWithProgress.wait(timeout: float) -> AsyncStatus
+
+    These methods block until the operation is complete or the timeout is reached,
+    whichever comes first.
+
+    Args:
+        timeout: The timeout in seconds.
+
+    Returns:
+        The status of the operation. In case of a timeout, the status will be
+        ``AsyncStatus.STARTED``.
+
+    Raises:
+        :class:`RuntimeError` if called from a single-threaded apartment (i.e.
+        a GUI thread).
+
+    .. versionadded:: unreleased
+
+.. todo:: document IAsync* with asyncio
+
+If you can't use either the synchronous helpers or ``asyncio``, then you can
+use the ``completed``  property to set a callback that will be called when
+the operation is complete. This callback will be called on a different thread.
+And you must also be careful about not creating a reference cycle to the operation,
+otherwise it will cause a memory leak.
+
+.. todo:: add tips on how to iterate over progress events
 
     https://github.com/pywinrt/pywinrt/blob/main/projection/readme.md#async-coroutines
 

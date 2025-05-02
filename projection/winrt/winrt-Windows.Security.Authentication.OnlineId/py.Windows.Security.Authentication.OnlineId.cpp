@@ -1609,10 +1609,64 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
         return py::dunder_await(self->obj);
     }
 
+    static PyObject* get_SignOutUserOperation(py::wrapper::Windows::Security::Authentication::OnlineId::SignOutUserOperation* self, PyObject* /*unused*/) noexcept
+    {
+        if (winrt::impl::is_sta_thread())
+        {
+            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
+            return nullptr;
+        }
+
+        try
+        {
+            auto _gil = py::release_gil();
+            self->obj.get();
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* wait_SignOutUserOperation(py::wrapper::Windows::Security::Authentication::OnlineId::SignOutUserOperation* self, PyObject* arg) noexcept
+    {
+        if (winrt::impl::is_sta_thread())
+        {
+            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
+            return nullptr;
+        }
+
+        auto timeout = PyFloat_AsDouble(arg);
+        if (timeout == -1.0 && PyErr_Occurred())
+        {
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                auto duration = std::chrono::duration_cast<winrt::Windows::Foundation::TimeSpan>(std::chrono::duration<double>(timeout));
+                return self->obj.wait_for(duration);
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_SignOutUserOperation[] = {
         { "cancel", reinterpret_cast<PyCFunction>(SignOutUserOperation_Cancel), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(SignOutUserOperation_Close), METH_VARARGS, nullptr },
         { "get_results", reinterpret_cast<PyCFunction>(SignOutUserOperation_GetResults), METH_VARARGS, nullptr },
+        { "get", reinterpret_cast<PyCFunction>(get_SignOutUserOperation), METH_NOARGS, nullptr },
+        { "wait", reinterpret_cast<PyCFunction>(wait_SignOutUserOperation), METH_O, nullptr },
         { "_assign_array_", _assign_array_SignOutUserOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SignOutUserOperation), METH_O | METH_STATIC, nullptr },
         { }};
@@ -1966,10 +2020,65 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
         return py::dunder_await(self->obj);
     }
 
+    static PyObject* get_UserAuthenticationOperation(py::wrapper::Windows::Security::Authentication::OnlineId::UserAuthenticationOperation* self, PyObject* /*unused*/) noexcept
+    {
+        if (winrt::impl::is_sta_thread())
+        {
+            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.get();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* wait_UserAuthenticationOperation(py::wrapper::Windows::Security::Authentication::OnlineId::UserAuthenticationOperation* self, PyObject* arg) noexcept
+    {
+        if (winrt::impl::is_sta_thread())
+        {
+            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
+            return nullptr;
+        }
+
+        auto timeout = PyFloat_AsDouble(arg);
+        if (timeout == -1.0 && PyErr_Occurred())
+        {
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                auto duration = std::chrono::duration_cast<winrt::Windows::Foundation::TimeSpan>(std::chrono::duration<double>(timeout));
+                return self->obj.wait_for(duration);
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_UserAuthenticationOperation[] = {
         { "cancel", reinterpret_cast<PyCFunction>(UserAuthenticationOperation_Cancel), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(UserAuthenticationOperation_Close), METH_VARARGS, nullptr },
         { "get_results", reinterpret_cast<PyCFunction>(UserAuthenticationOperation_GetResults), METH_VARARGS, nullptr },
+        { "get", reinterpret_cast<PyCFunction>(get_UserAuthenticationOperation), METH_NOARGS, nullptr },
+        { "wait", reinterpret_cast<PyCFunction>(wait_UserAuthenticationOperation), METH_O, nullptr },
         { "_assign_array_", _assign_array_UserAuthenticationOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UserAuthenticationOperation), METH_O | METH_STATIC, nullptr },
         { }};

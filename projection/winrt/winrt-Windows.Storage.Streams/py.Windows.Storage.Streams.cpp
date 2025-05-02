@@ -1888,10 +1888,65 @@ namespace py::cpp::Windows::Storage::Streams
         return py::dunder_await(self->obj);
     }
 
+    static PyObject* get_DataReaderLoadOperation(py::wrapper::Windows::Storage::Streams::DataReaderLoadOperation* self, PyObject* /*unused*/) noexcept
+    {
+        if (winrt::impl::is_sta_thread())
+        {
+            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.get();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* wait_DataReaderLoadOperation(py::wrapper::Windows::Storage::Streams::DataReaderLoadOperation* self, PyObject* arg) noexcept
+    {
+        if (winrt::impl::is_sta_thread())
+        {
+            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
+            return nullptr;
+        }
+
+        auto timeout = PyFloat_AsDouble(arg);
+        if (timeout == -1.0 && PyErr_Occurred())
+        {
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                auto duration = std::chrono::duration_cast<winrt::Windows::Foundation::TimeSpan>(std::chrono::duration<double>(timeout));
+                return self->obj.wait_for(duration);
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_DataReaderLoadOperation[] = {
         { "cancel", reinterpret_cast<PyCFunction>(DataReaderLoadOperation_Cancel), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(DataReaderLoadOperation_Close), METH_VARARGS, nullptr },
         { "get_results", reinterpret_cast<PyCFunction>(DataReaderLoadOperation_GetResults), METH_VARARGS, nullptr },
+        { "get", reinterpret_cast<PyCFunction>(get_DataReaderLoadOperation), METH_NOARGS, nullptr },
+        { "wait", reinterpret_cast<PyCFunction>(wait_DataReaderLoadOperation), METH_O, nullptr },
         { "_assign_array_", _assign_array_DataReaderLoadOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DataReaderLoadOperation), METH_O | METH_STATIC, nullptr },
         { }};
@@ -3539,10 +3594,65 @@ namespace py::cpp::Windows::Storage::Streams
         return py::dunder_await(self->obj);
     }
 
+    static PyObject* get_DataWriterStoreOperation(py::wrapper::Windows::Storage::Streams::DataWriterStoreOperation* self, PyObject* /*unused*/) noexcept
+    {
+        if (winrt::impl::is_sta_thread())
+        {
+            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.get();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* wait_DataWriterStoreOperation(py::wrapper::Windows::Storage::Streams::DataWriterStoreOperation* self, PyObject* arg) noexcept
+    {
+        if (winrt::impl::is_sta_thread())
+        {
+            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
+            return nullptr;
+        }
+
+        auto timeout = PyFloat_AsDouble(arg);
+        if (timeout == -1.0 && PyErr_Occurred())
+        {
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                auto duration = std::chrono::duration_cast<winrt::Windows::Foundation::TimeSpan>(std::chrono::duration<double>(timeout));
+                return self->obj.wait_for(duration);
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_DataWriterStoreOperation[] = {
         { "cancel", reinterpret_cast<PyCFunction>(DataWriterStoreOperation_Cancel), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(DataWriterStoreOperation_Close), METH_VARARGS, nullptr },
         { "get_results", reinterpret_cast<PyCFunction>(DataWriterStoreOperation_GetResults), METH_VARARGS, nullptr },
+        { "get", reinterpret_cast<PyCFunction>(get_DataWriterStoreOperation), METH_NOARGS, nullptr },
+        { "wait", reinterpret_cast<PyCFunction>(wait_DataWriterStoreOperation), METH_O, nullptr },
         { "_assign_array_", _assign_array_DataWriterStoreOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DataWriterStoreOperation), METH_O | METH_STATIC, nullptr },
         { }};
