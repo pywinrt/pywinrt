@@ -1,4 +1,5 @@
 import copy
+import ctypes
 import gc
 import sys
 import threading
@@ -9,9 +10,14 @@ from uuid import UUID
 from typing_extensions import override
 
 import test_winrt.testcomponent as tc
+import winrt.windows.foundation as wf
 import winrt.windows.foundation.collections as wfc
+import winrt.runtime as wr
 
 from test._util import catch_unraisable
+
+E_FAIL = ctypes.HRESULT(0x80004005).value
+E_CANCELLED = ctypes.HRESULT(0x800704C7).value
 
 
 class TestTestComponent(unittest.TestCase):
@@ -598,3 +604,59 @@ class TestTestComponent(unittest.TestCase):
         ret, out = tests.collection2(arg)
         self.assertDictEqual({i.key: i.value for i in ret}, arg)
         self.assertDictEqual({i.key: i.value for i in out}, arg)
+
+    def test_async_action_get_sta(self):
+        wr.init_apartment(wr.ApartmentType.SINGLE_THREADED)
+        try:
+            with self.assertRaises(RuntimeError):
+                tc.TestRunner.create_async_action(10).get()
+        finally:
+            wr.uninit_apartment()
+
+    def test_async_action_get(self):
+        tc.TestRunner.create_async_action(10).get()
+
+    def test_async_action_get_cancel(self):
+        op = tc.TestRunner.create_async_action(10)
+        op.cancel()
+        with self.assertRaises(OSError) as ctx:
+            op.get()
+
+        self.assertEqual(ctx.exception.winerror, E_CANCELLED)
+
+    def test_async_action_get_error(self):
+        with self.assertRaises(OSError) as ctx:
+            tc.TestRunner.create_async_action_with_error(10, E_FAIL).get()
+
+        self.assertEqual(ctx.exception.winerror, E_FAIL)
+
+    def test_async_action_wait_sta(self):
+        wr.init_apartment(wr.ApartmentType.SINGLE_THREADED)
+        try:
+            with self.assertRaises(RuntimeError):
+                tc.TestRunner.create_async_action(10).wait(1)
+        finally:
+            wr.uninit_apartment()
+
+    def test_async_action_wait(self):
+        status = tc.TestRunner.create_async_action(10).wait(1)
+        self.assertEqual(status, wf.AsyncStatus.COMPLETED)
+
+    def test_async_action_wait_timeout(self):
+        status = tc.TestRunner.create_async_action(1000).wait(0.1)
+        self.assertEqual(status, wf.AsyncStatus.STARTED)
+
+    def test_async_action_wait_cancel(self):
+        op = tc.TestRunner.create_async_action(10)
+        op.cancel()
+        status = op.wait(1)
+        self.assertEqual(status, wf.AsyncStatus.CANCELED)
+
+    def test_async_action_wait_error(self):
+        status = tc.TestRunner.create_async_action_with_error(10, E_FAIL).wait(1)
+        self.assertEqual(status, wf.AsyncStatus.ERROR)
+
+    def test_async_operation(self):
+        expected = 1
+        actual = tc.TestRunner.create_async_operation(10, expected).get()
+        self.assertEqual(expected, actual)

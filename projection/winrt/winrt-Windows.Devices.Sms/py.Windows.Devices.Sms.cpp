@@ -332,10 +332,64 @@ namespace py::cpp::Windows::Devices::Sms
         return py::dunder_await(self->obj);
     }
 
+    static PyObject* get_DeleteSmsMessageOperation(py::wrapper::Windows::Devices::Sms::DeleteSmsMessageOperation* self, PyObject* /*unused*/) noexcept
+    {
+        if (winrt::impl::is_sta_thread())
+        {
+            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
+            return nullptr;
+        }
+
+        try
+        {
+            auto _gil = py::release_gil();
+            self->obj.get();
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* wait_DeleteSmsMessageOperation(py::wrapper::Windows::Devices::Sms::DeleteSmsMessageOperation* self, PyObject* arg) noexcept
+    {
+        if (winrt::impl::is_sta_thread())
+        {
+            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
+            return nullptr;
+        }
+
+        auto timeout = PyFloat_AsDouble(arg);
+        if (timeout == -1.0 && PyErr_Occurred())
+        {
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                auto duration = std::chrono::duration_cast<winrt::Windows::Foundation::TimeSpan>(std::chrono::duration<double>(timeout));
+                return self->obj.wait_for(duration);
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_DeleteSmsMessageOperation[] = {
         { "cancel", reinterpret_cast<PyCFunction>(DeleteSmsMessageOperation_Cancel), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(DeleteSmsMessageOperation_Close), METH_VARARGS, nullptr },
         { "get_results", reinterpret_cast<PyCFunction>(DeleteSmsMessageOperation_GetResults), METH_VARARGS, nullptr },
+        { "get", reinterpret_cast<PyCFunction>(get_DeleteSmsMessageOperation), METH_NOARGS, nullptr },
+        { "wait", reinterpret_cast<PyCFunction>(wait_DeleteSmsMessageOperation), METH_O, nullptr },
         { "_assign_array_", _assign_array_DeleteSmsMessageOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeleteSmsMessageOperation), METH_O | METH_STATIC, nullptr },
         { }};
@@ -690,10 +744,64 @@ namespace py::cpp::Windows::Devices::Sms
         return py::dunder_await(self->obj);
     }
 
+    static PyObject* get_DeleteSmsMessagesOperation(py::wrapper::Windows::Devices::Sms::DeleteSmsMessagesOperation* self, PyObject* /*unused*/) noexcept
+    {
+        if (winrt::impl::is_sta_thread())
+        {
+            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
+            return nullptr;
+        }
+
+        try
+        {
+            auto _gil = py::release_gil();
+            self->obj.get();
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* wait_DeleteSmsMessagesOperation(py::wrapper::Windows::Devices::Sms::DeleteSmsMessagesOperation* self, PyObject* arg) noexcept
+    {
+        if (winrt::impl::is_sta_thread())
+        {
+            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
+            return nullptr;
+        }
+
+        auto timeout = PyFloat_AsDouble(arg);
+        if (timeout == -1.0 && PyErr_Occurred())
+        {
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                auto duration = std::chrono::duration_cast<winrt::Windows::Foundation::TimeSpan>(std::chrono::duration<double>(timeout));
+                return self->obj.wait_for(duration);
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_DeleteSmsMessagesOperation[] = {
         { "cancel", reinterpret_cast<PyCFunction>(DeleteSmsMessagesOperation_Cancel), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(DeleteSmsMessagesOperation_Close), METH_VARARGS, nullptr },
         { "get_results", reinterpret_cast<PyCFunction>(DeleteSmsMessagesOperation_GetResults), METH_VARARGS, nullptr },
+        { "get", reinterpret_cast<PyCFunction>(get_DeleteSmsMessagesOperation), METH_NOARGS, nullptr },
+        { "wait", reinterpret_cast<PyCFunction>(wait_DeleteSmsMessagesOperation), METH_O, nullptr },
         { "_assign_array_", _assign_array_DeleteSmsMessagesOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeleteSmsMessagesOperation), METH_O | METH_STATIC, nullptr },
         { }};
@@ -1047,10 +1155,65 @@ namespace py::cpp::Windows::Devices::Sms
         return py::dunder_await(self->obj);
     }
 
+    static PyObject* get_GetSmsDeviceOperation(py::wrapper::Windows::Devices::Sms::GetSmsDeviceOperation* self, PyObject* /*unused*/) noexcept
+    {
+        if (winrt::impl::is_sta_thread())
+        {
+            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.get();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* wait_GetSmsDeviceOperation(py::wrapper::Windows::Devices::Sms::GetSmsDeviceOperation* self, PyObject* arg) noexcept
+    {
+        if (winrt::impl::is_sta_thread())
+        {
+            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
+            return nullptr;
+        }
+
+        auto timeout = PyFloat_AsDouble(arg);
+        if (timeout == -1.0 && PyErr_Occurred())
+        {
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                auto duration = std::chrono::duration_cast<winrt::Windows::Foundation::TimeSpan>(std::chrono::duration<double>(timeout));
+                return self->obj.wait_for(duration);
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_GetSmsDeviceOperation[] = {
         { "cancel", reinterpret_cast<PyCFunction>(GetSmsDeviceOperation_Cancel), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(GetSmsDeviceOperation_Close), METH_VARARGS, nullptr },
         { "get_results", reinterpret_cast<PyCFunction>(GetSmsDeviceOperation_GetResults), METH_VARARGS, nullptr },
+        { "get", reinterpret_cast<PyCFunction>(get_GetSmsDeviceOperation), METH_NOARGS, nullptr },
+        { "wait", reinterpret_cast<PyCFunction>(wait_GetSmsDeviceOperation), METH_O, nullptr },
         { "_assign_array_", _assign_array_GetSmsDeviceOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GetSmsDeviceOperation), METH_O | METH_STATIC, nullptr },
         { }};
@@ -1404,10 +1567,65 @@ namespace py::cpp::Windows::Devices::Sms
         return py::dunder_await(self->obj);
     }
 
+    static PyObject* get_GetSmsMessageOperation(py::wrapper::Windows::Devices::Sms::GetSmsMessageOperation* self, PyObject* /*unused*/) noexcept
+    {
+        if (winrt::impl::is_sta_thread())
+        {
+            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.get();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* wait_GetSmsMessageOperation(py::wrapper::Windows::Devices::Sms::GetSmsMessageOperation* self, PyObject* arg) noexcept
+    {
+        if (winrt::impl::is_sta_thread())
+        {
+            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
+            return nullptr;
+        }
+
+        auto timeout = PyFloat_AsDouble(arg);
+        if (timeout == -1.0 && PyErr_Occurred())
+        {
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                auto duration = std::chrono::duration_cast<winrt::Windows::Foundation::TimeSpan>(std::chrono::duration<double>(timeout));
+                return self->obj.wait_for(duration);
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_GetSmsMessageOperation[] = {
         { "cancel", reinterpret_cast<PyCFunction>(GetSmsMessageOperation_Cancel), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(GetSmsMessageOperation_Close), METH_VARARGS, nullptr },
         { "get_results", reinterpret_cast<PyCFunction>(GetSmsMessageOperation_GetResults), METH_VARARGS, nullptr },
+        { "get", reinterpret_cast<PyCFunction>(get_GetSmsMessageOperation), METH_NOARGS, nullptr },
+        { "wait", reinterpret_cast<PyCFunction>(wait_GetSmsMessageOperation), METH_O, nullptr },
         { "_assign_array_", _assign_array_GetSmsMessageOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GetSmsMessageOperation), METH_O | METH_STATIC, nullptr },
         { }};
@@ -1830,10 +2048,65 @@ namespace py::cpp::Windows::Devices::Sms
         return py::dunder_await(self->obj);
     }
 
+    static PyObject* get_GetSmsMessagesOperation(py::wrapper::Windows::Devices::Sms::GetSmsMessagesOperation* self, PyObject* /*unused*/) noexcept
+    {
+        if (winrt::impl::is_sta_thread())
+        {
+            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                return self->obj.get();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* wait_GetSmsMessagesOperation(py::wrapper::Windows::Devices::Sms::GetSmsMessagesOperation* self, PyObject* arg) noexcept
+    {
+        if (winrt::impl::is_sta_thread())
+        {
+            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
+            return nullptr;
+        }
+
+        auto timeout = PyFloat_AsDouble(arg);
+        if (timeout == -1.0 && PyErr_Occurred())
+        {
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                auto duration = std::chrono::duration_cast<winrt::Windows::Foundation::TimeSpan>(std::chrono::duration<double>(timeout));
+                return self->obj.wait_for(duration);
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_GetSmsMessagesOperation[] = {
         { "cancel", reinterpret_cast<PyCFunction>(GetSmsMessagesOperation_Cancel), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(GetSmsMessagesOperation_Close), METH_VARARGS, nullptr },
         { "get_results", reinterpret_cast<PyCFunction>(GetSmsMessagesOperation_GetResults), METH_VARARGS, nullptr },
+        { "get", reinterpret_cast<PyCFunction>(get_GetSmsMessagesOperation), METH_NOARGS, nullptr },
+        { "wait", reinterpret_cast<PyCFunction>(wait_GetSmsMessagesOperation), METH_O, nullptr },
         { "_assign_array_", _assign_array_GetSmsMessagesOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GetSmsMessagesOperation), METH_O | METH_STATIC, nullptr },
         { }};
@@ -2189,10 +2462,64 @@ namespace py::cpp::Windows::Devices::Sms
         return py::dunder_await(self->obj);
     }
 
+    static PyObject* get_SendSmsMessageOperation(py::wrapper::Windows::Devices::Sms::SendSmsMessageOperation* self, PyObject* /*unused*/) noexcept
+    {
+        if (winrt::impl::is_sta_thread())
+        {
+            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
+            return nullptr;
+        }
+
+        try
+        {
+            auto _gil = py::release_gil();
+            self->obj.get();
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* wait_SendSmsMessageOperation(py::wrapper::Windows::Devices::Sms::SendSmsMessageOperation* self, PyObject* arg) noexcept
+    {
+        if (winrt::impl::is_sta_thread())
+        {
+            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
+            return nullptr;
+        }
+
+        auto timeout = PyFloat_AsDouble(arg);
+        if (timeout == -1.0 && PyErr_Occurred())
+        {
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                auto duration = std::chrono::duration_cast<winrt::Windows::Foundation::TimeSpan>(std::chrono::duration<double>(timeout));
+                return self->obj.wait_for(duration);
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_SendSmsMessageOperation[] = {
         { "cancel", reinterpret_cast<PyCFunction>(SendSmsMessageOperation_Cancel), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(SendSmsMessageOperation_Close), METH_VARARGS, nullptr },
         { "get_results", reinterpret_cast<PyCFunction>(SendSmsMessageOperation_GetResults), METH_VARARGS, nullptr },
+        { "get", reinterpret_cast<PyCFunction>(get_SendSmsMessageOperation), METH_NOARGS, nullptr },
+        { "wait", reinterpret_cast<PyCFunction>(wait_SendSmsMessageOperation), METH_O, nullptr },
         { "_assign_array_", _assign_array_SendSmsMessageOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SendSmsMessageOperation), METH_O | METH_STATIC, nullptr },
         { }};

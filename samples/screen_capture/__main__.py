@@ -29,7 +29,6 @@ from winrt.windows.storage import CreationCollisionOption, FileAccessMode, Stora
 from winrt.windows.ui.windowmanagement import WindowServices
 
 from .d3d11 import D3D_DRIVER_TYPE, D3D11_CREATE_DEVICE_FLAG, D3D11CreateDevice
-from .sync import wait_for
 
 if os.environ.get("MSYSTEM", ""):
     _getfullpathname: Callable[[str], str]
@@ -93,16 +92,14 @@ with contextlib.ExitStack() as stack:
 
     stack.enter_context(frame)
     bitmap = stack.push(
-        wait_for(SoftwareBitmap.create_copy_from_surface_async(frame.surface))
+        SoftwareBitmap.create_copy_from_surface_async(frame.surface).get()
     )
-    folder = wait_for(StorageFolder.get_folder_from_path_async(abspath(".")))
-    file = wait_for(
-        folder.create_file_async(
-            "pywinrt example screen capture.png",
-            CreationCollisionOption.REPLACE_EXISTING,
-        )
-    )
-    stream = stack.push(wait_for(file.open_async(FileAccessMode.READ_WRITE)))
-    encoder = wait_for(BitmapEncoder.create_async(BitmapEncoder.png_encoder_id, stream))
+    folder = StorageFolder.get_folder_from_path_async(abspath(".")).get()
+    file = folder.create_file_async(
+        "pywinrt example screen capture.png",
+        CreationCollisionOption.REPLACE_EXISTING,
+    ).get()
+    stream = stack.push(file.open_async(FileAccessMode.READ_WRITE).get())
+    encoder = BitmapEncoder.create_async(BitmapEncoder.png_encoder_id, stream).get()
     encoder.set_software_bitmap(bitmap)
-    wait_for(encoder.flush_async())
+    encoder.flush_async().get()

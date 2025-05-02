@@ -286,6 +286,16 @@ static class InterfaceWriterExtensions
         w.WriteLine($"static PyMethodDef methods_Implements{type.Name}[] = {{");
         w.Indent++;
 
+        if (type.IsPyAwaitable)
+        {
+            w.WriteLine(
+                $"{{ \"get\", reinterpret_cast<PyCFunction>(get_{type.Name}), METH_NOARGS, nullptr }},"
+            );
+            w.WriteLine(
+                $"{{ \"wait\", reinterpret_cast<PyCFunction>(wait_{type.Name}), METH_O, nullptr }},"
+            );
+        }
+
         if (type.IsGeneric)
         {
             w.WriteLine(
@@ -369,6 +379,8 @@ static class InterfaceWriterExtensions
                 if (type.IsPyAwaitable)
                 {
                     w.WriteLine($"virtual PyObject* dunder_await() noexcept = 0;");
+                    w.WriteLine($"virtual PyObject* async_get() noexcept = 0;");
+                    w.WriteLine($"virtual PyObject* async_wait(PyObject* arg) noexcept = 0;");
                 }
 
                 if (type.IsPyIterator)
@@ -479,6 +491,12 @@ static class InterfaceWriterExtensions
                     w.WriteLine(
                         "PyObject* dunder_await() noexcept override { return py::dunder_await(_obj); }"
                     );
+                    w.WriteBlankLine();
+                    w.WriteLine("PyObject* async_get() noexcept override");
+                    w.WriteBlock(() => w.WriteAsyncGetBody(type));
+                    w.WriteBlankLine();
+                    w.WriteLine("PyObject* async_wait(PyObject* arg) noexcept override");
+                    w.WriteBlock(() => w.WriteAsyncWaitBody(type));
                 }
 
                 if (type.IsPyIterable)
@@ -672,9 +690,22 @@ static class InterfaceWriterExtensions
                     );
             }
 
+            var statusProp = type.Properties.Single(p => p.Name == "Status");
+            var statusType = statusProp.GetMethod.Method.ReturnType;
+            var statusTypeName = statusType.ToPyTypeName(
+                ns,
+                new TypeRefNullabilityInfo(statusType),
+                packageMap
+            );
+
             w.WriteLine(
                 $"def __await__(self) -> typing.Generator[typing.Any, None, {returnType}]: ..."
             );
+
+            w.WriteLine("@typing.final");
+            w.WriteLine($"def get(self) -> {returnType}: ...");
+            w.WriteLine("@typing.final");
+            w.WriteLine($"def wait(self, timeout: float) -> {statusTypeName}: ...");
         }
 
         foreach (var method in methods)

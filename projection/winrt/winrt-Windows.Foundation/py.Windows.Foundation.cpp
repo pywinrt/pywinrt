@@ -4064,10 +4064,64 @@ namespace py::cpp::Windows::Foundation
         return py::dunder_await(self->obj);
     }
 
+    static PyObject* get_IAsyncAction(py::wrapper::Windows::Foundation::IAsyncAction* self, PyObject* /*unused*/) noexcept
+    {
+        if (winrt::impl::is_sta_thread())
+        {
+            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
+            return nullptr;
+        }
+
+        try
+        {
+            auto _gil = py::release_gil();
+            self->obj.get();
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* wait_IAsyncAction(py::wrapper::Windows::Foundation::IAsyncAction* self, PyObject* arg) noexcept
+    {
+        if (winrt::impl::is_sta_thread())
+        {
+            PyErr_SetString(PyExc_RuntimeError, "Cannot call blocking method from single-threaded apartment.");
+            return nullptr;
+        }
+
+        auto timeout = PyFloat_AsDouble(arg);
+        if (timeout == -1.0 && PyErr_Occurred())
+        {
+            return nullptr;
+        }
+
+        try
+        {
+            return py::convert([&]()
+            {
+                auto _gil = py::release_gil();
+                auto duration = std::chrono::duration_cast<winrt::Windows::Foundation::TimeSpan>(std::chrono::duration<double>(timeout));
+                return self->obj.wait_for(duration);
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_IAsyncAction[] = {
         { "cancel", reinterpret_cast<PyCFunction>(IAsyncAction_Cancel), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(IAsyncAction_Close), METH_VARARGS, nullptr },
         { "get_results", reinterpret_cast<PyCFunction>(IAsyncAction_GetResults), METH_VARARGS, nullptr },
+        { "get", reinterpret_cast<PyCFunction>(get_IAsyncAction), METH_NOARGS, nullptr },
+        { "wait", reinterpret_cast<PyCFunction>(wait_IAsyncAction), METH_O, nullptr },
         { }};
 
     static PyGetSetDef _getset_IAsyncAction[] = {
@@ -4342,6 +4396,8 @@ namespace py::cpp::Windows::Foundation
     }
 
     static PyMethodDef methods_ImplementsIAsyncAction[] = {
+        { "get", reinterpret_cast<PyCFunction>(get_IAsyncAction), METH_NOARGS, nullptr },
+        { "wait", reinterpret_cast<PyCFunction>(wait_IAsyncAction), METH_O, nullptr },
         { "_assign_array_", _assign_array_IAsyncAction, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IAsyncAction), METH_O | METH_STATIC, nullptr },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAsyncAction), METH_NOARGS | METH_STATIC, nullptr },
@@ -4597,10 +4653,22 @@ namespace py::cpp::Windows::Foundation
         return self->impl->dunder_await();
     }
 
+    static PyObject* get_IAsyncActionWithProgress(py::wrapper::Windows::Foundation::IAsyncActionWithProgress* self, PyObject* /*unused*/) noexcept
+    {
+        return self->impl->async_get();
+    }
+
+    static PyObject* wait_IAsyncActionWithProgress(py::wrapper::Windows::Foundation::IAsyncActionWithProgress* self, PyObject* arg) noexcept
+    {
+        return self->impl->async_wait(arg);
+    }
+
     static PyMethodDef _methods_IAsyncActionWithProgress[] = {
         { "cancel", reinterpret_cast<PyCFunction>(IAsyncActionWithProgress_Cancel), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(IAsyncActionWithProgress_Close), METH_VARARGS, nullptr },
         { "get_results", reinterpret_cast<PyCFunction>(IAsyncActionWithProgress_GetResults), METH_VARARGS, nullptr },
+        { "get", reinterpret_cast<PyCFunction>(get_IAsyncActionWithProgress), METH_NOARGS, nullptr },
+        { "wait", reinterpret_cast<PyCFunction>(wait_IAsyncActionWithProgress), METH_O, nullptr },
         { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
         { }};
 
@@ -4670,6 +4738,8 @@ namespace py::cpp::Windows::Foundation
     }
 
     static PyMethodDef methods_ImplementsIAsyncActionWithProgress[] = {
+        { "get", reinterpret_cast<PyCFunction>(get_IAsyncActionWithProgress), METH_NOARGS, nullptr },
+        { "wait", reinterpret_cast<PyCFunction>(wait_IAsyncActionWithProgress), METH_O, nullptr },
         { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAsyncActionWithProgress), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAsyncActionWithProgress), METH_VARARGS | METH_STATIC, nullptr },
@@ -5344,10 +5414,22 @@ namespace py::cpp::Windows::Foundation
         return self->impl->dunder_await();
     }
 
+    static PyObject* get_IAsyncOperationWithProgress(py::wrapper::Windows::Foundation::IAsyncOperationWithProgress* self, PyObject* /*unused*/) noexcept
+    {
+        return self->impl->async_get();
+    }
+
+    static PyObject* wait_IAsyncOperationWithProgress(py::wrapper::Windows::Foundation::IAsyncOperationWithProgress* self, PyObject* arg) noexcept
+    {
+        return self->impl->async_wait(arg);
+    }
+
     static PyMethodDef _methods_IAsyncOperationWithProgress[] = {
         { "cancel", reinterpret_cast<PyCFunction>(IAsyncOperationWithProgress_Cancel), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(IAsyncOperationWithProgress_Close), METH_VARARGS, nullptr },
         { "get_results", reinterpret_cast<PyCFunction>(IAsyncOperationWithProgress_GetResults), METH_VARARGS, nullptr },
+        { "get", reinterpret_cast<PyCFunction>(get_IAsyncOperationWithProgress), METH_NOARGS, nullptr },
+        { "wait", reinterpret_cast<PyCFunction>(wait_IAsyncOperationWithProgress), METH_O, nullptr },
         { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
         { }};
 
@@ -5417,6 +5499,8 @@ namespace py::cpp::Windows::Foundation
     }
 
     static PyMethodDef methods_ImplementsIAsyncOperationWithProgress[] = {
+        { "get", reinterpret_cast<PyCFunction>(get_IAsyncOperationWithProgress), METH_NOARGS, nullptr },
+        { "wait", reinterpret_cast<PyCFunction>(wait_IAsyncOperationWithProgress), METH_O, nullptr },
         { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAsyncOperationWithProgress), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAsyncOperationWithProgress), METH_VARARGS | METH_STATIC, nullptr },
@@ -5613,10 +5697,22 @@ namespace py::cpp::Windows::Foundation
         return self->impl->dunder_await();
     }
 
+    static PyObject* get_IAsyncOperation(py::wrapper::Windows::Foundation::IAsyncOperation* self, PyObject* /*unused*/) noexcept
+    {
+        return self->impl->async_get();
+    }
+
+    static PyObject* wait_IAsyncOperation(py::wrapper::Windows::Foundation::IAsyncOperation* self, PyObject* arg) noexcept
+    {
+        return self->impl->async_wait(arg);
+    }
+
     static PyMethodDef _methods_IAsyncOperation[] = {
         { "cancel", reinterpret_cast<PyCFunction>(IAsyncOperation_Cancel), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(IAsyncOperation_Close), METH_VARARGS, nullptr },
         { "get_results", reinterpret_cast<PyCFunction>(IAsyncOperation_GetResults), METH_VARARGS, nullptr },
+        { "get", reinterpret_cast<PyCFunction>(get_IAsyncOperation), METH_NOARGS, nullptr },
+        { "wait", reinterpret_cast<PyCFunction>(wait_IAsyncOperation), METH_O, nullptr },
         { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
         { }};
 
@@ -5685,6 +5781,8 @@ namespace py::cpp::Windows::Foundation
     }
 
     static PyMethodDef methods_ImplementsIAsyncOperation[] = {
+        { "get", reinterpret_cast<PyCFunction>(get_IAsyncOperation), METH_NOARGS, nullptr },
+        { "wait", reinterpret_cast<PyCFunction>(wait_IAsyncOperation), METH_O, nullptr },
         { "__class_getitem__", Py_GenericAlias, METH_O | METH_CLASS, PyDoc_STR("See PEP 585") },
         { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIAsyncOperation), METH_NOARGS | METH_STATIC, nullptr },
         { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIAsyncOperation), METH_VARARGS | METH_STATIC, nullptr },

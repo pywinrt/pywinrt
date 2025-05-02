@@ -390,6 +390,16 @@ static class WriterExtensions
             writeRow(evt.RemoveMethod);
         }
 
+        if (type.IsPyAwaitable)
+        {
+            w.WriteLine(
+                $"{{ \"get\", reinterpret_cast<PyCFunction>(get_{type.Name}), METH_NOARGS, nullptr }},"
+            );
+            w.WriteLine(
+                $"{{ \"wait\", reinterpret_cast<PyCFunction>(wait_{type.Name}), METH_O, nullptr }},"
+            );
+        }
+
         if (type.Category != Category.Interface && !(type.IsGeneric || type.IsStatic))
         {
             w.WriteLine(
@@ -666,6 +676,18 @@ static class WriterExtensions
                 $"static PyObject* _await_{type.Name}({type.CppPyWrapperType}* self) noexcept"
             );
             writeBody("dunder_await()", () => w.WriteLine("return py::dunder_await(self->obj);"));
+
+            w.WriteBlankLine();
+            w.WriteLine(
+                $"static PyObject* get_{type.Name}({type.CppPyWrapperType}* self, PyObject* /*unused*/) noexcept"
+            );
+            writeBody("async_get()", () => w.WriteAsyncGetBody(type));
+
+            w.WriteBlankLine();
+            w.WriteLine(
+                $"static PyObject* wait_{type.Name}({type.CppPyWrapperType}* self, PyObject* arg) noexcept"
+            );
+            writeBody("async_wait(arg)", () => w.WriteAsyncWaitBody(type));
         }
 
         if (type.IsPyIterable)
@@ -1740,5 +1762,83 @@ static class WriterExtensions
 
             w.WriteLine($"def {name}({self}, value: {setType}) -> None: ...");
         }
+    }
+
+    private static void WriteStaCheck(this IndentedTextWriter w)
+    {
+        w.WriteLine("if (winrt::impl::is_sta_thread())");
+        w.WriteBlock(() =>
+        {
+            w.WriteLine(
+                "PyErr_SetString(PyExc_RuntimeError, \"Cannot call blocking method from single-threaded apartment.\");"
+            );
+            w.WriteLine("return nullptr;");
+        });
+    }
+
+    public static void WriteAsyncGetBody(this IndentedTextWriter w, ProjectedType type)
+    {
+        var obj = type.IsGeneric ? "_obj." : "self->obj.";
+
+        w.WriteStaCheck();
+        w.WriteBlankLine();
+
+        var method = type.Methods.Single(m => m.Name == "GetResults");
+
+        if (method.Method.ReturnType.FullName == "System.Void")
+        {
+            w.WriteTryCatch(() =>
+            {
+                w.WriteLine("auto _gil = py::release_gil();");
+                w.WriteLine($"{obj}get();");
+            });
+            w.WriteBlankLine();
+            w.WriteLine("Py_RETURN_NONE;");
+        }
+        else
+        {
+            w.WriteTryCatch(() =>
+            {
+                w.WriteLine("return py::convert([&]()");
+                w.WriteBlock(
+                    () =>
+                    {
+                        w.WriteLine("auto _gil = py::release_gil();");
+                        w.WriteLine($"return {obj}get();");
+                    },
+                    "());"
+                );
+            });
+        }
+    }
+
+    public static void WriteAsyncWaitBody(this IndentedTextWriter w, ProjectedType type)
+    {
+        var obj = type.IsGeneric ? "_obj." : "self->obj.";
+
+        w.WriteStaCheck();
+        w.WriteBlankLine();
+        w.WriteLine("auto timeout = PyFloat_AsDouble(arg);");
+        w.WriteLine("if (timeout == -1.0 && PyErr_Occurred())");
+        w.WriteBlock(() =>
+        {
+            w.WriteLine("return nullptr;");
+        });
+        w.WriteBlankLine();
+        w.WriteTryCatch(() =>
+        {
+            w.WriteLine("return py::convert([&]()");
+            w.WriteBlock(
+                () =>
+                {
+                    w.WriteLine("auto _gil = py::release_gil();");
+                    w.WriteLine(
+                        "auto duration = std::chrono::duration_cast<winrt::Windows::Foundation::TimeSpan>(std::chrono::duration<double>(timeout));"
+                    );
+                    w.WriteLine($"return {obj}wait_for(duration);");
+                },
+                "());"
+            );
+        });
     }
 }
