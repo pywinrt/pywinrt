@@ -33,6 +33,9 @@ if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
     # in cppwrint/winrt/base.h
     # https://github.com/microsoft/cppwinrt/issues/1349
     add_compile_options(-Wno-nonnull)
+
+    # GCC 15 complains about type-punned pointers
+    add_compile_options(-Wno-strict-aliasing)
 endif()
 
 find_package(Python3 REQUIRED COMPONENTS Development.Module)
