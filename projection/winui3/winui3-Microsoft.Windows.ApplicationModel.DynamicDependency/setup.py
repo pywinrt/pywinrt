@@ -12,6 +12,8 @@ class build_ext_ex(build_ext):
             ext.extra_compile_args = ["/std:c++20", "/permissive-"]
         elif self.compiler.compiler_type == "mingw32":
             ext.extra_compile_args = ["-std=c++20", "-D_WIN32_WINNT=_WIN32_WINNT_WIN10"]
+            # GCC 15 complains about some things that it didn't in the past
+            ext.extra_compile_args += ["-Wno-strict-aliasing", "-Wno-template-body"]
             ext.extra_link_args = ["-loleaut32"]
         else:
             raise ValueError(f"Unsupported compiler: {self.compiler.compiler_type}")

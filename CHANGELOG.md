@@ -8,6 +8,11 @@
 - Allow passing Python mapping as arguments of type `Iterable[IKeyValuePair[K, V]]`.
 - Added ``get()`` and ``wait()`` methods to async operations to call them synchronously.
 
+### Fixed
+- Fixed building with GCC 15 ([#116]).
+
+[#116]: https://github.com/pywinrt/pywinrt/issues/116
+
 ## [v3.1.0] - 2025-04-11
 
 ### Added
