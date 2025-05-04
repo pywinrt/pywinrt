@@ -31,6 +31,8 @@ endif()
 if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
     # GCC 15 complains about type-punned pointers
     add_compile_options(-Wno-strict-aliasing)
+    # GCC 15 doesn't like winrt::deferrable_event_args
+    add_compile_options(-Wno-template-body)
 endif()
 
 find_package(Python3 REQUIRED COMPONENTS Development.Module)
