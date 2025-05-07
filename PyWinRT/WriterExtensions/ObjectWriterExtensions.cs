@@ -308,69 +308,6 @@ static class ObjectWriterExtensions
             didWriteLine = true;
         }
 
-        if (type.IsPyAwaitable)
-        {
-            var returnType = "None";
-
-            if (
-                type.Type.Namespace == "Windows.Foundation"
-                && (
-                    type.Type.Name == "IAsyncOperation`1"
-                    || type.Type.Name == "IAsyncOperationWithProgress`2"
-                )
-            )
-            {
-                returnType = type
-                    .Type.GenericParameters[0]
-                    .ToPyTypeName(
-                        ns,
-                        new TypeRefNullabilityInfo(type.Type.GenericParameters[0]),
-                        packageMap
-                    );
-            }
-            else
-            {
-                foreach (var ii in type.Type.Interfaces)
-                {
-                    // REVISIT: this is probably not as robust as it should
-                    // be since it assumes that any class that implements
-                    // IAsyncOperation* will reference it this way. We may
-                    // need to make this recursive and/or check TypeDef or TypeRef.
-
-                    if (ii.InterfaceType is not GenericInstanceType genericInst)
-                    {
-                        continue;
-                    }
-
-                    if (
-                        genericInst.Namespace != "Windows.Foundation"
-                        || (
-                            genericInst.Name != "IAsyncOperation`1"
-                            && genericInst.Name != "IAsyncOperationWithProgress`2"
-                        )
-                    )
-                    {
-                        continue;
-                    }
-
-                    returnType = genericInst
-                        .GenericArguments[0]
-                        .ToPyTypeName(
-                            ns,
-                            new TypeRefNullabilityInfo(genericInst.GenericArguments[0]),
-                            packageMap
-                        );
-
-                    break;
-                }
-            }
-
-            w.WriteLine(
-                $"def __await__(self) -> typing.Generator[typing.Any, None, {returnType}]: ..."
-            );
-            didWriteLine = true;
-        }
-
         foreach (var ctor in type.Constructors)
         {
             var paramList = "";

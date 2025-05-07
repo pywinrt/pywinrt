@@ -113,7 +113,6 @@ class OnlineIdSystemTicketResult(winrt.system.Object):
 
 @typing.final
 class SignOutUserOperation(winrt.system.Object, windows_foundation.IAsyncAction, windows_foundation.IAsyncInfo):
-    def __await__(self) -> typing.Generator[typing.Any, None, None]: ...
     # System.Void Windows.Security.Authentication.OnlineId.SignOutUserOperation::Cancel()
     def cancel(self) -> None: ...
     # System.Void Windows.Security.Authentication.OnlineId.SignOutUserOperation::Close()
@@ -138,7 +137,6 @@ class SignOutUserOperation(winrt.system.Object, windows_foundation.IAsyncAction,
 
 @typing.final
 class UserAuthenticationOperation(winrt.system.Object, windows_foundation.IAsyncOperation[UserIdentity], windows_foundation.IAsyncInfo):
-    def __await__(self) -> typing.Generator[typing.Any, None, UserIdentity]: ...
     # System.Void Windows.Security.Authentication.OnlineId.UserAuthenticationOperation::Cancel()
     def cancel(self) -> None: ...
     # System.Void Windows.Security.Authentication.OnlineId.UserAuthenticationOperation::Close()
