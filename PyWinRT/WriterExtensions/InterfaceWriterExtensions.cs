@@ -698,10 +698,10 @@ static class InterfaceWriterExtensions
                 packageMap
             );
 
+            w.WriteLine("@typing.final");
             w.WriteLine(
                 $"def __await__(self) -> typing.Generator[typing.Any, None, {returnType}]: ..."
             );
-
             w.WriteLine("@typing.final");
             w.WriteLine($"def get(self) -> {returnType}: ...");
             w.WriteLine("@typing.final");

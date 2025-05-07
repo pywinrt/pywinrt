@@ -37,7 +37,6 @@ class SmsEncodedLength:
 
 @typing.final
 class DeleteSmsMessageOperation(winrt.system.Object, windows_foundation.IAsyncAction, windows_foundation.IAsyncInfo):
-    def __await__(self) -> typing.Generator[typing.Any, None, None]: ...
     # System.Void Windows.Devices.Sms.DeleteSmsMessageOperation::Cancel()
     def cancel(self) -> None: ...
     # System.Void Windows.Devices.Sms.DeleteSmsMessageOperation::Close()
@@ -62,7 +61,6 @@ class DeleteSmsMessageOperation(winrt.system.Object, windows_foundation.IAsyncAc
 
 @typing.final
 class DeleteSmsMessagesOperation(winrt.system.Object, windows_foundation.IAsyncAction, windows_foundation.IAsyncInfo):
-    def __await__(self) -> typing.Generator[typing.Any, None, None]: ...
     # System.Void Windows.Devices.Sms.DeleteSmsMessagesOperation::Cancel()
     def cancel(self) -> None: ...
     # System.Void Windows.Devices.Sms.DeleteSmsMessagesOperation::Close()
@@ -87,7 +85,6 @@ class DeleteSmsMessagesOperation(winrt.system.Object, windows_foundation.IAsyncA
 
 @typing.final
 class GetSmsDeviceOperation(winrt.system.Object, windows_foundation.IAsyncOperation[SmsDevice], windows_foundation.IAsyncInfo):
-    def __await__(self) -> typing.Generator[typing.Any, None, SmsDevice]: ...
     # System.Void Windows.Devices.Sms.GetSmsDeviceOperation::Cancel()
     def cancel(self) -> None: ...
     # System.Void Windows.Devices.Sms.GetSmsDeviceOperation::Close()
@@ -112,7 +109,6 @@ class GetSmsDeviceOperation(winrt.system.Object, windows_foundation.IAsyncOperat
 
 @typing.final
 class GetSmsMessageOperation(winrt.system.Object, windows_foundation.IAsyncOperation[ISmsMessage], windows_foundation.IAsyncInfo):
-    def __await__(self) -> typing.Generator[typing.Any, None, ISmsMessage]: ...
     # System.Void Windows.Devices.Sms.GetSmsMessageOperation::Cancel()
     def cancel(self) -> None: ...
     # System.Void Windows.Devices.Sms.GetSmsMessageOperation::Close()
@@ -137,7 +133,6 @@ class GetSmsMessageOperation(winrt.system.Object, windows_foundation.IAsyncOpera
 
 @typing.final
 class GetSmsMessagesOperation(winrt.system.Object, windows_foundation.IAsyncOperationWithProgress[typing.Sequence[ISmsMessage], winrt.system.Int32], windows_foundation.IAsyncInfo):
-    def __await__(self) -> typing.Generator[typing.Any, None, typing.Sequence[ISmsMessage]]: ...
     # System.Void Windows.Devices.Sms.GetSmsMessagesOperation::Cancel()
     def cancel(self) -> None: ...
     # System.Void Windows.Devices.Sms.GetSmsMessagesOperation::Close()
@@ -168,7 +163,6 @@ class GetSmsMessagesOperation(winrt.system.Object, windows_foundation.IAsyncOper
 
 @typing.final
 class SendSmsMessageOperation(winrt.system.Object, windows_foundation.IAsyncAction, windows_foundation.IAsyncInfo):
-    def __await__(self) -> typing.Generator[typing.Any, None, None]: ...
     # System.Void Windows.Devices.Sms.SendSmsMessageOperation::Cancel()
     def cancel(self) -> None: ...
     # System.Void Windows.Devices.Sms.SendSmsMessageOperation::Close()

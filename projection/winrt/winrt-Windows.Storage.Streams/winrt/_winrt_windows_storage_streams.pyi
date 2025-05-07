@@ -115,7 +115,6 @@ class DataReader(winrt.system.Object, windows_foundation.IClosable, IDataReader,
 
 @typing.final
 class DataReaderLoadOperation(winrt.system.Object, windows_foundation.IAsyncOperation[winrt.system.UInt32], windows_foundation.IAsyncInfo):
-    def __await__(self) -> typing.Generator[typing.Any, None, winrt.system.UInt32]: ...
     # System.Void Windows.Storage.Streams.DataReaderLoadOperation::Cancel()
     def cancel(self) -> None: ...
     # System.Void Windows.Storage.Streams.DataReaderLoadOperation::Close()
@@ -210,7 +209,6 @@ class DataWriter(winrt.system.Object, windows_foundation.IClosable, IDataWriter)
 
 @typing.final
 class DataWriterStoreOperation(winrt.system.Object, windows_foundation.IAsyncOperation[winrt.system.UInt32], windows_foundation.IAsyncInfo):
-    def __await__(self) -> typing.Generator[typing.Any, None, winrt.system.UInt32]: ...
     # System.Void Windows.Storage.Streams.DataWriterStoreOperation::Cancel()
     def cancel(self) -> None: ...
     # System.Void Windows.Storage.Streams.DataWriterStoreOperation::Close()
