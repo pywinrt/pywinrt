@@ -1,5 +1,5 @@
-from .windows.graphics.directx.direct3d11 import IDirect3DDevice
-from .system import Object
+from winrt.windows.graphics.directx.direct3d11 import IDirect3DDevice
+from winrt.system import Object
 
 def create_direct3d11_device_from_dxgi_device(dxgi_device: int) -> IDirect3DDevice:
     """

@@ -1,4 +1,4 @@
-from .windows.graphics.capture import GraphicsCaptureItem
+from winrt.windows.graphics.capture import GraphicsCaptureItem
 
 def create_for_monitor(monitor: int) -> GraphicsCaptureItem:
     """

@@ -1,4 +1,4 @@
-from ....._winrt_windows_graphics_capture_interop import (
+from winrt._winrt_windows_graphics_capture_interop import (
     create_for_monitor,
     create_for_window,
 )
