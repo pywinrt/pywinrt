@@ -378,7 +378,6 @@ static class InterfaceWriterExtensions
 
                 if (type.IsPyAwaitable)
                 {
-                    w.WriteLine($"virtual PyObject* dunder_await() noexcept = 0;");
                     w.WriteLine($"virtual PyObject* async_get() noexcept = 0;");
                     w.WriteLine($"virtual PyObject* async_wait(PyObject* arg) noexcept = 0;");
                 }
@@ -488,10 +487,6 @@ static class InterfaceWriterExtensions
 
                 if (type.IsPyAwaitable)
                 {
-                    w.WriteLine(
-                        "PyObject* dunder_await() noexcept override { return py::dunder_await(_obj); }"
-                    );
-                    w.WriteBlankLine();
                     w.WriteLine("PyObject* async_get() noexcept override");
                     w.WriteBlock(() => w.WriteAsyncGetBody(type));
                     w.WriteBlankLine();

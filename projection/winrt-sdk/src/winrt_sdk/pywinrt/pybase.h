@@ -599,7 +599,7 @@ namespace py
      * This must be changed if the runtime API changes in a way that adds new
      * APIs but otherwise doesn't break binary compatibility.
      */
-    const uint16_t runtime_abi_version_minor = 0;
+    const uint16_t runtime_abi_version_minor = 1;
 
     PyTypeObject* register_python_type(
         PyObject* module,
@@ -617,6 +617,7 @@ namespace py
     winrt::guid convert_to_guid(PyObject* obj);
     PyTypeObject* get_inspectable_meta_type() noexcept;
     PyTypeObject* get_object_type() noexcept;
+    PyObject* await_async(PyObject*) noexcept;
 
     struct runtime_api
     {
@@ -636,6 +637,7 @@ namespace py
         decltype(get_object_type)* get_object_type;
         decltype(cpp::_winrt::Array_New)* array_new;
         decltype(cpp::_winrt::Array_Assign)* array_assign;
+        decltype(await_async)* await_async;
     };
 
 #ifndef PYWINRT_RUNTIME_MODULE
@@ -759,6 +761,12 @@ namespace py
     {
         WINRT_ASSERT(PyWinRT_API && PyWinRT_API->get_object_type);
         return (*PyWinRT_API->get_object_type)();
+    }
+
+    inline PyObject* await_async(PyObject* obj) noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->await_async);
+        return (*PyWinRT_API->await_async)(obj);
     }
 
     namespace cpp::_winrt
@@ -3363,188 +3371,6 @@ namespace py
     auto convert_to(PyObject* args, int index)
     {
         return convert_to<T>(PyTuple_GET_ITEM(args, index));
-    }
-
-    template<typename Async>
-    PyObject* get_results(Async const& operation) noexcept
-    {
-        try
-        {
-            if constexpr (std::is_void_v<decltype(operation.GetResults())>)
-            {
-                operation.GetResults();
-                Py_RETURN_NONE;
-            }
-            else
-            {
-                return convert(operation.GetResults());
-            }
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
-    template<typename Async>
-    PyObject* get_error(Async const& operation) noexcept
-    {
-        try
-        {
-            // Set error to get same behavior as non-async
-            PyErr_SetFromWindowsErr(operation.ErrorCode());
-#if PY_VERSION_HEX >= 0x030C0000
-            return PyErr_GetRaisedException();
-#else
-            pyobj_handle type, value, trace;
-            PyErr_Fetch(type.put(), value.put(), trace.put());
-            return value.detach();
-#endif
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
-    /**
-     * Wrapper to hold Python asyncio Loop and Future objects for async operations.
-     */
-    struct completion_callback
-    {
-        completion_callback() noexcept = default;
-
-        /**
-         * Creates a completion_callback with the given loop and future.
-         */
-        explicit completion_callback(PyObject* loop, PyObject* future) noexcept
-            : _loop(Py_NewRef(loop)), _future(Py_NewRef(future))
-        {
-        }
-
-        completion_callback(completion_callback&& other) noexcept
-        {
-            std::swap(_loop, other._loop);
-            std::swap(_future, other._future);
-        }
-
-        ~completion_callback()
-        {
-            auto gil = ensure_gil();
-            Py_CLEAR(_loop);
-            Py_CLEAR(_future);
-        }
-
-        /**
-         * Returns a borrowed reference to the asyncio loop object.
-         */
-        PyObject* loop() const noexcept
-        {
-            return _loop;
-        }
-
-        /**
-         * Returns a borrowed reference to the asyncio future object.
-         */
-        PyObject* future() const noexcept
-        {
-            return _future;
-        }
-
-        /**
-         * Returns a borrowed reference to the asyncio Future type object.
-         */
-        PyObject* future_type() const noexcept
-        {
-            return reinterpret_cast<PyObject*>(Py_TYPE(_future));
-        }
-
-      private:
-        PyObject* _loop{};
-        PyObject* _future{};
-    };
-
-    template<typename Async>
-    PyObject* dunder_await(Async const& async) noexcept
-    {
-        pyobj_handle asyncio{PyImport_ImportModule("asyncio")};
-        if (!asyncio)
-        {
-            return nullptr;
-        }
-
-        pyobj_handle loop{
-            PyObject_CallMethod(asyncio.get(), "get_running_loop", nullptr)};
-        if (!loop)
-        {
-            return nullptr;
-        }
-
-        pyobj_handle future{PyObject_CallMethod(loop.get(), "create_future", nullptr)};
-        if (!future)
-        {
-            return nullptr;
-        }
-
-        completion_callback cb{loop.get(), future.get()};
-
-        try
-        {
-            async.Completed(
-                [cb = std::move(cb)](auto const& operation, auto status) mutable
-                {
-                    auto gil = ensure_gil();
-
-                    if (status == winrt::Windows::Foundation::AsyncStatus::Completed)
-                    {
-                        pyobj_handle results{get_results(operation)};
-
-                        pyobj_handle set_result{
-                            PyObject_GetAttrString(cb.future_type(), "set_result")};
-                        pyobj_handle handle{PyObject_CallMethod(
-                            cb.loop(),
-                            "call_soon_threadsafe",
-                            "OOO",
-                            set_result.get(),
-                            cb.future(),
-                            results.get())};
-                    }
-                    else if (
-                        status == winrt::Windows::Foundation::AsyncStatus::Canceled)
-                    {
-                        pyobj_handle cancel{
-                            PyObject_GetAttrString(cb.future_type(), "cancel")};
-                        pyobj_handle handle{PyObject_CallMethod(
-                            cb.loop(),
-                            "call_soon_threadsafe",
-                            "OO",
-                            cancel.get(),
-                            cb.future())};
-                    }
-                    else
-                    {
-                        pyobj_handle exc{get_error(operation)};
-                        pyobj_handle set_exception{
-                            PyObject_GetAttrString(cb.future_type(), "set_exception")};
-                        pyobj_handle handle{PyObject_CallMethod(
-                            cb.loop(),
-                            "call_soon_threadsafe",
-                            "OOO",
-                            set_exception.get(),
-                            cb.future(),
-                            exc.get())};
-                    }
-                });
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-
-        return PyObject_GetIter(future.get());
     }
 
     template<typename T>

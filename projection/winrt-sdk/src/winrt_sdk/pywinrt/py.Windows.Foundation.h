@@ -23,7 +23,6 @@ namespace py::proj::Windows::Foundation
         virtual PyObject* get_ErrorCode() noexcept = 0;
         virtual PyObject* get_Id() noexcept = 0;
         virtual PyObject* get_Status() noexcept = 0;
-        virtual PyObject* dunder_await() noexcept = 0;
         virtual PyObject* async_get() noexcept = 0;
         virtual PyObject* async_wait(PyObject* arg) noexcept = 0;
     };
@@ -41,7 +40,6 @@ namespace py::proj::Windows::Foundation
         virtual PyObject* get_ErrorCode() noexcept = 0;
         virtual PyObject* get_Id() noexcept = 0;
         virtual PyObject* get_Status() noexcept = 0;
-        virtual PyObject* dunder_await() noexcept = 0;
         virtual PyObject* async_get() noexcept = 0;
         virtual PyObject* async_wait(PyObject* arg) noexcept = 0;
     };
@@ -57,7 +55,6 @@ namespace py::proj::Windows::Foundation
         virtual PyObject* get_ErrorCode() noexcept = 0;
         virtual PyObject* get_Id() noexcept = 0;
         virtual PyObject* get_Status() noexcept = 0;
-        virtual PyObject* dunder_await() noexcept = 0;
         virtual PyObject* async_get() noexcept = 0;
         virtual PyObject* async_wait(PyObject* arg) noexcept = 0;
     };
@@ -1070,8 +1067,6 @@ namespace py::impl::Windows::Foundation
                 return nullptr;
             }
         }
-        PyObject* dunder_await() noexcept override { return py::dunder_await(_obj); }
-
         PyObject* async_get() noexcept override
         {
             if (winrt::impl::is_sta_thread())
@@ -1380,8 +1375,6 @@ namespace py::impl::Windows::Foundation
                 return nullptr;
             }
         }
-        PyObject* dunder_await() noexcept override { return py::dunder_await(_obj); }
-
         PyObject* async_get() noexcept override
         {
             if (winrt::impl::is_sta_thread())
@@ -1650,8 +1643,6 @@ namespace py::impl::Windows::Foundation
                 return nullptr;
             }
         }
-        PyObject* dunder_await() noexcept override { return py::dunder_await(_obj); }
-
         PyObject* async_get() noexcept override
         {
             if (winrt::impl::is_sta_thread())

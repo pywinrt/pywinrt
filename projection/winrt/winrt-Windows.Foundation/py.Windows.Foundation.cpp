@@ -4059,11 +4059,6 @@ namespace py::cpp::Windows::Foundation
         }
     }
 
-    static PyObject* _await_IAsyncAction(py::wrapper::Windows::Foundation::IAsyncAction* self) noexcept
-    {
-        return py::dunder_await(self->obj);
-    }
-
     static PyObject* get_IAsyncAction(py::wrapper::Windows::Foundation::IAsyncAction* self, PyObject* /*unused*/) noexcept
     {
         if (winrt::impl::is_sta_thread())
@@ -4138,7 +4133,7 @@ namespace py::cpp::Windows::Foundation
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAsyncAction) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAsyncAction) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAsyncAction) },
-        { Py_am_await, reinterpret_cast<void*>(_await_IAsyncAction) },
+        { Py_am_await, reinterpret_cast<void*>(py::await_async) },
         { }};
 
     static PyType_Spec type_spec_IAsyncAction = {
@@ -4648,11 +4643,6 @@ namespace py::cpp::Windows::Foundation
         }
     }
 
-    static PyObject* _await_IAsyncActionWithProgress(py::wrapper::Windows::Foundation::IAsyncActionWithProgress* self) noexcept
-    {
-        return self->impl->dunder_await();
-    }
-
     static PyObject* get_IAsyncActionWithProgress(py::wrapper::Windows::Foundation::IAsyncActionWithProgress* self, PyObject* /*unused*/) noexcept
     {
         return self->impl->async_get();
@@ -4687,7 +4677,7 @@ namespace py::cpp::Windows::Foundation
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAsyncActionWithProgress) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAsyncActionWithProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAsyncActionWithProgress) },
-        { Py_am_await, reinterpret_cast<void*>(_await_IAsyncActionWithProgress) },
+        { Py_am_await, reinterpret_cast<void*>(py::await_async) },
         { }};
 
     static PyType_Spec type_spec_IAsyncActionWithProgress = {
@@ -5409,11 +5399,6 @@ namespace py::cpp::Windows::Foundation
         }
     }
 
-    static PyObject* _await_IAsyncOperationWithProgress(py::wrapper::Windows::Foundation::IAsyncOperationWithProgress* self) noexcept
-    {
-        return self->impl->dunder_await();
-    }
-
     static PyObject* get_IAsyncOperationWithProgress(py::wrapper::Windows::Foundation::IAsyncOperationWithProgress* self, PyObject* /*unused*/) noexcept
     {
         return self->impl->async_get();
@@ -5448,7 +5433,7 @@ namespace py::cpp::Windows::Foundation
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAsyncOperationWithProgress) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAsyncOperationWithProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAsyncOperationWithProgress) },
-        { Py_am_await, reinterpret_cast<void*>(_await_IAsyncOperationWithProgress) },
+        { Py_am_await, reinterpret_cast<void*>(py::await_async) },
         { }};
 
     static PyType_Spec type_spec_IAsyncOperationWithProgress = {
@@ -5692,11 +5677,6 @@ namespace py::cpp::Windows::Foundation
         }
     }
 
-    static PyObject* _await_IAsyncOperation(py::wrapper::Windows::Foundation::IAsyncOperation* self) noexcept
-    {
-        return self->impl->dunder_await();
-    }
-
     static PyObject* get_IAsyncOperation(py::wrapper::Windows::Foundation::IAsyncOperation* self, PyObject* /*unused*/) noexcept
     {
         return self->impl->async_get();
@@ -5730,7 +5710,7 @@ namespace py::cpp::Windows::Foundation
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAsyncOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAsyncOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAsyncOperation) },
-        { Py_am_await, reinterpret_cast<void*>(_await_IAsyncOperation) },
+        { Py_am_await, reinterpret_cast<void*>(py::await_async) },
         { }};
 
     static PyType_Spec type_spec_IAsyncOperation = {

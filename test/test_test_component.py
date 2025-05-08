@@ -1,3 +1,5 @@
+import asyncio
+import contextlib
 import copy
 import ctypes
 import gc
@@ -5,16 +7,16 @@ import sys
 import threading
 import unittest
 import weakref
+from typing import Generic, List, TypedDict, TypeVar
 from uuid import UUID
 
-from typing_extensions import override
-
 import test_winrt.testcomponent as tc
+import winrt.runtime as wr
 import winrt.windows.foundation as wf
 import winrt.windows.foundation.collections as wfc
-import winrt.runtime as wr
+from typing_extensions import override
 
-from test._util import catch_unraisable
+from test._util import async_test, catch_unraisable
 
 E_FAIL = ctypes.HRESULT(0x80004005).value
 E_CANCELLED = ctypes.HRESULT(0x800704C7).value
@@ -656,7 +658,268 @@ class TestTestComponent(unittest.TestCase):
         status = tc.TestRunner.create_async_action_with_error(10, E_FAIL).wait(1)
         self.assertEqual(status, wf.AsyncStatus.ERROR)
 
-    def test_async_operation(self):
+    def test_async_operation_get(self):
         expected = 1
         actual = tc.TestRunner.create_async_operation(10, expected).get()
         self.assertEqual(expected, actual)
+
+    @async_test
+    async def test_async_action(self):
+        op = tc.TestRunner.create_async_action(10)
+        await op
+
+        self.assertEqual(op.status, wf.AsyncStatus.COMPLETED)
+
+    @unittest.skipIf(sys.version_info < (3, 11), "requires Python 3.11 or later")
+    @async_test
+    async def test_async_action_cancel(self):
+        op = tc.TestRunner.create_async_action(500)
+
+        with self.assertRaises(asyncio.TimeoutError):
+            async with asyncio.timeout(0.1):
+                await op
+
+        # The Python asyncio.Future propagates the cancellation to the WinRT action.
+        self.assertEqual(op.status, wf.AsyncStatus.CANCELED)
+
+    @unittest.skipIf(sys.version_info < (3, 11), "requires Python 3.11 or later")
+    @async_test
+    async def test_async_action_cancel_with_shield(self):
+        op = tc.TestRunner.create_async_action(500)
+
+        with self.assertRaises(asyncio.TimeoutError):
+            async with asyncio.timeout(0.1):
+                # This makes the behavior explicit and avoids the later exception.
+                await asyncio.shield(op)
+
+        # Makes sense this time because of the shield.
+        self.assertNotEqual(op.status, wf.AsyncStatus.CANCELED)
+
+        # The operation is still running.
+        self.assertEqual(op.status, wf.AsyncStatus.STARTED)
+        await asyncio.sleep(0.5)
+        self.assertEqual(op.status, wf.AsyncStatus.COMPLETED)
+
+    @unittest.skipIf(sys.version_info < (3, 11), "requires Python 3.11 or later")
+    @async_test
+    async def test_async_action_cancel_with_cancel(self):
+        op = tc.TestRunner.create_async_action(500)
+
+        with self.assertRaises(asyncio.TimeoutError):
+            async with asyncio.timeout(0.1):
+                try:
+                    await op
+                except asyncio.CancelledError:
+                    op.cancel()
+                    raise
+
+        # This works since cancel() is effectively synchronous in this particular case.
+        self.assertEqual(op.status, wf.AsyncStatus.CANCELED)
+
+        # But apparently the completed callback doesn't come until the timer
+        # is expired?! If we leave this out, we get a unraisable `RuntimeError:
+        # Event loop is closed` later on after the test is done.
+        await asyncio.sleep(0.5)
+
+    @async_test
+    async def test_async_action_error(self):
+        op = tc.TestRunner.create_async_action_with_error(10, E_FAIL)
+
+        with self.assertRaises(OSError) as ctx:
+            await op
+
+        self.assertEqual(ctx.exception.winerror, E_FAIL)
+
+    @async_test
+    async def test_async_action_with_progress(self):
+        expected = [1, 2, 3]
+        op = tc.TestRunner.create_async_action_with_progress(10, expected)
+
+        actual: List[int] = []
+
+        def on_progress(op: wf.IAsyncActionWithProgress[int], value: int) -> None:
+            actual.append(value)
+
+        op.progress = on_progress
+
+        await op
+
+        self.assertEqual(op.status, wf.AsyncStatus.COMPLETED)
+        self.assertListEqual(actual, expected)
+
+    @unittest.skipIf(sys.version_info < (3, 13), "requires Python 3.13 or later")
+    @async_test
+    async def test_async_action_with_progress_iter(self):
+        expected = [1, 2, 3]
+        op = tc.TestRunner.create_async_action_with_progress(10, expected)
+
+        actual: List[int] = []
+
+        async for value in WinrtAiter(op):
+            actual.append(value)
+
+        self.assertEqual(op.status, wf.AsyncStatus.COMPLETED)
+        self.assertListEqual(actual, expected)
+
+    @unittest.skipIf(sys.version_info < (3, 13), "requires Python 3.13 or later")
+    @async_test
+    async def test_async_action_with_progress_iter_cancel(self):
+        expected = [1, 2, 3]
+        op = tc.TestRunner.create_async_action_with_progress(500, expected)
+        asyncio.get_running_loop().call_later(0.1, op.cancel)
+
+        actual: List[int] = []
+
+        with self.assertRaises(asyncio.CancelledError):
+            async for value in WinrtAiter(op):
+                actual.append(value)
+
+        self.assertEqual(op.status, wf.AsyncStatus.CANCELED)
+        self.assertLess(len(actual), len(expected))
+
+    @unittest.skipIf(sys.version_info < (3, 13), "requires Python 3.13 or later")
+    @async_test
+    async def test_async_action_with_progress_iter_cancel2(self):
+        expected = [1, 2, 3, 4, 5]
+        op = tc.TestRunner.create_async_action_with_progress(100, expected)
+
+        actual: List[int] = []
+
+        with self.assertRaises(asyncio.TimeoutError):
+            async with (
+                asyncio.timeout(0.2),
+                # Have to do this otherwise the async op isn't canceled on timeout!
+                contextlib.aclosing(WinrtAiter(op)) as aiter,
+            ):
+                async for value in aiter:
+                    actual.append(value)
+
+        self.assertEqual(op.status, wf.AsyncStatus.CANCELED)
+        self.assertLess(len(actual), len(expected))
+
+    @unittest.skipIf(sys.version_info < (3, 13), "requires Python 3.13 or later")
+    @async_test
+    async def test_async_action_with_progress_iter_error(self):
+        expected = [1, 2, 3]
+        op = tc.TestRunner.create_async_action_with_progress_with_error(
+            10, expected, E_FAIL
+        )
+
+        actual: List[int] = []
+
+        with self.assertRaises(OSError) as ctx:
+            async for value in WinrtAiter(op):
+                actual.append(value)
+
+        self.assertEqual(ctx.exception.winerror, E_FAIL)
+        self.assertEqual(op.status, wf.AsyncStatus.ERROR)
+        self.assertListEqual(actual, expected)
+
+    @async_test
+    async def test_async_operation(self):
+        op = tc.TestRunner.create_async_operation(10, 1)
+        result = await op
+
+        self.assertEqual(op.status, wf.AsyncStatus.COMPLETED)
+        self.assertEqual(result, 1)
+
+    @async_test
+    async def test_async_operation_with_progress(self):
+        expected = [1, 2, 3]
+        expected_result = 4
+        op = tc.TestRunner.create_async_operation_with_progress(
+            10, expected, expected_result
+        )
+
+        actual: List[int] = []
+
+        def on_progress(
+            op: wf.IAsyncOperationWithProgress[int, int], value: int
+        ) -> None:
+            actual.append(value)
+
+        op.progress = on_progress
+
+        actual_result = await op
+
+        self.assertEqual(op.status, wf.AsyncStatus.COMPLETED)
+        self.assertEqual(actual_result, expected_result)
+        self.assertListEqual(actual, expected)
+
+
+T = TypeVar("T")
+
+
+class Result(TypedDict, total=False):
+    exception: BaseException
+
+
+class WinrtAiter(Generic[T]):
+    def __init__(self, op: wf.IAsyncActionWithProgress[T]):
+        self._op = op
+        # self._exception: Optional[BaseException] = None
+
+        queue: asyncio.Queue[T] = asyncio.Queue()
+        loop = asyncio.get_running_loop()
+        result = Result()
+
+        # Caution: don't add closure on self in these callbacks to avoid reference cycle
+
+        def on_progress(op: wf.IAsyncActionWithProgress[T], value: T) -> None:
+            loop.call_soon_threadsafe(queue.put_nowait, value)
+
+        def on_completed(
+            op: wf.IAsyncActionWithProgress[T], status: wf.AsyncStatus
+        ) -> None:
+            if status == wf.AsyncStatus.COMPLETED:
+                pass
+            elif status == wf.AsyncStatus.CANCELED:
+                result["exception"] = asyncio.CancelledError()
+            elif status == wf.AsyncStatus.ERROR:
+                result["exception"] = ctypes.WinError(op.error_code.value)
+            else:
+                raise RuntimeError("unexpected status")
+
+            # FIXME: shutdown() was introduced in 3.13, so we can't use it generally
+            loop.call_soon_threadsafe(queue.shutdown)  # type: ignore [attr-defined]
+
+        self._op.progress = on_progress
+        self._op.completed = on_completed
+        self._queue = queue
+        self._loop = loop
+        self._result = result
+
+    def __aiter__(self) -> "WinrtAiter[T]":
+        return self
+
+    async def __anext__(self) -> T:
+        try:
+            return await self._queue.get()
+        except asyncio.QueueShutDown:  # type: ignore [attr-defined]
+            # this acts as signal that the operation is done
+            pass
+
+        if ex := self._result.pop("exception", None):
+            raise ex
+
+        raise StopAsyncIteration
+
+    def __del__(self) -> None:
+        if ex := self._result.pop("exception", None):
+            self._loop.call_exception_handler(
+                context={
+                    "message": "WinrtAiter was not run to completion and has outstanding exception",
+                    "exception": ex,
+                }
+            )
+
+    async def aclose(self) -> None:
+        if self._op.status == wf.AsyncStatus.STARTED:
+            self._op.cancel()
+
+        while True:
+            try:
+                await self._queue.get()
+            except asyncio.QueueShutDown:  # type: ignore [attr-defined]
+                self._result.pop("exception", None)
+                break

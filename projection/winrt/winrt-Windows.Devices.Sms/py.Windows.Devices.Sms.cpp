@@ -327,11 +327,6 @@ namespace py::cpp::Windows::Devices::Sms
         }
     }
 
-    static PyObject* _await_DeleteSmsMessageOperation(py::wrapper::Windows::Devices::Sms::DeleteSmsMessageOperation* self) noexcept
-    {
-        return py::dunder_await(self->obj);
-    }
-
     static PyObject* get_DeleteSmsMessageOperation(py::wrapper::Windows::Devices::Sms::DeleteSmsMessageOperation* self, PyObject* /*unused*/) noexcept
     {
         if (winrt::impl::is_sta_thread())
@@ -406,7 +401,7 @@ namespace py::cpp::Windows::Devices::Sms
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeleteSmsMessageOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeleteSmsMessageOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeleteSmsMessageOperation) },
-        { Py_am_await, reinterpret_cast<void*>(_await_DeleteSmsMessageOperation) },
+        { Py_am_await, reinterpret_cast<void*>(py::await_async) },
         { }};
 
     static PyType_Spec type_spec_DeleteSmsMessageOperation = {
@@ -739,11 +734,6 @@ namespace py::cpp::Windows::Devices::Sms
         }
     }
 
-    static PyObject* _await_DeleteSmsMessagesOperation(py::wrapper::Windows::Devices::Sms::DeleteSmsMessagesOperation* self) noexcept
-    {
-        return py::dunder_await(self->obj);
-    }
-
     static PyObject* get_DeleteSmsMessagesOperation(py::wrapper::Windows::Devices::Sms::DeleteSmsMessagesOperation* self, PyObject* /*unused*/) noexcept
     {
         if (winrt::impl::is_sta_thread())
@@ -818,7 +808,7 @@ namespace py::cpp::Windows::Devices::Sms
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DeleteSmsMessagesOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DeleteSmsMessagesOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DeleteSmsMessagesOperation) },
-        { Py_am_await, reinterpret_cast<void*>(_await_DeleteSmsMessagesOperation) },
+        { Py_am_await, reinterpret_cast<void*>(py::await_async) },
         { }};
 
     static PyType_Spec type_spec_DeleteSmsMessagesOperation = {
@@ -1150,11 +1140,6 @@ namespace py::cpp::Windows::Devices::Sms
         }
     }
 
-    static PyObject* _await_GetSmsDeviceOperation(py::wrapper::Windows::Devices::Sms::GetSmsDeviceOperation* self) noexcept
-    {
-        return py::dunder_await(self->obj);
-    }
-
     static PyObject* get_GetSmsDeviceOperation(py::wrapper::Windows::Devices::Sms::GetSmsDeviceOperation* self, PyObject* /*unused*/) noexcept
     {
         if (winrt::impl::is_sta_thread())
@@ -1230,7 +1215,7 @@ namespace py::cpp::Windows::Devices::Sms
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GetSmsDeviceOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GetSmsDeviceOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GetSmsDeviceOperation) },
-        { Py_am_await, reinterpret_cast<void*>(_await_GetSmsDeviceOperation) },
+        { Py_am_await, reinterpret_cast<void*>(py::await_async) },
         { }};
 
     static PyType_Spec type_spec_GetSmsDeviceOperation = {
@@ -1562,11 +1547,6 @@ namespace py::cpp::Windows::Devices::Sms
         }
     }
 
-    static PyObject* _await_GetSmsMessageOperation(py::wrapper::Windows::Devices::Sms::GetSmsMessageOperation* self) noexcept
-    {
-        return py::dunder_await(self->obj);
-    }
-
     static PyObject* get_GetSmsMessageOperation(py::wrapper::Windows::Devices::Sms::GetSmsMessageOperation* self, PyObject* /*unused*/) noexcept
     {
         if (winrt::impl::is_sta_thread())
@@ -1642,7 +1622,7 @@ namespace py::cpp::Windows::Devices::Sms
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GetSmsMessageOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GetSmsMessageOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GetSmsMessageOperation) },
-        { Py_am_await, reinterpret_cast<void*>(_await_GetSmsMessageOperation) },
+        { Py_am_await, reinterpret_cast<void*>(py::await_async) },
         { }};
 
     static PyType_Spec type_spec_GetSmsMessageOperation = {
@@ -2043,11 +2023,6 @@ namespace py::cpp::Windows::Devices::Sms
         }
     }
 
-    static PyObject* _await_GetSmsMessagesOperation(py::wrapper::Windows::Devices::Sms::GetSmsMessagesOperation* self) noexcept
-    {
-        return py::dunder_await(self->obj);
-    }
-
     static PyObject* get_GetSmsMessagesOperation(py::wrapper::Windows::Devices::Sms::GetSmsMessagesOperation* self, PyObject* /*unused*/) noexcept
     {
         if (winrt::impl::is_sta_thread())
@@ -2124,7 +2099,7 @@ namespace py::cpp::Windows::Devices::Sms
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GetSmsMessagesOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GetSmsMessagesOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GetSmsMessagesOperation) },
-        { Py_am_await, reinterpret_cast<void*>(_await_GetSmsMessagesOperation) },
+        { Py_am_await, reinterpret_cast<void*>(py::await_async) },
         { }};
 
     static PyType_Spec type_spec_GetSmsMessagesOperation = {
@@ -2457,11 +2432,6 @@ namespace py::cpp::Windows::Devices::Sms
         }
     }
 
-    static PyObject* _await_SendSmsMessageOperation(py::wrapper::Windows::Devices::Sms::SendSmsMessageOperation* self) noexcept
-    {
-        return py::dunder_await(self->obj);
-    }
-
     static PyObject* get_SendSmsMessageOperation(py::wrapper::Windows::Devices::Sms::SendSmsMessageOperation* self, PyObject* /*unused*/) noexcept
     {
         if (winrt::impl::is_sta_thread())
@@ -2536,7 +2506,7 @@ namespace py::cpp::Windows::Devices::Sms
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SendSmsMessageOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SendSmsMessageOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SendSmsMessageOperation) },
-        { Py_am_await, reinterpret_cast<void*>(_await_SendSmsMessageOperation) },
+        { Py_am_await, reinterpret_cast<void*>(py::await_async) },
         { }};
 
     static PyType_Spec type_spec_SendSmsMessageOperation = {
