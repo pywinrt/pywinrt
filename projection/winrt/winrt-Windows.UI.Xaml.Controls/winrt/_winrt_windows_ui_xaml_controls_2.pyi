@@ -44,7 +44,7 @@ import winrt.windows.ui.xaml.navigation as windows_ui_xaml_navigation
 import winrt.windows.web as windows_web
 import winrt.windows.web.http as windows_web_http
 
-from ._winrt_windows_ui_xaml_controls import (
+from winrt._winrt_windows_ui_xaml_controls import (
     AnchorRequestedEventArgs,
     AppBar,
     AppBarElementContainer,

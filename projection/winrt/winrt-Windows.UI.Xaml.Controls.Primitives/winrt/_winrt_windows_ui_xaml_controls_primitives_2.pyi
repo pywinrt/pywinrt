@@ -22,7 +22,7 @@ import winrt.windows.ui.xaml.interop as windows_ui_xaml_interop
 import winrt.windows.ui.xaml.media as windows_ui_xaml_media
 import winrt.windows.ui.xaml.media.animation as windows_ui_xaml_media_animation
 
-from ._winrt_windows_ui_xaml_controls_primitives import (
+from winrt._winrt_windows_ui_xaml_controls_primitives import (
     GeneratorPosition,
     AppBarButtonTemplateSettings,
     AppBarTemplateSettings,

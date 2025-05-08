@@ -25,7 +25,7 @@ import winui3.microsoft.ui.xaml.input as microsoft_ui_xaml_input
 import winui3.microsoft.ui.xaml.media as microsoft_ui_xaml_media
 import winui3.microsoft.ui.xaml.media.animation as microsoft_ui_xaml_media_animation
 
-from ._winui3_microsoft_ui_xaml_controls_primitives_2 import (
+from winui3._winui3_microsoft_ui_xaml_controls_primitives_2 import (
     ColorPickerSlider,
     TabViewListView,
 )

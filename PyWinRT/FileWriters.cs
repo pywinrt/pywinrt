@@ -203,7 +203,7 @@ static class FileWriters
             }
 
             var suffix = depth == 0 ? "" : $"_{depth + 1}";
-            w.WriteLine($"from .{ns.NsModuleName}{suffix} import (");
+            w.WriteLine($"from {ns.PyPackage}.{ns.NsModuleName}{suffix} import (");
             w.Indent++;
 
             foreach (var type in dependencyTypes)
