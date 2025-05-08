@@ -155,3 +155,29 @@ be unboxed to get the original value.
         value = obj.as_(IPropertyValue).get_xyz()
 
     .. versionadded:: 3.0
+
+
+-----
+Async
+-----
+
+The WinRT projection is integrated with Python's :mod:`asyncio` module. This
+is mostly transparent, but there is one helper function available.
+
+.. function:: wrap_async(op: winrt.windows.foundation.IAsyncAction) -> asyncio.Future[None]
+    wrap_async(op: winrt.windows.foundation.IAsyncOperation[T]) -> asyncio.Future[T]
+
+    Wraps a WinRT asynchronous operation in :class:`asyncio.Future`.
+
+    This also works with the ``WithProgress`` variants of the interfaces.
+
+    This is only needed when you need access to the :class:`asyncio.Future`
+    object, otherwise you can ``await`` the operation directly.
+
+    :param op: The WinRT asynchronous operation to wrap.
+    :return: An :class:`asyncio.Future` that will be completed when the
+        operation is finished.
+
+    .. versionadded:: unreleased
+
+.. seealso:: :ref:`async-projection` in the PyWinRT projection/types documentation.

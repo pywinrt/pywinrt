@@ -270,7 +270,7 @@ static class WriterExtensions
 
         if (type.IsPyAwaitable)
         {
-            w.WriteLine($"{{ Py_am_await, reinterpret_cast<void*>(_await_{name}) }},");
+            w.WriteLine("{ Py_am_await, reinterpret_cast<void*>(py::await_async) },");
         }
 
         if (type.IsPyIterable)
@@ -671,12 +671,6 @@ static class WriterExtensions
 
         if (type.IsPyAwaitable)
         {
-            w.WriteBlankLine();
-            w.WriteLine(
-                $"static PyObject* _await_{type.Name}({type.CppPyWrapperType}* self) noexcept"
-            );
-            writeBody("dunder_await()", () => w.WriteLine("return py::dunder_await(self->obj);"));
-
             w.WriteBlankLine();
             w.WriteLine(
                 $"static PyObject* get_{type.Name}({type.CppPyWrapperType}* self, PyObject* /*unused*/) noexcept"

@@ -238,7 +238,10 @@ wait for the result. There are four fundamental types that derive from this:
   \- represents an operation that does not return a value and reports progress
   of type ``TProgress``
 
-PyWinRT also exposes the CppWinRT extension methods for calling these methods
+Synchronous usage
+-----------------
+
+PyWinRT exposes the CppWinRT extension methods for calling these methods
 synchronously (i.e. when not using ``asyncio``).
 
 .. method:: IAsyncAction.get() -> None
@@ -279,17 +282,56 @@ synchronously (i.e. when not using ``asyncio``).
 
     .. versionadded:: unreleased
 
-.. todo:: document IAsync* with asyncio
+.. _async-projection:
 
-If you can't use either the synchronous helpers or ``asyncio``, then you can
-use the ``completed``  property to set a callback that will be called when
-the operation is complete. This callback will be called on a different thread.
-And you must also be careful about not creating a reference cycle to the operation,
-otherwise it will cause a memory leak.
+Asynchronous usage
+------------------
+
+.. note:: WinRT async methods look like Python coroutines (methods defined with
+    ``async def``) but they are not. This means they do not return a
+    :class:`coroutine <collections.abc.Coroutine>` object and therefore cannot
+    be used with methods like :func:`asyncio.create_task`. They are only
+    :class:`awaitable <collections.abc.Awaitable>` objects.
+
+If you are using ``asyncio``, then you can use the ``await`` keyword to wait
+for the result of async WinRT methods::
+
+    thing = await winrt_obj.get_thing_async()
+
+This is the same as calling::
+
+    from winrt.system import wrap_async
+
+    thing = await wrap_async(winrt_obj.get_thing_async())
+
+:func:`winrt.system.wrap_async` is a helper function that wraps the WinRT async
+operation in a :class:`asyncio.Future` object. Generally, awaiting directly is
+more convenient, but if you need a future-like object instead of an awaitable,
+you can use this function to get the actual ``Future`` object. However, using
+structured async programming patterns is preferred.
+
+.. versionchanged:: unreleased
+
+    If the :class:`asyncio.Future` that wraps the operation is canceled, it will
+    now propagate the cancellation to the WinRT async action/operation. To restore
+    the previous behavior, you can wrap the operation in :func:`asyncio.shield`.
+
+Other usage
+-----------
+
+If you can't use either the synchronous helpers or ``asyncio`` (i.e. a GUI app
+that doesn't use asyncio), then you can use the ``completed``  property to set
+a callback that will be called when the operation is complete. In GUI apps where
+the async method is called from the main thread (that is initialized as a single-
+threaded apartment), the callback will occur on the main thread. Otherwise, the
+callback will be called on a different thread.
+
+You must also be careful about not creating a reference cycle to the operation,
+otherwise it will cause a memory leak. This can happen if the callback is a
+closure and references an object that references the operation itself.
 
 .. todo:: add tips on how to iterate over progress events
 
-    https://github.com/pywinrt/pywinrt/blob/main/projection/readme.md#async-coroutines
 
 Buffers
 =======

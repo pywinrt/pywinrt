@@ -1604,11 +1604,6 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
         }
     }
 
-    static PyObject* _await_SignOutUserOperation(py::wrapper::Windows::Security::Authentication::OnlineId::SignOutUserOperation* self) noexcept
-    {
-        return py::dunder_await(self->obj);
-    }
-
     static PyObject* get_SignOutUserOperation(py::wrapper::Windows::Security::Authentication::OnlineId::SignOutUserOperation* self, PyObject* /*unused*/) noexcept
     {
         if (winrt::impl::is_sta_thread())
@@ -1683,7 +1678,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SignOutUserOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SignOutUserOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SignOutUserOperation) },
-        { Py_am_await, reinterpret_cast<void*>(_await_SignOutUserOperation) },
+        { Py_am_await, reinterpret_cast<void*>(py::await_async) },
         { }};
 
     static PyType_Spec type_spec_SignOutUserOperation = {
@@ -2015,11 +2010,6 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
         }
     }
 
-    static PyObject* _await_UserAuthenticationOperation(py::wrapper::Windows::Security::Authentication::OnlineId::UserAuthenticationOperation* self) noexcept
-    {
-        return py::dunder_await(self->obj);
-    }
-
     static PyObject* get_UserAuthenticationOperation(py::wrapper::Windows::Security::Authentication::OnlineId::UserAuthenticationOperation* self, PyObject* /*unused*/) noexcept
     {
         if (winrt::impl::is_sta_thread())
@@ -2095,7 +2085,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UserAuthenticationOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UserAuthenticationOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UserAuthenticationOperation) },
-        { Py_am_await, reinterpret_cast<void*>(_await_UserAuthenticationOperation) },
+        { Py_am_await, reinterpret_cast<void*>(py::await_async) },
         { }};
 
     static PyType_Spec type_spec_UserAuthenticationOperation = {

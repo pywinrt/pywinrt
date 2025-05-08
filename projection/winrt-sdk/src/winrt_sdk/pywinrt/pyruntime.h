@@ -15,6 +15,7 @@ namespace py::cpp::_winrt
         std::unordered_map<std::string_view, PyTypeObject*> type_cache;
         std::unordered_map<std::string_view, void*> struct_from_tuple_cache;
         PyObject* to_uuid_func;
+        PyObject* wrap_async_func;
     };
 
     module_state* get_module_state() noexcept;

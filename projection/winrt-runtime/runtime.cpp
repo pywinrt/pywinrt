@@ -605,3 +605,40 @@ winrt::guid py::convert_to_guid(PyObject* obj)
         throw python_exception();
     }
 }
+
+PyObject* py::await_async(PyObject* obj) noexcept
+{
+    auto state = py::cpp::_winrt::get_module_state();
+    if (!state)
+    {
+        return nullptr;
+    }
+
+    // lazy import to avoid circular import issues
+    if (!state->wrap_async_func)
+    {
+        pyobj_handle winrt_system{PyImport_ImportModule("winrt.system")};
+        if (!winrt_system)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle wrap_async_func{
+            PyObject_GetAttrString(winrt_system.get(), "wrap_async")};
+        if (!wrap_async_func)
+        {
+            return nullptr;
+        }
+
+        state->wrap_async_func = wrap_async_func.detach();
+    }
+
+    pyobj_handle future{PyObject_CallOneArg(state->wrap_async_func, obj)};
+    if (!future)
+    {
+        return nullptr;
+    }
+
+    // __await__() expects an iterable to be returned
+    return PyObject_GetIter(future.get());
+}

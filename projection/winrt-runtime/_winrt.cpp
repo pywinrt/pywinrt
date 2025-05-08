@@ -398,6 +398,7 @@ namespace py::cpp::_winrt
         .get_object_type = py::get_object_type,
         .array_new = py::cpp::_winrt::Array_New,
         .array_assign = &py::cpp::_winrt::Array_Assign,
+        .await_async = py::await_async,
     };
 
     static PyObject* init_apartment(PyObject* /*unused*/, PyObject* type_obj) noexcept
@@ -558,6 +559,7 @@ namespace py::cpp::_winrt
         Py_VISIT(state->array_type);
         Py_VISIT(state->mapping_iter_type);
         Py_VISIT(state->to_uuid_func);
+        Py_VISIT(state->wrap_async_func);
 
         for (const auto& [key, value] : state->type_cache)
         {
@@ -576,6 +578,7 @@ namespace py::cpp::_winrt
         Py_CLEAR(state->array_type);
         Py_CLEAR(state->mapping_iter_type);
         Py_CLEAR(state->to_uuid_func);
+        Py_CLEAR(state->wrap_async_func);
 
         auto type_cache = std::move(state->type_cache);
 
@@ -596,6 +599,7 @@ namespace py::cpp::_winrt
         Py_XDECREF(state->array_type);
         Py_XDECREF(state->mapping_iter_type);
         Py_XDECREF(state->to_uuid_func);
+        Py_XDECREF(state->wrap_async_func);
 
         for (auto& [key, value] : state->type_cache)
         {
@@ -803,6 +807,7 @@ namespace py::cpp::_winrt
         state->array_type = array_type.detach();
         state->mapping_iter_type = mapping_iter_type.detach();
         state->to_uuid_func = to_uuid_func.detach();
+        state->wrap_async_func = nullptr; // lazy-initialized
 
         return module.detach();
     }

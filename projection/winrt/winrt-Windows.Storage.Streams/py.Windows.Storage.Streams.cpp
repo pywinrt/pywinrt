@@ -1883,11 +1883,6 @@ namespace py::cpp::Windows::Storage::Streams
         }
     }
 
-    static PyObject* _await_DataReaderLoadOperation(py::wrapper::Windows::Storage::Streams::DataReaderLoadOperation* self) noexcept
-    {
-        return py::dunder_await(self->obj);
-    }
-
     static PyObject* get_DataReaderLoadOperation(py::wrapper::Windows::Storage::Streams::DataReaderLoadOperation* self, PyObject* /*unused*/) noexcept
     {
         if (winrt::impl::is_sta_thread())
@@ -1963,7 +1958,7 @@ namespace py::cpp::Windows::Storage::Streams
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DataReaderLoadOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DataReaderLoadOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DataReaderLoadOperation) },
-        { Py_am_await, reinterpret_cast<void*>(_await_DataReaderLoadOperation) },
+        { Py_am_await, reinterpret_cast<void*>(py::await_async) },
         { }};
 
     static PyType_Spec type_spec_DataReaderLoadOperation = {
@@ -3589,11 +3584,6 @@ namespace py::cpp::Windows::Storage::Streams
         }
     }
 
-    static PyObject* _await_DataWriterStoreOperation(py::wrapper::Windows::Storage::Streams::DataWriterStoreOperation* self) noexcept
-    {
-        return py::dunder_await(self->obj);
-    }
-
     static PyObject* get_DataWriterStoreOperation(py::wrapper::Windows::Storage::Streams::DataWriterStoreOperation* self, PyObject* /*unused*/) noexcept
     {
         if (winrt::impl::is_sta_thread())
@@ -3669,7 +3659,7 @@ namespace py::cpp::Windows::Storage::Streams
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DataWriterStoreOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_DataWriterStoreOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DataWriterStoreOperation) },
-        { Py_am_await, reinterpret_cast<void*>(_await_DataWriterStoreOperation) },
+        { Py_am_await, reinterpret_cast<void*>(py::await_async) },
         { }};
 
     static PyType_Spec type_spec_DataWriterStoreOperation = {
