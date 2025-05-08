@@ -4,7 +4,7 @@ import os
 import sys
 from collections.abc import Mapping, MutableMapping, MutableSequence, Sequence
 from pathlib import Path
-from typing import TYPE_CHECKING, Annotated, Callable, Protocol, TypeVar
+from typing import TYPE_CHECKING, Annotated, Any, Callable, Protocol, TypeVar
 
 from typing_extensions import Buffer, Self, TypeAlias
 
@@ -65,7 +65,7 @@ class _DllCookie:
         self.close()
 
 
-def _register_dll_search_path(module_path) -> _DllCookie:
+def _register_dll_search_path(module_path: str) -> _DllCookie:
     """
     Register a module's directory as a DLL search path.
 
@@ -83,31 +83,31 @@ def _register_dll_search_path(module_path) -> _DllCookie:
 # https://github.com/python/cpython/issues/103968#issuecomment-1589928055
 
 
-def _mixin_sequence(typ) -> None:
+def _mixin_sequence(typ: type) -> None:
     """
     Adds missing Python mapping methods to types that implement IVectorView and
     registers the type as a Sequence.
     """
     # mixin methods
     if not hasattr(typ, "index"):
-        typ.index = Sequence.index
+        typ.index = Sequence.index  # type: ignore
 
     if not hasattr(typ, "count"):
-        typ.count = Sequence.count
+        typ.count = Sequence.count  # type: ignore
 
     if not hasattr(typ, "__contains__"):
-        typ.__contains__ = Sequence.__contains__
+        typ.__contains__ = Sequence.__contains__  # type: ignore
 
     if not hasattr(typ, "__iter__"):
-        typ.__iter__ = Sequence.__iter__
+        typ.__iter__ = Sequence.__iter__  # type: ignore
 
     if not hasattr(typ, "__reversed__"):
-        typ.__reversed__ = Sequence.__reversed__
+        typ.__reversed__ = Sequence.__reversed__  # type: ignore
 
     Sequence.register(typ)
 
 
-def _mixin_mutable_sequence(typ) -> None:
+def _mixin_mutable_sequence(typ: type) -> None:
     """
     Adds missing Python mapping methods to types that implement IVector and
     registers the type as a MutableSequence.
@@ -116,59 +116,59 @@ def _mixin_mutable_sequence(typ) -> None:
 
     if not hasattr(typ, "insert") and hasattr(typ, "insert_at"):
 
-        def insert(self, index: int, value: object) -> None:
+        def insert(self: Any, index: int, value: object) -> None:
             """
             Alias for ``insert_at`` for compatibility with Python Sequence protocol.
             """
             self.insert_at(index, value)
 
-        typ.insert = insert
+        typ.insert = insert  # type: ignore
 
     # mixin methods
     if not hasattr(typ, "append"):
-        typ.append = MutableSequence.append
+        typ.append = MutableSequence.append  # type: ignore
 
     if not hasattr(typ, "clear"):
-        typ.clear = MutableSequence.clear
+        typ.clear = MutableSequence.clear  # type: ignore
 
     if not hasattr(typ, "extend"):
-        typ.extend = MutableSequence.extend
+        typ.extend = MutableSequence.extend  # type: ignore
 
     if not hasattr(typ, "reverse"):
-        typ.reverse = MutableSequence.reverse
+        typ.reverse = MutableSequence.reverse  # type: ignore
 
     if not hasattr(typ, "pop"):
-        typ.pop = MutableSequence.pop
+        typ.pop = MutableSequence.pop  # type: ignore
 
     if not hasattr(typ, "remove"):
-        typ.remove = MutableSequence.remove
+        typ.remove = MutableSequence.remove  # type: ignore
 
     if not hasattr(typ, "__iadd__"):
-        typ.__iadd__ = MutableSequence.__iadd__
+        typ.__iadd__ = MutableSequence.__iadd__  # type: ignore
 
     MutableSequence.register(typ)
 
 
-def _mixin_mapping(typ) -> None:
+def _mixin_mapping(typ: type) -> None:
     """
     Adds missing Python mapping methods to types that implement IMapView and
     registers the type as a Mapping.
     """
     # mixin methods
     if not hasattr(typ, "keys"):
-        typ.keys = Mapping.keys
+        typ.keys = Mapping.keys  # type: ignore
 
     if not hasattr(typ, "items"):
-        typ.items = Mapping.items
+        typ.items = Mapping.items  # type: ignore
 
     if not hasattr(typ, "values"):
-        typ.values = Mapping.values
+        typ.values = Mapping.values  # type: ignore
 
     if not hasattr(typ, "get"):
-        typ.get = Mapping.get
+        typ.get = Mapping.get  # type: ignore
 
     if not hasattr(typ, "__contains__"):
-        typ.__contains__ = Mapping.__contains__
+        typ.__contains__ = Mapping.__contains__  # type: ignore
 
     # HACK: Version check works around inheritance anomaly caused by hacky
     # metaclass inheritance implementation in runtime.cpp. This works as long
@@ -180,19 +180,19 @@ def _mixin_mapping(typ) -> None:
         or typ.__eq__ == Object.__eq__
         or sys.version_info < (3, 12)
     ):
-        typ.__eq__ = Mapping.__eq__
+        typ.__eq__ = Mapping.__eq__  # type: ignore
 
     if (
         typ.__ne__ == object.__ne__
         or typ.__ne__ == Object.__ne__
         or sys.version_info < (3, 12)
     ):
-        typ.__ne__ = Mapping.__ne__
+        typ.__ne__ = Mapping.__ne__  # type: ignore
 
     Mapping.register(typ)
 
 
-def _mixin_mutable_mapping(typ) -> None:
+def _mixin_mutable_mapping(typ: type) -> None:
     """
     Adds missing Python mapping methods to types that implement IMap and
     registers the type as a MutableMapping.
@@ -201,21 +201,21 @@ def _mixin_mutable_mapping(typ) -> None:
 
     # mixin methods
     if not hasattr(typ, "clear"):
-        typ.clear = MutableMapping.clear
+        typ.clear = MutableMapping.clear  # type: ignore
 
     if not hasattr(typ, "pop"):
-        typ.pop = MutableMapping.pop
+        typ.pop = MutableMapping.pop  # type: ignore
         # private-name-mangled attribute :-(
         typ._MutableMapping__marker = MutableMapping._MutableMapping__marker  # type: ignore
 
     if not hasattr(typ, "popitem"):
-        typ.popitem = MutableMapping.popitem
+        typ.popitem = MutableMapping.popitem  # type: ignore
 
     if not hasattr(typ, "setdefault"):
-        typ.setdefault = MutableMapping.setdefault
+        typ.setdefault = MutableMapping.setdefault  # type: ignore
 
     if not hasattr(typ, "update"):
-        typ.update = MutableMapping.update
+        typ.update = MutableMapping.update  # type: ignore
 
     MutableMapping.register(typ)
 
