@@ -39,7 +39,7 @@ import winui3.microsoft.ui.xaml.media as microsoft_ui_xaml_media
 import winui3.microsoft.ui.xaml.media.animation as microsoft_ui_xaml_media_animation
 import winui3.microsoft.ui.xaml.navigation as microsoft_ui_xaml_navigation
 
-from ._winui3_microsoft_ui_xaml_controls import (
+from winui3._winui3_microsoft_ui_xaml_controls import (
     AnchorRequestedEventArgs,
     AnimatedIcon,
     AnimatedIconSource,
