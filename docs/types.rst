@@ -27,6 +27,21 @@ In the Python projection, names are adapted to fit `PEP8 naming conventions`_.
 .. _PEP8 naming conventions: https://peps.python.org/pep-0008/#naming-conventions
 
 
+---------------------
+Distribution packages
+---------------------
+
+Each WinRT namespace is projected as a separate Python package. The packages are
+named like `winrt-Windows.Foundation <https://pypi.org/project/winrt-Windows.Foundation/>`_
+where ``winrt`` is the root namespace for a specific SDK or DLL and
+``Windows.Foundation`` is a WinRT namespace within that SDK or DLL.
+
+There are also some PyWinRT-specific sub-packages distributed in the
+`winrt-runtime <https://pypi.org/project/winrt-runtime/>`_ package. As well as
+some extra interop packages that bridge between WinRT and Win32 types.
+
+.. seealso:: :doc:`api/index`
+
 ----------
 Namespaces
 ----------
@@ -39,6 +54,12 @@ Python import conventions::
     # or import the namespace module itself
     import winrt.windows.foundation as wf
 
+
+As with the distribution package names, the WinRT namespace names have a root
+namespace that matches the part of the package name before the ``-`` followed
+by the namespace. The modules names are ``lowercasewithoutunderscores``, so
+namespaces with multiple words in one segment, like ``Windows.AI.MachineLearning``
+are projected as ``winrt.windows.ai.machinelearning``.
 
 -----------------
 Fundamental types
@@ -140,10 +161,10 @@ Example::
 
 .. versionchanged:: 3.0
 
-    Structs are now immutable. In previous versions, attributes could be set.
-    Added ``__replace__`` method to allow for use with :func:`copy.replace`.
-    Added ``unpack()`` method to convert to a tuple. Added support for using
-    plain tuples in place of projected structs.
+    * Structs are now immutable. In previous versions, attributes could be set.
+    * Added ``__replace__`` method to allow for use with :func:`copy.replace`.
+    * Added ``unpack()`` method to convert to a tuple. Added support for using
+      plain tuples in place of projected structs as method arguments.
 
 -------
 Objects
@@ -422,10 +443,10 @@ Iterators
 `IIterable<T>`_ becomes `Iterable[T]`_. Any iterable Python type can be used
 as an argument and return values can be used as any other iterable in Python.
 Don't use the WinRT ``first()`` method to get an iterator, instead use the
-built-in ``iter()`` function or other Python features like ``for`` loops.
+builtin :func:`iter()` function or other Python features like ``for`` loops.
 
 `IIterator<T>`_ is projected as `Iterator[T]`_ however these objects are rarely
-used directly in Python. Intead, use ``for`` loops or generator expressions to
+used directly in Python. Instead, use ``for`` loops or generator expressions to
 do the iterating for you. In rare cases, iterators might be used with ``next()``.
 The WinRT methods on this object should be avoided.
 
