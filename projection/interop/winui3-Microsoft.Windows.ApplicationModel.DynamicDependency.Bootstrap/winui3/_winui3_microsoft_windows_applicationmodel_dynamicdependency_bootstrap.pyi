@@ -1,6 +1,6 @@
 from typing import Optional, TypeVar
 
-from .microsoft.windows.applicationmodel.dynamicdependency.bootstrap import (
+from winui3.microsoft.windows.applicationmodel.dynamicdependency.bootstrap import (
     InitializeOptions,
 )
 
