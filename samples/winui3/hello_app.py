@@ -1,7 +1,23 @@
+# /// script
+# dependencies = [
+#   "typing-extensions>=4.5",
+#   "winrt-runtime>=3.1",
+#   "winrt-Windows.Foundation>=3.1",
+#   "winrt-Windows.Foundation.Collections>=3.1",
+#   "winrt-Windows.UI.Xaml.Interop>=3.1",
+#   "winui3-Microsoft.UI.Xaml>=3.1",
+#   "winui3-Microsoft.UI.Xaml.Controls>=3.1",
+#   "winui3-Microsoft.UI.Xaml.Markup>=3.1",
+#   "winui3-Microsoft.UI.Xaml.XamlTypeInfo>=3.1",
+#   "winui3-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap>=3.1",
+# ]
+# ///
+
 from typing import Tuple, Union
 
 from typing_extensions import override
-
+from winrt.system import Array
+from winrt.windows.ui.xaml.interop import TypeKind, TypeName
 from winui3.microsoft.ui.xaml import (
     Application,
     ApplicationInitializationCallbackParams,
@@ -21,8 +37,6 @@ from winui3.microsoft.windows.applicationmodel.dynamicdependency.bootstrap impor
     InitializeOptions,
     initialize,
 )
-from winrt.system import Array
-from winrt.windows.ui.xaml.interop import TypeKind, TypeName
 
 # XAML can be inline like this or saved in a separate file. Or you can do
 # everything programmatically if you rather.
