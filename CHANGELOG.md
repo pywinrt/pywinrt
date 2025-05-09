@@ -14,6 +14,7 @@
 ### Fixed
 - Fixed building with GCC 15 ([#116]).
 - Fixed some exceptions being silently ignored in async methods ([#112]).
+- Fixed possible `AttributeError: module 'winrt' has no attribute '_winrt'` on import.
 
 [#112]: https://github.com/pywinrt/pywinrt/issues/112
 [#116]: https://github.com/pywinrt/pywinrt/issues/116
