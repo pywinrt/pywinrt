@@ -1,6 +1,18 @@
+# /// script
+# dependencies = [
+#   "winrt-Windows.Foundation.Numerics>=3.1",
+#   "winrt-Windows.System>=3.1",
+#   "winrt-Windows.System.Interop>=3.1",
+#   "winrt-Windows.UI>=3.1",
+#   "winrt-Windows.UI.Composition>=3.1",
+#   "winrt-Windows.UI.Composition.Desktop>=3.1",
+#   "winrt-Windows.UI.Composition.Interop>=3.1",
+# ]
+# ///
+
 from datetime import timedelta
 from random import randint
-from tkinter import Canvas, Tk, Button
+from tkinter import Button, Canvas, Tk
 
 from winrt.windows.system.interop import create_dispatcher_queue_controller
 from winrt.windows.ui.composition import Compositor, ContainerVisual
