@@ -1,3 +1,9 @@
+"""
+A port of the WinML C++/WinRT tutorial to Python
+
+https://docs.microsoft.com/en-us/windows/ai/get-started-desktop
+"""
+
 import asyncio
 import csv
 import functools
