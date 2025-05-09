@@ -1,10 +1,30 @@
+# /// script
+# dependencies = [
+#   "typing-extensions>=4.5",
+#   "webview2-Microsoft.Web.Webview2.Core>=3.1",
+#   "winrt-runtime>=3.1",
+#   "winrt-Windows.Foundation>=3.1",
+#   "winrt-Windows.Foundation.Collections>=3.1",
+#   "winrt-Windows.UI.Xaml.Interop>=3.1",
+#   "winui3-Microsoft.UI.Xaml>=3.1",
+#   "winui3-Microsoft.UI.Xaml.Controls>=3.1",
+#   "winui3-Microsoft.UI.Xaml.Markup>=3.1",
+#   "winui3-Microsoft.UI.Xaml.XamlTypeInfo>=3.1",
+#   "winui3-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap>=3.1",
+# ]
+# ///
+
 import atexit
 import tempfile
 from ctypes import WinError
 from typing import Tuple, Union
 
 from typing_extensions import override
-
+from webview2.microsoft.web.webview2.core import CoreWebView2Environment
+from winrt.runtime import ApartmentType, init_apartment
+from winrt.system import Array
+from winrt.windows.foundation import AsyncStatus, IAsyncAction, IAsyncOperation
+from winrt.windows.ui.xaml.interop import TypeKind, TypeName
 from winui3.microsoft.ui.xaml import (
     Application,
     ApplicationInitializationCallbackParams,
@@ -24,15 +44,10 @@ from winui3.microsoft.ui.xaml.markup import (
     XmlnsDefinition,
 )
 from winui3.microsoft.ui.xaml.xamltypeinfo import XamlControlsXamlMetaDataProvider
-from webview2.microsoft.web.webview2.core import CoreWebView2Environment
 from winui3.microsoft.windows.applicationmodel.dynamicdependency.bootstrap import (
     InitializeOptions,
     initialize,
 )
-from winrt.runtime import ApartmentType, init_apartment
-from winrt.system import Array
-from winrt.windows.foundation import AsyncStatus, IAsyncAction, IAsyncOperation
-from winrt.windows.ui.xaml.interop import TypeKind, TypeName
 
 
 def check_initialized(sender: WebView2, args: CoreWebView2InitializedEventArgs):
