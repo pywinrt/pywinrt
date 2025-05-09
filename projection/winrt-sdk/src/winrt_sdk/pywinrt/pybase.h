@@ -651,6 +651,14 @@ namespace py
      */
     [[maybe_unused]] static int import_winrt_runtime()
     {
+        // Have to make sure winrt._winrt is imported, otherwise the capsule
+        // lookup could fail if winrt was imported but winrt._winrt wasn't.
+        pyobj_handle module{PyImport_ImportModule("winrt._winrt")};
+        if (!module)
+        {
+            return -1;
+        }
+
         PyWinRT_API = reinterpret_cast<runtime_api*>(
             PyCapsule_Import("winrt._winrt._C_API", 0));
 
