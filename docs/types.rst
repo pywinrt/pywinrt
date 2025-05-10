@@ -265,10 +265,10 @@ Synchronous usage
 PyWinRT exposes the CppWinRT extension methods for calling these methods
 synchronously (i.e. when not using ``asyncio``).
 
-.. method:: IAsyncAction.get() -> None
-    IAsyncOperation.get() -> TResult
-    IAsyncActionWithProgress.get() -> None
-    IAsyncOperationWithProgress.get() -> TResult
+.. method:: IAsyncAction.get(self) -> None
+    IAsyncOperation.get(self) -> TResult
+    IAsyncActionWithProgress.get(self) -> None
+    IAsyncOperationWithProgress.get(self) -> TResult
 
     These methods block until the operation is complete.
 
@@ -280,12 +280,16 @@ synchronously (i.e. when not using ``asyncio``).
         :class:`RuntimeError` if called from a single-threaded apartment (i.e.
         a GUI thread).
 
+    .. warning:: This method can't be interrupted by :kbd:`CTRL+C` which means
+        that a :class:`KeyboardInterrupt` will not be raised until the operation
+        is complete.
+
     .. versionadded:: unreleased
 
-.. method:: IAsyncAction.wait(timeout: float) -> AsyncStatus
-    IAsyncOperation.wait(timeout: float) -> AsyncStatus
-    IAsyncActionWithProgress.wait(timeout: float) -> AsyncStatus
-    IAsyncOperationWithProgress.wait(timeout: float) -> AsyncStatus
+.. method:: IAsyncAction.wait(self, timeout: float) -> AsyncStatus
+    IAsyncOperation.wait(self, timeout: float) -> AsyncStatus
+    IAsyncActionWithProgress.wait(self, timeout: float) -> AsyncStatus
+    IAsyncOperationWithProgress.wait(self, timeout: float) -> AsyncStatus
 
     These methods block until the operation is complete or the timeout is reached,
     whichever comes first.
@@ -300,6 +304,10 @@ synchronously (i.e. when not using ``asyncio``).
     Raises:
         :class:`RuntimeError` if called from a single-threaded apartment (i.e.
         a GUI thread).
+
+    .. warning:: This method can't be interrupted by :kbd:`CTRL+C`, which means
+        a :class:`KeyboardInterrupt` will not be raised until the operation is
+        complete or the timeout is reached.
 
     .. versionadded:: unreleased
 
