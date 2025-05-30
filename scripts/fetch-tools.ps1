@@ -2,7 +2,7 @@
 
 param(
     [Parameter(Mandatory=$false)]
-    [string]$CppWinRTVersion = "2.0.240111.5",
+    [string]$CppWinRTVersion = "2.0.250303.1",
     [switch]$noCppWinRT,
 
     # WinUI 2

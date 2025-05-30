@@ -10,6 +10,7 @@
 
 ### Changed
 - `asyncio` cancellation is now propagated to WinRT async actions/operations that are being awaited.
+- Updated to CppWinRT 2.0.250303.1.
 
 ### Fixed
 - Fixed building with GCC 15 ([#116]).
