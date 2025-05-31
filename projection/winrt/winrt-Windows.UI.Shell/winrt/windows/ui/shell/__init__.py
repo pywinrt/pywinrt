@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_ui_shell import (
     AdaptiveCardBuilder,
@@ -69,4 +70,4 @@ class ShareWindowCommand(enum.IntEnum):
     START_SHARING = 1
     STOP_SHARING = 2
 
-winrt.system._mixin_mutable_sequence(WindowTabCollection)
+winrt.runtime._internals.mixin_mutable_sequence(WindowTabCollection)

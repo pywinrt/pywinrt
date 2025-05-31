@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_graphics_imaging import (
     BitmapBounds,
@@ -132,4 +133,4 @@ class TiffCompressionMode(enum.IntEnum):
     ZIP = 6
     LZWH_DIFFERENCING = 7
 
-winrt.system._mixin_mutable_mapping(BitmapPropertySet)
+winrt.runtime._internals.mixin_mutable_mapping(BitmapPropertySet)

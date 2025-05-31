@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_data_json import (
     JsonArray,
@@ -37,5 +38,5 @@ class JsonValueType(enum.IntEnum):
     ARRAY = 4
     OBJECT = 5
 
-winrt.system._mixin_mutable_sequence(JsonArray)
-winrt.system._mixin_mutable_mapping(JsonObject)
+winrt.runtime._internals.mixin_mutable_sequence(JsonArray)
+winrt.runtime._internals.mixin_mutable_mapping(JsonObject)

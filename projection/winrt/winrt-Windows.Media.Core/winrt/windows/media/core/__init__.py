@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_media_core import (
     MseTimeRange,
@@ -399,4 +400,4 @@ class VideoStabilizationEffectEnabledChangedReason(enum.IntEnum):
     PIXEL_RATE_TOO_HIGH = 1
     RUNNING_SLOWLY = 2
 
-winrt.system._mixin_mutable_mapping(MediaStreamSamplePropertySet)
+winrt.runtime._internals.mixin_mutable_mapping(MediaStreamSamplePropertySet)

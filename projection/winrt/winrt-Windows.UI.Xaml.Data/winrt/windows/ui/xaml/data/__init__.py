@@ -4,6 +4,7 @@ import enum
 import typing
 import uuid as _uuid
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_ui_xaml_data import (
     LoadMoreItemsResult,
@@ -96,6 +97,6 @@ class UpdateSourceTrigger(enum.IntEnum):
     EXPLICIT = 2
     LOST_FOCUS = 3
 
-winrt.system._mixin_mutable_sequence(_ICollectionView)
+winrt.runtime._internals.mixin_mutable_sequence(_ICollectionView)
 CurrentChangingEventHandler = typing.Callable[[winrt.system.Object, CurrentChangingEventArgs], None]
 PropertyChangedEventHandler = typing.Callable[[winrt.system.Object, PropertyChangedEventArgs], None]

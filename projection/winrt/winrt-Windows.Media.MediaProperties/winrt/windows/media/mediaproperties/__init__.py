@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_media_mediaproperties import (
     AudioEncodingProperties,
@@ -96,4 +97,4 @@ class VideoEncodingQuality(enum.IntEnum):
     UHD2160P = 8
     UHD4320P = 9
 
-winrt.system._mixin_mutable_mapping(MediaPropertySet)
+winrt.runtime._internals.mixin_mutable_mapping(MediaPropertySet)

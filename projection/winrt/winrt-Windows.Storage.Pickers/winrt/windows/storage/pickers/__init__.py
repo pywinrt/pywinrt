@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_storage_pickers import (
     FileExtensionVector,
@@ -39,6 +40,6 @@ class PickerViewMode(enum.IntEnum):
     LIST = 0
     THUMBNAIL = 1
 
-winrt.system._mixin_mutable_sequence(FileExtensionVector)
-winrt.system._mixin_mutable_mapping(FilePickerFileTypesOrderedMap)
-winrt.system._mixin_sequence(FilePickerSelectedFilesArray)
+winrt.runtime._internals.mixin_mutable_sequence(FileExtensionVector)
+winrt.runtime._internals.mixin_mutable_mapping(FilePickerFileTypesOrderedMap)
+winrt.runtime._internals.mixin_sequence(FilePickerSelectedFilesArray)

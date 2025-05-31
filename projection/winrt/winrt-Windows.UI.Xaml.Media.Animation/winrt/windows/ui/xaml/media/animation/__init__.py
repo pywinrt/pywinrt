@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_ui_xaml_media_animation import (
     KeyTime,
@@ -239,9 +240,9 @@ class SlideNavigationTransitionEffect(enum.IntEnum):
     FROM_LEFT = 1
     FROM_RIGHT = 2
 
-winrt.system._mixin_mutable_sequence(ColorKeyFrameCollection)
-winrt.system._mixin_mutable_sequence(DoubleKeyFrameCollection)
-winrt.system._mixin_mutable_sequence(ObjectKeyFrameCollection)
-winrt.system._mixin_mutable_sequence(PointKeyFrameCollection)
-winrt.system._mixin_mutable_sequence(TimelineCollection)
-winrt.system._mixin_mutable_sequence(TransitionCollection)
+winrt.runtime._internals.mixin_mutable_sequence(ColorKeyFrameCollection)
+winrt.runtime._internals.mixin_mutable_sequence(DoubleKeyFrameCollection)
+winrt.runtime._internals.mixin_mutable_sequence(ObjectKeyFrameCollection)
+winrt.runtime._internals.mixin_mutable_sequence(PointKeyFrameCollection)
+winrt.runtime._internals.mixin_mutable_sequence(TimelineCollection)
+winrt.runtime._internals.mixin_mutable_sequence(TransitionCollection)

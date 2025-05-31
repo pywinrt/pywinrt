@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_ai_machinelearning_preview import (
     ImageVariableDescriptorPreview,
@@ -68,4 +69,4 @@ class LearningModelFeatureKindPreview(enum.IntEnum):
     MAP = 3
     IMAGE = 4
 
-winrt.system._mixin_mapping(LearningModelBindingPreview)
+winrt.runtime._internals.mixin_mapping(LearningModelBindingPreview)

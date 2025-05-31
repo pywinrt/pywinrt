@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winui3._winui3_microsoft_ui_composition_scenes import (
     SceneBoundingBox,
@@ -79,6 +80,6 @@ class SceneWrappingMode(enum.IntEnum):
     MIRRORED_REPEAT = 1
     REPEAT = 2
 
-winrt.system._mixin_mutable_sequence(SceneComponentCollection)
-winrt.system._mixin_mutable_mapping(SceneMeshMaterialAttributeMap)
-winrt.system._mixin_mutable_sequence(SceneNodeCollection)
+winrt.runtime._internals.mixin_mutable_sequence(SceneComponentCollection)
+winrt.runtime._internals.mixin_mutable_mapping(SceneMeshMaterialAttributeMap)
+winrt.runtime._internals.mixin_mutable_sequence(SceneNodeCollection)

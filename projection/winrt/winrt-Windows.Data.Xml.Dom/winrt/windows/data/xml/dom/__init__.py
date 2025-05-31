@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_data_xml_dom import (
     DtdEntity,
@@ -72,5 +73,5 @@ class NodeType(enum.IntEnum):
     DOCUMENT_FRAGMENT_NODE = 11
     NOTATION_NODE = 12
 
-winrt.system._mixin_sequence(XmlNamedNodeMap)
-winrt.system._mixin_sequence(XmlNodeList)
+winrt.runtime._internals.mixin_sequence(XmlNamedNodeMap)
+winrt.runtime._internals.mixin_sequence(XmlNodeList)

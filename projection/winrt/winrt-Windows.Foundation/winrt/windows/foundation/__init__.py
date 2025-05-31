@@ -4,6 +4,7 @@ import enum
 import typing
 import uuid as _uuid
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_foundation import (
     EventRegistrationToken,
@@ -141,7 +142,7 @@ class PropertyType(enum.IntEnum):
     RECT_ARRAY = 1043
     OTHER_TYPE_ARRAY = 1044
 
-winrt.system._mixin_sequence(WwwFormUrlDecoder)
+winrt.runtime._internals.mixin_sequence(WwwFormUrlDecoder)
 AsyncActionCompletedHandler = typing.Callable[[IAsyncAction, AsyncStatus], None]
 AsyncActionProgressHandler = typing.Callable[[IAsyncActionWithProgress[TProgress], TProgress], None]
 AsyncActionWithProgressCompletedHandler = typing.Callable[[IAsyncActionWithProgress[TProgress], AsyncStatus], None]

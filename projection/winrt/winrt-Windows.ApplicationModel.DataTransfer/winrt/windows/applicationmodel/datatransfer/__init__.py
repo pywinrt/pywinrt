@@ -4,6 +4,7 @@ import enum
 import typing
 import uuid as _uuid
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_applicationmodel_datatransfer import (
     Clipboard,
@@ -90,7 +91,7 @@ class ShareUITheme(enum.IntEnum):
     LIGHT = 1
     DARK = 2
 
-winrt.system._mixin_mutable_mapping(DataPackagePropertySet)
-winrt.system._mixin_mapping(DataPackagePropertySetView)
+winrt.runtime._internals.mixin_mutable_mapping(DataPackagePropertySet)
+winrt.runtime._internals.mixin_mapping(DataPackagePropertySetView)
 DataProviderHandler = typing.Callable[[DataProviderRequest], None]
 ShareProviderHandler = typing.Callable[[ShareProviderOperation], None]

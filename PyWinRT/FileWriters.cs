@@ -315,17 +315,17 @@ static class FileWriters
             w.WriteBlankLine();
         }
 
-        if (componentDlls)
+        var allExtensionTypes = members
+            .Structs.Where(s => !s.Type.IsCustomizedStruct())
+            .Concat(members.Classes)
+            .Concat(members.Interfaces);
+
+        if (componentDlls || allExtensionTypes.Any(t => t.IsPySequence || t.IsPyMapping))
         {
             w.WriteLine("import winrt.runtime._internals");
         }
 
         w.WriteLine("import winrt.system");
-
-        var allExtensionTypes = members
-            .Structs.Where(s => !s.Type.IsCustomizedStruct())
-            .Concat(members.Classes)
-            .Concat(members.Interfaces);
 
         for (int depth = 0; depth < 2; depth++)
         {
@@ -476,19 +476,23 @@ static class FileWriters
         {
             if (type.IsPyMutableMapping)
             {
-                w.WriteLine($"winrt.system._mixin_mutable_mapping({type.PyWrapperTypeName})");
+                w.WriteLine(
+                    $"winrt.runtime._internals.mixin_mutable_mapping({type.PyWrapperTypeName})"
+                );
             }
             else if (type.IsPyMapping)
             {
-                w.WriteLine($"winrt.system._mixin_mapping({type.PyWrapperTypeName})");
+                w.WriteLine($"winrt.runtime._internals.mixin_mapping({type.PyWrapperTypeName})");
             }
             else if (type.IsPyMutableSequence)
             {
-                w.WriteLine($"winrt.system._mixin_mutable_sequence({type.PyWrapperTypeName})");
+                w.WriteLine(
+                    $"winrt.runtime._internals.mixin_mutable_sequence({type.PyWrapperTypeName})"
+                );
             }
             else if (type.IsPySequence)
             {
-                w.WriteLine($"winrt.system._mixin_sequence({type.PyWrapperTypeName})");
+                w.WriteLine($"winrt.runtime._internals.mixin_sequence({type.PyWrapperTypeName})");
             }
         }
 

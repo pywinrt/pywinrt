@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_ui_composition import (
     InkTrailPoint,
@@ -407,8 +408,8 @@ class CompositionStrokeLineJoin(enum.IntEnum):
     ROUND = 2
     MITER_OR_BEVEL = 3
 
-winrt.system._mixin_mutable_sequence(CompositionColorGradientStopCollection)
-winrt.system._mixin_mutable_sequence(CompositionShapeCollection)
-winrt.system._mixin_mutable_sequence(CompositionStrokeDashArray)
-winrt.system._mixin_mutable_mapping(ImplicitAnimationCollection)
-winrt.system._mixin_mutable_mapping(InitialValueExpressionCollection)
+winrt.runtime._internals.mixin_mutable_sequence(CompositionColorGradientStopCollection)
+winrt.runtime._internals.mixin_mutable_sequence(CompositionShapeCollection)
+winrt.runtime._internals.mixin_mutable_sequence(CompositionStrokeDashArray)
+winrt.runtime._internals.mixin_mutable_mapping(ImplicitAnimationCollection)
+winrt.runtime._internals.mixin_mutable_mapping(InitialValueExpressionCollection)

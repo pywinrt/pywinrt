@@ -4,6 +4,7 @@ import enum
 import typing
 import uuid as _uuid
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_ui_xaml_controls import (
     AnchorRequestedEventArgs,
@@ -1417,12 +1418,12 @@ class ZoomMode(enum.IntEnum):
     DISABLED = 0
     ENABLED = 1
 
-winrt.system._mixin_mutable_sequence(ColumnDefinitionCollection)
-winrt.system._mixin_mutable_sequence(HubSectionCollection)
-winrt.system._mixin_mutable_sequence(ItemCollection)
-winrt.system._mixin_mutable_sequence(RowDefinitionCollection)
-winrt.system._mixin_mutable_sequence(SwipeItems)
-winrt.system._mixin_mutable_sequence(UIElementCollection)
+winrt.runtime._internals.mixin_mutable_sequence(ColumnDefinitionCollection)
+winrt.runtime._internals.mixin_mutable_sequence(HubSectionCollection)
+winrt.runtime._internals.mixin_mutable_sequence(ItemCollection)
+winrt.runtime._internals.mixin_mutable_sequence(RowDefinitionCollection)
+winrt.runtime._internals.mixin_mutable_sequence(SwipeItems)
+winrt.runtime._internals.mixin_mutable_sequence(UIElementCollection)
 BackClickEventHandler = typing.Callable[[winrt.system.Object, BackClickEventArgs], None]
 CalendarViewDayItemChangingEventHandler = typing.Callable[[CalendarView, CalendarViewDayItemChangingEventArgs], None]
 CleanUpVirtualizedItemEventHandler = typing.Callable[[winrt.system.Object, CleanUpVirtualizedItemEventArgs], None]

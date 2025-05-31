@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winui3._winui3_microsoft_ui_xaml_media import (
     Matrix,
@@ -245,11 +246,11 @@ class SweepDirection(enum.IntEnum):
     COUNTERCLOCKWISE = 0
     CLOCKWISE = 1
 
-winrt.system._mixin_mutable_sequence(BrushCollection)
-winrt.system._mixin_mutable_sequence(DoubleCollection)
-winrt.system._mixin_mutable_sequence(GeometryCollection)
-winrt.system._mixin_mutable_sequence(GradientStopCollection)
-winrt.system._mixin_mutable_sequence(PathFigureCollection)
-winrt.system._mixin_mutable_sequence(PathSegmentCollection)
-winrt.system._mixin_mutable_sequence(PointCollection)
-winrt.system._mixin_mutable_sequence(TransformCollection)
+winrt.runtime._internals.mixin_mutable_sequence(BrushCollection)
+winrt.runtime._internals.mixin_mutable_sequence(DoubleCollection)
+winrt.runtime._internals.mixin_mutable_sequence(GeometryCollection)
+winrt.runtime._internals.mixin_mutable_sequence(GradientStopCollection)
+winrt.runtime._internals.mixin_mutable_sequence(PathFigureCollection)
+winrt.runtime._internals.mixin_mutable_sequence(PathSegmentCollection)
+winrt.runtime._internals.mixin_mutable_sequence(PointCollection)
+winrt.runtime._internals.mixin_mutable_sequence(TransformCollection)

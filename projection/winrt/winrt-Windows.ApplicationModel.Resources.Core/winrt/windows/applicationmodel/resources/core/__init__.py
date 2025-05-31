@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_applicationmodel_resources_core import (
     ResourceLayoutInfo,
@@ -50,10 +51,10 @@ class ResourceQualifierPersistence(enum.IntEnum):
     NONE = 0
     LOCAL_MACHINE = 1
 
-winrt.system._mixin_sequence(ResourceCandidateVectorView)
-winrt.system._mixin_sequence(ResourceContextLanguagesVectorView)
-winrt.system._mixin_mapping(ResourceMap)
-winrt.system._mixin_mapping(ResourceMapMapView)
-winrt.system._mixin_mapping(ResourceQualifierMapView)
-winrt.system._mixin_mutable_mapping(ResourceQualifierObservableMap)
-winrt.system._mixin_sequence(ResourceQualifierVectorView)
+winrt.runtime._internals.mixin_sequence(ResourceCandidateVectorView)
+winrt.runtime._internals.mixin_sequence(ResourceContextLanguagesVectorView)
+winrt.runtime._internals.mixin_mapping(ResourceMap)
+winrt.runtime._internals.mixin_mapping(ResourceMapMapView)
+winrt.runtime._internals.mixin_mapping(ResourceQualifierMapView)
+winrt.runtime._internals.mixin_mutable_mapping(ResourceQualifierObservableMap)
+winrt.runtime._internals.mixin_sequence(ResourceQualifierVectorView)

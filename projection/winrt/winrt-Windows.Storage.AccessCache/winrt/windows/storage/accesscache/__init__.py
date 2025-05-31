@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_storage_accesscache import (
     AccessListEntry,
@@ -37,4 +38,4 @@ class RecentStorageItemVisibility(enum.IntEnum):
     APP_ONLY = 0
     APP_AND_SYSTEM = 1
 
-winrt.system._mixin_sequence(AccessListEntryView)
+winrt.runtime._internals.mixin_sequence(AccessListEntryView)
