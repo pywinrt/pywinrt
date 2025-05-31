@@ -657,15 +657,15 @@ namespace py::cpp::_winrt
          METH_VARARGS,
          PyDoc_STR(
              "interop function to invoke IInitializeWithWindow::Initialize on an object")},
-        {"_add_dll_directory",
+        {"add_dll_directory",
          add_dll_directory,
          METH_O,
          PyDoc_STR("Adds a directory to the DLL search path.")},
-        {"_remove_dll_directory",
+        {"remove_dll_directory",
          remove_dll_directory,
          METH_O,
          PyDoc_STR(
-             "Removes a directory that was added to the process DLL search path by using _add_dll_directory.")},
+             "Removes a directory that was added to the process DLL search path by using add_dll_directory.")},
         {"box_boolean", box_boolean, METH_O, PyDoc_STR("Box a Boolean value")},
         {"box_char16", box_char16, METH_O, PyDoc_STR("Box a Char16 value")},
         {"box_string", box_string, METH_O, PyDoc_STR("Box a string value")},
