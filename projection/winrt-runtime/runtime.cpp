@@ -617,7 +617,7 @@ PyObject* py::await_async(PyObject* obj) noexcept
     // lazy import to avoid circular import issues
     if (!state->wrap_async_func)
     {
-        pyobj_handle winrt_system{PyImport_ImportModule("winrt.system")};
+        pyobj_handle winrt_system{PyImport_ImportModule("winrt.runtime._internals")};
         if (!winrt_system)
         {
             return nullptr;
@@ -633,12 +633,18 @@ PyObject* py::await_async(PyObject* obj) noexcept
         state->wrap_async_func = wrap_async_func.detach();
     }
 
-    pyobj_handle future{PyObject_CallOneArg(state->wrap_async_func, obj)};
-    if (!future)
+    pyobj_handle awaitable{PyObject_CallOneArg(state->wrap_async_func, obj)};
+    if (!awaitable)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle await_str{PyUnicode_InternFromString("__await__")};
+    if (!await_str)
     {
         return nullptr;
     }
 
     // __await__() expects an iterable to be returned
-    return PyObject_GetIter(future.get());
+    return PyObject_CallMethodNoArgs(awaitable.get(), await_str.get());
 }

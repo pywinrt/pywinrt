@@ -1,12 +1,10 @@
-import asyncio
-from ctypes import WinError
 import os
 import sys
 from collections.abc import Mapping, MutableMapping, MutableSequence, Sequence
 from pathlib import Path
-from typing import TYPE_CHECKING, Annotated, Any, Callable, Protocol, TypeVar
+from typing import Annotated, Any
 
-from typing_extensions import Buffer, Self, TypeAlias
+from typing_extensions import Buffer, TypeAlias
 
 from winrt._winrt import (
     Array,
@@ -46,10 +44,6 @@ from winrt._winrt import (
     unbox_uint32,
     unbox_uint64,
 )
-
-# Unfortunately, we can't import at runtime because of circular imports.
-if TYPE_CHECKING:
-    from winrt.windows.foundation import HResult, AsyncStatus
 
 
 class _DllCookie:
@@ -241,81 +235,6 @@ ReadableBuffer: TypeAlias = Buffer  # WinRT PassArray
 WriteableBuffer: TypeAlias = Buffer  # WinRT FillArray
 
 
-T = TypeVar("T")
-
-
-# MyPy wants covariant T but Pylance wants invariant. Invariant seems correct.
-class AsyncOp(Protocol[T]):  # type: ignore [misc]
-    """
-    Protocol that matches both IAsyncAction and IAsyncOperation.
-    """
-
-    def cancel(self) -> None: ...
-    @property
-    def error_code(self) -> "HResult": ...
-    @property
-    def status(self) -> "AsyncStatus": ...
-    def get_results(self) -> T: ...
-    @property
-    def completed(self) -> Callable[[Self, "AsyncStatus"], None]: ...
-    @completed.setter
-    def completed(self, value: Callable[[Self, "AsyncStatus"], None]) -> None: ...
-
-
-def wrap_async(op: AsyncOp[T]) -> asyncio.Future[T]:
-    """
-    Wraps a WinRT async operation in a Python Future.
-
-    This is used by the runtime to implement ``__await__`` on async operations.
-
-    Args:
-        op: The WinRT async operation to wrap.
-
-    Returns:
-        An asyncio Future that will be completed when the WinRT operation
-        completes.
-    """
-
-    def on_done(fut: asyncio.Future[T]) -> None:
-        # propagate cancellation to the operation
-        if fut.cancelled():
-            op.cancel()
-
-    loop = asyncio.get_running_loop()
-    fut: asyncio.Future[T] = loop.create_future()
-    fut.add_done_callback(on_done)
-
-    def on_completed(op: AsyncOp[T], status: "AsyncStatus") -> None:
-        # The wrapping future could be cancelled without the operation being
-        # cancelled first. In this case, the loop may already be closed or
-        # if not, calling set_result() or set_exception() will raise an
-        # exception. This check avoids all of that.
-        if fut.cancelled():
-            return
-
-        # NB: Can't import AsyncStatus at runtime because of circular imports,
-        # therefore hard-coding the status values here.
-        if status == 1:  # AsyncStatus.COMPLETED
-            try:
-                # Converting the result to a Python type can fail.
-                result = op.get_results()
-            except Exception as ex:
-                loop.call_soon_threadsafe(fut.set_exception, ex)
-            else:
-                loop.call_soon_threadsafe(fut.set_result, result)
-        elif status == 2:  # AsyncStatus.CANCELED
-            loop.call_soon_threadsafe(fut.cancel)
-        elif status == 3:  # AsyncStatus.ERROR
-            err = WinError(op.error_code.value)
-            loop.call_soon_threadsafe(fut.set_exception, err)
-        else:
-            raise RuntimeError("unexpected status")
-
-    op.completed = on_completed
-
-    return fut
-
-
 __all__ = [
     "Int8",
     "UInt8",
@@ -364,5 +283,4 @@ __all__ = [
     "unbox_guid",
     "unbox_date_time",
     "unbox_time_span",
-    "wrap_async",
 ]

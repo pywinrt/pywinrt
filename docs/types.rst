@@ -327,21 +327,9 @@ for the result of async WinRT methods::
 
     thing = await winrt_obj.get_thing_async()
 
-This is the same as calling::
-
-    from winrt.system import wrap_async
-
-    thing = await wrap_async(winrt_obj.get_thing_async())
-
-:func:`winrt.system.wrap_async` is a helper function that wraps the WinRT async
-operation in a :class:`asyncio.Future` object. Generally, awaiting directly is
-more convenient, but if you need a future-like object instead of an awaitable,
-you can use this function to get the actual ``Future`` object. However, using
-structured async programming patterns is preferred.
-
 .. versionchanged:: unreleased
 
-    If the :class:`asyncio.Future` that wraps the operation is canceled, it will
+    If the :class:`asyncio.Awaitable` that wraps the operation is canceled, it will
     now propagate the cancellation to the WinRT async action/operation. To restore
     the previous behavior, you can wrap the operation in :func:`asyncio.shield`.
 
