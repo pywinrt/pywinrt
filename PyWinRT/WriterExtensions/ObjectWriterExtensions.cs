@@ -172,10 +172,13 @@ static class ObjectWriterExtensions
             interfaceTypes = interfaceTypes.Prepend(type.Type);
         }
 
+        // NB: although there are no collection types here, usePythonCollectionTypes
+        // is also used for IBuffer. Due to metaclass conflicts, we need to
+        // inherit from IBuffer instead of the projection type winrt.system.Buffer.
         var interfaces = string.Join(
             "",
             interfaceTypes.Select(i =>
-                $", {i.ToPyTypeName(ns, new TypeRefNullabilityInfo(i), packageMap)}"
+                $", {i.ToPyTypeName(ns, new TypeRefNullabilityInfo(i), packageMap, usePythonCollectionTypes: false)}"
             )
         );
 

@@ -21,14 +21,9 @@ class TestBuffer(unittest.TestCase):
             self.assertEqual(len(mv), 5)
 
     def test_memory_buffer(self):
-        buf = wss.Buffer(5)
-        buf.length = 5
         data = b"ABCDE"
 
-        with memoryview(buf) as mv:
-            mv[:] = data
-
-        mb = wss.Buffer.create_memory_buffer_over_ibuffer(buf)
+        mb = wss.Buffer.create_memory_buffer_over_ibuffer(data)
         with mb.create_reference() as mbr, memoryview(mbr) as mv:
             self.assertEqual(mv, data)
 

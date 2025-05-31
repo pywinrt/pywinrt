@@ -508,7 +508,13 @@ write_project_files(
     PROJECTION_PATH / "winrt-runtime",
     "winrt.system",
     "_winrt",
-    ["_winrt.cpp", "_winrt_array.cpp", "_winrt_box.cpp", "runtime.cpp"],
+    [
+        "_winrt.cpp",
+        "_winrt_array.cpp",
+        "_winrt_box.cpp",
+        "_winrt_buffer.cpp",
+        "runtime.cpp",
+    ],
 )
 
 for package_path in chain(

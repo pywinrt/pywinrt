@@ -130,12 +130,6 @@ class TestWindowsStorageStreams(unittest.TestCase):
         uint32_value = 16
         uint64_value = 17
 
-        buf = wss.Buffer(len(buffer_value))
-        buf.length = buf.capacity
-
-        with memoryview(buf) as m:
-            m[:] = buffer_value
-
         format = "?3sB3sqdI2H8Bhiqf6sqHIQ"
 
         for byte_order in wss.ByteOrder:
@@ -144,7 +138,7 @@ class TestWindowsStorageStreams(unittest.TestCase):
                 writer.byte_order = byte_order
 
                 writer.write_boolean(bool_value)
-                writer.write_buffer(buf)
+                writer.write_buffer(buffer_value)
                 writer.write_byte(byte_value)
                 writer.write_bytes(bytes_value)
                 writer.write_date_time(date_time_value)

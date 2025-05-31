@@ -399,6 +399,7 @@ namespace py::cpp::_winrt
         .array_new = py::cpp::_winrt::Array_New,
         .array_assign = &py::cpp::_winrt::Array_Assign,
         .await_async = py::await_async,
+        .convert_to_ibuffer = py::convert_to_ibuffer,
     };
 
     static PyObject* init_apartment(PyObject* /*unused*/, PyObject* type_obj) noexcept
