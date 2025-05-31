@@ -9,8 +9,8 @@ from typing_extensions import Buffer, TypeAlias
 from winrt._winrt import (
     Array,
     Object,
-    _add_dll_directory,
-    _remove_dll_directory,
+    add_dll_directory,
+    remove_dll_directory,
     box_boolean,
     box_char16,
     box_date_time,
@@ -52,7 +52,7 @@ class _DllCookie:
 
     def close(self):
         if self.cookie:
-            _remove_dll_directory(self.cookie)
+            remove_dll_directory(self.cookie)
             self.cookie = None
 
     def __del__(self):
@@ -69,7 +69,7 @@ def _register_dll_search_path(module_path: str) -> _DllCookie:
     Returns:
         An cookie object that will remove the search path when closed.
     """
-    return _DllCookie(_add_dll_directory(os.fspath(Path(module_path).parent.resolve())))
+    return _DllCookie(add_dll_directory(os.fspath(Path(module_path).parent.resolve())))
 
 
 # NB: The types implemented in C cannot inherit from abc.ABC since Python 3.12
