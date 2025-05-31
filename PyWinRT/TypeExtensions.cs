@@ -473,6 +473,8 @@ static class TypeExtensions
                 { FullName: "System.Object" } => "winrt.system.Object",
                 { FullName: "Windows.Foundation.DateTime" } => "datetime.datetime",
                 { FullName: "Windows.Foundation.TimeSpan" } => "datetime.timedelta",
+                { FullName: "Windows.Storage.Streams.IBuffer" } when usePythonCollectionTypes
+                    => "winrt.system.Buffer",
                 { IsValueType: true } when isUnpack && !type.Resolve().IsEnum
                     => type.ToPyTupleTyping(ns, packageMap, quoteImportedTypes, isUnpack: true),
                 { IsValueType: true } when useStructTupleUnion && !type.Resolve().IsEnum

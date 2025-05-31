@@ -6,11 +6,13 @@
 
 ### Added
 - Allow passing Python mapping as arguments of type `Iterable[IKeyValuePair[K, V]]`.
+- Allow passing Python buffer protocol objects as arguments of type `IBuffer`.
 - Added ``get()`` and ``wait()`` methods to async operations to call them synchronously.
 
 ### Changed
 - `asyncio` cancellation is now propagated to WinRT async actions/operations that are being awaited.
 - Updated to CppWinRT 2.0.250303.1.
+- Changed type hints from `winrt.windows.storage.streams.IBuffer` to `winrt.system.Buffer`.
 
 ### Fixed
 - Fixed building with GCC 15 ([#116]).

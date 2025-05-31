@@ -16,6 +16,7 @@
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Foundation.Metadata.h>
+#include <winrt/Windows.Storage.Streams.h>
 
 static_assert(PY_VERSION_HEX >= 0x03090000, "Python 3.9 or later is required");
 
@@ -599,7 +600,7 @@ namespace py
      * This must be changed if the runtime API changes in a way that adds new
      * APIs but otherwise doesn't break binary compatibility.
      */
-    const uint16_t runtime_abi_version_minor = 1;
+    const uint16_t runtime_abi_version_minor = 2;
 
     PyTypeObject* register_python_type(
         PyObject* module,
@@ -618,6 +619,7 @@ namespace py
     PyTypeObject* get_inspectable_meta_type() noexcept;
     PyTypeObject* get_object_type() noexcept;
     PyObject* await_async(PyObject*) noexcept;
+    winrt::Windows::Storage::Streams::IBuffer convert_to_ibuffer(PyObject* obj);
 
     struct runtime_api
     {
@@ -638,6 +640,7 @@ namespace py
         decltype(cpp::_winrt::Array_New)* array_new;
         decltype(cpp::_winrt::Array_Assign)* array_assign;
         decltype(await_async)* await_async;
+        decltype(convert_to_ibuffer)* convert_to_ibuffer;
     };
 
 #ifndef PYWINRT_RUNTIME_MODULE
@@ -775,6 +778,12 @@ namespace py
     {
         WINRT_ASSERT(PyWinRT_API && PyWinRT_API->await_async);
         return (*PyWinRT_API->await_async)(obj);
+    }
+
+    inline winrt::Windows::Storage::Streams::IBuffer convert_to_ibuffer(PyObject* obj)
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->convert_to_ibuffer);
+        return (*PyWinRT_API->convert_to_ibuffer)(obj);
     }
 
     namespace cpp::_winrt
@@ -2866,7 +2875,14 @@ namespace py
 
         if (result == 0)
         {
-            return std::nullopt;
+            if constexpr (std::is_same_v<winrt::Windows::Storage::Streams::IBuffer, T>)
+            {
+                return py::convert_to_ibuffer(obj);
+            }
+            else
+            {
+                return std::nullopt;
+            }
         }
 
         return reinterpret_cast<winrt_wrapper<winrt::Windows::Foundation::IUnknown>*>(

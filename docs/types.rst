@@ -349,13 +349,38 @@ closure and references an object that references the operation itself.
 
 .. todo:: add tips on how to iterate over progress events
 
+.. _buffer-projection:
 
 Buffers
 =======
 
-.. todo:: document IBuffer and IMemoryBuffer
+`Windows.Storage.Streams.IBuffer`_ is projected as :class:`winrt.system.Buffer`,
+which is an alias for :class:`collections.abc.Buffer`. When used as a method
+parameter, any Python object that implements the buffer protocol can be used,
+for example, a :class:`bytearray`, :class:`bytes`, or a :class:`memoryview`.
+Although care must be taken to ensure that immutable types like :class:`bytes`
+are not used when the WinRT API expects a writeable buffer! The WinRT type
+system does not distinguish between read-only and writeable buffers, so there
+isn't a way to enforce this at runtime.
 
-    https://github.com/pywinrt/pywinrt/blob/main/projection/readme.md#buffer-protocol
+Buffers received as a return value can likewise be used with anything that
+supports the buffer protocol. For example, :class:`memoryview` can be used to
+access the buffer memory directly. Or, the struct module can be used to unpack
+formatted binary data.
+
+Using native Python classes to access the memory is significantly more efficient
+than using the WinRT `Windows.Storage.Streams.IDataReader`_ or
+`Windows.Storage.Streams.IDataWriter`_ classes.
+
+`Windows.Foundation.IMemoryBuffer`_ may also be accessed using the Python buffer
+protocol via the `Windows.Foundation.IMemoryBufferReference`. Care should be
+taken since the underlying memory can be released.
+
+.. _Windows.Storage.Streams.IBuffer: https://learn.microsoft.com/en-us/uwp/api/windows.storage.streams.ibuffer
+.. _Windows.Foundation.IMemoryBuffer: https://learn.microsoft.com/en-us/uwp/api/windows.foundation.imemorybuffer
+.. _Windows.Foundation.IMemoryBufferReference: https://learn.microsoft.com/en-us/uwp/api/windows.foundation.imemorybufferreference
+.. _Windows.Storage.Streams.IDataReader: https://learn.microsoft.com/en-us/uwp/api/windows.storage.streams.idatareader
+.. _Windows.Storage.Streams.IDataWriter: https://learn.microsoft.com/en-us/uwp/api/windows.storage.streams.idatawriter
 
 Collections
 ===========
