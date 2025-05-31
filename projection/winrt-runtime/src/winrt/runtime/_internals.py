@@ -1,12 +1,42 @@
 import asyncio
+import os
 from collections.abc import Awaitable, Callable
+from pathlib import Path
 from typing import TypeVar, Protocol, TYPE_CHECKING
 
 from typing_extensions import Self
 
+from winrt._winrt import add_dll_directory, remove_dll_directory
+
 # Unfortunately, we can't import at runtime because of circular imports.
 if TYPE_CHECKING:
     from winrt.windows.foundation import HResult, AsyncStatus
+
+
+class _DllCookie:
+    def __init__(self, cookie: int) -> None:
+        self.cookie = cookie
+
+    def close(self):
+        if self.cookie:
+            remove_dll_directory(self.cookie)
+            self.cookie = None
+
+    def __del__(self):
+        self.close()
+
+
+def register_dll_search_path(module_path: str) -> _DllCookie:
+    """
+    Register a module's directory as a DLL search path.
+
+    Args:
+        module_path: The path to a module file (i.e. ``__file__``)
+
+    Returns:
+        An cookie object that will remove the search path when closed.
+    """
+    return _DllCookie(add_dll_directory(os.fspath(Path(module_path).parent.resolve())))
 
 
 T = TypeVar("T")
