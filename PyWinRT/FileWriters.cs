@@ -315,6 +315,11 @@ static class FileWriters
             w.WriteBlankLine();
         }
 
+        if (componentDlls)
+        {
+            w.WriteLine("import winrt.runtime._internals");
+        }
+
         w.WriteLine("import winrt.system");
 
         var allExtensionTypes = members
@@ -416,7 +421,7 @@ static class FileWriters
         {
             w.WriteBlankLine();
             w.WriteLine(
-                "_dll_search_path_cookie_ = winrt.system._register_dll_search_path(__file__)"
+                "_dll_search_path_cookie_ = winrt.runtime._internals.register_dll_search_path(__file__)"
             );
         }
 

@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from webview2._webview2_microsoft_web_webview2_core import (
     CoreWebView2PhysicalKeyStatus,
@@ -82,7 +83,7 @@ if TYPE_CHECKING:
         CoreWebView2Controller_Static,
     )
 
-_dll_search_path_cookie_ = winrt.system._register_dll_search_path(__file__)
+_dll_search_path_cookie_ = winrt.runtime._internals.register_dll_search_path(__file__)
 
 __all__ = [
     "CoreWebView2BoundsMode",

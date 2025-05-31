@@ -1,7 +1,5 @@
-import os
 import sys
 from collections.abc import Mapping, MutableMapping, MutableSequence, Sequence
-from pathlib import Path
 from typing import Annotated, Any
 
 from typing_extensions import Buffer, TypeAlias
@@ -9,8 +7,6 @@ from typing_extensions import Buffer, TypeAlias
 from winrt._winrt import (
     Array,
     Object,
-    add_dll_directory,
-    remove_dll_directory,
     box_boolean,
     box_char16,
     box_date_time,
@@ -44,32 +40,6 @@ from winrt._winrt import (
     unbox_uint32,
     unbox_uint64,
 )
-
-
-class _DllCookie:
-    def __init__(self, cookie: int) -> None:
-        self.cookie = cookie
-
-    def close(self):
-        if self.cookie:
-            remove_dll_directory(self.cookie)
-            self.cookie = None
-
-    def __del__(self):
-        self.close()
-
-
-def _register_dll_search_path(module_path: str) -> _DllCookie:
-    """
-    Register a module's directory as a DLL search path.
-
-    Args:
-        module_path: The path to a module file (i.e. ``__file__``)
-
-    Returns:
-        An cookie object that will remove the search path when closed.
-    """
-    return _DllCookie(add_dll_directory(os.fspath(Path(module_path).parent.resolve())))
 
 
 # NB: The types implemented in C cannot inherit from abc.ABC since Python 3.12
