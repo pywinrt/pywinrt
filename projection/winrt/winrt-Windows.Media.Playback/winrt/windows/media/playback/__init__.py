@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_media_playback import (
     BackgroundMediaPlayer,
@@ -212,6 +213,6 @@ class TimedMetadataTrackPresentationMode(enum.IntEnum):
     APPLICATION_PRESENTED = 2
     PLATFORM_PRESENTED = 3
 
-winrt.system._mixin_sequence(MediaPlaybackAudioTrackList)
-winrt.system._mixin_sequence(MediaPlaybackTimedMetadataTrackList)
-winrt.system._mixin_sequence(MediaPlaybackVideoTrackList)
+winrt.runtime._internals.mixin_sequence(MediaPlaybackAudioTrackList)
+winrt.runtime._internals.mixin_sequence(MediaPlaybackTimedMetadataTrackList)
+winrt.runtime._internals.mixin_sequence(MediaPlaybackVideoTrackList)

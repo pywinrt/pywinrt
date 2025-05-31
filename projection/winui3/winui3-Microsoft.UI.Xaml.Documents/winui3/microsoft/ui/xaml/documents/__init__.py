@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winui3._winui3_microsoft_ui_xaml_documents import (
     TextRange,
@@ -71,5 +72,5 @@ class UnderlineStyle(enum.IntEnum):
     NONE = 0
     SINGLE = 1
 
-winrt.system._mixin_mutable_sequence(BlockCollection)
-winrt.system._mixin_mutable_sequence(InlineCollection)
+winrt.runtime._internals.mixin_mutable_sequence(BlockCollection)
+winrt.runtime._internals.mixin_mutable_sequence(InlineCollection)

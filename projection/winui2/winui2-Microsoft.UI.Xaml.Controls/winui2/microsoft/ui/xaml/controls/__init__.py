@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winui2._winui2_microsoft_ui_xaml_controls import (
     AnimatedIcon,
@@ -584,4 +585,4 @@ class UniformGridLayoutItemsStretch(enum.IntEnum):
     FILL = 1
     UNIFORM = 2
 
-winrt.system._mixin_mutable_sequence(SwipeItems)
+winrt.runtime._internals.mixin_mutable_sequence(SwipeItems)

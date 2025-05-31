@@ -4,6 +4,7 @@ import enum
 import typing
 import uuid as _uuid
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_storage import (
     AppDataPaths,
@@ -224,7 +225,7 @@ class StreamedFileFailureMode(enum.IntEnum):
     CURRENTLY_UNAVAILABLE = 1
     INCOMPLETE = 2
 
-winrt.system._mixin_mutable_mapping(ApplicationDataCompositeValue)
-winrt.system._mixin_mutable_mapping(ApplicationDataContainerSettings)
+winrt.runtime._internals.mixin_mutable_mapping(ApplicationDataCompositeValue)
+winrt.runtime._internals.mixin_mutable_mapping(ApplicationDataContainerSettings)
 ApplicationDataSetVersionHandler = typing.Callable[[SetVersionRequest], None]
 StreamedFileDataRequestedHandler = typing.Callable[[StreamedFileDataRequest], None]

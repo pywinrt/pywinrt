@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_devices_enumeration import (
     DeviceAccessChangedEventArgs,
@@ -178,4 +179,4 @@ class Panel(enum.IntEnum):
     LEFT = 5
     RIGHT = 6
 
-winrt.system._mixin_sequence(DeviceInformationCollection)
+winrt.runtime._internals.mixin_sequence(DeviceInformationCollection)

@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_devices_lights_effects import (
     LampArrayBitmapEffect,
@@ -43,4 +44,4 @@ class LampArrayRepetitionMode(enum.IntEnum):
     OCCURRENCES = 0
     FOREVER = 1
 
-winrt.system._mixin_sequence(LampArrayEffectPlaylist)
+winrt.runtime._internals.mixin_sequence(LampArrayEffectPlaylist)

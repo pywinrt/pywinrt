@@ -4,6 +4,7 @@ import enum
 import typing
 import uuid as _uuid
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_ui_xaml_media import (
     Matrix,
@@ -314,14 +315,14 @@ class SweepDirection(enum.IntEnum):
     COUNTERCLOCKWISE = 0
     CLOCKWISE = 1
 
-winrt.system._mixin_mutable_sequence(BrushCollection)
-winrt.system._mixin_mutable_sequence(DoubleCollection)
-winrt.system._mixin_mutable_sequence(GeometryCollection)
-winrt.system._mixin_mutable_sequence(GradientStopCollection)
-winrt.system._mixin_mutable_sequence(PathFigureCollection)
-winrt.system._mixin_mutable_sequence(PathSegmentCollection)
-winrt.system._mixin_mutable_sequence(PointCollection)
-winrt.system._mixin_mutable_sequence(TimelineMarkerCollection)
-winrt.system._mixin_mutable_sequence(TransformCollection)
+winrt.runtime._internals.mixin_mutable_sequence(BrushCollection)
+winrt.runtime._internals.mixin_mutable_sequence(DoubleCollection)
+winrt.runtime._internals.mixin_mutable_sequence(GeometryCollection)
+winrt.runtime._internals.mixin_mutable_sequence(GradientStopCollection)
+winrt.runtime._internals.mixin_mutable_sequence(PathFigureCollection)
+winrt.runtime._internals.mixin_mutable_sequence(PathSegmentCollection)
+winrt.runtime._internals.mixin_mutable_sequence(PointCollection)
+winrt.runtime._internals.mixin_mutable_sequence(TimelineMarkerCollection)
+winrt.runtime._internals.mixin_mutable_sequence(TransformCollection)
 RateChangedRoutedEventHandler = typing.Callable[[winrt.system.Object, RateChangedRoutedEventArgs], None]
 TimelineMarkerRoutedEventHandler = typing.Callable[[winrt.system.Object, TimelineMarkerRoutedEventArgs], None]

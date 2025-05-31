@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_security_credentials import (
     KeyCredential,
@@ -67,4 +68,4 @@ class WebAccountState(enum.IntEnum):
     CONNECTED = 1
     ERROR = 2
 
-winrt.system._mixin_mutable_mapping(PasswordCredentialPropertyStore)
+winrt.runtime._internals.mixin_mutable_mapping(PasswordCredentialPropertyStore)

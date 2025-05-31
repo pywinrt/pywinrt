@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_ai_machinelearning import (
     ImageFeatureDescriptor,
@@ -109,4 +110,4 @@ class TensorKind(enum.IntEnum):
     COMPLEX64 = 14
     COMPLEX128 = 15
 
-winrt.system._mixin_mapping(LearningModelBinding)
+winrt.runtime._internals.mixin_mapping(LearningModelBinding)

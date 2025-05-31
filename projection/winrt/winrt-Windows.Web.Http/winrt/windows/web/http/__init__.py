@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_web_http import (
     HttpProgress,
@@ -142,4 +143,4 @@ class HttpVersion(enum.IntEnum):
     HTTP11 = 2
     HTTP20 = 3
 
-winrt.system._mixin_sequence(HttpCookieCollection)
+winrt.runtime._internals.mixin_sequence(HttpCookieCollection)

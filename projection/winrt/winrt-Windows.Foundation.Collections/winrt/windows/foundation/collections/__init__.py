@@ -4,6 +4,7 @@ import enum
 import typing
 import uuid as _uuid
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_foundation_collections import (
     PropertySet,
@@ -65,15 +66,15 @@ class CollectionChange(enum.IntEnum):
     ITEM_REMOVED = 2
     ITEM_CHANGED = 3
 
-winrt.system._mixin_mutable_mapping(PropertySet)
-winrt.system._mixin_mutable_mapping(StringMap)
-winrt.system._mixin_mutable_mapping(ValueSet)
-winrt.system._mixin_mapping(_IMapView)
-winrt.system._mixin_mutable_mapping(_IMap)
-winrt.system._mixin_mutable_mapping(_IObservableMap)
-winrt.system._mixin_mutable_sequence(_IObservableVector)
-winrt.system._mixin_mutable_mapping(_IPropertySet)
-winrt.system._mixin_sequence(_IVectorView)
-winrt.system._mixin_mutable_sequence(_IVector)
+winrt.runtime._internals.mixin_mutable_mapping(PropertySet)
+winrt.runtime._internals.mixin_mutable_mapping(StringMap)
+winrt.runtime._internals.mixin_mutable_mapping(ValueSet)
+winrt.runtime._internals.mixin_mapping(_IMapView)
+winrt.runtime._internals.mixin_mutable_mapping(_IMap)
+winrt.runtime._internals.mixin_mutable_mapping(_IObservableMap)
+winrt.runtime._internals.mixin_mutable_sequence(_IObservableVector)
+winrt.runtime._internals.mixin_mutable_mapping(_IPropertySet)
+winrt.runtime._internals.mixin_sequence(_IVectorView)
+winrt.runtime._internals.mixin_mutable_sequence(_IVector)
 MapChangedEventHandler = typing.Callable[[IObservableMap[K, V], IMapChangedEventArgs[K]], None]
 VectorChangedEventHandler = typing.Callable[[IObservableVector[T], IVectorChangedEventArgs], None]

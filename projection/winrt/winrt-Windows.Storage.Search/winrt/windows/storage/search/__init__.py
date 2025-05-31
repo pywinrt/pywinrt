@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_storage_search import (
     SortEntry,
@@ -92,4 +93,4 @@ class IndexerOption(enum.IntEnum):
     DO_NOT_USE_INDEXER = 2
     ONLY_USE_INDEXER_AND_OPTIMIZE_FOR_INDEXED_PROPERTIES = 3
 
-winrt.system._mixin_mutable_sequence(SortEntryVector)
+winrt.runtime._internals.mixin_mutable_sequence(SortEntryVector)

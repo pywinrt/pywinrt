@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_system_userprofile import (
     AdvertisingManager,
@@ -50,4 +51,4 @@ class SetImageFeedResult(enum.IntEnum):
     CHANGE_DISABLED = 1
     USER_CANCELED = 2
 
-winrt.system._mixin_mapping(FirstSignInSettings)
+winrt.runtime._internals.mixin_mapping(FirstSignInSettings)

@@ -4,6 +4,7 @@ import enum
 import typing
 import uuid as _uuid
 
+import winrt.runtime._internals
 import winrt.system
 from winui3._winui3_microsoft_ui_xaml import (
     CornerRadius,
@@ -519,12 +520,12 @@ class WindowActivationState(enum.IntEnum):
     DEACTIVATED = 1
     POINTER_ACTIVATED = 2
 
-winrt.system._mixin_mutable_sequence(DependencyObjectCollection)
-winrt.system._mixin_mutable_mapping(ResourceDictionary)
-winrt.system._mixin_mutable_sequence(SetterBaseCollection)
-winrt.system._mixin_mutable_sequence(TriggerActionCollection)
-winrt.system._mixin_mutable_sequence(TriggerCollection)
-winrt.system._mixin_mutable_sequence(UIElementWeakCollection)
+winrt.runtime._internals.mixin_mutable_sequence(DependencyObjectCollection)
+winrt.runtime._internals.mixin_mutable_mapping(ResourceDictionary)
+winrt.runtime._internals.mixin_mutable_sequence(SetterBaseCollection)
+winrt.runtime._internals.mixin_mutable_sequence(TriggerActionCollection)
+winrt.runtime._internals.mixin_mutable_sequence(TriggerCollection)
+winrt.runtime._internals.mixin_mutable_sequence(UIElementWeakCollection)
 ApplicationInitializationCallback = typing.Callable[[ApplicationInitializationCallbackParams], None]
 BindingFailedEventHandler = typing.Callable[[winrt.system.Object, BindingFailedEventArgs], None]
 CreateDefaultValueCallback = typing.Callable[[], winrt.system.Object]
