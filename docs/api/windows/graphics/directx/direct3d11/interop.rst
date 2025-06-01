@@ -2,64 +2,66 @@
 :mod:`winrt.windows.graphics.directx.direct3d11.interop` module
 ===============================================================
 
-APIs for desktop interop with the `Windows.Graphics.DirectX.Direct3D11
-<https://learn.microsoft.com/uwp/api/windows.graphics.directx.direct3d11>`_
-namespace.
+.. module:: winrt.windows.graphics.directx.direct3d11.interop
 
-.. function:: create_direct3d11_device_from_dxgi_device(dxgi_device)
+    APIs for desktop interop with the `Windows.Graphics.DirectX.Direct3D11
+    <https://learn.microsoft.com/uwp/api/windows.graphics.directx.direct3d11>`_
+    namespace.
 
-    Creates a WinRT Direct3D 11 device from a DXGI device.
+    .. function:: create_direct3d11_device_from_dxgi_device(dxgi_device)
 
-    :param int dxgi_device: Pointer to an IDXGIDevice to create the Direct3D 11 device from.
+        Creates a WinRT Direct3D 11 device from a DXGI device.
 
-    :return: A Direct3D 11 device.
-    :rtype: :obj:`winrt.windows.graphics.directx.direct3d11.Direct3D11Device`
+        :param int dxgi_device: Pointer to an IDXGIDevice to create the Direct3D 11 device from.
 
-    :raises: :exc:`OSError` on failure.
+        :return: A Direct3D 11 device.
+        :rtype: :obj:`winrt.windows.graphics.directx.direct3d11.Direct3D11Device`
 
-    .. versionadded:: 2.3
+        :raises: :exc:`OSError` on failure.
 
-    .. seealso:: https://learn.microsoft.com/en-us/windows/win32/api/windows.graphics.directx.direct3d11.interop/nf-windows-graphics-directx-direct3d11-interop-createdirect3d11devicefromdxgidevice
+        .. versionadded:: 2.3
 
-.. function:: create_direct3d11_surface_from_dxgi_surface(dxgi_surface)
+        .. seealso:: https://learn.microsoft.com/en-us/windows/win32/api/windows.graphics.directx.direct3d11.interop/nf-windows-graphics-directx-direct3d11-interop-createdirect3d11devicefromdxgidevice
 
-    Creates a WinRT Direct3D 11 surface from a DXGI surface.
+    .. function:: create_direct3d11_surface_from_dxgi_surface(dxgi_surface)
 
-    :param int dxgi_surface: Pointer to an IDXGISurface to create the Direct3D 11 surface from.
+        Creates a WinRT Direct3D 11 surface from a DXGI surface.
 
-    :return: A Direct3D 11 surface.
-    :rtype: :obj:`winrt.windows.graphics.directx.direct3d11.Direct3D11Surface`
+        :param int dxgi_surface: Pointer to an IDXGISurface to create the Direct3D 11 surface from.
 
-    :raises: :exc:`OSError` on failure.
+        :return: A Direct3D 11 surface.
+        :rtype: :obj:`winrt.windows.graphics.directx.direct3d11.Direct3D11Surface`
 
-    .. versionadded:: 2.3
+        :raises: :exc:`OSError` on failure.
 
-    .. seealso:: https://learn.microsoft.com/en-us/windows/win32/api/windows.graphics.directx.direct3d11.interop/nf-windows-graphics-directx-direct3d11-interop-createdirect3d11surfacefromdxgisurface
+        .. versionadded:: 2.3
 
-.. function:: get_dxgi_device_from_object(device)
+        .. seealso:: https://learn.microsoft.com/en-us/windows/win32/api/windows.graphics.directx.direct3d11.interop/nf-windows-graphics-directx-direct3d11-interop-createdirect3d11surfacefromdxgisurface
 
-    Retrieves the IDXGIDevice from a Direct3D object.
+    .. function:: get_dxgi_device_from_object(device)
 
-    :param device: The WinRT object to retrieve the IDXGIDevice from.
-    :type device: :class:`winrt.windows.graphics.directx.direct3d11.Direct3D11Device`
+        Retrieves the IDXGIDevice from a Direct3D object.
 
-    :return: Pointer to IDXGIDevice interface of the WinRT object.
-    :rtype: int
+        :param device: The WinRT object to retrieve the IDXGIDevice from.
+        :type device: :class:`winrt.windows.graphics.directx.direct3d11.Direct3D11Device`
 
-    .. versionadded:: 2.3
+        :return: Pointer to IDXGIDevice interface of the WinRT object.
+        :rtype: int
 
-    .. seealso:: https://learn.microsoft.com/en-us/windows/win32/api/windows.graphics.directx.direct3d11.interop/nf-windows-graphics-directx-direct3d11-interop-getdxgiinterface
+        .. versionadded:: 2.3
 
-.. function:: get_dxgi_surface_from_object(surface)
+        .. seealso:: https://learn.microsoft.com/en-us/windows/win32/api/windows.graphics.directx.direct3d11.interop/nf-windows-graphics-directx-direct3d11-interop-getdxgiinterface
 
-    Retrieves the IDXGISurface from a Direct3D object.
+    .. function:: get_dxgi_surface_from_object(surface)
 
-    :param surface: The WinRT object to retrieve the IDXGISurface from.
-    :type surface: :class:`winrt.windows.graphics.directx.direct3d11.Direct3D11Surface`
+        Retrieves the IDXGISurface from a Direct3D object.
 
-    :return: Pointer to IDXGISurface interface of the WinRT object.
-    :rtype: int
+        :param surface: The WinRT object to retrieve the IDXGISurface from.
+        :type surface: :class:`winrt.windows.graphics.directx.direct3d11.Direct3D11Surface`
 
-    .. versionadded:: 2.3
+        :return: Pointer to IDXGISurface interface of the WinRT object.
+        :rtype: int
 
-    .. seealso:: https://learn.microsoft.com/en-us/windows/win32/api/windows.graphics.directx.direct3d11.interop/nf-windows-graphics-directx-direct3d11-interop-getdxgiinterface-r1
+        .. versionadded:: 2.3
+
+        .. seealso:: https://learn.microsoft.com/en-us/windows/win32/api/windows.graphics.directx.direct3d11.interop/nf-windows-graphics-directx-direct3d11-interop-getdxgiinterface-r1
