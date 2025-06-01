@@ -8,7 +8,7 @@
 Type aliases
 ------------
 
-.. data:: Buffer
+.. type:: Buffer
 
     Alias of :class:`collections.abc.Buffer`. This is the projected type for
     `Windows.Storage.Streams.IBuffer`_.
@@ -23,7 +23,7 @@ Type aliases
 
 .. _Windows.Storage.Streams.IBuffer: https://learn.microsoft.com/en-us/uwp/api/windows.storage.streams.ibuffer
 
-.. data:: ReadableBuffer
+.. type:: ReadableBuffer
 
     Alias of :class:`collections.abc.Buffer` that indicates the buffer will only
     be read from. This is used for WinRT ``PassArray`` parameters. The buffer
@@ -31,7 +31,7 @@ Type aliases
 
     .. versionadded:: 2.3
 
-.. data:: WriteableBuffer
+.. type:: WriteableBuffer
 
     Alias of :class:`collections.abc.Buffer` that indicates the buffer will be
     written to. This is used for WinRT ``FillArray`` parameters. The buffer
