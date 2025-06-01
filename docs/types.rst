@@ -112,7 +112,7 @@ WinRT enums are projected using the Python standard library :mod:`enum` module. 
 WinRT Type system has a ``[Flags]`` attribute that indicates if an enum is
 treated as bit flags or not. Enum types without this attribute are projected as
 an :class:`enum.IntEnum` type or if the ``[Flags]`` attribute is present, the type is
-projected as an :class:`enum.IntFlags` type.
+projected as an :class:`enum.IntFlag` type.
 
 For arrays and buffers containing enums, use the ``"i"`` format string for
 regular enums and ``"I"`` for flags.
@@ -320,7 +320,7 @@ Asynchronous usage
     ``async def``) but they are not. This means they do not return a
     :class:`coroutine <collections.abc.Coroutine>` object and therefore cannot
     be used with methods like :func:`asyncio.create_task`. They are only
-    :class:`awaitable <collections.abc.Awaitable>` objects.
+    :class:`Awaitable <collections.abc.Awaitable>` objects.
 
 If you are using ``asyncio``, then you can use the ``await`` keyword to wait
 for the result of async WinRT methods::
@@ -468,7 +468,7 @@ builtin :func:`iter()` function or other Python features like ``for`` loops.
 
 `IIterator<T>`_ is projected as `Iterator[T]`_ however these objects are rarely
 used directly in Python. Instead, use ``for`` loops or generator expressions to
-do the iterating for you. In rare cases, iterators might be used with ``next()``.
+do the iterating for you. In rare cases, iterators might be used with :func:`next()`.
 The WinRT methods on this object should be avoided.
 
 .. _IIterable<T>: https://learn.microsoft.com/en-us/uwp/api/windows.foundation.collections.iiterable-1
@@ -488,12 +488,19 @@ can (and probably should) be used as a context manager in Python::
     with MemoryBuffer(256) as buf:
         ...
 
+Generally, when an object it closable, it means that there are unmanaged
+resources that may need to be released in a deterministic manner as opposed
+waiting for the garbage collector to run to clean them up.
+
 .. note:: .NET programmers may recognize this as similar to ``using`` statements
     in C# with ``IDisposable`` types.
 
 
 Date and time
 =============
+
+There are a few foundational time-related types in WinRT that are projected
+as the analogous Python types.
 
 Windows.Foundation.DateTime
 ---------------------------
@@ -510,7 +517,7 @@ It uses a signed 64-bit integer for this, so the ``"q"`` format string is used i
 
 WinRT uses UTC for all values, so any ``datetime`` object returned from a Windows
 API will use that timezone. It is recommended to use the UTC timezone when
-creating ``datetime`` objects to pass to Windows APIs as well. Naive ``datetime``
+creating ``datetime`` objects to pass to Windows APIs as well. "Naive" ``datetime``
 objects (without a timezone) are assumed to use the local timezone and will
 be converted to UTC.
 
