@@ -11,15 +11,17 @@ from typing import Generic, List, TypedDict, TypeVar
 from uuid import UUID
 
 import test_winrt.testcomponent as tc
+from winrt.system.hresult import (
+    E_FAIL,
+    WIN32_ERROR_CANCELLED,
+    PYWINRT_E_UNRAISABLE_PYTHON_EXCEPTION,
+)
 import winrt.runtime as wr
 import winrt.windows.foundation as wf
 import winrt.windows.foundation.collections as wfc
 from typing_extensions import override
 
 from test._util import async_test, catch_unraisable
-
-E_FAIL = ctypes.HRESULT(0x80004005).value
-E_CANCELLED = ctypes.HRESULT(0x800704C7).value
 
 
 class TestTestComponent(unittest.TestCase):
@@ -116,11 +118,12 @@ class TestTestComponent(unittest.TestCase):
         c = C()
 
         with (
-            self.assertRaisesRegex(OSError, "Unraisable Python exception"),
+            self.assertRaisesRegex(OSError, "Unraisable Python exception") as ctx,
             catch_unraisable() as exceptions,
         ):
             c.call_overridable()
 
+        self.assertEqual(ctx.exception.winerror, PYWINRT_E_UNRAISABLE_PYTHON_EXCEPTION)
         self.assertIsInstance(exceptions[0].exc_value, RuntimeError)
 
     def test_object_round_trip(self):
@@ -466,12 +469,13 @@ class TestTestComponent(unittest.TestCase):
         self.assertListEqual(list(result[1]), arg)
 
         with (
-            self.assertRaisesRegex(OSError, "Unraisable Python exception"),
+            self.assertRaisesRegex(OSError, "Unraisable Python exception") as ctx,
             catch_unraisable() as exceptions,
         ):
             # requires list[str] so results in an unraisable TypeError
             tests.collection6([1])  # type: ignore
 
+        self.assertEqual(ctx.exception.winerror, PYWINRT_E_UNRAISABLE_PYTHON_EXCEPTION)
         self.assertEqual(len(exceptions), 1)
         self.assertEqual(exceptions[0].exc_type, TypeError)
 
@@ -624,7 +628,7 @@ class TestTestComponent(unittest.TestCase):
         with self.assertRaises(OSError) as ctx:
             op.get()
 
-        self.assertEqual(ctx.exception.winerror, E_CANCELLED)
+        self.assertEqual(ctx.exception.winerror, WIN32_ERROR_CANCELLED)
 
     def test_async_action_get_error(self):
         with self.assertRaises(OSError) as ctx:

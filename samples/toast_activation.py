@@ -3,7 +3,7 @@
 # dependencies = [
 #   "comtypes",
 #   "rich",
-#   "winrt-runtime",
+#   "winrt-runtime>=3.2",
 #   "winrt-Windows.Data.Xml.Dom",
 #   "winrt-Windows.Foundation",
 #   "winrt-Windows.Foundation.Collections",
@@ -34,6 +34,7 @@ from typing import Protocol
 from rich.console import Console
 from rich.prompt import Prompt
 from winrt.system import Object, unbox_string
+from winrt.system.hresult import S_OK, E_FAIL
 from winrt.windows.data.xml.dom import XmlDocument
 from winrt.windows.ui.notifications import (
     ToastActivatedEventArgs,
@@ -116,10 +117,6 @@ class INotificationActivationCallback(IUnknown):
             (["in"], wintypes.ULONG, "count"),
         )
     ]
-
-
-S_OK = 0
-E_FAIL = -2147467259
 
 
 # This class will be instantiated when the toast is activated when the script

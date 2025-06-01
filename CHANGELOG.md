@@ -8,6 +8,7 @@
 - Allow passing Python mapping as arguments of type `Iterable[IKeyValuePair[K, V]]`.
 - Allow passing Python buffer protocol objects as arguments of type `IBuffer`.
 - Added ``get()`` and ``wait()`` methods to async operations to call them synchronously.
+- Added ``winrt.system.hresult`` module for common error codes.
 
 ### Changed
 - `asyncio` cancellation is now propagated to WinRT async actions/operations that are being awaited.

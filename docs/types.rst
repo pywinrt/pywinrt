@@ -234,6 +234,31 @@ Arrays
 
 .. todo:: document array types
 
+.. _exceptions-projection:
+
+----------
+Exceptions
+----------
+
+PyWinRT uses the CppWinRT projection under the hood. Any C++ exception that is
+not handled gets propagated to Python as an :class:`OSError` exception with
+:attr:`OSError.winerror` set to an `HRESULT`_ error code.
+
+.. seealso:: :mod:`winrt.system.hresult` for some common error codes.
+
+On the other hand, Python exceptions cannot be propagated to C++ code. WinRT
+requires that errors are serializable, but Python exceptions are not. So if a
+Python callback from C++ code (i.e. an event handler or other delegate or a
+method of a Python subclass of a WinRT interface) raises an exception that isn't
+handled before the method returns, it will trigger the :func:`sys.unraisablehook`
+handler in Python and cause the C++ code to receive a an HRESULT error code
+of :attr:`~winrt.system.hresult.PYWINRT_E_UNRAISABLE_PYTHON_EXCEPTION`.
+This can cause undefined behavior in the C++ code in some cases, so it should
+be avoided.
+
+.. _HRESULT: https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a
+
+
 -----------------
 Specialized types
 -----------------
