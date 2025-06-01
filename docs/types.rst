@@ -343,9 +343,9 @@ Asynchronous usage
 
 .. note:: WinRT async methods look like Python coroutines (methods defined with
     ``async def``) but they are not. This means they do not return a
-    :class:`coroutine <collections.abc.Coroutine>` object and therefore cannot
-    be used with methods like :func:`asyncio.create_task`. They are only
-    :class:`Awaitable <collections.abc.Awaitable>` objects.
+    :class:`~collections.abc.Coroutine` object and therefore cannot be
+    used with methods like :func:`asyncio.create_task`. They are only
+    :class:`~collections.abc.Awaitable` objects.
 
 If you are using ``asyncio``, then you can use the ``await`` keyword to wait
 for the result of async WinRT methods::
@@ -354,9 +354,10 @@ for the result of async WinRT methods::
 
 .. versionchanged:: unreleased
 
-    If the :class:`asyncio.Awaitable` that wraps the operation is canceled, it will
-    now propagate the cancellation to the WinRT async action/operation. To restore
-    the previous behavior, you can wrap the operation in :func:`asyncio.shield`.
+    If the :class:`~collections.abc.Awaitable` that wraps the operation is
+    canceled, it will now propagate the cancellation to the WinRT async
+    action/operation. To restore the previous behavior, you can wrap the
+    operation in :func:`asyncio.shield`.
 
 Other usage
 -----------
