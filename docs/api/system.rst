@@ -13,6 +13,8 @@ Type aliases
     Alias of :class:`collections.abc.Buffer`. This is the projected type for
     `Windows.Storage.Streams.IBuffer`_.
 
+    .. versionadded:: unreleased
+
     .. caution:: The WinRT type system does not distinguish between
         read-only and writeable buffers. Do not use immutable types like
         :class:`bytes` when the WinRT API expects a writeable buffer!
@@ -27,12 +29,15 @@ Type aliases
     be read from. This is used for WinRT ``PassArray`` parameters. The buffer
     format must also match the WinRT array type.
 
+    .. versionadded:: 2.3
+
 .. data:: WriteableBuffer
 
     Alias of :class:`collections.abc.Buffer` that indicates the buffer will be
     written to. This is used for WinRT ``FillArray`` parameters. The buffer
     format must also match the WinRT array type.
 
+    .. versionadded:: 2.3
 
 -----------------
 Fundamental types
