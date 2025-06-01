@@ -2,47 +2,47 @@
 :mod:`winrt.runtime` module
 ===========================
 
-.. currentmodule:: winrt.runtime
+.. module:: winrt.runtime
 
-----------
-Activation
-----------
+    ----------
+    Activation
+    ----------
 
-Functions related to preparing the WinRT runtime for use.
+    Functions related to preparing the WinRT runtime for use.
 
-.. function:: init_apartment(apartment_type: ApartmentType) -> None
+    .. function:: init_apartment(apartment_type: ApartmentType) -> None
 
-    Initializes the WinRT runtime in the specified apartment type.
+        Initializes the WinRT runtime in the specified apartment type.
 
-    Calling this function is only necessary if you need a single threaded, e.g.
-    for UI thread, or if you need to re-initalize the thread with a different
-    apartment type.
+        Calling this function is only necessary if you need a single threaded, e.g.
+        for UI thread, or if you need to re-initalize the thread with a different
+        apartment type.
 
-    :param apartment_type: The apartment type to initialize the runtime in.
-    :type apartment_type: ApartmentType
+        :param apartment_type: The apartment type to initialize the runtime in.
+        :type apartment_type: ApartmentType
 
-    .. versionadded:: 3.0
+        .. versionadded:: 3.0
 
-.. function:: uninit_apartment() -> None
+    .. function:: uninit_apartment() -> None
 
-    Uninitializes the WinRT runtime.
+        Uninitializes the WinRT runtime.
 
-    Not necessary on thread exit, but can be used uninitalize and re-initalize
-    a thread if needed.
+        Not necessary on thread exit, but can be used uninitalize and re-initalize
+        a thread if needed.
 
-    .. versionadded:: 3.0
+        .. versionadded:: 3.0
 
 
-.. class:: ApartmentType
+    .. class:: ApartmentType
 
-    Enumeration of COM apartment types.
+        Enumeration of COM apartment types.
 
-    .. attribute:: SINGLE_THREADED
+        .. attribute:: SINGLE_THREADED
 
-        Single-threaded apartment.
+            Single-threaded apartment.
 
-    .. attribute:: MULTI_THREADED
+        .. attribute:: MULTI_THREADED
 
-        Multi-threaded apartment.
+            Multi-threaded apartment.
 
-    .. versionadded:: 3.0
+        .. versionadded:: 3.0
