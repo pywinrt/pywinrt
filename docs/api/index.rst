@@ -17,5 +17,6 @@ API reference
    runtime
    runtime.interop
    system
+   system.hresult
    windows
    winui3/index
