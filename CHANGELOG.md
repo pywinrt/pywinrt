@@ -7,8 +7,8 @@
 ### Added
 - Allow passing Python mapping as arguments of type `Iterable[IKeyValuePair[K, V]]`.
 - Allow passing Python buffer protocol objects as arguments of type `IBuffer`.
-- Added ``get()`` and ``wait()`` methods to async operations to call them synchronously.
-- Added ``winrt.system.hresult`` module for common error codes.
+- Added `get()` and `wait()` methods to async operations to call them synchronously.
+- Added `winrt.system.hresult` module for common error codes.
 
 ### Changed
 - `asyncio` cancellation is now propagated to WinRT async actions/operations that are being awaited.
@@ -34,8 +34,8 @@
 - Updated WebView2 to 1.0.3124.44.
 
 ### Fixed
-- Fixed ``IIterator.__iter__()`` returning an object without taking a reference.
-- Fixed ``IIterator.__iter__()`` returning an invalid object pointer, leading to a crash.
+- Fixed `IIterator.__iter__()` returning an object without taking a reference.
+- Fixed `IIterator.__iter__()` returning an invalid object pointer, leading to a crash.
 
 ## [v3.0.0] - 2025-03-15
 
@@ -50,7 +50,7 @@
 
 ### Changed
 - BREAKING: Namespaces other than the Windows SDK now have a different top-level
-  package name other than ``winrt``.
+  package name other than `winrt`.
 - BREAKING: Use `[Windows.Foundation.Metadata.Overload]` attribute for method
   names when available. This exposes some APIs that otherwise could not be called
   but also renames many existing methods.
