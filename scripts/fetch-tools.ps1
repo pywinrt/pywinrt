@@ -12,7 +12,7 @@ param(
 
     # WinUI 3
     [Parameter(Mandatory=$false)]
-    [string]$WindowsAppSDKVersion = "1.7.250310001",
+    [string]$WindowsAppSDKVersion = "1.7.250513003",
     [switch]$noWindowsAppSDK,
 
     # WebView2
