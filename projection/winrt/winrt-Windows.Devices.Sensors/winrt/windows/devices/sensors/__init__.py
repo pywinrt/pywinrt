@@ -4,6 +4,7 @@ import enum
 
 import winrt.system
 from winrt._winrt_windows_devices_sensors import (
+    LightSensorChromaticity,
     Accelerometer,
     AccelerometerDataThreshold,
     AccelerometerReading,
@@ -55,6 +56,7 @@ from winrt._winrt_windows_devices_sensors import (
     MagnetometerDataThreshold,
     MagnetometerReading,
     MagnetometerReadingChangedEventArgs,
+    OnlookerDetectionOptions,
     OrientationSensor,
     OrientationSensorReading,
     OrientationSensorReadingChangedEventArgs,
@@ -86,11 +88,14 @@ __all__ = [
     "HumanEngagement",
     "HumanPresence",
     "MagnetometerAccuracy",
+    "OnlookerDetectionAction",
+    "OnlookerDetectionBackOnMode",
     "PedometerStepKind",
     "SensorOptimizationGoal",
     "SensorReadingType",
     "SensorType",
     "SimpleOrientation",
+    "LightSensorChromaticity",
     "Accelerometer",
     "AccelerometerDataThreshold",
     "AccelerometerReading",
@@ -142,6 +147,7 @@ __all__ = [
     "MagnetometerDataThreshold",
     "MagnetometerReading",
     "MagnetometerReadingChangedEventArgs",
+    "OnlookerDetectionOptions",
     "OrientationSensor",
     "OrientationSensorReading",
     "OrientationSensorReadingChangedEventArgs",
@@ -198,6 +204,17 @@ class MagnetometerAccuracy(enum.IntEnum):
     UNRELIABLE = 1
     APPROXIMATE = 2
     HIGH = 3
+
+class OnlookerDetectionAction(enum.IntEnum):
+    DIM = 0
+    NOTIFY = 1
+    DIM_AND_NOTIFY = 2
+
+class OnlookerDetectionBackOnMode(enum.IntEnum):
+    MANUALLY = 0
+    ONE_HOUR = 1
+    FOUR_HOURS = 2
+    ONE_DAY = 3
 
 class PedometerStepKind(enum.IntEnum):
     UNKNOWN = 0

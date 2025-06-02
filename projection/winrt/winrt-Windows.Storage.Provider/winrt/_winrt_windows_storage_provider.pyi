@@ -13,10 +13,11 @@ import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
 import winrt.windows.storage as windows_storage
+import winrt.windows.storage.search as windows_storage_search
 import winrt.windows.storage.streams as windows_storage_streams
 import winrt.windows.ui as windows_ui
 
-from winrt.windows.storage.provider import CachedFileOptions, CachedFileTarget, FileUpdateStatus, ReadActivationMode, StorageProviderHardlinkPolicy, StorageProviderHydrationPolicy, StorageProviderHydrationPolicyModifier, StorageProviderInSyncPolicy, StorageProviderKnownFolderSyncStatus, StorageProviderPopulationPolicy, StorageProviderProtectionMode, StorageProviderShareLinkState, StorageProviderState, StorageProviderUICommandState, StorageProviderUriSourceStatus, UIStatus, WriteActivationMode
+from winrt.windows.storage.provider import CachedFileOptions, CachedFileTarget, FileUpdateStatus, ReadActivationMode, StorageProviderHardlinkPolicy, StorageProviderHydrationPolicy, StorageProviderHydrationPolicyModifier, StorageProviderInSyncPolicy, StorageProviderKnownFolderSyncStatus, StorageProviderPopulationPolicy, StorageProviderProtectionMode, StorageProviderResultKind, StorageProviderResultUsageKind, StorageProviderSearchMatchKind, StorageProviderSearchQueryStatus, StorageProviderShareLinkState, StorageProviderState, StorageProviderUICommandState, StorageProviderUriSourceStatus, UIStatus, WriteActivationMode
 from winrt.windows.storage.provider import StorageProviderKnownFolderSyncRequestedHandler
 
 Self = typing.TypeVar('Self')
@@ -250,6 +251,24 @@ class StorageProviderMoreInfoUI(winrt.system.Object):
     def command(self, value: IStorageProviderUICommand) -> None: ...
 
 @typing.final
+class StorageProviderQueryResultSet(winrt.system.Object):
+    def __new__(cls: typing.Type[Self], results: typing.Union[winrt.system.Array[IStorageProviderQueryResult], winrt.system.ReadableBuffer]) -> Self: ...
+    # Windows.Storage.Provider.IStorageProviderQueryResult[] Windows.Storage.Provider.StorageProviderQueryResultSet::GetResults()
+    def get_results(self) -> winrt.system.Array[IStorageProviderQueryResult]: ...
+    # Windows.Storage.Provider.StorageProviderSearchQueryStatus Windows.Storage.Provider.StorageProviderQueryResultSet::get_Status()
+    @_property
+    def status(self) -> StorageProviderSearchQueryStatus: ...
+    # System.Void Windows.Storage.Provider.StorageProviderQueryResultSet::put_Status(Windows.Storage.Provider.StorageProviderSearchQueryStatus)
+    @status.setter
+    def status(self, value: StorageProviderSearchQueryStatus) -> None: ...
+    # System.String Windows.Storage.Provider.StorageProviderQueryResultSet::get_QueryResultId()
+    @_property
+    def query_result_id(self) -> str: ...
+    # System.Void Windows.Storage.Provider.StorageProviderQueryResultSet::put_QueryResultId(System.String)
+    @query_result_id.setter
+    def query_result_id(self, value: str) -> None: ...
+
+@typing.final
 class StorageProviderQuotaUI(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # System.String Windows.Storage.Provider.StorageProviderQuotaUI::get_QuotaUsedLabel()
@@ -276,6 +295,82 @@ class StorageProviderQuotaUI(winrt.system.Object):
     # System.Void Windows.Storage.Provider.StorageProviderQuotaUI::put_QuotaTotalInBytes(System.UInt64)
     @quota_total_in_bytes.setter
     def quota_total_in_bytes(self, value: winrt.system.UInt64) -> None: ...
+
+@typing.final
+class StorageProviderSearchQueryOptions(winrt.system.Object):
+    # System.String Windows.Storage.Provider.StorageProviderSearchQueryOptions::get_FolderScope()
+    @_property
+    def folder_scope(self) -> str: ...
+    # System.String Windows.Storage.Provider.StorageProviderSearchQueryOptions::get_Language()
+    @_property
+    def language(self) -> str: ...
+    # System.UInt32 Windows.Storage.Provider.StorageProviderSearchQueryOptions::get_MaxResults()
+    @_property
+    def max_results(self) -> winrt.system.UInt32: ...
+    # System.String Windows.Storage.Provider.StorageProviderSearchQueryOptions::get_ProgrammaticQuery()
+    @_property
+    def programmatic_query(self) -> str: ...
+    # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.Storage.Provider.StorageProviderSearchQueryOptions::get_PropertiesToFetch()
+    @_property
+    def properties_to_fetch(self) -> typing.Sequence[str]: ...
+    # System.String Windows.Storage.Provider.StorageProviderSearchQueryOptions::get_QueryId()
+    @_property
+    def query_id(self) -> str: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Storage.Search.SortEntry> Windows.Storage.Provider.StorageProviderSearchQueryOptions::get_SortOrder()
+    @_property
+    def sort_order(self) -> typing.Sequence[windows_storage_search.SortEntry]: ...
+    # System.String Windows.Storage.Provider.StorageProviderSearchQueryOptions::get_UserQuery()
+    @_property
+    def user_query(self) -> str: ...
+
+@typing.final
+class StorageProviderSearchResult(winrt.system.Object, IStorageProviderQueryResult):
+    def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.String Windows.Storage.Provider.StorageProviderSearchResult::get_ResultId()
+    @_property
+    def result_id(self) -> str: ...
+    # System.Void Windows.Storage.Provider.StorageProviderSearchResult::put_ResultId(System.String)
+    @result_id.setter
+    def result_id(self, value: str) -> None: ...
+    # System.String Windows.Storage.Provider.StorageProviderSearchResult::get_RemoteFileId()
+    @_property
+    def remote_file_id(self) -> str: ...
+    # System.Void Windows.Storage.Provider.StorageProviderSearchResult::put_RemoteFileId(System.String)
+    @remote_file_id.setter
+    def remote_file_id(self, value: str) -> None: ...
+    # Windows.Storage.Provider.StorageProviderResultKind Windows.Storage.Provider.StorageProviderSearchResult::get_Kind()
+    @_property
+    def kind(self) -> StorageProviderResultKind: ...
+    # System.Void Windows.Storage.Provider.StorageProviderSearchResult::put_Kind(Windows.Storage.Provider.StorageProviderResultKind)
+    @kind.setter
+    def kind(self, value: StorageProviderResultKind) -> None: ...
+    # System.String Windows.Storage.Provider.StorageProviderSearchResult::get_FilePath()
+    @_property
+    def file_path(self) -> str: ...
+    # System.Void Windows.Storage.Provider.StorageProviderSearchResult::put_FilePath(System.String)
+    @file_path.setter
+    def file_path(self, value: str) -> None: ...
+    # Windows.Foundation.Collections.PropertySet Windows.Storage.Provider.StorageProviderSearchResult::get_RequestedProperties()
+    @_property
+    def requested_properties(self) -> windows_foundation_collections.PropertySet: ...
+    # System.String Windows.Storage.Provider.StorageProviderSearchResult::get_MatchedPropertyName()
+    @_property
+    def matched_property_name(self) -> str: ...
+    # System.Void Windows.Storage.Provider.StorageProviderSearchResult::put_MatchedPropertyName(System.String)
+    @matched_property_name.setter
+    def matched_property_name(self, value: str) -> None: ...
+    # System.Double Windows.Storage.Provider.StorageProviderSearchResult::get_MatchScore()
+    @_property
+    def match_score(self) -> winrt.system.Double: ...
+    # System.Void Windows.Storage.Provider.StorageProviderSearchResult::put_MatchScore(System.Double)
+    @match_score.setter
+    def match_score(self, value: winrt.system.Double) -> None: ...
+    # Windows.Storage.Provider.StorageProviderSearchMatchKind Windows.Storage.Provider.StorageProviderSearchResult::get_MatchKind()
+    @_property
+    def match_kind(self) -> StorageProviderSearchMatchKind: ...
+    # System.Void Windows.Storage.Provider.StorageProviderSearchResult::put_MatchKind(Windows.Storage.Provider.StorageProviderSearchMatchKind)
+    @match_kind.setter
+    def match_kind(self, value: StorageProviderSearchMatchKind) -> None: ...
 
 @typing.final
 class StorageProviderStatusUI(winrt.system.Object):
@@ -491,6 +586,66 @@ class IStorageProviderPropertyCapabilities(winrt._winrt.IInspectable):
     # System.Boolean Windows.Storage.Provider.IStorageProviderPropertyCapabilities::IsPropertySupported(System.String)
     @abstractmethod
     def is_property_supported(self, property_canonical_name: str, /) -> bool: ...
+
+@typing.final
+class _IStorageProviderQueryResult: ...
+
+class IStorageProviderQueryResult(winrt._winrt.IInspectable):
+    # System.String Windows.Storage.Provider.IStorageProviderQueryResult::get_FilePath()
+    @_property
+    @abstractmethod
+    def file_path(self) -> str: ...
+    # System.Void Windows.Storage.Provider.IStorageProviderQueryResult::put_FilePath(System.String)
+    @file_path.setter
+    @abstractmethod
+    def file_path(self, value: str) -> None: ...
+    # Windows.Storage.Provider.StorageProviderResultKind Windows.Storage.Provider.IStorageProviderQueryResult::get_Kind()
+    @_property
+    @abstractmethod
+    def kind(self) -> StorageProviderResultKind: ...
+    # System.Void Windows.Storage.Provider.IStorageProviderQueryResult::put_Kind(Windows.Storage.Provider.StorageProviderResultKind)
+    @kind.setter
+    @abstractmethod
+    def kind(self, value: StorageProviderResultKind) -> None: ...
+    # System.String Windows.Storage.Provider.IStorageProviderQueryResult::get_RemoteFileId()
+    @_property
+    @abstractmethod
+    def remote_file_id(self) -> str: ...
+    # System.Void Windows.Storage.Provider.IStorageProviderQueryResult::put_RemoteFileId(System.String)
+    @remote_file_id.setter
+    @abstractmethod
+    def remote_file_id(self, value: str) -> None: ...
+    # Windows.Foundation.Collections.PropertySet Windows.Storage.Provider.IStorageProviderQueryResult::get_RequestedProperties()
+    @_property
+    @abstractmethod
+    def requested_properties(self) -> windows_foundation_collections.PropertySet: ...
+    # System.String Windows.Storage.Provider.IStorageProviderQueryResult::get_ResultId()
+    @_property
+    @abstractmethod
+    def result_id(self) -> str: ...
+    # System.Void Windows.Storage.Provider.IStorageProviderQueryResult::put_ResultId(System.String)
+    @result_id.setter
+    @abstractmethod
+    def result_id(self, value: str) -> None: ...
+
+@typing.final
+class _IStorageProviderSearchHandler: ...
+
+class IStorageProviderSearchHandler(winrt._winrt.IInspectable):
+    # Windows.Storage.Provider.StorageProviderQueryResultSet Windows.Storage.Provider.IStorageProviderSearchHandler::Find(Windows.Storage.Provider.StorageProviderSearchQueryOptions)
+    @abstractmethod
+    def find(self, options: StorageProviderSearchQueryOptions, /) -> StorageProviderQueryResultSet: ...
+    # System.Void Windows.Storage.Provider.IStorageProviderSearchHandler::ReportUsage(Windows.Storage.Provider.StorageProviderResultUsageKind,System.String,System.String,Windows.Foundation.TimeSpan)
+    @abstractmethod
+    def report_usage(self, result_usage_kind: StorageProviderResultUsageKind, remote_file_id: str, result_id: str, latency: datetime.timedelta, /) -> None: ...
+
+@typing.final
+class _IStorageProviderSearchHandlerFactory: ...
+
+class IStorageProviderSearchHandlerFactory(winrt._winrt.IInspectable):
+    # Windows.Storage.Provider.IStorageProviderSearchHandler Windows.Storage.Provider.IStorageProviderSearchHandlerFactory::CreateSearchHandler(System.String)
+    @abstractmethod
+    def create_search_handler(self, cloud_provider_id: str, /) -> IStorageProviderSearchHandler: ...
 
 @typing.final
 class _IStorageProviderShareLinkSource: ...

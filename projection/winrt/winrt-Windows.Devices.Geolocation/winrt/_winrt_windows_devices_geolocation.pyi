@@ -176,8 +176,10 @@ class GeocoordinateSatelliteData(winrt.system.Object):
 @typing.final
 class Geolocator_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Geolocation.Geoposition>> Windows.Devices.Geolocation.Geolocator::GetGeopositionHistoryAsync(Windows.Foundation.DateTime)
+    # @deprecated("GetGeopositionHistoryAsync is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_geoposition_history_async(cls, start_time: datetime.datetime, /) -> windows_foundation.IAsyncOperation[typing.Sequence[Geoposition]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Geolocation.Geoposition>> Windows.Devices.Geolocation.Geolocator::GetGeopositionHistoryAsync(Windows.Foundation.DateTime,Windows.Foundation.TimeSpan)
+    # @deprecated("GetGeopositionHistoryWithDurationAsync is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_geoposition_history_with_duration_async(cls, start_time: datetime.datetime, duration: datetime.timedelta, /) -> windows_foundation.IAsyncOperation[typing.Sequence[Geoposition]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Geolocation.GeolocationAccessStatus> Windows.Devices.Geolocation.Geolocator::RequestAccessAsync()
     def request_access_async(cls) -> windows_foundation.IAsyncOperation[GeolocationAccessStatus]: ...

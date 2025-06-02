@@ -21,7 +21,10 @@ from winrt._winrt_windows_storage_provider import (
     StorageProviderKnownFolderSyncInfo,
     StorageProviderKnownFolderSyncRequestArgs,
     StorageProviderMoreInfoUI,
+    StorageProviderQueryResultSet,
     StorageProviderQuotaUI,
+    StorageProviderSearchQueryOptions,
+    StorageProviderSearchResult,
     StorageProviderStatusUI,
     StorageProviderSyncRootInfo,
     StorageProviderSyncRootManager,
@@ -33,6 +36,12 @@ from winrt._winrt_windows_storage_provider import (
     IStorageProviderKnownFolderSyncInfoSourceFactory,
     _IStorageProviderPropertyCapabilities,
     IStorageProviderPropertyCapabilities,
+    _IStorageProviderQueryResult,
+    IStorageProviderQueryResult,
+    _IStorageProviderSearchHandler,
+    IStorageProviderSearchHandler,
+    _IStorageProviderSearchHandlerFactory,
+    IStorageProviderSearchHandlerFactory,
     _IStorageProviderShareLinkSource,
     IStorageProviderShareLinkSource,
     _IStorageProviderStatusUISource,
@@ -57,6 +66,10 @@ __all__ = [
     "StorageProviderKnownFolderSyncStatus",
     "StorageProviderPopulationPolicy",
     "StorageProviderProtectionMode",
+    "StorageProviderResultKind",
+    "StorageProviderResultUsageKind",
+    "StorageProviderSearchMatchKind",
+    "StorageProviderSearchQueryStatus",
     "StorageProviderShareLinkState",
     "StorageProviderState",
     "StorageProviderUICommandState",
@@ -78,7 +91,10 @@ __all__ = [
     "StorageProviderKnownFolderSyncInfo",
     "StorageProviderKnownFolderSyncRequestArgs",
     "StorageProviderMoreInfoUI",
+    "StorageProviderQueryResultSet",
     "StorageProviderQuotaUI",
+    "StorageProviderSearchQueryOptions",
+    "StorageProviderSearchResult",
     "StorageProviderStatusUI",
     "StorageProviderSyncRootInfo",
     "StorageProviderSyncRootManager",
@@ -86,6 +102,9 @@ __all__ = [
     "IStorageProviderKnownFolderSyncInfoSource",
     "IStorageProviderKnownFolderSyncInfoSourceFactory",
     "IStorageProviderPropertyCapabilities",
+    "IStorageProviderQueryResult",
+    "IStorageProviderSearchHandler",
+    "IStorageProviderSearchHandlerFactory",
     "IStorageProviderShareLinkSource",
     "IStorageProviderStatusUISource",
     "IStorageProviderStatusUISourceFactory",
@@ -159,6 +178,34 @@ class StorageProviderPopulationPolicy(enum.IntEnum):
 class StorageProviderProtectionMode(enum.IntEnum):
     UNKNOWN = 0
     PERSONAL = 1
+
+class StorageProviderResultKind(enum.IntEnum):
+    SEARCH = 0
+    RECOMMENDED = 1
+    FAVORITES = 2
+    RECENT = 3
+    SHARED = 4
+    RELATED_FILES = 5
+    RELATED_CONVERSATIONS = 6
+
+class StorageProviderResultUsageKind(enum.IntEnum):
+    RENDERED = 0
+    OPENED = 1
+    SUGGESTION_RESPONSE_RECEIVED = 2
+
+class StorageProviderSearchMatchKind(enum.IntEnum):
+    LEXICAL = 0
+    SEMANTIC = 1
+
+class StorageProviderSearchQueryStatus(enum.IntEnum):
+    SUCCESS = 0
+    ERROR = 1
+    TIMEOUT = 2
+    NO_NETWORK = 3
+    NETWORK_ERROR = 4
+    NOT_SIGNED_IN = 5
+    QUERY_NOT_SUPPORTED = 6
+    SORT_ORDER_NOT_SUPPORTED = 7
 
 class StorageProviderShareLinkState(enum.IntEnum):
     ENABLED = 0

@@ -7,6 +7,7 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Storage.h>
+#include <winrt/Windows.Storage.Search.h>
 #include <winrt/Windows.Storage.Streams.h>
 #include <winrt/Windows.UI.h>
 
@@ -50,6 +51,18 @@ namespace py
 
     template<>
     inline constexpr const char* buffer_format<winrt::Windows::Storage::Provider::StorageProviderProtectionMode> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Windows::Storage::Provider::StorageProviderResultKind> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Windows::Storage::Provider::StorageProviderResultUsageKind> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Windows::Storage::Provider::StorageProviderSearchMatchKind> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Windows::Storage::Provider::StorageProviderSearchQueryStatus> = "i";
 
     template<>
     inline constexpr const char* buffer_format<winrt::Windows::Storage::Provider::StorageProviderShareLinkState> = "i";
@@ -156,6 +169,38 @@ namespace py
         static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.StorageProviderProtectionMode";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "StorageProviderProtectionMode";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Storage::Provider::StorageProviderResultKind>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.StorageProviderResultKind";
+        static constexpr const char* module_name = "winrt.windows.storage.provider";
+        static constexpr const char* type_name = "StorageProviderResultKind";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Storage::Provider::StorageProviderResultUsageKind>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.StorageProviderResultUsageKind";
+        static constexpr const char* module_name = "winrt.windows.storage.provider";
+        static constexpr const char* type_name = "StorageProviderResultUsageKind";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Storage::Provider::StorageProviderSearchMatchKind>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.StorageProviderSearchMatchKind";
+        static constexpr const char* module_name = "winrt.windows.storage.provider";
+        static constexpr const char* type_name = "StorageProviderSearchMatchKind";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Storage::Provider::StorageProviderSearchQueryStatus>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.StorageProviderSearchQueryStatus";
+        static constexpr const char* module_name = "winrt.windows.storage.provider";
+        static constexpr const char* type_name = "StorageProviderSearchQueryStatus";
     };
 
     template<>
@@ -327,11 +372,35 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Windows::Storage::Provider::StorageProviderQueryResultSet>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.StorageProviderQueryResultSet";
+        static constexpr const char* module_name = "winrt.windows.storage.provider";
+        static constexpr const char* type_name = "StorageProviderQueryResultSet";
+    };
+
+    template<>
     struct py_type<winrt::Windows::Storage::Provider::StorageProviderQuotaUI>
     {
         static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.StorageProviderQuotaUI";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "StorageProviderQuotaUI";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Storage::Provider::StorageProviderSearchQueryOptions>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.StorageProviderSearchQueryOptions";
+        static constexpr const char* module_name = "winrt.windows.storage.provider";
+        static constexpr const char* type_name = "StorageProviderSearchQueryOptions";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Storage::Provider::StorageProviderSearchResult>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.StorageProviderSearchResult";
+        static constexpr const char* module_name = "winrt.windows.storage.provider";
+        static constexpr const char* type_name = "StorageProviderSearchResult";
     };
 
     template<>
@@ -391,6 +460,30 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Windows::Storage::Provider::IStorageProviderQueryResult>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider._IStorageProviderQueryResult";
+        static constexpr const char* module_name = "winrt.windows.storage.provider";
+        static constexpr const char* type_name = "_IStorageProviderQueryResult";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Storage::Provider::IStorageProviderSearchHandler>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider._IStorageProviderSearchHandler";
+        static constexpr const char* module_name = "winrt.windows.storage.provider";
+        static constexpr const char* type_name = "_IStorageProviderSearchHandler";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Storage::Provider::IStorageProviderSearchHandlerFactory>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider._IStorageProviderSearchHandlerFactory";
+        static constexpr const char* module_name = "winrt.windows.storage.provider";
+        static constexpr const char* type_name = "_IStorageProviderSearchHandlerFactory";
+    };
+
+    template<>
     struct py_type<winrt::Windows::Storage::Provider::IStorageProviderShareLinkSource>
     {
         static constexpr std::string_view qualified_name = "winrt.windows.storage.provider._IStorageProviderShareLinkSource";
@@ -441,6 +534,10 @@ namespace py
 
 #if __has_include("py.Windows.Storage.h")
 #include "py.Windows.Storage.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Search.h")
+#include "py.Windows.Storage.Search.h"
 #endif
 
 #if __has_include("py.Windows.Storage.Streams.h")
@@ -503,7 +600,10 @@ namespace py::wrapper::Windows::Storage::Provider
     using StorageProviderKnownFolderSyncInfo = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncInfo>;
     using StorageProviderKnownFolderSyncRequestArgs = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncRequestArgs>;
     using StorageProviderMoreInfoUI = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderMoreInfoUI>;
+    using StorageProviderQueryResultSet = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderQueryResultSet>;
     using StorageProviderQuotaUI = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderQuotaUI>;
+    using StorageProviderSearchQueryOptions = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderSearchQueryOptions>;
+    using StorageProviderSearchResult = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderSearchResult>;
     using StorageProviderStatusUI = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderStatusUI>;
     using StorageProviderSyncRootInfo = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderSyncRootInfo>;
     using StorageProviderSyncRootManager = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderSyncRootManager>;
@@ -511,6 +611,9 @@ namespace py::wrapper::Windows::Storage::Provider
     using IStorageProviderKnownFolderSyncInfoSource = py::winrt_wrapper<winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource>;
     using IStorageProviderKnownFolderSyncInfoSourceFactory = py::winrt_wrapper<winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSourceFactory>;
     using IStorageProviderPropertyCapabilities = py::winrt_wrapper<winrt::Windows::Storage::Provider::IStorageProviderPropertyCapabilities>;
+    using IStorageProviderQueryResult = py::winrt_wrapper<winrt::Windows::Storage::Provider::IStorageProviderQueryResult>;
+    using IStorageProviderSearchHandler = py::winrt_wrapper<winrt::Windows::Storage::Provider::IStorageProviderSearchHandler>;
+    using IStorageProviderSearchHandlerFactory = py::winrt_wrapper<winrt::Windows::Storage::Provider::IStorageProviderSearchHandlerFactory>;
     using IStorageProviderShareLinkSource = py::winrt_wrapper<winrt::Windows::Storage::Provider::IStorageProviderShareLinkSource>;
     using IStorageProviderStatusUISource = py::winrt_wrapper<winrt::Windows::Storage::Provider::IStorageProviderStatusUISource>;
     using IStorageProviderStatusUISourceFactory = py::winrt_wrapper<winrt::Windows::Storage::Provider::IStorageProviderStatusUISourceFactory>;

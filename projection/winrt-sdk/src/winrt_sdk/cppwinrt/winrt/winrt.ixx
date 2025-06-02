@@ -83,6 +83,9 @@ namespace winrt::impl
 export module winrt;
 #define WINRT_EXPORT export
 
+#include "winrt/Windows.AI.Actions.h"
+#include "winrt/Windows.AI.Actions.Hosting.h"
+#include "winrt/Windows.AI.Actions.Provider.h"
 #include "winrt/Windows.AI.MachineLearning.h"
 #include "winrt/Windows.AI.MachineLearning.Preview.h"
 #include "winrt/Windows.ApplicationModel.h"
