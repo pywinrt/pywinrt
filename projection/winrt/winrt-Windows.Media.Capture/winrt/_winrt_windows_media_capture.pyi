@@ -1942,39 +1942,6 @@ class PhotoConfirmationCapturedEventArgs(winrt.system.Object):
     def frame(self) -> CapturedFrame: ...
 
 @typing.final
-class ScreenCapture_Static(winrt._winrt.IInspectable_Static):
-    # Windows.Media.Capture.ScreenCapture Windows.Media.Capture.ScreenCapture::GetForCurrentView()
-    def get_for_current_view(cls) -> ScreenCapture: ...
-
-@typing.final
-class ScreenCapture(winrt.system.Object, metaclass=ScreenCapture_Static):
-    # Windows.Foundation.EventRegistrationToken Windows.Media.Capture.ScreenCapture::add_SourceSuspensionChanged(Windows.Foundation.TypedEventHandler`2<Windows.Media.Capture.ScreenCapture,Windows.Media.Capture.SourceSuspensionChangedEventArgs>)
-    def add_source_suspension_changed(self, handler: windows_foundation.TypedEventHandler[ScreenCapture, SourceSuspensionChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
-    # System.Void Windows.Media.Capture.ScreenCapture::remove_SourceSuspensionChanged(Windows.Foundation.EventRegistrationToken)
-    def remove_source_suspension_changed(self, token: typing.Union[windows_foundation.EventRegistrationToken, typing.Tuple[winrt.system.Int64]], /) -> None: ...
-    # Windows.Media.Core.IMediaSource Windows.Media.Capture.ScreenCapture::get_AudioSource()
-    @_property
-    def audio_source(self) -> windows_media_core.IMediaSource: ...
-    # System.Boolean Windows.Media.Capture.ScreenCapture::get_IsAudioSuspended()
-    @_property
-    def is_audio_suspended(self) -> bool: ...
-    # System.Boolean Windows.Media.Capture.ScreenCapture::get_IsVideoSuspended()
-    @_property
-    def is_video_suspended(self) -> bool: ...
-    # Windows.Media.Core.IMediaSource Windows.Media.Capture.ScreenCapture::get_VideoSource()
-    @_property
-    def video_source(self) -> windows_media_core.IMediaSource: ...
-
-@typing.final
-class SourceSuspensionChangedEventArgs(winrt.system.Object):
-    # System.Boolean Windows.Media.Capture.SourceSuspensionChangedEventArgs::get_IsAudioSuspended()
-    @_property
-    def is_audio_suspended(self) -> bool: ...
-    # System.Boolean Windows.Media.Capture.SourceSuspensionChangedEventArgs::get_IsVideoSuspended()
-    @_property
-    def is_video_suspended(self) -> bool: ...
-
-@typing.final
 class VideoStreamConfiguration(winrt.system.Object):
     # Windows.Media.MediaProperties.VideoEncodingProperties Windows.Media.Capture.VideoStreamConfiguration::get_InputProperties()
     @_property

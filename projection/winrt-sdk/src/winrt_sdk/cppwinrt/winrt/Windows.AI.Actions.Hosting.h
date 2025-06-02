@@ -198,6 +198,78 @@ namespace winrt::impl
         }
         return com_array<winrt::Windows::AI::Actions::Hosting::ActionOverload>{ result, result_impl_size, take_ownership_from_abi };
     }
+    template <typename D> auto consume_Windows_AI_Actions_Hosting_IActionDefinition2<D>::DisplaysUI() const
+    {
+        bool value{};
+        if constexpr (!std::is_same_v<D, winrt::Windows::AI::Actions::Hosting::IActionDefinition2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Windows::AI::Actions::Hosting::IActionDefinition2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::Hosting::IActionDefinition2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_DisplaysUI(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::Hosting::IActionDefinition2>**)this;
+            check_hresult(_winrt_abi_type->get_DisplaysUI(&value));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Windows_AI_Actions_Hosting_IActionDefinition2<D>::DisclaimerKind() const
+    {
+        winrt::Windows::AI::Actions::Hosting::ActionDisclaimerKind value{};
+        if constexpr (!std::is_same_v<D, winrt::Windows::AI::Actions::Hosting::IActionDefinition2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Windows::AI::Actions::Hosting::IActionDefinition2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::Hosting::IActionDefinition2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_DisclaimerKind(reinterpret_cast<int32_t*>(&value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::Hosting::IActionDefinition2>**)this;
+            check_hresult(_winrt_abi_type->get_DisclaimerKind(reinterpret_cast<int32_t*>(&value)));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Windows_AI_Actions_Hosting_IActionDefinition2<D>::SchemaVersion() const
+    {
+        uint32_t value{};
+        if constexpr (!std::is_same_v<D, winrt::Windows::AI::Actions::Hosting::IActionDefinition2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Windows::AI::Actions::Hosting::IActionDefinition2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::Hosting::IActionDefinition2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_SchemaVersion(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::Hosting::IActionDefinition2>**)this;
+            check_hresult(_winrt_abi_type->get_SchemaVersion(&value));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Windows_AI_Actions_Hosting_IActionDefinition2<D>::PackageRelativeApplicationId() const
+    {
+        void* value{};
+        if constexpr (!std::is_same_v<D, winrt::Windows::AI::Actions::Hosting::IActionDefinition2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Windows::AI::Actions::Hosting::IActionDefinition2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::Hosting::IActionDefinition2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_PackageRelativeApplicationId(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::Hosting::IActionDefinition2>**)this;
+            check_hresult(_winrt_abi_type->get_PackageRelativeApplicationId(&value));
+        }
+        return hstring{ value, take_ownership_from_abi };
+    }
     template <typename D> auto consume_Windows_AI_Actions_Hosting_IActionEntityRegistrationInfo<D>::Name() const
     {
         void* value{};
@@ -321,6 +393,42 @@ namespace winrt::impl
         }
         return winrt::Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
+    template <typename D> auto consume_Windows_AI_Actions_Hosting_IActionOverload2<D>::InvokeFeedbackAsync(winrt::Windows::AI::Actions::ActionInvocationContext const& context, winrt::Windows::AI::Actions::ActionFeedback const& feedback) const
+    {
+        void* operation{};
+        if constexpr (!std::is_same_v<D, winrt::Windows::AI::Actions::Hosting::IActionOverload2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Windows::AI::Actions::Hosting::IActionOverload2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::Hosting::IActionOverload2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->InvokeFeedbackAsync(*(void**)(&context), *(void**)(&feedback), &operation));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::Hosting::IActionOverload2>**)this;
+            check_hresult(_winrt_abi_type->InvokeFeedbackAsync(*(void**)(&context), *(void**)(&feedback), &operation));
+        }
+        return winrt::Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Windows_AI_Actions_Hosting_IActionOverload2<D>::GetSupportsFeedback() const
+    {
+        bool result{};
+        if constexpr (!std::is_same_v<D, winrt::Windows::AI::Actions::Hosting::IActionOverload2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Windows::AI::Actions::Hosting::IActionOverload2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::Hosting::IActionOverload2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->GetSupportsFeedback(&result));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::Hosting::IActionOverload2>**)this;
+            check_hresult(_winrt_abi_type->GetSupportsFeedback(&result));
+        }
+        return result;
+    }
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, winrt::Windows::AI::Actions::Hosting::IActionCatalog> : produce_base<D, winrt::Windows::AI::Actions::Hosting::IActionCatalog>
@@ -413,6 +521,41 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Windows::AI::Actions::Hosting::IActionDefinition2> : produce_base<D, winrt::Windows::AI::Actions::Hosting::IActionDefinition2>
+    {
+        int32_t __stdcall get_DisplaysUI(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().DisplaysUI());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_DisclaimerKind(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::AI::Actions::Hosting::ActionDisclaimerKind>(this->shim().DisclaimerKind());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_SchemaVersion(uint32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<uint32_t>(this->shim().SchemaVersion());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_PackageRelativeApplicationId(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().PackageRelativeApplicationId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Windows::AI::Actions::Hosting::IActionEntityRegistrationInfo> : produce_base<D, winrt::Windows::AI::Actions::Hosting::IActionEntityRegistrationInfo>
     {
         int32_t __stdcall get_Name(void** value) noexcept final try
@@ -476,6 +619,27 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
     };
 #endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Windows::AI::Actions::Hosting::IActionOverload2> : produce_base<D, winrt::Windows::AI::Actions::Hosting::IActionOverload2>
+    {
+        int32_t __stdcall InvokeFeedbackAsync(void* context, void* feedback, void** operation) noexcept final try
+        {
+            clear_abi(operation);
+            typename D::abi_guard guard(this->shim());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncAction>(this->shim().InvokeFeedbackAsync(*reinterpret_cast<winrt::Windows::AI::Actions::ActionInvocationContext const*>(&context), *reinterpret_cast<winrt::Windows::AI::Actions::ActionFeedback const*>(&feedback)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetSupportsFeedback(bool* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<bool>(this->shim().GetSupportsFeedback());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
 }
 WINRT_EXPORT namespace winrt::Windows::AI::Actions::Hosting
 {
@@ -485,8 +649,10 @@ namespace std
 #ifndef WINRT_LEAN_AND_MEAN
     template<> struct hash<winrt::Windows::AI::Actions::Hosting::IActionCatalog> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::AI::Actions::Hosting::IActionDefinition> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::AI::Actions::Hosting::IActionDefinition2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::AI::Actions::Hosting::IActionEntityRegistrationInfo> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::AI::Actions::Hosting::IActionOverload> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::AI::Actions::Hosting::IActionOverload2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::AI::Actions::Hosting::ActionCatalog> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::AI::Actions::Hosting::ActionDefinition> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::AI::Actions::Hosting::ActionEntityRegistrationInfo> : winrt::impl::hash_base {};

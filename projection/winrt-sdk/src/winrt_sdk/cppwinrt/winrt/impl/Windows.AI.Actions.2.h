@@ -8,7 +8,7 @@
 WINRT_EXPORT namespace winrt::Windows::AI::Actions
 {
     struct WINRT_IMPL_EMPTY_BASES ActionEntity : winrt::Windows::AI::Actions::IActionEntity,
-        impl::require<ActionEntity, winrt::Windows::Foundation::IClosable>
+        impl::require<ActionEntity, winrt::Windows::AI::Actions::IActionEntity2, winrt::Windows::Foundation::IClosable>
     {
         ActionEntity(std::nullptr_t) noexcept {}
         ActionEntity(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::AI::Actions::IActionEntity(ptr, take_ownership_from_abi) {}
@@ -20,33 +20,54 @@ WINRT_EXPORT namespace winrt::Windows::AI::Actions
         ActionEntityDisplayInfo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::AI::Actions::IActionEntityDisplayInfo(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES ActionEntityFactory : winrt::Windows::AI::Actions::IActionEntityFactory2,
-        impl::require<ActionEntityFactory, winrt::Windows::Foundation::IClosable>
+        impl::require<ActionEntityFactory, winrt::Windows::AI::Actions::IActionEntityFactory3, winrt::Windows::Foundation::IClosable>
     {
         ActionEntityFactory(std::nullptr_t) noexcept {}
         ActionEntityFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::AI::Actions::IActionEntityFactory2(ptr, take_ownership_from_abi) {}
+        using winrt::Windows::AI::Actions::IActionEntityFactory2::CreateTextEntity;
+        using impl::consume_t<ActionEntityFactory, winrt::Windows::AI::Actions::IActionEntityFactory3>::CreateTextEntity;
+    };
+    struct WINRT_IMPL_EMPTY_BASES ActionFeedback : winrt::Windows::AI::Actions::IActionFeedback,
+        impl::require<ActionFeedback, winrt::Windows::Foundation::IClosable>
+    {
+        ActionFeedback(std::nullptr_t) noexcept {}
+        ActionFeedback(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::AI::Actions::IActionFeedback(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES ActionInvocationContext : winrt::Windows::AI::Actions::IActionInvocationContext,
-        impl::require<ActionInvocationContext, winrt::Windows::Foundation::IClosable>
+        impl::require<ActionInvocationContext, winrt::Windows::AI::Actions::IActionInvocationContext2, winrt::Windows::Foundation::IClosable>
     {
         ActionInvocationContext(std::nullptr_t) noexcept {}
         ActionInvocationContext(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::AI::Actions::IActionInvocationContext(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES ActionInvocationHelpDetails : winrt::Windows::AI::Actions::IActionInvocationHelpDetails,
+        impl::require<ActionInvocationHelpDetails, winrt::Windows::Foundation::IClosable>
+    {
+        ActionInvocationHelpDetails(std::nullptr_t) noexcept {}
+        ActionInvocationHelpDetails(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::AI::Actions::IActionInvocationHelpDetails(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES ActionRuntime : winrt::Windows::AI::Actions::IActionRuntime,
-        impl::require<ActionRuntime, winrt::Windows::Foundation::IClosable>
+        impl::require<ActionRuntime, winrt::Windows::AI::Actions::IActionRuntime2, winrt::Windows::Foundation::IClosable>
     {
         ActionRuntime(std::nullptr_t) noexcept {}
         ActionRuntime(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::AI::Actions::IActionRuntime(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES ContactActionEntity : winrt::Windows::AI::Actions::IContactActionEntity,
+        impl::base<ContactActionEntity, winrt::Windows::AI::Actions::ActionEntity>,
+        impl::require<ContactActionEntity, winrt::Windows::AI::Actions::IActionEntity, winrt::Windows::AI::Actions::IActionEntity2, winrt::Windows::Foundation::IClosable>
+    {
+        ContactActionEntity(std::nullptr_t) noexcept {}
+        ContactActionEntity(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::AI::Actions::IContactActionEntity(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES DocumentActionEntity : winrt::Windows::AI::Actions::IDocumentActionEntity,
         impl::base<DocumentActionEntity, winrt::Windows::AI::Actions::ActionEntity>,
-        impl::require<DocumentActionEntity, winrt::Windows::AI::Actions::IActionEntity, winrt::Windows::Foundation::IClosable>
+        impl::require<DocumentActionEntity, winrt::Windows::AI::Actions::IActionEntity, winrt::Windows::AI::Actions::IActionEntity2, winrt::Windows::Foundation::IClosable>
     {
         DocumentActionEntity(std::nullptr_t) noexcept {}
         DocumentActionEntity(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::AI::Actions::IDocumentActionEntity(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES FileActionEntity : winrt::Windows::AI::Actions::IFileActionEntity,
         impl::base<FileActionEntity, winrt::Windows::AI::Actions::ActionEntity>,
-        impl::require<FileActionEntity, winrt::Windows::AI::Actions::IActionEntity, winrt::Windows::Foundation::IClosable>
+        impl::require<FileActionEntity, winrt::Windows::AI::Actions::IActionEntity, winrt::Windows::AI::Actions::IActionEntity2, winrt::Windows::Foundation::IClosable>
     {
         FileActionEntity(std::nullptr_t) noexcept {}
         FileActionEntity(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::AI::Actions::IFileActionEntity(ptr, take_ownership_from_abi) {}
@@ -59,14 +80,46 @@ WINRT_EXPORT namespace winrt::Windows::AI::Actions
     };
     struct WINRT_IMPL_EMPTY_BASES PhotoActionEntity : winrt::Windows::AI::Actions::IPhotoActionEntity,
         impl::base<PhotoActionEntity, winrt::Windows::AI::Actions::ActionEntity>,
-        impl::require<PhotoActionEntity, winrt::Windows::AI::Actions::IActionEntity, winrt::Windows::Foundation::IClosable>
+        impl::require<PhotoActionEntity, winrt::Windows::AI::Actions::IActionEntity, winrt::Windows::AI::Actions::IActionEntity2, winrt::Windows::Foundation::IClosable>
     {
         PhotoActionEntity(std::nullptr_t) noexcept {}
         PhotoActionEntity(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::AI::Actions::IPhotoActionEntity(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES RemoteFileActionEntity : winrt::Windows::AI::Actions::IRemoteFileActionEntity,
+        impl::base<RemoteFileActionEntity, winrt::Windows::AI::Actions::ActionEntity>,
+        impl::require<RemoteFileActionEntity, winrt::Windows::AI::Actions::IActionEntity, winrt::Windows::AI::Actions::IActionEntity2, winrt::Windows::Foundation::IClosable>
+    {
+        RemoteFileActionEntity(std::nullptr_t) noexcept {}
+        RemoteFileActionEntity(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::AI::Actions::IRemoteFileActionEntity(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES StreamingTextActionEntity : winrt::Windows::AI::Actions::IStreamingTextActionEntity,
+        impl::base<StreamingTextActionEntity, winrt::Windows::AI::Actions::ActionEntity>,
+        impl::require<StreamingTextActionEntity, winrt::Windows::AI::Actions::IActionEntity, winrt::Windows::AI::Actions::IActionEntity2, winrt::Windows::Foundation::IClosable>
+    {
+        StreamingTextActionEntity(std::nullptr_t) noexcept {}
+        StreamingTextActionEntity(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::AI::Actions::IStreamingTextActionEntity(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES StreamingTextActionEntityTextChangedArgs : winrt::Windows::AI::Actions::IStreamingTextActionEntityTextChangedArgs
+    {
+        StreamingTextActionEntityTextChangedArgs(std::nullptr_t) noexcept {}
+        StreamingTextActionEntityTextChangedArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::AI::Actions::IStreamingTextActionEntityTextChangedArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES StreamingTextActionEntityWriter : winrt::Windows::AI::Actions::IStreamingTextActionEntityWriter,
+        impl::require<StreamingTextActionEntityWriter, winrt::Windows::Foundation::IClosable>
+    {
+        StreamingTextActionEntityWriter(std::nullptr_t) noexcept {}
+        StreamingTextActionEntityWriter(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::AI::Actions::IStreamingTextActionEntityWriter(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES TableActionEntity : winrt::Windows::AI::Actions::ITableActionEntity,
+        impl::base<TableActionEntity, winrt::Windows::AI::Actions::ActionEntity>,
+        impl::require<TableActionEntity, winrt::Windows::AI::Actions::IActionEntity, winrt::Windows::AI::Actions::IActionEntity2, winrt::Windows::Foundation::IClosable>
+    {
+        TableActionEntity(std::nullptr_t) noexcept {}
+        TableActionEntity(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::AI::Actions::ITableActionEntity(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES TextActionEntity : winrt::Windows::AI::Actions::ITextActionEntity,
         impl::base<TextActionEntity, winrt::Windows::AI::Actions::ActionEntity>,
-        impl::require<TextActionEntity, winrt::Windows::AI::Actions::IActionEntity, winrt::Windows::Foundation::IClosable>
+        impl::require<TextActionEntity, winrt::Windows::AI::Actions::ITextActionEntity2, winrt::Windows::AI::Actions::IActionEntity, winrt::Windows::AI::Actions::IActionEntity2, winrt::Windows::Foundation::IClosable>
     {
         TextActionEntity(std::nullptr_t) noexcept {}
         TextActionEntity(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::AI::Actions::ITextActionEntity(ptr, take_ownership_from_abi) {}

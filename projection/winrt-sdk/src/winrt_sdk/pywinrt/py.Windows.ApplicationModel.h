@@ -170,14 +170,6 @@ namespace py
     };
 
     template<>
-    struct py_type<winrt::Windows::ApplicationModel::CameraApplicationManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.CameraApplicationManager";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel";
-        static constexpr const char* type_name = "CameraApplicationManager";
-    };
-
-    template<>
     struct py_type<winrt::Windows::ApplicationModel::DesignMode>
     {
         static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.DesignMode";
@@ -506,7 +498,6 @@ namespace py::wrapper::Windows::ApplicationModel
     using AppInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::AppInfo>;
     using AppInstallerInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::AppInstallerInfo>;
     using AppInstance = py::winrt_wrapper<winrt::Windows::ApplicationModel::AppInstance>;
-    using CameraApplicationManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::CameraApplicationManager>;
     using DesignMode = py::winrt_wrapper<winrt::Windows::ApplicationModel::DesignMode>;
     using EnteredBackgroundEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::EnteredBackgroundEventArgs>;
     using FindRelatedPackagesOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::FindRelatedPackagesOptions>;

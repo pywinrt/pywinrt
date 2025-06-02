@@ -5,7 +5,9 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.AI.Actions.Hosting.h>
+#include <winrt/Windows.ApplicationModel.Contacts.h>
 #include <winrt/Windows.Foundation.h>
+#include <winrt/Windows.UI.h>
 
 #include <winrt/Windows.AI.Actions.h>
 
@@ -19,7 +21,19 @@ namespace py
     inline constexpr const char* buffer_format<winrt::Windows::AI::Actions::ActionEntityKind> = "i";
 
     template<>
+    inline constexpr const char* buffer_format<winrt::Windows::AI::Actions::ActionEntityTextFormat> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Windows::AI::Actions::ActionFeedbackKind> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Windows::AI::Actions::ActionInvocationHelpKind> = "i";
+
+    template<>
     inline constexpr const char* buffer_format<winrt::Windows::AI::Actions::ActionInvocationResult> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Windows::AI::Actions::RemoteFileKind> = "i";
 
 
     template<>
@@ -31,11 +45,43 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Windows::AI::Actions::ActionEntityTextFormat>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.actions.ActionEntityTextFormat";
+        static constexpr const char* module_name = "winrt.windows.ai.actions";
+        static constexpr const char* type_name = "ActionEntityTextFormat";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::AI::Actions::ActionFeedbackKind>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.actions.ActionFeedbackKind";
+        static constexpr const char* module_name = "winrt.windows.ai.actions";
+        static constexpr const char* type_name = "ActionFeedbackKind";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::AI::Actions::ActionInvocationHelpKind>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.actions.ActionInvocationHelpKind";
+        static constexpr const char* module_name = "winrt.windows.ai.actions";
+        static constexpr const char* type_name = "ActionInvocationHelpKind";
+    };
+
+    template<>
     struct py_type<winrt::Windows::AI::Actions::ActionInvocationResult>
     {
         static constexpr std::string_view qualified_name = "winrt.windows.ai.actions.ActionInvocationResult";
         static constexpr const char* module_name = "winrt.windows.ai.actions";
         static constexpr const char* type_name = "ActionInvocationResult";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::AI::Actions::RemoteFileKind>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.actions.RemoteFileKind";
+        static constexpr const char* module_name = "winrt.windows.ai.actions";
+        static constexpr const char* type_name = "RemoteFileKind";
     };
 
     template<>
@@ -63,6 +109,14 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Windows::AI::Actions::ActionFeedback>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.actions.ActionFeedback";
+        static constexpr const char* module_name = "winrt.windows.ai.actions";
+        static constexpr const char* type_name = "ActionFeedback";
+    };
+
+    template<>
     struct py_type<winrt::Windows::AI::Actions::ActionInvocationContext>
     {
         static constexpr std::string_view qualified_name = "winrt.windows.ai.actions.ActionInvocationContext";
@@ -71,11 +125,27 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Windows::AI::Actions::ActionInvocationHelpDetails>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.actions.ActionInvocationHelpDetails";
+        static constexpr const char* module_name = "winrt.windows.ai.actions";
+        static constexpr const char* type_name = "ActionInvocationHelpDetails";
+    };
+
+    template<>
     struct py_type<winrt::Windows::AI::Actions::ActionRuntime>
     {
         static constexpr std::string_view qualified_name = "winrt.windows.ai.actions.ActionRuntime";
         static constexpr const char* module_name = "winrt.windows.ai.actions";
         static constexpr const char* type_name = "ActionRuntime";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::AI::Actions::ContactActionEntity>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.actions.ContactActionEntity";
+        static constexpr const char* module_name = "winrt.windows.ai.actions";
+        static constexpr const char* type_name = "ContactActionEntity";
     };
 
     template<>
@@ -111,6 +181,46 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Windows::AI::Actions::RemoteFileActionEntity>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.actions.RemoteFileActionEntity";
+        static constexpr const char* module_name = "winrt.windows.ai.actions";
+        static constexpr const char* type_name = "RemoteFileActionEntity";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::AI::Actions::StreamingTextActionEntity>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.actions.StreamingTextActionEntity";
+        static constexpr const char* module_name = "winrt.windows.ai.actions";
+        static constexpr const char* type_name = "StreamingTextActionEntity";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::AI::Actions::StreamingTextActionEntityTextChangedArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.actions.StreamingTextActionEntityTextChangedArgs";
+        static constexpr const char* module_name = "winrt.windows.ai.actions";
+        static constexpr const char* type_name = "StreamingTextActionEntityTextChangedArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::AI::Actions::StreamingTextActionEntityWriter>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.actions.StreamingTextActionEntityWriter";
+        static constexpr const char* module_name = "winrt.windows.ai.actions";
+        static constexpr const char* type_name = "StreamingTextActionEntityWriter";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::AI::Actions::TableActionEntity>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.actions.TableActionEntity";
+        static constexpr const char* module_name = "winrt.windows.ai.actions";
+        static constexpr const char* type_name = "TableActionEntity";
+    };
+
+    template<>
     struct py_type<winrt::Windows::AI::Actions::TextActionEntity>
     {
         static constexpr std::string_view qualified_name = "winrt.windows.ai.actions.TextActionEntity";
@@ -123,8 +233,16 @@ namespace py
 #include "py.Windows.AI.Actions.Hosting.h"
 #endif
 
+#if __has_include("py.Windows.ApplicationModel.Contacts.h")
+#include "py.Windows.ApplicationModel.Contacts.h"
+#endif
+
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
 #endif
 
 namespace py::impl::Windows::AI::Actions
@@ -136,12 +254,20 @@ namespace py::wrapper::Windows::AI::Actions
     using ActionEntity = py::winrt_wrapper<winrt::Windows::AI::Actions::ActionEntity>;
     using ActionEntityDisplayInfo = py::winrt_wrapper<winrt::Windows::AI::Actions::ActionEntityDisplayInfo>;
     using ActionEntityFactory = py::winrt_wrapper<winrt::Windows::AI::Actions::ActionEntityFactory>;
+    using ActionFeedback = py::winrt_wrapper<winrt::Windows::AI::Actions::ActionFeedback>;
     using ActionInvocationContext = py::winrt_wrapper<winrt::Windows::AI::Actions::ActionInvocationContext>;
+    using ActionInvocationHelpDetails = py::winrt_wrapper<winrt::Windows::AI::Actions::ActionInvocationHelpDetails>;
     using ActionRuntime = py::winrt_wrapper<winrt::Windows::AI::Actions::ActionRuntime>;
+    using ContactActionEntity = py::winrt_wrapper<winrt::Windows::AI::Actions::ContactActionEntity>;
     using DocumentActionEntity = py::winrt_wrapper<winrt::Windows::AI::Actions::DocumentActionEntity>;
     using FileActionEntity = py::winrt_wrapper<winrt::Windows::AI::Actions::FileActionEntity>;
     using NamedActionEntity = py::winrt_wrapper<winrt::Windows::AI::Actions::NamedActionEntity>;
     using PhotoActionEntity = py::winrt_wrapper<winrt::Windows::AI::Actions::PhotoActionEntity>;
+    using RemoteFileActionEntity = py::winrt_wrapper<winrt::Windows::AI::Actions::RemoteFileActionEntity>;
+    using StreamingTextActionEntity = py::winrt_wrapper<winrt::Windows::AI::Actions::StreamingTextActionEntity>;
+    using StreamingTextActionEntityTextChangedArgs = py::winrt_wrapper<winrt::Windows::AI::Actions::StreamingTextActionEntityTextChangedArgs>;
+    using StreamingTextActionEntityWriter = py::winrt_wrapper<winrt::Windows::AI::Actions::StreamingTextActionEntityWriter>;
+    using TableActionEntity = py::winrt_wrapper<winrt::Windows::AI::Actions::TableActionEntity>;
     using TextActionEntity = py::winrt_wrapper<winrt::Windows::AI::Actions::TextActionEntity>;
 }
 

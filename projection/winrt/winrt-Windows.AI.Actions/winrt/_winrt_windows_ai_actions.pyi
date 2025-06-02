@@ -10,9 +10,11 @@ from builtins import property as _property
 import winrt._winrt
 import winrt.system
 import winrt.windows.ai.actions.hosting as windows_ai_actions_hosting
+import winrt.windows.applicationmodel.contacts as windows_applicationmodel_contacts
 import winrt.windows.foundation as windows_foundation
+import winrt.windows.ui as windows_ui
 
-from winrt.windows.ai.actions import ActionEntityKind, ActionInvocationResult
+from winrt.windows.ai.actions import ActionEntityKind, ActionEntityTextFormat, ActionFeedbackKind, ActionInvocationHelpKind, ActionInvocationResult, RemoteFileKind
 
 Self = typing.TypeVar('Self')
 
@@ -32,6 +34,10 @@ class ActionEntity(winrt.system.Object, windows_foundation.IClosable, metaclass=
     @_property
     @typing.final
     def kind(self) -> ActionEntityKind: ...
+    # System.String Windows.AI.Actions.ActionEntity::get_Id()
+    @_property
+    @typing.final
+    def id(self) -> str: ...
 
 @typing.final
 class ActionEntityDisplayInfo(winrt.system.Object, windows_foundation.IClosable):
@@ -52,6 +58,9 @@ class ActionEntityFactory(winrt.system.Object, windows_foundation.IClosable, met
     # System.Void Windows.AI.Actions.ActionEntityFactory::Close()
     def close(self) -> None: ...
     @typing.final
+    # Windows.AI.Actions.ContactActionEntity Windows.AI.Actions.ActionEntityFactory::CreateContactEntity(Windows.ApplicationModel.Contacts.Contact)
+    def create_contact_entity(self, contact: windows_applicationmodel_contacts.Contact, /) -> ContactActionEntity: ...
+    @typing.final
     # Windows.AI.Actions.DocumentActionEntity Windows.AI.Actions.ActionEntityFactory::CreateDocumentEntity(System.String)
     def create_document_entity(self, path: str, /) -> DocumentActionEntity: ...
     @typing.final
@@ -61,8 +70,30 @@ class ActionEntityFactory(winrt.system.Object, windows_foundation.IClosable, met
     # Windows.AI.Actions.PhotoActionEntity Windows.AI.Actions.ActionEntityFactory::CreatePhotoEntity(System.String)
     def create_photo_entity(self, path: str, /) -> PhotoActionEntity: ...
     @typing.final
+    # Windows.AI.Actions.RemoteFileActionEntity Windows.AI.Actions.ActionEntityFactory::CreateRemoteFileEntity(System.String,Windows.AI.Actions.RemoteFileKind,Windows.Foundation.Uri,System.String,System.String,System.String,System.String,System.String)
+    def create_remote_file_entity(self, source_id: str, file_kind: RemoteFileKind, source_uri: windows_foundation.Uri, file_id: str, content_type: str, drive_id: str, account_id: str, extension: str, /) -> RemoteFileActionEntity: ...
+    @typing.final
+    # Windows.AI.Actions.StreamingTextActionEntityWriter Windows.AI.Actions.ActionEntityFactory::CreateStreamingTextActionEntityWriter(Windows.AI.Actions.ActionEntityTextFormat)
+    def create_streaming_text_action_entity_writer(self, text_format: ActionEntityTextFormat, /) -> StreamingTextActionEntityWriter: ...
+    @typing.final
+    # Windows.AI.Actions.TableActionEntity Windows.AI.Actions.ActionEntityFactory::CreateTableEntity(System.String[],System.UInt32)
+    def create_table_entity(self, data: typing.Union[winrt.system.Array[str], winrt.system.ReadableBuffer], column_count: winrt.system.UInt32, /) -> TableActionEntity: ...
+    @typing.final
     # Windows.AI.Actions.TextActionEntity Windows.AI.Actions.ActionEntityFactory::CreateTextEntity(System.String)
     def create_text_entity(self, text: str, /) -> TextActionEntity: ...
+    @typing.final
+    # Windows.AI.Actions.TextActionEntity Windows.AI.Actions.ActionEntityFactory::CreateTextEntity(System.String,Windows.AI.Actions.ActionEntityTextFormat)
+    def create_text_entity_with_text_format(self, text: str, text_format: ActionEntityTextFormat, /) -> TextActionEntity: ...
+
+@typing.final
+class ActionFeedback(winrt.system.Object, windows_foundation.IClosable):
+    def __enter__(self: Self) -> Self: ...
+    def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
+    # System.Void Windows.AI.Actions.ActionFeedback::Close()
+    def close(self) -> None: ...
+    # Windows.AI.Actions.ActionFeedbackKind Windows.AI.Actions.ActionFeedback::get_FeedbackKind()
+    @_property
+    def feedback_kind(self) -> ActionFeedbackKind: ...
 
 @typing.final
 class ActionInvocationContext(winrt.system.Object, windows_foundation.IClosable):
@@ -96,9 +127,58 @@ class ActionInvocationContext(winrt.system.Object, windows_foundation.IClosable)
     # Windows.AI.Actions.ActionEntityFactory Windows.AI.Actions.ActionInvocationContext::get_EntityFactory()
     @_property
     def entity_factory(self) -> ActionEntityFactory: ...
-    # System.String Windows.AI.Actions.ActionInvocationContext::get_InvokerAumid()
+    # System.String Windows.AI.Actions.ActionInvocationContext::get_InvokerPackageFamilyName()
     @_property
-    def invoker_aumid(self) -> str: ...
+    def invoker_package_family_name(self) -> str: ...
+    # System.String Windows.AI.Actions.ActionInvocationContext::get_ActionId()
+    @_property
+    def action_id(self) -> str: ...
+    # Windows.AI.Actions.ActionInvocationHelpDetails Windows.AI.Actions.ActionInvocationContext::get_HelpDetails()
+    @_property
+    def help_details(self) -> ActionInvocationHelpDetails: ...
+    # System.String Windows.AI.Actions.ActionInvocationContext::get_InvokerAppUserModelId()
+    @_property
+    def invoker_app_user_model_id(self) -> str: ...
+    # Windows.UI.WindowId Windows.AI.Actions.ActionInvocationContext::get_InvokerWindowId()
+    @_property
+    def invoker_window_id(self) -> windows_ui.WindowId: ...
+
+@typing.final
+class ActionInvocationHelpDetails(winrt.system.Object, windows_foundation.IClosable):
+    def __enter__(self: Self) -> Self: ...
+    def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
+    # System.Void Windows.AI.Actions.ActionInvocationHelpDetails::Close()
+    def close(self) -> None: ...
+    # System.String Windows.AI.Actions.ActionInvocationHelpDetails::get_Title()
+    @_property
+    def title(self) -> str: ...
+    # System.Void Windows.AI.Actions.ActionInvocationHelpDetails::put_Title(System.String)
+    @title.setter
+    def title(self, value: str) -> None: ...
+    # Windows.AI.Actions.ActionInvocationHelpKind Windows.AI.Actions.ActionInvocationHelpDetails::get_Kind()
+    @_property
+    def kind(self) -> ActionInvocationHelpKind: ...
+    # System.Void Windows.AI.Actions.ActionInvocationHelpDetails::put_Kind(Windows.AI.Actions.ActionInvocationHelpKind)
+    @kind.setter
+    def kind(self, value: ActionInvocationHelpKind) -> None: ...
+    # System.String Windows.AI.Actions.ActionInvocationHelpDetails::get_HelpUriDescription()
+    @_property
+    def help_uri_description(self) -> str: ...
+    # System.Void Windows.AI.Actions.ActionInvocationHelpDetails::put_HelpUriDescription(System.String)
+    @help_uri_description.setter
+    def help_uri_description(self, value: str) -> None: ...
+    # Windows.Foundation.Uri Windows.AI.Actions.ActionInvocationHelpDetails::get_HelpUri()
+    @_property
+    def help_uri(self) -> windows_foundation.Uri: ...
+    # System.Void Windows.AI.Actions.ActionInvocationHelpDetails::put_HelpUri(Windows.Foundation.Uri)
+    @help_uri.setter
+    def help_uri(self, value: windows_foundation.Uri) -> None: ...
+    # System.String Windows.AI.Actions.ActionInvocationHelpDetails::get_Description()
+    @_property
+    def description(self) -> str: ...
+    # System.Void Windows.AI.Actions.ActionInvocationHelpDetails::put_Description(System.String)
+    @description.setter
+    def description(self, value: str) -> None: ...
 
 class ActionRuntime_Static(winrt._winrt.IInspectable_Static):
     pass
@@ -109,8 +189,23 @@ class ActionRuntime(winrt.system.Object, windows_foundation.IClosable, metaclass
     # System.Void Windows.AI.Actions.ActionRuntime::Close()
     def close(self) -> None: ...
     @typing.final
+    # Windows.AI.Actions.ActionFeedback Windows.AI.Actions.ActionRuntime::CreateActionFeedback(Windows.AI.Actions.ActionFeedbackKind)
+    def create_action_feedback(self, feedback_kind: ActionFeedbackKind, /) -> ActionFeedback: ...
+    @typing.final
     # Windows.AI.Actions.ActionInvocationContext Windows.AI.Actions.ActionRuntime::CreateInvocationContext(System.String)
-    def create_invocation_context(self, action_name: str, /) -> ActionInvocationContext: ...
+    def create_invocation_context(self, action_id: str, /) -> ActionInvocationContext: ...
+    @typing.final
+    # Windows.AI.Actions.ActionInvocationContext Windows.AI.Actions.ActionRuntime::CreateInvocationContextWithWindowId(System.String,Windows.UI.WindowId)
+    def create_invocation_context_with_window_id(self, action_id: str, invoker_window_id: typing.Union[windows_ui.WindowId, typing.Tuple[winrt.system.UInt64]], /) -> ActionInvocationContext: ...
+    @typing.final
+    # System.Boolean Windows.AI.Actions.ActionRuntime::GetActionAvailability(System.String)
+    def get_action_availability(self, action_id: str, /) -> bool: ...
+    @typing.final
+    # Windows.AI.Actions.ActionEntity Windows.AI.Actions.ActionRuntime::GetActionEntityById(System.String)
+    def get_action_entity_by_id(self, entity_id: str, /) -> ActionEntity: ...
+    @typing.final
+    # System.Void Windows.AI.Actions.ActionRuntime::SetActionAvailability(System.String,System.Boolean)
+    def set_action_availability(self, action_id: str, is_available: bool, /) -> None: ...
     # Windows.AI.Actions.Hosting.ActionCatalog Windows.AI.Actions.ActionRuntime::get_ActionCatalog()
     @_property
     @typing.final
@@ -119,6 +214,16 @@ class ActionRuntime(winrt.system.Object, windows_foundation.IClosable, metaclass
     @_property
     @typing.final
     def entity_factory(self) -> ActionEntityFactory: ...
+    # System.UInt32 Windows.AI.Actions.ActionRuntime::get_LatestSupportedSchemaVersion()
+    @_property
+    @typing.final
+    def latest_supported_schema_version(self) -> winrt.system.UInt32: ...
+
+@typing.final
+class ContactActionEntity(ActionEntity):
+    # Windows.ApplicationModel.Contacts.Contact Windows.AI.Actions.ContactActionEntity::get_Contact()
+    @_property
+    def contact(self) -> windows_applicationmodel_contacts.Contact: ...
 
 @typing.final
 class DocumentActionEntity(ActionEntity):
@@ -158,8 +263,88 @@ class PhotoActionEntity(ActionEntity):
     def full_path(self) -> str: ...
 
 @typing.final
+class RemoteFileActionEntity(ActionEntity):
+    # System.String Windows.AI.Actions.RemoteFileActionEntity::get_AccountId()
+    @_property
+    def account_id(self) -> str: ...
+    # System.String Windows.AI.Actions.RemoteFileActionEntity::get_ContentType()
+    @_property
+    def content_type(self) -> str: ...
+    # System.String Windows.AI.Actions.RemoteFileActionEntity::get_DriveId()
+    @_property
+    def drive_id(self) -> str: ...
+    # System.String Windows.AI.Actions.RemoteFileActionEntity::get_Extension()
+    @_property
+    def extension(self) -> str: ...
+    # System.String Windows.AI.Actions.RemoteFileActionEntity::get_FileId()
+    @_property
+    def file_id(self) -> str: ...
+    # Windows.AI.Actions.RemoteFileKind Windows.AI.Actions.RemoteFileActionEntity::get_FileKind()
+    @_property
+    def file_kind(self) -> RemoteFileKind: ...
+    # System.String Windows.AI.Actions.RemoteFileActionEntity::get_SourceId()
+    @_property
+    def source_id(self) -> str: ...
+    # Windows.Foundation.Uri Windows.AI.Actions.RemoteFileActionEntity::get_SourceUri()
+    @_property
+    def source_uri(self) -> windows_foundation.Uri: ...
+
+@typing.final
+class StreamingTextActionEntity(ActionEntity):
+    # System.String Windows.AI.Actions.StreamingTextActionEntity::GetText()
+    def get_text(self) -> str: ...
+    # Windows.Foundation.EventRegistrationToken Windows.AI.Actions.StreamingTextActionEntity::add_TextChanged(Windows.Foundation.TypedEventHandler`2<Windows.AI.Actions.StreamingTextActionEntity,Windows.AI.Actions.StreamingTextActionEntityTextChangedArgs>)
+    def add_text_changed(self, handler: windows_foundation.TypedEventHandler[StreamingTextActionEntity, StreamingTextActionEntityTextChangedArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.AI.Actions.StreamingTextActionEntity::remove_TextChanged(Windows.Foundation.EventRegistrationToken)
+    def remove_text_changed(self, token: typing.Union[windows_foundation.EventRegistrationToken, typing.Tuple[winrt.system.Int64]], /) -> None: ...
+    # System.Boolean Windows.AI.Actions.StreamingTextActionEntity::get_IsComplete()
+    @_property
+    def is_complete(self) -> bool: ...
+    # Windows.AI.Actions.ActionEntityTextFormat Windows.AI.Actions.StreamingTextActionEntity::get_TextFormat()
+    @_property
+    def text_format(self) -> ActionEntityTextFormat: ...
+
+@typing.final
+class StreamingTextActionEntityTextChangedArgs(winrt.system.Object):
+    # System.Boolean Windows.AI.Actions.StreamingTextActionEntityTextChangedArgs::get_IsComplete()
+    @_property
+    def is_complete(self) -> bool: ...
+    # System.String Windows.AI.Actions.StreamingTextActionEntityTextChangedArgs::get_Text()
+    @_property
+    def text(self) -> str: ...
+
+@typing.final
+class StreamingTextActionEntityWriter(winrt.system.Object, windows_foundation.IClosable):
+    def __enter__(self: Self) -> Self: ...
+    def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
+    # System.Void Windows.AI.Actions.StreamingTextActionEntityWriter::Close()
+    def close(self) -> None: ...
+    # System.Void Windows.AI.Actions.StreamingTextActionEntityWriter::SetText(System.String)
+    def set_text(self, text: str, /) -> None: ...
+    # Windows.AI.Actions.StreamingTextActionEntity Windows.AI.Actions.StreamingTextActionEntityWriter::get_ReaderEntity()
+    @_property
+    def reader_entity(self) -> StreamingTextActionEntity: ...
+    # Windows.AI.Actions.ActionEntityTextFormat Windows.AI.Actions.StreamingTextActionEntityWriter::get_TextFormat()
+    @_property
+    def text_format(self) -> ActionEntityTextFormat: ...
+
+@typing.final
+class TableActionEntity(ActionEntity):
+    # System.String[] Windows.AI.Actions.TableActionEntity::GetTextContent()
+    def get_text_content(self) -> winrt.system.Array[str]: ...
+    # System.UInt32 Windows.AI.Actions.TableActionEntity::get_ColumnCount()
+    @_property
+    def column_count(self) -> winrt.system.UInt32: ...
+    # System.UInt32 Windows.AI.Actions.TableActionEntity::get_RowCount()
+    @_property
+    def row_count(self) -> winrt.system.UInt32: ...
+
+@typing.final
 class TextActionEntity(ActionEntity):
     # System.String Windows.AI.Actions.TextActionEntity::get_Text()
     @_property
     def text(self) -> str: ...
+    # Windows.AI.Actions.ActionEntityTextFormat Windows.AI.Actions.TextActionEntity::get_TextFormat()
+    @_property
+    def text_format(self) -> ActionEntityTextFormat: ...
 

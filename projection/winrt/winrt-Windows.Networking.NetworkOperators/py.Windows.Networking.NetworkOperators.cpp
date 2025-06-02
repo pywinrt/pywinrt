@@ -3527,98 +3527,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         Py_TPFLAGS_DEFAULT,
         _type_slots_ESimWatcher};
 
-    // ----- FdnAccessManager class --------------------
-
-    static PyObject* _new_FdnAccessManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::FdnAccessManager>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::FdnAccessManager>::type_name);
-        return nullptr;
-    }
-
-    static PyObject* FdnAccessManager_RequestUnlockAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.FdnAccessManager", L"RequestUnlockAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return winrt::Windows::Networking::NetworkOperators::FdnAccessManager::RequestUnlockAsync(param0);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyMethodDef _methods_FdnAccessManager[] = {
-        { }};
-
-    static PyGetSetDef _getset_FdnAccessManager[] = {
-        { }};
-
-    static PyType_Slot _type_slots_FdnAccessManager[] = {
-        { Py_tp_new, reinterpret_cast<void*>(_new_FdnAccessManager) },
-        { Py_tp_methods, reinterpret_cast<void*>(_methods_FdnAccessManager) },
-        { Py_tp_getset, reinterpret_cast<void*>(_getset_FdnAccessManager) },
-        { }};
-
-    static PyType_Spec type_spec_FdnAccessManager = {
-        "winrt._winrt_windows_networking_networkoperators.FdnAccessManager",
-        0,
-        0,
-        Py_TPFLAGS_DEFAULT,
-        _type_slots_FdnAccessManager};
-
-    static PyGetSetDef getset_FdnAccessManager_Static[] = {
-        { }};
-
-    static PyMethodDef methods_FdnAccessManager_Static[] = {
-        { "request_unlock_async", reinterpret_cast<PyCFunction>(FdnAccessManager_RequestUnlockAsync), METH_VARARGS, nullptr },
-        { }};
-
-    static PyType_Slot type_slots_FdnAccessManager_Static[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_FdnAccessManager_Static) },
-        { Py_tp_methods, reinterpret_cast<void*>(methods_FdnAccessManager_Static) },
-        { }
-    };
-
-    static PyType_Spec type_spec_FdnAccessManager_Static = {
-        "winrt._winrt_windows_networking_networkoperators.FdnAccessManager_Static",
-        static_cast<int>(PyType_Type.tp_basicsize),
-        static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
-        type_slots_FdnAccessManager_Static};
-
     // ----- HotspotAuthenticationContext class --------------------
 
     static PyObject* _new_HotspotAuthenticationContext(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -21314,24 +21222,6 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_networkoperators(void) noexcept
 
     py::pytype_handle ESimWatcher_type{py::register_python_type(module.get(), &type_spec_ESimWatcher, object_bases.get(), inspectable_meta_type)};
     if (!ESimWatcher_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle FdnAccessManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
-    if (!FdnAccessManager_Static_bases)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle type_FdnAccessManager_Static{PyType_FromSpecWithBases(&type_spec_FdnAccessManager_Static, FdnAccessManager_Static_bases.get())};
-    if (!type_FdnAccessManager_Static)
-    {
-        return nullptr;
-    }
-
-    py::pytype_handle FdnAccessManager_type{py::register_python_type(module.get(), &type_spec_FdnAccessManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FdnAccessManager_Static.get()))};
-    if (!FdnAccessManager_type)
     {
         return nullptr;
     }

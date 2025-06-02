@@ -285,15 +285,6 @@ class ESimWatcher(winrt.system.Object):
     def status(self) -> ESimWatcherStatus: ...
 
 @typing.final
-class FdnAccessManager_Static(winrt._winrt.IInspectable_Static):
-    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Networking.NetworkOperators.FdnAccessManager::RequestUnlockAsync(System.String)
-    def request_unlock_async(cls, contact_list_id: str, /) -> windows_foundation.IAsyncOperation[bool]: ...
-
-@typing.final
-class FdnAccessManager(winrt.system.Object, metaclass=FdnAccessManager_Static):
-    pass
-
-@typing.final
 class HotspotAuthenticationContext_Static(winrt._winrt.IInspectable_Static):
     # System.Boolean Windows.Networking.NetworkOperators.HotspotAuthenticationContext::TryGetAuthenticationContext(System.String,Windows.Networking.NetworkOperators.HotspotAuthenticationContext&)
     def try_get_authentication_context(cls, even_token: str, /) -> typing.Tuple[bool, HotspotAuthenticationContext]: ...

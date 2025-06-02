@@ -2,11 +2,14 @@
 
 import winrt.system
 from winrt._winrt_windows_ai_actions_provider import (
+    _IActionFeedbackHandler,
+    IActionFeedbackHandler,
     _IActionProvider,
     IActionProvider,
 )
 
 __all__ = [
+    "IActionFeedbackHandler",
     "IActionProvider",
 ]
 

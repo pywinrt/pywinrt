@@ -1536,97 +1536,6 @@ namespace py::cpp::Windows::ApplicationModel
         Py_TPFLAGS_DEFAULT,
         type_slots_AppInstance_Static};
 
-    // ----- CameraApplicationManager class --------------------
-
-    static PyObject* _new_CameraApplicationManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
-    {
-        static_assert(py::py_type<winrt::Windows::ApplicationModel::CameraApplicationManager>::type_name);
-        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::CameraApplicationManager>::type_name);
-        return nullptr;
-    }
-
-    static PyObject* CameraApplicationManager_ShowInstalledApplicationsUI(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 0)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.CameraApplicationManager", L"ShowInstalledApplicationsUI", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
-                {
-                    auto _gil = release_gil();
-                    winrt::Windows::ApplicationModel::CameraApplicationManager::ShowInstalledApplicationsUI();
-                }
-
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyMethodDef _methods_CameraApplicationManager[] = {
-        { }};
-
-    static PyGetSetDef _getset_CameraApplicationManager[] = {
-        { }};
-
-    static PyType_Slot _type_slots_CameraApplicationManager[] = {
-        { Py_tp_new, reinterpret_cast<void*>(_new_CameraApplicationManager) },
-        { Py_tp_methods, reinterpret_cast<void*>(_methods_CameraApplicationManager) },
-        { Py_tp_getset, reinterpret_cast<void*>(_getset_CameraApplicationManager) },
-        { }};
-
-    static PyType_Spec type_spec_CameraApplicationManager = {
-        "winrt._winrt_windows_applicationmodel.CameraApplicationManager",
-        0,
-        0,
-        Py_TPFLAGS_DEFAULT,
-        _type_slots_CameraApplicationManager};
-
-    static PyGetSetDef getset_CameraApplicationManager_Static[] = {
-        { }};
-
-    static PyMethodDef methods_CameraApplicationManager_Static[] = {
-        { "show_installed_applications_ui", reinterpret_cast<PyCFunction>(CameraApplicationManager_ShowInstalledApplicationsUI), METH_VARARGS, nullptr },
-        { }};
-
-    static PyType_Slot type_slots_CameraApplicationManager_Static[] = 
-    {
-        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
-        { Py_tp_getset, reinterpret_cast<void*>(getset_CameraApplicationManager_Static) },
-        { Py_tp_methods, reinterpret_cast<void*>(methods_CameraApplicationManager_Static) },
-        { }
-    };
-
-    static PyType_Spec type_spec_CameraApplicationManager_Static = {
-        "winrt._winrt_windows_applicationmodel.CameraApplicationManager_Static",
-        static_cast<int>(PyType_Type.tp_basicsize),
-        static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
-        type_slots_CameraApplicationManager_Static};
-
     // ----- DesignMode class --------------------
 
     static PyObject* _new_DesignMode(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -10949,24 +10858,6 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel(void) noexcept
 
     py::pytype_handle AppInstance_type{py::register_python_type(module.get(), &type_spec_AppInstance, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppInstance_Static.get()))};
     if (!AppInstance_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle CameraApplicationManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
-    if (!CameraApplicationManager_Static_bases)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle type_CameraApplicationManager_Static{PyType_FromSpecWithBases(&type_spec_CameraApplicationManager_Static, CameraApplicationManager_Static_bases.get())};
-    if (!type_CameraApplicationManager_Static)
-    {
-        return nullptr;
-    }
-
-    py::pytype_handle CameraApplicationManager_type{py::register_python_type(module.get(), &type_spec_CameraApplicationManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CameraApplicationManager_Static.get()))};
-    if (!CameraApplicationManager_type)
     {
         return nullptr;
     }

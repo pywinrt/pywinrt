@@ -78,8 +78,6 @@ from winrt._winrt_windows_media_capture import (
     OptionalReferencePhotoCapturedEventArgs,
     PhotoCapturedEventArgs,
     PhotoConfirmationCapturedEventArgs,
-    ScreenCapture,
-    SourceSuspensionChangedEventArgs,
     VideoStreamConfiguration,
 )
 
@@ -200,8 +198,6 @@ __all__ = [
     "OptionalReferencePhotoCapturedEventArgs",
     "PhotoCapturedEventArgs",
     "PhotoConfirmationCapturedEventArgs",
-    "ScreenCapture",
-    "SourceSuspensionChangedEventArgs",
     "VideoStreamConfiguration",
     "MediaCaptureFailedEventHandler",
     "RecordLimitationExceededEventHandler",

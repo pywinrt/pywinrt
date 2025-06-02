@@ -243,22 +243,6 @@ namespace py
     };
 
     template<>
-    struct py_type<winrt::Windows::Media::SpeechRecognition::VoiceCommandManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.speechrecognition.VoiceCommandManager";
-        static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
-        static constexpr const char* type_name = "VoiceCommandManager";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::SpeechRecognition::VoiceCommandSet>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.speechrecognition.VoiceCommandSet";
-        static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
-        static constexpr const char* type_name = "VoiceCommandSet";
-    };
-
-    template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>
     {
         static constexpr std::string_view qualified_name = "winrt.windows.media.speechrecognition._ISpeechRecognitionConstraint";
@@ -306,8 +290,6 @@ namespace py::wrapper::Windows::Media::SpeechRecognition
     using SpeechRecognizerStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerStateChangedEventArgs>;
     using SpeechRecognizerTimeouts = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerTimeouts>;
     using SpeechRecognizerUIOptions = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerUIOptions>;
-    using VoiceCommandManager = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::VoiceCommandManager>;
-    using VoiceCommandSet = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::VoiceCommandSet>;
     using ISpeechRecognitionConstraint = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>;
 }
 

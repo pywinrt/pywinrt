@@ -12,6 +12,8 @@ import winrt.system
 import winrt.windows.ai.actions as windows_ai_actions
 import winrt.windows.foundation as windows_foundation
 
+from winrt.windows.ai.actions.hosting import ActionDisclaimerKind
+
 Self = typing.TypeVar('Self')
 
 @typing.final
@@ -51,6 +53,18 @@ class ActionDefinition(winrt.system.Object, windows_foundation.IClosable):
     # System.String Windows.AI.Actions.Hosting.ActionDefinition::get_PackageFamilyName()
     @_property
     def package_family_name(self) -> str: ...
+    # Windows.AI.Actions.Hosting.ActionDisclaimerKind Windows.AI.Actions.Hosting.ActionDefinition::get_DisclaimerKind()
+    @_property
+    def disclaimer_kind(self) -> ActionDisclaimerKind: ...
+    # System.Boolean Windows.AI.Actions.Hosting.ActionDefinition::get_DisplaysUI()
+    @_property
+    def displays_ui(self) -> bool: ...
+    # System.String Windows.AI.Actions.Hosting.ActionDefinition::get_PackageRelativeApplicationId()
+    @_property
+    def package_relative_application_id(self) -> str: ...
+    # System.UInt32 Windows.AI.Actions.Hosting.ActionDefinition::get_SchemaVersion()
+    @_property
+    def schema_version(self) -> winrt.system.UInt32: ...
 
 @typing.final
 class ActionEntityRegistrationInfo(winrt.system.Object, windows_foundation.IClosable):
@@ -79,8 +93,12 @@ class ActionOverload(winrt.system.Object, windows_foundation.IClosable):
     def close(self) -> None: ...
     # Windows.AI.Actions.Hosting.ActionEntityRegistrationInfo[] Windows.AI.Actions.Hosting.ActionOverload::GetInputs()
     def get_inputs(self) -> winrt.system.Array[ActionEntityRegistrationInfo]: ...
+    # System.Boolean Windows.AI.Actions.Hosting.ActionOverload::GetSupportsFeedback()
+    def get_supports_feedback(self) -> bool: ...
     # Windows.Foundation.IAsyncAction Windows.AI.Actions.Hosting.ActionOverload::InvokeAsync(Windows.AI.Actions.ActionInvocationContext)
     def invoke_async(self, context: windows_ai_actions.ActionInvocationContext, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncAction Windows.AI.Actions.Hosting.ActionOverload::InvokeFeedbackAsync(Windows.AI.Actions.ActionInvocationContext,Windows.AI.Actions.ActionFeedback)
+    def invoke_feedback_async(self, context: windows_ai_actions.ActionInvocationContext, feedback: windows_ai_actions.ActionFeedback, /) -> windows_foundation.IAsyncAction: ...
     # System.String Windows.AI.Actions.Hosting.ActionOverload::get_DescriptionTemplate()
     @_property
     def description_template(self) -> str: ...

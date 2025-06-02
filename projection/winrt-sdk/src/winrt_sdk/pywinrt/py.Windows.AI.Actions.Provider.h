@@ -17,6 +17,14 @@ namespace py
 {
 
     template<>
+    struct py_type<winrt::Windows::AI::Actions::Provider::IActionFeedbackHandler>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.actions.provider._IActionFeedbackHandler";
+        static constexpr const char* module_name = "winrt.windows.ai.actions.provider";
+        static constexpr const char* type_name = "_IActionFeedbackHandler";
+    };
+
+    template<>
     struct py_type<winrt::Windows::AI::Actions::Provider::IActionProvider>
     {
         static constexpr std::string_view qualified_name = "winrt.windows.ai.actions.provider._IActionProvider";
@@ -39,6 +47,7 @@ namespace py::impl::Windows::AI::Actions::Provider
 
 namespace py::wrapper::Windows::AI::Actions::Provider
 {
+    using IActionFeedbackHandler = py::winrt_wrapper<winrt::Windows::AI::Actions::Provider::IActionFeedbackHandler>;
     using IActionProvider = py::winrt_wrapper<winrt::Windows::AI::Actions::Provider::IActionProvider>;
 }
 

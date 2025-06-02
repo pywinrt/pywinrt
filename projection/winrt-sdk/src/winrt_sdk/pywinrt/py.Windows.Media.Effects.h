@@ -144,14 +144,6 @@ namespace py
     };
 
     template<>
-    struct py_type<winrt::Windows::Media::Effects::SlowMotionEffectDefinition>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.SlowMotionEffectDefinition";
-        static constexpr const char* module_name = "winrt.windows.media.effects";
-        static constexpr const char* type_name = "SlowMotionEffectDefinition";
-    };
-
-    template<>
     struct py_type<winrt::Windows::Media::Effects::VideoCompositorDefinition>
     {
         static constexpr std::string_view qualified_name = "winrt.windows.media.effects.VideoCompositorDefinition";
@@ -299,7 +291,6 @@ namespace py::wrapper::Windows::Media::Effects
     using CompositeVideoFrameContext = py::winrt_wrapper<winrt::Windows::Media::Effects::CompositeVideoFrameContext>;
     using ProcessAudioFrameContext = py::winrt_wrapper<winrt::Windows::Media::Effects::ProcessAudioFrameContext>;
     using ProcessVideoFrameContext = py::winrt_wrapper<winrt::Windows::Media::Effects::ProcessVideoFrameContext>;
-    using SlowMotionEffectDefinition = py::winrt_wrapper<winrt::Windows::Media::Effects::SlowMotionEffectDefinition>;
     using VideoCompositorDefinition = py::winrt_wrapper<winrt::Windows::Media::Effects::VideoCompositorDefinition>;
     using VideoEffectDefinition = py::winrt_wrapper<winrt::Windows::Media::Effects::VideoEffectDefinition>;
     using VideoTransformEffectDefinition = py::winrt_wrapper<winrt::Windows::Media::Effects::VideoTransformEffectDefinition>;

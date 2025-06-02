@@ -6,6 +6,13 @@
 #include "winrt/impl/Windows.AI.Actions.Provider.0.h"
 WINRT_EXPORT namespace winrt::Windows::AI::Actions::Provider
 {
+    struct WINRT_IMPL_EMPTY_BASES IActionFeedbackHandler :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IActionFeedbackHandler>
+    {
+        IActionFeedbackHandler(std::nullptr_t = nullptr) noexcept {}
+        IActionFeedbackHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IActionProvider :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IActionProvider>

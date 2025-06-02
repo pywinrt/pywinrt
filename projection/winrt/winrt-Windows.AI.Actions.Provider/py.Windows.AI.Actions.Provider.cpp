@@ -4,6 +4,229 @@
 
 namespace py::cpp::Windows::AI::Actions::Provider
 {
+    // ----- IActionFeedbackHandler interface --------------------
+
+    #if PY_VERSION_HEX < 0x030A0000
+    static PyObject* _new_IActionFeedbackHandler(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Windows::AI::Actions::Provider::IActionFeedbackHandler>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::Actions::Provider::IActionFeedbackHandler>::type_name);
+        return nullptr;
+    }
+    #endif
+
+    static void _dealloc_IActionFeedbackHandler(py::wrapper::Windows::AI::Actions::Provider::IActionFeedbackHandler* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* IActionFeedbackHandler_ProcessFeedbackAsync(py::wrapper::Windows::AI::Actions::Provider::IActionFeedbackHandler* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.Actions.Provider.IActionFeedbackHandler", L"ProcessFeedbackAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::AI::Actions::ActionInvocationContext>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::AI::Actions::ActionFeedback>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.ProcessFeedbackAsync(param0, param1);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_IActionFeedbackHandler[] = {
+        { "process_feedback_async", reinterpret_cast<PyCFunction>(IActionFeedbackHandler_ProcessFeedbackAsync), METH_VARARGS, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_IActionFeedbackHandler[] = {
+        { }};
+
+    static PyType_Slot _type_slots_IActionFeedbackHandler[] = {
+        #if PY_VERSION_HEX < 0x030A0000
+        { Py_tp_new, reinterpret_cast<void*>(_new_IActionFeedbackHandler) },
+        #endif
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IActionFeedbackHandler) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_IActionFeedbackHandler) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_IActionFeedbackHandler) },
+        { }};
+
+    static PyType_Spec type_spec_IActionFeedbackHandler = {
+        "winrt._winrt_windows_ai_actions_provider._IActionFeedbackHandler",
+        sizeof(py::wrapper::Windows::AI::Actions::Provider::IActionFeedbackHandler),
+        0,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
+        _type_slots_IActionFeedbackHandler};
+
+    struct ImplementsIActionFeedbackHandler : py::ImplementsInterfaceT<ImplementsIActionFeedbackHandler, winrt::Windows::AI::Actions::Provider::IActionFeedbackHandler>
+    {
+        ImplementsIActionFeedbackHandler() = delete;
+        ImplementsIActionFeedbackHandler(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIActionFeedbackHandler, winrt::Windows::AI::Actions::Provider::IActionFeedbackHandler>(py_obj, runtime_class)
+        {
+        }
+
+        auto ProcessFeedbackAsync(winrt::Windows::AI::Actions::ActionInvocationContext const& param0, winrt::Windows::AI::Actions::ActionFeedback const& param1)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "process_feedback_async")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::IAsyncAction>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _assign_array_IActionFeedbackHandler(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::AI::Actions::Provider::IActionFeedbackHandler>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_IActionFeedbackHandler(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::AI::Actions::Provider::IActionFeedbackHandler>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _guid_ImplementsIActionFeedbackHandler(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::AI::Actions::Provider::IActionFeedbackHandler>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIActionFeedbackHandler(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIActionFeedbackHandler>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIActionFeedbackHandler[] = {
+        { "_assign_array_", _assign_array_IActionFeedbackHandler, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_IActionFeedbackHandler), METH_O | METH_STATIC, nullptr },
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIActionFeedbackHandler), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIActionFeedbackHandler), METH_VARARGS | METH_STATIC, nullptr },
+        { }};
+
+    static PyType_Slot type_slots_ImplementsIActionFeedbackHandler[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIActionFeedbackHandler) },
+        { }};
+
+    static PyType_Spec type_spec_ImplementsIActionFeedbackHandler = {
+        "winrt._winrt_windows_ai_actions_provider.IActionFeedbackHandler",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
+        type_slots_ImplementsIActionFeedbackHandler};
+
     // ----- IActionProvider interface --------------------
 
     #if PY_VERSION_HEX < 0x030A0000
@@ -261,6 +484,23 @@ PyMODINIT_FUNC PyInit__winrt_windows_ai_actions_provider(void) noexcept
     py::pyobj_handle object_bases{PyTuple_Pack(1, object_type)};
 
     if (!object_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle IActionFeedbackHandler_type{py::register_python_type(module.get(), &type_spec_IActionFeedbackHandler, object_bases.get(), nullptr)};
+    if (!IActionFeedbackHandler_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIActionFeedbackHandler_type{py::register_python_type(module.get(), &type_spec_ImplementsIActionFeedbackHandler, nullptr, inspectable_meta_type)};
+    if (!ImplementsIActionFeedbackHandler_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIActionFeedbackHandler_type.get()) == -1)
     {
         return nullptr;
     }
