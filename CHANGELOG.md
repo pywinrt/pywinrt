@@ -12,6 +12,7 @@
 
 ### Changed
 - `asyncio` cancellation is now propagated to WinRT async actions/operations that are being awaited.
+- Updated WebView2 to 1.0.3240.44.
 - Updated Windows SDK to 10.0.26100.4188.
 - Updated Windows App SDK to 1.7.250513003.
 - Updated to CppWinRT 2.0.250303.1.
