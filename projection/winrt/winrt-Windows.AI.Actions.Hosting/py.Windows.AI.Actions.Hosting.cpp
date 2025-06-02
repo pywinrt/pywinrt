@@ -62,6 +62,91 @@ namespace py::cpp::Windows::AI::Actions::Hosting
         }
     }
 
+    static PyObject* ActionCatalog_GetActionsForInputs(py::wrapper::Windows::AI::Actions::Hosting::ActionCatalog* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.Actions.Hosting.ActionCatalog", L"GetActionsForInputs", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::AI::Actions::ActionEntity, false>>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetActionsForInputs(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ActionCatalog_GetActionsForInputs2(py::wrapper::Windows::AI::Actions::Hosting::ActionCatalog* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.Actions.Hosting.ActionCatalog", L"GetActionsForInputs", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::AI::Actions::ActionEntity, false>>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::WindowId>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetActionsForInputs(param0, param1);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* ActionCatalog_GetAllActions(py::wrapper::Windows::AI::Actions::Hosting::ActionCatalog* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
@@ -216,6 +301,8 @@ namespace py::cpp::Windows::AI::Actions::Hosting
 
     static PyMethodDef _methods_ActionCatalog[] = {
         { "close", reinterpret_cast<PyCFunction>(ActionCatalog_Close), METH_VARARGS, nullptr },
+        { "get_actions_for_inputs", reinterpret_cast<PyCFunction>(ActionCatalog_GetActionsForInputs), METH_VARARGS, nullptr },
+        { "get_actions_for_inputs2", reinterpret_cast<PyCFunction>(ActionCatalog_GetActionsForInputs2), METH_VARARGS, nullptr },
         { "get_all_actions", reinterpret_cast<PyCFunction>(ActionCatalog_GetAllActions), METH_VARARGS, nullptr },
         { "add_changed", reinterpret_cast<PyCFunction>(ActionCatalog_add_Changed), METH_O, nullptr },
         { "remove_changed", reinterpret_cast<PyCFunction>(ActionCatalog_remove_Changed), METH_O, nullptr },
@@ -540,36 +627,6 @@ namespace py::cpp::Windows::AI::Actions::Hosting
         }
     }
 
-    static PyObject* ActionDefinition_get_DisclaimerKind(py::wrapper::Windows::AI::Actions::Hosting::ActionDefinition* self, void* /*unused*/) noexcept
-    {
-        try
-        {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.Actions.Hosting.ActionDefinition", L"DisclaimerKind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
-            return py::convert([&]()
-            {
-                auto _gil = release_gil();
-                return self->obj.DisclaimerKind();
-            }());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyObject* ActionDefinition_get_DisplaysUI(py::wrapper::Windows::AI::Actions::Hosting::ActionDefinition* self, void* /*unused*/) noexcept
     {
         try
@@ -600,36 +657,6 @@ namespace py::cpp::Windows::AI::Actions::Hosting
         }
     }
 
-    static PyObject* ActionDefinition_get_PackageRelativeApplicationId(py::wrapper::Windows::AI::Actions::Hosting::ActionDefinition* self, void* /*unused*/) noexcept
-    {
-        try
-        {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.Actions.Hosting.ActionDefinition", L"PackageRelativeApplicationId");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
-            return py::convert([&]()
-            {
-                auto _gil = release_gil();
-                return self->obj.PackageRelativeApplicationId();
-            }());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyObject* ActionDefinition_get_SchemaVersion(py::wrapper::Windows::AI::Actions::Hosting::ActionDefinition* self, void* /*unused*/) noexcept
     {
         try
@@ -651,6 +678,66 @@ namespace py::cpp::Windows::AI::Actions::Hosting
             {
                 auto _gil = release_gil();
                 return self->obj.SchemaVersion();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ActionDefinition_get_UsesGenerativeAI(py::wrapper::Windows::AI::Actions::Hosting::ActionDefinition* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.Actions.Hosting.ActionDefinition", L"UsesGenerativeAI");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UsesGenerativeAI();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ActionDefinition_get_PackageRelativeApplicationId(py::wrapper::Windows::AI::Actions::Hosting::ActionDefinition* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.Actions.Hosting.ActionDefinition", L"PackageRelativeApplicationId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PackageRelativeApplicationId();
             }());
         }
         catch (...)
@@ -723,10 +810,10 @@ namespace py::cpp::Windows::AI::Actions::Hosting
         { "icon_full_path", reinterpret_cast<getter>(ActionDefinition_get_IconFullPath), nullptr, nullptr, nullptr },
         { "id", reinterpret_cast<getter>(ActionDefinition_get_Id), nullptr, nullptr, nullptr },
         { "package_family_name", reinterpret_cast<getter>(ActionDefinition_get_PackageFamilyName), nullptr, nullptr, nullptr },
-        { "disclaimer_kind", reinterpret_cast<getter>(ActionDefinition_get_DisclaimerKind), nullptr, nullptr, nullptr },
         { "displays_ui", reinterpret_cast<getter>(ActionDefinition_get_DisplaysUI), nullptr, nullptr, nullptr },
-        { "package_relative_application_id", reinterpret_cast<getter>(ActionDefinition_get_PackageRelativeApplicationId), nullptr, nullptr, nullptr },
         { "schema_version", reinterpret_cast<getter>(ActionDefinition_get_SchemaVersion), nullptr, nullptr, nullptr },
+        { "uses_generative_a_i", reinterpret_cast<getter>(ActionDefinition_get_UsesGenerativeAI), nullptr, nullptr, nullptr },
+        { "package_relative_application_id", reinterpret_cast<getter>(ActionDefinition_get_PackageRelativeApplicationId), nullptr, nullptr, nullptr },
         { }};
 
     static PyType_Slot _type_slots_ActionDefinition[] = {
@@ -1012,6 +1099,297 @@ namespace py::cpp::Windows::AI::Actions::Hosting
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ActionEntityRegistrationInfo};
+
+    // ----- ActionInstance class --------------------
+
+    static PyObject* _new_ActionInstance(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Windows::AI::Actions::Hosting::ActionInstance>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::Actions::Hosting::ActionInstance>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_ActionInstance(py::wrapper::Windows::AI::Actions::Hosting::ActionInstance* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* ActionInstance_InvokeAsync(py::wrapper::Windows::AI::Actions::Hosting::ActionInstance* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.Actions.Hosting.ActionInstance", L"InvokeAsync", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.InvokeAsync();
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ActionInstance_get_Context(py::wrapper::Windows::AI::Actions::Hosting::ActionInstance* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.Actions.Hosting.ActionInstance", L"Context");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Context();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ActionInstance_get_Definition(py::wrapper::Windows::AI::Actions::Hosting::ActionInstance* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.Actions.Hosting.ActionInstance", L"Definition");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Definition();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ActionInstance_get_DisplayInfo(py::wrapper::Windows::AI::Actions::Hosting::ActionInstance* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.Actions.Hosting.ActionInstance", L"DisplayInfo");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisplayInfo();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_ActionInstance(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::AI::Actions::Hosting::ActionInstance>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_ActionInstance(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::AI::Actions::Hosting::ActionInstance>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_ActionInstance[] = {
+        { "invoke_async", reinterpret_cast<PyCFunction>(ActionInstance_InvokeAsync), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_ActionInstance, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_ActionInstance), METH_O | METH_STATIC, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_ActionInstance[] = {
+        { "context", reinterpret_cast<getter>(ActionInstance_get_Context), nullptr, nullptr, nullptr },
+        { "definition", reinterpret_cast<getter>(ActionInstance_get_Definition), nullptr, nullptr, nullptr },
+        { "display_info", reinterpret_cast<getter>(ActionInstance_get_DisplayInfo), nullptr, nullptr, nullptr },
+        { }};
+
+    static PyType_Slot _type_slots_ActionInstance[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_ActionInstance) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ActionInstance) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_ActionInstance) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_ActionInstance) },
+        { }};
+
+    static PyType_Spec type_spec_ActionInstance = {
+        "winrt._winrt_windows_ai_actions_hosting.ActionInstance",
+        sizeof(py::wrapper::Windows::AI::Actions::Hosting::ActionInstance),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_ActionInstance};
+
+    // ----- ActionInstanceDisplayInfo class --------------------
+
+    static PyObject* _new_ActionInstanceDisplayInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Windows::AI::Actions::Hosting::ActionInstanceDisplayInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::Actions::Hosting::ActionInstanceDisplayInfo>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_ActionInstanceDisplayInfo(py::wrapper::Windows::AI::Actions::Hosting::ActionInstanceDisplayInfo* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* ActionInstanceDisplayInfo_get_Description(py::wrapper::Windows::AI::Actions::Hosting::ActionInstanceDisplayInfo* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.Actions.Hosting.ActionInstanceDisplayInfo", L"Description");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Description();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_ActionInstanceDisplayInfo(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::AI::Actions::Hosting::ActionInstanceDisplayInfo>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_ActionInstanceDisplayInfo(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::AI::Actions::Hosting::ActionInstanceDisplayInfo>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_ActionInstanceDisplayInfo[] = {
+        { "_assign_array_", _assign_array_ActionInstanceDisplayInfo, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_ActionInstanceDisplayInfo), METH_O | METH_STATIC, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_ActionInstanceDisplayInfo[] = {
+        { "description", reinterpret_cast<getter>(ActionInstanceDisplayInfo_get_Description), nullptr, nullptr, nullptr },
+        { }};
+
+    static PyType_Slot _type_slots_ActionInstanceDisplayInfo[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_ActionInstanceDisplayInfo) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ActionInstanceDisplayInfo) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_ActionInstanceDisplayInfo) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_ActionInstanceDisplayInfo) },
+        { }};
+
+    static PyType_Spec type_spec_ActionInstanceDisplayInfo = {
+        "winrt._winrt_windows_ai_actions_hosting.ActionInstanceDisplayInfo",
+        sizeof(py::wrapper::Windows::AI::Actions::Hosting::ActionInstanceDisplayInfo),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_ActionInstanceDisplayInfo};
 
     // ----- ActionOverload class --------------------
 
@@ -1408,6 +1786,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_ai_actions_hosting(void) noexcept
 
     py::pytype_handle ActionEntityRegistrationInfo_type{py::register_python_type(module.get(), &type_spec_ActionEntityRegistrationInfo, object_bases.get(), inspectable_meta_type)};
     if (!ActionEntityRegistrationInfo_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ActionInstance_type{py::register_python_type(module.get(), &type_spec_ActionInstance, object_bases.get(), inspectable_meta_type)};
+    if (!ActionInstance_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ActionInstanceDisplayInfo_type{py::register_python_type(module.get(), &type_spec_ActionInstanceDisplayInfo, object_bases.get(), inspectable_meta_type)};
+    if (!ActionInstanceDisplayInfo_type)
     {
         return nullptr;
     }

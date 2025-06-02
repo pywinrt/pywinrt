@@ -88,6 +88,7 @@ export module winrt;
 #include "winrt/Windows.AI.Actions.Provider.h"
 #include "winrt/Windows.AI.MachineLearning.h"
 #include "winrt/Windows.AI.MachineLearning.Preview.h"
+#include "winrt/Windows.AI.ModelContextProtocol.h"
 #include "winrt/Windows.ApplicationModel.h"
 #include "winrt/Windows.ApplicationModel.Activation.h"
 #include "winrt/Windows.ApplicationModel.AppExtensions.h"

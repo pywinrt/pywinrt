@@ -11,8 +11,7 @@ import winrt._winrt
 import winrt.system
 import winrt.windows.ai.actions as windows_ai_actions
 import winrt.windows.foundation as windows_foundation
-
-from winrt.windows.ai.actions.hosting import ActionDisclaimerKind
+import winrt.windows.ui as windows_ui
 
 Self = typing.TypeVar('Self')
 
@@ -22,6 +21,10 @@ class ActionCatalog(winrt.system.Object, windows_foundation.IClosable):
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
     # System.Void Windows.AI.Actions.Hosting.ActionCatalog::Close()
     def close(self) -> None: ...
+    # Windows.AI.Actions.Hosting.ActionInstance[] Windows.AI.Actions.Hosting.ActionCatalog::GetActionsForInputs(Windows.AI.Actions.ActionEntity[])
+    def get_actions_for_inputs(self, input_entities: typing.Union[winrt.system.Array[windows_ai_actions.ActionEntity], winrt.system.ReadableBuffer], /) -> winrt.system.Array[ActionInstance]: ...
+    # Windows.AI.Actions.Hosting.ActionInstance[] Windows.AI.Actions.Hosting.ActionCatalog::GetActionsForInputs(Windows.AI.Actions.ActionEntity[],Windows.UI.WindowId)
+    def get_actions_for_inputs2(self, input_entities: typing.Union[winrt.system.Array[windows_ai_actions.ActionEntity], winrt.system.ReadableBuffer], invoker_window_id: typing.Union[windows_ui.WindowId, typing.Tuple[winrt.system.UInt64]], /) -> winrt.system.Array[ActionInstance]: ...
     # Windows.AI.Actions.Hosting.ActionDefinition[] Windows.AI.Actions.Hosting.ActionCatalog::GetAllActions()
     def get_all_actions(self) -> winrt.system.Array[ActionDefinition]: ...
     # Windows.Foundation.EventRegistrationToken Windows.AI.Actions.Hosting.ActionCatalog::add_Changed(Windows.Foundation.TypedEventHandler`2<Windows.AI.Actions.Hosting.ActionCatalog,System.Object>)
@@ -53,18 +56,18 @@ class ActionDefinition(winrt.system.Object, windows_foundation.IClosable):
     # System.String Windows.AI.Actions.Hosting.ActionDefinition::get_PackageFamilyName()
     @_property
     def package_family_name(self) -> str: ...
-    # Windows.AI.Actions.Hosting.ActionDisclaimerKind Windows.AI.Actions.Hosting.ActionDefinition::get_DisclaimerKind()
-    @_property
-    def disclaimer_kind(self) -> ActionDisclaimerKind: ...
     # System.Boolean Windows.AI.Actions.Hosting.ActionDefinition::get_DisplaysUI()
     @_property
     def displays_ui(self) -> bool: ...
-    # System.String Windows.AI.Actions.Hosting.ActionDefinition::get_PackageRelativeApplicationId()
-    @_property
-    def package_relative_application_id(self) -> str: ...
     # System.UInt32 Windows.AI.Actions.Hosting.ActionDefinition::get_SchemaVersion()
     @_property
     def schema_version(self) -> winrt.system.UInt32: ...
+    # System.Boolean Windows.AI.Actions.Hosting.ActionDefinition::get_UsesGenerativeAI()
+    @_property
+    def uses_generative_a_i(self) -> bool: ...
+    # System.String Windows.AI.Actions.Hosting.ActionDefinition::get_PackageRelativeApplicationId()
+    @_property
+    def package_relative_application_id(self) -> str: ...
 
 @typing.final
 class ActionEntityRegistrationInfo(winrt.system.Object, windows_foundation.IClosable):
@@ -84,6 +87,26 @@ class ActionEntityRegistrationInfo(winrt.system.Object, windows_foundation.IClos
     # System.Void Windows.AI.Actions.Hosting.ActionEntityRegistrationInfo::put_Kind(Windows.AI.Actions.ActionEntityKind)
     @kind.setter
     def kind(self, value: windows_ai_actions.ActionEntityKind) -> None: ...
+
+@typing.final
+class ActionInstance(winrt.system.Object):
+    # Windows.Foundation.IAsyncAction Windows.AI.Actions.Hosting.ActionInstance::InvokeAsync()
+    def invoke_async(self) -> windows_foundation.IAsyncAction: ...
+    # Windows.AI.Actions.ActionInvocationContext Windows.AI.Actions.Hosting.ActionInstance::get_Context()
+    @_property
+    def context(self) -> windows_ai_actions.ActionInvocationContext: ...
+    # Windows.AI.Actions.Hosting.ActionDefinition Windows.AI.Actions.Hosting.ActionInstance::get_Definition()
+    @_property
+    def definition(self) -> ActionDefinition: ...
+    # Windows.AI.Actions.Hosting.ActionInstanceDisplayInfo Windows.AI.Actions.Hosting.ActionInstance::get_DisplayInfo()
+    @_property
+    def display_info(self) -> ActionInstanceDisplayInfo: ...
+
+@typing.final
+class ActionInstanceDisplayInfo(winrt.system.Object):
+    # System.String Windows.AI.Actions.Hosting.ActionInstanceDisplayInfo::get_Description()
+    @_property
+    def description(self) -> str: ...
 
 @typing.final
 class ActionOverload(winrt.system.Object, windows_foundation.IClosable):

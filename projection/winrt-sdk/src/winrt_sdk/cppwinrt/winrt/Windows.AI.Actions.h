@@ -211,38 +211,38 @@ namespace winrt::impl
         }
         return winrt::Windows::AI::Actions::StreamingTextActionEntityWriter{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_AI_Actions_IActionEntityFactory3<D>::CreateTableEntity(array_view<hstring const> data, uint32_t columnCount) const
+    template <typename D> auto consume_Windows_AI_Actions_IActionEntityFactory4<D>::CreateTableEntity(array_view<hstring const> data, uint32_t columnCount) const
     {
         void* result{};
-        if constexpr (!std::is_same_v<D, winrt::Windows::AI::Actions::IActionEntityFactory3>)
+        if constexpr (!std::is_same_v<D, winrt::Windows::AI::Actions::IActionEntityFactory4>)
         {
             winrt::hresult _winrt_cast_result_code;
-            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Windows::AI::Actions::IActionEntityFactory3, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Windows::AI::Actions::IActionEntityFactory4, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
             check_hresult(_winrt_cast_result_code);
-            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::IActionEntityFactory3>**)&_winrt_casted_result;
+            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::IActionEntityFactory4>**)&_winrt_casted_result;
             check_hresult(_winrt_abi_type->CreateTableEntity(data.size(), get_abi(data), columnCount, &result));
         }
         else
         {
-            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::IActionEntityFactory3>**)this;
+            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::IActionEntityFactory4>**)this;
             check_hresult(_winrt_abi_type->CreateTableEntity(data.size(), get_abi(data), columnCount, &result));
         }
         return winrt::Windows::AI::Actions::TableActionEntity{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_AI_Actions_IActionEntityFactory3<D>::CreateContactEntity(winrt::Windows::ApplicationModel::Contacts::Contact const& contact) const
+    template <typename D> auto consume_Windows_AI_Actions_IActionEntityFactory4<D>::CreateContactEntity(winrt::Windows::ApplicationModel::Contacts::Contact const& contact) const
     {
         void* result{};
-        if constexpr (!std::is_same_v<D, winrt::Windows::AI::Actions::IActionEntityFactory3>)
+        if constexpr (!std::is_same_v<D, winrt::Windows::AI::Actions::IActionEntityFactory4>)
         {
             winrt::hresult _winrt_cast_result_code;
-            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Windows::AI::Actions::IActionEntityFactory3, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Windows::AI::Actions::IActionEntityFactory4, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
             check_hresult(_winrt_cast_result_code);
-            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::IActionEntityFactory3>**)&_winrt_casted_result;
+            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::IActionEntityFactory4>**)&_winrt_casted_result;
             check_hresult(_winrt_abi_type->CreateContactEntity(*(void**)(&contact), &result));
         }
         else
         {
-            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::IActionEntityFactory3>**)this;
+            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::IActionEntityFactory4>**)this;
             check_hresult(_winrt_abi_type->CreateContactEntity(*(void**)(&contact), &result));
         }
         return winrt::Windows::AI::Actions::ContactActionEntity{ result, take_ownership_from_abi };
@@ -265,24 +265,6 @@ namespace winrt::impl
         }
         return value;
     }
-    template <typename D> auto consume_Windows_AI_Actions_IActionInvocationContext<D>::ActionName() const
-    {
-        void* value{};
-        if constexpr (!std::is_same_v<D, winrt::Windows::AI::Actions::IActionInvocationContext>)
-        {
-            winrt::hresult _winrt_cast_result_code;
-            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Windows::AI::Actions::IActionInvocationContext, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
-            check_hresult(_winrt_cast_result_code);
-            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::IActionInvocationContext>**)&_winrt_casted_result;
-            check_hresult(_winrt_abi_type->get_ActionName(&value));
-        }
-        else
-        {
-            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::IActionInvocationContext>**)this;
-            check_hresult(_winrt_abi_type->get_ActionName(&value));
-        }
-        return hstring{ value, take_ownership_from_abi };
-    }
     template <typename D> auto consume_Windows_AI_Actions_IActionInvocationContext<D>::EntityFactory() const
     {
         void* value{};
@@ -300,24 +282,6 @@ namespace winrt::impl
             check_hresult(_winrt_abi_type->get_EntityFactory(&value));
         }
         return winrt::Windows::AI::Actions::ActionEntityFactory{ value, take_ownership_from_abi };
-    }
-    template <typename D> auto consume_Windows_AI_Actions_IActionInvocationContext<D>::InvokerPackageFamilyName() const
-    {
-        void* value{};
-        if constexpr (!std::is_same_v<D, winrt::Windows::AI::Actions::IActionInvocationContext>)
-        {
-            winrt::hresult _winrt_cast_result_code;
-            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Windows::AI::Actions::IActionInvocationContext, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
-            check_hresult(_winrt_cast_result_code);
-            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::IActionInvocationContext>**)&_winrt_casted_result;
-            check_hresult(_winrt_abi_type->get_InvokerPackageFamilyName(&value));
-        }
-        else
-        {
-            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::IActionInvocationContext>**)this;
-            check_hresult(_winrt_abi_type->get_InvokerPackageFamilyName(&value));
-        }
-        return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> auto consume_Windows_AI_Actions_IActionInvocationContext<D>::SetInputEntity(param::hstring const& inputName, winrt::Windows::AI::Actions::ActionEntity const& inputValue) const
     {
@@ -753,24 +717,6 @@ namespace winrt::impl
         }
         return winrt::Windows::AI::Actions::ActionInvocationContext{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_AI_Actions_IActionRuntime2<D>::CreateInvocationContextWithWindowId(param::hstring const& actionId, winrt::Windows::UI::WindowId const& invokerWindowId) const
-    {
-        void* result{};
-        if constexpr (!std::is_same_v<D, winrt::Windows::AI::Actions::IActionRuntime2>)
-        {
-            winrt::hresult _winrt_cast_result_code;
-            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Windows::AI::Actions::IActionRuntime2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
-            check_hresult(_winrt_cast_result_code);
-            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::IActionRuntime2>**)&_winrt_casted_result;
-            check_hresult(_winrt_abi_type->CreateInvocationContextWithWindowId(*(void**)(&actionId), impl::bind_in(invokerWindowId), &result));
-        }
-        else
-        {
-            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::IActionRuntime2>**)this;
-            check_hresult(_winrt_abi_type->CreateInvocationContextWithWindowId(*(void**)(&actionId), impl::bind_in(invokerWindowId), &result));
-        }
-        return winrt::Windows::AI::Actions::ActionInvocationContext{ result, take_ownership_from_abi };
-    }
     template <typename D> auto consume_Windows_AI_Actions_IActionRuntime2<D>::CreateActionFeedback(winrt::Windows::AI::Actions::ActionFeedbackKind const& feedbackKind) const
     {
         void* result{};
@@ -823,38 +769,56 @@ namespace winrt::impl
         }
         return result;
     }
-    template <typename D> auto consume_Windows_AI_Actions_IActionRuntime2<D>::GetActionEntityById(param::hstring const& entityId) const
+    template <typename D> auto consume_Windows_AI_Actions_IActionRuntime3<D>::CreateInvocationContextWithWindowId(param::hstring const& actionId, winrt::Windows::UI::WindowId const& invokerWindowId) const
     {
         void* result{};
-        if constexpr (!std::is_same_v<D, winrt::Windows::AI::Actions::IActionRuntime2>)
+        if constexpr (!std::is_same_v<D, winrt::Windows::AI::Actions::IActionRuntime3>)
         {
             winrt::hresult _winrt_cast_result_code;
-            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Windows::AI::Actions::IActionRuntime2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Windows::AI::Actions::IActionRuntime3, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
             check_hresult(_winrt_cast_result_code);
-            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::IActionRuntime2>**)&_winrt_casted_result;
+            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::IActionRuntime3>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->CreateInvocationContextWithWindowId(*(void**)(&actionId), impl::bind_in(invokerWindowId), &result));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::IActionRuntime3>**)this;
+            check_hresult(_winrt_abi_type->CreateInvocationContextWithWindowId(*(void**)(&actionId), impl::bind_in(invokerWindowId), &result));
+        }
+        return winrt::Windows::AI::Actions::ActionInvocationContext{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Windows_AI_Actions_IActionRuntime3<D>::GetActionEntityById(param::hstring const& entityId) const
+    {
+        void* result{};
+        if constexpr (!std::is_same_v<D, winrt::Windows::AI::Actions::IActionRuntime3>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Windows::AI::Actions::IActionRuntime3, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::IActionRuntime3>**)&_winrt_casted_result;
             check_hresult(_winrt_abi_type->GetActionEntityById(*(void**)(&entityId), &result));
         }
         else
         {
-            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::IActionRuntime2>**)this;
+            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::IActionRuntime3>**)this;
             check_hresult(_winrt_abi_type->GetActionEntityById(*(void**)(&entityId), &result));
         }
         return winrt::Windows::AI::Actions::ActionEntity{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_AI_Actions_IActionRuntime2<D>::LatestSupportedSchemaVersion() const
+    template <typename D> auto consume_Windows_AI_Actions_IActionRuntime3<D>::LatestSupportedSchemaVersion() const
     {
         uint32_t value{};
-        if constexpr (!std::is_same_v<D, winrt::Windows::AI::Actions::IActionRuntime2>)
+        if constexpr (!std::is_same_v<D, winrt::Windows::AI::Actions::IActionRuntime3>)
         {
             winrt::hresult _winrt_cast_result_code;
-            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Windows::AI::Actions::IActionRuntime2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Windows::AI::Actions::IActionRuntime3, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
             check_hresult(_winrt_cast_result_code);
-            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::IActionRuntime2>**)&_winrt_casted_result;
+            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::IActionRuntime3>**)&_winrt_casted_result;
             check_hresult(_winrt_abi_type->get_LatestSupportedSchemaVersion(&value));
         }
         else
         {
-            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::IActionRuntime2>**)this;
+            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::IActionRuntime3>**)this;
             check_hresult(_winrt_abi_type->get_LatestSupportedSchemaVersion(&value));
         }
         return value;
@@ -1535,6 +1499,12 @@ namespace winrt::impl
             return 0;
         }
         catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Windows::AI::Actions::IActionEntityFactory4> : produce_base<D, winrt::Windows::AI::Actions::IActionEntityFactory4>
+    {
         int32_t __stdcall CreateTableEntity(uint32_t __dataSize, void** data, uint32_t columnCount, void** result) noexcept final try
         {
             clear_abi(result);
@@ -1576,27 +1546,11 @@ namespace winrt::impl
     template <typename D>
     struct produce<D, winrt::Windows::AI::Actions::IActionInvocationContext> : produce_base<D, winrt::Windows::AI::Actions::IActionInvocationContext>
     {
-        int32_t __stdcall get_ActionName(void** value) noexcept final try
-        {
-            clear_abi(value);
-            typename D::abi_guard guard(this->shim());
-            *value = detach_from<hstring>(this->shim().ActionName());
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
         int32_t __stdcall get_EntityFactory(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
             *value = detach_from<winrt::Windows::AI::Actions::ActionEntityFactory>(this->shim().EntityFactory());
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-        int32_t __stdcall get_InvokerPackageFamilyName(void** value) noexcept final try
-        {
-            clear_abi(value);
-            typename D::abi_guard guard(this->shim());
-            *value = detach_from<hstring>(this->shim().InvokerPackageFamilyName());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1813,14 +1767,6 @@ namespace winrt::impl
     template <typename D>
     struct produce<D, winrt::Windows::AI::Actions::IActionRuntime2> : produce_base<D, winrt::Windows::AI::Actions::IActionRuntime2>
     {
-        int32_t __stdcall CreateInvocationContextWithWindowId(void* actionId, struct struct_Windows_UI_WindowId invokerWindowId, void** result) noexcept final try
-        {
-            clear_abi(result);
-            typename D::abi_guard guard(this->shim());
-            *result = detach_from<winrt::Windows::AI::Actions::ActionInvocationContext>(this->shim().CreateInvocationContextWithWindowId(*reinterpret_cast<hstring const*>(&actionId), *reinterpret_cast<winrt::Windows::UI::WindowId const*>(&invokerWindowId)));
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
         int32_t __stdcall CreateActionFeedback(int32_t feedbackKind, void** result) noexcept final try
         {
             clear_abi(result);
@@ -1840,6 +1786,20 @@ namespace winrt::impl
         {
             typename D::abi_guard guard(this->shim());
             *result = detach_from<bool>(this->shim().GetActionAvailability(*reinterpret_cast<hstring const*>(&actionId)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Windows::AI::Actions::IActionRuntime3> : produce_base<D, winrt::Windows::AI::Actions::IActionRuntime3>
+    {
+        int32_t __stdcall CreateInvocationContextWithWindowId(void* actionId, struct struct_Windows_UI_WindowId invokerWindowId, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::AI::Actions::ActionInvocationContext>(this->shim().CreateInvocationContextWithWindowId(*reinterpret_cast<hstring const*>(&actionId), *reinterpret_cast<winrt::Windows::UI::WindowId const*>(&invokerWindowId)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2186,6 +2146,7 @@ namespace std
     template<> struct hash<winrt::Windows::AI::Actions::IActionEntityFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::AI::Actions::IActionEntityFactory2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::AI::Actions::IActionEntityFactory3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::AI::Actions::IActionEntityFactory4> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::AI::Actions::IActionEntityFactoryFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::AI::Actions::IActionFeedback> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::AI::Actions::IActionInvocationContext> : winrt::impl::hash_base {};
@@ -2193,6 +2154,7 @@ namespace std
     template<> struct hash<winrt::Windows::AI::Actions::IActionInvocationHelpDetails> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::AI::Actions::IActionRuntime> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::AI::Actions::IActionRuntime2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::AI::Actions::IActionRuntime3> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::AI::Actions::IActionRuntimeFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::AI::Actions::IContactActionEntity> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::AI::Actions::IDocumentActionEntity> : winrt::impl::hash_base {};
