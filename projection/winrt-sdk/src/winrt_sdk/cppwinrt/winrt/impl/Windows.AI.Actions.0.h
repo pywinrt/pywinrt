@@ -71,6 +71,7 @@ WINRT_EXPORT namespace winrt::Windows::AI::Actions
     struct IActionEntityFactory;
     struct IActionEntityFactory2;
     struct IActionEntityFactory3;
+    struct IActionEntityFactory4;
     struct IActionEntityFactoryFactory;
     struct IActionFeedback;
     struct IActionInvocationContext;
@@ -78,6 +79,7 @@ WINRT_EXPORT namespace winrt::Windows::AI::Actions
     struct IActionInvocationHelpDetails;
     struct IActionRuntime;
     struct IActionRuntime2;
+    struct IActionRuntime3;
     struct IActionRuntimeFactory;
     struct IContactActionEntity;
     struct IDocumentActionEntity;
@@ -119,6 +121,7 @@ namespace winrt::impl
     template <> struct category<winrt::Windows::AI::Actions::IActionEntityFactory>{ using type = interface_category; };
     template <> struct category<winrt::Windows::AI::Actions::IActionEntityFactory2>{ using type = interface_category; };
     template <> struct category<winrt::Windows::AI::Actions::IActionEntityFactory3>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::AI::Actions::IActionEntityFactory4>{ using type = interface_category; };
     template <> struct category<winrt::Windows::AI::Actions::IActionEntityFactoryFactory>{ using type = interface_category; };
     template <> struct category<winrt::Windows::AI::Actions::IActionFeedback>{ using type = interface_category; };
     template <> struct category<winrt::Windows::AI::Actions::IActionInvocationContext>{ using type = interface_category; };
@@ -126,6 +129,7 @@ namespace winrt::impl
     template <> struct category<winrt::Windows::AI::Actions::IActionInvocationHelpDetails>{ using type = interface_category; };
     template <> struct category<winrt::Windows::AI::Actions::IActionRuntime>{ using type = interface_category; };
     template <> struct category<winrt::Windows::AI::Actions::IActionRuntime2>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::AI::Actions::IActionRuntime3>{ using type = interface_category; };
     template <> struct category<winrt::Windows::AI::Actions::IActionRuntimeFactory>{ using type = interface_category; };
     template <> struct category<winrt::Windows::AI::Actions::IContactActionEntity>{ using type = interface_category; };
     template <> struct category<winrt::Windows::AI::Actions::IDocumentActionEntity>{ using type = interface_category; };
@@ -193,6 +197,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::AI::Actions::IActionEntityFactory> = L"Windows.AI.Actions.IActionEntityFactory";
     template <> inline constexpr auto& name_v<winrt::Windows::AI::Actions::IActionEntityFactory2> = L"Windows.AI.Actions.IActionEntityFactory2";
     template <> inline constexpr auto& name_v<winrt::Windows::AI::Actions::IActionEntityFactory3> = L"Windows.AI.Actions.IActionEntityFactory3";
+    template <> inline constexpr auto& name_v<winrt::Windows::AI::Actions::IActionEntityFactory4> = L"Windows.AI.Actions.IActionEntityFactory4";
     template <> inline constexpr auto& name_v<winrt::Windows::AI::Actions::IActionEntityFactoryFactory> = L"Windows.AI.Actions.IActionEntityFactoryFactory";
     template <> inline constexpr auto& name_v<winrt::Windows::AI::Actions::IActionFeedback> = L"Windows.AI.Actions.IActionFeedback";
     template <> inline constexpr auto& name_v<winrt::Windows::AI::Actions::IActionInvocationContext> = L"Windows.AI.Actions.IActionInvocationContext";
@@ -200,6 +205,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::AI::Actions::IActionInvocationHelpDetails> = L"Windows.AI.Actions.IActionInvocationHelpDetails";
     template <> inline constexpr auto& name_v<winrt::Windows::AI::Actions::IActionRuntime> = L"Windows.AI.Actions.IActionRuntime";
     template <> inline constexpr auto& name_v<winrt::Windows::AI::Actions::IActionRuntime2> = L"Windows.AI.Actions.IActionRuntime2";
+    template <> inline constexpr auto& name_v<winrt::Windows::AI::Actions::IActionRuntime3> = L"Windows.AI.Actions.IActionRuntime3";
     template <> inline constexpr auto& name_v<winrt::Windows::AI::Actions::IActionRuntimeFactory> = L"Windows.AI.Actions.IActionRuntimeFactory";
     template <> inline constexpr auto& name_v<winrt::Windows::AI::Actions::IContactActionEntity> = L"Windows.AI.Actions.IContactActionEntity";
     template <> inline constexpr auto& name_v<winrt::Windows::AI::Actions::IDocumentActionEntity> = L"Windows.AI.Actions.IDocumentActionEntity";
@@ -219,14 +225,16 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Windows::AI::Actions::IActionEntityDisplayInfo>{ 0x057A9EDE,0x03E1,0x55C6,{ 0xAC,0xBA,0xC7,0x05,0x62,0x16,0x73,0x5A } }; // 057A9EDE-03E1-55C6-ACBA-C7056216735A
     template <> inline constexpr guid guid_v<winrt::Windows::AI::Actions::IActionEntityFactory>{ 0x9CB752A0,0x5BF8,0x5BE2,{ 0x91,0x6E,0xB0,0x0E,0xFF,0x80,0x08,0x8D } }; // 9CB752A0-5BF8-5BE2-916E-B00EFF80088D
     template <> inline constexpr guid guid_v<winrt::Windows::AI::Actions::IActionEntityFactory2>{ 0xEA2FB6A5,0xEC6D,0x5180,{ 0x9D,0x30,0xBC,0x66,0x3B,0x84,0xE7,0xB8 } }; // EA2FB6A5-EC6D-5180-9D30-BC663B84E7B8
-    template <> inline constexpr guid guid_v<winrt::Windows::AI::Actions::IActionEntityFactory3>{ 0x0DA98E70,0xB335,0x5B9D,{ 0x84,0x22,0x78,0x25,0x2A,0xD9,0x7F,0x12 } }; // 0DA98E70-B335-5B9D-8422-78252AD97F12
+    template <> inline constexpr guid guid_v<winrt::Windows::AI::Actions::IActionEntityFactory3>{ 0x4910E689,0x00B5,0x56BB,{ 0x9C,0x65,0x0F,0xCC,0x76,0x21,0x52,0x83 } }; // 4910E689-00B5-56BB-9C65-0FCC76215283
+    template <> inline constexpr guid guid_v<winrt::Windows::AI::Actions::IActionEntityFactory4>{ 0x332EDA05,0xDE0E,0x5A58,{ 0xB3,0x18,0xA2,0xAD,0x77,0x1F,0x01,0x3D } }; // 332EDA05-DE0E-5A58-B318-A2AD771F013D
     template <> inline constexpr guid guid_v<winrt::Windows::AI::Actions::IActionEntityFactoryFactory>{ 0xC9147D8F,0x88A0,0x5EC0,{ 0xA5,0x64,0x47,0xE2,0xA1,0x08,0x14,0x12 } }; // C9147D8F-88A0-5EC0-A564-47E2A1081412
     template <> inline constexpr guid guid_v<winrt::Windows::AI::Actions::IActionFeedback>{ 0xA12EE7AB,0x2454,0x56C9,{ 0xBB,0xDF,0xC0,0x89,0x45,0x7F,0xBC,0x5E } }; // A12EE7AB-2454-56C9-BBDF-C089457FBC5E
-    template <> inline constexpr guid guid_v<winrt::Windows::AI::Actions::IActionInvocationContext>{ 0x7E9E9D04,0x8781,0x5F29,{ 0xAA,0x99,0x24,0x58,0xAC,0xA8,0x9C,0x70 } }; // 7E9E9D04-8781-5F29-AA99-2458ACA89C70
+    template <> inline constexpr guid guid_v<winrt::Windows::AI::Actions::IActionInvocationContext>{ 0xC32B622E,0x86E1,0x5EBA,{ 0x96,0x61,0x60,0x59,0x10,0x10,0x49,0x78 } }; // C32B622E-86E1-5EBA-9661-605910104978
     template <> inline constexpr guid guid_v<winrt::Windows::AI::Actions::IActionInvocationContext2>{ 0x7C843086,0x9279,0x5BCD,{ 0x8F,0x2E,0xD1,0x51,0x21,0xE7,0xA8,0x27 } }; // 7C843086-9279-5BCD-8F2E-D15121E7A827
     template <> inline constexpr guid guid_v<winrt::Windows::AI::Actions::IActionInvocationHelpDetails>{ 0x5430F272,0x078F,0x5722,{ 0x8F,0x7D,0x90,0xCF,0x8D,0xDD,0x59,0x5E } }; // 5430F272-078F-5722-8F7D-90CF8DDD595E
     template <> inline constexpr guid guid_v<winrt::Windows::AI::Actions::IActionRuntime>{ 0x206EFA2C,0xC909,0x508A,{ 0xB4,0xB0,0x94,0x82,0xBE,0x96,0xDB,0x9C } }; // 206EFA2C-C909-508A-B4B0-9482BE96DB9C
-    template <> inline constexpr guid guid_v<winrt::Windows::AI::Actions::IActionRuntime2>{ 0x06FD15CB,0x9675,0x55E8,{ 0xA2,0x20,0x5D,0x81,0x7D,0x33,0xDB,0xC4 } }; // 06FD15CB-9675-55E8-A220-5D817D33DBC4
+    template <> inline constexpr guid guid_v<winrt::Windows::AI::Actions::IActionRuntime2>{ 0x2DA4D2C0,0xE593,0x5350,{ 0x81,0x43,0x15,0xBB,0x24,0xF6,0x34,0x11 } }; // 2DA4D2C0-E593-5350-8143-15BB24F63411
+    template <> inline constexpr guid guid_v<winrt::Windows::AI::Actions::IActionRuntime3>{ 0xF020C3C0,0xCAEC,0x5928,{ 0xAD,0x00,0x81,0x06,0x9B,0x80,0xFB,0xC1 } }; // F020C3C0-CAEC-5928-AD00-81069B80FBC1
     template <> inline constexpr guid guid_v<winrt::Windows::AI::Actions::IActionRuntimeFactory>{ 0xD3F366E9,0x8DC9,0x50A0,{ 0x80,0x40,0xE5,0xC1,0x4F,0xA6,0x09,0xD6 } }; // D3F366E9-8DC9-50A0-8040-E5C14FA609D6
     template <> inline constexpr guid guid_v<winrt::Windows::AI::Actions::IContactActionEntity>{ 0x458C3E07,0x5892,0x5485,{ 0xBD,0x9B,0x8F,0x7A,0x54,0x0C,0x95,0x01 } }; // 458C3E07-5892-5485-BD9B-8F7A540C9501
     template <> inline constexpr guid guid_v<winrt::Windows::AI::Actions::IDocumentActionEntity>{ 0x56715297,0x960B,0x59FF,{ 0xAF,0x4B,0xEC,0xE1,0x09,0x8B,0x2E,0x36 } }; // 56715297-960B-59FF-AF4B-ECE1098B2E36
@@ -303,6 +311,12 @@ namespace winrt::impl
             virtual int32_t __stdcall CreateRemoteFileEntity(void*, int32_t, void*, void*, void*, void*, void*, void*, void**) noexcept = 0;
             virtual int32_t __stdcall CreateTextEntityWithTextFormat(void*, int32_t, void**) noexcept = 0;
             virtual int32_t __stdcall CreateStreamingTextActionEntityWriter(int32_t, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Windows::AI::Actions::IActionEntityFactory4>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
             virtual int32_t __stdcall CreateTableEntity(uint32_t, void**, uint32_t, void**) noexcept = 0;
             virtual int32_t __stdcall CreateContactEntity(void*, void**) noexcept = 0;
         };
@@ -324,9 +338,7 @@ namespace winrt::impl
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
-            virtual int32_t __stdcall get_ActionName(void**) noexcept = 0;
             virtual int32_t __stdcall get_EntityFactory(void**) noexcept = 0;
-            virtual int32_t __stdcall get_InvokerPackageFamilyName(void**) noexcept = 0;
             virtual int32_t __stdcall SetInputEntity(void*, void*) noexcept = 0;
             virtual int32_t __stdcall GetInputEntities(uint32_t* __resultSize, void***) noexcept = 0;
             virtual int32_t __stdcall SetOutputEntity(void*, void*) noexcept = 0;
@@ -376,10 +388,16 @@ namespace winrt::impl
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
-            virtual int32_t __stdcall CreateInvocationContextWithWindowId(void*, struct struct_Windows_UI_WindowId, void**) noexcept = 0;
             virtual int32_t __stdcall CreateActionFeedback(int32_t, void**) noexcept = 0;
             virtual int32_t __stdcall SetActionAvailability(void*, bool) noexcept = 0;
             virtual int32_t __stdcall GetActionAvailability(void*, bool*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Windows::AI::Actions::IActionRuntime3>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall CreateInvocationContextWithWindowId(void*, struct struct_Windows_UI_WindowId, void**) noexcept = 0;
             virtual int32_t __stdcall GetActionEntityById(void*, void**) noexcept = 0;
             virtual int32_t __stdcall get_LatestSupportedSchemaVersion(uint32_t*) noexcept = 0;
         };
@@ -547,12 +565,20 @@ namespace winrt::impl
         auto CreateRemoteFileEntity(param::hstring const& sourceId, winrt::Windows::AI::Actions::RemoteFileKind const& fileKind, winrt::Windows::Foundation::Uri const& sourceUri, param::hstring const& fileId, param::hstring const& contentType, param::hstring const& driveId, param::hstring const& accountId, param::hstring const& extension) const;
         auto CreateTextEntity(param::hstring const& text, winrt::Windows::AI::Actions::ActionEntityTextFormat const& textFormat) const;
         auto CreateStreamingTextActionEntityWriter(winrt::Windows::AI::Actions::ActionEntityTextFormat const& textFormat) const;
-        auto CreateTableEntity(array_view<hstring const> data, uint32_t columnCount) const;
-        auto CreateContactEntity(winrt::Windows::ApplicationModel::Contacts::Contact const& contact) const;
     };
     template <> struct consume<winrt::Windows::AI::Actions::IActionEntityFactory3>
     {
         template <typename D> using type = consume_Windows_AI_Actions_IActionEntityFactory3<D>;
+    };
+    template <typename D>
+    struct consume_Windows_AI_Actions_IActionEntityFactory4
+    {
+        auto CreateTableEntity(array_view<hstring const> data, uint32_t columnCount) const;
+        auto CreateContactEntity(winrt::Windows::ApplicationModel::Contacts::Contact const& contact) const;
+    };
+    template <> struct consume<winrt::Windows::AI::Actions::IActionEntityFactory4>
+    {
+        template <typename D> using type = consume_Windows_AI_Actions_IActionEntityFactory4<D>;
     };
     template <typename D>
     struct consume_Windows_AI_Actions_IActionEntityFactoryFactory
@@ -574,9 +600,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_AI_Actions_IActionInvocationContext
     {
-        [[nodiscard]] auto ActionName() const;
         [[nodiscard]] auto EntityFactory() const;
-        [[nodiscard]] auto InvokerPackageFamilyName() const;
         auto SetInputEntity(param::hstring const& inputName, winrt::Windows::AI::Actions::ActionEntity const& inputValue) const;
         auto GetInputEntities() const;
         auto SetOutputEntity(param::hstring const& outputName, winrt::Windows::AI::Actions::ActionEntity const& outputValue) const;
@@ -634,16 +658,24 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_AI_Actions_IActionRuntime2
     {
-        auto CreateInvocationContextWithWindowId(param::hstring const& actionId, winrt::Windows::UI::WindowId const& invokerWindowId) const;
         auto CreateActionFeedback(winrt::Windows::AI::Actions::ActionFeedbackKind const& feedbackKind) const;
         auto SetActionAvailability(param::hstring const& actionId, bool isAvailable) const;
         auto GetActionAvailability(param::hstring const& actionId) const;
-        auto GetActionEntityById(param::hstring const& entityId) const;
-        [[nodiscard]] auto LatestSupportedSchemaVersion() const;
     };
     template <> struct consume<winrt::Windows::AI::Actions::IActionRuntime2>
     {
         template <typename D> using type = consume_Windows_AI_Actions_IActionRuntime2<D>;
+    };
+    template <typename D>
+    struct consume_Windows_AI_Actions_IActionRuntime3
+    {
+        auto CreateInvocationContextWithWindowId(param::hstring const& actionId, winrt::Windows::UI::WindowId const& invokerWindowId) const;
+        auto GetActionEntityById(param::hstring const& entityId) const;
+        [[nodiscard]] auto LatestSupportedSchemaVersion() const;
+    };
+    template <> struct consume<winrt::Windows::AI::Actions::IActionRuntime3>
+    {
+        template <typename D> using type = consume_Windows_AI_Actions_IActionRuntime3<D>;
     };
     template <typename D>
     struct consume_Windows_AI_Actions_IActionRuntimeFactory

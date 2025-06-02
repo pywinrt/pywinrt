@@ -2811,21 +2811,21 @@ namespace winrt::impl
     }
     template <typename D> auto consume_Windows_UI_ViewManagement_IUIViewSettingsStatics<D>::GetForCurrentView() const
     {
-        void* current{};
+        void* result{};
         if constexpr (!std::is_same_v<D, winrt::Windows::UI::ViewManagement::IUIViewSettingsStatics>)
         {
             winrt::hresult _winrt_cast_result_code;
             auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Windows::UI::ViewManagement::IUIViewSettingsStatics, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
             check_hresult(_winrt_cast_result_code);
             auto const _winrt_abi_type = *(abi_t<winrt::Windows::UI::ViewManagement::IUIViewSettingsStatics>**)&_winrt_casted_result;
-            check_hresult(_winrt_abi_type->GetForCurrentView(&current));
+            check_hresult(_winrt_abi_type->GetForCurrentView(&result));
         }
         else
         {
             auto const _winrt_abi_type = *(abi_t<winrt::Windows::UI::ViewManagement::IUIViewSettingsStatics>**)this;
-            check_hresult(_winrt_abi_type->GetForCurrentView(&current));
+            check_hresult(_winrt_abi_type->GetForCurrentView(&result));
         }
-        return winrt::Windows::UI::ViewManagement::UIViewSettings{ current, take_ownership_from_abi };
+        return winrt::Windows::UI::ViewManagement::UIViewSettings{ result, take_ownership_from_abi };
     }
     template <typename D> auto consume_Windows_UI_ViewManagement_IViewModePreferences<D>::ViewSizePreference() const
     {
@@ -4334,11 +4334,11 @@ namespace winrt::impl
     template <typename D>
     struct produce<D, winrt::Windows::UI::ViewManagement::IUIViewSettingsStatics> : produce_base<D, winrt::Windows::UI::ViewManagement::IUIViewSettingsStatics>
     {
-        int32_t __stdcall GetForCurrentView(void** current) noexcept final try
+        int32_t __stdcall GetForCurrentView(void** result) noexcept final try
         {
-            clear_abi(current);
+            clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *current = detach_from<winrt::Windows::UI::ViewManagement::UIViewSettings>(this->shim().GetForCurrentView());
+            *result = detach_from<winrt::Windows::UI::ViewManagement::UIViewSettings>(this->shim().GetForCurrentView());
             return 0;
         }
         catch (...) { return to_hresult(); }

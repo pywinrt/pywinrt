@@ -8,7 +8,7 @@ param(
 
     # Windows SDK
     [Parameter(Mandatory=$false)]
-    [string]$WindowsSdkVersion = "10.0.26100.3916",
+    [string]$WindowsSdkVersion = "10.0.26100.4188",
     [switch]$noWindowsSdk,
 
     # WinUI 2

@@ -6,6 +6,7 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.AI.Actions.h>
 #include <winrt/Windows.Foundation.h>
+#include <winrt/Windows.UI.h>
 
 #include <winrt/Windows.AI.Actions.Hosting.h>
 
@@ -15,17 +16,6 @@ namespace py::proj::Windows::AI::Actions::Hosting
 
 namespace py
 {
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::AI::Actions::Hosting::ActionDisclaimerKind> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::AI::Actions::Hosting::ActionDisclaimerKind>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ai.actions.hosting.ActionDisclaimerKind";
-        static constexpr const char* module_name = "winrt.windows.ai.actions.hosting";
-        static constexpr const char* type_name = "ActionDisclaimerKind";
-    };
 
     template<>
     struct py_type<winrt::Windows::AI::Actions::Hosting::ActionCatalog>
@@ -52,6 +42,22 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Windows::AI::Actions::Hosting::ActionInstance>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.actions.hosting.ActionInstance";
+        static constexpr const char* module_name = "winrt.windows.ai.actions.hosting";
+        static constexpr const char* type_name = "ActionInstance";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::AI::Actions::Hosting::ActionInstanceDisplayInfo>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.actions.hosting.ActionInstanceDisplayInfo";
+        static constexpr const char* module_name = "winrt.windows.ai.actions.hosting";
+        static constexpr const char* type_name = "ActionInstanceDisplayInfo";
+    };
+
+    template<>
     struct py_type<winrt::Windows::AI::Actions::Hosting::ActionOverload>
     {
         static constexpr std::string_view qualified_name = "winrt.windows.ai.actions.hosting.ActionOverload";
@@ -68,6 +74,10 @@ namespace py
 #include "py.Windows.Foundation.h"
 #endif
 
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
 namespace py::impl::Windows::AI::Actions::Hosting
 {
 }
@@ -77,6 +87,8 @@ namespace py::wrapper::Windows::AI::Actions::Hosting
     using ActionCatalog = py::winrt_wrapper<winrt::Windows::AI::Actions::Hosting::ActionCatalog>;
     using ActionDefinition = py::winrt_wrapper<winrt::Windows::AI::Actions::Hosting::ActionDefinition>;
     using ActionEntityRegistrationInfo = py::winrt_wrapper<winrt::Windows::AI::Actions::Hosting::ActionEntityRegistrationInfo>;
+    using ActionInstance = py::winrt_wrapper<winrt::Windows::AI::Actions::Hosting::ActionInstance>;
+    using ActionInstanceDisplayInfo = py::winrt_wrapper<winrt::Windows::AI::Actions::Hosting::ActionInstanceDisplayInfo>;
     using ActionOverload = py::winrt_wrapper<winrt::Windows::AI::Actions::Hosting::ActionOverload>;
 }
 

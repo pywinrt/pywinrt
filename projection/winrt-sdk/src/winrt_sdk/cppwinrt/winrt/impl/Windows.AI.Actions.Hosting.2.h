@@ -8,13 +8,13 @@
 WINRT_EXPORT namespace winrt::Windows::AI::Actions::Hosting
 {
     struct WINRT_IMPL_EMPTY_BASES ActionCatalog : winrt::Windows::AI::Actions::Hosting::IActionCatalog,
-        impl::require<ActionCatalog, winrt::Windows::Foundation::IClosable>
+        impl::require<ActionCatalog, winrt::Windows::AI::Actions::Hosting::IActionCatalog2, winrt::Windows::Foundation::IClosable>
     {
         ActionCatalog(std::nullptr_t) noexcept {}
         ActionCatalog(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::AI::Actions::Hosting::IActionCatalog(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES ActionDefinition : winrt::Windows::AI::Actions::Hosting::IActionDefinition,
-        impl::require<ActionDefinition, winrt::Windows::AI::Actions::Hosting::IActionDefinition2, winrt::Windows::Foundation::IClosable>
+        impl::require<ActionDefinition, winrt::Windows::AI::Actions::Hosting::IActionDefinition2, winrt::Windows::AI::Actions::Hosting::IActionDefinition3, winrt::Windows::Foundation::IClosable>
     {
         ActionDefinition(std::nullptr_t) noexcept {}
         ActionDefinition(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::AI::Actions::Hosting::IActionDefinition(ptr, take_ownership_from_abi) {}
@@ -24,6 +24,16 @@ WINRT_EXPORT namespace winrt::Windows::AI::Actions::Hosting
     {
         ActionEntityRegistrationInfo(std::nullptr_t) noexcept {}
         ActionEntityRegistrationInfo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::AI::Actions::Hosting::IActionEntityRegistrationInfo(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ActionInstance : winrt::Windows::AI::Actions::Hosting::IActionInstance
+    {
+        ActionInstance(std::nullptr_t) noexcept {}
+        ActionInstance(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::AI::Actions::Hosting::IActionInstance(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ActionInstanceDisplayInfo : winrt::Windows::AI::Actions::Hosting::IActionInstanceDisplayInfo
+    {
+        ActionInstanceDisplayInfo(std::nullptr_t) noexcept {}
+        ActionInstanceDisplayInfo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::AI::Actions::Hosting::IActionInstanceDisplayInfo(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES ActionOverload : winrt::Windows::AI::Actions::Hosting::IActionOverload,
         impl::require<ActionOverload, winrt::Windows::AI::Actions::Hosting::IActionOverload2, winrt::Windows::Foundation::IClosable>

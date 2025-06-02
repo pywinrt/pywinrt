@@ -1481,36 +1481,6 @@ namespace py::cpp::Windows::AI::Actions
         }
     }
 
-    static PyObject* ActionInvocationContext_get_ActionName(py::wrapper::Windows::AI::Actions::ActionInvocationContext* self, void* /*unused*/) noexcept
-    {
-        try
-        {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.Actions.ActionInvocationContext", L"ActionName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
-            return py::convert([&]()
-            {
-                auto _gil = release_gil();
-                return self->obj.ActionName();
-            }());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyObject* ActionInvocationContext_get_EntityFactory(py::wrapper::Windows::AI::Actions::ActionInvocationContext* self, void* /*unused*/) noexcept
     {
         try
@@ -1532,36 +1502,6 @@ namespace py::cpp::Windows::AI::Actions
             {
                 auto _gil = release_gil();
                 return self->obj.EntityFactory();
-            }());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
-    static PyObject* ActionInvocationContext_get_InvokerPackageFamilyName(py::wrapper::Windows::AI::Actions::ActionInvocationContext* self, void* /*unused*/) noexcept
-    {
-        try
-        {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.Actions.ActionInvocationContext", L"InvokerPackageFamilyName");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
-            return py::convert([&]()
-            {
-                auto _gil = release_gil();
-                return self->obj.InvokerPackageFamilyName();
             }());
         }
         catch (...)
@@ -1753,9 +1693,7 @@ namespace py::cpp::Windows::AI::Actions
     static PyGetSetDef _getset_ActionInvocationContext[] = {
         { "result", reinterpret_cast<getter>(ActionInvocationContext_get_Result), reinterpret_cast<setter>(ActionInvocationContext_put_Result), nullptr, nullptr },
         { "extended_error", reinterpret_cast<getter>(ActionInvocationContext_get_ExtendedError), reinterpret_cast<setter>(ActionInvocationContext_put_ExtendedError), nullptr, nullptr },
-        { "action_name", reinterpret_cast<getter>(ActionInvocationContext_get_ActionName), nullptr, nullptr, nullptr },
         { "entity_factory", reinterpret_cast<getter>(ActionInvocationContext_get_EntityFactory), nullptr, nullptr, nullptr },
-        { "invoker_package_family_name", reinterpret_cast<getter>(ActionInvocationContext_get_InvokerPackageFamilyName), nullptr, nullptr, nullptr },
         { "action_id", reinterpret_cast<getter>(ActionInvocationContext_get_ActionId), nullptr, nullptr, nullptr },
         { "help_details", reinterpret_cast<getter>(ActionInvocationContext_get_HelpDetails), nullptr, nullptr, nullptr },
         { "invoker_app_user_model_id", reinterpret_cast<getter>(ActionInvocationContext_get_InvokerAppUserModelId), nullptr, nullptr, nullptr },
