@@ -23,6 +23,17 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::ApplicationModel::WindowsAppRu
     enum class RuntimeCompatibilityChange : int32_t
     {
         None = 0,
+        EnsurePackageReadyVersionSupercedence = 56439870,
+        FixPopupClosingReentrancyCrash = 56870998,
+        FixPopupUnloadingCrash = 56686624,
+        FixRandomUIFreezeInDispatcher = 56545444,
+        FixSetProgressBarIndicatorWidthCrash = 56779522,
+        FixStuckPointerInputQueue = 56620717,
+        FixWebViewVisibilityReentrancyCrash = 56852985,
+        FixWindowCloseFocusCrash = 56873234,
+        ActivateDirectManipulationManager_CheckCanInit = 56997009,
+        DwmCoreI_OptimizeFirstFrameLatency = 57345278,
+        InputStateManager_PenInputCrashX86 = 57003641,
     };
     struct IDeploymentInitializeOptions;
     struct IDeploymentInitializeOptions2;

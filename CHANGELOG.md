@@ -12,6 +12,7 @@
 
 ### Changed
 - `asyncio` cancellation is now propagated to WinRT async actions/operations that are being awaited.
+- Updated Windows App SDK to 1.7.250513003.
 - Updated to CppWinRT 2.0.250303.1.
 - Changed type hints from `winrt.windows.storage.streams.IBuffer` to `winrt.system.Buffer`.
 
