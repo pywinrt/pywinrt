@@ -253,22 +253,6 @@ namespace py
     };
 
     template<>
-    struct py_type<winrt::Windows::UI::ViewManagement::StatusBar>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.StatusBar";
-        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
-        static constexpr const char* type_name = "StatusBar";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::ViewManagement::StatusBarProgressIndicator>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.StatusBarProgressIndicator";
-        static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
-        static constexpr const char* type_name = "StatusBarProgressIndicator";
-    };
-
-    template<>
     struct py_type<winrt::Windows::UI::ViewManagement::UISettings>
     {
         static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.UISettings";
@@ -362,8 +346,6 @@ namespace py::wrapper::Windows::UI::ViewManagement
     using InputPane = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::InputPane>;
     using InputPaneVisibilityEventArgs = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::InputPaneVisibilityEventArgs>;
     using ProjectionManager = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::ProjectionManager>;
-    using StatusBar = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::StatusBar>;
-    using StatusBarProgressIndicator = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::StatusBarProgressIndicator>;
     using UISettings = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::UISettings>;
     using UISettingsAnimationsEnabledChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::UISettingsAnimationsEnabledChangedEventArgs>;
     using UISettingsAutoHideScrollBarsChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::UISettingsAutoHideScrollBarsChangedEventArgs>;

@@ -16,6 +16,14 @@ import winrt.windows.foundation as windows_foundation
 Self = typing.TypeVar('Self')
 
 @typing.final
+class _IActionFeedbackHandler: ...
+
+class IActionFeedbackHandler(winrt._winrt.IInspectable):
+    # Windows.Foundation.IAsyncAction Windows.AI.Actions.Provider.IActionFeedbackHandler::ProcessFeedbackAsync(Windows.AI.Actions.ActionInvocationContext,Windows.AI.Actions.ActionFeedback)
+    @abstractmethod
+    def process_feedback_async(self, context: windows_ai_actions.ActionInvocationContext, feedback: windows_ai_actions.ActionFeedback, /) -> windows_foundation.IAsyncAction: ...
+
+@typing.final
 class _IActionProvider: ...
 
 class IActionProvider(winrt._winrt.IInspectable):

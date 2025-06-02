@@ -165,15 +165,6 @@ class AppInstance(winrt.system.Object, metaclass=AppInstance_Static):
     def key(self) -> str: ...
 
 @typing.final
-class CameraApplicationManager_Static(winrt._winrt.IInspectable_Static):
-    # System.Void Windows.ApplicationModel.CameraApplicationManager::ShowInstalledApplicationsUI()
-    def show_installed_applications_ui(cls) -> None: ...
-
-@typing.final
-class CameraApplicationManager(winrt.system.Object, metaclass=CameraApplicationManager_Static):
-    pass
-
-@typing.final
 class DesignMode_Static(winrt._winrt.IInspectable_Static):
     # System.Boolean Windows.ApplicationModel.DesignMode::get_DesignModeEnabled()
     @_property

@@ -15,6 +15,17 @@ namespace py::proj::Windows::AI::Actions::Hosting
 
 namespace py
 {
+    template<>
+    inline constexpr const char* buffer_format<winrt::Windows::AI::Actions::Hosting::ActionDisclaimerKind> = "i";
+
+
+    template<>
+    struct py_type<winrt::Windows::AI::Actions::Hosting::ActionDisclaimerKind>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.actions.hosting.ActionDisclaimerKind";
+        static constexpr const char* module_name = "winrt.windows.ai.actions.hosting";
+        static constexpr const char* type_name = "ActionDisclaimerKind";
+    };
 
     template<>
     struct py_type<winrt::Windows::AI::Actions::Hosting::ActionCatalog>

@@ -42,6 +42,7 @@ class CoreInputViewKind(enum.IntEnum):
     SYMBOLS = 4
     CLIPBOARD = 5
     DICTATION = 6
+    GAMEPAD = 7
 
 class CoreInputViewOcclusionKind(enum.IntEnum):
     DOCKED = 0

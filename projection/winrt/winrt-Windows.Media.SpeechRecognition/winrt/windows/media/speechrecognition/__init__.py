@@ -21,8 +21,6 @@ from winrt._winrt_windows_media_speechrecognition import (
     SpeechRecognizerStateChangedEventArgs,
     SpeechRecognizerTimeouts,
     SpeechRecognizerUIOptions,
-    VoiceCommandManager,
-    VoiceCommandSet,
     _ISpeechRecognitionConstraint,
     ISpeechRecognitionConstraint,
 )
@@ -53,8 +51,6 @@ __all__ = [
     "SpeechRecognizerStateChangedEventArgs",
     "SpeechRecognizerTimeouts",
     "SpeechRecognizerUIOptions",
-    "VoiceCommandManager",
-    "VoiceCommandSet",
     "ISpeechRecognitionConstraint",
 ]
 

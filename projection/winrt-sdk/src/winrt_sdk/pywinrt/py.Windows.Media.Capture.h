@@ -1088,22 +1088,6 @@ namespace py
     };
 
     template<>
-    struct py_type<winrt::Windows::Media::Capture::ScreenCapture>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.ScreenCapture";
-        static constexpr const char* module_name = "winrt.windows.media.capture";
-        static constexpr const char* type_name = "ScreenCapture";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Capture::SourceSuspensionChangedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.SourceSuspensionChangedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.media.capture";
-        static constexpr const char* type_name = "SourceSuspensionChangedEventArgs";
-    };
-
-    template<>
     struct py_type<winrt::Windows::Media::Capture::VideoStreamConfiguration>
     {
         static constexpr std::string_view qualified_name = "winrt.windows.media.capture.VideoStreamConfiguration";
@@ -1345,8 +1329,6 @@ namespace py::wrapper::Windows::Media::Capture
     using OptionalReferencePhotoCapturedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::OptionalReferencePhotoCapturedEventArgs>;
     using PhotoCapturedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::PhotoCapturedEventArgs>;
     using PhotoConfirmationCapturedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::PhotoConfirmationCapturedEventArgs>;
-    using ScreenCapture = py::winrt_wrapper<winrt::Windows::Media::Capture::ScreenCapture>;
-    using SourceSuspensionChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::SourceSuspensionChangedEventArgs>;
     using VideoStreamConfiguration = py::winrt_wrapper<winrt::Windows::Media::Capture::VideoStreamConfiguration>;
     using WhiteBalanceGain = py::winrt_struct_wrapper<winrt::Windows::Media::Capture::WhiteBalanceGain>;
 }

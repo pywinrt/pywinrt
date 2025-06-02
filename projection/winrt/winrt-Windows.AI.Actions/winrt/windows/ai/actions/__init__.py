@@ -7,12 +7,20 @@ from winrt._winrt_windows_ai_actions import (
     ActionEntity,
     ActionEntityDisplayInfo,
     ActionEntityFactory,
+    ActionFeedback,
     ActionInvocationContext,
+    ActionInvocationHelpDetails,
     ActionRuntime,
+    ContactActionEntity,
     DocumentActionEntity,
     FileActionEntity,
     NamedActionEntity,
     PhotoActionEntity,
+    RemoteFileActionEntity,
+    StreamingTextActionEntity,
+    StreamingTextActionEntityTextChangedArgs,
+    StreamingTextActionEntityWriter,
+    TableActionEntity,
     TextActionEntity,
 )
 from typing import TYPE_CHECKING
@@ -25,16 +33,28 @@ if TYPE_CHECKING:
 
 __all__ = [
     "ActionEntityKind",
+    "ActionEntityTextFormat",
+    "ActionFeedbackKind",
+    "ActionInvocationHelpKind",
     "ActionInvocationResult",
+    "RemoteFileKind",
     "ActionEntity",
     "ActionEntityDisplayInfo",
     "ActionEntityFactory",
+    "ActionFeedback",
     "ActionInvocationContext",
+    "ActionInvocationHelpDetails",
     "ActionRuntime",
+    "ContactActionEntity",
     "DocumentActionEntity",
     "FileActionEntity",
     "NamedActionEntity",
     "PhotoActionEntity",
+    "RemoteFileActionEntity",
+    "StreamingTextActionEntity",
+    "StreamingTextActionEntityTextChangedArgs",
+    "StreamingTextActionEntityWriter",
+    "TableActionEntity",
     "TextActionEntity",
 ]
 
@@ -44,10 +64,32 @@ class ActionEntityKind(enum.IntEnum):
     FILE = 2
     PHOTO = 3
     TEXT = 4
+    STREAMING_TEXT = 5
+    REMOTE_FILE = 6
+    TABLE = 7
+    CONTACT = 8
+
+class ActionEntityTextFormat(enum.IntEnum):
+    PLAIN = 0
+    MARKDOWN = 1
+
+class ActionFeedbackKind(enum.IntEnum):
+    POSITIVE = 0
+    NEGATIVE = 1
+
+class ActionInvocationHelpKind(enum.IntEnum):
+    NONE = 0
+    ERROR = 1
+    WARNING = 2
 
 class ActionInvocationResult(enum.IntEnum):
     SUCCESS = 0
     USER_CANCELED = 1
     UNSUPPORTED = 2
     UNAVAILABLE = 3
+
+class RemoteFileKind(enum.IntEnum):
+    DOCUMENT = 0
+    PHOTO = 1
+    FILE = 2
 

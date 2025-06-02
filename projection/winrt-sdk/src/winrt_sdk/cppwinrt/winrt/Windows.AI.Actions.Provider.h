@@ -12,6 +12,24 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.250303.1"), "Mismatche
 #include "winrt/impl/Windows.AI.Actions.Provider.2.h"
 namespace winrt::impl
 {
+    template <typename D> auto consume_Windows_AI_Actions_Provider_IActionFeedbackHandler<D>::ProcessFeedbackAsync(winrt::Windows::AI::Actions::ActionInvocationContext const& context, winrt::Windows::AI::Actions::ActionFeedback const& feedback) const
+    {
+        void* operation{};
+        if constexpr (!std::is_same_v<D, winrt::Windows::AI::Actions::Provider::IActionFeedbackHandler>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Windows::AI::Actions::Provider::IActionFeedbackHandler, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::Provider::IActionFeedbackHandler>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->ProcessFeedbackAsync(*(void**)(&context), *(void**)(&feedback), &operation));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Windows::AI::Actions::Provider::IActionFeedbackHandler>**)this;
+            check_hresult(_winrt_abi_type->ProcessFeedbackAsync(*(void**)(&context), *(void**)(&feedback), &operation));
+        }
+        return winrt::Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
+    }
     template <typename D> auto consume_Windows_AI_Actions_Provider_IActionProvider<D>::InvokeAsync(winrt::Windows::AI::Actions::ActionInvocationContext const& context) const
     {
         void* operation{};
@@ -31,6 +49,18 @@ namespace winrt::impl
         return winrt::Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
     template <typename D>
+    struct produce<D, winrt::Windows::AI::Actions::Provider::IActionFeedbackHandler> : produce_base<D, winrt::Windows::AI::Actions::Provider::IActionFeedbackHandler>
+    {
+        int32_t __stdcall ProcessFeedbackAsync(void* context, void* feedback, void** operation) noexcept final try
+        {
+            clear_abi(operation);
+            typename D::abi_guard guard(this->shim());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncAction>(this->shim().ProcessFeedbackAsync(*reinterpret_cast<winrt::Windows::AI::Actions::ActionInvocationContext const*>(&context), *reinterpret_cast<winrt::Windows::AI::Actions::ActionFeedback const*>(&feedback)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+    template <typename D>
     struct produce<D, winrt::Windows::AI::Actions::Provider::IActionProvider> : produce_base<D, winrt::Windows::AI::Actions::Provider::IActionProvider>
     {
         int32_t __stdcall InvokeAsync(void* context, void** operation) noexcept final try
@@ -49,6 +79,7 @@ WINRT_EXPORT namespace winrt::Windows::AI::Actions::Provider
 namespace std
 {
 #ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Windows::AI::Actions::Provider::IActionFeedbackHandler> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::AI::Actions::Provider::IActionProvider> : winrt::impl::hash_base {};
 #endif
 #ifdef __cpp_lib_format

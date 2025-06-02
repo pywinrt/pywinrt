@@ -522,14 +522,6 @@ namespace py
     };
 
     template<>
-    struct py_type<winrt::Windows::Networking::NetworkOperators::FdnAccessManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.FdnAccessManager";
-        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
-        static constexpr const char* type_name = "FdnAccessManager";
-    };
-
-    template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::HotspotAuthenticationContext>
     {
         static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.HotspotAuthenticationContext";
@@ -1141,7 +1133,6 @@ namespace py::wrapper::Windows::Networking::NetworkOperators
     using ESimServiceInfo = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ESimServiceInfo>;
     using ESimUpdatedEventArgs = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ESimUpdatedEventArgs>;
     using ESimWatcher = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ESimWatcher>;
-    using FdnAccessManager = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::FdnAccessManager>;
     using HotspotAuthenticationContext = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::HotspotAuthenticationContext>;
     using HotspotAuthenticationEventDetails = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::HotspotAuthenticationEventDetails>;
     using HotspotCredentialsAuthenticationResult = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::HotspotCredentialsAuthenticationResult>;

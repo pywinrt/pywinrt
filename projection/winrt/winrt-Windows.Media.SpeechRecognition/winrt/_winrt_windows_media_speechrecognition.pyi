@@ -360,29 +360,6 @@ class SpeechRecognizerUIOptions(winrt.system.Object):
     def audible_prompt(self, value: str) -> None: ...
 
 @typing.final
-class VoiceCommandManager_Static(winrt._winrt.IInspectable_Static):
-    # Windows.Foundation.IAsyncAction Windows.Media.SpeechRecognition.VoiceCommandManager::InstallCommandSetsFromStorageFileAsync(Windows.Storage.StorageFile)
-    def install_command_sets_from_storage_file_async(cls, file: windows_storage.StorageFile, /) -> windows_foundation.IAsyncAction: ...
-    # Windows.Foundation.Collections.IMapView`2<System.String,Windows.Media.SpeechRecognition.VoiceCommandSet> Windows.Media.SpeechRecognition.VoiceCommandManager::get_InstalledCommandSets()
-    @_property
-    def installed_command_sets(cls) -> typing.Mapping[str, VoiceCommandSet]: ...
-
-@typing.final
-class VoiceCommandManager(winrt.system.Object, metaclass=VoiceCommandManager_Static):
-    pass
-
-@typing.final
-class VoiceCommandSet(winrt.system.Object):
-    # Windows.Foundation.IAsyncAction Windows.Media.SpeechRecognition.VoiceCommandSet::SetPhraseListAsync(System.String,Windows.Foundation.Collections.IIterable`1<System.String>)
-    def set_phrase_list_async(self, phrase_list_name: str, phrase_list: typing.Iterable[str], /) -> windows_foundation.IAsyncAction: ...
-    # System.String Windows.Media.SpeechRecognition.VoiceCommandSet::get_Language()
-    @_property
-    def language(self) -> str: ...
-    # System.String Windows.Media.SpeechRecognition.VoiceCommandSet::get_Name()
-    @_property
-    def name(self) -> str: ...
-
-@typing.final
 class _ISpeechRecognitionConstraint: ...
 
 class ISpeechRecognitionConstraint(winrt._winrt.IInspectable):

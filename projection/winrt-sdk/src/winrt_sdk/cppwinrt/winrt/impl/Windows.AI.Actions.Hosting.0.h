@@ -6,6 +6,7 @@
 WINRT_EXPORT namespace winrt::Windows::AI::Actions
 {
     enum class ActionEntityKind : int32_t;
+    struct ActionFeedback;
     struct ActionInvocationContext;
 }
 WINRT_EXPORT namespace winrt::Windows::Foundation
@@ -16,10 +17,17 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
 }
 WINRT_EXPORT namespace winrt::Windows::AI::Actions::Hosting
 {
+    enum class ActionDisclaimerKind : int32_t
+    {
+        None = 0,
+        UsesAI = 1,
+    };
     struct IActionCatalog;
     struct IActionDefinition;
+    struct IActionDefinition2;
     struct IActionEntityRegistrationInfo;
     struct IActionOverload;
+    struct IActionOverload2;
     struct ActionCatalog;
     struct ActionDefinition;
     struct ActionEntityRegistrationInfo;
@@ -29,24 +37,32 @@ namespace winrt::impl
 {
     template <> struct category<winrt::Windows::AI::Actions::Hosting::IActionCatalog>{ using type = interface_category; };
     template <> struct category<winrt::Windows::AI::Actions::Hosting::IActionDefinition>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::AI::Actions::Hosting::IActionDefinition2>{ using type = interface_category; };
     template <> struct category<winrt::Windows::AI::Actions::Hosting::IActionEntityRegistrationInfo>{ using type = interface_category; };
     template <> struct category<winrt::Windows::AI::Actions::Hosting::IActionOverload>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::AI::Actions::Hosting::IActionOverload2>{ using type = interface_category; };
     template <> struct category<winrt::Windows::AI::Actions::Hosting::ActionCatalog>{ using type = class_category; };
     template <> struct category<winrt::Windows::AI::Actions::Hosting::ActionDefinition>{ using type = class_category; };
     template <> struct category<winrt::Windows::AI::Actions::Hosting::ActionEntityRegistrationInfo>{ using type = class_category; };
     template <> struct category<winrt::Windows::AI::Actions::Hosting::ActionOverload>{ using type = class_category; };
+    template <> struct category<winrt::Windows::AI::Actions::Hosting::ActionDisclaimerKind>{ using type = enum_category; };
     template <> inline constexpr auto& name_v<winrt::Windows::AI::Actions::Hosting::ActionCatalog> = L"Windows.AI.Actions.Hosting.ActionCatalog";
     template <> inline constexpr auto& name_v<winrt::Windows::AI::Actions::Hosting::ActionDefinition> = L"Windows.AI.Actions.Hosting.ActionDefinition";
     template <> inline constexpr auto& name_v<winrt::Windows::AI::Actions::Hosting::ActionEntityRegistrationInfo> = L"Windows.AI.Actions.Hosting.ActionEntityRegistrationInfo";
     template <> inline constexpr auto& name_v<winrt::Windows::AI::Actions::Hosting::ActionOverload> = L"Windows.AI.Actions.Hosting.ActionOverload";
+    template <> inline constexpr auto& name_v<winrt::Windows::AI::Actions::Hosting::ActionDisclaimerKind> = L"Windows.AI.Actions.Hosting.ActionDisclaimerKind";
     template <> inline constexpr auto& name_v<winrt::Windows::AI::Actions::Hosting::IActionCatalog> = L"Windows.AI.Actions.Hosting.IActionCatalog";
     template <> inline constexpr auto& name_v<winrt::Windows::AI::Actions::Hosting::IActionDefinition> = L"Windows.AI.Actions.Hosting.IActionDefinition";
+    template <> inline constexpr auto& name_v<winrt::Windows::AI::Actions::Hosting::IActionDefinition2> = L"Windows.AI.Actions.Hosting.IActionDefinition2";
     template <> inline constexpr auto& name_v<winrt::Windows::AI::Actions::Hosting::IActionEntityRegistrationInfo> = L"Windows.AI.Actions.Hosting.IActionEntityRegistrationInfo";
     template <> inline constexpr auto& name_v<winrt::Windows::AI::Actions::Hosting::IActionOverload> = L"Windows.AI.Actions.Hosting.IActionOverload";
+    template <> inline constexpr auto& name_v<winrt::Windows::AI::Actions::Hosting::IActionOverload2> = L"Windows.AI.Actions.Hosting.IActionOverload2";
     template <> inline constexpr guid guid_v<winrt::Windows::AI::Actions::Hosting::IActionCatalog>{ 0xDBE7C537,0x66EA,0x5394,{ 0x90,0x85,0x4F,0xC1,0x9D,0x78,0x37,0x5C } }; // DBE7C537-66EA-5394-9085-4FC19D78375C
     template <> inline constexpr guid guid_v<winrt::Windows::AI::Actions::Hosting::IActionDefinition>{ 0xFE766ADD,0x924D,0x5231,{ 0x85,0x5E,0xDA,0xC9,0xE8,0x2C,0x7E,0x6C } }; // FE766ADD-924D-5231-855E-DAC9E82C7E6C
+    template <> inline constexpr guid guid_v<winrt::Windows::AI::Actions::Hosting::IActionDefinition2>{ 0x27283794,0x8014,0x5DC5,{ 0x97,0xE3,0xBE,0x19,0xD3,0xFA,0x19,0x71 } }; // 27283794-8014-5DC5-97E3-BE19D3FA1971
     template <> inline constexpr guid guid_v<winrt::Windows::AI::Actions::Hosting::IActionEntityRegistrationInfo>{ 0xC3B92BDB,0x03C3,0x5A9E,{ 0xB0,0x49,0x00,0x2F,0xA0,0x40,0x56,0x99 } }; // C3B92BDB-03C3-5A9E-B049-002FA0405699
     template <> inline constexpr guid guid_v<winrt::Windows::AI::Actions::Hosting::IActionOverload>{ 0x5D184610,0xD09D,0x5375,{ 0x98,0x49,0x50,0x5C,0x35,0x9D,0xCA,0x01 } }; // 5D184610-D09D-5375-9849-505C359DCA01
+    template <> inline constexpr guid guid_v<winrt::Windows::AI::Actions::Hosting::IActionOverload2>{ 0x57EC9906,0x8231,0x5A9E,{ 0x92,0x9F,0xBF,0x39,0xE9,0x52,0xEB,0x93 } }; // 57EC9906-8231-5A9E-929F-BF39E952EB93
     template <> struct default_interface<winrt::Windows::AI::Actions::Hosting::ActionCatalog>{ using type = winrt::Windows::AI::Actions::Hosting::IActionCatalog; };
     template <> struct default_interface<winrt::Windows::AI::Actions::Hosting::ActionDefinition>{ using type = winrt::Windows::AI::Actions::Hosting::IActionDefinition; };
     template <> struct default_interface<winrt::Windows::AI::Actions::Hosting::ActionEntityRegistrationInfo>{ using type = winrt::Windows::AI::Actions::Hosting::IActionEntityRegistrationInfo; };
@@ -73,6 +89,16 @@ namespace winrt::impl
             virtual int32_t __stdcall GetOverloads(uint32_t* __resultSize, void***) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Windows::AI::Actions::Hosting::IActionDefinition2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_DisplaysUI(bool*) noexcept = 0;
+            virtual int32_t __stdcall get_DisclaimerKind(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall get_SchemaVersion(uint32_t*) noexcept = 0;
+            virtual int32_t __stdcall get_PackageRelativeApplicationId(void**) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Windows::AI::Actions::Hosting::IActionEntityRegistrationInfo>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -90,6 +116,14 @@ namespace winrt::impl
             virtual int32_t __stdcall get_DescriptionTemplate(void**) noexcept = 0;
             virtual int32_t __stdcall GetInputs(uint32_t* __resultSize, void***) noexcept = 0;
             virtual int32_t __stdcall InvokeAsync(void*, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Windows::AI::Actions::Hosting::IActionOverload2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall InvokeFeedbackAsync(void*, void*, void**) noexcept = 0;
+            virtual int32_t __stdcall GetSupportsFeedback(bool*) noexcept = 0;
         };
     };
     template <typename D>
@@ -121,6 +155,18 @@ namespace winrt::impl
         template <typename D> using type = consume_Windows_AI_Actions_Hosting_IActionDefinition<D>;
     };
     template <typename D>
+    struct consume_Windows_AI_Actions_Hosting_IActionDefinition2
+    {
+        [[nodiscard]] auto DisplaysUI() const;
+        [[nodiscard]] auto DisclaimerKind() const;
+        [[nodiscard]] auto SchemaVersion() const;
+        [[nodiscard]] auto PackageRelativeApplicationId() const;
+    };
+    template <> struct consume<winrt::Windows::AI::Actions::Hosting::IActionDefinition2>
+    {
+        template <typename D> using type = consume_Windows_AI_Actions_Hosting_IActionDefinition2<D>;
+    };
+    template <typename D>
     struct consume_Windows_AI_Actions_Hosting_IActionEntityRegistrationInfo
     {
         [[nodiscard]] auto Name() const;
@@ -142,6 +188,16 @@ namespace winrt::impl
     template <> struct consume<winrt::Windows::AI::Actions::Hosting::IActionOverload>
     {
         template <typename D> using type = consume_Windows_AI_Actions_Hosting_IActionOverload<D>;
+    };
+    template <typename D>
+    struct consume_Windows_AI_Actions_Hosting_IActionOverload2
+    {
+        auto InvokeFeedbackAsync(winrt::Windows::AI::Actions::ActionInvocationContext const& context, winrt::Windows::AI::Actions::ActionFeedback const& feedback) const;
+        auto GetSupportsFeedback() const;
+    };
+    template <> struct consume<winrt::Windows::AI::Actions::Hosting::IActionOverload2>
+    {
+        template <typename D> using type = consume_Windows_AI_Actions_Hosting_IActionOverload2<D>;
     };
 }
 #endif
