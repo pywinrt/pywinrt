@@ -3165,6 +3165,274 @@ namespace py::cpp::Windows::Storage::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_StorageProviderMoreInfoUI};
 
+    // ----- StorageProviderQueryResultSet class --------------------
+
+    static PyObject* _new_StorageProviderQueryResultSet(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_GET_SIZE(args);
+        if (arg_count == 1)
+        {
+            try
+            {
+                auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Storage::Provider::IStorageProviderQueryResult, false>>(args, 0);
+
+                winrt::Windows::Storage::Provider::StorageProviderQueryResultSet instance{param0};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_StorageProviderQueryResultSet(py::wrapper::Windows::Storage::Provider::StorageProviderQueryResultSet* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* StorageProviderQueryResultSet_GetResults(py::wrapper::Windows::Storage::Provider::StorageProviderQueryResultSet* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.StorageProviderQueryResultSet", L"GetResults", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetResults();
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageProviderQueryResultSet_get_Status(py::wrapper::Windows::Storage::Provider::StorageProviderQueryResultSet* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderQueryResultSet", L"Status");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int StorageProviderQueryResultSet_put_Status(py::wrapper::Windows::Storage::Provider::StorageProviderQueryResultSet* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderQueryResultSet", L"Status");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Storage::Provider::StorageProviderSearchQueryStatus>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.Status(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* StorageProviderQueryResultSet_get_QueryResultId(py::wrapper::Windows::Storage::Provider::StorageProviderQueryResultSet* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderQueryResultSet", L"QueryResultId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.QueryResultId();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int StorageProviderQueryResultSet_put_QueryResultId(py::wrapper::Windows::Storage::Provider::StorageProviderQueryResultSet* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderQueryResultSet", L"QueryResultId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.QueryResultId(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* _assign_array_StorageProviderQueryResultSet(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Provider::StorageProviderQueryResultSet>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_StorageProviderQueryResultSet(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Storage::Provider::StorageProviderQueryResultSet>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_StorageProviderQueryResultSet[] = {
+        { "get_results", reinterpret_cast<PyCFunction>(StorageProviderQueryResultSet_GetResults), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_StorageProviderQueryResultSet, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_StorageProviderQueryResultSet), METH_O | METH_STATIC, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_StorageProviderQueryResultSet[] = {
+        { "status", reinterpret_cast<getter>(StorageProviderQueryResultSet_get_Status), reinterpret_cast<setter>(StorageProviderQueryResultSet_put_Status), nullptr, nullptr },
+        { "query_result_id", reinterpret_cast<getter>(StorageProviderQueryResultSet_get_QueryResultId), reinterpret_cast<setter>(StorageProviderQueryResultSet_put_QueryResultId), nullptr, nullptr },
+        { }};
+
+    static PyType_Slot _type_slots_StorageProviderQueryResultSet[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_StorageProviderQueryResultSet) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorageProviderQueryResultSet) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageProviderQueryResultSet) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageProviderQueryResultSet) },
+        { }};
+
+    static PyType_Spec type_spec_StorageProviderQueryResultSet = {
+        "winrt._winrt_windows_storage_provider.StorageProviderQueryResultSet",
+        sizeof(py::wrapper::Windows::Storage::Provider::StorageProviderQueryResultSet),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_StorageProviderQueryResultSet};
+
     // ----- StorageProviderQuotaUI class --------------------
 
     static PyObject* _new_StorageProviderQuotaUI(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -3529,6 +3797,923 @@ namespace py::cpp::Windows::Storage::Provider
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_StorageProviderQuotaUI};
+
+    // ----- StorageProviderSearchQueryOptions class --------------------
+
+    static PyObject* _new_StorageProviderSearchQueryOptions(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Windows::Storage::Provider::StorageProviderSearchQueryOptions>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::StorageProviderSearchQueryOptions>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_StorageProviderSearchQueryOptions(py::wrapper::Windows::Storage::Provider::StorageProviderSearchQueryOptions* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* StorageProviderSearchQueryOptions_get_FolderScope(py::wrapper::Windows::Storage::Provider::StorageProviderSearchQueryOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSearchQueryOptions", L"FolderScope");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FolderScope();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageProviderSearchQueryOptions_get_Language(py::wrapper::Windows::Storage::Provider::StorageProviderSearchQueryOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSearchQueryOptions", L"Language");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Language();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageProviderSearchQueryOptions_get_MaxResults(py::wrapper::Windows::Storage::Provider::StorageProviderSearchQueryOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSearchQueryOptions", L"MaxResults");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxResults();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageProviderSearchQueryOptions_get_ProgrammaticQuery(py::wrapper::Windows::Storage::Provider::StorageProviderSearchQueryOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSearchQueryOptions", L"ProgrammaticQuery");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ProgrammaticQuery();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageProviderSearchQueryOptions_get_PropertiesToFetch(py::wrapper::Windows::Storage::Provider::StorageProviderSearchQueryOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSearchQueryOptions", L"PropertiesToFetch");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PropertiesToFetch();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageProviderSearchQueryOptions_get_QueryId(py::wrapper::Windows::Storage::Provider::StorageProviderSearchQueryOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSearchQueryOptions", L"QueryId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.QueryId();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageProviderSearchQueryOptions_get_SortOrder(py::wrapper::Windows::Storage::Provider::StorageProviderSearchQueryOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSearchQueryOptions", L"SortOrder");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SortOrder();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageProviderSearchQueryOptions_get_UserQuery(py::wrapper::Windows::Storage::Provider::StorageProviderSearchQueryOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSearchQueryOptions", L"UserQuery");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UserQuery();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_StorageProviderSearchQueryOptions(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Provider::StorageProviderSearchQueryOptions>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_StorageProviderSearchQueryOptions(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Storage::Provider::StorageProviderSearchQueryOptions>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_StorageProviderSearchQueryOptions[] = {
+        { "_assign_array_", _assign_array_StorageProviderSearchQueryOptions, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_StorageProviderSearchQueryOptions), METH_O | METH_STATIC, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_StorageProviderSearchQueryOptions[] = {
+        { "folder_scope", reinterpret_cast<getter>(StorageProviderSearchQueryOptions_get_FolderScope), nullptr, nullptr, nullptr },
+        { "language", reinterpret_cast<getter>(StorageProviderSearchQueryOptions_get_Language), nullptr, nullptr, nullptr },
+        { "max_results", reinterpret_cast<getter>(StorageProviderSearchQueryOptions_get_MaxResults), nullptr, nullptr, nullptr },
+        { "programmatic_query", reinterpret_cast<getter>(StorageProviderSearchQueryOptions_get_ProgrammaticQuery), nullptr, nullptr, nullptr },
+        { "properties_to_fetch", reinterpret_cast<getter>(StorageProviderSearchQueryOptions_get_PropertiesToFetch), nullptr, nullptr, nullptr },
+        { "query_id", reinterpret_cast<getter>(StorageProviderSearchQueryOptions_get_QueryId), nullptr, nullptr, nullptr },
+        { "sort_order", reinterpret_cast<getter>(StorageProviderSearchQueryOptions_get_SortOrder), nullptr, nullptr, nullptr },
+        { "user_query", reinterpret_cast<getter>(StorageProviderSearchQueryOptions_get_UserQuery), nullptr, nullptr, nullptr },
+        { }};
+
+    static PyType_Slot _type_slots_StorageProviderSearchQueryOptions[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_StorageProviderSearchQueryOptions) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorageProviderSearchQueryOptions) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageProviderSearchQueryOptions) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageProviderSearchQueryOptions) },
+        { }};
+
+    static PyType_Spec type_spec_StorageProviderSearchQueryOptions = {
+        "winrt._winrt_windows_storage_provider.StorageProviderSearchQueryOptions",
+        sizeof(py::wrapper::Windows::Storage::Provider::StorageProviderSearchQueryOptions),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_StorageProviderSearchQueryOptions};
+
+    // ----- StorageProviderSearchResult class --------------------
+
+    static PyObject* _new_StorageProviderSearchResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_GET_SIZE(args);
+        if (arg_count == 0)
+        {
+            try
+            {
+                winrt::Windows::Storage::Provider::StorageProviderSearchResult instance{};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_StorageProviderSearchResult(py::wrapper::Windows::Storage::Provider::StorageProviderSearchResult* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* StorageProviderSearchResult_get_ResultId(py::wrapper::Windows::Storage::Provider::StorageProviderSearchResult* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSearchResult", L"ResultId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResultId();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int StorageProviderSearchResult_put_ResultId(py::wrapper::Windows::Storage::Provider::StorageProviderSearchResult* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSearchResult", L"ResultId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.ResultId(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* StorageProviderSearchResult_get_RemoteFileId(py::wrapper::Windows::Storage::Provider::StorageProviderSearchResult* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSearchResult", L"RemoteFileId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteFileId();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int StorageProviderSearchResult_put_RemoteFileId(py::wrapper::Windows::Storage::Provider::StorageProviderSearchResult* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSearchResult", L"RemoteFileId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.RemoteFileId(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* StorageProviderSearchResult_get_Kind(py::wrapper::Windows::Storage::Provider::StorageProviderSearchResult* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSearchResult", L"Kind");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int StorageProviderSearchResult_put_Kind(py::wrapper::Windows::Storage::Provider::StorageProviderSearchResult* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSearchResult", L"Kind");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Storage::Provider::StorageProviderResultKind>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.Kind(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* StorageProviderSearchResult_get_FilePath(py::wrapper::Windows::Storage::Provider::StorageProviderSearchResult* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSearchResult", L"FilePath");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FilePath();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int StorageProviderSearchResult_put_FilePath(py::wrapper::Windows::Storage::Provider::StorageProviderSearchResult* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSearchResult", L"FilePath");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.FilePath(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* StorageProviderSearchResult_get_RequestedProperties(py::wrapper::Windows::Storage::Provider::StorageProviderSearchResult* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSearchResult", L"RequestedProperties");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestedProperties();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageProviderSearchResult_get_MatchedPropertyName(py::wrapper::Windows::Storage::Provider::StorageProviderSearchResult* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSearchResult", L"MatchedPropertyName");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MatchedPropertyName();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int StorageProviderSearchResult_put_MatchedPropertyName(py::wrapper::Windows::Storage::Provider::StorageProviderSearchResult* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSearchResult", L"MatchedPropertyName");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.MatchedPropertyName(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* StorageProviderSearchResult_get_MatchScore(py::wrapper::Windows::Storage::Provider::StorageProviderSearchResult* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSearchResult", L"MatchScore");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MatchScore();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int StorageProviderSearchResult_put_MatchScore(py::wrapper::Windows::Storage::Provider::StorageProviderSearchResult* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSearchResult", L"MatchScore");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<double>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.MatchScore(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* StorageProviderSearchResult_get_MatchKind(py::wrapper::Windows::Storage::Provider::StorageProviderSearchResult* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSearchResult", L"MatchKind");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MatchKind();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int StorageProviderSearchResult_put_MatchKind(py::wrapper::Windows::Storage::Provider::StorageProviderSearchResult* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.StorageProviderSearchResult", L"MatchKind");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Storage::Provider::StorageProviderSearchMatchKind>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.MatchKind(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* _assign_array_StorageProviderSearchResult(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Provider::StorageProviderSearchResult>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_StorageProviderSearchResult(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Storage::Provider::StorageProviderSearchResult>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_StorageProviderSearchResult[] = {
+        { "_assign_array_", _assign_array_StorageProviderSearchResult, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_StorageProviderSearchResult), METH_O | METH_STATIC, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_StorageProviderSearchResult[] = {
+        { "result_id", reinterpret_cast<getter>(StorageProviderSearchResult_get_ResultId), reinterpret_cast<setter>(StorageProviderSearchResult_put_ResultId), nullptr, nullptr },
+        { "remote_file_id", reinterpret_cast<getter>(StorageProviderSearchResult_get_RemoteFileId), reinterpret_cast<setter>(StorageProviderSearchResult_put_RemoteFileId), nullptr, nullptr },
+        { "kind", reinterpret_cast<getter>(StorageProviderSearchResult_get_Kind), reinterpret_cast<setter>(StorageProviderSearchResult_put_Kind), nullptr, nullptr },
+        { "file_path", reinterpret_cast<getter>(StorageProviderSearchResult_get_FilePath), reinterpret_cast<setter>(StorageProviderSearchResult_put_FilePath), nullptr, nullptr },
+        { "requested_properties", reinterpret_cast<getter>(StorageProviderSearchResult_get_RequestedProperties), nullptr, nullptr, nullptr },
+        { "matched_property_name", reinterpret_cast<getter>(StorageProviderSearchResult_get_MatchedPropertyName), reinterpret_cast<setter>(StorageProviderSearchResult_put_MatchedPropertyName), nullptr, nullptr },
+        { "match_score", reinterpret_cast<getter>(StorageProviderSearchResult_get_MatchScore), reinterpret_cast<setter>(StorageProviderSearchResult_put_MatchScore), nullptr, nullptr },
+        { "match_kind", reinterpret_cast<getter>(StorageProviderSearchResult_get_MatchKind), reinterpret_cast<setter>(StorageProviderSearchResult_put_MatchKind), nullptr, nullptr },
+        { }};
+
+    static PyType_Slot _type_slots_StorageProviderSearchResult[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_StorageProviderSearchResult) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorageProviderSearchResult) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_StorageProviderSearchResult) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_StorageProviderSearchResult) },
+        { }};
+
+    static PyType_Spec type_spec_StorageProviderSearchResult = {
+        "winrt._winrt_windows_storage_provider.StorageProviderSearchResult",
+        sizeof(py::wrapper::Windows::Storage::Provider::StorageProviderSearchResult),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_StorageProviderSearchResult};
 
     // ----- StorageProviderStatusUI class --------------------
 
@@ -6700,6 +7885,1165 @@ namespace py::cpp::Windows::Storage::Provider
         ,
         type_slots_ImplementsIStorageProviderPropertyCapabilities};
 
+    // ----- IStorageProviderQueryResult interface --------------------
+
+    #if PY_VERSION_HEX < 0x030A0000
+    static PyObject* _new_IStorageProviderQueryResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderQueryResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderQueryResult>::type_name);
+        return nullptr;
+    }
+    #endif
+
+    static void _dealloc_IStorageProviderQueryResult(py::wrapper::Windows::Storage::Provider::IStorageProviderQueryResult* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* IStorageProviderQueryResult_get_FilePath(py::wrapper::Windows::Storage::Provider::IStorageProviderQueryResult* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.IStorageProviderQueryResult", L"FilePath");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FilePath();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int IStorageProviderQueryResult_put_FilePath(py::wrapper::Windows::Storage::Provider::IStorageProviderQueryResult* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.IStorageProviderQueryResult", L"FilePath");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.FilePath(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* IStorageProviderQueryResult_get_Kind(py::wrapper::Windows::Storage::Provider::IStorageProviderQueryResult* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.IStorageProviderQueryResult", L"Kind");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Kind();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int IStorageProviderQueryResult_put_Kind(py::wrapper::Windows::Storage::Provider::IStorageProviderQueryResult* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.IStorageProviderQueryResult", L"Kind");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Storage::Provider::StorageProviderResultKind>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.Kind(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* IStorageProviderQueryResult_get_RemoteFileId(py::wrapper::Windows::Storage::Provider::IStorageProviderQueryResult* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.IStorageProviderQueryResult", L"RemoteFileId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteFileId();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int IStorageProviderQueryResult_put_RemoteFileId(py::wrapper::Windows::Storage::Provider::IStorageProviderQueryResult* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.IStorageProviderQueryResult", L"RemoteFileId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.RemoteFileId(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* IStorageProviderQueryResult_get_RequestedProperties(py::wrapper::Windows::Storage::Provider::IStorageProviderQueryResult* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.IStorageProviderQueryResult", L"RequestedProperties");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RequestedProperties();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* IStorageProviderQueryResult_get_ResultId(py::wrapper::Windows::Storage::Provider::IStorageProviderQueryResult* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.IStorageProviderQueryResult", L"ResultId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ResultId();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int IStorageProviderQueryResult_put_ResultId(py::wrapper::Windows::Storage::Provider::IStorageProviderQueryResult* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Storage.Provider.IStorageProviderQueryResult", L"ResultId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.ResultId(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyMethodDef _methods_IStorageProviderQueryResult[] = {
+        { }};
+
+    static PyGetSetDef _getset_IStorageProviderQueryResult[] = {
+        { "file_path", reinterpret_cast<getter>(IStorageProviderQueryResult_get_FilePath), reinterpret_cast<setter>(IStorageProviderQueryResult_put_FilePath), nullptr, nullptr },
+        { "kind", reinterpret_cast<getter>(IStorageProviderQueryResult_get_Kind), reinterpret_cast<setter>(IStorageProviderQueryResult_put_Kind), nullptr, nullptr },
+        { "remote_file_id", reinterpret_cast<getter>(IStorageProviderQueryResult_get_RemoteFileId), reinterpret_cast<setter>(IStorageProviderQueryResult_put_RemoteFileId), nullptr, nullptr },
+        { "requested_properties", reinterpret_cast<getter>(IStorageProviderQueryResult_get_RequestedProperties), nullptr, nullptr, nullptr },
+        { "result_id", reinterpret_cast<getter>(IStorageProviderQueryResult_get_ResultId), reinterpret_cast<setter>(IStorageProviderQueryResult_put_ResultId), nullptr, nullptr },
+        { }};
+
+    static PyType_Slot _type_slots_IStorageProviderQueryResult[] = {
+        #if PY_VERSION_HEX < 0x030A0000
+        { Py_tp_new, reinterpret_cast<void*>(_new_IStorageProviderQueryResult) },
+        #endif
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageProviderQueryResult) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageProviderQueryResult) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageProviderQueryResult) },
+        { }};
+
+    static PyType_Spec type_spec_IStorageProviderQueryResult = {
+        "winrt._winrt_windows_storage_provider._IStorageProviderQueryResult",
+        sizeof(py::wrapper::Windows::Storage::Provider::IStorageProviderQueryResult),
+        0,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
+        _type_slots_IStorageProviderQueryResult};
+
+    struct ImplementsIStorageProviderQueryResult : py::ImplementsInterfaceT<ImplementsIStorageProviderQueryResult, winrt::Windows::Storage::Provider::IStorageProviderQueryResult>
+    {
+        ImplementsIStorageProviderQueryResult() = delete;
+        ImplementsIStorageProviderQueryResult(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIStorageProviderQueryResult, winrt::Windows::Storage::Provider::IStorageProviderQueryResult>(py_obj, runtime_class)
+        {
+        }
+
+        auto FilePath()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "file_path")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        void FilePath(winrt::hstring const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{py::convert(param0)};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                if (PyObject_SetAttrString(self.get(), "file_path", value.get()) == -1)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto Kind()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "kind")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Storage::Provider::StorageProviderResultKind>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        void Kind(winrt::Windows::Storage::Provider::StorageProviderResultKind param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{py::convert(param0)};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                if (PyObject_SetAttrString(self.get(), "kind", value.get()) == -1)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto RemoteFileId()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "remote_file_id")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        void RemoteFileId(winrt::hstring const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{py::convert(param0)};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                if (PyObject_SetAttrString(self.get(), "remote_file_id", value.get()) == -1)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto RequestedProperties()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "requested_properties")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::Collections::PropertySet>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto ResultId()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "result_id")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        void ResultId(winrt::hstring const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{py::convert(param0)};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                if (PyObject_SetAttrString(self.get(), "result_id", value.get()) == -1)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _assign_array_IStorageProviderQueryResult(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Provider::IStorageProviderQueryResult>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_IStorageProviderQueryResult(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Storage::Provider::IStorageProviderQueryResult>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _guid_ImplementsIStorageProviderQueryResult(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Storage::Provider::IStorageProviderQueryResult>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIStorageProviderQueryResult(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIStorageProviderQueryResult>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIStorageProviderQueryResult[] = {
+        { "_assign_array_", _assign_array_IStorageProviderQueryResult, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_IStorageProviderQueryResult), METH_O | METH_STATIC, nullptr },
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageProviderQueryResult), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageProviderQueryResult), METH_VARARGS | METH_STATIC, nullptr },
+        { }};
+
+    static PyType_Slot type_slots_ImplementsIStorageProviderQueryResult[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIStorageProviderQueryResult) },
+        { }};
+
+    static PyType_Spec type_spec_ImplementsIStorageProviderQueryResult = {
+        "winrt._winrt_windows_storage_provider.IStorageProviderQueryResult",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
+        type_slots_ImplementsIStorageProviderQueryResult};
+
+    // ----- IStorageProviderSearchHandler interface --------------------
+
+    #if PY_VERSION_HEX < 0x030A0000
+    static PyObject* _new_IStorageProviderSearchHandler(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderSearchHandler>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderSearchHandler>::type_name);
+        return nullptr;
+    }
+    #endif
+
+    static void _dealloc_IStorageProviderSearchHandler(py::wrapper::Windows::Storage::Provider::IStorageProviderSearchHandler* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* IStorageProviderSearchHandler_Find(py::wrapper::Windows::Storage::Provider::IStorageProviderSearchHandler* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.IStorageProviderSearchHandler", L"Find", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Storage::Provider::StorageProviderSearchQueryOptions>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.Find(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IStorageProviderSearchHandler_ReportUsage(py::wrapper::Windows::Storage::Provider::IStorageProviderSearchHandler* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.IStorageProviderSearchHandler", L"ReportUsage", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Storage::Provider::StorageProviderResultUsageKind>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::hstring>(args, 2);
+                auto param3 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 3);
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.ReportUsage(param0, param1, param2, param3);
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_IStorageProviderSearchHandler[] = {
+        { "find", reinterpret_cast<PyCFunction>(IStorageProviderSearchHandler_Find), METH_VARARGS, nullptr },
+        { "report_usage", reinterpret_cast<PyCFunction>(IStorageProviderSearchHandler_ReportUsage), METH_VARARGS, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_IStorageProviderSearchHandler[] = {
+        { }};
+
+    static PyType_Slot _type_slots_IStorageProviderSearchHandler[] = {
+        #if PY_VERSION_HEX < 0x030A0000
+        { Py_tp_new, reinterpret_cast<void*>(_new_IStorageProviderSearchHandler) },
+        #endif
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageProviderSearchHandler) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageProviderSearchHandler) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageProviderSearchHandler) },
+        { }};
+
+    static PyType_Spec type_spec_IStorageProviderSearchHandler = {
+        "winrt._winrt_windows_storage_provider._IStorageProviderSearchHandler",
+        sizeof(py::wrapper::Windows::Storage::Provider::IStorageProviderSearchHandler),
+        0,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
+        _type_slots_IStorageProviderSearchHandler};
+
+    struct ImplementsIStorageProviderSearchHandler : py::ImplementsInterfaceT<ImplementsIStorageProviderSearchHandler, winrt::Windows::Storage::Provider::IStorageProviderSearchHandler>
+    {
+        ImplementsIStorageProviderSearchHandler() = delete;
+        ImplementsIStorageProviderSearchHandler(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIStorageProviderSearchHandler, winrt::Windows::Storage::Provider::IStorageProviderSearchHandler>(py_obj, runtime_class)
+        {
+        }
+
+        auto Find(winrt::Windows::Storage::Provider::StorageProviderSearchQueryOptions const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "find")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Storage::Provider::StorageProviderQueryResultSet>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto ReportUsage(winrt::Windows::Storage::Provider::StorageProviderResultUsageKind param0, winrt::hstring const& param1, winrt::hstring const& param2, winrt::Windows::Foundation::TimeSpan param3)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "report_usage")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param2{py::convert(param2)};
+                if (!py_param2)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param3{py::convert(param3)};
+                if (!py_param3)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(4, py_param0.get(), py_param1.get(), py_param2.get(), py_param3.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _assign_array_IStorageProviderSearchHandler(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Provider::IStorageProviderSearchHandler>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_IStorageProviderSearchHandler(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Storage::Provider::IStorageProviderSearchHandler>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _guid_ImplementsIStorageProviderSearchHandler(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Storage::Provider::IStorageProviderSearchHandler>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIStorageProviderSearchHandler(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIStorageProviderSearchHandler>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIStorageProviderSearchHandler[] = {
+        { "_assign_array_", _assign_array_IStorageProviderSearchHandler, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_IStorageProviderSearchHandler), METH_O | METH_STATIC, nullptr },
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageProviderSearchHandler), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageProviderSearchHandler), METH_VARARGS | METH_STATIC, nullptr },
+        { }};
+
+    static PyType_Slot type_slots_ImplementsIStorageProviderSearchHandler[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIStorageProviderSearchHandler) },
+        { }};
+
+    static PyType_Spec type_spec_ImplementsIStorageProviderSearchHandler = {
+        "winrt._winrt_windows_storage_provider.IStorageProviderSearchHandler",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
+        type_slots_ImplementsIStorageProviderSearchHandler};
+
+    // ----- IStorageProviderSearchHandlerFactory interface --------------------
+
+    #if PY_VERSION_HEX < 0x030A0000
+    static PyObject* _new_IStorageProviderSearchHandlerFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderSearchHandlerFactory>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderSearchHandlerFactory>::type_name);
+        return nullptr;
+    }
+    #endif
+
+    static void _dealloc_IStorageProviderSearchHandlerFactory(py::wrapper::Windows::Storage::Provider::IStorageProviderSearchHandlerFactory* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* IStorageProviderSearchHandlerFactory_CreateSearchHandler(py::wrapper::Windows::Storage::Provider::IStorageProviderSearchHandlerFactory* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.IStorageProviderSearchHandlerFactory", L"CreateSearchHandler", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateSearchHandler(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_IStorageProviderSearchHandlerFactory[] = {
+        { "create_search_handler", reinterpret_cast<PyCFunction>(IStorageProviderSearchHandlerFactory_CreateSearchHandler), METH_VARARGS, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_IStorageProviderSearchHandlerFactory[] = {
+        { }};
+
+    static PyType_Slot _type_slots_IStorageProviderSearchHandlerFactory[] = {
+        #if PY_VERSION_HEX < 0x030A0000
+        { Py_tp_new, reinterpret_cast<void*>(_new_IStorageProviderSearchHandlerFactory) },
+        #endif
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageProviderSearchHandlerFactory) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageProviderSearchHandlerFactory) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageProviderSearchHandlerFactory) },
+        { }};
+
+    static PyType_Spec type_spec_IStorageProviderSearchHandlerFactory = {
+        "winrt._winrt_windows_storage_provider._IStorageProviderSearchHandlerFactory",
+        sizeof(py::wrapper::Windows::Storage::Provider::IStorageProviderSearchHandlerFactory),
+        0,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
+        _type_slots_IStorageProviderSearchHandlerFactory};
+
+    struct ImplementsIStorageProviderSearchHandlerFactory : py::ImplementsInterfaceT<ImplementsIStorageProviderSearchHandlerFactory, winrt::Windows::Storage::Provider::IStorageProviderSearchHandlerFactory>
+    {
+        ImplementsIStorageProviderSearchHandlerFactory() = delete;
+        ImplementsIStorageProviderSearchHandlerFactory(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIStorageProviderSearchHandlerFactory, winrt::Windows::Storage::Provider::IStorageProviderSearchHandlerFactory>(py_obj, runtime_class)
+        {
+        }
+
+        auto CreateSearchHandler(winrt::hstring const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "create_search_handler")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Storage::Provider::IStorageProviderSearchHandler>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _assign_array_IStorageProviderSearchHandlerFactory(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Provider::IStorageProviderSearchHandlerFactory>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_IStorageProviderSearchHandlerFactory(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Storage::Provider::IStorageProviderSearchHandlerFactory>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _guid_ImplementsIStorageProviderSearchHandlerFactory(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Windows::Storage::Provider::IStorageProviderSearchHandlerFactory>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIStorageProviderSearchHandlerFactory(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIStorageProviderSearchHandlerFactory>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIStorageProviderSearchHandlerFactory[] = {
+        { "_assign_array_", _assign_array_IStorageProviderSearchHandlerFactory, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_IStorageProviderSearchHandlerFactory), METH_O | METH_STATIC, nullptr },
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIStorageProviderSearchHandlerFactory), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIStorageProviderSearchHandlerFactory), METH_VARARGS | METH_STATIC, nullptr },
+        { }};
+
+    static PyType_Slot type_slots_ImplementsIStorageProviderSearchHandlerFactory[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIStorageProviderSearchHandlerFactory) },
+        { }};
+
+    static PyType_Spec type_spec_ImplementsIStorageProviderSearchHandlerFactory = {
+        "winrt._winrt_windows_storage_provider.IStorageProviderSearchHandlerFactory",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
+        type_slots_ImplementsIStorageProviderSearchHandlerFactory};
+
     // ----- IStorageProviderShareLinkSource interface --------------------
 
     #if PY_VERSION_HEX < 0x030A0000
@@ -8480,8 +10824,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_provider(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle StorageProviderQueryResultSet_type{py::register_python_type(module.get(), &type_spec_StorageProviderQueryResultSet, object_bases.get(), inspectable_meta_type)};
+    if (!StorageProviderQueryResultSet_type)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle StorageProviderQuotaUI_type{py::register_python_type(module.get(), &type_spec_StorageProviderQuotaUI, object_bases.get(), inspectable_meta_type)};
     if (!StorageProviderQuotaUI_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle StorageProviderSearchQueryOptions_type{py::register_python_type(module.get(), &type_spec_StorageProviderSearchQueryOptions, object_bases.get(), inspectable_meta_type)};
+    if (!StorageProviderSearchQueryOptions_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle StorageProviderSearchResult_type{py::register_python_type(module.get(), &type_spec_StorageProviderSearchResult, object_bases.get(), inspectable_meta_type)};
+    if (!StorageProviderSearchResult_type)
     {
         return nullptr;
     }
@@ -8580,6 +10942,57 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_provider(void) noexcept
     }
 
     if (PyModule_AddType(module.get(), ImplementsIStorageProviderPropertyCapabilities_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle IStorageProviderQueryResult_type{py::register_python_type(module.get(), &type_spec_IStorageProviderQueryResult, object_bases.get(), nullptr)};
+    if (!IStorageProviderQueryResult_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIStorageProviderQueryResult_type{py::register_python_type(module.get(), &type_spec_ImplementsIStorageProviderQueryResult, nullptr, inspectable_meta_type)};
+    if (!ImplementsIStorageProviderQueryResult_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIStorageProviderQueryResult_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle IStorageProviderSearchHandler_type{py::register_python_type(module.get(), &type_spec_IStorageProviderSearchHandler, object_bases.get(), nullptr)};
+    if (!IStorageProviderSearchHandler_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIStorageProviderSearchHandler_type{py::register_python_type(module.get(), &type_spec_ImplementsIStorageProviderSearchHandler, nullptr, inspectable_meta_type)};
+    if (!ImplementsIStorageProviderSearchHandler_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIStorageProviderSearchHandler_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle IStorageProviderSearchHandlerFactory_type{py::register_python_type(module.get(), &type_spec_IStorageProviderSearchHandlerFactory, object_bases.get(), nullptr)};
+    if (!IStorageProviderSearchHandlerFactory_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIStorageProviderSearchHandlerFactory_type{py::register_python_type(module.get(), &type_spec_ImplementsIStorageProviderSearchHandlerFactory, nullptr, inspectable_meta_type)};
+    if (!ImplementsIStorageProviderSearchHandlerFactory_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIStorageProviderSearchHandlerFactory_type.get()) == -1)
     {
         return nullptr;
     }

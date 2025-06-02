@@ -14,9 +14,19 @@ import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
 import winrt.windows.graphics.display as windows_graphics_display
 
-from winrt.windows.devices.sensors import AccelerometerReadingType, ActivitySensorReadingConfidence, ActivityType, HumanEngagement, HumanPresence, MagnetometerAccuracy, PedometerStepKind, SensorOptimizationGoal, SensorReadingType, SensorType, SimpleOrientation
+from winrt.windows.devices.sensors import AccelerometerReadingType, ActivitySensorReadingConfidence, ActivityType, HumanEngagement, HumanPresence, MagnetometerAccuracy, OnlookerDetectionAction, OnlookerDetectionBackOnMode, PedometerStepKind, SensorOptimizationGoal, SensorReadingType, SensorType, SimpleOrientation
 
 Self = typing.TypeVar('Self')
+
+@typing.final
+class LightSensorChromaticity:
+    @_property
+    def x(self) -> winrt.system.Double: ...
+    @_property
+    def y(self) -> winrt.system.Double: ...
+    def __new__(cls, x: winrt.system.Double = 0, y: winrt.system.Double = 0) -> LightSensorChromaticity: ...
+    def __replace__(self, /, **changes: typing.Any) -> LightSensorChromaticity: ...
+    def unpack(self) -> typing.Tuple[winrt.system.Double, winrt.system.Double]: ...
 
 @typing.final
 class Accelerometer_Static(winrt._winrt.IInspectable_Static):
@@ -621,6 +631,9 @@ class HumanPresenceFeatures(winrt.system.Object):
     # System.Boolean Windows.Devices.Sensors.HumanPresenceFeatures::get_IsAdaptiveDimmingSupported()
     @_property
     def is_adaptive_dimming_supported(self) -> bool: ...
+    # System.Boolean Windows.Devices.Sensors.HumanPresenceFeatures::get_IsOnlookerDetectionSupported()
+    @_property
+    def is_onlooker_detection_supported(self) -> bool: ...
 
 @typing.final
 class HumanPresenceSensor_Static(winrt._winrt.IInspectable_Static):
@@ -818,6 +831,15 @@ class HumanPresenceSettings(winrt.system.Object, metaclass=HumanPresenceSettings
     # Windows.Devices.Sensors.WakeOnApproachOptions Windows.Devices.Sensors.HumanPresenceSettings::get_WakeOptions()
     @_property
     def wake_options(self) -> WakeOnApproachOptions: ...
+    # System.Boolean Windows.Devices.Sensors.HumanPresenceSettings::get_IsOnlookerDetectionEnabled()
+    @_property
+    def is_onlooker_detection_enabled(self) -> bool: ...
+    # System.Void Windows.Devices.Sensors.HumanPresenceSettings::put_IsOnlookerDetectionEnabled(System.Boolean)
+    @is_onlooker_detection_enabled.setter
+    def is_onlooker_detection_enabled(self, value: bool) -> None: ...
+    # Windows.Devices.Sensors.OnlookerDetectionOptions Windows.Devices.Sensors.HumanPresenceSettings::get_OnlookerDetectionOptions()
+    @_property
+    def onlooker_detection_options(self) -> OnlookerDetectionOptions: ...
 
 @typing.final
 class Inclinometer_Static(winrt._winrt.IInspectable_Static):
@@ -938,6 +960,8 @@ class LightSensor_Static(winrt._winrt.IInspectable_Static):
 class LightSensor(winrt.system.Object, metaclass=LightSensor_Static):
     # Windows.Devices.Sensors.LightSensorReading Windows.Devices.Sensors.LightSensor::GetCurrentReading()
     def get_current_reading(self) -> LightSensorReading: ...
+    # System.Boolean Windows.Devices.Sensors.LightSensor::IsChromaticitySupported()
+    def is_chromaticity_supported(self) -> bool: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Sensors.LightSensor::add_ReadingChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Sensors.LightSensor,Windows.Devices.Sensors.LightSensorReadingChangedEventArgs>)
     def add_reading_changed(self, handler: windows_foundation.TypedEventHandler[LightSensor, LightSensorReadingChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Devices.Sensors.LightSensor::remove_ReadingChanged(Windows.Foundation.EventRegistrationToken)
@@ -981,6 +1005,12 @@ class LightSensorDataThreshold(winrt.system.Object):
     # System.Void Windows.Devices.Sensors.LightSensorDataThreshold::put_AbsoluteLux(System.Single)
     @absolute_lux.setter
     def absolute_lux(self, value: winrt.system.Single) -> None: ...
+    # Windows.Devices.Sensors.LightSensorChromaticity Windows.Devices.Sensors.LightSensorDataThreshold::get_Chromaticity()
+    @_property
+    def chromaticity(self) -> LightSensorChromaticity: ...
+    # System.Void Windows.Devices.Sensors.LightSensorDataThreshold::put_Chromaticity(Windows.Devices.Sensors.LightSensorChromaticity)
+    @chromaticity.setter
+    def chromaticity(self, value: typing.Union[LightSensorChromaticity, typing.Tuple[winrt.system.Double, winrt.system.Double]]) -> None: ...
 
 @typing.final
 class LightSensorReading(winrt.system.Object):
@@ -996,6 +1026,9 @@ class LightSensorReading(winrt.system.Object):
     # Windows.Foundation.Collections.IMapView`2<System.String,System.Object> Windows.Devices.Sensors.LightSensorReading::get_Properties()
     @_property
     def properties(self) -> typing.Mapping[str, winrt.system.Object]: ...
+    # Windows.Devices.Sensors.LightSensorChromaticity Windows.Devices.Sensors.LightSensorReading::get_Chromaticity()
+    @_property
+    def chromaticity(self) -> LightSensorChromaticity: ...
 
 @typing.final
 class LightSensorReadingChangedEventArgs(winrt.system.Object):
@@ -1110,6 +1143,21 @@ class MagnetometerReadingChangedEventArgs(winrt.system.Object):
     # Windows.Devices.Sensors.MagnetometerReading Windows.Devices.Sensors.MagnetometerReadingChangedEventArgs::get_Reading()
     @_property
     def reading(self) -> MagnetometerReading: ...
+
+@typing.final
+class OnlookerDetectionOptions(winrt.system.Object):
+    # Windows.Devices.Sensors.OnlookerDetectionBackOnMode Windows.Devices.Sensors.OnlookerDetectionOptions::get_BackOnMode()
+    @_property
+    def back_on_mode(self) -> OnlookerDetectionBackOnMode: ...
+    # System.Void Windows.Devices.Sensors.OnlookerDetectionOptions::put_BackOnMode(Windows.Devices.Sensors.OnlookerDetectionBackOnMode)
+    @back_on_mode.setter
+    def back_on_mode(self, value: OnlookerDetectionBackOnMode) -> None: ...
+    # Windows.Devices.Sensors.OnlookerDetectionAction Windows.Devices.Sensors.OnlookerDetectionOptions::get_Action()
+    @_property
+    def action(self) -> OnlookerDetectionAction: ...
+    # System.Void Windows.Devices.Sensors.OnlookerDetectionOptions::put_Action(Windows.Devices.Sensors.OnlookerDetectionAction)
+    @action.setter
+    def action(self, value: OnlookerDetectionAction) -> None: ...
 
 @typing.final
 class OrientationSensor_Static(winrt._winrt.IInspectable_Static):

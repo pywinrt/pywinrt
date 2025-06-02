@@ -59,6 +59,19 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Sensors
         Approximate = 2,
         High = 3,
     };
+    enum class OnlookerDetectionAction : int32_t
+    {
+        Dim = 0,
+        Notify = 1,
+        DimAndNotify = 2,
+    };
+    enum class OnlookerDetectionBackOnMode : int32_t
+    {
+        Manually = 0,
+        OneHour = 1,
+        FourHours = 2,
+        OneDay = 3,
+    };
     enum class PedometerStepKind : int32_t
     {
         Unknown = 0,
@@ -169,6 +182,7 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Sensors
     struct IHingeAngleSensorStatics;
     struct IHumanPresenceFeatures;
     struct IHumanPresenceFeatures2;
+    struct IHumanPresenceFeatures3;
     struct IHumanPresenceSensor;
     struct IHumanPresenceSensor2;
     struct IHumanPresenceSensor3;
@@ -183,6 +197,7 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Sensors
     struct IHumanPresenceSensorStatics2;
     struct IHumanPresenceSettings;
     struct IHumanPresenceSettings2;
+    struct IHumanPresenceSettings3;
     struct IHumanPresenceSettingsStatics;
     struct IInclinometer;
     struct IInclinometer2;
@@ -201,10 +216,13 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Sensors
     struct ILightSensor;
     struct ILightSensor2;
     struct ILightSensor3;
+    struct ILightSensor4;
     struct ILightSensorDataThreshold;
+    struct ILightSensorDataThreshold2;
     struct ILightSensorDeviceId;
     struct ILightSensorReading;
     struct ILightSensorReading2;
+    struct ILightSensorReading3;
     struct ILightSensorReadingChangedEventArgs;
     struct ILightSensorStatics;
     struct ILightSensorStatics2;
@@ -220,6 +238,7 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Sensors
     struct IMagnetometerReadingChangedEventArgs;
     struct IMagnetometerStatics;
     struct IMagnetometerStatics2;
+    struct IOnlookerDetectionOptions;
     struct IOrientationSensor;
     struct IOrientationSensor2;
     struct IOrientationSensor3;
@@ -307,6 +326,7 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Sensors
     struct MagnetometerDataThreshold;
     struct MagnetometerReading;
     struct MagnetometerReadingChangedEventArgs;
+    struct OnlookerDetectionOptions;
     struct OrientationSensor;
     struct OrientationSensorReading;
     struct OrientationSensorReadingChangedEventArgs;
@@ -325,6 +345,7 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Sensors
     struct SimpleOrientationSensor;
     struct SimpleOrientationSensorOrientationChangedEventArgs;
     struct WakeOnApproachOptions;
+    struct LightSensorChromaticity;
 }
 namespace winrt::impl
 {
@@ -396,6 +417,7 @@ namespace winrt::impl
     template <> struct category<winrt::Windows::Devices::Sensors::IHingeAngleSensorStatics>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::IHumanPresenceFeatures>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::IHumanPresenceFeatures2>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Devices::Sensors::IHumanPresenceFeatures3>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::IHumanPresenceSensor>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::IHumanPresenceSensor2>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::IHumanPresenceSensor3>{ using type = interface_category; };
@@ -410,6 +432,7 @@ namespace winrt::impl
     template <> struct category<winrt::Windows::Devices::Sensors::IHumanPresenceSensorStatics2>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::IHumanPresenceSettings>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::IHumanPresenceSettings2>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Devices::Sensors::IHumanPresenceSettings3>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::IHumanPresenceSettingsStatics>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::IInclinometer>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::IInclinometer2>{ using type = interface_category; };
@@ -428,10 +451,13 @@ namespace winrt::impl
     template <> struct category<winrt::Windows::Devices::Sensors::ILightSensor>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::ILightSensor2>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::ILightSensor3>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Devices::Sensors::ILightSensor4>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::ILightSensorDataThreshold>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Devices::Sensors::ILightSensorDataThreshold2>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::ILightSensorDeviceId>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::ILightSensorReading>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::ILightSensorReading2>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Devices::Sensors::ILightSensorReading3>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::ILightSensorReadingChangedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::ILightSensorStatics>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::ILightSensorStatics2>{ using type = interface_category; };
@@ -447,6 +473,7 @@ namespace winrt::impl
     template <> struct category<winrt::Windows::Devices::Sensors::IMagnetometerReadingChangedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::IMagnetometerStatics>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::IMagnetometerStatics2>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Devices::Sensors::IOnlookerDetectionOptions>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::IOrientationSensor>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::IOrientationSensor2>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::IOrientationSensor3>{ using type = interface_category; };
@@ -534,6 +561,7 @@ namespace winrt::impl
     template <> struct category<winrt::Windows::Devices::Sensors::MagnetometerDataThreshold>{ using type = class_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::MagnetometerReading>{ using type = class_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::MagnetometerReadingChangedEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Windows::Devices::Sensors::OnlookerDetectionOptions>{ using type = class_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::OrientationSensor>{ using type = class_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::OrientationSensorReading>{ using type = class_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::OrientationSensorReadingChangedEventArgs>{ using type = class_category; };
@@ -558,11 +586,14 @@ namespace winrt::impl
     template <> struct category<winrt::Windows::Devices::Sensors::HumanEngagement>{ using type = enum_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::HumanPresence>{ using type = enum_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::MagnetometerAccuracy>{ using type = enum_category; };
+    template <> struct category<winrt::Windows::Devices::Sensors::OnlookerDetectionAction>{ using type = enum_category; };
+    template <> struct category<winrt::Windows::Devices::Sensors::OnlookerDetectionBackOnMode>{ using type = enum_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::PedometerStepKind>{ using type = enum_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::SensorOptimizationGoal>{ using type = enum_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::SensorReadingType>{ using type = enum_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::SensorType>{ using type = enum_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::SimpleOrientation>{ using type = enum_category; };
+    template <> struct category<winrt::Windows::Devices::Sensors::LightSensorChromaticity>{ using type = struct_category<double, double>; };
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::Accelerometer> = L"Windows.Devices.Sensors.Accelerometer";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::AccelerometerDataThreshold> = L"Windows.Devices.Sensors.AccelerometerDataThreshold";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::AccelerometerReading> = L"Windows.Devices.Sensors.AccelerometerReading";
@@ -614,6 +645,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::MagnetometerDataThreshold> = L"Windows.Devices.Sensors.MagnetometerDataThreshold";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::MagnetometerReading> = L"Windows.Devices.Sensors.MagnetometerReading";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::MagnetometerReadingChangedEventArgs> = L"Windows.Devices.Sensors.MagnetometerReadingChangedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::OnlookerDetectionOptions> = L"Windows.Devices.Sensors.OnlookerDetectionOptions";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::OrientationSensor> = L"Windows.Devices.Sensors.OrientationSensor";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::OrientationSensorReading> = L"Windows.Devices.Sensors.OrientationSensorReading";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::OrientationSensorReadingChangedEventArgs> = L"Windows.Devices.Sensors.OrientationSensorReadingChangedEventArgs";
@@ -638,11 +670,14 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::HumanEngagement> = L"Windows.Devices.Sensors.HumanEngagement";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::HumanPresence> = L"Windows.Devices.Sensors.HumanPresence";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::MagnetometerAccuracy> = L"Windows.Devices.Sensors.MagnetometerAccuracy";
+    template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::OnlookerDetectionAction> = L"Windows.Devices.Sensors.OnlookerDetectionAction";
+    template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::OnlookerDetectionBackOnMode> = L"Windows.Devices.Sensors.OnlookerDetectionBackOnMode";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::PedometerStepKind> = L"Windows.Devices.Sensors.PedometerStepKind";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::SensorOptimizationGoal> = L"Windows.Devices.Sensors.SensorOptimizationGoal";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::SensorReadingType> = L"Windows.Devices.Sensors.SensorReadingType";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::SensorType> = L"Windows.Devices.Sensors.SensorType";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::SimpleOrientation> = L"Windows.Devices.Sensors.SimpleOrientation";
+    template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::LightSensorChromaticity> = L"Windows.Devices.Sensors.LightSensorChromaticity";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IAccelerometer> = L"Windows.Devices.Sensors.IAccelerometer";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IAccelerometer2> = L"Windows.Devices.Sensors.IAccelerometer2";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IAccelerometer3> = L"Windows.Devices.Sensors.IAccelerometer3";
@@ -711,6 +746,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IHingeAngleSensorStatics> = L"Windows.Devices.Sensors.IHingeAngleSensorStatics";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IHumanPresenceFeatures> = L"Windows.Devices.Sensors.IHumanPresenceFeatures";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IHumanPresenceFeatures2> = L"Windows.Devices.Sensors.IHumanPresenceFeatures2";
+    template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IHumanPresenceFeatures3> = L"Windows.Devices.Sensors.IHumanPresenceFeatures3";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IHumanPresenceSensor> = L"Windows.Devices.Sensors.IHumanPresenceSensor";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IHumanPresenceSensor2> = L"Windows.Devices.Sensors.IHumanPresenceSensor2";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IHumanPresenceSensor3> = L"Windows.Devices.Sensors.IHumanPresenceSensor3";
@@ -725,6 +761,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IHumanPresenceSensorStatics2> = L"Windows.Devices.Sensors.IHumanPresenceSensorStatics2";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IHumanPresenceSettings> = L"Windows.Devices.Sensors.IHumanPresenceSettings";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IHumanPresenceSettings2> = L"Windows.Devices.Sensors.IHumanPresenceSettings2";
+    template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IHumanPresenceSettings3> = L"Windows.Devices.Sensors.IHumanPresenceSettings3";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IHumanPresenceSettingsStatics> = L"Windows.Devices.Sensors.IHumanPresenceSettingsStatics";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IInclinometer> = L"Windows.Devices.Sensors.IInclinometer";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IInclinometer2> = L"Windows.Devices.Sensors.IInclinometer2";
@@ -743,10 +780,13 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::ILightSensor> = L"Windows.Devices.Sensors.ILightSensor";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::ILightSensor2> = L"Windows.Devices.Sensors.ILightSensor2";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::ILightSensor3> = L"Windows.Devices.Sensors.ILightSensor3";
+    template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::ILightSensor4> = L"Windows.Devices.Sensors.ILightSensor4";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::ILightSensorDataThreshold> = L"Windows.Devices.Sensors.ILightSensorDataThreshold";
+    template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::ILightSensorDataThreshold2> = L"Windows.Devices.Sensors.ILightSensorDataThreshold2";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::ILightSensorDeviceId> = L"Windows.Devices.Sensors.ILightSensorDeviceId";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::ILightSensorReading> = L"Windows.Devices.Sensors.ILightSensorReading";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::ILightSensorReading2> = L"Windows.Devices.Sensors.ILightSensorReading2";
+    template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::ILightSensorReading3> = L"Windows.Devices.Sensors.ILightSensorReading3";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::ILightSensorReadingChangedEventArgs> = L"Windows.Devices.Sensors.ILightSensorReadingChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::ILightSensorStatics> = L"Windows.Devices.Sensors.ILightSensorStatics";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::ILightSensorStatics2> = L"Windows.Devices.Sensors.ILightSensorStatics2";
@@ -762,6 +802,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IMagnetometerReadingChangedEventArgs> = L"Windows.Devices.Sensors.IMagnetometerReadingChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IMagnetometerStatics> = L"Windows.Devices.Sensors.IMagnetometerStatics";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IMagnetometerStatics2> = L"Windows.Devices.Sensors.IMagnetometerStatics2";
+    template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IOnlookerDetectionOptions> = L"Windows.Devices.Sensors.IOnlookerDetectionOptions";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IOrientationSensor> = L"Windows.Devices.Sensors.IOrientationSensor";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IOrientationSensor2> = L"Windows.Devices.Sensors.IOrientationSensor2";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IOrientationSensor3> = L"Windows.Devices.Sensors.IOrientationSensor3";
@@ -866,6 +907,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IHingeAngleSensorStatics>{ 0xB7B63910,0xFBB1,0x4123,{ 0x89,0xCE,0x4E,0xA3,0x4E,0xB0,0xDF,0xCA } }; // B7B63910-FBB1-4123-89CE-4EA34EB0DFCA
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IHumanPresenceFeatures>{ 0xBDB09FDA,0x3244,0x557A,{ 0xBD,0x29,0x8B,0x00,0x4F,0x59,0xF2,0xCC } }; // BDB09FDA-3244-557A-BD29-8B004F59F2CC
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IHumanPresenceFeatures2>{ 0x08A9CDDA,0xD929,0x5EC2,{ 0x81,0xE2,0x94,0x0B,0xAF,0xA0,0x89,0xCF } }; // 08A9CDDA-D929-5EC2-81E2-940BAFA089CF
+    template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IHumanPresenceFeatures3>{ 0xED4E03AA,0x5CA2,0x5C02,{ 0xB7,0x83,0x26,0x2E,0x91,0x29,0x56,0x19 } }; // ED4E03AA-5CA2-5C02-B783-262E91295619
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IHumanPresenceSensor>{ 0x2116788B,0xE389,0x5CC3,{ 0x9A,0x97,0xCB,0x17,0xBE,0x10,0x08,0xBD } }; // 2116788B-E389-5CC3-9A97-CB17BE1008BD
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IHumanPresenceSensor2>{ 0xF8833779,0x65FE,0x541A,{ 0xB9,0xD6,0x1E,0x47,0x4A,0x48,0x5E,0x7A } }; // F8833779-65FE-541A-B9D6-1E474A485E7A
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IHumanPresenceSensor3>{ 0x963F006D,0x090D,0x532C,{ 0x9E,0xAF,0x80,0x3A,0x9F,0x69,0x28,0x5B } }; // 963F006D-090D-532C-9EAF-803A9F69285B
@@ -880,6 +922,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IHumanPresenceSensorStatics2>{ 0x5DE35843,0xD260,0x5A87,{ 0x99,0x5E,0xAC,0xE9,0x13,0x26,0xE1,0xC4 } }; // 5DE35843-D260-5A87-995E-ACE91326E1C4
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IHumanPresenceSettings>{ 0xEF4DAF5B,0x07B7,0x5EB6,{ 0x86,0xBB,0xB7,0xFF,0x49,0xCE,0x44,0xFB } }; // EF4DAF5B-07B7-5EB6-86BB-B7FF49CE44FB
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IHumanPresenceSettings2>{ 0xA26F705E,0x8696,0x5EB4,{ 0xB9,0xE1,0x26,0xA5,0x08,0xDE,0x1C,0xD4 } }; // A26F705E-8696-5EB4-B9E1-26A508DE1CD4
+    template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IHumanPresenceSettings3>{ 0x89757226,0xACC1,0x4F58,{ 0x81,0xDF,0x47,0xF1,0xD6,0x95,0x37,0xF2 } }; // 89757226-ACC1-4F58-81DF-47F1D69537F2
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IHumanPresenceSettingsStatics>{ 0x7F343202,0xE010,0x52C4,{ 0xAF,0x0C,0x04,0xA8,0xF1,0xE0,0x33,0xDA } }; // 7F343202-E010-52C4-AF0C-04A8F1E033DA
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IInclinometer>{ 0x2648CA6F,0x2286,0x406F,{ 0x91,0x61,0xF0,0xC4,0xBD,0x80,0x6E,0xBF } }; // 2648CA6F-2286-406F-9161-F0C4BD806EBF
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IInclinometer2>{ 0x029F3393,0x28B2,0x45F8,{ 0xBB,0x16,0x61,0xE8,0x6A,0x7F,0xAE,0x6E } }; // 029F3393-28B2-45F8-BB16-61E86A7FAE6E
@@ -898,10 +941,13 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::ILightSensor>{ 0xF84C0718,0x0C54,0x47AE,{ 0x92,0x2E,0x78,0x9F,0x57,0xFB,0x03,0xA0 } }; // F84C0718-0C54-47AE-922E-789F57FB03A0
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::ILightSensor2>{ 0x486B24E8,0xA94C,0x4090,{ 0x8F,0x48,0x09,0xF7,0x82,0xA9,0xF7,0xD5 } }; // 486B24E8-A94C-4090-8F48-09F782A9F7D5
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::ILightSensor3>{ 0x4876D0FF,0x9F4C,0x5F72,{ 0xAD,0xBD,0xA3,0x47,0x1B,0x06,0x3C,0x00 } }; // 4876D0FF-9F4C-5F72-ADBD-A3471B063C00
+    template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::ILightSensor4>{ 0x6167BE97,0x6390,0x404C,{ 0x9C,0x19,0x44,0x53,0x11,0xC6,0xA1,0xD3 } }; // 6167BE97-6390-404C-9C19-445311C6A1D3
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::ILightSensorDataThreshold>{ 0xB160AFD1,0x878F,0x5492,{ 0x9F,0x2C,0x33,0xDC,0x3A,0xE5,0x84,0xA3 } }; // B160AFD1-878F-5492-9F2C-33DC3AE584A3
+    template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::ILightSensorDataThreshold2>{ 0x6F040FBD,0xE08B,0x5B97,{ 0x8F,0x61,0xDD,0x4E,0xE6,0x6B,0x17,0x33 } }; // 6F040FBD-E08B-5B97-8F61-DD4EE66B1733
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::ILightSensorDeviceId>{ 0x7FEE49F8,0x0AFB,0x4F51,{ 0x87,0xF0,0x6C,0x26,0x37,0x5C,0xE9,0x4F } }; // 7FEE49F8-0AFB-4F51-87F0-6C26375CE94F
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::ILightSensorReading>{ 0xFFDF6300,0x227C,0x4D2B,{ 0xB3,0x02,0xFC,0x01,0x42,0x48,0x5C,0x68 } }; // FFDF6300-227C-4D2B-B302-FC0142485C68
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::ILightSensorReading2>{ 0xB7512185,0x44A3,0x44C9,{ 0x81,0x90,0x9E,0xF6,0xDE,0x0A,0x8A,0x74 } }; // B7512185-44A3-44C9-8190-9EF6DE0A8A74
+    template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::ILightSensorReading3>{ 0xF338EE06,0x96AF,0x4029,{ 0xB5,0x30,0x61,0xAC,0xC0,0x5B,0x7C,0xFE } }; // F338EE06-96AF-4029-B530-61ACC05B7CFE
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::ILightSensorReadingChangedEventArgs>{ 0xA3A2F4CF,0x258B,0x420C,{ 0xB8,0xAB,0x8E,0xDD,0x60,0x1E,0xCF,0x50 } }; // A3A2F4CF-258B-420C-B8AB-8EDD601ECF50
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::ILightSensorStatics>{ 0x45DB8C84,0xC3A8,0x471E,{ 0x9A,0x53,0x64,0x57,0xFA,0xD8,0x7C,0x0E } }; // 45DB8C84-C3A8-471E-9A53-6457FAD87C0E
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::ILightSensorStatics2>{ 0x0EC0A650,0xDDC6,0x40AB,{ 0xAC,0xE3,0xEC,0x33,0x59,0xD4,0x2C,0x51 } }; // 0EC0A650-DDC6-40AB-ACE3-EC3359D42C51
@@ -917,6 +963,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IMagnetometerReadingChangedEventArgs>{ 0x17EAE872,0x2EB9,0x4EE7,{ 0x8A,0xD0,0x31,0x27,0x53,0x7D,0x94,0x9B } }; // 17EAE872-2EB9-4EE7-8AD0-3127537D949B
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IMagnetometerStatics>{ 0x853C64CC,0x0698,0x4DDA,{ 0xA6,0xDF,0x9C,0xB9,0xCC,0x4A,0xB4,0x0A } }; // 853C64CC-0698-4DDA-A6DF-9CB9CC4AB40A
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IMagnetometerStatics2>{ 0x2C0819F0,0xFFC6,0x4F89,{ 0xA0,0x6F,0x18,0xFA,0x10,0x79,0x29,0x33 } }; // 2C0819F0-FFC6-4F89-A06F-18FA10792933
+    template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IOnlookerDetectionOptions>{ 0x0412B36F,0x36E6,0x51E2,{ 0x87,0x6E,0x65,0x19,0x7C,0xC5,0x3C,0x12 } }; // 0412B36F-36E6-51E2-876E-65197CC53C12
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IOrientationSensor>{ 0x5E354635,0xCF6B,0x4C63,{ 0xAB,0xD8,0x10,0x25,0x2B,0x0B,0xF6,0xEC } }; // 5E354635-CF6B-4C63-ABD8-10252B0BF6EC
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IOrientationSensor2>{ 0x0D924CF9,0x2F1F,0x49C9,{ 0x80,0x42,0x4A,0x18,0x13,0xD6,0x77,0x60 } }; // 0D924CF9-2F1F-49C9-8042-4A1813D67760
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IOrientationSensor3>{ 0x2CCE578D,0x646B,0x48C5,{ 0xB7,0xEE,0x44,0xFD,0xC4,0xC6,0xAA,0xFD } }; // 2CCE578D-646B-48C5-B7EE-44FDC4C6AAFD
@@ -1004,6 +1051,7 @@ namespace winrt::impl
     template <> struct default_interface<winrt::Windows::Devices::Sensors::MagnetometerDataThreshold>{ using type = winrt::Windows::Devices::Sensors::IMagnetometerDataThreshold; };
     template <> struct default_interface<winrt::Windows::Devices::Sensors::MagnetometerReading>{ using type = winrt::Windows::Devices::Sensors::IMagnetometerReading; };
     template <> struct default_interface<winrt::Windows::Devices::Sensors::MagnetometerReadingChangedEventArgs>{ using type = winrt::Windows::Devices::Sensors::IMagnetometerReadingChangedEventArgs; };
+    template <> struct default_interface<winrt::Windows::Devices::Sensors::OnlookerDetectionOptions>{ using type = winrt::Windows::Devices::Sensors::IOnlookerDetectionOptions; };
     template <> struct default_interface<winrt::Windows::Devices::Sensors::OrientationSensor>{ using type = winrt::Windows::Devices::Sensors::IOrientationSensor; };
     template <> struct default_interface<winrt::Windows::Devices::Sensors::OrientationSensorReading>{ using type = winrt::Windows::Devices::Sensors::IOrientationSensorReading; };
     template <> struct default_interface<winrt::Windows::Devices::Sensors::OrientationSensorReadingChangedEventArgs>{ using type = winrt::Windows::Devices::Sensors::IOrientationSensorReadingChangedEventArgs; };
@@ -1607,6 +1655,13 @@ namespace winrt::impl
             virtual int32_t __stdcall get_IsAdaptiveDimmingSupported(bool*) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Windows::Devices::Sensors::IHumanPresenceFeatures3>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_IsOnlookerDetectionSupported(bool*) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Windows::Devices::Sensors::IHumanPresenceSensor>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -1751,6 +1806,15 @@ namespace winrt::impl
             virtual int32_t __stdcall get_WakeOptions(void**) noexcept = 0;
             virtual int32_t __stdcall get_DimmingOptions(void**) noexcept = 0;
             virtual int32_t __stdcall get_LockOptions(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Windows::Devices::Sensors::IHumanPresenceSettings3>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_IsOnlookerDetectionEnabled(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_IsOnlookerDetectionEnabled(bool) noexcept = 0;
+            virtual int32_t __stdcall get_OnlookerDetectionOptions(void**) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Windows::Devices::Sensors::IHumanPresenceSettingsStatics>
@@ -1913,6 +1977,13 @@ namespace winrt::impl
             virtual int32_t __stdcall get_ReportThreshold(void**) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Windows::Devices::Sensors::ILightSensor4>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall IsChromaticitySupported(bool*) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Windows::Devices::Sensors::ILightSensorDataThreshold>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -1921,6 +1992,14 @@ namespace winrt::impl
             virtual int32_t __stdcall put_LuxPercentage(float) noexcept = 0;
             virtual int32_t __stdcall get_AbsoluteLux(float*) noexcept = 0;
             virtual int32_t __stdcall put_AbsoluteLux(float) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Windows::Devices::Sensors::ILightSensorDataThreshold2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_Chromaticity(struct struct_Windows_Devices_Sensors_LightSensorChromaticity*) noexcept = 0;
+            virtual int32_t __stdcall put_Chromaticity(struct struct_Windows_Devices_Sensors_LightSensorChromaticity) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Windows::Devices::Sensors::ILightSensorDeviceId>
@@ -1944,6 +2023,13 @@ namespace winrt::impl
         {
             virtual int32_t __stdcall get_PerformanceCount(void**) noexcept = 0;
             virtual int32_t __stdcall get_Properties(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Windows::Devices::Sensors::ILightSensorReading3>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_Chromaticity(struct struct_Windows_Devices_Sensors_LightSensorChromaticity*) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Windows::Devices::Sensors::ILightSensorReadingChangedEventArgs>
@@ -2070,6 +2156,16 @@ namespace winrt::impl
         {
             virtual int32_t __stdcall GetDeviceSelector(void**) noexcept = 0;
             virtual int32_t __stdcall FromIdAsync(void*, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Windows::Devices::Sensors::IOnlookerDetectionOptions>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_Action(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall put_Action(int32_t) noexcept = 0;
+            virtual int32_t __stdcall get_BackOnMode(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall put_BackOnMode(int32_t) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Windows::Devices::Sensors::IOrientationSensor>
@@ -3118,6 +3214,15 @@ namespace winrt::impl
         template <typename D> using type = consume_Windows_Devices_Sensors_IHumanPresenceFeatures2<D>;
     };
     template <typename D>
+    struct consume_Windows_Devices_Sensors_IHumanPresenceFeatures3
+    {
+        [[nodiscard]] auto IsOnlookerDetectionSupported() const;
+    };
+    template <> struct consume<winrt::Windows::Devices::Sensors::IHumanPresenceFeatures3>
+    {
+        template <typename D> using type = consume_Windows_Devices_Sensors_IHumanPresenceFeatures3<D>;
+    };
+    template <typename D>
     struct consume_Windows_Devices_Sensors_IHumanPresenceSensor
     {
         [[nodiscard]] auto DeviceId() const;
@@ -3292,6 +3397,17 @@ namespace winrt::impl
     template <> struct consume<winrt::Windows::Devices::Sensors::IHumanPresenceSettings2>
     {
         template <typename D> using type = consume_Windows_Devices_Sensors_IHumanPresenceSettings2<D>;
+    };
+    template <typename D>
+    struct consume_Windows_Devices_Sensors_IHumanPresenceSettings3
+    {
+        [[nodiscard]] auto IsOnlookerDetectionEnabled() const;
+        auto IsOnlookerDetectionEnabled(bool value) const;
+        [[nodiscard]] auto OnlookerDetectionOptions() const;
+    };
+    template <> struct consume<winrt::Windows::Devices::Sensors::IHumanPresenceSettings3>
+    {
+        template <typename D> using type = consume_Windows_Devices_Sensors_IHumanPresenceSettings3<D>;
     };
     template <typename D>
     struct consume_Windows_Devices_Sensors_IHumanPresenceSettingsStatics
@@ -3496,6 +3612,15 @@ namespace winrt::impl
         template <typename D> using type = consume_Windows_Devices_Sensors_ILightSensor3<D>;
     };
     template <typename D>
+    struct consume_Windows_Devices_Sensors_ILightSensor4
+    {
+        auto IsChromaticitySupported() const;
+    };
+    template <> struct consume<winrt::Windows::Devices::Sensors::ILightSensor4>
+    {
+        template <typename D> using type = consume_Windows_Devices_Sensors_ILightSensor4<D>;
+    };
+    template <typename D>
     struct consume_Windows_Devices_Sensors_ILightSensorDataThreshold
     {
         [[nodiscard]] auto LuxPercentage() const;
@@ -3506,6 +3631,16 @@ namespace winrt::impl
     template <> struct consume<winrt::Windows::Devices::Sensors::ILightSensorDataThreshold>
     {
         template <typename D> using type = consume_Windows_Devices_Sensors_ILightSensorDataThreshold<D>;
+    };
+    template <typename D>
+    struct consume_Windows_Devices_Sensors_ILightSensorDataThreshold2
+    {
+        [[nodiscard]] auto Chromaticity() const;
+        auto Chromaticity(winrt::Windows::Devices::Sensors::LightSensorChromaticity const& value) const;
+    };
+    template <> struct consume<winrt::Windows::Devices::Sensors::ILightSensorDataThreshold2>
+    {
+        template <typename D> using type = consume_Windows_Devices_Sensors_ILightSensorDataThreshold2<D>;
     };
     template <typename D>
     struct consume_Windows_Devices_Sensors_ILightSensorDeviceId
@@ -3535,6 +3670,15 @@ namespace winrt::impl
     template <> struct consume<winrt::Windows::Devices::Sensors::ILightSensorReading2>
     {
         template <typename D> using type = consume_Windows_Devices_Sensors_ILightSensorReading2<D>;
+    };
+    template <typename D>
+    struct consume_Windows_Devices_Sensors_ILightSensorReading3
+    {
+        [[nodiscard]] auto Chromaticity() const;
+    };
+    template <> struct consume<winrt::Windows::Devices::Sensors::ILightSensorReading3>
+    {
+        template <typename D> using type = consume_Windows_Devices_Sensors_ILightSensorReading3<D>;
     };
     template <typename D>
     struct consume_Windows_Devices_Sensors_ILightSensorReadingChangedEventArgs
@@ -3693,6 +3837,18 @@ namespace winrt::impl
     template <> struct consume<winrt::Windows::Devices::Sensors::IMagnetometerStatics2>
     {
         template <typename D> using type = consume_Windows_Devices_Sensors_IMagnetometerStatics2<D>;
+    };
+    template <typename D>
+    struct consume_Windows_Devices_Sensors_IOnlookerDetectionOptions
+    {
+        [[nodiscard]] auto Action() const;
+        auto Action(winrt::Windows::Devices::Sensors::OnlookerDetectionAction const& value) const;
+        [[nodiscard]] auto BackOnMode() const;
+        auto BackOnMode(winrt::Windows::Devices::Sensors::OnlookerDetectionBackOnMode const& value) const;
+    };
+    template <> struct consume<winrt::Windows::Devices::Sensors::IOnlookerDetectionOptions>
+    {
+        template <typename D> using type = consume_Windows_Devices_Sensors_IOnlookerDetectionOptions<D>;
     };
     template <typename D>
     struct consume_Windows_Devices_Sensors_IOrientationSensor
@@ -4081,6 +4237,15 @@ namespace winrt::impl
     template <> struct consume<winrt::Windows::Devices::Sensors::IWakeOnApproachOptions>
     {
         template <typename D> using type = consume_Windows_Devices_Sensors_IWakeOnApproachOptions<D>;
+    };
+    struct struct_Windows_Devices_Sensors_LightSensorChromaticity
+    {
+        double X;
+        double Y;
+    };
+    template <> struct abi<Windows::Devices::Sensors::LightSensorChromaticity>
+    {
+        using type = struct_Windows_Devices_Sensors_LightSensorChromaticity;
     };
 }
 #endif

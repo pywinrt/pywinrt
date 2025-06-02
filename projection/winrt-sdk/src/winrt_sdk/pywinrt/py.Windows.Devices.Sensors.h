@@ -35,6 +35,12 @@ namespace py
     inline constexpr const char* buffer_format<winrt::Windows::Devices::Sensors::MagnetometerAccuracy> = "i";
 
     template<>
+    inline constexpr const char* buffer_format<winrt::Windows::Devices::Sensors::OnlookerDetectionAction> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Windows::Devices::Sensors::OnlookerDetectionBackOnMode> = "i";
+
+    template<>
     inline constexpr const char* buffer_format<winrt::Windows::Devices::Sensors::PedometerStepKind> = "i";
 
     template<>
@@ -48,6 +54,9 @@ namespace py
 
     template<>
     inline constexpr const char* buffer_format<winrt::Windows::Devices::Sensors::SimpleOrientation> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Windows::Devices::Sensors::LightSensorChromaticity> = "T{d:x:d:y:}";
 
 
     template<>
@@ -96,6 +105,22 @@ namespace py
         static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.MagnetometerAccuracy";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "MagnetometerAccuracy";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Devices::Sensors::OnlookerDetectionAction>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.OnlookerDetectionAction";
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "OnlookerDetectionAction";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Devices::Sensors::OnlookerDetectionBackOnMode>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.OnlookerDetectionBackOnMode";
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "OnlookerDetectionBackOnMode";
     };
 
     template<>
@@ -547,6 +572,14 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Windows::Devices::Sensors::OnlookerDetectionOptions>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.OnlookerDetectionOptions";
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "OnlookerDetectionOptions";
+    };
+
+    template<>
     struct py_type<winrt::Windows::Devices::Sensors::OrientationSensor>
     {
         static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.OrientationSensor";
@@ -705,6 +738,15 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "_ISensorDataThreshold";
     };
+
+    template<>
+    struct py_type<winrt::Windows::Devices::Sensors::LightSensorChromaticity>
+    {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_devices_sensors.LightSensorChromaticity_from_tuple";
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.LightSensorChromaticity";
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "LightSensorChromaticity";
+    };
 }
 
 #if __has_include("py.Windows.Foundation.h")
@@ -776,6 +818,7 @@ namespace py::wrapper::Windows::Devices::Sensors
     using MagnetometerDataThreshold = py::winrt_wrapper<winrt::Windows::Devices::Sensors::MagnetometerDataThreshold>;
     using MagnetometerReading = py::winrt_wrapper<winrt::Windows::Devices::Sensors::MagnetometerReading>;
     using MagnetometerReadingChangedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Sensors::MagnetometerReadingChangedEventArgs>;
+    using OnlookerDetectionOptions = py::winrt_wrapper<winrt::Windows::Devices::Sensors::OnlookerDetectionOptions>;
     using OrientationSensor = py::winrt_wrapper<winrt::Windows::Devices::Sensors::OrientationSensor>;
     using OrientationSensorReading = py::winrt_wrapper<winrt::Windows::Devices::Sensors::OrientationSensorReading>;
     using OrientationSensorReadingChangedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Sensors::OrientationSensorReadingChangedEventArgs>;
@@ -796,6 +839,7 @@ namespace py::wrapper::Windows::Devices::Sensors
     using WakeOnApproachOptions = py::winrt_wrapper<winrt::Windows::Devices::Sensors::WakeOnApproachOptions>;
     using IHumanPresenceSensorExtension = py::winrt_wrapper<winrt::Windows::Devices::Sensors::IHumanPresenceSensorExtension>;
     using ISensorDataThreshold = py::winrt_wrapper<winrt::Windows::Devices::Sensors::ISensorDataThreshold>;
+    using LightSensorChromaticity = py::winrt_struct_wrapper<winrt::Windows::Devices::Sensors::LightSensorChromaticity>;
 }
 
 namespace py

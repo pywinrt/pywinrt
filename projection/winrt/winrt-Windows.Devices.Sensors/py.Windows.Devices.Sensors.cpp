@@ -8223,6 +8223,36 @@ namespace py::cpp::Windows::Devices::Sensors
         }
     }
 
+    static PyObject* HumanPresenceFeatures_get_IsOnlookerDetectionSupported(py::wrapper::Windows::Devices::Sensors::HumanPresenceFeatures* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceFeatures", L"IsOnlookerDetectionSupported");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsOnlookerDetectionSupported();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_HumanPresenceFeatures(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Sensors::HumanPresenceFeatures>>();
@@ -8259,6 +8289,7 @@ namespace py::cpp::Windows::Devices::Sensors
         { "sensor_id", reinterpret_cast<getter>(HumanPresenceFeatures_get_SensorId), nullptr, nullptr, nullptr },
         { "supported_wake_or_lock_distances_in_millimeters", reinterpret_cast<getter>(HumanPresenceFeatures_get_SupportedWakeOrLockDistancesInMillimeters), nullptr, nullptr, nullptr },
         { "is_adaptive_dimming_supported", reinterpret_cast<getter>(HumanPresenceFeatures_get_IsAdaptiveDimmingSupported), nullptr, nullptr, nullptr },
+        { "is_onlooker_detection_supported", reinterpret_cast<getter>(HumanPresenceFeatures_get_IsOnlookerDetectionSupported), nullptr, nullptr, nullptr },
         { }};
 
     static PyType_Slot _type_slots_HumanPresenceFeatures[] = {
@@ -10743,6 +10774,105 @@ namespace py::cpp::Windows::Devices::Sensors
         }
     }
 
+    static PyObject* HumanPresenceSettings_get_IsOnlookerDetectionEnabled(py::wrapper::Windows::Devices::Sensors::HumanPresenceSettings* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"IsOnlookerDetectionEnabled");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsOnlookerDetectionEnabled();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int HumanPresenceSettings_put_IsOnlookerDetectionEnabled(py::wrapper::Windows::Devices::Sensors::HumanPresenceSettings* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"IsOnlookerDetectionEnabled");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.IsOnlookerDetectionEnabled(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* HumanPresenceSettings_get_OnlookerDetectionOptions(py::wrapper::Windows::Devices::Sensors::HumanPresenceSettings* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"OnlookerDetectionOptions");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OnlookerDetectionOptions();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* HumanPresenceSettings_add_SettingsChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         try
@@ -10849,6 +10979,8 @@ namespace py::cpp::Windows::Devices::Sensors
         { "dimming_options", reinterpret_cast<getter>(HumanPresenceSettings_get_DimmingOptions), nullptr, nullptr, nullptr },
         { "lock_options", reinterpret_cast<getter>(HumanPresenceSettings_get_LockOptions), nullptr, nullptr, nullptr },
         { "wake_options", reinterpret_cast<getter>(HumanPresenceSettings_get_WakeOptions), nullptr, nullptr, nullptr },
+        { "is_onlooker_detection_enabled", reinterpret_cast<getter>(HumanPresenceSettings_get_IsOnlookerDetectionEnabled), reinterpret_cast<setter>(HumanPresenceSettings_put_IsOnlookerDetectionEnabled), nullptr, nullptr },
+        { "onlooker_detection_options", reinterpret_cast<getter>(HumanPresenceSettings_get_OnlookerDetectionOptions), nullptr, nullptr, nullptr },
         { }};
 
     static PyType_Slot _type_slots_HumanPresenceSettings[] = {
@@ -12489,6 +12621,46 @@ namespace py::cpp::Windows::Devices::Sensors
         }
     }
 
+    static PyObject* LightSensor_IsChromaticitySupported(py::wrapper::Windows::Devices::Sensors::LightSensor* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.LightSensor", L"IsChromaticitySupported", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.IsChromaticitySupported();
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* LightSensor_get_ReportInterval(py::wrapper::Windows::Devices::Sensors::LightSensor* self, void* /*unused*/) noexcept
     {
         try
@@ -12838,6 +13010,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyMethodDef _methods_LightSensor[] = {
         { "get_current_reading", reinterpret_cast<PyCFunction>(LightSensor_GetCurrentReading), METH_VARARGS, nullptr },
+        { "is_chromaticity_supported", reinterpret_cast<PyCFunction>(LightSensor_IsChromaticitySupported), METH_VARARGS, nullptr },
         { "add_reading_changed", reinterpret_cast<PyCFunction>(LightSensor_add_ReadingChanged), METH_O, nullptr },
         { "remove_reading_changed", reinterpret_cast<PyCFunction>(LightSensor_remove_ReadingChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_LightSensor, METH_O | METH_STATIC, nullptr },
@@ -13046,6 +13219,75 @@ namespace py::cpp::Windows::Devices::Sensors
         }
     }
 
+    static PyObject* LightSensorDataThreshold_get_Chromaticity(py::wrapper::Windows::Devices::Sensors::LightSensorDataThreshold* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensorDataThreshold", L"Chromaticity");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Chromaticity();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int LightSensorDataThreshold_put_Chromaticity(py::wrapper::Windows::Devices::Sensors::LightSensorDataThreshold* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensorDataThreshold", L"Chromaticity");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::LightSensorChromaticity>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.Chromaticity(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
     static PyObject* _assign_array_LightSensorDataThreshold(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Sensors::LightSensorDataThreshold>>();
@@ -13078,6 +13320,7 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyGetSetDef _getset_LightSensorDataThreshold[] = {
         { "lux_percentage", reinterpret_cast<getter>(LightSensorDataThreshold_get_LuxPercentage), reinterpret_cast<setter>(LightSensorDataThreshold_put_LuxPercentage), nullptr, nullptr },
         { "absolute_lux", reinterpret_cast<getter>(LightSensorDataThreshold_get_AbsoluteLux), reinterpret_cast<setter>(LightSensorDataThreshold_put_AbsoluteLux), nullptr, nullptr },
+        { "chromaticity", reinterpret_cast<getter>(LightSensorDataThreshold_get_Chromaticity), reinterpret_cast<setter>(LightSensorDataThreshold_put_Chromaticity), nullptr, nullptr },
         { }};
 
     static PyType_Slot _type_slots_LightSensorDataThreshold[] = {
@@ -13231,6 +13474,36 @@ namespace py::cpp::Windows::Devices::Sensors
         }
     }
 
+    static PyObject* LightSensorReading_get_Chromaticity(py::wrapper::Windows::Devices::Sensors::LightSensorReading* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensorReading", L"Chromaticity");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Chromaticity();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_LightSensorReading(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Sensors::LightSensorReading>>();
@@ -13265,6 +13538,7 @@ namespace py::cpp::Windows::Devices::Sensors
         { "timestamp", reinterpret_cast<getter>(LightSensorReading_get_Timestamp), nullptr, nullptr, nullptr },
         { "performance_count", reinterpret_cast<getter>(LightSensorReading_get_PerformanceCount), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(LightSensorReading_get_Properties), nullptr, nullptr, nullptr },
+        { "chromaticity", reinterpret_cast<getter>(LightSensorReading_get_Chromaticity), nullptr, nullptr, nullptr },
         { }};
 
     static PyType_Slot _type_slots_LightSensorReading[] = {
@@ -14805,6 +15079,209 @@ namespace py::cpp::Windows::Devices::Sensors
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_MagnetometerReadingChangedEventArgs};
+
+    // ----- OnlookerDetectionOptions class --------------------
+
+    static PyObject* _new_OnlookerDetectionOptions(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Windows::Devices::Sensors::OnlookerDetectionOptions>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::OnlookerDetectionOptions>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_OnlookerDetectionOptions(py::wrapper::Windows::Devices::Sensors::OnlookerDetectionOptions* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* OnlookerDetectionOptions_get_BackOnMode(py::wrapper::Windows::Devices::Sensors::OnlookerDetectionOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OnlookerDetectionOptions", L"BackOnMode");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BackOnMode();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int OnlookerDetectionOptions_put_BackOnMode(py::wrapper::Windows::Devices::Sensors::OnlookerDetectionOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OnlookerDetectionOptions", L"BackOnMode");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::OnlookerDetectionBackOnMode>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.BackOnMode(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* OnlookerDetectionOptions_get_Action(py::wrapper::Windows::Devices::Sensors::OnlookerDetectionOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OnlookerDetectionOptions", L"Action");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Action();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int OnlookerDetectionOptions_put_Action(py::wrapper::Windows::Devices::Sensors::OnlookerDetectionOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OnlookerDetectionOptions", L"Action");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::OnlookerDetectionAction>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.Action(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* _assign_array_OnlookerDetectionOptions(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Sensors::OnlookerDetectionOptions>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_OnlookerDetectionOptions(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Devices::Sensors::OnlookerDetectionOptions>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_OnlookerDetectionOptions[] = {
+        { "_assign_array_", _assign_array_OnlookerDetectionOptions, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_OnlookerDetectionOptions), METH_O | METH_STATIC, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_OnlookerDetectionOptions[] = {
+        { "back_on_mode", reinterpret_cast<getter>(OnlookerDetectionOptions_get_BackOnMode), reinterpret_cast<setter>(OnlookerDetectionOptions_put_BackOnMode), nullptr, nullptr },
+        { "action", reinterpret_cast<getter>(OnlookerDetectionOptions_get_Action), reinterpret_cast<setter>(OnlookerDetectionOptions_put_Action), nullptr, nullptr },
+        { }};
+
+    static PyType_Slot _type_slots_OnlookerDetectionOptions[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_OnlookerDetectionOptions) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OnlookerDetectionOptions) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_OnlookerDetectionOptions) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_OnlookerDetectionOptions) },
+        { }};
+
+    static PyType_Spec type_spec_OnlookerDetectionOptions = {
+        "winrt._winrt_windows_devices_sensors.OnlookerDetectionOptions",
+        sizeof(py::wrapper::Windows::Devices::Sensors::OnlookerDetectionOptions),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_OnlookerDetectionOptions};
 
     // ----- OrientationSensor class --------------------
 
@@ -20030,6 +20507,239 @@ namespace py::cpp::Windows::Devices::Sensors
         ,
         type_slots_ImplementsISensorDataThreshold};
 
+    // ----- LightSensorChromaticity struct --------------------
+
+    winrt::Windows::Devices::Sensors::LightSensorChromaticity LightSensorChromaticity_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Devices::Sensors::LightSensorChromaticity result{};
+
+        result.X = py::convert_to<double>(tuple, 0);
+        result.Y = py::convert_to<double>(tuple, 1);
+
+        return result;
+    }
+
+    PyObject* _new_LightSensorChromaticity(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
+    {
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
+        {
+            return nullptr;
+        }
+
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Devices::Sensors::LightSensorChromaticity>*>(self_obj.get());
+        std::construct_at(&self->obj);
+
+        auto tuple_size = PyTuple_GET_SIZE(args);
+        if ((tuple_size == 0) && (!kwds))
+        {
+            return self_obj.detach();
+        }
+
+        double _X{};
+        double _Y{};
+
+        static const char* kwlist[] = {"x", "y", nullptr};
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|dd", const_cast<char**>(kwlist), &_X, &_Y))
+        {
+            return nullptr;
+        }
+
+        try
+        {
+            self->obj.X = _X;
+            self->obj.Y = _Y;
+
+            return self_obj.detach();
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_LightSensorChromaticity(py::wrapper::Windows::Devices::Sensors::LightSensorChromaticity* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* _assign_array_LightSensorChromaticity(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Sensors::LightSensorChromaticity>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    PyObject* _replace_LightSensorChromaticity(py::wrapper::Windows::Devices::Sensors::LightSensorChromaticity* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            double _X{self->obj.X};
+            double _Y{self->obj.Y};
+
+            static const char* kwlist[] = {"x", "y", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$dd", const_cast<char**>(kwlist), &_X, &_Y))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.X = _X;
+            copy.Y = _Y;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    PyObject* unpack_LightSensorChromaticity(py::wrapper::Windows::Devices::Sensors::LightSensorChromaticity* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle X{convert(self->obj.X)};
+        if (!X)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Y{convert(self->obj.Y)};
+        if (!Y)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, X.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Y.detach());
+
+        return tuple.detach();
+    }
+
+    static PyMethodDef _methods_LightSensorChromaticity[] = {
+        { "_assign_array_", _assign_array_LightSensorChromaticity, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_LightSensorChromaticity)), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_LightSensorChromaticity), METH_NOARGS, nullptr },
+        { }};
+
+    static PyObject* LightSensorChromaticity_get_X(py::wrapper::Windows::Devices::Sensors::LightSensorChromaticity* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(self->obj.X);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* LightSensorChromaticity_get_Y(py::wrapper::Windows::Devices::Sensors::LightSensorChromaticity* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(self->obj.Y);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyGetSetDef _getset_LightSensorChromaticity[] = {
+        { "x", reinterpret_cast<getter>(LightSensorChromaticity_get_X), nullptr, nullptr, nullptr },
+        { "y", reinterpret_cast<getter>(LightSensorChromaticity_get_Y), nullptr, nullptr, nullptr },
+        { }};
+
+    static PyObject* _richcompare_LightSensorChromaticity(py::wrapper::Windows::Devices::Sensors::LightSensorChromaticity* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::convert_to<winrt::Windows::Devices::Sensors::LightSensorChromaticity>(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _repr_LightSensorChromaticity(PyObject* self) noexcept
+    {
+        py::pyobj_handle X{PyObject_GetAttrString(self, "x")};
+        if (!X)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Y{PyObject_GetAttrString(self, "y")};
+        if (!Y)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("LightSensorChromaticity(x=%R, y=%R)", X.get(), Y.get());
+    }
+
+    static PyType_Slot _type_slots_LightSensorChromaticity[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_LightSensorChromaticity) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LightSensorChromaticity) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_LightSensorChromaticity) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_LightSensorChromaticity) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_LightSensorChromaticity) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_LightSensorChromaticity) },
+        { }};
+
+    static PyType_Spec type_spec_LightSensorChromaticity = {
+        "winrt._winrt_windows_devices_sensors.LightSensorChromaticity",
+        sizeof(py::wrapper::Windows::Devices::Sensors::LightSensorChromaticity),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_LightSensorChromaticity};
+
     // ----- Windows.Devices.Sensors Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Devices.Sensors");
@@ -20531,6 +21241,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sensors(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle OnlookerDetectionOptions_type{py::register_python_type(module.get(), &type_spec_OnlookerDetectionOptions, object_bases.get(), inspectable_meta_type)};
+    if (!OnlookerDetectionOptions_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle OrientationSensor_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
     if (!OrientationSensor_Static_bases)
     {
@@ -20721,6 +21437,22 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sensors(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle LightSensorChromaticity_type{py::register_python_type(module.get(), &type_spec_LightSensorChromaticity, nullptr, nullptr)};
+    if (!LightSensorChromaticity_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle LightSensorChromaticity_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(LightSensorChromaticity_from_tuple),"winrt._winrt_windows_devices_sensors.LightSensorChromaticity_from_tuple", nullptr)};
+    if (!LightSensorChromaticity_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "LightSensorChromaticity_from_tuple", LightSensorChromaticity_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }
