@@ -45,7 +45,14 @@ MINIMAL_NAMESPACES = [
     "Windows.Graphics.DirectX",
     "Windows.Storage.Streams",
 ]
-WINDOWS_SDK = "10.0.26100.0+"
+WINDOWS_SDK = (
+    REPO_ROOT_PATH
+    / "_tools"
+    / "Microsoft.Windows.SDK.CPP"
+    / "c"
+    / "References"
+    / "10.0.26100.0"
+)
 SDK_PACKAGE_PATH = PROJECTION_PATH / "winrt-sdk" / "src" / "winrt_sdk" / "pywinrt"
 WINDOWS_SDK_NULLABILITY_JSON_PATH = REPO_ROOT_PATH / "nullability" / "windows-sdk.json"
 
@@ -60,7 +67,7 @@ subprocess.check_call(
     + [
         PYWINRT_EXE,
         "--input",
-        WINDOWS_SDK,
+        f"winrt;{WINDOWS_SDK}",
         "--output",
         PROJECTION_PATH / "winrt",
         "--header-path",
@@ -89,7 +96,7 @@ subprocess.check_call(
         "--input",
         f"webview2;{WEBVIEW2_PACKAGE_METADATA}",
         "--reference",
-        WINDOWS_SDK,
+        f"winrt;{WINDOWS_SDK}",
         "--output",
         PROJECTION_PATH / "webview2",
         "--nullability-json",
@@ -123,7 +130,7 @@ subprocess.check_call(
         "--reference",
         f"webview2;{WEBVIEW2_PACKAGE_METADATA}",
         "--reference",
-        WINDOWS_SDK,
+        f"winrt;{WINDOWS_SDK}",
         "--output",
         PROJECTION_PATH / "winui2",
         "--header-path",
@@ -163,7 +170,7 @@ subprocess.check_call(
         "--reference",
         f"webview2;{WEBVIEW2_PACKAGE_METADATA}",
         "--reference",
-        WINDOWS_SDK,
+        f"winrt;{WINDOWS_SDK}",
         "--output",
         PROJECTION_PATH / "winui3",
         "--header-path",
@@ -193,7 +200,7 @@ subprocess.check_call(
         "--input",
         f"test-winrt;{TEST_PACKAGE_METADATA}",
         "--reference",
-        WINDOWS_SDK,
+        f"winrt;{WINDOWS_SDK}",
         "--output",
         PROJECTION_PATH / "test-winrt",
         "--nullability-json",

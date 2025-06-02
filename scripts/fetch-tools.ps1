@@ -1,9 +1,15 @@
 # fetch code generation tools from nuget
 
 param(
+    # CppWinRT
     [Parameter(Mandatory=$false)]
     [string]$CppWinRTVersion = "2.0.250303.1",
     [switch]$noCppWinRT,
+
+    # Windows SDK
+    [Parameter(Mandatory=$false)]
+    [string]$WindowsSdkVersion = "10.0.26100.2454",
+    [switch]$noWindowsSdk,
 
     # WinUI 2
     [Parameter(Mandatory=$false)]
@@ -37,6 +43,14 @@ try {
 
 if (!$noCppWinRT) {
     & nuget install Microsoft.Windows.CppWinRT -Version $CppWinRTVersion -ExcludeVersion -DependencyVersion Ignore -OutputDirectory "$repoRootPath/_tools"
+
+    if ($LASTEXITCODE -ne 0) {
+        exit $LASTEXITCODE
+    }
+}
+
+if (!$noWindowsSdk) {
+    & nuget install Microsoft.Windows.SDK.CPP -Version $WindowsSdkVersion -ExcludeVersion -DependencyVersion Ignore -OutputDirectory "$repoRootPath/_tools" -NoHttpCache
 
     if ($LASTEXITCODE -ne 0) {
         exit $LASTEXITCODE

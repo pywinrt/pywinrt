@@ -14,7 +14,14 @@ if not CPPWINRT_EXE.exists():
 
 # generate headers for windows sdk
 
-WINDOWS_SDK = "10.0.26100.0+"
+WINDOWS_SDK = (
+    REPO_ROOT_PATH
+    / "_tools"
+    / "Microsoft.Windows.SDK.CPP"
+    / "c"
+    / "References"
+    / "10.0.26100.0"
+)
 SDK_PACKAGE_PATH = PROJECTION_PATH / "winrt-sdk" / "src" / "winrt_sdk" / "cppwinrt"
 
 shutil.rmtree(SDK_PACKAGE_PATH, ignore_errors=True)

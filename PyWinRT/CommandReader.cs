@@ -184,7 +184,7 @@ class CommandReader
                 }
                 else
                 {
-                    var rx = new Regex(@"((\d+)\.(\d+)\.(\d+)\.(\d+))\+?");
+                    var rx = new Regex(@"^((\d+)\.(\d+)\.(\d+)\.(\d+))\+?$");
                     var match = rx.Match(value);
 
                     if (match.Success)
@@ -193,7 +193,7 @@ class CommandReader
                     }
                 }
 
-                if (sdkVersion != null)
+                if (sdkVersion is not null)
                 {
                     var sdkPath = GetSdkPath();
                     var xmlPath = Path.Combine(
