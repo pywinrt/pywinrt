@@ -1684,6 +1684,27 @@ namespace py
     };
 
     template<>
+    struct converter<winrt::param::hstring>
+    {
+        static PyObject* convert(winrt::param::hstring const& value) noexcept
+        {
+            return PyUnicode_FromWideChar(
+                static_cast<winrt::hstring const&>(value).c_str(),
+                static_cast<winrt::hstring const&>(value).size());
+        }
+
+        static winrt::param::hstring convert_to(PyObject* obj)
+        {
+            throw_if_pyobj_null(obj);
+
+            // It is expected that this is only used to convert delegate parameters
+            // to Python objects, so we shouldn't need to go the other way around.
+            throw winrt::hresult_not_implemented{
+                L"winrt::param::hstring cannot be converted from Python object"};
+        }
+    };
+
+    template<>
     struct converter<char16_t>
     {
         static PyObject* convert(char16_t value) noexcept
