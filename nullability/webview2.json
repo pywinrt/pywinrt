@@ -7043,6 +7043,32 @@
             ]
           },
           {
+            "signature": "Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2Frame::add_FrameCreated(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2Frame,Microsoft.Web.WebView2.Core.CoreWebView2FrameCreatedEventArgs>)",
+            "name": "add_FrameCreated",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.EventRegistrationToken"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.TypedEventHandler`2",
+                  "args": [
+                    {
+                      "name": "Microsoft.Web.WebView2.Core.CoreWebView2Frame"
+                    },
+                    {
+                      "name": "Microsoft.Web.WebView2.Core.CoreWebView2FrameCreatedEventArgs"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
             "signature": "Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2Frame::add_NameChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2Frame,System.Object>)",
             "name": "add_NameChanged",
             "return": {
@@ -7257,6 +7283,24 @@
           {
             "signature": "System.Void Microsoft.Web.WebView2.Core.CoreWebView2Frame::remove_Destroyed(Windows.Foundation.EventRegistrationToken)",
             "name": "remove_Destroyed",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "token",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.EventRegistrationToken"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void Microsoft.Web.WebView2.Core.CoreWebView2Frame::remove_FrameCreated(Windows.Foundation.EventRegistrationToken)",
+            "name": "remove_FrameCreated",
             "return": {
               "type": {
                 "name": "System.Void"

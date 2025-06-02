@@ -11623,6 +11623,45 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
+    static PyObject* CoreWebView2Frame_add_FrameCreated(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Frame* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Frame, winrt::Microsoft::Web::WebView2::Core::CoreWebView2FrameCreatedEventArgs>>(arg);
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FrameCreated(param0);
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWebView2Frame_remove_FrameCreated(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Frame* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.FrameCreated(param0);
+            }
+
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* CoreWebView2Frame_add_Destroyed(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Frame* self, PyObject* arg) noexcept
     {
         try
@@ -11746,6 +11785,8 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         { "remove_permission_requested", reinterpret_cast<PyCFunction>(CoreWebView2Frame_remove_PermissionRequested), METH_O, nullptr },
         { "add_screen_capture_starting", reinterpret_cast<PyCFunction>(CoreWebView2Frame_add_ScreenCaptureStarting), METH_O, nullptr },
         { "remove_screen_capture_starting", reinterpret_cast<PyCFunction>(CoreWebView2Frame_remove_ScreenCaptureStarting), METH_O, nullptr },
+        { "add_frame_created", reinterpret_cast<PyCFunction>(CoreWebView2Frame_add_FrameCreated), METH_O, nullptr },
+        { "remove_frame_created", reinterpret_cast<PyCFunction>(CoreWebView2Frame_remove_FrameCreated), METH_O, nullptr },
         { "add_destroyed", reinterpret_cast<PyCFunction>(CoreWebView2Frame_add_Destroyed), METH_O, nullptr },
         { "remove_destroyed", reinterpret_cast<PyCFunction>(CoreWebView2Frame_remove_Destroyed), METH_O, nullptr },
         { "add_name_changed", reinterpret_cast<PyCFunction>(CoreWebView2Frame_add_NameChanged), METH_O, nullptr },

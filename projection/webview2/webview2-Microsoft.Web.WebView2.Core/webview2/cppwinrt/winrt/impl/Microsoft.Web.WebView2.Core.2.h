@@ -211,7 +211,7 @@ WINRT_EXPORT namespace winrt::Microsoft::Web::WebView2::Core
         CoreWebView2FileSystemHandle(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FileSystemHandle(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES CoreWebView2Frame : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame,
-        impl::require<CoreWebView2Frame, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame2, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame3, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame4, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame5, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame6>
+        impl::require<CoreWebView2Frame, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame2, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame3, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame4, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame5, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame6, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame7>
     {
         CoreWebView2Frame(std::nullptr_t) noexcept {}
         CoreWebView2Frame(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame(ptr, take_ownership_from_abi) {}
