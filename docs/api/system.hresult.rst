@@ -9,7 +9,7 @@
     contains some of the most common error codes used with WinRT types, but it is
     not exhaustive (there are 1000s of known error codes!).
 
-    .. versionadded:: unreleased
+    .. versionadded:: 3.2
 
     -------------------
     Windows error codes
