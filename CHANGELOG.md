@@ -4,6 +4,8 @@
 
 ## [Unreleased]
 
+## [v3.2.0] - 2025-06-04
+
 ### Added
 - Allow passing Python mapping as arguments of type `Iterable[IKeyValuePair[K, V]]`.
 - Allow passing Python buffer protocol objects as arguments of type `IBuffer`.
@@ -383,7 +385,8 @@ package only.
 ### Removed
 - Removed selecting apartment thread type during module init.
 
-[Unreleased]: https://github.com/pywinrt/pywinrt/compare/v3.1.0...HEAD
+[Unreleased]: https://github.com/pywinrt/pywinrt/compare/v3.2.0...HEAD
+[v3.2.0]: https://github.com/pywinrt/pywinrt/compare/v3.1.0...v3.2.0
 [v3.1.0]: https://github.com/pywinrt/pywinrt/compare/v3.0.0...v3.1.0
 [v3.0.0]: https://github.com/pywinrt/pywinrt/compare/v2.3.0...v3.0.0
 [v2.3.0]: https://github.com/pywinrt/pywinrt/compare/v2.2.0...v2.3.0

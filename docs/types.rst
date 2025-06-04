@@ -309,7 +309,7 @@ synchronously (i.e. when not using ``asyncio``).
         that a :class:`KeyboardInterrupt` will not be raised until the operation
         is complete.
 
-    .. versionadded:: unreleased
+    .. versionadded:: 3.2
 
 .. method:: IAsyncAction.wait(self, timeout: float) -> AsyncStatus
     IAsyncOperation.wait(self, timeout: float) -> AsyncStatus
@@ -334,7 +334,7 @@ synchronously (i.e. when not using ``asyncio``).
         a :class:`KeyboardInterrupt` will not be raised until the operation is
         complete or the timeout is reached.
 
-    .. versionadded:: unreleased
+    .. versionadded:: 3.2
 
 .. _async-projection:
 
@@ -352,7 +352,7 @@ for the result of async WinRT methods::
 
     thing = await winrt_obj.get_thing_async()
 
-.. versionchanged:: unreleased
+.. versionchanged:: 3.2
 
     If the :class:`~collections.abc.Awaitable` that wraps the operation is
     canceled, it will now propagate the cancellation to the WinRT async
