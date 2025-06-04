@@ -13,7 +13,7 @@
         Alias of :class:`collections.abc.Buffer`. This is the projected type for
         `Windows.Storage.Streams.IBuffer`_.
 
-        .. versionadded:: unreleased
+        .. versionadded:: 3.2
 
         .. caution:: The WinRT type system does not distinguish between
             read-only and writeable buffers. Do not use immutable types like
