@@ -11,6 +11,7 @@ The ``PyWinRT`` project provides access to Windows Runtime (WinRT) APIs in Pytho
 
    types
    api/index
+   versioning
 
 
 Indices and tables
