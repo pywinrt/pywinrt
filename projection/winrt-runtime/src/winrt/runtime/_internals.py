@@ -14,8 +14,8 @@ from typing import Any, TypeVar, Protocol, TYPE_CHECKING
 
 from typing_extensions import Self
 
-from winrt._winrt import add_dll_directory, remove_dll_directory
-from winrt.system import Object
+# NB: have to import Object from here instead of winrt.system to avoid circular import issues.
+from winrt._winrt import add_dll_directory, remove_dll_directory, Object
 
 # Unfortunately, we can't import at runtime because of circular imports.
 if TYPE_CHECKING:

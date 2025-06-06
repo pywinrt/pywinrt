@@ -4,6 +4,11 @@
 
 ## [Unreleased]
 
+### Fixed
+- Fixed possible circular import exception ([#132]).
+
+[#132]: https://github.com/pywinrt/pywinrt/issues/132
+
 ## [v3.2.0] - 2025-06-04
 
 ### Added
