@@ -100,7 +100,7 @@ static class FileWriters
 
         foreach (var ns in members.GetReferencedNamespaces(packageMap, includeDelegates: true))
         {
-            w.WriteLine($"{ns.PyPackage}-{ns.Namespace}[all]=={PyWinRT.VersionString}");
+            w.WriteLine($"{ns.PyPackage}-{ns.Namespace}[all]~={PyWinRT.VersionString}.0");
         }
 
         sw.WriteFileIfChanged(nsPackageDir, "all-requirements.txt");
@@ -117,11 +117,11 @@ static class FileWriters
 
         w.WriteLicense("#");
         w.WriteBlankLine();
-        w.WriteLine($"winrt-runtime=={PyWinRT.VersionString}");
+        w.WriteLine($"winrt-runtime~={PyWinRT.VersionString}.0");
 
         foreach (var ns in members.GetRequiredNamespaces(packageMap))
         {
-            w.WriteLine($"{ns.PyPackage}-{ns.Namespace}=={PyWinRT.VersionString}");
+            w.WriteLine($"{ns.PyPackage}-{ns.Namespace}~={PyWinRT.VersionString}.0");
         }
 
         sw.WriteFileIfChanged(nsPackageDir, "requirements.txt");

@@ -4,9 +4,13 @@
 
 ## [Unreleased]
 
+## Changed
+- Changed version scheme to allow for single-package bug fix releases ([#105]).
+
 ### Fixed
 - Fixed possible circular import exception ([#132]).
 
+[#105]: https://github.com/pywinrt/pywinrt/issues/105
 [#132]: https://github.com/pywinrt/pywinrt/issues/132
 
 ## [v3.2.0] - 2025-06-04
