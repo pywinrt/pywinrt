@@ -70,6 +70,24 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Windowing
         Minimized = 1,
         Restored = 2,
     };
+    enum class PlacementInfo : uint32_t
+    {
+        None = 0,
+        RestoreToMaximized = 0x2,
+        RestoreToArranged = 0x8,
+        Arranged = 0x10,
+        Resizable = 0x20,
+        FullScreen = 0x40,
+    };
+    enum class PlacementRestorationBehavior : uint32_t
+    {
+        None = 0,
+        AllowShowMaximized = 0x1,
+        AllowShowFullScreen = 0x2,
+        AllowShowArranged = 0x4,
+        UseStartupInfoForFirstWindow = 0x8,
+        All = 0xffffffff,
+    };
     enum class TitleBarHeightOption : int32_t
     {
         Standard = 0,
@@ -90,10 +108,14 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Windowing
     struct IAppWindowChangedEventArgs;
     struct IAppWindowChangedEventArgs2;
     struct IAppWindowClosingEventArgs;
+    struct IAppWindowExperimental;
+    struct IAppWindowPlacementDetails;
+    struct IAppWindowPlacementDetailsStatics;
     struct IAppWindowPresenter;
     struct IAppWindowPresenterFactory;
     struct IAppWindowStatics;
     struct IAppWindowStatics2;
+    struct IAppWindowStatics3;
     struct IAppWindowTitleBar;
     struct IAppWindowTitleBar2;
     struct IAppWindowTitleBar3;
@@ -103,6 +125,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Windowing
     struct IDisplayArea;
     struct IDisplayAreaStatics;
     struct IDisplayAreaStatics2;
+    struct IDisplayAreaStatics3;
     struct IDisplayAreaWatcher;
     struct IFullScreenPresenter;
     struct IFullScreenPresenterStatics;
@@ -114,6 +137,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Windowing
     struct AppWindow;
     struct AppWindowChangedEventArgs;
     struct AppWindowClosingEventArgs;
+    struct AppWindowPlacementDetails;
     struct AppWindowPresenter;
     struct AppWindowTitleBar;
     struct CompactOverlayPresenter;
@@ -131,10 +155,14 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Windowing::IAppWindowChangedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::IAppWindowChangedEventArgs2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::IAppWindowClosingEventArgs>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Windowing::IAppWindowExperimental>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetailsStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::IAppWindowPresenter>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::IAppWindowPresenterFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::IAppWindowStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::IAppWindowStatics2>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Windowing::IAppWindowStatics3>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::IAppWindowTitleBar>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::IAppWindowTitleBar2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::IAppWindowTitleBar3>{ using type = interface_category; };
@@ -144,6 +172,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Windowing::IDisplayArea>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::IDisplayAreaStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::IDisplayAreaStatics2>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Windowing::IDisplayAreaStatics3>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::IDisplayAreaWatcher>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::IFullScreenPresenter>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::IFullScreenPresenterStatics>{ using type = interface_category; };
@@ -155,6 +184,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Windowing::AppWindow>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::AppWindowChangedEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::AppWindowClosingEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Windowing::AppWindowPlacementDetails>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::AppWindowPresenter>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::AppWindowTitleBar>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::CompactOverlayPresenter>{ using type = class_category; };
@@ -168,11 +198,14 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Windowing::DisplayAreaWatcherStatus>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::IconShowOptions>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::OverlappedPresenterState>{ using type = enum_category; };
+    template <> struct category<winrt::Microsoft::UI::Windowing::PlacementInfo>{ using type = enum_category; };
+    template <> struct category<winrt::Microsoft::UI::Windowing::PlacementRestorationBehavior>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::TitleBarHeightOption>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::TitleBarTheme>{ using type = enum_category; };
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::AppWindow> = L"Microsoft.UI.Windowing.AppWindow";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::AppWindowChangedEventArgs> = L"Microsoft.UI.Windowing.AppWindowChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::AppWindowClosingEventArgs> = L"Microsoft.UI.Windowing.AppWindowClosingEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::AppWindowPlacementDetails> = L"Microsoft.UI.Windowing.AppWindowPlacementDetails";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::AppWindowPresenter> = L"Microsoft.UI.Windowing.AppWindowPresenter";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::AppWindowTitleBar> = L"Microsoft.UI.Windowing.AppWindowTitleBar";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::CompactOverlayPresenter> = L"Microsoft.UI.Windowing.CompactOverlayPresenter";
@@ -186,6 +219,8 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::DisplayAreaWatcherStatus> = L"Microsoft.UI.Windowing.DisplayAreaWatcherStatus";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IconShowOptions> = L"Microsoft.UI.Windowing.IconShowOptions";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::OverlappedPresenterState> = L"Microsoft.UI.Windowing.OverlappedPresenterState";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::PlacementInfo> = L"Microsoft.UI.Windowing.PlacementInfo";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::PlacementRestorationBehavior> = L"Microsoft.UI.Windowing.PlacementRestorationBehavior";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::TitleBarHeightOption> = L"Microsoft.UI.Windowing.TitleBarHeightOption";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::TitleBarTheme> = L"Microsoft.UI.Windowing.TitleBarTheme";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IAppWindow> = L"Microsoft.UI.Windowing.IAppWindow";
@@ -195,10 +230,14 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IAppWindowChangedEventArgs> = L"Microsoft.UI.Windowing.IAppWindowChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IAppWindowChangedEventArgs2> = L"Microsoft.UI.Windowing.IAppWindowChangedEventArgs2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IAppWindowClosingEventArgs> = L"Microsoft.UI.Windowing.IAppWindowClosingEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IAppWindowExperimental> = L"Microsoft.UI.Windowing.IAppWindowExperimental";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails> = L"Microsoft.UI.Windowing.IAppWindowPlacementDetails";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetailsStatics> = L"Microsoft.UI.Windowing.IAppWindowPlacementDetailsStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IAppWindowPresenter> = L"Microsoft.UI.Windowing.IAppWindowPresenter";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IAppWindowPresenterFactory> = L"Microsoft.UI.Windowing.IAppWindowPresenterFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IAppWindowStatics> = L"Microsoft.UI.Windowing.IAppWindowStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IAppWindowStatics2> = L"Microsoft.UI.Windowing.IAppWindowStatics2";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IAppWindowStatics3> = L"Microsoft.UI.Windowing.IAppWindowStatics3";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IAppWindowTitleBar> = L"Microsoft.UI.Windowing.IAppWindowTitleBar";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IAppWindowTitleBar2> = L"Microsoft.UI.Windowing.IAppWindowTitleBar2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IAppWindowTitleBar3> = L"Microsoft.UI.Windowing.IAppWindowTitleBar3";
@@ -208,6 +247,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IDisplayArea> = L"Microsoft.UI.Windowing.IDisplayArea";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IDisplayAreaStatics> = L"Microsoft.UI.Windowing.IDisplayAreaStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IDisplayAreaStatics2> = L"Microsoft.UI.Windowing.IDisplayAreaStatics2";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IDisplayAreaStatics3> = L"Microsoft.UI.Windowing.IDisplayAreaStatics3";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IDisplayAreaWatcher> = L"Microsoft.UI.Windowing.IDisplayAreaWatcher";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IFullScreenPresenter> = L"Microsoft.UI.Windowing.IFullScreenPresenter";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IFullScreenPresenterStatics> = L"Microsoft.UI.Windowing.IFullScreenPresenterStatics";
@@ -223,10 +263,14 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IAppWindowChangedEventArgs>{ 0x2182BC5D,0xFDAC,0x5C3E,{ 0xBF,0x37,0x7D,0x8D,0x68,0x4E,0x9D,0x1D } }; // 2182BC5D-FDAC-5C3E-BF37-7D8D684E9D1D
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IAppWindowChangedEventArgs2>{ 0xA773AB4C,0xA5EC,0x50E8,{ 0x98,0xAC,0x24,0x7F,0xE6,0xCD,0x42,0x27 } }; // A773AB4C-A5EC-50E8-98AC-247FE6CD4227
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IAppWindowClosingEventArgs>{ 0x0E09D90B,0x2261,0x590B,{ 0x9A,0xD1,0x85,0x04,0x99,0x1D,0x87,0x54 } }; // 0E09D90B-2261-590B-9AD1-8504991D8754
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IAppWindowExperimental>{ 0x04DB96C7,0xDEB6,0x5BE4,{ 0xBF,0xDC,0x1B,0xC0,0x36,0x1C,0x8A,0x12 } }; // 04DB96C7-DEB6-5BE4-BFDC-1BC0361C8A12
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails>{ 0x639EC5B2,0xAC0C,0x5BBF,{ 0x84,0x22,0x98,0xDC,0xA5,0x40,0xD2,0x19 } }; // 639EC5B2-AC0C-5BBF-8422-98DCA540D219
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetailsStatics>{ 0xF19F1745,0x52AD,0x5CF7,{ 0x97,0xEA,0x76,0xC5,0xFD,0x6F,0xF3,0xC1 } }; // F19F1745-52AD-5CF7-97EA-76C5FD6FF3C1
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IAppWindowPresenter>{ 0xBC3042C2,0xC6C6,0x5632,{ 0x89,0x89,0xFF,0x0E,0xC6,0xD3,0xB4,0x0D } }; // BC3042C2-C6C6-5632-8989-FF0EC6D3B40D
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IAppWindowPresenterFactory>{ 0x62082E3C,0x1368,0x5238,{ 0x90,0xD1,0xE9,0x32,0xDC,0x71,0x8A,0x82 } }; // 62082E3C-1368-5238-90D1-E932DC718A82
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IAppWindowStatics>{ 0x3C315C24,0xD540,0x5D72,{ 0xB5,0x18,0xB2,0x26,0xB8,0x36,0x27,0xCB } }; // 3C315C24-D540-5D72-B518-B226B83627CB
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IAppWindowStatics2>{ 0xCABC23DB,0x4606,0x5D6E,{ 0x89,0xA5,0x06,0xDE,0x1D,0x8B,0xD3,0xE2 } }; // CABC23DB-4606-5D6E-89A5-06DE1D8BD3E2
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IAppWindowStatics3>{ 0x0BCC835A,0x1286,0x5113,{ 0x9F,0x59,0xF1,0x09,0x3D,0x2E,0x08,0x7A } }; // 0BCC835A-1286-5113-9F59-F1093D2E087A
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IAppWindowTitleBar>{ 0x5574EFA2,0xC91C,0x5700,{ 0xA3,0x63,0x53,0x9C,0x71,0xA7,0xAA,0xF4 } }; // 5574EFA2-C91C-5700-A363-539C71A7AAF4
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IAppWindowTitleBar2>{ 0x86FAED38,0x748A,0x5B4B,{ 0x9C,0xCF,0x3B,0xA0,0x49,0x6C,0x90,0x41 } }; // 86FAED38-748A-5B4B-9CCF-3BA0496C9041
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IAppWindowTitleBar3>{ 0x07146E74,0x0410,0x5597,{ 0xAB,0xA7,0x1A,0xF2,0x76,0xD2,0xAE,0x07 } }; // 07146E74-0410-5597-ABA7-1AF276D2AE07
@@ -236,6 +280,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IDisplayArea>{ 0x5C7E0537,0xB621,0x5579,{ 0xBC,0xAE,0xA8,0x4A,0xA8,0x74,0x61,0x67 } }; // 5C7E0537-B621-5579-BCAE-A84AA8746167
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IDisplayAreaStatics>{ 0x02AB4926,0x211E,0x5D49,{ 0x8E,0x4B,0x2A,0xF1,0x93,0xDA,0xED,0x09 } }; // 02AB4926-211E-5D49-8E4B-2AF193DAED09
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IDisplayAreaStatics2>{ 0x7207AD4B,0x890D,0x5DD7,{ 0xBC,0x18,0x78,0xFF,0xD9,0x54,0x4D,0x8F } }; // 7207AD4B-890D-5DD7-BC18-78FFD9544D8F
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IDisplayAreaStatics3>{ 0x745D3602,0x268B,0x5060,{ 0x84,0x37,0xFC,0xC0,0x25,0xE2,0x55,0xD6 } }; // 745D3602-268B-5060-8437-FCC025E255D6
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IDisplayAreaWatcher>{ 0x83F6562F,0xD3A0,0x548B,{ 0x8E,0x4F,0xA9,0x9B,0xE3,0xD9,0x5C,0x9C } }; // 83F6562F-D3A0-548B-8E4F-A99BE3D95C9C
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IFullScreenPresenter>{ 0xFA9141FD,0xB8DD,0x5DA1,{ 0x8B,0x2B,0x7C,0xDA,0xDB,0x76,0xF5,0x93 } }; // FA9141FD-B8DD-5DA1-8B2B-7CDADB76F593
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IFullScreenPresenterStatics>{ 0x2EC0D2C1,0xE086,0x55BB,{ 0xA3,0xB2,0x44,0x94,0x2E,0x23,0x1C,0x67 } }; // 2EC0D2C1-E086-55BB-A3B2-44942E231C67
@@ -247,6 +292,7 @@ namespace winrt::impl
     template <> struct default_interface<winrt::Microsoft::UI::Windowing::AppWindow>{ using type = winrt::Microsoft::UI::Windowing::IAppWindow; };
     template <> struct default_interface<winrt::Microsoft::UI::Windowing::AppWindowChangedEventArgs>{ using type = winrt::Microsoft::UI::Windowing::IAppWindowChangedEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Windowing::AppWindowClosingEventArgs>{ using type = winrt::Microsoft::UI::Windowing::IAppWindowClosingEventArgs; };
+    template <> struct default_interface<winrt::Microsoft::UI::Windowing::AppWindowPlacementDetails>{ using type = winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails; };
     template <> struct default_interface<winrt::Microsoft::UI::Windowing::AppWindowPresenter>{ using type = winrt::Microsoft::UI::Windowing::IAppWindowPresenter; };
     template <> struct default_interface<winrt::Microsoft::UI::Windowing::AppWindowTitleBar>{ using type = winrt::Microsoft::UI::Windowing::IAppWindowTitleBar; };
     template <> struct default_interface<winrt::Microsoft::UI::Windowing::CompactOverlayPresenter>{ using type = winrt::Microsoft::UI::Windowing::ICompactOverlayPresenter; };
@@ -347,6 +393,39 @@ namespace winrt::impl
             virtual int32_t __stdcall put_Cancel(bool) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::UI::Windowing::IAppWindowExperimental>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_PersistedStateId(void**) noexcept = 0;
+            virtual int32_t __stdcall put_PersistedStateId(void*) noexcept = 0;
+            virtual int32_t __stdcall get_PlacementRestorationBehavior(uint32_t*) noexcept = 0;
+            virtual int32_t __stdcall put_PlacementRestorationBehavior(uint32_t) noexcept = 0;
+            virtual int32_t __stdcall GetCurrentPlacement(void**) noexcept = 0;
+            virtual int32_t __stdcall SaveCurrentPlacement() noexcept = 0;
+            virtual int32_t __stdcall SetCurrentPlacement(void*, bool, bool*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_NormalRect(struct struct_Windows_Graphics_RectInt32*) noexcept = 0;
+            virtual int32_t __stdcall get_WorkArea(struct struct_Windows_Graphics_RectInt32*) noexcept = 0;
+            virtual int32_t __stdcall get_Dpi(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall get_ShowCmd(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall get_ArrangeRect(struct struct_Windows_Graphics_RectInt32*) noexcept = 0;
+            virtual int32_t __stdcall get_DeviceName(void**) noexcept = 0;
+            virtual int32_t __stdcall get_Flags(uint32_t*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetailsStatics>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall Create(struct struct_Windows_Graphics_RectInt32, struct struct_Windows_Graphics_RectInt32, int32_t, int32_t, struct struct_Windows_Graphics_RectInt32, uint32_t, void*, void**) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::UI::Windowing::IAppWindowPresenter>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -375,6 +454,13 @@ namespace winrt::impl
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
             virtual int32_t __stdcall CreateWithDispatcherQueue(void*, struct struct_Microsoft_UI_WindowId, void*, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Windowing::IAppWindowStatics3>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall SaveCurrentPlacementForAllPersistedStateIds() noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Windowing::IAppWindowTitleBar>
@@ -481,6 +567,13 @@ namespace winrt::impl
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
             virtual int32_t __stdcall GetFromDisplayId(struct struct_Microsoft_UI_DisplayId, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Windowing::IDisplayAreaStatics3>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall GetMetricsFromWindowId(struct struct_Microsoft_UI_WindowId, struct struct_Microsoft_UI_DisplayId*) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Windowing::IDisplayAreaWatcher>
@@ -691,6 +784,45 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_UI_Windowing_IAppWindowClosingEventArgs<D>;
     };
     template <typename D>
+    struct consume_Microsoft_UI_Windowing_IAppWindowExperimental
+    {
+        [[nodiscard]] auto PersistedStateId() const;
+        auto PersistedStateId(winrt::Windows::Foundation::IReference<winrt::guid> const& value) const;
+        [[nodiscard]] auto PlacementRestorationBehavior() const;
+        auto PlacementRestorationBehavior(winrt::Microsoft::UI::Windowing::PlacementRestorationBehavior const& value) const;
+        auto GetCurrentPlacement() const;
+        auto SaveCurrentPlacement() const;
+        auto SetCurrentPlacement(winrt::Microsoft::UI::Windowing::AppWindowPlacementDetails const& placementDetails, bool isFirstWindow) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Windowing::IAppWindowExperimental>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Windowing_IAppWindowExperimental<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Windowing_IAppWindowPlacementDetails
+    {
+        [[nodiscard]] auto NormalRect() const;
+        [[nodiscard]] auto WorkArea() const;
+        [[nodiscard]] auto Dpi() const;
+        [[nodiscard]] auto ShowCmd() const;
+        [[nodiscard]] auto ArrangeRect() const;
+        [[nodiscard]] auto DeviceName() const;
+        [[nodiscard]] auto Flags() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Windowing_IAppWindowPlacementDetails<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Windowing_IAppWindowPlacementDetailsStatics
+    {
+        auto Create(winrt::Windows::Graphics::RectInt32 const& normalRect, winrt::Windows::Graphics::RectInt32 const& workArea, int32_t dpi, int32_t showCmd, winrt::Windows::Graphics::RectInt32 const& arrangeRect, winrt::Microsoft::UI::Windowing::PlacementInfo const& flags, param::hstring const& deviceName) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetailsStatics>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Windowing_IAppWindowPlacementDetailsStatics<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_UI_Windowing_IAppWindowPresenter
     {
         [[nodiscard]] auto Kind() const;
@@ -727,6 +859,15 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Windowing::IAppWindowStatics2>
     {
         template <typename D> using type = consume_Microsoft_UI_Windowing_IAppWindowStatics2<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Windowing_IAppWindowStatics3
+    {
+        auto SaveCurrentPlacementForAllPersistedStateIds() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Windowing::IAppWindowStatics3>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Windowing_IAppWindowStatics3<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Windowing_IAppWindowTitleBar
@@ -851,6 +992,15 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Windowing::IDisplayAreaStatics2>
     {
         template <typename D> using type = consume_Microsoft_UI_Windowing_IDisplayAreaStatics2<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Windowing_IDisplayAreaStatics3
+    {
+        auto GetMetricsFromWindowId(winrt::Microsoft::UI::WindowId const& windowId) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Windowing::IDisplayAreaStatics3>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Windowing_IDisplayAreaStatics3<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Windowing_IDisplayAreaWatcher

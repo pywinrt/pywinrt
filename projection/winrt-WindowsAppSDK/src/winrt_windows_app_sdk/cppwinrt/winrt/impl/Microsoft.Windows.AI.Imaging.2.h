@@ -56,6 +56,15 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::AI::Imaging
         ImageObjectExtractorHint(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Windows::AI::Imaging::IImageObjectExtractorHint(ptr, take_ownership_from_abi) {}
         ImageObjectExtractorHint(param::vector<winrt::Windows::Graphics::RectInt32> const& includeRects, param::vector<winrt::Windows::Graphics::PointInt32> const& includePoints, param::vector<winrt::Windows::Graphics::PointInt32> const& excludePoints);
     };
+    struct WINRT_IMPL_EMPTY_BASES ImageObjectRemover : winrt::Microsoft::Windows::AI::Imaging::IImageObjectRemover,
+        impl::require<ImageObjectRemover, winrt::Windows::Foundation::IClosable>
+    {
+        ImageObjectRemover(std::nullptr_t) noexcept {}
+        ImageObjectRemover(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Windows::AI::Imaging::IImageObjectRemover(ptr, take_ownership_from_abi) {}
+        static auto GetReadyState();
+        static auto EnsureReadyAsync();
+        static auto CreateAsync();
+    };
     struct WINRT_IMPL_EMPTY_BASES ImageScaler : winrt::Microsoft::Windows::AI::Imaging::IImageScaler,
         impl::require<ImageScaler, winrt::Windows::Foundation::IClosable>
     {

@@ -594,13 +594,6 @@ WINRT_EXPORT namespace winrt::Microsoft::Web::WebView2::Core
         ICoreWebView2Frame6(std::nullptr_t = nullptr) noexcept {}
         ICoreWebView2Frame6(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
-    struct WINRT_IMPL_EMPTY_BASES ICoreWebView2Frame7 :
-        winrt::Windows::Foundation::IInspectable,
-        impl::consume_t<ICoreWebView2Frame7>
-    {
-        ICoreWebView2Frame7(std::nullptr_t = nullptr) noexcept {}
-        ICoreWebView2Frame7(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
-    };
     struct WINRT_IMPL_EMPTY_BASES ICoreWebView2FrameCreatedEventArgs :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ICoreWebView2FrameCreatedEventArgs>

@@ -919,7 +919,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml
         WindowVisibilityChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::IWindowVisibilityChangedEventArgs(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES XamlIsland : winrt::Microsoft::UI::Xaml::IXamlIsland,
-        impl::require<XamlIsland, winrt::Windows::Foundation::IClosable>
+        impl::require<XamlIsland, winrt::Microsoft::UI::Xaml::IXamlIslandFeature_ExperimentalApi, winrt::Windows::Foundation::IClosable>
     {
         XamlIsland(std::nullptr_t) noexcept {}
         XamlIsland(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::IXamlIsland(ptr, take_ownership_from_abi) {}

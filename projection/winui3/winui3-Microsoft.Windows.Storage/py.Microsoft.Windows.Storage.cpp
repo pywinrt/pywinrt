@@ -228,6 +228,49 @@ namespace py::cpp::Microsoft::Windows::Storage
         }
     }
 
+    static PyObject* ApplicationData_GetForUnpackaged(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Storage.ApplicationData", L"GetForUnpackaged", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Windows::Storage::ApplicationData::GetForUnpackaged(param0, param1);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* ApplicationData_GetForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
@@ -808,6 +851,7 @@ namespace py::cpp::Microsoft::Windows::Storage
     static PyMethodDef methods_ApplicationData_Static[] = {
         { "get_default", reinterpret_cast<PyCFunction>(ApplicationData_GetDefault), METH_VARARGS, nullptr },
         { "get_for_package_family", reinterpret_cast<PyCFunction>(ApplicationData_GetForPackageFamily), METH_VARARGS, nullptr },
+        { "get_for_unpackaged", reinterpret_cast<PyCFunction>(ApplicationData_GetForUnpackaged), METH_VARARGS, nullptr },
         { "get_for_user", reinterpret_cast<PyCFunction>(ApplicationData_GetForUser), METH_VARARGS, nullptr },
         { }};
 

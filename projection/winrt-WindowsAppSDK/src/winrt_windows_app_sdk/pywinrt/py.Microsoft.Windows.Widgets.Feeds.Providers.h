@@ -155,6 +155,14 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager3>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.feeds.providers._IFeedManager3";
+        static constexpr const char* module_name = "winui3.microsoft.windows.widgets.feeds.providers";
+        static constexpr const char* type_name = "_IFeedManager3";
+    };
+
+    template<>
     struct py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProvider>
     {
         static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.feeds.providers._IFeedProvider";
@@ -234,6 +242,7 @@ namespace py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers
     using IFeedAnnouncementInvokedTarget = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedAnnouncementInvokedTarget>;
     using IFeedManager = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager>;
     using IFeedManager2 = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager2>;
+    using IFeedManager3 = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager3>;
     using IFeedProvider = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProvider>;
     using IFeedProviderAnalytics = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderAnalytics>;
     using IFeedProviderErrors = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderErrors>;

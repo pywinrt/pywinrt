@@ -11077,6 +11077,111 @@ namespace py::cpp::Microsoft::UI::Composition
         Py_TPFLAGS_DEFAULT,
         _type_slots_CompositionNineGridBrush};
 
+    // ----- CompositionNotificationDeferral class --------------------
+
+    static PyObject* _new_CompositionNotificationDeferral(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::UI::Composition::CompositionNotificationDeferral>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Composition::CompositionNotificationDeferral>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_CompositionNotificationDeferral(py::wrapper::Microsoft::UI::Composition::CompositionNotificationDeferral* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* CompositionNotificationDeferral_Complete(py::wrapper::Microsoft::UI::Composition::CompositionNotificationDeferral* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionNotificationDeferral", L"Complete", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.Complete();
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_CompositionNotificationDeferral(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Composition::CompositionNotificationDeferral>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_CompositionNotificationDeferral(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Composition::CompositionNotificationDeferral>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_CompositionNotificationDeferral[] = {
+        { "complete", reinterpret_cast<PyCFunction>(CompositionNotificationDeferral_Complete), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_CompositionNotificationDeferral, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_CompositionNotificationDeferral), METH_O | METH_STATIC, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_CompositionNotificationDeferral[] = {
+        { }};
+
+    static PyType_Slot _type_slots_CompositionNotificationDeferral[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_CompositionNotificationDeferral) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CompositionNotificationDeferral) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_CompositionNotificationDeferral) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_CompositionNotificationDeferral) },
+        { }};
+
+    static PyType_Spec type_spec_CompositionNotificationDeferral = {
+        "winui3._winui3_microsoft_ui_composition.CompositionNotificationDeferral",
+        sizeof(py::wrapper::Microsoft::UI::Composition::CompositionNotificationDeferral),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_CompositionNotificationDeferral};
+
     // ----- CompositionObject class --------------------
 
     static PyObject* _new_CompositionObject(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -12436,6 +12541,213 @@ namespace py::cpp::Microsoft::UI::Composition
         }
     }
 
+    static PyObject* CompositionProjectedShadow_get_OpacityFalloff(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadow* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadow", L"OpacityFalloff");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OpacityFalloff();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int CompositionProjectedShadow_put_OpacityFalloff(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadow* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadow", L"OpacityFalloff");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<float>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.OpacityFalloff(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* CompositionProjectedShadow_get_MinOpacity(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadow* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadow", L"MinOpacity");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MinOpacity();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int CompositionProjectedShadow_put_MinOpacity(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadow* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadow", L"MinOpacity");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<float>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.MinOpacity(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* CompositionProjectedShadow_get_MaxOpacity(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadow* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadow", L"MaxOpacity");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxOpacity();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int CompositionProjectedShadow_put_MaxOpacity(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadow* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadow", L"MaxOpacity");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<float>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.MaxOpacity(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
     static PyObject* _assign_array_CompositionProjectedShadow(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Composition::CompositionProjectedShadow>>();
@@ -12472,6 +12784,9 @@ namespace py::cpp::Microsoft::UI::Composition
         { "blur_radius_multiplier", reinterpret_cast<getter>(CompositionProjectedShadow_get_BlurRadiusMultiplier), reinterpret_cast<setter>(CompositionProjectedShadow_put_BlurRadiusMultiplier), nullptr, nullptr },
         { "casters", reinterpret_cast<getter>(CompositionProjectedShadow_get_Casters), nullptr, nullptr, nullptr },
         { "receivers", reinterpret_cast<getter>(CompositionProjectedShadow_get_Receivers), nullptr, nullptr, nullptr },
+        { "opacity_falloff", reinterpret_cast<getter>(CompositionProjectedShadow_get_OpacityFalloff), reinterpret_cast<setter>(CompositionProjectedShadow_put_OpacityFalloff), nullptr, nullptr },
+        { "min_opacity", reinterpret_cast<getter>(CompositionProjectedShadow_get_MinOpacity), reinterpret_cast<setter>(CompositionProjectedShadow_put_MinOpacity), nullptr, nullptr },
+        { "max_opacity", reinterpret_cast<getter>(CompositionProjectedShadow_get_MaxOpacity), reinterpret_cast<setter>(CompositionProjectedShadow_put_MaxOpacity), nullptr, nullptr },
         { }};
 
     static PyType_Slot _type_slots_CompositionProjectedShadow[] = {
@@ -12643,6 +12958,144 @@ namespace py::cpp::Microsoft::UI::Composition
         }
     }
 
+    static PyObject* CompositionProjectedShadowCaster_get_Mask(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadowCaster* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowCaster", L"Mask");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Mask();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int CompositionProjectedShadowCaster_put_Mask(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadowCaster* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowCaster", L"Mask");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionBrush>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.Mask(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* CompositionProjectedShadowCaster_get_AncestorClip(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadowCaster* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowCaster", L"AncestorClip");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AncestorClip();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int CompositionProjectedShadowCaster_put_AncestorClip(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadowCaster* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowCaster", L"AncestorClip");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.AncestorClip(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
     static PyObject* _assign_array_CompositionProjectedShadowCaster(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Composition::CompositionProjectedShadowCaster>>();
@@ -12675,6 +13128,8 @@ namespace py::cpp::Microsoft::UI::Composition
     static PyGetSetDef _getset_CompositionProjectedShadowCaster[] = {
         { "casting_visual", reinterpret_cast<getter>(CompositionProjectedShadowCaster_get_CastingVisual), reinterpret_cast<setter>(CompositionProjectedShadowCaster_put_CastingVisual), nullptr, nullptr },
         { "brush", reinterpret_cast<getter>(CompositionProjectedShadowCaster_get_Brush), reinterpret_cast<setter>(CompositionProjectedShadowCaster_put_Brush), nullptr, nullptr },
+        { "mask", reinterpret_cast<getter>(CompositionProjectedShadowCaster_get_Mask), reinterpret_cast<setter>(CompositionProjectedShadowCaster_put_Mask), nullptr, nullptr },
+        { "ancestor_clip", reinterpret_cast<getter>(CompositionProjectedShadowCaster_get_AncestorClip), reinterpret_cast<setter>(CompositionProjectedShadowCaster_put_AncestorClip), nullptr, nullptr },
         { }};
 
     static PyType_Slot _type_slots_CompositionProjectedShadowCaster[] = {
@@ -13246,6 +13701,144 @@ namespace py::cpp::Microsoft::UI::Composition
         }
     }
 
+    static PyObject* CompositionProjectedShadowReceiver_get_Mask(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadowReceiver* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowReceiver", L"Mask");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Mask();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int CompositionProjectedShadowReceiver_put_Mask(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadowReceiver* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowReceiver", L"Mask");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionBrush>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.Mask(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* CompositionProjectedShadowReceiver_get_DrawOrder(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadowReceiver* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowReceiver", L"DrawOrder");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DrawOrder();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int CompositionProjectedShadowReceiver_put_DrawOrder(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadowReceiver* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowReceiver", L"DrawOrder");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionProjectedShadowDrawOrder>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.DrawOrder(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
     static PyObject* _assign_array_CompositionProjectedShadowReceiver(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Composition::CompositionProjectedShadowReceiver>>();
@@ -13277,6 +13870,8 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyGetSetDef _getset_CompositionProjectedShadowReceiver[] = {
         { "receiving_visual", reinterpret_cast<getter>(CompositionProjectedShadowReceiver_get_ReceivingVisual), reinterpret_cast<setter>(CompositionProjectedShadowReceiver_put_ReceivingVisual), nullptr, nullptr },
+        { "mask", reinterpret_cast<getter>(CompositionProjectedShadowReceiver_get_Mask), reinterpret_cast<setter>(CompositionProjectedShadowReceiver_put_Mask), nullptr, nullptr },
+        { "draw_order", reinterpret_cast<getter>(CompositionProjectedShadowReceiver_get_DrawOrder), reinterpret_cast<setter>(CompositionProjectedShadowReceiver_put_DrawOrder), nullptr, nullptr },
         { }};
 
     static PyType_Slot _type_slots_CompositionProjectedShadowReceiver[] = {
@@ -38572,6 +39167,12 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_ui_composition(void) noexcept
 
     py::pytype_handle CompositionNineGridBrush_type{py::register_python_type(module.get(), &type_spec_CompositionNineGridBrush, CompositionNineGridBrush_bases.get(), inspectable_meta_type)};
     if (!CompositionNineGridBrush_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionNotificationDeferral_type{py::register_python_type(module.get(), &type_spec_CompositionNotificationDeferral, object_bases.get(), inspectable_meta_type)};
+    if (!CompositionNotificationDeferral_type)
     {
         return nullptr;
     }

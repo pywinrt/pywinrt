@@ -39,7 +39,7 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::Widgets::Feeds::Providers
         FeedErrorInfoReportedArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedErrorInfoReportedArgs(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES FeedManager : winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager,
-        impl::require<FeedManager, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager2>
+        impl::require<FeedManager, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager2, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager3>
     {
         FeedManager(std::nullptr_t) noexcept {}
         FeedManager(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager(ptr, take_ownership_from_abi) {}

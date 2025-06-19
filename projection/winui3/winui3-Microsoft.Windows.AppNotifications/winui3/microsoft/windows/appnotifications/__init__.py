@@ -6,6 +6,7 @@ import winrt.system
 from winui3._winui3_microsoft_windows_appnotifications import (
     AppNotification,
     AppNotificationActivatedEventArgs,
+    AppNotificationConferencingConfig,
     AppNotificationManager,
     AppNotificationProgressData,
 )
@@ -16,6 +17,7 @@ __all__ = [
     "AppNotificationSetting",
     "AppNotification",
     "AppNotificationActivatedEventArgs",
+    "AppNotificationConferencingConfig",
     "AppNotificationManager",
     "AppNotificationProgressData",
 ]

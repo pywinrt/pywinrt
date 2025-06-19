@@ -1035,6 +1035,368 @@ namespace py::cpp::Microsoft::Windows::AI::Imaging
         Py_TPFLAGS_DEFAULT,
         _type_slots_ImageObjectExtractorHint};
 
+    // ----- ImageObjectRemover class --------------------
+
+    static PyObject* _new_ImageObjectRemover(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::Windows::AI::Imaging::ImageObjectRemover>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::AI::Imaging::ImageObjectRemover>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_ImageObjectRemover(py::wrapper::Microsoft::Windows::AI::Imaging::ImageObjectRemover* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* ImageObjectRemover_Close(py::wrapper::Microsoft::Windows::AI::Imaging::ImageObjectRemover* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AI.Imaging.ImageObjectRemover", L"Close", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ImageObjectRemover_CreateAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AI.Imaging.ImageObjectRemover", L"CreateAsync", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Windows::AI::Imaging::ImageObjectRemover::CreateAsync();
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ImageObjectRemover_EnsureReadyAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AI.Imaging.ImageObjectRemover", L"EnsureReadyAsync", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Windows::AI::Imaging::ImageObjectRemover::EnsureReadyAsync();
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ImageObjectRemover_GetReadyState(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AI.Imaging.ImageObjectRemover", L"GetReadyState", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Windows::AI::Imaging::ImageObjectRemover::GetReadyState();
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ImageObjectRemover_RemoveFromImageBuffer(py::wrapper::Microsoft::Windows::AI::Imaging::ImageObjectRemover* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AI.Imaging.ImageObjectRemover", L"RemoveFromImageBuffer", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::Graphics::Imaging::ImageBuffer>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::Graphics::Imaging::ImageBuffer>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveFromImageBuffer(param0, param1);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ImageObjectRemover_RemoveFromSoftwareBitmap(py::wrapper::Microsoft::Windows::AI::Imaging::ImageObjectRemover* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AI.Imaging.ImageObjectRemover", L"RemoveFromSoftwareBitmap", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemoveFromSoftwareBitmap(param0, param1);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_ImageObjectRemover(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::AI::Imaging::ImageObjectRemover>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_ImageObjectRemover(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::Windows::AI::Imaging::ImageObjectRemover>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _enter_ImageObjectRemover(py::wrapper::Microsoft::Windows::AI::Imaging::ImageObjectRemover* self, PyObject* /*unused*/) noexcept
+    {
+        return Py_NewRef(self);
+    }
+
+    static PyObject* _exit_ImageObjectRemover(py::wrapper::Microsoft::Windows::AI::Imaging::ImageObjectRemover* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
+            Py_RETURN_FALSE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_ImageObjectRemover[] = {
+        { "close", reinterpret_cast<PyCFunction>(ImageObjectRemover_Close), METH_VARARGS, nullptr },
+        { "remove_from_image_buffer", reinterpret_cast<PyCFunction>(ImageObjectRemover_RemoveFromImageBuffer), METH_VARARGS, nullptr },
+        { "remove_from_software_bitmap", reinterpret_cast<PyCFunction>(ImageObjectRemover_RemoveFromSoftwareBitmap), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_ImageObjectRemover, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_ImageObjectRemover), METH_O | METH_STATIC, nullptr },
+        { "__enter__", reinterpret_cast<PyCFunction>(_enter_ImageObjectRemover), METH_NOARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_ImageObjectRemover), METH_VARARGS, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_ImageObjectRemover[] = {
+        { }};
+
+    static PyType_Slot _type_slots_ImageObjectRemover[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_ImageObjectRemover) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ImageObjectRemover) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_ImageObjectRemover) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_ImageObjectRemover) },
+        { }};
+
+    static PyType_Spec type_spec_ImageObjectRemover = {
+        "winui3._winui3_microsoft_windows_ai_imaging.ImageObjectRemover",
+        sizeof(py::wrapper::Microsoft::Windows::AI::Imaging::ImageObjectRemover),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_ImageObjectRemover};
+
+    static PyGetSetDef getset_ImageObjectRemover_Static[] = {
+        { }};
+
+    static PyMethodDef methods_ImageObjectRemover_Static[] = {
+        { "create_async", reinterpret_cast<PyCFunction>(ImageObjectRemover_CreateAsync), METH_VARARGS, nullptr },
+        { "ensure_ready_async", reinterpret_cast<PyCFunction>(ImageObjectRemover_EnsureReadyAsync), METH_VARARGS, nullptr },
+        { "get_ready_state", reinterpret_cast<PyCFunction>(ImageObjectRemover_GetReadyState), METH_VARARGS, nullptr },
+        { }};
+
+    static PyType_Slot type_slots_ImageObjectRemover_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ImageObjectRemover_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImageObjectRemover_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ImageObjectRemover_Static = {
+        "winui3._winui3_microsoft_windows_ai_imaging.ImageObjectRemover_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ImageObjectRemover_Static};
+
     // ----- ImageScaler class --------------------
 
     static PyObject* _new_ImageScaler(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -2711,6 +3073,24 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_windows_ai_imaging(void) noexcept
 
     py::pytype_handle ImageObjectExtractorHint_type{py::register_python_type(module.get(), &type_spec_ImageObjectExtractorHint, object_bases.get(), inspectable_meta_type)};
     if (!ImageObjectExtractorHint_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle ImageObjectRemover_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ImageObjectRemover_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ImageObjectRemover_Static{PyType_FromSpecWithBases(&type_spec_ImageObjectRemover_Static, ImageObjectRemover_Static_bases.get())};
+    if (!type_ImageObjectRemover_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImageObjectRemover_type{py::register_python_type(module.get(), &type_spec_ImageObjectRemover, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ImageObjectRemover_Static.get()))};
+    if (!ImageObjectRemover_type)
     {
         return nullptr;
     }

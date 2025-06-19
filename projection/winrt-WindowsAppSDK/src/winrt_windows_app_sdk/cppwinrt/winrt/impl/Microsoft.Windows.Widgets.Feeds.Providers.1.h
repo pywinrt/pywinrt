@@ -76,6 +76,13 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::Widgets::Feeds::Providers
         IFeedManager2(std::nullptr_t = nullptr) noexcept {}
         IFeedManager2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IFeedManager3 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IFeedManager3>
+    {
+        IFeedManager3(std::nullptr_t = nullptr) noexcept {}
+        IFeedManager3(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IFeedManagerStatics :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IFeedManagerStatics>

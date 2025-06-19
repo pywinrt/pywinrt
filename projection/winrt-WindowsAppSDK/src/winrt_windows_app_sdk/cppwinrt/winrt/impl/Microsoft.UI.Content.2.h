@@ -8,6 +8,7 @@
 #include "winrt/impl/Microsoft.UI.Dispatching.1.h"
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.UI.Composition.1.h"
+#include "winrt/impl/Windows.UI.Core.1.h"
 #include "winrt/impl/Microsoft.UI.Content.1.h"
 WINRT_EXPORT namespace winrt::Microsoft::UI::Content
 {
@@ -18,6 +19,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Content
         ChildSiteLink(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Content::IChildSiteLink(ptr, take_ownership_from_abi) {}
         static auto Create(winrt::Microsoft::UI::Content::ContentIsland const& parent, winrt::Microsoft::UI::Composition::ContainerVisual const& placementVisual);
         static auto CreateForSystemVisual(winrt::Microsoft::UI::Content::ContentIsland const& parent, winrt::Windows::UI::Composition::ContainerVisual const& placementVisual);
+    };
+    struct WINRT_IMPL_EMPTY_BASES ContentAppWindowBridge : winrt::Microsoft::UI::Content::IContentAppWindowBridge,
+        impl::require<ContentAppWindowBridge, winrt::Microsoft::UI::Content::IContentNodeOwner>
+    {
+        ContentAppWindowBridge(std::nullptr_t) noexcept {}
+        ContentAppWindowBridge(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Content::IContentAppWindowBridge(ptr, take_ownership_from_abi) {}
+        static auto GetForWindowId(winrt::Microsoft::UI::WindowId const& childWindowId);
     };
     struct WINRT_IMPL_EMPTY_BASES ContentCoordinateConverter : winrt::Microsoft::UI::Content::IContentCoordinateConverter
     {
@@ -41,8 +49,23 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Content
         ContentEnvironmentStateChangedEventArgs(std::nullptr_t) noexcept {}
         ContentEnvironmentStateChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Content::IContentEnvironmentStateChangedEventArgs(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES ContentExternalBackdropLink : winrt::Microsoft::UI::Content::IContentExternalBackdropLink,
+        impl::require<ContentExternalBackdropLink, winrt::Windows::Foundation::IClosable, winrt::Microsoft::UI::Composition::ICompositionSupportsSystemBackdrop>
+    {
+        ContentExternalBackdropLink(std::nullptr_t) noexcept {}
+        ContentExternalBackdropLink(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Content::IContentExternalBackdropLink(ptr, take_ownership_from_abi) {}
+        static auto Create(winrt::Microsoft::UI::Composition::Compositor const& compositor);
+    };
+    struct WINRT_IMPL_EMPTY_BASES ContentExternalOutputLink : winrt::Microsoft::UI::Content::IContentExternalOutputLink,
+        impl::require<ContentExternalOutputLink, winrt::Windows::Foundation::IClosable>
+    {
+        ContentExternalOutputLink(std::nullptr_t) noexcept {}
+        ContentExternalOutputLink(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Content::IContentExternalOutputLink(ptr, take_ownership_from_abi) {}
+        static auto Create(winrt::Microsoft::UI::Composition::Compositor const& compositor);
+        static auto IsSupported();
+    };
     struct WINRT_IMPL_EMPTY_BASES ContentIsland : winrt::Microsoft::UI::Content::IContentIsland,
-        impl::require<ContentIsland, winrt::Microsoft::UI::Content::IContentIsland2, winrt::Microsoft::UI::Content::IContentIslandAutomation, winrt::Windows::Foundation::IClosable, winrt::Microsoft::UI::IClosableNotifier, winrt::Microsoft::UI::Composition::ICompositionSupportsSystemBackdrop>
+        impl::require<ContentIsland, winrt::Microsoft::UI::Content::IContentIsland2, winrt::Microsoft::UI::Content::IContentIslandAutomation, winrt::Microsoft::UI::Content::IContentIslandExperimental, winrt::Windows::Foundation::IClosable, winrt::Microsoft::UI::IClosableNotifier, winrt::Microsoft::UI::Composition::ICompositionSupportsSystemBackdrop, winrt::Microsoft::UI::Content::IContentIslandEndpointConnectionPrivate>
     {
         ContentIsland(std::nullptr_t) noexcept {}
         ContentIsland(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Content::IContentIsland(ptr, take_ownership_from_abi) {}
@@ -61,7 +84,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Content
         ContentIslandAutomationProviderRequestedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Content::IContentIslandAutomationProviderRequestedEventArgs(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES ContentIslandEnvironment : winrt::Microsoft::UI::Content::IContentIslandEnvironment,
-        impl::require<ContentIslandEnvironment, winrt::Microsoft::UI::Content::IContentIslandEnvironment2>
+        impl::require<ContentIslandEnvironment, winrt::Microsoft::UI::Content::IContentIslandEnvironment2, winrt::Microsoft::UI::Content::IContentIslandEnvironmentExperimental>
     {
         ContentIslandEnvironment(std::nullptr_t) noexcept {}
         ContentIslandEnvironment(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Content::IContentIslandEnvironment(ptr, take_ownership_from_abi) {}
@@ -73,7 +96,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Content
         ContentIslandStateChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Content::IContentIslandStateChangedEventArgs(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES ContentSite : winrt::Microsoft::UI::Content::IContentSite,
-        impl::require<ContentSite, winrt::Microsoft::UI::Content::IContentSite2, winrt::Windows::Foundation::IClosable, winrt::Microsoft::UI::IClosableNotifier>
+        impl::require<ContentSite, winrt::Microsoft::UI::Content::IContentSite2, winrt::Microsoft::UI::Content::IContentSiteExperimental, winrt::Windows::Foundation::IClosable, winrt::Microsoft::UI::IClosableNotifier>
     {
         ContentSite(std::nullptr_t) noexcept {}
         ContentSite(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Content::IContentSite(ptr, take_ownership_from_abi) {}
@@ -84,7 +107,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Content
         ContentSiteAutomationProviderRequestedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Content::IContentSiteAutomationProviderRequestedEventArgs(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES ContentSiteEnvironment : winrt::Microsoft::UI::Content::IContentSiteEnvironment,
-        impl::require<ContentSiteEnvironment, winrt::Microsoft::UI::Content::IContentSiteEnvironment2>
+        impl::require<ContentSiteEnvironment, winrt::Microsoft::UI::Content::IContentSiteEnvironment2, winrt::Microsoft::UI::Content::IContentSiteEnvironmentExperimental>
     {
         ContentSiteEnvironment(std::nullptr_t) noexcept {}
         ContentSiteEnvironment(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Content::IContentSiteEnvironment(ptr, take_ownership_from_abi) {}
@@ -106,6 +129,19 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Content
         ContentSiteView(std::nullptr_t) noexcept {}
         ContentSiteView(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Content::IContentSiteView(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES CoreWindowSiteBridge : winrt::Microsoft::UI::Content::ICoreWindowSiteBridge,
+        impl::require<CoreWindowSiteBridge, winrt::Windows::Foundation::IClosable, winrt::Microsoft::UI::Content::IContentSiteBridge>
+    {
+        CoreWindowSiteBridge(std::nullptr_t) noexcept {}
+        CoreWindowSiteBridge(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Content::ICoreWindowSiteBridge(ptr, take_ownership_from_abi) {}
+        static auto Create(winrt::Microsoft::UI::Composition::Compositor const& compositor, winrt::Windows::UI::Core::CoreWindow const& coreWindow);
+        static auto IsSupported();
+    };
+    struct WINRT_IMPL_EMPTY_BASES CoreWindowTopLevelWindowBridge : winrt::Microsoft::UI::Content::IContentNodeOwner
+    {
+        CoreWindowTopLevelWindowBridge(std::nullptr_t) noexcept {}
+        CoreWindowTopLevelWindowBridge(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Content::IContentNodeOwner(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES DesktopAttachedSiteBridge : winrt::Microsoft::UI::Content::IDesktopAttachedSiteBridge,
         impl::require<DesktopAttachedSiteBridge, winrt::Windows::Foundation::IClosable, winrt::Microsoft::UI::IClosableNotifier, winrt::Microsoft::UI::Content::IContentSiteBridge, winrt::Microsoft::UI::Content::IContentSiteInput>
     {
@@ -115,7 +151,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Content
     };
     struct WINRT_IMPL_EMPTY_BASES DesktopChildSiteBridge : winrt::Microsoft::UI::Content::IDesktopChildSiteBridge,
         impl::base<DesktopChildSiteBridge, winrt::Microsoft::UI::Content::DesktopSiteBridge>,
-        impl::require<DesktopChildSiteBridge, winrt::Microsoft::UI::Content::IDesktopSiteBridge, winrt::Microsoft::UI::IClosableNotifier, winrt::Windows::Foundation::IClosable, winrt::Microsoft::UI::Content::IContentSiteBridge>
+        impl::require<DesktopChildSiteBridge, winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, winrt::Microsoft::UI::Content::IDesktopSiteBridge, winrt::Microsoft::UI::Content::IDesktopSiteBridge2, winrt::Microsoft::UI::IClosableNotifier, winrt::Windows::Foundation::IClosable, winrt::Microsoft::UI::Content::IContentSiteBridge>
     {
         DesktopChildSiteBridge(std::nullptr_t) noexcept {}
         DesktopChildSiteBridge(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Content::IDesktopChildSiteBridge(ptr, take_ownership_from_abi) {}
@@ -130,11 +166,41 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Content
         static auto Create(winrt::Microsoft::UI::Content::ContentIsland const& parent);
     };
     struct WINRT_IMPL_EMPTY_BASES DesktopSiteBridge : winrt::Microsoft::UI::Content::IDesktopSiteBridge,
-        impl::require<DesktopSiteBridge, winrt::Microsoft::UI::IClosableNotifier, winrt::Windows::Foundation::IClosable, winrt::Microsoft::UI::Content::IContentSiteBridge>
+        impl::require<DesktopSiteBridge, winrt::Microsoft::UI::Content::IDesktopSiteBridge2, winrt::Microsoft::UI::IClosableNotifier, winrt::Windows::Foundation::IClosable, winrt::Microsoft::UI::Content::IContentSiteBridge>
     {
         DesktopSiteBridge(std::nullptr_t) noexcept {}
         DesktopSiteBridge(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Content::IDesktopSiteBridge(ptr, take_ownership_from_abi) {}
         static auto IsSupported();
+    };
+    struct WINRT_IMPL_EMPTY_BASES EndpointConnectionEventArgs : winrt::Microsoft::UI::Content::IEndpointConnectionEventArgs
+    {
+        EndpointConnectionEventArgs(std::nullptr_t) noexcept {}
+        EndpointConnectionEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Content::IEndpointConnectionEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES EndpointRequestedStateChangedEventArgs : winrt::Microsoft::UI::Content::IEndpointRequestedStateChangedEventArgs
+    {
+        EndpointRequestedStateChangedEventArgs(std::nullptr_t) noexcept {}
+        EndpointRequestedStateChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Content::IEndpointRequestedStateChangedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES PopupWindowSiteBridge : winrt::Microsoft::UI::Content::IPopupWindowSiteBridge,
+        impl::base<PopupWindowSiteBridge, winrt::Microsoft::UI::Content::DesktopSiteBridge>,
+        impl::require<PopupWindowSiteBridge, winrt::Microsoft::UI::Content::IDesktopSiteBridge, winrt::Microsoft::UI::Content::IDesktopSiteBridge2, winrt::Microsoft::UI::IClosableNotifier, winrt::Windows::Foundation::IClosable, winrt::Microsoft::UI::Content::IContentSiteBridge>
+    {
+        PopupWindowSiteBridge(std::nullptr_t) noexcept {}
+        PopupWindowSiteBridge(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Content::IPopupWindowSiteBridge(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ProcessStarter : winrt::Microsoft::UI::Content::IProcessStarter
+    {
+        ProcessStarter(std::nullptr_t) noexcept {}
+        ProcessStarter(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Content::IProcessStarter(ptr, take_ownership_from_abi) {}
+        static auto StartProcess(param::hstring const& executablePath, param::hstring const& connectionInfo, uint32_t& processId);
+    };
+    struct WINRT_IMPL_EMPTY_BASES SystemVisualSiteBridge : winrt::Microsoft::UI::Content::ISystemVisualSiteBridge,
+        impl::require<SystemVisualSiteBridge, winrt::Microsoft::UI::IClosableNotifier, winrt::Windows::Foundation::IClosable, winrt::Microsoft::UI::Content::IContentSiteBridge>
+    {
+        SystemVisualSiteBridge(std::nullptr_t) noexcept {}
+        SystemVisualSiteBridge(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Content::ISystemVisualSiteBridge(ptr, take_ownership_from_abi) {}
+        static auto Create(winrt::Microsoft::UI::Dispatching::DispatcherQueue const& queue, winrt::Windows::UI::Composition::ContainerVisual const& hostVisual, winrt::Microsoft::UI::WindowId const& parentForInputWindowId);
     };
 }
 #endif

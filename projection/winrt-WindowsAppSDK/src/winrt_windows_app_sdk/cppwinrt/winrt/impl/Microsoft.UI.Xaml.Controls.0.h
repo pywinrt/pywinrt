@@ -37,6 +37,8 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml
     struct DependencyPropertyChangedEventHandler;
     struct DragEventArgs;
     struct DragEventHandler;
+    struct ElementFactoryGetArgs;
+    struct ElementFactoryRecycleArgs;
     enum class ElementSoundMode : int32_t;
     struct ExceptionRoutedEventHandler;
     struct FrameworkElement;
@@ -192,6 +194,7 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
 WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
     template <typename T> struct WINRT_IMPL_EMPTY_BASES IIterable;
+    template <typename K, typename V> struct WINRT_IMPL_EMPTY_BASES IMap;
     template <typename T> struct WINRT_IMPL_EMPTY_BASES IObservableVector;
     struct IVectorChangedEventArgs;
     template <typename T> struct WINRT_IMPL_EMPTY_BASES IVector;
@@ -219,6 +222,10 @@ WINRT_EXPORT namespace winrt::Windows::Media::Playback
 WINRT_EXPORT namespace winrt::Windows::UI
 {
     struct Color;
+}
+WINRT_EXPORT namespace winrt::Windows::UI::Input::Inking
+{
+    struct InkPresenter;
 }
 WINRT_EXPORT namespace winrt::Windows::UI::Text
 {
@@ -345,6 +352,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     {
         Popup = 0,
         InPlace = 1,
+        UnconstrainedPopup = 2,
     };
     enum class ContentDialogResult : int32_t
     {
@@ -370,6 +378,15 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     {
         Down = 0,
         Up = 1,
+    };
+    enum class FlowLayoutLineAlignment : int32_t
+    {
+        Start = 0,
+        Center = 1,
+        End = 2,
+        SpaceAround = 3,
+        SpaceBetween = 4,
+        SpaceEvenly = 5,
     };
     enum class IncrementalLoadingTrigger : int32_t
     {
@@ -406,6 +423,35 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         CollectionChangeRemove = 0x2,
         CollectionChangeReset = 0x4,
         LayoutTransition = 0x8,
+    };
+    enum class ItemContainerInteractionTrigger : int32_t
+    {
+        PointerPressed = 0,
+        PointerReleased = 1,
+        Tap = 2,
+        DoubleTap = 3,
+        EnterKey = 4,
+        SpaceKey = 5,
+        AutomationInvoke = 6,
+    };
+    enum class ItemContainerMultiSelectMode : uint32_t
+    {
+        Auto = 0x1,
+        Single = 0x2,
+        Extended = 0x4,
+        Multiple = 0x8,
+    };
+    enum class ItemContainerUserInvokeMode : uint32_t
+    {
+        Auto = 0x1,
+        UserCanInvoke = 0x2,
+        UserCannotInvoke = 0x4,
+    };
+    enum class ItemContainerUserSelectMode : uint32_t
+    {
+        Auto = 0x1,
+        UserCanSelect = 0x2,
+        UserCannotSelect = 0x4,
     };
     enum class ItemsUpdatingScrollMode : int32_t
     {
@@ -508,6 +554,19 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     {
         Vertical = 0,
         Horizontal = 1,
+    };
+    enum class PagerControlButtonVisibility : int32_t
+    {
+        Visible = 0,
+        HiddenOnEdge = 1,
+        Hidden = 2,
+    };
+    enum class PagerControlDisplayMode : int32_t
+    {
+        Auto = 0,
+        ComboBox = 1,
+        NumberBox = 2,
+        ButtonPanel = 3,
     };
     enum class PanelScrollingDirection : int32_t
     {
@@ -1052,6 +1111,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct IAppBarToggleButton;
     struct IAppBarToggleButtonFactory;
     struct IAppBarToggleButtonStatics;
+    struct IApplicationViewSpanningRects;
     struct IAutoSuggestBox;
     struct IAutoSuggestBoxQuerySubmittedEventArgs;
     struct IAutoSuggestBoxStatics;
@@ -1167,6 +1227,9 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct IDropDownButtonFactory;
     struct IDynamicAnimatedVisualSource;
     struct IDynamicOverflowItemsChangingEventArgs;
+    struct IElementFactory;
+    struct IElementFactoryFactory;
+    struct IElementFactoryOverrides;
     struct IExpander;
     struct IExpanderCollapsedEventArgs;
     struct IExpanderExpandingEventArgs;
@@ -1178,6 +1241,12 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct IFlipViewItem;
     struct IFlipViewItemFactory;
     struct IFlipViewStatics;
+    struct IFlowLayout;
+    struct IFlowLayoutFactory;
+    struct IFlowLayoutOverrides;
+    struct IFlowLayoutState;
+    struct IFlowLayoutStateFactory;
+    struct IFlowLayoutStatics;
     struct IFlyout;
     struct IFlyoutFactory;
     struct IFlyoutPresenter;
@@ -1240,6 +1309,8 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct IImageIconSourceStatics;
     struct IImageIconStatics;
     struct IImageStatics;
+    struct IIndexPath;
+    struct IIndexPathStatics;
     struct IInfoBadge;
     struct IInfoBadgeFactory;
     struct IInfoBadgeStatics;
@@ -1247,15 +1318,21 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct IInfoBadgeTemplateSettingsFactory;
     struct IInfoBadgeTemplateSettingsStatics;
     struct IInfoBar;
+    struct IInfoBar2;
     struct IInfoBarClosedEventArgs;
     struct IInfoBarClosedEventArgsFactory;
     struct IInfoBarClosingEventArgs;
     struct IInfoBarClosingEventArgsFactory;
     struct IInfoBarFactory;
+    struct IInfoBarOpenedEventArgs;
+    struct IInfoBarOpenedEventArgsFactory;
     struct IInfoBarStatics;
     struct IInfoBarTemplateSettings;
     struct IInfoBarTemplateSettingsFactory;
     struct IInfoBarTemplateSettingsStatics;
+    struct IInkCanvas;
+    struct IInkCanvasFactory;
+    struct IInkCanvasStatics;
     struct IInsertionPanel;
     struct IIsTextTrimmedChangedEventArgs;
     struct IItemClickEventArgs;
@@ -1266,10 +1343,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct IItemCollectionTransitionProviderFactory;
     struct IItemCollectionTransitionProviderOverrides;
     struct IItemContainer;
+    struct IItemContainer2;
     struct IItemContainerFactory;
     struct IItemContainerGenerator;
+    struct IItemContainerInvokedEventArgs;
     struct IItemContainerMapping;
     struct IItemContainerStatics;
+    struct IItemContainerStatics2;
     struct IItemsControl;
     struct IItemsControlFactory;
     struct IItemsControlOverrides;
@@ -1307,6 +1387,9 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct ILayoutContextOverrides;
     struct ILayoutFactory;
     struct ILayoutOverrides;
+    struct ILayoutPanel;
+    struct ILayoutPanelFactory;
+    struct ILayoutPanelStatics;
     struct ILayoutProtected;
     struct ILayoutProtected2;
     struct ILinedFlowLayout;
@@ -1429,13 +1512,21 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct INonVirtualizingLayoutFactory;
     struct INonVirtualizingLayoutOverrides;
     struct INumberBox;
+    struct INumberBox2;
     struct INumberBoxFactory;
     struct INumberBoxStatics;
+    struct INumberBoxStatics2;
     struct INumberBoxValueChangedEventArgs;
     struct IPage;
     struct IPageFactory;
     struct IPageOverrides;
     struct IPageStatics;
+    struct IPagerControl;
+    struct IPagerControlFactory;
+    struct IPagerControlSelectedIndexChangedEventArgs;
+    struct IPagerControlStatics;
+    struct IPagerControlTemplateSettings;
+    struct IPagerControlTemplateSettingsFactory;
     struct IPanel;
     struct IPanelFactory;
     struct IPanelStatics;
@@ -1478,8 +1569,10 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct IProgressBarStatics;
     struct IProgressBarTemplateSettings;
     struct IProgressRing;
+    struct IProgressRing2;
     struct IProgressRingFactory;
     struct IProgressRingStatics;
+    struct IProgressRingStatics2;
     struct IProgressRingTemplateSettings;
     struct IRadioButton;
     struct IRadioButtonFactory;
@@ -1502,6 +1595,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct IRatingItemImageInfoStatics;
     struct IRatingItemInfo;
     struct IRatingItemInfoFactory;
+    struct IRecyclePool;
+    struct IRecyclePoolFactory;
+    struct IRecyclePoolOverrides;
+    struct IRecyclePoolStatics;
+    struct IRecyclingElementFactory;
+    struct IRecyclingElementFactoryFactory;
+    struct IRecyclingElementFactoryOverrides;
     struct IRefreshContainer;
     struct IRefreshContainerFactory;
     struct IRefreshContainerStatics;
@@ -1531,6 +1631,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct IScrollContentPresenter;
     struct IScrollContentPresenterStatics;
     struct IScrollView;
+    struct IScrollView2;
     struct IScrollViewFactory;
     struct IScrollViewStatics;
     struct IScrollViewer;
@@ -1544,14 +1645,22 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct IScrollingScrollCompletedEventArgs;
     struct IScrollingScrollOptions;
     struct IScrollingScrollOptionsFactory;
+    struct IScrollingScrollStartingEventArgs;
     struct IScrollingZoomAnimationStartingEventArgs;
     struct IScrollingZoomCompletedEventArgs;
     struct IScrollingZoomOptions;
     struct IScrollingZoomOptionsFactory;
+    struct IScrollingZoomStartingEventArgs;
     struct ISectionsInViewChangedEventArgs;
     struct ISectionsInViewChangedEventArgsFactory;
+    struct ISelectTemplateEventArgs;
     struct ISelectionChangedEventArgs;
     struct ISelectionChangedEventArgsFactory;
+    struct ISelectionModel;
+    struct ISelectionModelChildrenRequestedEventArgs;
+    struct ISelectionModelFactory;
+    struct ISelectionModelProtected;
+    struct ISelectionModelSelectionChangedEventArgs;
     struct ISelectorBar;
     struct ISelectorBarFactory;
     struct ISelectorBarItem;
@@ -1559,6 +1668,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct ISelectorBarItemStatics;
     struct ISelectorBarSelectionChangedEventArgs;
     struct ISelectorBarStatics;
+    struct ISelfPlayingAnimatedVisual;
     struct ISemanticZoom;
     struct ISemanticZoomInformation;
     struct ISemanticZoomLocation;
@@ -1576,8 +1686,12 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct ISplitViewPaneClosingEventArgs;
     struct ISplitViewStatics;
     struct IStackLayout;
+    struct IStackLayout2;
     struct IStackLayoutFactory;
+    struct IStackLayoutState;
+    struct IStackLayoutStateFactory;
     struct IStackLayoutStatics;
+    struct IStackLayoutStatics2;
     struct IStackPanel;
     struct IStackPanelFactory;
     struct IStackPanelStatics;
@@ -1627,9 +1741,11 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct ITabViewTabTearOutRequestedEventArgs;
     struct ITabViewTabTearOutWindowRequestedEventArgs;
     struct ITeachingTip;
+    struct ITeachingTip2;
     struct ITeachingTipClosedEventArgs;
     struct ITeachingTipClosingEventArgs;
     struct ITeachingTipFactory;
+    struct ITeachingTipOpenedEventArgs;
     struct ITeachingTipStatics;
     struct ITeachingTipTemplateSettings;
     struct ITeachingTipTemplateSettingsFactory;
@@ -1718,6 +1834,8 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct IUIElementCollection;
     struct IUniformGridLayout;
     struct IUniformGridLayoutFactory;
+    struct IUniformGridLayoutState;
+    struct IUniformGridLayoutStateFactory;
     struct IUniformGridLayoutStatics;
     struct IUserControl;
     struct IUserControlFactory;
@@ -1821,12 +1939,15 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct DragItemsStartingEventArgs;
     struct DropDownButton;
     struct DynamicOverflowItemsChangingEventArgs;
+    struct ElementFactory;
     struct Expander;
     struct ExpanderCollapsedEventArgs;
     struct ExpanderExpandingEventArgs;
     struct ExpanderTemplateSettings;
     struct FlipView;
     struct FlipViewItem;
+    struct FlowLayout;
+    struct FlowLayoutState;
     struct Flyout;
     struct FlyoutPresenter;
     struct FocusDisengagedEventArgs;
@@ -1853,12 +1974,15 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct Image;
     struct ImageIcon;
     struct ImageIconSource;
+    struct IndexPath;
     struct InfoBadge;
     struct InfoBadgeTemplateSettings;
     struct InfoBar;
     struct InfoBarClosedEventArgs;
     struct InfoBarClosingEventArgs;
+    struct InfoBarOpenedEventArgs;
     struct InfoBarTemplateSettings;
+    struct InkCanvas;
     struct IsTextTrimmedChangedEventArgs;
     struct ItemClickEventArgs;
     struct ItemCollection;
@@ -1868,6 +1992,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct ItemCollectionTransitionProvider;
     struct ItemContainer;
     struct ItemContainerGenerator;
+    struct ItemContainerInvokedEventArgs;
     struct ItemsControl;
     struct ItemsPanelTemplate;
     struct ItemsPickedEventArgs;
@@ -1885,6 +2010,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct ItemsWrapGrid;
     struct Layout;
     struct LayoutContext;
+    struct LayoutPanel;
     struct LinedFlowLayout;
     struct LinedFlowLayoutItemCollectionTransitionProvider;
     struct LinedFlowLayoutItemsInfoRequestedEventArgs;
@@ -1936,6 +2062,9 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct NumberBox;
     struct NumberBoxValueChangedEventArgs;
     struct Page;
+    struct PagerControl;
+    struct PagerControlSelectedIndexChangedEventArgs;
+    struct PagerControlTemplateSettings;
     struct Panel;
     struct ParallaxView;
     struct PasswordBox;
@@ -1964,6 +2093,8 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct RatingItemFontInfo;
     struct RatingItemImageInfo;
     struct RatingItemInfo;
+    struct RecyclePool;
+    struct RecyclingElementFactory;
     struct RefreshContainer;
     struct RefreshInteractionRatioChangedEventArgs;
     struct RefreshRequestedEventArgs;
@@ -1989,11 +2120,17 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct ScrollingScrollAnimationStartingEventArgs;
     struct ScrollingScrollCompletedEventArgs;
     struct ScrollingScrollOptions;
+    struct ScrollingScrollStartingEventArgs;
     struct ScrollingZoomAnimationStartingEventArgs;
     struct ScrollingZoomCompletedEventArgs;
     struct ScrollingZoomOptions;
+    struct ScrollingZoomStartingEventArgs;
     struct SectionsInViewChangedEventArgs;
+    struct SelectTemplateEventArgs;
     struct SelectionChangedEventArgs;
+    struct SelectionModel;
+    struct SelectionModelChildrenRequestedEventArgs;
+    struct SelectionModelSelectionChangedEventArgs;
     struct SelectorBar;
     struct SelectorBarItem;
     struct SelectorBarSelectionChangedEventArgs;
@@ -2006,6 +2143,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct SplitView;
     struct SplitViewPaneClosingEventArgs;
     struct StackLayout;
+    struct StackLayoutState;
     struct StackPanel;
     struct StyleSelector;
     struct SwapChainBackgroundPanel;
@@ -2030,6 +2168,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct TeachingTip;
     struct TeachingTipClosedEventArgs;
     struct TeachingTipClosingEventArgs;
+    struct TeachingTipOpenedEventArgs;
     struct TeachingTipTemplateSettings;
     struct TextBlock;
     struct TextBox;
@@ -2073,6 +2212,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct TwoPaneView;
     struct UIElementCollection;
     struct UniformGridLayout;
+    struct UniformGridLayoutState;
     struct UserControl;
     struct VariableSizedWrapGrid;
     struct Viewbox;
@@ -2083,9 +2223,11 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct WebView2;
     struct WrapGrid;
     struct XamlControlsResources;
+    struct FlowLayoutAnchorInfo;
     struct CalendarViewDayItemChangingEventHandler;
     struct CleanUpVirtualizedItemEventHandler;
     struct ContextMenuOpeningEventHandler;
+    struct DoInkPresenterWork;
     struct DragItemsStartingEventHandler;
     struct HubSectionHeaderClickEventHandler;
     struct ItemClickEventHandler;
@@ -2139,6 +2281,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IAppBarToggleButton>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IAppBarToggleButtonFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IAppBarToggleButtonStatics>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IApplicationViewSpanningRects>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IAutoSuggestBox>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IAutoSuggestBoxQuerySubmittedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IAutoSuggestBoxStatics>{ using type = interface_category; };
@@ -2254,6 +2397,9 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IDropDownButtonFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IDynamicAnimatedVisualSource>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IDynamicOverflowItemsChangingEventArgs>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IElementFactory>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IElementFactoryFactory>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IElementFactoryOverrides>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IExpander>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IExpanderCollapsedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IExpanderExpandingEventArgs>{ using type = interface_category; };
@@ -2265,6 +2411,12 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IFlipViewItem>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IFlipViewItemFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IFlipViewStatics>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IFlowLayout>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IFlowLayoutFactory>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IFlowLayoutOverrides>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IFlowLayoutState>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IFlowLayoutStateFactory>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IFlowLayoutStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IFlyout>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IFlyoutFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IFlyoutPresenter>{ using type = interface_category; };
@@ -2327,6 +2479,8 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IImageIconSourceStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IImageIconStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IImageStatics>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IIndexPath>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IIndexPathStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IInfoBadge>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IInfoBadgeFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IInfoBadgeStatics>{ using type = interface_category; };
@@ -2334,15 +2488,21 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IInfoBadgeTemplateSettingsFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IInfoBadgeTemplateSettingsStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IInfoBar>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IInfoBar2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IInfoBarClosedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IInfoBarClosedEventArgsFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IInfoBarClosingEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IInfoBarClosingEventArgsFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IInfoBarFactory>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IInfoBarOpenedEventArgs>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IInfoBarOpenedEventArgsFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IInfoBarStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IInfoBarTemplateSettings>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IInfoBarTemplateSettingsFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IInfoBarTemplateSettingsStatics>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IInkCanvas>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IInkCanvasFactory>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IInkCanvasStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IInsertionPanel>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IIsTextTrimmedChangedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IItemClickEventArgs>{ using type = interface_category; };
@@ -2353,10 +2513,13 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IItemCollectionTransitionProviderFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IItemCollectionTransitionProviderOverrides>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IItemContainer>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IItemContainer2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IItemContainerFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IItemContainerGenerator>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IItemContainerInvokedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IItemContainerMapping>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IItemContainerStatics>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IItemContainerStatics2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IItemsControl>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IItemsControlFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IItemsControlOverrides>{ using type = interface_category; };
@@ -2394,6 +2557,9 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ILayoutContextOverrides>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ILayoutFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ILayoutOverrides>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ILayoutPanel>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ILayoutPanelFactory>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ILayoutPanelStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ILayoutProtected>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ILayoutProtected2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ILinedFlowLayout>{ using type = interface_category; };
@@ -2516,13 +2682,21 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::INonVirtualizingLayoutFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::INonVirtualizingLayoutOverrides>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::INumberBox>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::INumberBox2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::INumberBoxFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::INumberBoxStatics>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::INumberBoxStatics2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::INumberBoxValueChangedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IPage>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IPageFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IPageOverrides>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IPageStatics>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IPagerControl>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IPagerControlFactory>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IPagerControlSelectedIndexChangedEventArgs>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IPagerControlStatics>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IPagerControlTemplateSettings>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IPagerControlTemplateSettingsFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IPanel>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IPanelFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IPanelStatics>{ using type = interface_category; };
@@ -2565,8 +2739,10 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IProgressBarStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IProgressBarTemplateSettings>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IProgressRing>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IProgressRing2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IProgressRingFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IProgressRingStatics>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IProgressRingStatics2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IProgressRingTemplateSettings>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IRadioButton>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IRadioButtonFactory>{ using type = interface_category; };
@@ -2589,6 +2765,13 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IRatingItemImageInfoStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IRatingItemInfo>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IRatingItemInfoFactory>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IRecyclePool>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IRecyclePoolFactory>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IRecyclePoolOverrides>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IRecyclePoolStatics>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IRecyclingElementFactory>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IRecyclingElementFactoryFactory>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IRecyclingElementFactoryOverrides>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IRefreshContainer>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IRefreshContainerFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IRefreshContainerStatics>{ using type = interface_category; };
@@ -2618,6 +2801,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IScrollContentPresenter>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IScrollContentPresenterStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IScrollView>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IScrollView2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IScrollViewFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IScrollViewStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IScrollViewer>{ using type = interface_category; };
@@ -2631,14 +2815,22 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IScrollingScrollCompletedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IScrollingScrollOptions>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IScrollingScrollOptionsFactory>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IScrollingScrollStartingEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IScrollingZoomAnimationStartingEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IScrollingZoomCompletedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IScrollingZoomOptions>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IScrollingZoomOptionsFactory>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IScrollingZoomStartingEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ISectionsInViewChangedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ISectionsInViewChangedEventArgsFactory>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ISelectTemplateEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ISelectionChangedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ISelectionChangedEventArgsFactory>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ISelectionModel>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ISelectionModelChildrenRequestedEventArgs>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ISelectionModelFactory>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ISelectionModelProtected>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ISelectionModelSelectionChangedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ISelectorBar>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ISelectorBarFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ISelectorBarItem>{ using type = interface_category; };
@@ -2646,6 +2838,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ISelectorBarItemStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ISelectorBarSelectionChangedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ISelectorBarStatics>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ISelfPlayingAnimatedVisual>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ISemanticZoom>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ISemanticZoomInformation>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ISemanticZoomLocation>{ using type = interface_category; };
@@ -2663,8 +2856,12 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ISplitViewPaneClosingEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ISplitViewStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IStackLayout>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IStackLayout2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IStackLayoutFactory>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IStackLayoutState>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IStackLayoutStateFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IStackLayoutStatics>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IStackLayoutStatics2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IStackPanel>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IStackPanelFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IStackPanelStatics>{ using type = interface_category; };
@@ -2714,9 +2911,11 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITabViewTabTearOutRequestedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITabViewTabTearOutWindowRequestedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITeachingTip>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITeachingTip2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITeachingTipClosedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITeachingTipClosingEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITeachingTipFactory>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITeachingTipOpenedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITeachingTipStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITeachingTipTemplateSettings>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITeachingTipTemplateSettingsFactory>{ using type = interface_category; };
@@ -2805,6 +3004,8 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IUIElementCollection>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IUniformGridLayout>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IUniformGridLayoutFactory>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IUniformGridLayoutState>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IUniformGridLayoutStateFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IUniformGridLayoutStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IUserControl>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IUserControlFactory>{ using type = interface_category; };
@@ -2908,12 +3109,15 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::DragItemsStartingEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::DropDownButton>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::DynamicOverflowItemsChangingEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ElementFactory>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::Expander>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ExpanderCollapsedEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ExpanderExpandingEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ExpanderTemplateSettings>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::FlipView>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::FlipViewItem>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::FlowLayout>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::FlowLayoutState>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::Flyout>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::FlyoutPresenter>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::FocusDisengagedEventArgs>{ using type = class_category; };
@@ -2940,12 +3144,15 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::Image>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ImageIcon>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ImageIconSource>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IndexPath>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::InfoBadge>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::InfoBadgeTemplateSettings>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::InfoBar>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::InfoBarClosedEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::InfoBarClosingEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::InfoBarOpenedEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::InfoBarTemplateSettings>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::InkCanvas>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IsTextTrimmedChangedEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ItemClickEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ItemCollection>{ using type = class_category; };
@@ -2955,6 +3162,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ItemCollectionTransitionProvider>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ItemContainer>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ItemContainerGenerator>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ItemContainerInvokedEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ItemsControl>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ItemsPanelTemplate>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ItemsPickedEventArgs>{ using type = class_category; };
@@ -2972,6 +3180,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ItemsWrapGrid>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::Layout>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::LayoutContext>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::LayoutPanel>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::LinedFlowLayout>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::LinedFlowLayoutItemCollectionTransitionProvider>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::LinedFlowLayoutItemsInfoRequestedEventArgs>{ using type = class_category; };
@@ -3023,6 +3232,9 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::NumberBox>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::NumberBoxValueChangedEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::Page>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::PagerControl>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::PagerControlSelectedIndexChangedEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::PagerControlTemplateSettings>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::Panel>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ParallaxView>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::PasswordBox>{ using type = class_category; };
@@ -3051,6 +3263,8 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::RatingItemFontInfo>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::RatingItemImageInfo>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::RatingItemInfo>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::RecyclePool>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::RecyclingElementFactory>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::RefreshContainer>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::RefreshInteractionRatioChangedEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::RefreshRequestedEventArgs>{ using type = class_category; };
@@ -3076,11 +3290,17 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ScrollingScrollAnimationStartingEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ScrollingScrollCompletedEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ScrollingScrollOptions>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ScrollingScrollStartingEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ScrollingZoomAnimationStartingEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ScrollingZoomCompletedEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ScrollingZoomOptions>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ScrollingZoomStartingEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::SectionsInViewChangedEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::SelectTemplateEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::SelectionChangedEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::SelectionModel>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::SelectionModelChildrenRequestedEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::SelectionModelSelectionChangedEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::SelectorBar>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::SelectorBarItem>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::SelectorBarSelectionChangedEventArgs>{ using type = class_category; };
@@ -3093,6 +3313,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::SplitView>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::SplitViewPaneClosingEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::StackLayout>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::StackLayoutState>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::StackPanel>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::StyleSelector>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::SwapChainBackgroundPanel>{ using type = class_category; };
@@ -3117,6 +3338,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::TeachingTip>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::TeachingTipClosedEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::TeachingTipClosingEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::TeachingTipOpenedEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::TeachingTipTemplateSettings>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::TextBlock>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::TextBox>{ using type = class_category; };
@@ -3160,6 +3382,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::TwoPaneView>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::UIElementCollection>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::UniformGridLayout>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::UniformGridLayoutState>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::UserControl>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::VariableSizedWrapGrid>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::Viewbox>{ using type = class_category; };
@@ -3193,12 +3416,17 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::DisabledFormattingAccelerators>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ElementRealizationOptions>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ExpandDirection>{ using type = enum_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::FlowLayoutLineAlignment>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IncrementalLoadingTrigger>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IndexBasedLayoutOrientation>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::InfoBarCloseReason>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::InfoBarSeverity>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ItemCollectionTransitionOperation>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ItemCollectionTransitionTriggers>{ using type = enum_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ItemContainerInteractionTrigger>{ using type = enum_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ItemContainerMultiSelectMode>{ using type = enum_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ItemContainerUserInvokeMode>{ using type = enum_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ItemContainerUserSelectMode>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ItemsUpdatingScrollMode>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ItemsViewSelectionMode>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::LightDismissOverlayMode>{ using type = enum_category; };
@@ -3216,6 +3444,8 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::NumberBoxSpinButtonPlacementMode>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::NumberBoxValidationMode>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::Orientation>{ using type = enum_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::PagerControlButtonVisibility>{ using type = enum_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::PagerControlDisplayMode>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::PanelScrollingDirection>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ParallaxSourceOffsetKind>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::PasswordRevealMode>{ using type = enum_category; };
@@ -3265,9 +3495,11 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::UniformGridLayoutItemsStretch>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::VirtualizationMode>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ZoomMode>{ using type = enum_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::FlowLayoutAnchorInfo>{ using type = struct_category<int32_t, double>; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::CalendarViewDayItemChangingEventHandler>{ using type = delegate_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::CleanUpVirtualizedItemEventHandler>{ using type = delegate_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ContextMenuOpeningEventHandler>{ using type = delegate_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::DoInkPresenterWork>{ using type = delegate_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::DragItemsStartingEventHandler>{ using type = delegate_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::HubSectionHeaderClickEventHandler>{ using type = delegate_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ItemClickEventHandler>{ using type = delegate_category; };
@@ -3350,12 +3582,15 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::DragItemsStartingEventArgs> = L"Microsoft.UI.Xaml.Controls.DragItemsStartingEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::DropDownButton> = L"Microsoft.UI.Xaml.Controls.DropDownButton";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::DynamicOverflowItemsChangingEventArgs> = L"Microsoft.UI.Xaml.Controls.DynamicOverflowItemsChangingEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ElementFactory> = L"Microsoft.UI.Xaml.Controls.ElementFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::Expander> = L"Microsoft.UI.Xaml.Controls.Expander";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ExpanderCollapsedEventArgs> = L"Microsoft.UI.Xaml.Controls.ExpanderCollapsedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ExpanderExpandingEventArgs> = L"Microsoft.UI.Xaml.Controls.ExpanderExpandingEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ExpanderTemplateSettings> = L"Microsoft.UI.Xaml.Controls.ExpanderTemplateSettings";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::FlipView> = L"Microsoft.UI.Xaml.Controls.FlipView";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::FlipViewItem> = L"Microsoft.UI.Xaml.Controls.FlipViewItem";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::FlowLayout> = L"Microsoft.UI.Xaml.Controls.FlowLayout";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::FlowLayoutState> = L"Microsoft.UI.Xaml.Controls.FlowLayoutState";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::Flyout> = L"Microsoft.UI.Xaml.Controls.Flyout";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::FlyoutPresenter> = L"Microsoft.UI.Xaml.Controls.FlyoutPresenter";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::FocusDisengagedEventArgs> = L"Microsoft.UI.Xaml.Controls.FocusDisengagedEventArgs";
@@ -3382,12 +3617,15 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::Image> = L"Microsoft.UI.Xaml.Controls.Image";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ImageIcon> = L"Microsoft.UI.Xaml.Controls.ImageIcon";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ImageIconSource> = L"Microsoft.UI.Xaml.Controls.ImageIconSource";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IndexPath> = L"Microsoft.UI.Xaml.Controls.IndexPath";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::InfoBadge> = L"Microsoft.UI.Xaml.Controls.InfoBadge";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::InfoBadgeTemplateSettings> = L"Microsoft.UI.Xaml.Controls.InfoBadgeTemplateSettings";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::InfoBar> = L"Microsoft.UI.Xaml.Controls.InfoBar";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::InfoBarClosedEventArgs> = L"Microsoft.UI.Xaml.Controls.InfoBarClosedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::InfoBarClosingEventArgs> = L"Microsoft.UI.Xaml.Controls.InfoBarClosingEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::InfoBarOpenedEventArgs> = L"Microsoft.UI.Xaml.Controls.InfoBarOpenedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::InfoBarTemplateSettings> = L"Microsoft.UI.Xaml.Controls.InfoBarTemplateSettings";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::InkCanvas> = L"Microsoft.UI.Xaml.Controls.InkCanvas";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IsTextTrimmedChangedEventArgs> = L"Microsoft.UI.Xaml.Controls.IsTextTrimmedChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ItemClickEventArgs> = L"Microsoft.UI.Xaml.Controls.ItemClickEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ItemCollection> = L"Microsoft.UI.Xaml.Controls.ItemCollection";
@@ -3397,6 +3635,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ItemCollectionTransitionProvider> = L"Microsoft.UI.Xaml.Controls.ItemCollectionTransitionProvider";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ItemContainer> = L"Microsoft.UI.Xaml.Controls.ItemContainer";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ItemContainerGenerator> = L"Microsoft.UI.Xaml.Controls.ItemContainerGenerator";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ItemContainerInvokedEventArgs> = L"Microsoft.UI.Xaml.Controls.ItemContainerInvokedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ItemsControl> = L"Microsoft.UI.Xaml.Controls.ItemsControl";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ItemsPanelTemplate> = L"Microsoft.UI.Xaml.Controls.ItemsPanelTemplate";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ItemsPickedEventArgs> = L"Microsoft.UI.Xaml.Controls.ItemsPickedEventArgs";
@@ -3414,6 +3653,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ItemsWrapGrid> = L"Microsoft.UI.Xaml.Controls.ItemsWrapGrid";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::Layout> = L"Microsoft.UI.Xaml.Controls.Layout";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::LayoutContext> = L"Microsoft.UI.Xaml.Controls.LayoutContext";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::LayoutPanel> = L"Microsoft.UI.Xaml.Controls.LayoutPanel";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::LinedFlowLayout> = L"Microsoft.UI.Xaml.Controls.LinedFlowLayout";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::LinedFlowLayoutItemCollectionTransitionProvider> = L"Microsoft.UI.Xaml.Controls.LinedFlowLayoutItemCollectionTransitionProvider";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::LinedFlowLayoutItemsInfoRequestedEventArgs> = L"Microsoft.UI.Xaml.Controls.LinedFlowLayoutItemsInfoRequestedEventArgs";
@@ -3465,6 +3705,9 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::NumberBox> = L"Microsoft.UI.Xaml.Controls.NumberBox";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::NumberBoxValueChangedEventArgs> = L"Microsoft.UI.Xaml.Controls.NumberBoxValueChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::Page> = L"Microsoft.UI.Xaml.Controls.Page";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::PagerControl> = L"Microsoft.UI.Xaml.Controls.PagerControl";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::PagerControlSelectedIndexChangedEventArgs> = L"Microsoft.UI.Xaml.Controls.PagerControlSelectedIndexChangedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::PagerControlTemplateSettings> = L"Microsoft.UI.Xaml.Controls.PagerControlTemplateSettings";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::Panel> = L"Microsoft.UI.Xaml.Controls.Panel";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ParallaxView> = L"Microsoft.UI.Xaml.Controls.ParallaxView";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::PasswordBox> = L"Microsoft.UI.Xaml.Controls.PasswordBox";
@@ -3493,6 +3736,8 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::RatingItemFontInfo> = L"Microsoft.UI.Xaml.Controls.RatingItemFontInfo";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::RatingItemImageInfo> = L"Microsoft.UI.Xaml.Controls.RatingItemImageInfo";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::RatingItemInfo> = L"Microsoft.UI.Xaml.Controls.RatingItemInfo";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::RecyclePool> = L"Microsoft.UI.Xaml.Controls.RecyclePool";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::RecyclingElementFactory> = L"Microsoft.UI.Xaml.Controls.RecyclingElementFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::RefreshContainer> = L"Microsoft.UI.Xaml.Controls.RefreshContainer";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::RefreshInteractionRatioChangedEventArgs> = L"Microsoft.UI.Xaml.Controls.RefreshInteractionRatioChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::RefreshRequestedEventArgs> = L"Microsoft.UI.Xaml.Controls.RefreshRequestedEventArgs";
@@ -3518,11 +3763,17 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ScrollingScrollAnimationStartingEventArgs> = L"Microsoft.UI.Xaml.Controls.ScrollingScrollAnimationStartingEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ScrollingScrollCompletedEventArgs> = L"Microsoft.UI.Xaml.Controls.ScrollingScrollCompletedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ScrollingScrollOptions> = L"Microsoft.UI.Xaml.Controls.ScrollingScrollOptions";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ScrollingScrollStartingEventArgs> = L"Microsoft.UI.Xaml.Controls.ScrollingScrollStartingEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ScrollingZoomAnimationStartingEventArgs> = L"Microsoft.UI.Xaml.Controls.ScrollingZoomAnimationStartingEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ScrollingZoomCompletedEventArgs> = L"Microsoft.UI.Xaml.Controls.ScrollingZoomCompletedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ScrollingZoomOptions> = L"Microsoft.UI.Xaml.Controls.ScrollingZoomOptions";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ScrollingZoomStartingEventArgs> = L"Microsoft.UI.Xaml.Controls.ScrollingZoomStartingEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::SectionsInViewChangedEventArgs> = L"Microsoft.UI.Xaml.Controls.SectionsInViewChangedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::SelectTemplateEventArgs> = L"Microsoft.UI.Xaml.Controls.SelectTemplateEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::SelectionChangedEventArgs> = L"Microsoft.UI.Xaml.Controls.SelectionChangedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::SelectionModel> = L"Microsoft.UI.Xaml.Controls.SelectionModel";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::SelectionModelChildrenRequestedEventArgs> = L"Microsoft.UI.Xaml.Controls.SelectionModelChildrenRequestedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::SelectionModelSelectionChangedEventArgs> = L"Microsoft.UI.Xaml.Controls.SelectionModelSelectionChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::SelectorBar> = L"Microsoft.UI.Xaml.Controls.SelectorBar";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::SelectorBarItem> = L"Microsoft.UI.Xaml.Controls.SelectorBarItem";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::SelectorBarSelectionChangedEventArgs> = L"Microsoft.UI.Xaml.Controls.SelectorBarSelectionChangedEventArgs";
@@ -3535,6 +3786,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::SplitView> = L"Microsoft.UI.Xaml.Controls.SplitView";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::SplitViewPaneClosingEventArgs> = L"Microsoft.UI.Xaml.Controls.SplitViewPaneClosingEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::StackLayout> = L"Microsoft.UI.Xaml.Controls.StackLayout";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::StackLayoutState> = L"Microsoft.UI.Xaml.Controls.StackLayoutState";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::StackPanel> = L"Microsoft.UI.Xaml.Controls.StackPanel";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::StyleSelector> = L"Microsoft.UI.Xaml.Controls.StyleSelector";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::SwapChainBackgroundPanel> = L"Microsoft.UI.Xaml.Controls.SwapChainBackgroundPanel";
@@ -3559,6 +3811,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::TeachingTip> = L"Microsoft.UI.Xaml.Controls.TeachingTip";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::TeachingTipClosedEventArgs> = L"Microsoft.UI.Xaml.Controls.TeachingTipClosedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::TeachingTipClosingEventArgs> = L"Microsoft.UI.Xaml.Controls.TeachingTipClosingEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::TeachingTipOpenedEventArgs> = L"Microsoft.UI.Xaml.Controls.TeachingTipOpenedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::TeachingTipTemplateSettings> = L"Microsoft.UI.Xaml.Controls.TeachingTipTemplateSettings";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::TextBlock> = L"Microsoft.UI.Xaml.Controls.TextBlock";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::TextBox> = L"Microsoft.UI.Xaml.Controls.TextBox";
@@ -3602,6 +3855,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::TwoPaneView> = L"Microsoft.UI.Xaml.Controls.TwoPaneView";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::UIElementCollection> = L"Microsoft.UI.Xaml.Controls.UIElementCollection";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::UniformGridLayout> = L"Microsoft.UI.Xaml.Controls.UniformGridLayout";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::UniformGridLayoutState> = L"Microsoft.UI.Xaml.Controls.UniformGridLayoutState";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::UserControl> = L"Microsoft.UI.Xaml.Controls.UserControl";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::VariableSizedWrapGrid> = L"Microsoft.UI.Xaml.Controls.VariableSizedWrapGrid";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::Viewbox> = L"Microsoft.UI.Xaml.Controls.Viewbox";
@@ -3635,12 +3889,17 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::DisabledFormattingAccelerators> = L"Microsoft.UI.Xaml.Controls.DisabledFormattingAccelerators";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ElementRealizationOptions> = L"Microsoft.UI.Xaml.Controls.ElementRealizationOptions";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ExpandDirection> = L"Microsoft.UI.Xaml.Controls.ExpandDirection";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::FlowLayoutLineAlignment> = L"Microsoft.UI.Xaml.Controls.FlowLayoutLineAlignment";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IncrementalLoadingTrigger> = L"Microsoft.UI.Xaml.Controls.IncrementalLoadingTrigger";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IndexBasedLayoutOrientation> = L"Microsoft.UI.Xaml.Controls.IndexBasedLayoutOrientation";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::InfoBarCloseReason> = L"Microsoft.UI.Xaml.Controls.InfoBarCloseReason";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::InfoBarSeverity> = L"Microsoft.UI.Xaml.Controls.InfoBarSeverity";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ItemCollectionTransitionOperation> = L"Microsoft.UI.Xaml.Controls.ItemCollectionTransitionOperation";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ItemCollectionTransitionTriggers> = L"Microsoft.UI.Xaml.Controls.ItemCollectionTransitionTriggers";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ItemContainerInteractionTrigger> = L"Microsoft.UI.Xaml.Controls.ItemContainerInteractionTrigger";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ItemContainerMultiSelectMode> = L"Microsoft.UI.Xaml.Controls.ItemContainerMultiSelectMode";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ItemContainerUserInvokeMode> = L"Microsoft.UI.Xaml.Controls.ItemContainerUserInvokeMode";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ItemContainerUserSelectMode> = L"Microsoft.UI.Xaml.Controls.ItemContainerUserSelectMode";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ItemsUpdatingScrollMode> = L"Microsoft.UI.Xaml.Controls.ItemsUpdatingScrollMode";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ItemsViewSelectionMode> = L"Microsoft.UI.Xaml.Controls.ItemsViewSelectionMode";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::LightDismissOverlayMode> = L"Microsoft.UI.Xaml.Controls.LightDismissOverlayMode";
@@ -3658,6 +3917,8 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::NumberBoxSpinButtonPlacementMode> = L"Microsoft.UI.Xaml.Controls.NumberBoxSpinButtonPlacementMode";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::NumberBoxValidationMode> = L"Microsoft.UI.Xaml.Controls.NumberBoxValidationMode";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::Orientation> = L"Microsoft.UI.Xaml.Controls.Orientation";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::PagerControlButtonVisibility> = L"Microsoft.UI.Xaml.Controls.PagerControlButtonVisibility";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::PagerControlDisplayMode> = L"Microsoft.UI.Xaml.Controls.PagerControlDisplayMode";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::PanelScrollingDirection> = L"Microsoft.UI.Xaml.Controls.PanelScrollingDirection";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ParallaxSourceOffsetKind> = L"Microsoft.UI.Xaml.Controls.ParallaxSourceOffsetKind";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::PasswordRevealMode> = L"Microsoft.UI.Xaml.Controls.PasswordRevealMode";
@@ -3707,6 +3968,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::UniformGridLayoutItemsStretch> = L"Microsoft.UI.Xaml.Controls.UniformGridLayoutItemsStretch";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::VirtualizationMode> = L"Microsoft.UI.Xaml.Controls.VirtualizationMode";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ZoomMode> = L"Microsoft.UI.Xaml.Controls.ZoomMode";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::FlowLayoutAnchorInfo> = L"Microsoft.UI.Xaml.Controls.FlowLayoutAnchorInfo";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IAnchorRequestedEventArgs> = L"Microsoft.UI.Xaml.Controls.IAnchorRequestedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IAnimatedIcon> = L"Microsoft.UI.Xaml.Controls.IAnimatedIcon";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IAnimatedIconFactory> = L"Microsoft.UI.Xaml.Controls.IAnimatedIconFactory";
@@ -3747,6 +4009,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IAppBarToggleButton> = L"Microsoft.UI.Xaml.Controls.IAppBarToggleButton";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IAppBarToggleButtonFactory> = L"Microsoft.UI.Xaml.Controls.IAppBarToggleButtonFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IAppBarToggleButtonStatics> = L"Microsoft.UI.Xaml.Controls.IAppBarToggleButtonStatics";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IApplicationViewSpanningRects> = L"Microsoft.UI.Xaml.Controls.IApplicationViewSpanningRects";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IAutoSuggestBox> = L"Microsoft.UI.Xaml.Controls.IAutoSuggestBox";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IAutoSuggestBoxQuerySubmittedEventArgs> = L"Microsoft.UI.Xaml.Controls.IAutoSuggestBoxQuerySubmittedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IAutoSuggestBoxStatics> = L"Microsoft.UI.Xaml.Controls.IAutoSuggestBoxStatics";
@@ -3862,6 +4125,9 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IDropDownButtonFactory> = L"Microsoft.UI.Xaml.Controls.IDropDownButtonFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IDynamicAnimatedVisualSource> = L"Microsoft.UI.Xaml.Controls.IDynamicAnimatedVisualSource";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IDynamicOverflowItemsChangingEventArgs> = L"Microsoft.UI.Xaml.Controls.IDynamicOverflowItemsChangingEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IElementFactory> = L"Microsoft.UI.Xaml.Controls.IElementFactory";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IElementFactoryFactory> = L"Microsoft.UI.Xaml.Controls.IElementFactoryFactory";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IElementFactoryOverrides> = L"Microsoft.UI.Xaml.Controls.IElementFactoryOverrides";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IExpander> = L"Microsoft.UI.Xaml.Controls.IExpander";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IExpanderCollapsedEventArgs> = L"Microsoft.UI.Xaml.Controls.IExpanderCollapsedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IExpanderExpandingEventArgs> = L"Microsoft.UI.Xaml.Controls.IExpanderExpandingEventArgs";
@@ -3873,6 +4139,12 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IFlipViewItem> = L"Microsoft.UI.Xaml.Controls.IFlipViewItem";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IFlipViewItemFactory> = L"Microsoft.UI.Xaml.Controls.IFlipViewItemFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IFlipViewStatics> = L"Microsoft.UI.Xaml.Controls.IFlipViewStatics";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IFlowLayout> = L"Microsoft.UI.Xaml.Controls.IFlowLayout";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IFlowLayoutFactory> = L"Microsoft.UI.Xaml.Controls.IFlowLayoutFactory";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IFlowLayoutOverrides> = L"Microsoft.UI.Xaml.Controls.IFlowLayoutOverrides";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IFlowLayoutState> = L"Microsoft.UI.Xaml.Controls.IFlowLayoutState";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IFlowLayoutStateFactory> = L"Microsoft.UI.Xaml.Controls.IFlowLayoutStateFactory";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IFlowLayoutStatics> = L"Microsoft.UI.Xaml.Controls.IFlowLayoutStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IFlyout> = L"Microsoft.UI.Xaml.Controls.IFlyout";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IFlyoutFactory> = L"Microsoft.UI.Xaml.Controls.IFlyoutFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IFlyoutPresenter> = L"Microsoft.UI.Xaml.Controls.IFlyoutPresenter";
@@ -3935,6 +4207,8 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IImageIconSourceStatics> = L"Microsoft.UI.Xaml.Controls.IImageIconSourceStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IImageIconStatics> = L"Microsoft.UI.Xaml.Controls.IImageIconStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IImageStatics> = L"Microsoft.UI.Xaml.Controls.IImageStatics";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IIndexPath> = L"Microsoft.UI.Xaml.Controls.IIndexPath";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IIndexPathStatics> = L"Microsoft.UI.Xaml.Controls.IIndexPathStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IInfoBadge> = L"Microsoft.UI.Xaml.Controls.IInfoBadge";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IInfoBadgeFactory> = L"Microsoft.UI.Xaml.Controls.IInfoBadgeFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IInfoBadgeStatics> = L"Microsoft.UI.Xaml.Controls.IInfoBadgeStatics";
@@ -3942,15 +4216,21 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IInfoBadgeTemplateSettingsFactory> = L"Microsoft.UI.Xaml.Controls.IInfoBadgeTemplateSettingsFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IInfoBadgeTemplateSettingsStatics> = L"Microsoft.UI.Xaml.Controls.IInfoBadgeTemplateSettingsStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IInfoBar> = L"Microsoft.UI.Xaml.Controls.IInfoBar";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IInfoBar2> = L"Microsoft.UI.Xaml.Controls.IInfoBar2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IInfoBarClosedEventArgs> = L"Microsoft.UI.Xaml.Controls.IInfoBarClosedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IInfoBarClosedEventArgsFactory> = L"Microsoft.UI.Xaml.Controls.IInfoBarClosedEventArgsFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IInfoBarClosingEventArgs> = L"Microsoft.UI.Xaml.Controls.IInfoBarClosingEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IInfoBarClosingEventArgsFactory> = L"Microsoft.UI.Xaml.Controls.IInfoBarClosingEventArgsFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IInfoBarFactory> = L"Microsoft.UI.Xaml.Controls.IInfoBarFactory";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IInfoBarOpenedEventArgs> = L"Microsoft.UI.Xaml.Controls.IInfoBarOpenedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IInfoBarOpenedEventArgsFactory> = L"Microsoft.UI.Xaml.Controls.IInfoBarOpenedEventArgsFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IInfoBarStatics> = L"Microsoft.UI.Xaml.Controls.IInfoBarStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IInfoBarTemplateSettings> = L"Microsoft.UI.Xaml.Controls.IInfoBarTemplateSettings";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IInfoBarTemplateSettingsFactory> = L"Microsoft.UI.Xaml.Controls.IInfoBarTemplateSettingsFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IInfoBarTemplateSettingsStatics> = L"Microsoft.UI.Xaml.Controls.IInfoBarTemplateSettingsStatics";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IInkCanvas> = L"Microsoft.UI.Xaml.Controls.IInkCanvas";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IInkCanvasFactory> = L"Microsoft.UI.Xaml.Controls.IInkCanvasFactory";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IInkCanvasStatics> = L"Microsoft.UI.Xaml.Controls.IInkCanvasStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IInsertionPanel> = L"Microsoft.UI.Xaml.Controls.IInsertionPanel";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IIsTextTrimmedChangedEventArgs> = L"Microsoft.UI.Xaml.Controls.IIsTextTrimmedChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IItemClickEventArgs> = L"Microsoft.UI.Xaml.Controls.IItemClickEventArgs";
@@ -3961,10 +4241,13 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IItemCollectionTransitionProviderFactory> = L"Microsoft.UI.Xaml.Controls.IItemCollectionTransitionProviderFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IItemCollectionTransitionProviderOverrides> = L"Microsoft.UI.Xaml.Controls.IItemCollectionTransitionProviderOverrides";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IItemContainer> = L"Microsoft.UI.Xaml.Controls.IItemContainer";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IItemContainer2> = L"Microsoft.UI.Xaml.Controls.IItemContainer2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IItemContainerFactory> = L"Microsoft.UI.Xaml.Controls.IItemContainerFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IItemContainerGenerator> = L"Microsoft.UI.Xaml.Controls.IItemContainerGenerator";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IItemContainerInvokedEventArgs> = L"Microsoft.UI.Xaml.Controls.IItemContainerInvokedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IItemContainerMapping> = L"Microsoft.UI.Xaml.Controls.IItemContainerMapping";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IItemContainerStatics> = L"Microsoft.UI.Xaml.Controls.IItemContainerStatics";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IItemContainerStatics2> = L"Microsoft.UI.Xaml.Controls.IItemContainerStatics2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IItemsControl> = L"Microsoft.UI.Xaml.Controls.IItemsControl";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IItemsControlFactory> = L"Microsoft.UI.Xaml.Controls.IItemsControlFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IItemsControlOverrides> = L"Microsoft.UI.Xaml.Controls.IItemsControlOverrides";
@@ -4002,6 +4285,9 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ILayoutContextOverrides> = L"Microsoft.UI.Xaml.Controls.ILayoutContextOverrides";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ILayoutFactory> = L"Microsoft.UI.Xaml.Controls.ILayoutFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ILayoutOverrides> = L"Microsoft.UI.Xaml.Controls.ILayoutOverrides";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ILayoutPanel> = L"Microsoft.UI.Xaml.Controls.ILayoutPanel";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ILayoutPanelFactory> = L"Microsoft.UI.Xaml.Controls.ILayoutPanelFactory";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ILayoutPanelStatics> = L"Microsoft.UI.Xaml.Controls.ILayoutPanelStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ILayoutProtected> = L"Microsoft.UI.Xaml.Controls.ILayoutProtected";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ILayoutProtected2> = L"Microsoft.UI.Xaml.Controls.ILayoutProtected2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ILinedFlowLayout> = L"Microsoft.UI.Xaml.Controls.ILinedFlowLayout";
@@ -4124,13 +4410,21 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::INonVirtualizingLayoutFactory> = L"Microsoft.UI.Xaml.Controls.INonVirtualizingLayoutFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::INonVirtualizingLayoutOverrides> = L"Microsoft.UI.Xaml.Controls.INonVirtualizingLayoutOverrides";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::INumberBox> = L"Microsoft.UI.Xaml.Controls.INumberBox";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::INumberBox2> = L"Microsoft.UI.Xaml.Controls.INumberBox2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::INumberBoxFactory> = L"Microsoft.UI.Xaml.Controls.INumberBoxFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::INumberBoxStatics> = L"Microsoft.UI.Xaml.Controls.INumberBoxStatics";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::INumberBoxStatics2> = L"Microsoft.UI.Xaml.Controls.INumberBoxStatics2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::INumberBoxValueChangedEventArgs> = L"Microsoft.UI.Xaml.Controls.INumberBoxValueChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IPage> = L"Microsoft.UI.Xaml.Controls.IPage";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IPageFactory> = L"Microsoft.UI.Xaml.Controls.IPageFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IPageOverrides> = L"Microsoft.UI.Xaml.Controls.IPageOverrides";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IPageStatics> = L"Microsoft.UI.Xaml.Controls.IPageStatics";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IPagerControl> = L"Microsoft.UI.Xaml.Controls.IPagerControl";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IPagerControlFactory> = L"Microsoft.UI.Xaml.Controls.IPagerControlFactory";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IPagerControlSelectedIndexChangedEventArgs> = L"Microsoft.UI.Xaml.Controls.IPagerControlSelectedIndexChangedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IPagerControlStatics> = L"Microsoft.UI.Xaml.Controls.IPagerControlStatics";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IPagerControlTemplateSettings> = L"Microsoft.UI.Xaml.Controls.IPagerControlTemplateSettings";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IPagerControlTemplateSettingsFactory> = L"Microsoft.UI.Xaml.Controls.IPagerControlTemplateSettingsFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IPanel> = L"Microsoft.UI.Xaml.Controls.IPanel";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IPanelFactory> = L"Microsoft.UI.Xaml.Controls.IPanelFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IPanelStatics> = L"Microsoft.UI.Xaml.Controls.IPanelStatics";
@@ -4173,8 +4467,10 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IProgressBarStatics> = L"Microsoft.UI.Xaml.Controls.IProgressBarStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IProgressBarTemplateSettings> = L"Microsoft.UI.Xaml.Controls.IProgressBarTemplateSettings";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IProgressRing> = L"Microsoft.UI.Xaml.Controls.IProgressRing";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IProgressRing2> = L"Microsoft.UI.Xaml.Controls.IProgressRing2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IProgressRingFactory> = L"Microsoft.UI.Xaml.Controls.IProgressRingFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IProgressRingStatics> = L"Microsoft.UI.Xaml.Controls.IProgressRingStatics";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IProgressRingStatics2> = L"Microsoft.UI.Xaml.Controls.IProgressRingStatics2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IProgressRingTemplateSettings> = L"Microsoft.UI.Xaml.Controls.IProgressRingTemplateSettings";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IRadioButton> = L"Microsoft.UI.Xaml.Controls.IRadioButton";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IRadioButtonFactory> = L"Microsoft.UI.Xaml.Controls.IRadioButtonFactory";
@@ -4197,6 +4493,13 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IRatingItemImageInfoStatics> = L"Microsoft.UI.Xaml.Controls.IRatingItemImageInfoStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IRatingItemInfo> = L"Microsoft.UI.Xaml.Controls.IRatingItemInfo";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IRatingItemInfoFactory> = L"Microsoft.UI.Xaml.Controls.IRatingItemInfoFactory";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IRecyclePool> = L"Microsoft.UI.Xaml.Controls.IRecyclePool";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IRecyclePoolFactory> = L"Microsoft.UI.Xaml.Controls.IRecyclePoolFactory";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IRecyclePoolOverrides> = L"Microsoft.UI.Xaml.Controls.IRecyclePoolOverrides";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IRecyclePoolStatics> = L"Microsoft.UI.Xaml.Controls.IRecyclePoolStatics";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IRecyclingElementFactory> = L"Microsoft.UI.Xaml.Controls.IRecyclingElementFactory";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IRecyclingElementFactoryFactory> = L"Microsoft.UI.Xaml.Controls.IRecyclingElementFactoryFactory";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IRecyclingElementFactoryOverrides> = L"Microsoft.UI.Xaml.Controls.IRecyclingElementFactoryOverrides";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IRefreshContainer> = L"Microsoft.UI.Xaml.Controls.IRefreshContainer";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IRefreshContainerFactory> = L"Microsoft.UI.Xaml.Controls.IRefreshContainerFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IRefreshContainerStatics> = L"Microsoft.UI.Xaml.Controls.IRefreshContainerStatics";
@@ -4226,6 +4529,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IScrollContentPresenter> = L"Microsoft.UI.Xaml.Controls.IScrollContentPresenter";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IScrollContentPresenterStatics> = L"Microsoft.UI.Xaml.Controls.IScrollContentPresenterStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IScrollView> = L"Microsoft.UI.Xaml.Controls.IScrollView";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IScrollView2> = L"Microsoft.UI.Xaml.Controls.IScrollView2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IScrollViewFactory> = L"Microsoft.UI.Xaml.Controls.IScrollViewFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IScrollViewStatics> = L"Microsoft.UI.Xaml.Controls.IScrollViewStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IScrollViewer> = L"Microsoft.UI.Xaml.Controls.IScrollViewer";
@@ -4239,14 +4543,22 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IScrollingScrollCompletedEventArgs> = L"Microsoft.UI.Xaml.Controls.IScrollingScrollCompletedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IScrollingScrollOptions> = L"Microsoft.UI.Xaml.Controls.IScrollingScrollOptions";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IScrollingScrollOptionsFactory> = L"Microsoft.UI.Xaml.Controls.IScrollingScrollOptionsFactory";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IScrollingScrollStartingEventArgs> = L"Microsoft.UI.Xaml.Controls.IScrollingScrollStartingEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IScrollingZoomAnimationStartingEventArgs> = L"Microsoft.UI.Xaml.Controls.IScrollingZoomAnimationStartingEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IScrollingZoomCompletedEventArgs> = L"Microsoft.UI.Xaml.Controls.IScrollingZoomCompletedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IScrollingZoomOptions> = L"Microsoft.UI.Xaml.Controls.IScrollingZoomOptions";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IScrollingZoomOptionsFactory> = L"Microsoft.UI.Xaml.Controls.IScrollingZoomOptionsFactory";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IScrollingZoomStartingEventArgs> = L"Microsoft.UI.Xaml.Controls.IScrollingZoomStartingEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ISectionsInViewChangedEventArgs> = L"Microsoft.UI.Xaml.Controls.ISectionsInViewChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ISectionsInViewChangedEventArgsFactory> = L"Microsoft.UI.Xaml.Controls.ISectionsInViewChangedEventArgsFactory";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ISelectTemplateEventArgs> = L"Microsoft.UI.Xaml.Controls.ISelectTemplateEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ISelectionChangedEventArgs> = L"Microsoft.UI.Xaml.Controls.ISelectionChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ISelectionChangedEventArgsFactory> = L"Microsoft.UI.Xaml.Controls.ISelectionChangedEventArgsFactory";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ISelectionModel> = L"Microsoft.UI.Xaml.Controls.ISelectionModel";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ISelectionModelChildrenRequestedEventArgs> = L"Microsoft.UI.Xaml.Controls.ISelectionModelChildrenRequestedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ISelectionModelFactory> = L"Microsoft.UI.Xaml.Controls.ISelectionModelFactory";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ISelectionModelProtected> = L"Microsoft.UI.Xaml.Controls.ISelectionModelProtected";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ISelectionModelSelectionChangedEventArgs> = L"Microsoft.UI.Xaml.Controls.ISelectionModelSelectionChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ISelectorBar> = L"Microsoft.UI.Xaml.Controls.ISelectorBar";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ISelectorBarFactory> = L"Microsoft.UI.Xaml.Controls.ISelectorBarFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ISelectorBarItem> = L"Microsoft.UI.Xaml.Controls.ISelectorBarItem";
@@ -4254,6 +4566,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ISelectorBarItemStatics> = L"Microsoft.UI.Xaml.Controls.ISelectorBarItemStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ISelectorBarSelectionChangedEventArgs> = L"Microsoft.UI.Xaml.Controls.ISelectorBarSelectionChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ISelectorBarStatics> = L"Microsoft.UI.Xaml.Controls.ISelectorBarStatics";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ISelfPlayingAnimatedVisual> = L"Microsoft.UI.Xaml.Controls.ISelfPlayingAnimatedVisual";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ISemanticZoom> = L"Microsoft.UI.Xaml.Controls.ISemanticZoom";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ISemanticZoomInformation> = L"Microsoft.UI.Xaml.Controls.ISemanticZoomInformation";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ISemanticZoomLocation> = L"Microsoft.UI.Xaml.Controls.ISemanticZoomLocation";
@@ -4271,8 +4584,12 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ISplitViewPaneClosingEventArgs> = L"Microsoft.UI.Xaml.Controls.ISplitViewPaneClosingEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ISplitViewStatics> = L"Microsoft.UI.Xaml.Controls.ISplitViewStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IStackLayout> = L"Microsoft.UI.Xaml.Controls.IStackLayout";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IStackLayout2> = L"Microsoft.UI.Xaml.Controls.IStackLayout2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IStackLayoutFactory> = L"Microsoft.UI.Xaml.Controls.IStackLayoutFactory";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IStackLayoutState> = L"Microsoft.UI.Xaml.Controls.IStackLayoutState";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IStackLayoutStateFactory> = L"Microsoft.UI.Xaml.Controls.IStackLayoutStateFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IStackLayoutStatics> = L"Microsoft.UI.Xaml.Controls.IStackLayoutStatics";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IStackLayoutStatics2> = L"Microsoft.UI.Xaml.Controls.IStackLayoutStatics2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IStackPanel> = L"Microsoft.UI.Xaml.Controls.IStackPanel";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IStackPanelFactory> = L"Microsoft.UI.Xaml.Controls.IStackPanelFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IStackPanelStatics> = L"Microsoft.UI.Xaml.Controls.IStackPanelStatics";
@@ -4322,9 +4639,11 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITabViewTabTearOutRequestedEventArgs> = L"Microsoft.UI.Xaml.Controls.ITabViewTabTearOutRequestedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITabViewTabTearOutWindowRequestedEventArgs> = L"Microsoft.UI.Xaml.Controls.ITabViewTabTearOutWindowRequestedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITeachingTip> = L"Microsoft.UI.Xaml.Controls.ITeachingTip";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITeachingTip2> = L"Microsoft.UI.Xaml.Controls.ITeachingTip2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITeachingTipClosedEventArgs> = L"Microsoft.UI.Xaml.Controls.ITeachingTipClosedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITeachingTipClosingEventArgs> = L"Microsoft.UI.Xaml.Controls.ITeachingTipClosingEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITeachingTipFactory> = L"Microsoft.UI.Xaml.Controls.ITeachingTipFactory";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITeachingTipOpenedEventArgs> = L"Microsoft.UI.Xaml.Controls.ITeachingTipOpenedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITeachingTipStatics> = L"Microsoft.UI.Xaml.Controls.ITeachingTipStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITeachingTipTemplateSettings> = L"Microsoft.UI.Xaml.Controls.ITeachingTipTemplateSettings";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITeachingTipTemplateSettingsFactory> = L"Microsoft.UI.Xaml.Controls.ITeachingTipTemplateSettingsFactory";
@@ -4413,6 +4732,8 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IUIElementCollection> = L"Microsoft.UI.Xaml.Controls.IUIElementCollection";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IUniformGridLayout> = L"Microsoft.UI.Xaml.Controls.IUniformGridLayout";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IUniformGridLayoutFactory> = L"Microsoft.UI.Xaml.Controls.IUniformGridLayoutFactory";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IUniformGridLayoutState> = L"Microsoft.UI.Xaml.Controls.IUniformGridLayoutState";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IUniformGridLayoutStateFactory> = L"Microsoft.UI.Xaml.Controls.IUniformGridLayoutStateFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IUniformGridLayoutStatics> = L"Microsoft.UI.Xaml.Controls.IUniformGridLayoutStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IUserControl> = L"Microsoft.UI.Xaml.Controls.IUserControl";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IUserControlFactory> = L"Microsoft.UI.Xaml.Controls.IUserControlFactory";
@@ -4447,6 +4768,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::CalendarViewDayItemChangingEventHandler> = L"Microsoft.UI.Xaml.Controls.CalendarViewDayItemChangingEventHandler";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::CleanUpVirtualizedItemEventHandler> = L"Microsoft.UI.Xaml.Controls.CleanUpVirtualizedItemEventHandler";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ContextMenuOpeningEventHandler> = L"Microsoft.UI.Xaml.Controls.ContextMenuOpeningEventHandler";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::DoInkPresenterWork> = L"Microsoft.UI.Xaml.Controls.DoInkPresenterWork";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::DragItemsStartingEventHandler> = L"Microsoft.UI.Xaml.Controls.DragItemsStartingEventHandler";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::HubSectionHeaderClickEventHandler> = L"Microsoft.UI.Xaml.Controls.HubSectionHeaderClickEventHandler";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ItemClickEventHandler> = L"Microsoft.UI.Xaml.Controls.ItemClickEventHandler";
@@ -4497,6 +4819,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IAppBarToggleButton>{ 0x9687C0B1,0xC390,0x59BE,{ 0xAC,0xDC,0x4F,0xC4,0x8F,0x55,0x28,0x23 } }; // 9687C0B1-C390-59BE-ACDC-4FC48F552823
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IAppBarToggleButtonFactory>{ 0x07BFB2D6,0x23B9,0x57A2,{ 0x91,0x22,0x00,0x62,0x94,0xBF,0xA9,0x2F } }; // 07BFB2D6-23B9-57A2-9122-006294BFA92F
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IAppBarToggleButtonStatics>{ 0x70021504,0x3FE8,0x53BC,{ 0xAB,0xD6,0xD6,0x97,0x62,0xF4,0xBC,0x87 } }; // 70021504-3FE8-53BC-ABD6-D69762F4BC87
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IApplicationViewSpanningRects>{ 0x645737E4,0xA882,0x4E16,{ 0xB2,0x89,0xFD,0x86,0x05,0x60,0x10,0x6A } }; // 645737E4-A882-4E16-B289-FD860560106A
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IAutoSuggestBox>{ 0x3EEA809E,0xB2DB,0x521D,{ 0x97,0xDB,0xE0,0x64,0x8F,0xB5,0xD7,0x98 } }; // 3EEA809E-B2DB-521D-97DB-E0648FB5D798
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IAutoSuggestBoxQuerySubmittedEventArgs>{ 0x26DA5DE4,0x57A6,0x57BF,{ 0xAC,0xC9,0xAA,0xC5,0x99,0xC0,0xB2,0x2B } }; // 26DA5DE4-57A6-57BF-ACC9-AAC599C0B22B
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IAutoSuggestBoxStatics>{ 0x9DFA2FF9,0x1094,0x54A8,{ 0xBE,0xEE,0xB3,0x45,0xFA,0x3E,0xE0,0x89 } }; // 9DFA2FF9-1094-54A8-BEEE-B345FA3EE089
@@ -4612,6 +4935,9 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IDropDownButtonFactory>{ 0x7CF3E13B,0x668D,0x57E7,{ 0xB5,0xD6,0xF5,0xCA,0x3D,0xBC,0x80,0xBD } }; // 7CF3E13B-668D-57E7-B5D6-F5CA3DBC80BD
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IDynamicAnimatedVisualSource>{ 0xAB00E5CF,0x1BE6,0x559C,{ 0xAD,0x5B,0x02,0x53,0xBB,0x17,0xC0,0xF7 } }; // AB00E5CF-1BE6-559C-AD5B-0253BB17C0F7
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IDynamicOverflowItemsChangingEventArgs>{ 0xBF64C37F,0x6332,0x541D,{ 0x80,0xF1,0x87,0x6C,0x5B,0xB9,0xB1,0x96 } }; // BF64C37F-6332-541D-80F1-876C5BB9B196
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IElementFactory>{ 0x122278A6,0x3E28,0x5644,{ 0xBE,0x8E,0x10,0x52,0xE3,0xAE,0x4E,0xC9 } }; // 122278A6-3E28-5644-BE8E-1052E3AE4EC9
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IElementFactoryFactory>{ 0xD892556F,0xA875,0x534F,{ 0x8D,0x7F,0x68,0x18,0x03,0x34,0x27,0x32 } }; // D892556F-A875-534F-8D7F-681803342732
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IElementFactoryOverrides>{ 0x22F9A058,0x871F,0x56F0,{ 0x88,0x39,0xDF,0xA1,0x4E,0xD2,0x1D,0x86 } }; // 22F9A058-871F-56F0-8839-DFA14ED21D86
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IExpander>{ 0xCA633942,0xE584,0x55C2,{ 0xB7,0xEE,0xCF,0xFC,0x73,0xC8,0x12,0x7A } }; // CA633942-E584-55C2-B7EE-CFFC73C8127A
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IExpanderCollapsedEventArgs>{ 0x968A6870,0x7426,0x535E,{ 0xA5,0x26,0x27,0x9E,0x6E,0xED,0xEC,0xD0 } }; // 968A6870-7426-535E-A526-279E6EEDECD0
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IExpanderExpandingEventArgs>{ 0x433F2E36,0x19E7,0x579C,{ 0xB4,0xCE,0x9C,0xE5,0xD5,0x10,0xD0,0x01 } }; // 433F2E36-19E7-579C-B4CE-9CE5D510D001
@@ -4623,6 +4949,12 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IFlipViewItem>{ 0x516F2058,0xAF67,0x5EB3,{ 0xB7,0x96,0xE7,0x5B,0x34,0xF3,0xFD,0x92 } }; // 516F2058-AF67-5EB3-B796-E75B34F3FD92
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IFlipViewItemFactory>{ 0xDEB2CD5F,0x9D76,0x5678,{ 0xB1,0xCA,0x02,0x67,0x75,0x7C,0x4F,0xED } }; // DEB2CD5F-9D76-5678-B1CA-0267757C4FED
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IFlipViewStatics>{ 0x1E98FC86,0x2BC1,0x5C89,{ 0x83,0x05,0x25,0x1A,0xD5,0x6A,0x9C,0xDB } }; // 1E98FC86-2BC1-5C89-8305-251AD56A9CDB
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IFlowLayout>{ 0xA957834C,0xDC02,0x5670,{ 0x97,0x35,0xEC,0x3F,0xE1,0x03,0x7C,0x9A } }; // A957834C-DC02-5670-9735-EC3FE1037C9A
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IFlowLayoutFactory>{ 0xF4AD1DE0,0xDB32,0x52E7,{ 0x90,0x37,0x43,0xC6,0xDB,0x98,0x41,0xA8 } }; // F4AD1DE0-DB32-52E7-9037-43C6DB9841A8
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IFlowLayoutOverrides>{ 0xF2B75B74,0xEFB0,0x54FE,{ 0x95,0xD4,0x8C,0xB1,0x3C,0x2F,0x36,0xEF } }; // F2B75B74-EFB0-54FE-95D4-8CB13C2F36EF
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IFlowLayoutState>{ 0xD31F39C3,0x0FB4,0x513E,{ 0xAD,0x5E,0x24,0x37,0x52,0x18,0xB5,0xAB } }; // D31F39C3-0FB4-513E-AD5E-24375218B5AB
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IFlowLayoutStateFactory>{ 0x6FDBE8EE,0x2309,0x5F1C,{ 0xB7,0xC5,0xC4,0x13,0x59,0x34,0x9A,0x9E } }; // 6FDBE8EE-2309-5F1C-B7C5-C41359349A9E
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IFlowLayoutStatics>{ 0xE7A6F316,0x880B,0x553A,{ 0xAB,0xF2,0x5C,0xF9,0x3B,0xF8,0xC9,0x7C } }; // E7A6F316-880B-553A-ABF2-5CF93BF8C97C
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IFlyout>{ 0xD4A1EB7D,0x59B8,0x5DF9,{ 0x87,0xC3,0xBD,0x5E,0x38,0x56,0x92,0x3F } }; // D4A1EB7D-59B8-5DF9-87C3-BD5E3856923F
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IFlyoutFactory>{ 0xFD19002E,0x66B3,0x5656,{ 0xB4,0x9C,0xB2,0xAC,0xA1,0x1E,0x96,0x02 } }; // FD19002E-66B3-5656-B49C-B2ACA11E9602
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IFlyoutPresenter>{ 0x70259825,0x7F56,0x5107,{ 0x91,0x7E,0x71,0x94,0xB1,0xEF,0x1B,0x81 } }; // 70259825-7F56-5107-917E-7194B1EF1B81
@@ -4685,6 +5017,8 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IImageIconSourceStatics>{ 0x3AAE805C,0xC128,0x5F0D,{ 0xAE,0x43,0x1B,0x15,0x88,0x91,0xA1,0xDD } }; // 3AAE805C-C128-5F0D-AE43-1B158891A1DD
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IImageIconStatics>{ 0x6BD31828,0xF8F9,0x5D86,{ 0x80,0xD5,0xE7,0x42,0x35,0x46,0xDA,0x7D } }; // 6BD31828-F8F9-5D86-80D5-E7423546DA7D
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IImageStatics>{ 0xCB5378A8,0x996B,0x547E,{ 0x9C,0x4C,0x7B,0xBF,0xD9,0xDB,0xE7,0xDC } }; // CB5378A8-996B-547E-9C4C-7BBFD9DBE7DC
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IIndexPath>{ 0x7AC1252A,0x2A4A,0x5E17,{ 0x96,0xFB,0xF6,0x67,0x29,0x4D,0x4F,0xFA } }; // 7AC1252A-2A4A-5E17-96FB-F667294D4FFA
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IIndexPathStatics>{ 0xCCFD4ACE,0x5FA0,0x502D,{ 0x82,0xB4,0x16,0x74,0xD8,0x05,0x39,0x0D } }; // CCFD4ACE-5FA0-502D-82B4-1674D805390D
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IInfoBadge>{ 0x82104D7F,0x03D4,0x5EA4,{ 0x87,0x2E,0xF9,0xEC,0xAB,0x75,0x86,0x01 } }; // 82104D7F-03D4-5EA4-872E-F9ECAB758601
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IInfoBadgeFactory>{ 0xFB498205,0x2DE0,0x5986,{ 0x8A,0xEC,0x2C,0x46,0xAC,0x23,0x50,0x87 } }; // FB498205-2DE0-5986-8AEC-2C46AC235087
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IInfoBadgeStatics>{ 0xB0160061,0xB463,0x54DE,{ 0x81,0xAC,0x64,0xF3,0x90,0xD4,0xF2,0x5D } }; // B0160061-B463-54DE-81AC-64F390D4F25D
@@ -4692,15 +5026,21 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IInfoBadgeTemplateSettingsFactory>{ 0x5D366775,0x1F6E,0x558C,{ 0xAA,0xB4,0x66,0x77,0x04,0xB3,0x07,0x0C } }; // 5D366775-1F6E-558C-AAB4-667704B3070C
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IInfoBadgeTemplateSettingsStatics>{ 0x10959133,0x64CE,0x586F,{ 0xA2,0x52,0x9E,0x26,0xFC,0x1A,0xD9,0xBA } }; // 10959133-64CE-586F-A252-9E26FC1AD9BA
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IInfoBar>{ 0xC1C3A438,0xDD79,0x5D22,{ 0x9E,0x42,0x5A,0x3C,0xDF,0x81,0x13,0xA9 } }; // C1C3A438-DD79-5D22-9E42-5A3CDF8113A9
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IInfoBar2>{ 0x3B6A60CA,0xFDDC,0x5D90,{ 0x82,0xCC,0x01,0x22,0xE5,0xAD,0x6E,0x10 } }; // 3B6A60CA-FDDC-5D90-82CC-0122E5AD6E10
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IInfoBarClosedEventArgs>{ 0x593AF0B3,0xBDED,0x53DA,{ 0x8F,0x56,0x80,0xED,0x3C,0x64,0x32,0x2C } }; // 593AF0B3-BDED-53DA-8F56-80ED3C64322C
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IInfoBarClosedEventArgsFactory>{ 0x42FE1F7E,0x6D68,0x5A85,{ 0x8A,0x5C,0xAB,0xB7,0xEF,0xFC,0xDF,0x26 } }; // 42FE1F7E-6D68-5A85-8A5C-ABB7EFFCDF26
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IInfoBarClosingEventArgs>{ 0x062D01D6,0x61AF,0x5435,{ 0x8C,0x4B,0xC5,0x11,0x06,0x58,0x3B,0x5B } }; // 062D01D6-61AF-5435-8C4B-C51106583B5B
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IInfoBarClosingEventArgsFactory>{ 0xD6CFCC14,0x5206,0x5C9D,{ 0x80,0x1C,0x3A,0x90,0xB4,0xE2,0xEB,0xE4 } }; // D6CFCC14-5206-5C9D-801C-3A90B4E2EBE4
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IInfoBarFactory>{ 0x60618A60,0x9BE7,0x5DF5,{ 0xBE,0x0D,0x93,0x3D,0x34,0xDD,0xB4,0x4C } }; // 60618A60-9BE7-5DF5-BE0D-933D34DDB44C
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IInfoBarOpenedEventArgs>{ 0x92880A94,0x49D2,0x5659,{ 0xB5,0x23,0x52,0xBF,0x4D,0x69,0x67,0x47 } }; // 92880A94-49D2-5659-B523-52BF4D696747
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IInfoBarOpenedEventArgsFactory>{ 0x0D376EEF,0xD3BD,0x5D8A,{ 0xA5,0x02,0x89,0x13,0x35,0x84,0x43,0xCA } }; // 0D376EEF-D3BD-5D8A-A502-8913358443CA
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IInfoBarStatics>{ 0x5FB1E80D,0xEA5D,0x57BA,{ 0x99,0x15,0xB6,0x78,0x2B,0x98,0x2A,0xCA } }; // 5FB1E80D-EA5D-57BA-9915-B6782B982ACA
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IInfoBarTemplateSettings>{ 0x926F7292,0x9882,0x5056,{ 0x80,0x97,0x6D,0xA2,0xA7,0xEA,0x27,0xCD } }; // 926F7292-9882-5056-8097-6DA2A7EA27CD
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IInfoBarTemplateSettingsFactory>{ 0x29517DAF,0xC763,0x56CE,{ 0x8D,0x54,0xEE,0xFC,0xAF,0x7F,0x2E,0x01 } }; // 29517DAF-C763-56CE-8D54-EEFCAF7F2E01
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IInfoBarTemplateSettingsStatics>{ 0x57671639,0x43E8,0x506D,{ 0xB9,0xA7,0x53,0x9A,0x60,0x5A,0x1C,0x67 } }; // 57671639-43E8-506D-B9A7-539A605A1C67
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IInkCanvas>{ 0x4A77A23D,0xC847,0x5E38,{ 0x81,0xD1,0x73,0x61,0xC1,0xF7,0x3B,0xE2 } }; // 4A77A23D-C847-5E38-81D1-7361C1F73BE2
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IInkCanvasFactory>{ 0x4538DA03,0xDFF2,0x5828,{ 0xBF,0xE0,0x43,0x4E,0x72,0x5B,0xED,0xDB } }; // 4538DA03-DFF2-5828-BFE0-434E725BEDDB
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IInkCanvasStatics>{ 0xCE672F6A,0x95F9,0x5CD2,{ 0x82,0x9F,0x1C,0xDE,0xC0,0xEA,0x9D,0xE4 } }; // CE672F6A-95F9-5CD2-829F-1CDEC0EA9DE4
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IInsertionPanel>{ 0x84E13E27,0x2D24,0x59C4,{ 0xA0,0x0E,0x16,0xC7,0x25,0x59,0x01,0xE2 } }; // 84E13E27-2D24-59C4-A00E-16C7255901E2
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IIsTextTrimmedChangedEventArgs>{ 0x3C709B2F,0x16BA,0x55D2,{ 0xB6,0xF6,0xDF,0xC5,0x4A,0x1E,0xD0,0x21 } }; // 3C709B2F-16BA-55D2-B6F6-DFC54A1ED021
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IItemClickEventArgs>{ 0x1CF87A70,0x6348,0x57EC,{ 0x9E,0xAC,0xFA,0x05,0x65,0xAD,0xC6,0x0F } }; // 1CF87A70-6348-57EC-9EAC-FA0565ADC60F
@@ -4711,10 +5051,13 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IItemCollectionTransitionProviderFactory>{ 0xF1B53104,0x24BE,0x510D,{ 0x9E,0xB1,0x34,0x01,0xDE,0x36,0x1D,0xBC } }; // F1B53104-24BE-510D-9EB1-3401DE361DBC
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IItemCollectionTransitionProviderOverrides>{ 0x6935222B,0xEF83,0x5872,{ 0xA9,0xD4,0x83,0x19,0xBC,0xD6,0x7A,0x67 } }; // 6935222B-EF83-5872-A9D4-8319BCD67A67
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IItemContainer>{ 0x6332A67F,0x7FD9,0x53C7,{ 0xAF,0xD8,0xCF,0xA1,0x23,0x7C,0xF6,0xD1 } }; // 6332A67F-7FD9-53C7-AFD8-CFA1237CF6D1
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IItemContainer2>{ 0x48B5F500,0x3B62,0x5246,{ 0x80,0xFE,0x4F,0xFD,0x3E,0x3A,0x5D,0xDF } }; // 48B5F500-3B62-5246-80FE-4FFD3E3A5DDF
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IItemContainerFactory>{ 0xEE1CC57C,0x6BF2,0x5EE9,{ 0xA9,0x43,0xC9,0x5C,0xA7,0x75,0xED,0xB4 } }; // EE1CC57C-6BF2-5EE9-A943-C95CA775EDB4
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IItemContainerGenerator>{ 0xC4C5D5AE,0xED98,0x510F,{ 0xAF,0xAE,0x8A,0x0A,0xC6,0x06,0x7A,0x3B } }; // C4C5D5AE-ED98-510F-AFAE-8A0AC6067A3B
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IItemContainerInvokedEventArgs>{ 0xA4391576,0xAE76,0x52DD,{ 0x8A,0xCD,0x60,0xE8,0x1F,0x0D,0xD4,0xEC } }; // A4391576-AE76-52DD-8ACD-60E81F0DD4EC
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IItemContainerMapping>{ 0xB3E03A32,0xEA83,0x5626,{ 0xBF,0xDA,0xD3,0x27,0xA1,0xC7,0x55,0x0C } }; // B3E03A32-EA83-5626-BFDA-D327A1C7550C
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IItemContainerStatics>{ 0xE26E121D,0xB7BF,0x5632,{ 0x85,0xA2,0xF3,0x60,0x40,0xE6,0x49,0xF8 } }; // E26E121D-B7BF-5632-85A2-F36040E649F8
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IItemContainerStatics2>{ 0xBD7E67DF,0x650B,0x56AE,{ 0xAE,0xB7,0xEE,0x79,0x11,0xAF,0x79,0x22 } }; // BD7E67DF-650B-56AE-AEB7-EE7911AF7922
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IItemsControl>{ 0xBF1CCB54,0x83E2,0x5B98,{ 0xAC,0xBC,0x73,0x6F,0x87,0x6C,0x3D,0x35 } }; // BF1CCB54-83E2-5B98-ACBC-736F876C3D35
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IItemsControlFactory>{ 0xB2686273,0x2DD3,0x5454,{ 0x9F,0x25,0x24,0x7E,0x66,0x27,0x03,0x36 } }; // B2686273-2DD3-5454-9F25-247E66270336
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IItemsControlOverrides>{ 0x285C215F,0x64B2,0x5F7D,{ 0x88,0xD2,0x56,0xC6,0x65,0x8F,0x73,0xEE } }; // 285C215F-64B2-5F7D-88D2-56C6658F73EE
@@ -4752,6 +5095,9 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ILayoutContextOverrides>{ 0xFDA70E44,0x6526,0x5535,{ 0xBE,0x2B,0xEC,0x27,0x43,0x67,0x0A,0xE2 } }; // FDA70E44-6526-5535-BE2B-EC2743670AE2
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ILayoutFactory>{ 0xEAF956B4,0x59C9,0x5E13,{ 0xA4,0x9D,0xF3,0x5B,0x17,0x1D,0x8F,0xC9 } }; // EAF956B4-59C9-5E13-A49D-F35B171D8FC9
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ILayoutOverrides>{ 0x441D00C3,0xDD50,0x5348,{ 0x85,0x2D,0x85,0x60,0x8C,0xC7,0xDC,0xE1 } }; // 441D00C3-DD50-5348-852D-85608CC7DCE1
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ILayoutPanel>{ 0x46CF8953,0xF9EB,0x5C6E,{ 0xA9,0x76,0x1B,0x8E,0x43,0xB0,0x60,0x9E } }; // 46CF8953-F9EB-5C6E-A976-1B8E43B0609E
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ILayoutPanelFactory>{ 0xFF37C4CB,0xF541,0x5A35,{ 0xAB,0x1F,0x90,0x92,0x00,0x92,0xC7,0x1C } }; // FF37C4CB-F541-5A35-AB1F-90920092C71C
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ILayoutPanelStatics>{ 0x2B3DDAE9,0x1E39,0x5BD7,{ 0x92,0x40,0x16,0xF9,0x20,0x4A,0x09,0x2A } }; // 2B3DDAE9-1E39-5BD7-9240-16F9204A092A
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ILayoutProtected>{ 0xE46FF416,0x741E,0x5176,{ 0xA1,0xD4,0x57,0x18,0xD2,0x34,0x22,0x43 } }; // E46FF416-741E-5176-A1D4-5718D2342243
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ILayoutProtected2>{ 0x3FFFE35F,0x6F2E,0x501F,{ 0xA2,0xAD,0xE7,0x5A,0x4E,0x1C,0xD5,0x92 } }; // 3FFFE35F-6F2E-501F-A2AD-E75A4E1CD592
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ILinedFlowLayout>{ 0xF887A64B,0xB146,0x540C,{ 0x89,0x53,0xD8,0x18,0x4B,0x79,0xBA,0x6E } }; // F887A64B-B146-540C-8953-D8184B79BA6E
@@ -4874,13 +5220,21 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::INonVirtualizingLayoutFactory>{ 0xA16D2D12,0xDBAC,0x5CE0,{ 0xAE,0xF5,0x09,0x17,0x1A,0x4D,0x35,0x71 } }; // A16D2D12-DBAC-5CE0-AEF5-09171A4D3571
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::INonVirtualizingLayoutOverrides>{ 0x3C28B831,0x35C1,0x5182,{ 0xA8,0x43,0xA4,0x3F,0x33,0x9B,0x66,0x87 } }; // 3C28B831-35C1-5182-A843-A43F339B6687
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::INumberBox>{ 0xC18EB0E9,0x29FB,0x525D,{ 0xAB,0xBC,0xD6,0xB2,0x11,0x0F,0x54,0x2E } }; // C18EB0E9-29FB-525D-ABBC-D6B2110F542E
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::INumberBox2>{ 0x7825814B,0xFCF0,0x5E34,{ 0xAF,0x88,0x67,0x9C,0x8F,0xF6,0x41,0x1A } }; // 7825814B-FCF0-5E34-AF88-679C8FF6411A
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::INumberBoxFactory>{ 0x6B81F3CB,0x45A4,0x5D19,{ 0x9B,0xBB,0xA9,0xFE,0x46,0x56,0xAC,0x4D } }; // 6B81F3CB-45A4-5D19-9BBB-A9FE4656AC4D
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::INumberBoxStatics>{ 0x251EC05C,0xA77C,0x5540,{ 0xBE,0x39,0x60,0x53,0xF7,0x97,0xCD,0xE7 } }; // 251EC05C-A77C-5540-BE39-6053F797CDE7
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::INumberBoxStatics2>{ 0xFFCC1C7C,0xFB83,0x5E83,{ 0x85,0x3F,0x18,0x60,0xD6,0x55,0x9D,0x6A } }; // FFCC1C7C-FB83-5E83-853F-1860D6559D6A
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::INumberBoxValueChangedEventArgs>{ 0xC66CF16E,0x7C8A,0x532E,{ 0x9D,0x23,0x05,0x8C,0x1C,0x98,0xDD,0x50 } }; // C66CF16E-7C8A-532E-9D23-058C1C98DD50
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IPage>{ 0xEB42988E,0x6CB5,0x5DD6,{ 0x9E,0x59,0x4C,0x04,0xE5,0xCA,0xEC,0x6D } }; // EB42988E-6CB5-5DD6-9E59-4C04E5CAEC6D
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IPageFactory>{ 0xFF4357D5,0xDDCD,0x5129,{ 0x9D,0x0F,0xD8,0xAE,0xD2,0xAD,0xC1,0xA9 } }; // FF4357D5-DDCD-5129-9D0F-D8AED2ADC1A9
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IPageOverrides>{ 0x9B8445F7,0xD938,0x5626,{ 0x85,0x0A,0x86,0xE9,0x1C,0xA8,0x9E,0x98 } }; // 9B8445F7-D938-5626-850A-86E91CA89E98
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IPageStatics>{ 0xB6241486,0xA374,0x5D09,{ 0xA0,0x1F,0x9A,0xBE,0x31,0x1C,0x08,0x84 } }; // B6241486-A374-5D09-A01F-9ABE311C0884
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IPagerControl>{ 0x3F2921C3,0xE09F,0x5AF1,{ 0x90,0x55,0x1D,0x3D,0x34,0x84,0x46,0x7F } }; // 3F2921C3-E09F-5AF1-9055-1D3D3484467F
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IPagerControlFactory>{ 0x0B371A39,0xF5C9,0x5601,{ 0xB1,0xE9,0x39,0xE4,0xF4,0x76,0x05,0x92 } }; // 0B371A39-F5C9-5601-B1E9-39E4F4760592
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IPagerControlSelectedIndexChangedEventArgs>{ 0xA12A562B,0xC03A,0x5F80,{ 0xA7,0xE5,0x52,0x33,0x11,0x61,0x05,0x04 } }; // A12A562B-C03A-5F80-A7E5-523311610504
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IPagerControlStatics>{ 0xFD0CAC8D,0x176C,0x54F2,{ 0x96,0x3E,0x64,0x13,0xBF,0xE4,0x70,0x9A } }; // FD0CAC8D-176C-54F2-963E-6413BFE4709A
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IPagerControlTemplateSettings>{ 0xF4A16613,0x0345,0x5841,{ 0xB5,0x1A,0x22,0x73,0x10,0x79,0x77,0x27 } }; // F4A16613-0345-5841-B51A-227310797727
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IPagerControlTemplateSettingsFactory>{ 0x25665661,0x8AB3,0x50BA,{ 0x83,0xF7,0x2A,0x5D,0x0A,0xC3,0x74,0x09 } }; // 25665661-8AB3-50BA-83F7-2A5D0AC37409
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IPanel>{ 0x27A1B418,0x56F3,0x525E,{ 0xB8,0x83,0xCE,0xFE,0xD9,0x05,0xEE,0xD3 } }; // 27A1B418-56F3-525E-B883-CEFED905EED3
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IPanelFactory>{ 0xF5E7E21C,0x4C97,0x5D20,{ 0xBE,0xE6,0x3E,0x4F,0xC6,0xAB,0x14,0xE9 } }; // F5E7E21C-4C97-5D20-BEE6-3E4FC6AB14E9
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IPanelStatics>{ 0x76A9CAA7,0xA5D4,0x5061,{ 0xA3,0x25,0x17,0xC7,0x6F,0x66,0xDE,0x51 } }; // 76A9CAA7-A5D4-5061-A325-17C76F66DE51
@@ -4923,8 +5277,10 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IProgressBarStatics>{ 0x61BBB127,0xE4C4,0x5E22,{ 0xA8,0xDC,0xCF,0xCF,0x95,0x72,0x36,0xD0 } }; // 61BBB127-E4C4-5E22-A8DC-CFCF957236D0
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IProgressBarTemplateSettings>{ 0xFBEA95C9,0x9EF9,0x5E79,{ 0xAF,0x54,0x44,0xDE,0xD2,0x80,0x35,0xD5 } }; // FBEA95C9-9EF9-5E79-AF54-44DED28035D5
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IProgressRing>{ 0x2670D03F,0xE28C,0x5652,{ 0xBE,0xE2,0xB5,0x21,0x2E,0xBD,0xF7,0xFF } }; // 2670D03F-E28C-5652-BEE2-B5212EBDF7FF
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IProgressRing2>{ 0xF7F384BC,0xFAF9,0x59C0,{ 0x8E,0xEB,0xE1,0xAB,0xFF,0x94,0x4A,0x1F } }; // F7F384BC-FAF9-59C0-8EEB-E1ABFF944A1F
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IProgressRingFactory>{ 0x092FA98C,0x62A7,0x5DBC,{ 0x9A,0x85,0x3E,0x55,0x6B,0xA8,0x1F,0x79 } }; // 092FA98C-62A7-5DBC-9A85-3E556BA81F79
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IProgressRingStatics>{ 0x4BA1166A,0xCEC2,0x50E2,{ 0xB2,0x6B,0x66,0xB6,0x9D,0xC2,0xE3,0x71 } }; // 4BA1166A-CEC2-50E2-B26B-66B69DC2E371
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IProgressRingStatics2>{ 0xA8A3C55A,0xF0E0,0x506F,{ 0x80,0xE1,0x0C,0xA8,0x7E,0x24,0x75,0x45 } }; // A8A3C55A-F0E0-506F-80E1-0CA87E247545
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IProgressRingTemplateSettings>{ 0x34020D86,0xE1C1,0x5D7C,{ 0xB2,0x23,0xAC,0xD7,0xF8,0x62,0xFF,0xD5 } }; // 34020D86-E1C1-5D7C-B223-ACD7F862FFD5
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IRadioButton>{ 0x38F30CEE,0xE75A,0x5BA1,{ 0xAE,0x64,0x44,0x74,0xA3,0xAB,0xEA,0xC7 } }; // 38F30CEE-E75A-5BA1-AE64-4474A3ABEAC7
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IRadioButtonFactory>{ 0x5772C79A,0xB3EB,0x5719,{ 0x80,0x05,0x2A,0x51,0x34,0x29,0x49,0x5A } }; // 5772C79A-B3EB-5719-8005-2A513429495A
@@ -4947,6 +5303,13 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IRatingItemImageInfoStatics>{ 0xF582921D,0x0431,0x5E52,{ 0x96,0xD9,0x28,0x4D,0x82,0xDC,0x7C,0xBA } }; // F582921D-0431-5E52-96D9-284D82DC7CBA
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IRatingItemInfo>{ 0x801E924E,0x3613,0x55DD,{ 0x83,0x21,0x9E,0xBA,0xBB,0xED,0x0B,0x8A } }; // 801E924E-3613-55DD-8321-9EBABBED0B8A
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IRatingItemInfoFactory>{ 0x61F13480,0xCD0C,0x556A,{ 0xB5,0x32,0xA0,0xCF,0x53,0xE3,0xCD,0xA0 } }; // 61F13480-CD0C-556A-B532-A0CF53E3CDA0
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IRecyclePool>{ 0x342C72A5,0x66EA,0x5EC2,{ 0xAF,0x9F,0xD7,0x84,0xC7,0xE0,0x22,0x25 } }; // 342C72A5-66EA-5EC2-AF9F-D784C7E02225
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IRecyclePoolFactory>{ 0x9DA654DE,0x70C7,0x5415,{ 0xA2,0x27,0xCF,0xB6,0x5D,0xEE,0x3E,0x51 } }; // 9DA654DE-70C7-5415-A227-CFB65DEE3E51
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IRecyclePoolOverrides>{ 0x6A62E8C5,0x5AB6,0x5CBB,{ 0x8E,0xCA,0x5A,0xDD,0xFC,0x62,0x17,0xD0 } }; // 6A62E8C5-5AB6-5CBB-8ECA-5ADDFC6217D0
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IRecyclePoolStatics>{ 0xB8D2AC81,0x6CD8,0x5E6F,{ 0x89,0xDF,0xBA,0x3B,0xFB,0x00,0x84,0x5A } }; // B8D2AC81-6CD8-5E6F-89DF-BA3BFB00845A
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IRecyclingElementFactory>{ 0x467030FD,0x89F1,0x5738,{ 0xA5,0x05,0xFF,0x3E,0xC1,0x0B,0xDE,0xEA } }; // 467030FD-89F1-5738-A505-FF3EC10BDEEA
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IRecyclingElementFactoryFactory>{ 0xB2121301,0x13AB,0x5965,{ 0xAD,0x31,0x62,0xC5,0x4A,0x32,0x9A,0xD6 } }; // B2121301-13AB-5965-AD31-62C54A329AD6
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IRecyclingElementFactoryOverrides>{ 0x42CAC2E9,0xA977,0x5785,{ 0xB5,0xFC,0xD1,0xD1,0xD6,0x01,0x76,0x84 } }; // 42CAC2E9-A977-5785-B5FC-D1D1D6017684
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IRefreshContainer>{ 0x1C9778E8,0xA427,0x5F86,{ 0x9D,0x5E,0x02,0xDB,0x9B,0x2C,0x40,0x93 } }; // 1C9778E8-A427-5F86-9D5E-02DB9B2C4093
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IRefreshContainerFactory>{ 0x5F228FA1,0x2EA2,0x52B5,{ 0xB7,0x8A,0x0C,0x13,0x3F,0x86,0xF0,0x20 } }; // 5F228FA1-2EA2-52B5-B78A-0C133F86F020
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IRefreshContainerStatics>{ 0x875EF8A0,0x74C2,0x5201,{ 0xB7,0x08,0x50,0xA4,0x8E,0x7E,0x76,0x01 } }; // 875EF8A0-74C2-5201-B708-50A48E7E7601
@@ -4976,6 +5339,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IScrollContentPresenter>{ 0x9A896EB9,0x3189,0x5C53,{ 0x91,0x2F,0xC4,0x70,0x89,0x63,0x31,0xB8 } }; // 9A896EB9-3189-5C53-912F-C470896331B8
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IScrollContentPresenterStatics>{ 0x4E93F295,0xEF2E,0x517B,{ 0xBB,0xF9,0xDE,0xDB,0x85,0x48,0x49,0xC8 } }; // 4E93F295-EF2E-517B-BBF9-DEDB854849C8
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IScrollView>{ 0x8C98C86D,0x378A,0x5102,{ 0xA1,0xE3,0x33,0x52,0x28,0x0F,0xA0,0x10 } }; // 8C98C86D-378A-5102-A1E3-3352280FA010
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IScrollView2>{ 0xFA11A5D9,0xA2A3,0x5964,{ 0x80,0x4A,0xBB,0xD1,0x0F,0x0F,0x64,0x32 } }; // FA11A5D9-A2A3-5964-804A-BBD10F0F6432
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IScrollViewFactory>{ 0xF3547344,0x22E4,0x5E6C,{ 0x9E,0xCE,0x66,0x50,0x4E,0xF7,0x33,0xED } }; // F3547344-22E4-5E6C-9ECE-66504EF733ED
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IScrollViewStatics>{ 0xAC966C50,0x31F1,0x5485,{ 0x8E,0x08,0xEE,0x7A,0x7E,0x9A,0x6F,0xD0 } }; // AC966C50-31F1-5485-8E08-EE7A7E9A6FD0
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IScrollViewer>{ 0x1DC28C2E,0x996C,0x5394,{ 0x89,0xC3,0x4D,0xC6,0x56,0xB4,0xAD,0x46 } }; // 1DC28C2E-996C-5394-89C3-4DC656B4AD46
@@ -4989,14 +5353,22 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IScrollingScrollCompletedEventArgs>{ 0x9BDEAE9C,0x972C,0x54AE,{ 0x9C,0x62,0xFC,0x1A,0x03,0xFF,0x3F,0xA8 } }; // 9BDEAE9C-972C-54AE-9C62-FC1A03FF3FA8
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IScrollingScrollOptions>{ 0x30B2E77B,0x2553,0x5B09,{ 0xB3,0x08,0xB4,0xB0,0x6F,0xC8,0xF9,0xAF } }; // 30B2E77B-2553-5B09-B308-B4B06FC8F9AF
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IScrollingScrollOptionsFactory>{ 0x31EB58FE,0x0F6A,0x51EC,{ 0x90,0xDB,0x5C,0xCA,0xA0,0xA2,0x88,0xA6 } }; // 31EB58FE-0F6A-51EC-90DB-5CCAA0A288A6
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IScrollingScrollStartingEventArgs>{ 0x0E8B9459,0xB67C,0x542A,{ 0xA8,0x9C,0x92,0xE8,0x6B,0xE0,0x18,0x97 } }; // 0E8B9459-B67C-542A-A89C-92E86BE01897
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IScrollingZoomAnimationStartingEventArgs>{ 0x59BFB77B,0x47C9,0x5691,{ 0xBD,0xCD,0x53,0x6F,0xBE,0x8E,0xB8,0xC1 } }; // 59BFB77B-47C9-5691-BDCD-536FBE8EB8C1
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IScrollingZoomCompletedEventArgs>{ 0xC821207E,0xAB2A,0x5F6C,{ 0x90,0x74,0x41,0x18,0x40,0xA6,0x8D,0x55 } }; // C821207E-AB2A-5F6C-9074-411840A68D55
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IScrollingZoomOptions>{ 0xE4ACE0B2,0x9B0C,0x5EDA,{ 0x88,0xA2,0xC3,0x1B,0x1B,0x84,0xF8,0x29 } }; // E4ACE0B2-9B0C-5EDA-88A2-C31B1B84F829
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IScrollingZoomOptionsFactory>{ 0xD1C82E57,0xD5E8,0x58F5,{ 0xA2,0xC0,0xEE,0x70,0xC6,0x41,0x43,0xBE } }; // D1C82E57-D5E8-58F5-A2C0-EE70C64143BE
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IScrollingZoomStartingEventArgs>{ 0x075EFCB6,0x62AC,0x5C4C,{ 0xBF,0xF1,0xE6,0x0B,0xEF,0xAE,0xCE,0x41 } }; // 075EFCB6-62AC-5C4C-BFF1-E60BEFAECE41
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ISectionsInViewChangedEventArgs>{ 0x5E727DA0,0xB909,0x536C,{ 0x86,0x56,0x28,0x01,0x7B,0x48,0xF5,0xA5 } }; // 5E727DA0-B909-536C-8656-28017B48F5A5
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ISectionsInViewChangedEventArgsFactory>{ 0xDF5AB91F,0xE316,0x53CF,{ 0x96,0x36,0xA8,0x5B,0xDC,0x24,0xE8,0x5E } }; // DF5AB91F-E316-53CF-9636-A85BDC24E85E
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ISelectTemplateEventArgs>{ 0xB4B24AD2,0x93C7,0x5382,{ 0x9C,0xBC,0x5B,0xDF,0xB8,0x69,0x92,0x73 } }; // B4B24AD2-93C7-5382-9CBC-5BDFB8699273
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ISelectionChangedEventArgs>{ 0xB6C18076,0x4B76,0x5416,{ 0xAD,0x29,0xE2,0xDC,0x20,0xC4,0x62,0x46 } }; // B6C18076-4B76-5416-AD29-E2DC20C46246
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ISelectionChangedEventArgsFactory>{ 0x0FCD041D,0x465F,0x5745,{ 0x98,0x82,0x0C,0x83,0x48,0xE4,0x13,0x5D } }; // 0FCD041D-465F-5745-9882-0C8348E4135D
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ISelectionModel>{ 0xAE09782D,0x7A5C,0x5B5E,{ 0x88,0x02,0x4C,0x70,0x4E,0x21,0x13,0x53 } }; // AE09782D-7A5C-5B5E-8802-4C704E211353
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ISelectionModelChildrenRequestedEventArgs>{ 0x52ACCC62,0xC9A8,0x5DDC,{ 0x80,0xE4,0xBC,0x56,0x0D,0x92,0xA0,0x7A } }; // 52ACCC62-C9A8-5DDC-80E4-BC560D92A07A
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ISelectionModelFactory>{ 0x37FDDB2F,0xC709,0x552B,{ 0x84,0x23,0x96,0x71,0xEC,0x94,0x60,0xE9 } }; // 37FDDB2F-C709-552B-8423-9671EC9460E9
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ISelectionModelProtected>{ 0x976ABDE8,0x541C,0x54A8,{ 0x8E,0xD4,0x89,0xE3,0xB4,0x7D,0x32,0xFA } }; // 976ABDE8-541C-54A8-8ED4-89E3B47D32FA
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ISelectionModelSelectionChangedEventArgs>{ 0xDEA1EF6A,0xE76F,0x5853,{ 0xBA,0x43,0x34,0x26,0x93,0xDB,0x7E,0xE4 } }; // DEA1EF6A-E76F-5853-BA43-342693DB7EE4
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ISelectorBar>{ 0x7F4AD191,0x55EA,0x508E,{ 0xBF,0x47,0x70,0x47,0xD8,0x67,0x73,0x70 } }; // 7F4AD191-55EA-508E-BF47-7047D8677370
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ISelectorBarFactory>{ 0x71243DC7,0xB46C,0x5A04,{ 0x98,0x94,0xE4,0x20,0xE4,0x62,0x70,0x3F } }; // 71243DC7-B46C-5A04-9894-E420E462703F
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ISelectorBarItem>{ 0x3CDBA1F9,0xA13A,0x56A2,{ 0xB9,0xA9,0xF9,0x54,0x99,0x8D,0x36,0x58 } }; // 3CDBA1F9-A13A-56A2-B9A9-F954998D3658
@@ -5004,6 +5376,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ISelectorBarItemStatics>{ 0x08B5BDFC,0x54DE,0x5D4C,{ 0xAA,0xE3,0x37,0x63,0xA6,0xB4,0xE7,0x5B } }; // 08B5BDFC-54DE-5D4C-AAE3-3763A6B4E75B
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ISelectorBarSelectionChangedEventArgs>{ 0x73B3F6C5,0x5050,0x5C5A,{ 0x89,0x9C,0x4E,0x6E,0x04,0x74,0xCB,0x63 } }; // 73B3F6C5-5050-5C5A-899C-4E6E0474CB63
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ISelectorBarStatics>{ 0x672B4E72,0x728A,0x53EA,{ 0xB6,0x6A,0x96,0x8B,0xC8,0x02,0xDC,0x24 } }; // 672B4E72-728A-53EA-B66A-968BC802DC24
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ISelfPlayingAnimatedVisual>{ 0x179672CF,0x9A07,0x565E,{ 0x8E,0x92,0xB4,0xB0,0x86,0x41,0x68,0x81 } }; // 179672CF-9A07-565E-8E92-B4B086416881
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ISemanticZoom>{ 0x7E14616D,0x55EF,0x548C,{ 0xA9,0x97,0xC9,0x23,0xE3,0x02,0x71,0x8F } }; // 7E14616D-55EF-548C-A997-C923E302718F
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ISemanticZoomInformation>{ 0x12D62B04,0xBB13,0x50F2,{ 0x9D,0x8B,0xE5,0x7C,0x02,0xB4,0xBD,0xE4 } }; // 12D62B04-BB13-50F2-9D8B-E57C02B4BDE4
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ISemanticZoomLocation>{ 0x41C1DEC7,0xF34F,0x51DB,{ 0x95,0x25,0x5C,0x14,0x9B,0x05,0xA5,0x27 } }; // 41C1DEC7-F34F-51DB-9525-5C149B05A527
@@ -5021,8 +5394,12 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ISplitViewPaneClosingEventArgs>{ 0x9138965B,0x8499,0x5F9C,{ 0x93,0xE0,0x34,0xBE,0xDA,0x44,0x1E,0x6D } }; // 9138965B-8499-5F9C-93E0-34BEDA441E6D
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ISplitViewStatics>{ 0x1C69A263,0x552C,0x5505,{ 0xAC,0x81,0x49,0xE2,0x47,0xFE,0xE9,0xDB } }; // 1C69A263-552C-5505-AC81-49E247FEE9DB
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IStackLayout>{ 0x3EA9C3DD,0x8103,0x571F,{ 0x9E,0x07,0x44,0xEA,0x76,0xC9,0x1A,0x10 } }; // 3EA9C3DD-8103-571F-9E07-44EA76C91A10
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IStackLayout2>{ 0xDBF643A3,0xA011,0x5FE6,{ 0x9D,0x84,0xF5,0x19,0x1D,0xA6,0x4C,0xD6 } }; // DBF643A3-A011-5FE6-9D84-F5191DA64CD6
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IStackLayoutFactory>{ 0xEA606F86,0x21A1,0x5C35,{ 0x91,0x1E,0x4A,0x1D,0xE8,0xBC,0x69,0xD9 } }; // EA606F86-21A1-5C35-911E-4A1DE8BC69D9
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IStackLayoutState>{ 0x2476B96E,0x1DB7,0x5440,{ 0x89,0xC0,0x6F,0xD1,0x9A,0x9B,0xCE,0x92 } }; // 2476B96E-1DB7-5440-89C0-6FD19A9BCE92
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IStackLayoutStateFactory>{ 0x808A5A28,0xF6E2,0x598C,{ 0x9F,0x49,0x5B,0x93,0x12,0x9F,0x85,0x2C } }; // 808A5A28-F6E2-598C-9F49-5B93129F852C
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IStackLayoutStatics>{ 0x5610AECF,0xFB2A,0x5726,{ 0xAC,0x3A,0x16,0x47,0x9B,0xA2,0xEC,0xAD } }; // 5610AECF-FB2A-5726-AC3A-16479BA2ECAD
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IStackLayoutStatics2>{ 0xE5775C41,0x276C,0x5C84,{ 0x81,0xDD,0x07,0xFF,0xDC,0x0D,0xA9,0x0D } }; // E5775C41-276C-5C84-81DD-07FFDC0DA90D
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IStackPanel>{ 0x493AB00B,0x3A6A,0x5E4A,{ 0x94,0x52,0x40,0x7C,0xD5,0x19,0x74,0x06 } }; // 493AB00B-3A6A-5E4A-9452-407CD5197406
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IStackPanelFactory>{ 0x64C1D388,0x47A2,0x5A74,{ 0xA7,0x5B,0x55,0x9D,0x15,0x1E,0xE5,0xAC } }; // 64C1D388-47A2-5A74-A75B-559D151EE5AC
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IStackPanelStatics>{ 0x10BB04E3,0xEB01,0x5EA8,{ 0x9F,0x96,0x69,0x50,0x84,0x79,0xDE,0xF9 } }; // 10BB04E3-EB01-5EA8-9F96-69508479DEF9
@@ -5072,9 +5449,11 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITabViewTabTearOutRequestedEventArgs>{ 0xE8A0C441,0x66C5,0x578A,{ 0x81,0x77,0x47,0xDF,0xFF,0xB9,0x7B,0x83 } }; // E8A0C441-66C5-578A-8177-47DFFFB97B83
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITabViewTabTearOutWindowRequestedEventArgs>{ 0x0C13AFA7,0xF291,0x5BAC,{ 0xA6,0xE8,0xCC,0x67,0xA6,0x9B,0x04,0xC9 } }; // 0C13AFA7-F291-5BAC-A6E8-CC67A69B04C9
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITeachingTip>{ 0xDAEBD5F7,0x3B47,0x5B12,{ 0xB8,0x04,0xF4,0xE1,0x44,0x2B,0x21,0x13 } }; // DAEBD5F7-3B47-5B12-B804-F4E1442B2113
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITeachingTip2>{ 0x4835F919,0x21D0,0x5725,{ 0x8E,0x73,0x60,0x31,0x86,0xB8,0xC1,0x15 } }; // 4835F919-21D0-5725-8E73-603186B8C115
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITeachingTipClosedEventArgs>{ 0x2536F506,0x4038,0x59DB,{ 0x9E,0x35,0xA9,0x25,0x2F,0xB5,0xAD,0xB2 } }; // 2536F506-4038-59DB-9E35-A9252FB5ADB2
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITeachingTipClosingEventArgs>{ 0x16F53512,0x3C55,0x5636,{ 0xA8,0x56,0x22,0x9D,0x97,0x68,0xD6,0x4E } }; // 16F53512-3C55-5636-A856-229D9768D64E
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITeachingTipFactory>{ 0xA3ECD47D,0x2972,0x5D19,{ 0xA6,0x2E,0xDD,0xFB,0xC5,0xE1,0xAD,0x57 } }; // A3ECD47D-2972-5D19-A62E-DDFBC5E1AD57
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITeachingTipOpenedEventArgs>{ 0x74C49AAA,0x9CC8,0x5B0D,{ 0xA2,0xB1,0xCE,0x78,0x9E,0x35,0xCC,0xDE } }; // 74C49AAA-9CC8-5B0D-A2B1-CE789E35CCDE
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITeachingTipStatics>{ 0x7C3ECDDB,0x0B4D,0x51C2,{ 0xA2,0x7F,0x89,0x18,0x0A,0xFD,0x45,0xA8 } }; // 7C3ECDDB-0B4D-51C2-A27F-89180AFD45A8
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITeachingTipTemplateSettings>{ 0xB081E1E9,0xC1A5,0x590A,{ 0x80,0x49,0x69,0xEA,0x00,0x3B,0x6C,0xF7 } }; // B081E1E9-C1A5-590A-8049-69EA003B6CF7
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITeachingTipTemplateSettingsFactory>{ 0x63210545,0xE195,0x56CD,{ 0xBC,0xCD,0x16,0x92,0x55,0xE1,0x34,0xE3 } }; // 63210545-E195-56CD-BCCD-169255E134E3
@@ -5163,6 +5542,8 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IUIElementCollection>{ 0x23050CB1,0xDB88,0x54ED,{ 0x90,0x83,0x5E,0xCF,0xB1,0x25,0x12,0xFD } }; // 23050CB1-DB88-54ED-9083-5ECFB12512FD
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IUniformGridLayout>{ 0x8A164CBC,0x2A5E,0x56E5,{ 0xA0,0x11,0xFB,0x76,0x33,0x4A,0xAB,0xDF } }; // 8A164CBC-2A5E-56E5-A011-FB76334AABDF
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IUniformGridLayoutFactory>{ 0x0D9ED808,0xF3F9,0x5034,{ 0x96,0x27,0x15,0x2B,0x91,0xE9,0x1B,0x4B } }; // 0D9ED808-F3F9-5034-9627-152B91E91B4B
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IUniformGridLayoutState>{ 0x96F81418,0x6369,0x5AB1,{ 0xB6,0x82,0xAE,0x3C,0x20,0xCA,0x5D,0xCA } }; // 96F81418-6369-5AB1-B682-AE3C20CA5DCA
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IUniformGridLayoutStateFactory>{ 0x8C774AAF,0x2593,0x5EDE,{ 0xAC,0x20,0x5B,0x92,0x60,0xA3,0xDB,0x26 } }; // 8C774AAF-2593-5EDE-AC20-5B9260A3DB26
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IUniformGridLayoutStatics>{ 0x19BE9A3E,0x37E1,0x5A6D,{ 0x8B,0x62,0x41,0x93,0x25,0xEA,0x70,0x5A } }; // 19BE9A3E-37E1-5A6D-8B62-419325EA705A
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IUserControl>{ 0xAB8A0A51,0x44CF,0x5337,{ 0xAD,0x77,0x8E,0xDA,0x17,0x95,0xE9,0xF6 } }; // AB8A0A51-44CF-5337-AD77-8EDA1795E9F6
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IUserControlFactory>{ 0x61AC9074,0xAAB3,0x50B8,{ 0x8B,0x18,0xD4,0xD2,0x57,0x3A,0x52,0x35 } }; // 61AC9074-AAB3-50B8-8B18-D4D2573A5235
@@ -5197,6 +5578,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::CalendarViewDayItemChangingEventHandler>{ 0xAB8075FD,0x7A4B,0x504E,{ 0x8A,0x63,0xD7,0xF3,0x55,0x70,0xBD,0x86 } }; // AB8075FD-7A4B-504E-8A63-D7F35570BD86
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::CleanUpVirtualizedItemEventHandler>{ 0xDA6960DE,0x89FF,0x575F,{ 0x93,0x2F,0x02,0x3F,0x6F,0xC1,0xF9,0x92 } }; // DA6960DE-89FF-575F-932F-023F6FC1F992
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ContextMenuOpeningEventHandler>{ 0xD010FF61,0x4067,0x526A,{ 0x95,0xA3,0x51,0x75,0x77,0xBC,0x52,0x73 } }; // D010FF61-4067-526A-95A3-517577BC5273
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::DoInkPresenterWork>{ 0xEB61AEEB,0x469F,0x512F,{ 0xA1,0xF5,0xF1,0xFE,0xC7,0x44,0x7B,0x0E } }; // EB61AEEB-469F-512F-A1F5-F1FEC7447B0E
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::DragItemsStartingEventHandler>{ 0x55532800,0x7617,0x5D67,{ 0x80,0xBF,0xB9,0x8C,0x0A,0x41,0xB9,0xD6 } }; // 55532800-7617-5D67-80BF-B98C0A41B9D6
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::HubSectionHeaderClickEventHandler>{ 0xF69971DA,0x162F,0x51EC,{ 0x9F,0xD9,0x37,0xF9,0xB5,0x7A,0x68,0xF9 } }; // F69971DA-162F-51EC-9FD9-37F9B57A68F9
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ItemClickEventHandler>{ 0xA3903624,0x3393,0x566C,{ 0xA6,0xB9,0xA6,0xB4,0xB3,0xE3,0x01,0xC3 } }; // A3903624-3393-566C-A6B9-A6B4B3E301C3
@@ -5279,12 +5661,15 @@ namespace winrt::impl
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::DragItemsStartingEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::IDragItemsStartingEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::DropDownButton>{ using type = winrt::Microsoft::UI::Xaml::Controls::IDropDownButton; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::DynamicOverflowItemsChangingEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::IDynamicOverflowItemsChangingEventArgs; };
+    template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::ElementFactory>{ using type = winrt::Microsoft::UI::Xaml::Controls::IElementFactory; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::Expander>{ using type = winrt::Microsoft::UI::Xaml::Controls::IExpander; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::ExpanderCollapsedEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::IExpanderCollapsedEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::ExpanderExpandingEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::IExpanderExpandingEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::ExpanderTemplateSettings>{ using type = winrt::Microsoft::UI::Xaml::Controls::IExpanderTemplateSettings; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::FlipView>{ using type = winrt::Microsoft::UI::Xaml::Controls::IFlipView; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::FlipViewItem>{ using type = winrt::Microsoft::UI::Xaml::Controls::IFlipViewItem; };
+    template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::FlowLayout>{ using type = winrt::Microsoft::UI::Xaml::Controls::IFlowLayout; };
+    template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::FlowLayoutState>{ using type = winrt::Microsoft::UI::Xaml::Controls::IFlowLayoutState; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::Flyout>{ using type = winrt::Microsoft::UI::Xaml::Controls::IFlyout; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::FlyoutPresenter>{ using type = winrt::Microsoft::UI::Xaml::Controls::IFlyoutPresenter; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::FocusDisengagedEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::IFocusDisengagedEventArgs; };
@@ -5311,12 +5696,15 @@ namespace winrt::impl
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::Image>{ using type = winrt::Microsoft::UI::Xaml::Controls::IImage; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::ImageIcon>{ using type = winrt::Microsoft::UI::Xaml::Controls::IImageIcon; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::ImageIconSource>{ using type = winrt::Microsoft::UI::Xaml::Controls::IImageIconSource; };
+    template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::IndexPath>{ using type = winrt::Microsoft::UI::Xaml::Controls::IIndexPath; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::InfoBadge>{ using type = winrt::Microsoft::UI::Xaml::Controls::IInfoBadge; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::InfoBadgeTemplateSettings>{ using type = winrt::Microsoft::UI::Xaml::Controls::IInfoBadgeTemplateSettings; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::InfoBar>{ using type = winrt::Microsoft::UI::Xaml::Controls::IInfoBar; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::InfoBarClosedEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::IInfoBarClosedEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::InfoBarClosingEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::IInfoBarClosingEventArgs; };
+    template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::InfoBarOpenedEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::IInfoBarOpenedEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::InfoBarTemplateSettings>{ using type = winrt::Microsoft::UI::Xaml::Controls::IInfoBarTemplateSettings; };
+    template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::InkCanvas>{ using type = winrt::Microsoft::UI::Xaml::Controls::IInkCanvas; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::IsTextTrimmedChangedEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::IIsTextTrimmedChangedEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::ItemClickEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::IItemClickEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::ItemCollection>{ using type = winrt::Windows::Foundation::Collections::IObservableVector<winrt::Windows::Foundation::IInspectable>; };
@@ -5326,6 +5714,7 @@ namespace winrt::impl
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::ItemCollectionTransitionProvider>{ using type = winrt::Microsoft::UI::Xaml::Controls::IItemCollectionTransitionProvider; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::ItemContainer>{ using type = winrt::Microsoft::UI::Xaml::Controls::IItemContainer; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::ItemContainerGenerator>{ using type = winrt::Microsoft::UI::Xaml::Controls::IItemContainerGenerator; };
+    template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::ItemContainerInvokedEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::IItemContainerInvokedEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::ItemsControl>{ using type = winrt::Microsoft::UI::Xaml::Controls::IItemsControl; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::ItemsPanelTemplate>{ using type = winrt::Microsoft::UI::Xaml::Controls::IItemsPanelTemplate; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::ItemsPickedEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::IItemsPickedEventArgs; };
@@ -5343,6 +5732,7 @@ namespace winrt::impl
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::ItemsWrapGrid>{ using type = winrt::Microsoft::UI::Xaml::Controls::IItemsWrapGrid; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::Layout>{ using type = winrt::Microsoft::UI::Xaml::Controls::ILayout; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::LayoutContext>{ using type = winrt::Microsoft::UI::Xaml::Controls::ILayoutContext; };
+    template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::LayoutPanel>{ using type = winrt::Microsoft::UI::Xaml::Controls::ILayoutPanel; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::LinedFlowLayout>{ using type = winrt::Microsoft::UI::Xaml::Controls::ILinedFlowLayout; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::LinedFlowLayoutItemCollectionTransitionProvider>{ using type = winrt::Microsoft::UI::Xaml::Controls::ILinedFlowLayoutItemCollectionTransitionProvider; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::LinedFlowLayoutItemsInfoRequestedEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::ILinedFlowLayoutItemsInfoRequestedEventArgs; };
@@ -5394,6 +5784,9 @@ namespace winrt::impl
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::NumberBox>{ using type = winrt::Microsoft::UI::Xaml::Controls::INumberBox; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::NumberBoxValueChangedEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::INumberBoxValueChangedEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::Page>{ using type = winrt::Microsoft::UI::Xaml::Controls::IPage; };
+    template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::PagerControl>{ using type = winrt::Microsoft::UI::Xaml::Controls::IPagerControl; };
+    template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::PagerControlSelectedIndexChangedEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::IPagerControlSelectedIndexChangedEventArgs; };
+    template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::PagerControlTemplateSettings>{ using type = winrt::Microsoft::UI::Xaml::Controls::IPagerControlTemplateSettings; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::Panel>{ using type = winrt::Microsoft::UI::Xaml::Controls::IPanel; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::ParallaxView>{ using type = winrt::Microsoft::UI::Xaml::Controls::IParallaxView; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::PasswordBox>{ using type = winrt::Microsoft::UI::Xaml::Controls::IPasswordBox; };
@@ -5422,6 +5815,8 @@ namespace winrt::impl
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::RatingItemFontInfo>{ using type = winrt::Microsoft::UI::Xaml::Controls::IRatingItemFontInfo; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::RatingItemImageInfo>{ using type = winrt::Microsoft::UI::Xaml::Controls::IRatingItemImageInfo; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::RatingItemInfo>{ using type = winrt::Microsoft::UI::Xaml::Controls::IRatingItemInfo; };
+    template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::RecyclePool>{ using type = winrt::Microsoft::UI::Xaml::Controls::IRecyclePool; };
+    template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::RecyclingElementFactory>{ using type = winrt::Microsoft::UI::Xaml::Controls::IRecyclingElementFactory; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::RefreshContainer>{ using type = winrt::Microsoft::UI::Xaml::Controls::IRefreshContainer; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::RefreshInteractionRatioChangedEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::IRefreshInteractionRatioChangedEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::RefreshRequestedEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::IRefreshRequestedEventArgs; };
@@ -5447,11 +5842,17 @@ namespace winrt::impl
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::ScrollingScrollAnimationStartingEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::IScrollingScrollAnimationStartingEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::ScrollingScrollCompletedEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::IScrollingScrollCompletedEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::ScrollingScrollOptions>{ using type = winrt::Microsoft::UI::Xaml::Controls::IScrollingScrollOptions; };
+    template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::ScrollingScrollStartingEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::IScrollingScrollStartingEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::ScrollingZoomAnimationStartingEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::IScrollingZoomAnimationStartingEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::ScrollingZoomCompletedEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::IScrollingZoomCompletedEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::ScrollingZoomOptions>{ using type = winrt::Microsoft::UI::Xaml::Controls::IScrollingZoomOptions; };
+    template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::ScrollingZoomStartingEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::IScrollingZoomStartingEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::SectionsInViewChangedEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::ISectionsInViewChangedEventArgs; };
+    template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::SelectTemplateEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::ISelectTemplateEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::SelectionChangedEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::ISelectionChangedEventArgs; };
+    template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::SelectionModel>{ using type = winrt::Microsoft::UI::Xaml::Controls::ISelectionModel; };
+    template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::SelectionModelChildrenRequestedEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::ISelectionModelChildrenRequestedEventArgs; };
+    template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::SelectionModelSelectionChangedEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::ISelectionModelSelectionChangedEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::SelectorBar>{ using type = winrt::Microsoft::UI::Xaml::Controls::ISelectorBar; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::SelectorBarItem>{ using type = winrt::Microsoft::UI::Xaml::Controls::ISelectorBarItem; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::SelectorBarSelectionChangedEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::ISelectorBarSelectionChangedEventArgs; };
@@ -5464,6 +5865,7 @@ namespace winrt::impl
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::SplitView>{ using type = winrt::Microsoft::UI::Xaml::Controls::ISplitView; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::SplitViewPaneClosingEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::ISplitViewPaneClosingEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::StackLayout>{ using type = winrt::Microsoft::UI::Xaml::Controls::IStackLayout; };
+    template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::StackLayoutState>{ using type = winrt::Microsoft::UI::Xaml::Controls::IStackLayoutState; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::StackPanel>{ using type = winrt::Microsoft::UI::Xaml::Controls::IStackPanel; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::StyleSelector>{ using type = winrt::Microsoft::UI::Xaml::Controls::IStyleSelector; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::SwapChainBackgroundPanel>{ using type = winrt::Microsoft::UI::Xaml::Controls::ISwapChainBackgroundPanel; };
@@ -5488,6 +5890,7 @@ namespace winrt::impl
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::TeachingTip>{ using type = winrt::Microsoft::UI::Xaml::Controls::ITeachingTip; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::TeachingTipClosedEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::ITeachingTipClosedEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::TeachingTipClosingEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::ITeachingTipClosingEventArgs; };
+    template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::TeachingTipOpenedEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::ITeachingTipOpenedEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::TeachingTipTemplateSettings>{ using type = winrt::Microsoft::UI::Xaml::Controls::ITeachingTipTemplateSettings; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::TextBlock>{ using type = winrt::Microsoft::UI::Xaml::Controls::ITextBlock; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::TextBox>{ using type = winrt::Microsoft::UI::Xaml::Controls::ITextBox; };
@@ -5531,6 +5934,7 @@ namespace winrt::impl
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::TwoPaneView>{ using type = winrt::Microsoft::UI::Xaml::Controls::ITwoPaneView; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::UIElementCollection>{ using type = winrt::Windows::Foundation::Collections::IVector<winrt::Microsoft::UI::Xaml::UIElement>; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::UniformGridLayout>{ using type = winrt::Microsoft::UI::Xaml::Controls::IUniformGridLayout; };
+    template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::UniformGridLayoutState>{ using type = winrt::Microsoft::UI::Xaml::Controls::IUniformGridLayoutState; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::UserControl>{ using type = winrt::Microsoft::UI::Xaml::Controls::IUserControl; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::VariableSizedWrapGrid>{ using type = winrt::Microsoft::UI::Xaml::Controls::IVariableSizedWrapGrid; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::Viewbox>{ using type = winrt::Microsoft::UI::Xaml::Controls::IViewbox; };
@@ -5943,6 +6347,13 @@ namespace winrt::impl
             virtual int32_t __stdcall get_IsCompactProperty(void**) noexcept = 0;
             virtual int32_t __stdcall get_IsInOverflowProperty(void**) noexcept = 0;
             virtual int32_t __stdcall get_DynamicOverflowOrderProperty(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IApplicationViewSpanningRects>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall GetSpanningRects(void**) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IAutoSuggestBox>
@@ -7666,6 +8077,27 @@ namespace winrt::impl
             virtual int32_t __stdcall get_Action(int32_t*) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IElementFactory>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IElementFactoryFactory>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall CreateInstance(void*, void**, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IElementFactoryOverrides>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall GetElementCore(void*, void**) noexcept = 0;
+            virtual int32_t __stdcall RecycleElementCore(void*) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IExpander>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -7758,6 +8190,64 @@ namespace winrt::impl
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
             virtual int32_t __stdcall get_UseTouchAnimationsForAllNavigationProperty(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IFlowLayout>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_Orientation(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall put_Orientation(int32_t) noexcept = 0;
+            virtual int32_t __stdcall get_MinRowSpacing(double*) noexcept = 0;
+            virtual int32_t __stdcall put_MinRowSpacing(double) noexcept = 0;
+            virtual int32_t __stdcall get_MinColumnSpacing(double*) noexcept = 0;
+            virtual int32_t __stdcall put_MinColumnSpacing(double) noexcept = 0;
+            virtual int32_t __stdcall get_LineAlignment(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall put_LineAlignment(int32_t) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IFlowLayoutFactory>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall CreateInstance(void*, void**, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IFlowLayoutOverrides>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall GetMeasureSize(int32_t, winrt::Windows::Foundation::Size, winrt::Windows::Foundation::Size*) noexcept = 0;
+            virtual int32_t __stdcall GetProvisionalArrangeSize(int32_t, winrt::Windows::Foundation::Size, winrt::Windows::Foundation::Size, winrt::Windows::Foundation::Size*) noexcept = 0;
+            virtual int32_t __stdcall ShouldBreakLine(int32_t, double, bool*) noexcept = 0;
+            virtual int32_t __stdcall GetAnchorForRealizationRect(winrt::Windows::Foundation::Size, void*, struct struct_Microsoft_UI_Xaml_Controls_FlowLayoutAnchorInfo*) noexcept = 0;
+            virtual int32_t __stdcall GetAnchorForTargetElement(int32_t, winrt::Windows::Foundation::Size, void*, struct struct_Microsoft_UI_Xaml_Controls_FlowLayoutAnchorInfo*) noexcept = 0;
+            virtual int32_t __stdcall GetExtent(winrt::Windows::Foundation::Size, void*, void*, int32_t, winrt::Windows::Foundation::Rect, void*, int32_t, winrt::Windows::Foundation::Rect, winrt::Windows::Foundation::Rect*) noexcept = 0;
+            virtual int32_t __stdcall OnElementMeasured(void*, int32_t, winrt::Windows::Foundation::Size, winrt::Windows::Foundation::Size, winrt::Windows::Foundation::Size, winrt::Windows::Foundation::Size, void*) noexcept = 0;
+            virtual int32_t __stdcall OnLineArranged(int32_t, int32_t, double, void*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IFlowLayoutState>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IFlowLayoutStateFactory>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall CreateInstance(void*, void**, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IFlowLayoutStatics>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_OrientationProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_MinRowSpacingProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_MinColumnSpacingProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_LineAlignmentProperty(void**) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IFlyout>
@@ -8366,6 +8856,24 @@ namespace winrt::impl
             virtual int32_t __stdcall get_NineGridProperty(void**) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IIndexPath>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall GetSize(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall GetAt(int32_t, int32_t*) noexcept = 0;
+            virtual int32_t __stdcall CompareTo(void*, int32_t*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IIndexPathStatics>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall CreateFrom(int32_t, void**) noexcept = 0;
+            virtual int32_t __stdcall CreateFromGroupAndItemIndex(int32_t, int32_t, void**) noexcept = 0;
+            virtual int32_t __stdcall CreateFromIndices(void*, void**) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IInfoBadge>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -8457,6 +8965,14 @@ namespace winrt::impl
             virtual int32_t __stdcall remove_Closed(winrt::event_token) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IInfoBar2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall add_Opened(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_Opened(winrt::event_token) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IInfoBarClosedEventArgs>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -8490,6 +9006,18 @@ namespace winrt::impl
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
             virtual int32_t __stdcall CreateInstance(void*, void**, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IInfoBarOpenedEventArgs>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IInfoBarOpenedEventArgsFactory>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IInfoBarStatics>
@@ -8532,6 +9060,29 @@ namespace winrt::impl
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
             virtual int32_t __stdcall get_IconElementProperty(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IInkCanvas>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_IsEnabled(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_IsEnabled(bool) noexcept = 0;
+            virtual int32_t __stdcall QueueInkPresenterWorkItem(void*, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IInkCanvasFactory>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall CreateInstance(void*, void**, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IInkCanvasStatics>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_IsEnabledProperty(void**) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IInsertionPanel>
@@ -8618,6 +9169,20 @@ namespace winrt::impl
             virtual int32_t __stdcall put_IsSelected(bool) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IItemContainer2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_CanUserSelect(uint32_t*) noexcept = 0;
+            virtual int32_t __stdcall put_CanUserSelect(uint32_t) noexcept = 0;
+            virtual int32_t __stdcall get_CanUserInvoke(uint32_t*) noexcept = 0;
+            virtual int32_t __stdcall put_CanUserInvoke(uint32_t) noexcept = 0;
+            virtual int32_t __stdcall get_MultiSelectMode(uint32_t*) noexcept = 0;
+            virtual int32_t __stdcall put_MultiSelectMode(uint32_t) noexcept = 0;
+            virtual int32_t __stdcall add_ItemInvoked(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_ItemInvoked(winrt::event_token) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IItemContainerFactory>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -8647,6 +9212,16 @@ namespace winrt::impl
             virtual int32_t __stdcall Recycle(struct struct_Microsoft_UI_Xaml_Controls_Primitives_GeneratorPosition, int32_t) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IItemContainerInvokedEventArgs>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_OriginalSource(void**) noexcept = 0;
+            virtual int32_t __stdcall get_InteractionTrigger(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall get_Handled(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_Handled(bool) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IItemContainerMapping>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -8663,6 +9238,15 @@ namespace winrt::impl
         {
             virtual int32_t __stdcall get_ChildProperty(void**) noexcept = 0;
             virtual int32_t __stdcall get_IsSelectedProperty(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IItemContainerStatics2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_CanUserSelectProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_CanUserInvokeProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_MultiSelectModeProperty(void**) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IItemsControl>
@@ -9117,6 +9701,40 @@ namespace winrt::impl
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
             virtual int32_t __stdcall CreateDefaultItemTransitionProvider(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::ILayoutPanel>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_Layout(void**) noexcept = 0;
+            virtual int32_t __stdcall put_Layout(void*) noexcept = 0;
+            virtual int32_t __stdcall get_BorderBrush(void**) noexcept = 0;
+            virtual int32_t __stdcall put_BorderBrush(void*) noexcept = 0;
+            virtual int32_t __stdcall get_BorderThickness(struct struct_Microsoft_UI_Xaml_Thickness*) noexcept = 0;
+            virtual int32_t __stdcall put_BorderThickness(struct struct_Microsoft_UI_Xaml_Thickness) noexcept = 0;
+            virtual int32_t __stdcall get_Padding(struct struct_Microsoft_UI_Xaml_Thickness*) noexcept = 0;
+            virtual int32_t __stdcall put_Padding(struct struct_Microsoft_UI_Xaml_Thickness) noexcept = 0;
+            virtual int32_t __stdcall get_CornerRadius(struct struct_Microsoft_UI_Xaml_CornerRadius*) noexcept = 0;
+            virtual int32_t __stdcall put_CornerRadius(struct struct_Microsoft_UI_Xaml_CornerRadius) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::ILayoutPanelFactory>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall CreateInstance(void*, void**, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::ILayoutPanelStatics>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_LayoutProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_BorderBrushProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_BorderThicknessProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_PaddingProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_CornerRadiusProperty(void**) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::ILayoutProtected>
@@ -10466,6 +11084,16 @@ namespace winrt::impl
             virtual int32_t __stdcall remove_ValueChanged(winrt::event_token) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::INumberBox2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_InputScope(void**) noexcept = 0;
+            virtual int32_t __stdcall put_InputScope(void*) noexcept = 0;
+            virtual int32_t __stdcall get_TextAlignment(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall put_TextAlignment(int32_t) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::INumberBoxFactory>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -10496,6 +11124,14 @@ namespace winrt::impl
             virtual int32_t __stdcall get_IsWrapEnabledProperty(void**) noexcept = 0;
             virtual int32_t __stdcall get_AcceptsExpressionProperty(void**) noexcept = 0;
             virtual int32_t __stdcall get_NumberFormatterProperty(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::INumberBoxStatics2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_InputScopeProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_TextAlignmentProperty(void**) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::INumberBoxValueChangedEventArgs>
@@ -10542,6 +11178,108 @@ namespace winrt::impl
             virtual int32_t __stdcall get_FrameProperty(void**) noexcept = 0;
             virtual int32_t __stdcall get_TopAppBarProperty(void**) noexcept = 0;
             virtual int32_t __stdcall get_BottomAppBarProperty(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IPagerControl>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_DisplayMode(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall put_DisplayMode(int32_t) noexcept = 0;
+            virtual int32_t __stdcall get_NumberOfPages(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall put_NumberOfPages(int32_t) noexcept = 0;
+            virtual int32_t __stdcall get_FirstButtonVisibility(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall put_FirstButtonVisibility(int32_t) noexcept = 0;
+            virtual int32_t __stdcall get_PreviousButtonVisibility(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall put_PreviousButtonVisibility(int32_t) noexcept = 0;
+            virtual int32_t __stdcall get_NextButtonVisibility(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall put_NextButtonVisibility(int32_t) noexcept = 0;
+            virtual int32_t __stdcall get_LastButtonVisibility(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall put_LastButtonVisibility(int32_t) noexcept = 0;
+            virtual int32_t __stdcall get_FirstButtonCommand(void**) noexcept = 0;
+            virtual int32_t __stdcall put_FirstButtonCommand(void*) noexcept = 0;
+            virtual int32_t __stdcall get_PreviousButtonCommand(void**) noexcept = 0;
+            virtual int32_t __stdcall put_PreviousButtonCommand(void*) noexcept = 0;
+            virtual int32_t __stdcall get_NextButtonCommand(void**) noexcept = 0;
+            virtual int32_t __stdcall put_NextButtonCommand(void*) noexcept = 0;
+            virtual int32_t __stdcall get_LastButtonCommand(void**) noexcept = 0;
+            virtual int32_t __stdcall put_LastButtonCommand(void*) noexcept = 0;
+            virtual int32_t __stdcall get_PagerInputCommand(void**) noexcept = 0;
+            virtual int32_t __stdcall put_PagerInputCommand(void*) noexcept = 0;
+            virtual int32_t __stdcall get_FirstButtonStyle(void**) noexcept = 0;
+            virtual int32_t __stdcall put_FirstButtonStyle(void*) noexcept = 0;
+            virtual int32_t __stdcall get_PreviousButtonStyle(void**) noexcept = 0;
+            virtual int32_t __stdcall put_PreviousButtonStyle(void*) noexcept = 0;
+            virtual int32_t __stdcall get_NextButtonStyle(void**) noexcept = 0;
+            virtual int32_t __stdcall put_NextButtonStyle(void*) noexcept = 0;
+            virtual int32_t __stdcall get_LastButtonStyle(void**) noexcept = 0;
+            virtual int32_t __stdcall put_LastButtonStyle(void*) noexcept = 0;
+            virtual int32_t __stdcall get_ButtonPanelAlwaysShowFirstLastPageIndex(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_ButtonPanelAlwaysShowFirstLastPageIndex(bool) noexcept = 0;
+            virtual int32_t __stdcall get_SelectedPageIndex(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall put_SelectedPageIndex(int32_t) noexcept = 0;
+            virtual int32_t __stdcall get_PrefixText(void**) noexcept = 0;
+            virtual int32_t __stdcall put_PrefixText(void*) noexcept = 0;
+            virtual int32_t __stdcall get_SuffixText(void**) noexcept = 0;
+            virtual int32_t __stdcall put_SuffixText(void*) noexcept = 0;
+            virtual int32_t __stdcall add_SelectedIndexChanged(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_SelectedIndexChanged(winrt::event_token) noexcept = 0;
+            virtual int32_t __stdcall get_TemplateSettings(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IPagerControlFactory>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall CreateInstance(void*, void**, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IPagerControlSelectedIndexChangedEventArgs>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_NewPageIndex(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall get_PreviousPageIndex(int32_t*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IPagerControlStatics>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_DisplayModeProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_NumberOfPagesProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_FirstButtonVisibilityProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_PreviousButtonVisibilityProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_NextButtonVisibilityProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_LastButtonVisibilityProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_FirstButtonCommandProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_PreviousButtonCommandProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_NextButtonCommandProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_LastButtonCommandProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_PagerInputCommandProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_FirstButtonStyleProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_PreviousButtonStyleProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_NextButtonStyleProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_LastButtonStyleProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_ButtonPanelAlwaysShowFirstLastPageIndexProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_SelectedPageIndexProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_PrefixTextProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_SuffixTextProperty(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IPagerControlTemplateSettings>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_Pages(void**) noexcept = 0;
+            virtual int32_t __stdcall get_NumberPanelItems(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IPagerControlTemplateSettingsFactory>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall CreateInstance(void*, void**, void**) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IPanel>
@@ -11086,6 +11824,16 @@ namespace winrt::impl
             virtual int32_t __stdcall put_Maximum(double) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IProgressRing2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_DeterminateSource(void**) noexcept = 0;
+            virtual int32_t __stdcall put_DeterminateSource(void*) noexcept = 0;
+            virtual int32_t __stdcall get_IndeterminateSource(void**) noexcept = 0;
+            virtual int32_t __stdcall put_IndeterminateSource(void*) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IProgressRingFactory>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -11102,6 +11850,14 @@ namespace winrt::impl
             virtual int32_t __stdcall get_ValueProperty(void**) noexcept = 0;
             virtual int32_t __stdcall get_MinimumProperty(void**) noexcept = 0;
             virtual int32_t __stdcall get_MaximumProperty(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IProgressRingStatics2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_DeterminateSourceProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_IndeterminateSourceProperty(void**) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IProgressRingTemplateSettings>
@@ -11344,6 +12100,66 @@ namespace winrt::impl
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
             virtual int32_t __stdcall CreateInstance(void*, void**, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IRecyclePool>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall PutElement(void*, void*) noexcept = 0;
+            virtual int32_t __stdcall PutElementWithOwner(void*, void*, void*) noexcept = 0;
+            virtual int32_t __stdcall TryGetElement(void*, void**) noexcept = 0;
+            virtual int32_t __stdcall TryGetElementWithOwner(void*, void*, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IRecyclePoolFactory>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall CreateInstance(void*, void**, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IRecyclePoolOverrides>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall PutElementCore(void*, void*, void*) noexcept = 0;
+            virtual int32_t __stdcall TryGetElementCore(void*, void*, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IRecyclePoolStatics>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_PoolInstanceProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall GetPoolInstance(void*, void**) noexcept = 0;
+            virtual int32_t __stdcall SetPoolInstance(void*, void*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IRecyclingElementFactory>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_RecyclePool(void**) noexcept = 0;
+            virtual int32_t __stdcall put_RecyclePool(void*) noexcept = 0;
+            virtual int32_t __stdcall get_Templates(void**) noexcept = 0;
+            virtual int32_t __stdcall put_Templates(void*) noexcept = 0;
+            virtual int32_t __stdcall add_SelectTemplateKey(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_SelectTemplateKey(winrt::event_token) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IRecyclingElementFactoryFactory>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall CreateInstance(void*, void**, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IRecyclingElementFactoryOverrides>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall OnSelectTemplateKeyCore(void*, void*, void**) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IRefreshContainer>
@@ -11966,6 +12782,16 @@ namespace winrt::impl
             virtual int32_t __stdcall remove_AnchorRequested(winrt::event_token) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IScrollView2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall add_ScrollStarting(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_ScrollStarting(winrt::event_token) noexcept = 0;
+            virtual int32_t __stdcall add_ZoomStarting(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_ZoomStarting(winrt::event_token) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IScrollViewFactory>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -12251,6 +13077,16 @@ namespace winrt::impl
             virtual int32_t __stdcall CreateInstance2(int32_t, int32_t, void*, void**, void**) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IScrollingScrollStartingEventArgs>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_CorrelationId(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall get_HorizontalOffset(double*) noexcept = 0;
+            virtual int32_t __stdcall get_VerticalOffset(double*) noexcept = 0;
+            virtual int32_t __stdcall get_ZoomFactor(float*) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IScrollingZoomAnimationStartingEventArgs>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -12288,6 +13124,16 @@ namespace winrt::impl
             virtual int32_t __stdcall CreateInstance2(int32_t, int32_t, void*, void**, void**) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IScrollingZoomStartingEventArgs>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_CorrelationId(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall get_HorizontalOffset(double*) noexcept = 0;
+            virtual int32_t __stdcall get_VerticalOffset(double*) noexcept = 0;
+            virtual int32_t __stdcall get_ZoomFactor(float*) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::ISectionsInViewChangedEventArgs>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -12300,6 +13146,16 @@ namespace winrt::impl
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::ISelectTemplateEventArgs>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_TemplateKey(void**) noexcept = 0;
+            virtual int32_t __stdcall put_TemplateKey(void*) noexcept = 0;
+            virtual int32_t __stdcall get_DataContext(void**) noexcept = 0;
+            virtual int32_t __stdcall get_Owner(void**) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::ISelectionChangedEventArgs>
@@ -12315,6 +13171,79 @@ namespace winrt::impl
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
             virtual int32_t __stdcall CreateInstanceWithRemovedItemsAndAddedItems(void*, void*, void*, void**, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::ISelectionModel>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall add_SelectionChanged(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_SelectionChanged(winrt::event_token) noexcept = 0;
+            virtual int32_t __stdcall add_ChildrenRequested(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_ChildrenRequested(winrt::event_token) noexcept = 0;
+            virtual int32_t __stdcall get_Source(void**) noexcept = 0;
+            virtual int32_t __stdcall put_Source(void*) noexcept = 0;
+            virtual int32_t __stdcall get_SingleSelect(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_SingleSelect(bool) noexcept = 0;
+            virtual int32_t __stdcall get_AnchorIndex(void**) noexcept = 0;
+            virtual int32_t __stdcall put_AnchorIndex(void*) noexcept = 0;
+            virtual int32_t __stdcall get_SelectedIndex(void**) noexcept = 0;
+            virtual int32_t __stdcall put_SelectedIndex(void*) noexcept = 0;
+            virtual int32_t __stdcall get_SelectedItem(void**) noexcept = 0;
+            virtual int32_t __stdcall get_SelectedItems(void**) noexcept = 0;
+            virtual int32_t __stdcall get_SelectedIndices(void**) noexcept = 0;
+            virtual int32_t __stdcall SetAnchorIndex(int32_t) noexcept = 0;
+            virtual int32_t __stdcall SetAnchorIndexWithGroup(int32_t, int32_t) noexcept = 0;
+            virtual int32_t __stdcall Select(int32_t) noexcept = 0;
+            virtual int32_t __stdcall SelectWithGroup(int32_t, int32_t) noexcept = 0;
+            virtual int32_t __stdcall SelectAt(void*) noexcept = 0;
+            virtual int32_t __stdcall Deselect(int32_t) noexcept = 0;
+            virtual int32_t __stdcall DeselectWithGroup(int32_t, int32_t) noexcept = 0;
+            virtual int32_t __stdcall DeselectAt(void*) noexcept = 0;
+            virtual int32_t __stdcall IsSelected(int32_t, void**) noexcept = 0;
+            virtual int32_t __stdcall IsSelectedWithGroup(int32_t, int32_t, void**) noexcept = 0;
+            virtual int32_t __stdcall IsSelectedAt(void*, void**) noexcept = 0;
+            virtual int32_t __stdcall SelectRangeFromAnchor(int32_t) noexcept = 0;
+            virtual int32_t __stdcall SelectRangeFromAnchorWithGroup(int32_t, int32_t) noexcept = 0;
+            virtual int32_t __stdcall SelectRangeFromAnchorTo(void*) noexcept = 0;
+            virtual int32_t __stdcall DeselectRangeFromAnchor(int32_t) noexcept = 0;
+            virtual int32_t __stdcall DeselectRangeFromAnchorWithGroup(int32_t, int32_t) noexcept = 0;
+            virtual int32_t __stdcall DeselectRangeFromAnchorTo(void*) noexcept = 0;
+            virtual int32_t __stdcall SelectRange(void*, void*) noexcept = 0;
+            virtual int32_t __stdcall DeselectRange(void*, void*) noexcept = 0;
+            virtual int32_t __stdcall SelectAll() noexcept = 0;
+            virtual int32_t __stdcall SelectAllFlat() noexcept = 0;
+            virtual int32_t __stdcall ClearSelection() noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::ISelectionModelChildrenRequestedEventArgs>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_Source(void**) noexcept = 0;
+            virtual int32_t __stdcall get_SourceIndex(void**) noexcept = 0;
+            virtual int32_t __stdcall get_Children(void**) noexcept = 0;
+            virtual int32_t __stdcall put_Children(void*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::ISelectionModelFactory>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall CreateInstance(void*, void**, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::ISelectionModelProtected>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall OnPropertyChanged(void*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::ISelectionModelSelectionChangedEventArgs>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::ISelectorBar>
@@ -12372,6 +13301,20 @@ namespace winrt::impl
         {
             virtual int32_t __stdcall get_ItemsProperty(void**) noexcept = 0;
             virtual int32_t __stdcall get_SelectedItemProperty(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::ISelfPlayingAnimatedVisual>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall Pause() noexcept = 0;
+            virtual int32_t __stdcall PlayAsync(double, double, bool, void**) noexcept = 0;
+            virtual int32_t __stdcall Resume() noexcept = 0;
+            virtual int32_t __stdcall Stop() noexcept = 0;
+            virtual int32_t __stdcall SetPlaybackRate(double) noexcept = 0;
+            virtual int32_t __stdcall SetProgress(double) noexcept = 0;
+            virtual int32_t __stdcall SetProgressObject(void*) noexcept = 0;
+            virtual int32_t __stdcall SetSize(winrt::Windows::Foundation::Size) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::ISemanticZoom>
@@ -12609,7 +13552,28 @@ namespace winrt::impl
             virtual int32_t __stdcall put_Spacing(double) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IStackLayout2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_IsVirtualizationEnabled(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_IsVirtualizationEnabled(bool) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IStackLayoutFactory>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall CreateInstance(void*, void**, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IStackLayoutState>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IStackLayoutStateFactory>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
@@ -12622,6 +13586,13 @@ namespace winrt::impl
         {
             virtual int32_t __stdcall get_OrientationProperty(void**) noexcept = 0;
             virtual int32_t __stdcall get_SpacingProperty(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IStackLayoutStatics2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_IsVirtualizationEnabledProperty(void**) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IStackPanel>
@@ -13191,6 +14162,14 @@ namespace winrt::impl
             virtual int32_t __stdcall remove_Closed(winrt::event_token) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::ITeachingTip2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall add_Opened(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_Opened(winrt::event_token) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::ITeachingTipClosedEventArgs>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -13213,6 +14192,12 @@ namespace winrt::impl
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
             virtual int32_t __stdcall CreateInstance(void*, void**, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::ITeachingTipOpenedEventArgs>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::ITeachingTipStatics>
@@ -14341,6 +15326,19 @@ namespace winrt::impl
             virtual int32_t __stdcall CreateInstance(void*, void**, void**) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IUniformGridLayoutState>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IUniformGridLayoutStateFactory>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall CreateInstance(void*, void**, void**) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IUniformGridLayoutStatics>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -14692,6 +15690,13 @@ namespace winrt::impl
         struct WINRT_IMPL_NOVTABLE type : unknown_abi
         {
             virtual int32_t __stdcall Invoke(void*, void*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::DoInkPresenterWork>
+    {
+        struct WINRT_IMPL_NOVTABLE type : unknown_abi
+        {
+            virtual int32_t __stdcall Invoke(void*) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::DragItemsStartingEventHandler>
@@ -15259,6 +16264,15 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IAppBarToggleButtonStatics>
     {
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IAppBarToggleButtonStatics<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IApplicationViewSpanningRects
+    {
+        auto GetSpanningRects() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IApplicationViewSpanningRects>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IApplicationViewSpanningRects<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_IAutoSuggestBox
@@ -17268,6 +18282,33 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IDynamicOverflowItemsChangingEventArgs<D>;
     };
     template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IElementFactory
+    {
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IElementFactory>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IElementFactory<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IElementFactoryFactory
+    {
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IElementFactoryFactory>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IElementFactoryFactory<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IElementFactoryOverrides
+    {
+        auto GetElementCore(winrt::Microsoft::UI::Xaml::ElementFactoryGetArgs const& args) const;
+        auto RecycleElementCore(winrt::Microsoft::UI::Xaml::ElementFactoryRecycleArgs const& args) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IElementFactoryOverrides>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IElementFactoryOverrides<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_IExpander
     {
         [[nodiscard]] auto Header() const;
@@ -17386,6 +18427,76 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IFlipViewStatics>
     {
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IFlipViewStatics<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IFlowLayout
+    {
+        [[nodiscard]] auto Orientation() const;
+        auto Orientation(winrt::Microsoft::UI::Xaml::Controls::Orientation const& value) const;
+        [[nodiscard]] auto MinRowSpacing() const;
+        auto MinRowSpacing(double value) const;
+        [[nodiscard]] auto MinColumnSpacing() const;
+        auto MinColumnSpacing(double value) const;
+        [[nodiscard]] auto LineAlignment() const;
+        auto LineAlignment(winrt::Microsoft::UI::Xaml::Controls::FlowLayoutLineAlignment const& value) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IFlowLayout>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IFlowLayout<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IFlowLayoutFactory
+    {
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IFlowLayoutFactory>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IFlowLayoutFactory<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IFlowLayoutOverrides
+    {
+        auto GetMeasureSize(int32_t index, winrt::Windows::Foundation::Size const& availableSize) const;
+        auto GetProvisionalArrangeSize(int32_t index, winrt::Windows::Foundation::Size const& measureSize, winrt::Windows::Foundation::Size const& desiredSize) const;
+        auto ShouldBreakLine(int32_t index, double remainingSpace) const;
+        auto GetAnchorForRealizationRect(winrt::Windows::Foundation::Size const& availableSize, winrt::Microsoft::UI::Xaml::Controls::VirtualizingLayoutContext const& context) const;
+        auto GetAnchorForTargetElement(int32_t targetIndex, winrt::Windows::Foundation::Size const& availableSize, winrt::Microsoft::UI::Xaml::Controls::VirtualizingLayoutContext const& context) const;
+        auto GetExtent(winrt::Windows::Foundation::Size const& availableSize, winrt::Microsoft::UI::Xaml::Controls::VirtualizingLayoutContext const& context, winrt::Microsoft::UI::Xaml::UIElement const& firstRealized, int32_t firstRealizedItemIndex, winrt::Windows::Foundation::Rect const& firstRealizedLayoutBounds, winrt::Microsoft::UI::Xaml::UIElement const& lastRealized, int32_t lastRealizedItemIndex, winrt::Windows::Foundation::Rect const& lastRealizedLayoutBounds) const;
+        auto OnElementMeasured(winrt::Microsoft::UI::Xaml::UIElement const& element, int32_t index, winrt::Windows::Foundation::Size const& availableSize, winrt::Windows::Foundation::Size const& measureSize, winrt::Windows::Foundation::Size const& desiredSize, winrt::Windows::Foundation::Size const& provisionalArrangeSize, winrt::Microsoft::UI::Xaml::Controls::VirtualizingLayoutContext const& context) const;
+        auto OnLineArranged(int32_t startIndex, int32_t countInLine, double lineSize, winrt::Microsoft::UI::Xaml::Controls::VirtualizingLayoutContext const& context) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IFlowLayoutOverrides>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IFlowLayoutOverrides<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IFlowLayoutState
+    {
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IFlowLayoutState>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IFlowLayoutState<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IFlowLayoutStateFactory
+    {
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IFlowLayoutStateFactory>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IFlowLayoutStateFactory<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IFlowLayoutStatics
+    {
+        [[nodiscard]] auto OrientationProperty() const;
+        [[nodiscard]] auto MinRowSpacingProperty() const;
+        [[nodiscard]] auto MinColumnSpacingProperty() const;
+        [[nodiscard]] auto LineAlignmentProperty() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IFlowLayoutStatics>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IFlowLayoutStatics<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_IFlyout
@@ -18134,6 +19245,28 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IImageStatics<D>;
     };
     template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IIndexPath
+    {
+        auto GetSize() const;
+        auto GetAt(int32_t index) const;
+        auto CompareTo(winrt::Microsoft::UI::Xaml::Controls::IndexPath const& other) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IIndexPath>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IIndexPath<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IIndexPathStatics
+    {
+        auto CreateFrom(int32_t index) const;
+        auto CreateFrom(int32_t groupIndex, int32_t itemIndex) const;
+        auto CreateFromIndices(param::vector<int32_t> const& indices) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IIndexPathStatics>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IIndexPathStatics<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_IInfoBadge
     {
         [[nodiscard]] auto Value() const;
@@ -18245,6 +19378,18 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IInfoBar<D>;
     };
     template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IInfoBar2
+    {
+        auto Opened(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::InfoBar, winrt::Microsoft::UI::Xaml::Controls::InfoBarOpenedEventArgs> const& handler) const;
+        using Opened_revoker = impl::event_revoker<winrt::Microsoft::UI::Xaml::Controls::IInfoBar2, &impl::abi_t<winrt::Microsoft::UI::Xaml::Controls::IInfoBar2>::remove_Opened>;
+        [[nodiscard]] auto Opened(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::InfoBar, winrt::Microsoft::UI::Xaml::Controls::InfoBarOpenedEventArgs> const& handler) const;
+        auto Opened(winrt::event_token const& token) const noexcept;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IInfoBar2>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IInfoBar2<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_IInfoBarClosedEventArgs
     {
         [[nodiscard]] auto Reason() const;
@@ -18288,6 +19433,22 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IInfoBarFactory>
     {
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IInfoBarFactory<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IInfoBarOpenedEventArgs
+    {
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IInfoBarOpenedEventArgs>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IInfoBarOpenedEventArgs<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IInfoBarOpenedEventArgsFactory
+    {
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IInfoBarOpenedEventArgsFactory>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IInfoBarOpenedEventArgsFactory<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_IInfoBarStatics
@@ -18338,6 +19499,35 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IInfoBarTemplateSettingsStatics>
     {
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IInfoBarTemplateSettingsStatics<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IInkCanvas
+    {
+        [[nodiscard]] auto IsEnabled() const;
+        auto IsEnabled(bool value) const;
+        auto QueueInkPresenterWorkItem(winrt::Microsoft::UI::Xaml::Controls::DoInkPresenterWork const& workItem) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IInkCanvas>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IInkCanvas<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IInkCanvasFactory
+    {
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IInkCanvasFactory>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IInkCanvasFactory<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IInkCanvasStatics
+    {
+        [[nodiscard]] auto IsEnabledProperty() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IInkCanvasStatics>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IInkCanvasStatics<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_IInsertionPanel
@@ -18446,6 +19636,24 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IItemContainer<D>;
     };
     template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IItemContainer2
+    {
+        [[nodiscard]] auto CanUserSelect() const;
+        auto CanUserSelect(winrt::Microsoft::UI::Xaml::Controls::ItemContainerUserSelectMode const& value) const;
+        [[nodiscard]] auto CanUserInvoke() const;
+        auto CanUserInvoke(winrt::Microsoft::UI::Xaml::Controls::ItemContainerUserInvokeMode const& value) const;
+        [[nodiscard]] auto MultiSelectMode() const;
+        auto MultiSelectMode(winrt::Microsoft::UI::Xaml::Controls::ItemContainerMultiSelectMode const& value) const;
+        auto ItemInvoked(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::ItemContainer, winrt::Microsoft::UI::Xaml::Controls::ItemContainerInvokedEventArgs> const& handler) const;
+        using ItemInvoked_revoker = impl::event_revoker<winrt::Microsoft::UI::Xaml::Controls::IItemContainer2, &impl::abi_t<winrt::Microsoft::UI::Xaml::Controls::IItemContainer2>::remove_ItemInvoked>;
+        [[nodiscard]] auto ItemInvoked(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::ItemContainer, winrt::Microsoft::UI::Xaml::Controls::ItemContainerInvokedEventArgs> const& handler) const;
+        auto ItemInvoked(winrt::event_token const& token) const noexcept;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IItemContainer2>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IItemContainer2<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_IItemContainerFactory
     {
         auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
@@ -18481,6 +19689,18 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IItemContainerGenerator<D>;
     };
     template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IItemContainerInvokedEventArgs
+    {
+        [[nodiscard]] auto OriginalSource() const;
+        [[nodiscard]] auto InteractionTrigger() const;
+        [[nodiscard]] auto Handled() const;
+        auto Handled(bool value) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IItemContainerInvokedEventArgs>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IItemContainerInvokedEventArgs<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_IItemContainerMapping
     {
         auto ItemFromContainer(winrt::Microsoft::UI::Xaml::DependencyObject const& container) const;
@@ -18501,6 +19721,17 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IItemContainerStatics>
     {
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IItemContainerStatics<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IItemContainerStatics2
+    {
+        [[nodiscard]] auto CanUserSelectProperty() const;
+        [[nodiscard]] auto CanUserInvokeProperty() const;
+        [[nodiscard]] auto MultiSelectModeProperty() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IItemContainerStatics2>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IItemContainerStatics2<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_IItemsControl
@@ -19043,6 +20274,46 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::ILayoutOverrides>
     {
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_ILayoutOverrides<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_ILayoutPanel
+    {
+        [[nodiscard]] auto Layout() const;
+        auto Layout(winrt::Microsoft::UI::Xaml::Controls::Layout const& value) const;
+        [[nodiscard]] auto BorderBrush() const;
+        auto BorderBrush(winrt::Microsoft::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] auto BorderThickness() const;
+        auto BorderThickness(winrt::Microsoft::UI::Xaml::Thickness const& value) const;
+        [[nodiscard]] auto Padding() const;
+        auto Padding(winrt::Microsoft::UI::Xaml::Thickness const& value) const;
+        [[nodiscard]] auto CornerRadius() const;
+        auto CornerRadius(winrt::Microsoft::UI::Xaml::CornerRadius const& value) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::ILayoutPanel>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_ILayoutPanel<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_ILayoutPanelFactory
+    {
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::ILayoutPanelFactory>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_ILayoutPanelFactory<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_ILayoutPanelStatics
+    {
+        [[nodiscard]] auto LayoutProperty() const;
+        [[nodiscard]] auto BorderBrushProperty() const;
+        [[nodiscard]] auto BorderThicknessProperty() const;
+        [[nodiscard]] auto PaddingProperty() const;
+        [[nodiscard]] auto CornerRadiusProperty() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::ILayoutPanelStatics>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_ILayoutPanelStatics<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_ILayoutProtected
@@ -20686,6 +21957,18 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_INumberBox<D>;
     };
     template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_INumberBox2
+    {
+        [[nodiscard]] auto InputScope() const;
+        auto InputScope(winrt::Microsoft::UI::Xaml::Input::InputScope const& value) const;
+        [[nodiscard]] auto TextAlignment() const;
+        auto TextAlignment(winrt::Microsoft::UI::Xaml::TextAlignment const& value) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::INumberBox2>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_INumberBox2<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_INumberBoxFactory
     {
         auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
@@ -20720,6 +22003,16 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::INumberBoxStatics>
     {
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_INumberBoxStatics<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_INumberBoxStatics2
+    {
+        [[nodiscard]] auto InputScopeProperty() const;
+        [[nodiscard]] auto TextAlignmentProperty() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::INumberBoxStatics2>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_INumberBoxStatics2<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_INumberBoxValueChangedEventArgs
@@ -20776,6 +22069,122 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IPageStatics>
     {
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IPageStatics<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IPagerControl
+    {
+        [[nodiscard]] auto DisplayMode() const;
+        auto DisplayMode(winrt::Microsoft::UI::Xaml::Controls::PagerControlDisplayMode const& value) const;
+        [[nodiscard]] auto NumberOfPages() const;
+        auto NumberOfPages(int32_t value) const;
+        [[nodiscard]] auto FirstButtonVisibility() const;
+        auto FirstButtonVisibility(winrt::Microsoft::UI::Xaml::Controls::PagerControlButtonVisibility const& value) const;
+        [[nodiscard]] auto PreviousButtonVisibility() const;
+        auto PreviousButtonVisibility(winrt::Microsoft::UI::Xaml::Controls::PagerControlButtonVisibility const& value) const;
+        [[nodiscard]] auto NextButtonVisibility() const;
+        auto NextButtonVisibility(winrt::Microsoft::UI::Xaml::Controls::PagerControlButtonVisibility const& value) const;
+        [[nodiscard]] auto LastButtonVisibility() const;
+        auto LastButtonVisibility(winrt::Microsoft::UI::Xaml::Controls::PagerControlButtonVisibility const& value) const;
+        [[nodiscard]] auto FirstButtonCommand() const;
+        auto FirstButtonCommand(winrt::Microsoft::UI::Xaml::Input::ICommand const& value) const;
+        [[nodiscard]] auto PreviousButtonCommand() const;
+        auto PreviousButtonCommand(winrt::Microsoft::UI::Xaml::Input::ICommand const& value) const;
+        [[nodiscard]] auto NextButtonCommand() const;
+        auto NextButtonCommand(winrt::Microsoft::UI::Xaml::Input::ICommand const& value) const;
+        [[nodiscard]] auto LastButtonCommand() const;
+        auto LastButtonCommand(winrt::Microsoft::UI::Xaml::Input::ICommand const& value) const;
+        [[nodiscard]] auto PagerInputCommand() const;
+        auto PagerInputCommand(winrt::Microsoft::UI::Xaml::Input::ICommand const& value) const;
+        [[nodiscard]] auto FirstButtonStyle() const;
+        auto FirstButtonStyle(winrt::Microsoft::UI::Xaml::Style const& value) const;
+        [[nodiscard]] auto PreviousButtonStyle() const;
+        auto PreviousButtonStyle(winrt::Microsoft::UI::Xaml::Style const& value) const;
+        [[nodiscard]] auto NextButtonStyle() const;
+        auto NextButtonStyle(winrt::Microsoft::UI::Xaml::Style const& value) const;
+        [[nodiscard]] auto LastButtonStyle() const;
+        auto LastButtonStyle(winrt::Microsoft::UI::Xaml::Style const& value) const;
+        [[nodiscard]] auto ButtonPanelAlwaysShowFirstLastPageIndex() const;
+        auto ButtonPanelAlwaysShowFirstLastPageIndex(bool value) const;
+        [[nodiscard]] auto SelectedPageIndex() const;
+        auto SelectedPageIndex(int32_t value) const;
+        [[nodiscard]] auto PrefixText() const;
+        auto PrefixText(param::hstring const& value) const;
+        [[nodiscard]] auto SuffixText() const;
+        auto SuffixText(param::hstring const& value) const;
+        auto SelectedIndexChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::PagerControl, winrt::Microsoft::UI::Xaml::Controls::PagerControlSelectedIndexChangedEventArgs> const& handler) const;
+        using SelectedIndexChanged_revoker = impl::event_revoker<winrt::Microsoft::UI::Xaml::Controls::IPagerControl, &impl::abi_t<winrt::Microsoft::UI::Xaml::Controls::IPagerControl>::remove_SelectedIndexChanged>;
+        [[nodiscard]] auto SelectedIndexChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::PagerControl, winrt::Microsoft::UI::Xaml::Controls::PagerControlSelectedIndexChangedEventArgs> const& handler) const;
+        auto SelectedIndexChanged(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] auto TemplateSettings() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IPagerControl>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IPagerControl<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IPagerControlFactory
+    {
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IPagerControlFactory>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IPagerControlFactory<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IPagerControlSelectedIndexChangedEventArgs
+    {
+        [[nodiscard]] auto NewPageIndex() const;
+        [[nodiscard]] auto PreviousPageIndex() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IPagerControlSelectedIndexChangedEventArgs>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IPagerControlSelectedIndexChangedEventArgs<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IPagerControlStatics
+    {
+        [[nodiscard]] auto DisplayModeProperty() const;
+        [[nodiscard]] auto NumberOfPagesProperty() const;
+        [[nodiscard]] auto FirstButtonVisibilityProperty() const;
+        [[nodiscard]] auto PreviousButtonVisibilityProperty() const;
+        [[nodiscard]] auto NextButtonVisibilityProperty() const;
+        [[nodiscard]] auto LastButtonVisibilityProperty() const;
+        [[nodiscard]] auto FirstButtonCommandProperty() const;
+        [[nodiscard]] auto PreviousButtonCommandProperty() const;
+        [[nodiscard]] auto NextButtonCommandProperty() const;
+        [[nodiscard]] auto LastButtonCommandProperty() const;
+        [[nodiscard]] auto PagerInputCommandProperty() const;
+        [[nodiscard]] auto FirstButtonStyleProperty() const;
+        [[nodiscard]] auto PreviousButtonStyleProperty() const;
+        [[nodiscard]] auto NextButtonStyleProperty() const;
+        [[nodiscard]] auto LastButtonStyleProperty() const;
+        [[nodiscard]] auto ButtonPanelAlwaysShowFirstLastPageIndexProperty() const;
+        [[nodiscard]] auto SelectedPageIndexProperty() const;
+        [[nodiscard]] auto PrefixTextProperty() const;
+        [[nodiscard]] auto SuffixTextProperty() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IPagerControlStatics>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IPagerControlStatics<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IPagerControlTemplateSettings
+    {
+        [[nodiscard]] auto Pages() const;
+        [[nodiscard]] auto NumberPanelItems() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IPagerControlTemplateSettings>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IPagerControlTemplateSettings<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IPagerControlTemplateSettingsFactory
+    {
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IPagerControlTemplateSettingsFactory>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IPagerControlTemplateSettingsFactory<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_IPanel
@@ -21426,6 +22835,18 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IProgressRing<D>;
     };
     template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IProgressRing2
+    {
+        [[nodiscard]] auto DeterminateSource() const;
+        auto DeterminateSource(winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource const& value) const;
+        [[nodiscard]] auto IndeterminateSource() const;
+        auto IndeterminateSource(winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource const& value) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IProgressRing2>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IProgressRing2<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_IProgressRingFactory
     {
         auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
@@ -21446,6 +22867,16 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IProgressRingStatics>
     {
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IProgressRingStatics<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IProgressRingStatics2
+    {
+        [[nodiscard]] auto DeterminateSourceProperty() const;
+        [[nodiscard]] auto IndeterminateSourceProperty() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IProgressRingStatics2>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IProgressRingStatics2<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_IProgressRingTemplateSettings
@@ -21736,6 +23167,82 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IRatingItemInfoFactory>
     {
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IRatingItemInfoFactory<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IRecyclePool
+    {
+        auto PutElement(winrt::Microsoft::UI::Xaml::UIElement const& element, param::hstring const& key) const;
+        auto PutElement(winrt::Microsoft::UI::Xaml::UIElement const& element, param::hstring const& key, winrt::Microsoft::UI::Xaml::UIElement const& owner) const;
+        auto TryGetElement(param::hstring const& key) const;
+        auto TryGetElement(param::hstring const& key, winrt::Microsoft::UI::Xaml::UIElement const& owner) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IRecyclePool>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IRecyclePool<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IRecyclePoolFactory
+    {
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IRecyclePoolFactory>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IRecyclePoolFactory<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IRecyclePoolOverrides
+    {
+        auto PutElementCore(winrt::Microsoft::UI::Xaml::UIElement const& element, param::hstring const& key, winrt::Microsoft::UI::Xaml::UIElement const& owner) const;
+        auto TryGetElementCore(param::hstring const& key, winrt::Microsoft::UI::Xaml::UIElement const& owner) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IRecyclePoolOverrides>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IRecyclePoolOverrides<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IRecyclePoolStatics
+    {
+        [[nodiscard]] auto PoolInstanceProperty() const;
+        auto GetPoolInstance(winrt::Microsoft::UI::Xaml::DataTemplate const& dataTemplate) const;
+        auto SetPoolInstance(winrt::Microsoft::UI::Xaml::DataTemplate const& dataTemplate, winrt::Microsoft::UI::Xaml::Controls::RecyclePool const& value) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IRecyclePoolStatics>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IRecyclePoolStatics<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IRecyclingElementFactory
+    {
+        [[nodiscard]] auto RecyclePool() const;
+        auto RecyclePool(winrt::Microsoft::UI::Xaml::Controls::RecyclePool const& value) const;
+        [[nodiscard]] auto Templates() const;
+        auto Templates(param::map<hstring, winrt::Microsoft::UI::Xaml::DataTemplate> const& value) const;
+        auto SelectTemplateKey(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::RecyclingElementFactory, winrt::Microsoft::UI::Xaml::Controls::SelectTemplateEventArgs> const& handler) const;
+        using SelectTemplateKey_revoker = impl::event_revoker<winrt::Microsoft::UI::Xaml::Controls::IRecyclingElementFactory, &impl::abi_t<winrt::Microsoft::UI::Xaml::Controls::IRecyclingElementFactory>::remove_SelectTemplateKey>;
+        [[nodiscard]] auto SelectTemplateKey(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::RecyclingElementFactory, winrt::Microsoft::UI::Xaml::Controls::SelectTemplateEventArgs> const& handler) const;
+        auto SelectTemplateKey(winrt::event_token const& token) const noexcept;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IRecyclingElementFactory>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IRecyclingElementFactory<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IRecyclingElementFactoryFactory
+    {
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IRecyclingElementFactoryFactory>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IRecyclingElementFactoryFactory<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IRecyclingElementFactoryOverrides
+    {
+        auto OnSelectTemplateKeyCore(winrt::Windows::Foundation::IInspectable const& dataContext, winrt::Microsoft::UI::Xaml::UIElement const& owner) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IRecyclingElementFactoryOverrides>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IRecyclingElementFactoryOverrides<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_IRefreshContainer
@@ -22472,6 +23979,22 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IScrollView<D>;
     };
     template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IScrollView2
+    {
+        auto ScrollStarting(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::ScrollView, winrt::Microsoft::UI::Xaml::Controls::ScrollingScrollStartingEventArgs> const& handler) const;
+        using ScrollStarting_revoker = impl::event_revoker<winrt::Microsoft::UI::Xaml::Controls::IScrollView2, &impl::abi_t<winrt::Microsoft::UI::Xaml::Controls::IScrollView2>::remove_ScrollStarting>;
+        [[nodiscard]] auto ScrollStarting(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::ScrollView, winrt::Microsoft::UI::Xaml::Controls::ScrollingScrollStartingEventArgs> const& handler) const;
+        auto ScrollStarting(winrt::event_token const& token) const noexcept;
+        auto ZoomStarting(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::ScrollView, winrt::Microsoft::UI::Xaml::Controls::ScrollingZoomStartingEventArgs> const& handler) const;
+        using ZoomStarting_revoker = impl::event_revoker<winrt::Microsoft::UI::Xaml::Controls::IScrollView2, &impl::abi_t<winrt::Microsoft::UI::Xaml::Controls::IScrollView2>::remove_ZoomStarting>;
+        [[nodiscard]] auto ZoomStarting(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::ScrollView, winrt::Microsoft::UI::Xaml::Controls::ScrollingZoomStartingEventArgs> const& handler) const;
+        auto ZoomStarting(winrt::event_token const& token) const noexcept;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IScrollView2>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IScrollView2<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_IScrollViewFactory
     {
         auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
@@ -22793,6 +24316,18 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IScrollingScrollOptionsFactory<D>;
     };
     template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IScrollingScrollStartingEventArgs
+    {
+        [[nodiscard]] auto CorrelationId() const;
+        [[nodiscard]] auto HorizontalOffset() const;
+        [[nodiscard]] auto VerticalOffset() const;
+        [[nodiscard]] auto ZoomFactor() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IScrollingScrollStartingEventArgs>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IScrollingScrollStartingEventArgs<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_IScrollingZoomAnimationStartingEventArgs
     {
         [[nodiscard]] auto CenterPoint() const;
@@ -22838,6 +24373,18 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IScrollingZoomOptionsFactory<D>;
     };
     template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IScrollingZoomStartingEventArgs
+    {
+        [[nodiscard]] auto CorrelationId() const;
+        [[nodiscard]] auto HorizontalOffset() const;
+        [[nodiscard]] auto VerticalOffset() const;
+        [[nodiscard]] auto ZoomFactor() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IScrollingZoomStartingEventArgs>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IScrollingZoomStartingEventArgs<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_ISectionsInViewChangedEventArgs
     {
         [[nodiscard]] auto AddedSections() const;
@@ -22854,6 +24401,18 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::ISectionsInViewChangedEventArgsFactory>
     {
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_ISectionsInViewChangedEventArgsFactory<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_ISelectTemplateEventArgs
+    {
+        [[nodiscard]] auto TemplateKey() const;
+        auto TemplateKey(param::hstring const& value) const;
+        [[nodiscard]] auto DataContext() const;
+        [[nodiscard]] auto Owner() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::ISelectTemplateEventArgs>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_ISelectTemplateEventArgs<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_ISelectionChangedEventArgs
@@ -22873,6 +24432,93 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::ISelectionChangedEventArgsFactory>
     {
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_ISelectionChangedEventArgsFactory<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_ISelectionModel
+    {
+        auto SelectionChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::SelectionModel, winrt::Microsoft::UI::Xaml::Controls::SelectionModelSelectionChangedEventArgs> const& handler) const;
+        using SelectionChanged_revoker = impl::event_revoker<winrt::Microsoft::UI::Xaml::Controls::ISelectionModel, &impl::abi_t<winrt::Microsoft::UI::Xaml::Controls::ISelectionModel>::remove_SelectionChanged>;
+        [[nodiscard]] auto SelectionChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::SelectionModel, winrt::Microsoft::UI::Xaml::Controls::SelectionModelSelectionChangedEventArgs> const& handler) const;
+        auto SelectionChanged(winrt::event_token const& token) const noexcept;
+        auto ChildrenRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::SelectionModel, winrt::Microsoft::UI::Xaml::Controls::SelectionModelChildrenRequestedEventArgs> const& handler) const;
+        using ChildrenRequested_revoker = impl::event_revoker<winrt::Microsoft::UI::Xaml::Controls::ISelectionModel, &impl::abi_t<winrt::Microsoft::UI::Xaml::Controls::ISelectionModel>::remove_ChildrenRequested>;
+        [[nodiscard]] auto ChildrenRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::SelectionModel, winrt::Microsoft::UI::Xaml::Controls::SelectionModelChildrenRequestedEventArgs> const& handler) const;
+        auto ChildrenRequested(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] auto Source() const;
+        auto Source(winrt::Windows::Foundation::IInspectable const& value) const;
+        [[nodiscard]] auto SingleSelect() const;
+        auto SingleSelect(bool value) const;
+        [[nodiscard]] auto AnchorIndex() const;
+        auto AnchorIndex(winrt::Microsoft::UI::Xaml::Controls::IndexPath const& value) const;
+        [[nodiscard]] auto SelectedIndex() const;
+        auto SelectedIndex(winrt::Microsoft::UI::Xaml::Controls::IndexPath const& value) const;
+        [[nodiscard]] auto SelectedItem() const;
+        [[nodiscard]] auto SelectedItems() const;
+        [[nodiscard]] auto SelectedIndices() const;
+        auto SetAnchorIndex(int32_t index) const;
+        auto SetAnchorIndex(int32_t groupIndex, int32_t itemIndex) const;
+        auto Select(int32_t index) const;
+        auto Select(int32_t groupIndex, int32_t itemIndex) const;
+        auto SelectAt(winrt::Microsoft::UI::Xaml::Controls::IndexPath const& index) const;
+        auto Deselect(int32_t index) const;
+        auto Deselect(int32_t groupIndex, int32_t itemIndex) const;
+        auto DeselectAt(winrt::Microsoft::UI::Xaml::Controls::IndexPath const& index) const;
+        auto IsSelected(int32_t index) const;
+        auto IsSelected(int32_t groupIndex, int32_t itemIndex) const;
+        auto IsSelectedAt(winrt::Microsoft::UI::Xaml::Controls::IndexPath const& index) const;
+        auto SelectRangeFromAnchor(int32_t index) const;
+        auto SelectRangeFromAnchor(int32_t groupIndex, int32_t itemIndex) const;
+        auto SelectRangeFromAnchorTo(winrt::Microsoft::UI::Xaml::Controls::IndexPath const& index) const;
+        auto DeselectRangeFromAnchor(int32_t index) const;
+        auto DeselectRangeFromAnchor(int32_t groupIndex, int32_t itemIndex) const;
+        auto DeselectRangeFromAnchorTo(winrt::Microsoft::UI::Xaml::Controls::IndexPath const& index) const;
+        auto SelectRange(winrt::Microsoft::UI::Xaml::Controls::IndexPath const& start, winrt::Microsoft::UI::Xaml::Controls::IndexPath const& end) const;
+        auto DeselectRange(winrt::Microsoft::UI::Xaml::Controls::IndexPath const& start, winrt::Microsoft::UI::Xaml::Controls::IndexPath const& end) const;
+        auto SelectAll() const;
+        auto SelectAllFlat() const;
+        auto ClearSelection() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::ISelectionModel>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_ISelectionModel<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_ISelectionModelChildrenRequestedEventArgs
+    {
+        [[nodiscard]] auto Source() const;
+        [[nodiscard]] auto SourceIndex() const;
+        [[nodiscard]] auto Children() const;
+        auto Children(winrt::Windows::Foundation::IInspectable const& value) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::ISelectionModelChildrenRequestedEventArgs>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_ISelectionModelChildrenRequestedEventArgs<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_ISelectionModelFactory
+    {
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::ISelectionModelFactory>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_ISelectionModelFactory<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_ISelectionModelProtected
+    {
+        auto OnPropertyChanged(param::hstring const& propertyName) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::ISelectionModelProtected>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_ISelectionModelProtected<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_ISelectionModelSelectionChangedEventArgs
+    {
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::ISelectionModelSelectionChangedEventArgs>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_ISelectionModelSelectionChangedEventArgs<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_ISelectorBar
@@ -22946,6 +24592,22 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::ISelectorBarStatics>
     {
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_ISelectorBarStatics<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_ISelfPlayingAnimatedVisual
+    {
+        auto Pause() const;
+        auto PlayAsync(double fromProgress, double toProgress, bool looped) const;
+        auto Resume() const;
+        auto Stop() const;
+        auto SetPlaybackRate(double playbackRate) const;
+        auto SetProgress(double progress) const;
+        auto SetProgressObject(winrt::Microsoft::UI::Composition::CompositionPropertySet const& compositionPropertySet) const;
+        auto SetSize(winrt::Windows::Foundation::Size const& size) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::ISelfPlayingAnimatedVisual>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_ISelfPlayingAnimatedVisual<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_ISemanticZoom
@@ -23231,6 +24893,16 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IStackLayout<D>;
     };
     template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IStackLayout2
+    {
+        [[nodiscard]] auto IsVirtualizationEnabled() const;
+        auto IsVirtualizationEnabled(bool value) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IStackLayout2>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IStackLayout2<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_IStackLayoutFactory
     {
         auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
@@ -23238,6 +24910,23 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IStackLayoutFactory>
     {
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IStackLayoutFactory<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IStackLayoutState
+    {
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IStackLayoutState>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IStackLayoutState<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IStackLayoutStateFactory
+    {
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IStackLayoutStateFactory>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IStackLayoutStateFactory<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_IStackLayoutStatics
@@ -23248,6 +24937,15 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IStackLayoutStatics>
     {
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IStackLayoutStatics<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IStackLayoutStatics2
+    {
+        [[nodiscard]] auto IsVirtualizationEnabledProperty() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IStackLayoutStatics2>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IStackLayoutStatics2<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_IStackPanel
@@ -23955,6 +25653,18 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_ITeachingTip<D>;
     };
     template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_ITeachingTip2
+    {
+        auto Opened(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::TeachingTip, winrt::Microsoft::UI::Xaml::Controls::TeachingTipOpenedEventArgs> const& handler) const;
+        using Opened_revoker = impl::event_revoker<winrt::Microsoft::UI::Xaml::Controls::ITeachingTip2, &impl::abi_t<winrt::Microsoft::UI::Xaml::Controls::ITeachingTip2>::remove_Opened>;
+        [[nodiscard]] auto Opened(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::TeachingTip, winrt::Microsoft::UI::Xaml::Controls::TeachingTipOpenedEventArgs> const& handler) const;
+        auto Opened(winrt::event_token const& token) const noexcept;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::ITeachingTip2>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_ITeachingTip2<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_ITeachingTipClosedEventArgs
     {
         [[nodiscard]] auto Reason() const;
@@ -23983,6 +25693,14 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::ITeachingTipFactory>
     {
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_ITeachingTipFactory<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_ITeachingTipOpenedEventArgs
+    {
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::ITeachingTipOpenedEventArgs>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_ITeachingTipOpenedEventArgs<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_ITeachingTipStatics
@@ -25351,6 +27069,23 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IUniformGridLayoutFactory<D>;
     };
     template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IUniformGridLayoutState
+    {
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IUniformGridLayoutState>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IUniformGridLayoutState<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IUniformGridLayoutStateFactory
+    {
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IUniformGridLayoutStateFactory>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IUniformGridLayoutStateFactory<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_IUniformGridLayoutStatics
     {
         [[nodiscard]] auto OrientationProperty() const;
@@ -25755,6 +27490,15 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IXamlControlsResourcesStatics>
     {
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IXamlControlsResourcesStatics<D>;
+    };
+    struct struct_Microsoft_UI_Xaml_Controls_FlowLayoutAnchorInfo
+    {
+        int32_t Index;
+        double Offset;
+    };
+    template <> struct abi<Microsoft::UI::Xaml::Controls::FlowLayoutAnchorInfo>
+    {
+        using type = struct_Microsoft_UI_Xaml_Controls_FlowLayoutAnchorInfo;
     };
 }
 #endif

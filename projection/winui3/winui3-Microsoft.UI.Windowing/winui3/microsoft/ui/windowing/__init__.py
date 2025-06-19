@@ -7,6 +7,7 @@ from winui3._winui3_microsoft_ui_windowing import (
     AppWindow,
     AppWindowChangedEventArgs,
     AppWindowClosingEventArgs,
+    AppWindowPlacementDetails,
     AppWindowPresenter,
     AppWindowTitleBar,
     CompactOverlayPresenter,
@@ -28,11 +29,14 @@ __all__ = [
     "DisplayAreaWatcherStatus",
     "IconShowOptions",
     "OverlappedPresenterState",
+    "PlacementInfo",
+    "PlacementRestorationBehavior",
     "TitleBarHeightOption",
     "TitleBarTheme",
     "AppWindow",
     "AppWindowChangedEventArgs",
     "AppWindowClosingEventArgs",
+    "AppWindowPlacementDetails",
     "AppWindowPresenter",
     "AppWindowTitleBar",
     "CompactOverlayPresenter",
@@ -74,6 +78,22 @@ class OverlappedPresenterState(enum.IntEnum):
     MAXIMIZED = 0
     MINIMIZED = 1
     RESTORED = 2
+
+class PlacementInfo(enum.IntFlag):
+    NONE = 0x0
+    RESTORE_TO_MAXIMIZED = 0x2
+    RESTORE_TO_ARRANGED = 0x8
+    ARRANGED = 0x10
+    RESIZABLE = 0x20
+    FULL_SCREEN = 0x40
+
+class PlacementRestorationBehavior(enum.IntFlag):
+    NONE = 0x0
+    ALLOW_SHOW_MAXIMIZED = 0x1
+    ALLOW_SHOW_FULL_SCREEN = 0x2
+    ALLOW_SHOW_ARRANGED = 0x4
+    USE_STARTUP_INFO_FOR_FIRST_WINDOW = 0x8
+    ALL = 0xFFFFFFFF
 
 class TitleBarHeightOption(enum.IntEnum):
     STANDARD = 0

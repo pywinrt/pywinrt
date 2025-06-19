@@ -14695,6 +14695,82 @@ namespace winrt::impl
             _winrt_abi_type->remove_AnchorRequested(impl::bind_in(token));
         }
     }
+    template <typename D> auto consume_Microsoft_UI_Xaml_Controls_Primitives_IScrollPresenter2<D>::ScrollStarting(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter, winrt::Microsoft::UI::Xaml::Controls::ScrollingScrollStartingEventArgs> const& handler) const
+    {
+        winrt::event_token token{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->add_ScrollStarting(*(void**)(&handler), put_abi(token)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter2>**)this;
+            check_hresult(_winrt_abi_type->add_ScrollStarting(*(void**)(&handler), put_abi(token)));
+        }
+        return token;
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_Controls_Primitives_IScrollPresenter2<D>::ScrollStarting(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter, winrt::Microsoft::UI::Xaml::Controls::ScrollingScrollStartingEventArgs> const& handler) const
+    {
+        return impl::make_event_revoker<D, ScrollStarting_revoker>(this, ScrollStarting(handler));
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_Controls_Primitives_IScrollPresenter2<D>::ScrollStarting(winrt::event_token const& token) const noexcept
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter2>**)&_winrt_casted_result;
+            _winrt_abi_type->remove_ScrollStarting(impl::bind_in(token));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter2>**)this;
+            _winrt_abi_type->remove_ScrollStarting(impl::bind_in(token));
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_Controls_Primitives_IScrollPresenter2<D>::ZoomStarting(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter, winrt::Microsoft::UI::Xaml::Controls::ScrollingZoomStartingEventArgs> const& handler) const
+    {
+        winrt::event_token token{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->add_ZoomStarting(*(void**)(&handler), put_abi(token)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter2>**)this;
+            check_hresult(_winrt_abi_type->add_ZoomStarting(*(void**)(&handler), put_abi(token)));
+        }
+        return token;
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_Controls_Primitives_IScrollPresenter2<D>::ZoomStarting(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter, winrt::Microsoft::UI::Xaml::Controls::ScrollingZoomStartingEventArgs> const& handler) const
+    {
+        return impl::make_event_revoker<D, ZoomStarting_revoker>(this, ZoomStarting(handler));
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_Controls_Primitives_IScrollPresenter2<D>::ZoomStarting(winrt::event_token const& token) const noexcept
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter2>**)&_winrt_casted_result;
+            _winrt_abi_type->remove_ZoomStarting(impl::bind_in(token));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter2>**)this;
+            _winrt_abi_type->remove_ZoomStarting(impl::bind_in(token));
+        }
+    }
     template <typename D> auto consume_Microsoft_UI_Xaml_Controls_Primitives_IScrollPresenterFactory<D>::CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const
     {
         void* value{};
@@ -23528,6 +23604,40 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter2> : produce_base<D, winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter2>
+    {
+        int32_t __stdcall add_ScrollStarting(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().ScrollStarting(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter, winrt::Microsoft::UI::Xaml::Controls::ScrollingScrollStartingEventArgs> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_ScrollStarting(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ScrollStarting(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+        int32_t __stdcall add_ZoomStarting(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().ZoomStarting(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter, winrt::Microsoft::UI::Xaml::Controls::ScrollingZoomStartingEventArgs> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_ZoomStarting(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ZoomStarting(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenterFactory> : produce_base<D, winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenterFactory>
     {
         int32_t __stdcall CreateInstance(void* baseInterface, void** innerInterface, void** value) noexcept final try
@@ -26279,7 +26389,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls::Primitives
     template <typename D, typename... Interfaces>
     struct ScrollPresenterT :
         implements<D, winrt::Microsoft::UI::Xaml::IFrameworkElementOverrides, winrt::Microsoft::UI::Xaml::IUIElementOverrides, composing, Interfaces...>,
-        impl::require<D, winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter, winrt::Microsoft::UI::Xaml::Controls::IScrollAnchorProvider, winrt::Microsoft::UI::Xaml::IFrameworkElement, winrt::Microsoft::UI::Xaml::IUIElement, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Composition::IVisualElement, winrt::Microsoft::UI::Composition::IVisualElement2, winrt::Microsoft::UI::Xaml::IDependencyObject>,
+        impl::require<D, winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter, winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter2, winrt::Microsoft::UI::Xaml::Controls::IScrollAnchorProvider, winrt::Microsoft::UI::Xaml::IFrameworkElement, winrt::Microsoft::UI::Xaml::IUIElement, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Composition::IVisualElement, winrt::Microsoft::UI::Composition::IVisualElement2, winrt::Microsoft::UI::Xaml::IDependencyObject>,
         protected impl::require<D, winrt::Microsoft::UI::Xaml::IFrameworkElementProtected, winrt::Microsoft::UI::Xaml::IUIElementProtected>,
         impl::base<D, ScrollPresenter, winrt::Microsoft::UI::Xaml::FrameworkElement, winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::DependencyObject>,
         winrt::Microsoft::UI::Xaml::IFrameworkElementOverridesT<D>, winrt::Microsoft::UI::Xaml::IUIElementOverridesT<D>
@@ -26531,6 +26641,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollControllerScrollToRequestedEventArgsFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenterFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenterStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPoint> : winrt::impl::hash_base {};

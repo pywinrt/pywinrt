@@ -62,6 +62,13 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::Widgets::Providers
         IWidgetInfo2(std::nullptr_t = nullptr) noexcept {}
         IWidgetInfo2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IWidgetInfo3 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IWidgetInfo3>
+    {
+        IWidgetInfo3(std::nullptr_t = nullptr) noexcept {}
+        IWidgetInfo3(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IWidgetManager :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IWidgetManager>
@@ -173,6 +180,13 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::Widgets::Providers
     {
         IWidgetUpdateRequestOptions2(std::nullptr_t = nullptr) noexcept {}
         IWidgetUpdateRequestOptions2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IWidgetUpdateRequestOptions3 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IWidgetUpdateRequestOptions3>
+    {
+        IWidgetUpdateRequestOptions3(std::nullptr_t = nullptr) noexcept {}
+        IWidgetUpdateRequestOptions3(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IWidgetUpdateRequestOptionsFactory :
         winrt::Windows::Foundation::IInspectable,

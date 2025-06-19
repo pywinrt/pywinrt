@@ -20,6 +20,13 @@ WINRT_EXPORT namespace winrt::Microsoft::Graphics::Display
         IDisplayInformation(std::nullptr_t = nullptr) noexcept {}
         IDisplayInformation(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IDisplayInformation2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IDisplayInformation2>
+    {
+        IDisplayInformation2(std::nullptr_t = nullptr) noexcept {}
+        IDisplayInformation2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IDisplayInformationStatics :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IDisplayInformationStatics>

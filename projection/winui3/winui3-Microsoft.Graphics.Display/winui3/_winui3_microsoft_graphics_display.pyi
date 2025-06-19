@@ -14,7 +14,7 @@ import winrt.windows.storage.streams as windows_storage_streams
 import winui3.microsoft.ui as microsoft_ui
 import winui3.microsoft.ui.dispatching as microsoft_ui_dispatching
 
-from winui3.microsoft.graphics.display import DisplayAdvancedColorKind, DisplayHdrMetadataFormat
+from winui3.microsoft.graphics.display import DisplayAdvancedColorKind, DisplayHdrMetadataFormat, DisplayOrientation
 
 Self = typing.TypeVar('Self')
 
@@ -87,10 +87,27 @@ class DisplayInformation(winrt.system.Object, windows_foundation.IClosable, meta
     def add_is_stereo_enabled_changed(self, handler: windows_foundation.TypedEventHandler[DisplayInformation, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Microsoft.Graphics.Display.DisplayInformation::remove_IsStereoEnabledChanged(Windows.Foundation.EventRegistrationToken)
     def remove_is_stereo_enabled_changed(self, token: typing.Union[windows_foundation.EventRegistrationToken, typing.Tuple[winrt.system.Int64]], /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.Graphics.Display.DisplayInformation::add_DpiChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.Graphics.Display.DisplayInformation,System.Object>)
+    def add_dpi_changed(self, handler: windows_foundation.TypedEventHandler[DisplayInformation, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.Graphics.Display.DisplayInformation::remove_DpiChanged(Windows.Foundation.EventRegistrationToken)
+    def remove_dpi_changed(self, token: typing.Union[windows_foundation.EventRegistrationToken, typing.Tuple[winrt.system.Int64]], /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.Graphics.Display.DisplayInformation::add_OrientationChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.Graphics.Display.DisplayInformation,System.Object>)
+    def add_orientation_changed(self, handler: windows_foundation.TypedEventHandler[DisplayInformation, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.Graphics.Display.DisplayInformation::remove_OrientationChanged(Windows.Foundation.EventRegistrationToken)
+    def remove_orientation_changed(self, token: typing.Union[windows_foundation.EventRegistrationToken, typing.Tuple[winrt.system.Int64]], /) -> None: ...
     # Microsoft.UI.Dispatching.DispatcherQueue Microsoft.Graphics.Display.DisplayInformation::get_DispatcherQueue()
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
     # System.Boolean Microsoft.Graphics.Display.DisplayInformation::get_IsStereoEnabled()
     @_property
     def is_stereo_enabled(self) -> bool: ...
+    # Microsoft.Graphics.Display.DisplayOrientation Microsoft.Graphics.Display.DisplayInformation::get_AngularOffsetFromNativeOrientation()
+    @_property
+    def angular_offset_from_native_orientation(self) -> DisplayOrientation: ...
+    # Windows.Foundation.IReference`1<Windows.Foundation.Point> Microsoft.Graphics.Display.DisplayInformation::get_RawDpi()
+    @_property
+    def raw_dpi(self) -> typing.Optional[windows_foundation.Point]: ...
+    # System.Double Microsoft.Graphics.Display.DisplayInformation::get_RawPixelsPerViewPixel()
+    @_property
+    def raw_pixels_per_view_pixel(self) -> winrt.system.Double: ...
 

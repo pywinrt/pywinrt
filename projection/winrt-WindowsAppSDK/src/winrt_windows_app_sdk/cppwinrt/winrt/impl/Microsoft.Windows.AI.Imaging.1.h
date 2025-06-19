@@ -55,6 +55,20 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::AI::Imaging
         IImageObjectExtractorStatics(std::nullptr_t = nullptr) noexcept {}
         IImageObjectExtractorStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IImageObjectRemover :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IImageObjectRemover>
+    {
+        IImageObjectRemover(std::nullptr_t = nullptr) noexcept {}
+        IImageObjectRemover(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IImageObjectRemoverStatics :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IImageObjectRemoverStatics>
+    {
+        IImageObjectRemoverStatics(std::nullptr_t = nullptr) noexcept {}
+        IImageObjectRemoverStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IImageScaler :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IImageScaler>

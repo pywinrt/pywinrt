@@ -349,6 +349,22 @@ namespace winrt::impl
             check_hresult(_winrt_abi_type->TryShowAnnouncement(*(void**)(&feedProviderDefinitionId), *(void**)(&feedDefinitionId), *(void**)(&announcement)));
         }
     }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedManager3<D>::TryRemoveAnnouncementById(param::hstring const& feedProviderDefinitionId, param::hstring const& feedDefinitionId, param::hstring const& announcementId) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager3>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager3, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager3>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->TryRemoveAnnouncementById(*(void**)(&feedProviderDefinitionId), *(void**)(&feedDefinitionId), *(void**)(&announcementId)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager3>**)this;
+            check_hresult(_winrt_abi_type->TryRemoveAnnouncementById(*(void**)(&feedProviderDefinitionId), *(void**)(&feedDefinitionId), *(void**)(&announcementId)));
+        }
+    }
     template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedManagerStatics<D>::GetDefault() const
     {
         void* result{};
@@ -1172,6 +1188,17 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager3> : produce_base<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager3>
+    {
+        int32_t __stdcall TryRemoveAnnouncementById(void* feedProviderDefinitionId, void* feedDefinitionId, void* announcementId) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().TryRemoveAnnouncementById(*reinterpret_cast<hstring const*>(&feedProviderDefinitionId), *reinterpret_cast<hstring const*>(&feedDefinitionId), *reinterpret_cast<hstring const*>(&announcementId));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManagerStatics> : produce_base<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManagerStatics>
@@ -1548,6 +1575,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedErrorInfoReportedArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager3> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManagerStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedMessageReceivedArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProvider> : winrt::impl::hash_base {};

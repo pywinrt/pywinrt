@@ -16,7 +16,7 @@ import winrt.windows.ui as windows_ui
 import winui3.microsoft.ui as microsoft_ui
 import winui3.microsoft.ui.dispatching as microsoft_ui_dispatching
 
-from winui3.microsoft.ui.windowing import AppWindowPresenterKind, CompactOverlaySize, DisplayAreaFallback, DisplayAreaWatcherStatus, IconShowOptions, OverlappedPresenterState, TitleBarHeightOption, TitleBarTheme
+from winui3.microsoft.ui.windowing import AppWindowPresenterKind, CompactOverlaySize, DisplayAreaFallback, DisplayAreaWatcherStatus, IconShowOptions, OverlappedPresenterState, PlacementInfo, PlacementRestorationBehavior, TitleBarHeightOption, TitleBarTheme
 
 Self = typing.TypeVar('Self')
 
@@ -32,6 +32,8 @@ class AppWindow_Static(winrt._winrt.IInspectable_Static):
     def create_with_presenter_and_owner(cls, app_window_presenter: AppWindowPresenter, owner_window_id: typing.Union[microsoft_ui.WindowId, typing.Tuple[winrt.system.UInt64]], /) -> AppWindow: ...
     # Microsoft.UI.Windowing.AppWindow Microsoft.UI.Windowing.AppWindow::GetFromWindowId(Microsoft.UI.WindowId)
     def get_from_window_id(cls, window_id: typing.Union[microsoft_ui.WindowId, typing.Tuple[winrt.system.UInt64]], /) -> AppWindow: ...
+    # System.Void Microsoft.UI.Windowing.AppWindow::SaveCurrentPlacementForAllPersistedStateIds()
+    def save_current_placement_for_all_persisted_state_ids(cls) -> None: ...
 
 @typing.final
 class AppWindow(winrt.system.Object, metaclass=AppWindow_Static):
@@ -39,6 +41,8 @@ class AppWindow(winrt.system.Object, metaclass=AppWindow_Static):
     def associate_with_dispatcher_queue(self, dispatcher_queue: microsoft_ui_dispatching.DispatcherQueue, /) -> None: ...
     # System.Void Microsoft.UI.Windowing.AppWindow::Destroy()
     def destroy(self) -> None: ...
+    # Microsoft.UI.Windowing.AppWindowPlacementDetails Microsoft.UI.Windowing.AppWindow::GetCurrentPlacement()
+    def get_current_placement(self) -> AppWindowPlacementDetails: ...
     # System.Void Microsoft.UI.Windowing.AppWindow::Hide()
     def hide(self) -> None: ...
     # System.Void Microsoft.UI.Windowing.AppWindow::Move(Windows.Graphics.PointInt32)
@@ -57,6 +61,10 @@ class AppWindow(winrt.system.Object, metaclass=AppWindow_Static):
     def resize(self, size: typing.Union[windows_graphics.SizeInt32, typing.Tuple[winrt.system.Int32, winrt.system.Int32]], /) -> None: ...
     # System.Void Microsoft.UI.Windowing.AppWindow::ResizeClient(Windows.Graphics.SizeInt32)
     def resize_client(self, size: typing.Union[windows_graphics.SizeInt32, typing.Tuple[winrt.system.Int32, winrt.system.Int32]], /) -> None: ...
+    # System.Void Microsoft.UI.Windowing.AppWindow::SaveCurrentPlacement()
+    def save_current_placement(self) -> None: ...
+    # System.Boolean Microsoft.UI.Windowing.AppWindow::SetCurrentPlacement(Microsoft.UI.Windowing.AppWindowPlacementDetails,System.Boolean)
+    def set_current_placement(self, placement_details: AppWindowPlacementDetails, is_first_window: bool, /) -> bool: ...
     # System.Void Microsoft.UI.Windowing.AppWindow::SetIcon(System.String)
     def set_icon(self, icon_path: str, /) -> None: ...
     # System.Void Microsoft.UI.Windowing.AppWindow::SetIcon(Microsoft.UI.IconId)
@@ -130,6 +138,18 @@ class AppWindow(winrt.system.Object, metaclass=AppWindow_Static):
     # Microsoft.UI.Dispatching.DispatcherQueue Microsoft.UI.Windowing.AppWindow::get_DispatcherQueue()
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
+    # Microsoft.UI.Windowing.PlacementRestorationBehavior Microsoft.UI.Windowing.AppWindow::get_PlacementRestorationBehavior()
+    @_property
+    def placement_restoration_behavior(self) -> PlacementRestorationBehavior: ...
+    # System.Void Microsoft.UI.Windowing.AppWindow::put_PlacementRestorationBehavior(Microsoft.UI.Windowing.PlacementRestorationBehavior)
+    @placement_restoration_behavior.setter
+    def placement_restoration_behavior(self, value: PlacementRestorationBehavior) -> None: ...
+    # Windows.Foundation.IReference`1<System.Guid> Microsoft.UI.Windowing.AppWindow::get_PersistedStateId()
+    @_property
+    def persisted_state_id(self) -> typing.Optional[_uuid.UUID]: ...
+    # System.Void Microsoft.UI.Windowing.AppWindow::put_PersistedStateId(Windows.Foundation.IReference`1<System.Guid>)
+    @persisted_state_id.setter
+    def persisted_state_id(self, value: typing.Optional[_uuid.UUID]) -> None: ...
 
 @typing.final
 class AppWindowChangedEventArgs(winrt.system.Object):
@@ -166,6 +186,35 @@ class AppWindowClosingEventArgs(winrt.system.Object):
     # System.Void Microsoft.UI.Windowing.AppWindowClosingEventArgs::put_Cancel(System.Boolean)
     @cancel.setter
     def cancel(self, value: bool) -> None: ...
+
+@typing.final
+class AppWindowPlacementDetails_Static(winrt._winrt.IInspectable_Static):
+    # Microsoft.UI.Windowing.AppWindowPlacementDetails Microsoft.UI.Windowing.AppWindowPlacementDetails::Create(Windows.Graphics.RectInt32,Windows.Graphics.RectInt32,System.Int32,System.Int32,Windows.Graphics.RectInt32,Microsoft.UI.Windowing.PlacementInfo,System.String)
+    def create(cls, normal_rect: typing.Union[windows_graphics.RectInt32, typing.Tuple[winrt.system.Int32, winrt.system.Int32, winrt.system.Int32, winrt.system.Int32]], work_area: typing.Union[windows_graphics.RectInt32, typing.Tuple[winrt.system.Int32, winrt.system.Int32, winrt.system.Int32, winrt.system.Int32]], dpi: winrt.system.Int32, show_cmd: winrt.system.Int32, arrange_rect: typing.Union[windows_graphics.RectInt32, typing.Tuple[winrt.system.Int32, winrt.system.Int32, winrt.system.Int32, winrt.system.Int32]], flags: PlacementInfo, device_name: str, /) -> AppWindowPlacementDetails: ...
+
+@typing.final
+class AppWindowPlacementDetails(winrt.system.Object, metaclass=AppWindowPlacementDetails_Static):
+    # Windows.Graphics.RectInt32 Microsoft.UI.Windowing.AppWindowPlacementDetails::get_ArrangeRect()
+    @_property
+    def arrange_rect(self) -> windows_graphics.RectInt32: ...
+    # System.String Microsoft.UI.Windowing.AppWindowPlacementDetails::get_DeviceName()
+    @_property
+    def device_name(self) -> str: ...
+    # System.Int32 Microsoft.UI.Windowing.AppWindowPlacementDetails::get_Dpi()
+    @_property
+    def dpi(self) -> winrt.system.Int32: ...
+    # Microsoft.UI.Windowing.PlacementInfo Microsoft.UI.Windowing.AppWindowPlacementDetails::get_Flags()
+    @_property
+    def flags(self) -> PlacementInfo: ...
+    # Windows.Graphics.RectInt32 Microsoft.UI.Windowing.AppWindowPlacementDetails::get_NormalRect()
+    @_property
+    def normal_rect(self) -> windows_graphics.RectInt32: ...
+    # System.Int32 Microsoft.UI.Windowing.AppWindowPlacementDetails::get_ShowCmd()
+    @_property
+    def show_cmd(self) -> winrt.system.Int32: ...
+    # Windows.Graphics.RectInt32 Microsoft.UI.Windowing.AppWindowPlacementDetails::get_WorkArea()
+    @_property
+    def work_area(self) -> windows_graphics.RectInt32: ...
 
 class AppWindowPresenter_Static(winrt._winrt.IInspectable_Static):
     pass
@@ -322,6 +371,8 @@ class DisplayArea_Static(winrt._winrt.IInspectable_Static):
     def get_from_rect(cls, rect: typing.Union[windows_graphics.RectInt32, typing.Tuple[winrt.system.Int32, winrt.system.Int32, winrt.system.Int32, winrt.system.Int32]], display_area_fallback: DisplayAreaFallback, /) -> DisplayArea: ...
     # Microsoft.UI.Windowing.DisplayArea Microsoft.UI.Windowing.DisplayArea::GetFromWindowId(Microsoft.UI.WindowId,Microsoft.UI.Windowing.DisplayAreaFallback)
     def get_from_window_id(cls, window_id: typing.Union[microsoft_ui.WindowId, typing.Tuple[winrt.system.UInt64]], display_area_fallback: DisplayAreaFallback, /) -> DisplayArea: ...
+    # Microsoft.UI.DisplayId Microsoft.UI.Windowing.DisplayArea::GetMetricsFromWindowId(Microsoft.UI.WindowId)
+    def get_metrics_from_window_id(cls, window_id: typing.Union[microsoft_ui.WindowId, typing.Tuple[winrt.system.UInt64]], /) -> microsoft_ui.DisplayId: ...
     # Microsoft.UI.Windowing.DisplayArea Microsoft.UI.Windowing.DisplayArea::get_Primary()
     @_property
     def primary(cls) -> DisplayArea: ...

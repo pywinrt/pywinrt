@@ -3569,6 +3569,22 @@ namespace winrt::impl
             check_hresult(_winrt_abi_type->SetInsetScalesWithValues(left, top, right, bottom));
         }
     }
+    template <typename D> auto consume_Microsoft_UI_Composition_ICompositionNotificationDeferral<D>::Complete() const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Composition::ICompositionNotificationDeferral>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Composition::ICompositionNotificationDeferral, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Composition::ICompositionNotificationDeferral>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->Complete());
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Composition::ICompositionNotificationDeferral>**)this;
+            check_hresult(_winrt_abi_type->Complete());
+        }
+    }
     template <typename D> auto consume_Microsoft_UI_Composition_ICompositionObject<D>::Compositor() const
     {
         void* value{};
@@ -8306,6 +8322,244 @@ namespace winrt::impl
             check_hresult(_winrt_abi_type->get_Springiness(&value));
         }
         return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Composition_IExpCompositionProjectedShadow<D>::MaxOpacity() const
+    {
+        float value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadow>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadow, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadow>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_MaxOpacity(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadow>**)this;
+            check_hresult(_winrt_abi_type->get_MaxOpacity(&value));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Composition_IExpCompositionProjectedShadow<D>::MaxOpacity(float value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadow>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadow, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadow>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->put_MaxOpacity(value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadow>**)this;
+            check_hresult(_winrt_abi_type->put_MaxOpacity(value));
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Composition_IExpCompositionProjectedShadow<D>::MinOpacity() const
+    {
+        float value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadow>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadow, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadow>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_MinOpacity(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadow>**)this;
+            check_hresult(_winrt_abi_type->get_MinOpacity(&value));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Composition_IExpCompositionProjectedShadow<D>::MinOpacity(float value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadow>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadow, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadow>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->put_MinOpacity(value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadow>**)this;
+            check_hresult(_winrt_abi_type->put_MinOpacity(value));
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Composition_IExpCompositionProjectedShadow<D>::OpacityFalloff() const
+    {
+        float value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadow>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadow, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadow>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_OpacityFalloff(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadow>**)this;
+            check_hresult(_winrt_abi_type->get_OpacityFalloff(&value));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Composition_IExpCompositionProjectedShadow<D>::OpacityFalloff(float value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadow>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadow, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadow>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->put_OpacityFalloff(value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadow>**)this;
+            check_hresult(_winrt_abi_type->put_OpacityFalloff(value));
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Composition_IExpCompositionProjectedShadowCaster<D>::AncestorClip() const
+    {
+        void* value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowCaster>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowCaster, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowCaster>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_AncestorClip(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowCaster>**)this;
+            check_hresult(_winrt_abi_type->get_AncestorClip(&value));
+        }
+        return winrt::Microsoft::UI::Composition::Visual{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Composition_IExpCompositionProjectedShadowCaster<D>::AncestorClip(winrt::Microsoft::UI::Composition::Visual const& value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowCaster>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowCaster, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowCaster>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->put_AncestorClip(*(void**)(&value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowCaster>**)this;
+            check_hresult(_winrt_abi_type->put_AncestorClip(*(void**)(&value)));
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Composition_IExpCompositionProjectedShadowCaster<D>::Mask() const
+    {
+        void* value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowCaster>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowCaster, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowCaster>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_Mask(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowCaster>**)this;
+            check_hresult(_winrt_abi_type->get_Mask(&value));
+        }
+        return winrt::Microsoft::UI::Composition::CompositionBrush{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Composition_IExpCompositionProjectedShadowCaster<D>::Mask(winrt::Microsoft::UI::Composition::CompositionBrush const& value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowCaster>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowCaster, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowCaster>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->put_Mask(*(void**)(&value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowCaster>**)this;
+            check_hresult(_winrt_abi_type->put_Mask(*(void**)(&value)));
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Composition_IExpCompositionProjectedShadowReceiver<D>::DrawOrder() const
+    {
+        winrt::Microsoft::UI::Composition::CompositionProjectedShadowDrawOrder value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowReceiver>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowReceiver, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowReceiver>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_DrawOrder(reinterpret_cast<int32_t*>(&value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowReceiver>**)this;
+            check_hresult(_winrt_abi_type->get_DrawOrder(reinterpret_cast<int32_t*>(&value)));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Composition_IExpCompositionProjectedShadowReceiver<D>::DrawOrder(winrt::Microsoft::UI::Composition::CompositionProjectedShadowDrawOrder const& value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowReceiver>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowReceiver, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowReceiver>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->put_DrawOrder(static_cast<int32_t>(value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowReceiver>**)this;
+            check_hresult(_winrt_abi_type->put_DrawOrder(static_cast<int32_t>(value)));
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Composition_IExpCompositionProjectedShadowReceiver<D>::Mask() const
+    {
+        void* value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowReceiver>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowReceiver, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowReceiver>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_Mask(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowReceiver>**)this;
+            check_hresult(_winrt_abi_type->get_Mask(&value));
+        }
+        return winrt::Microsoft::UI::Composition::CompositionBrush{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Composition_IExpCompositionProjectedShadowReceiver<D>::Mask(winrt::Microsoft::UI::Composition::CompositionBrush const& value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowReceiver>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowReceiver, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowReceiver>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->put_Mask(*(void**)(&value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowReceiver>**)this;
+            check_hresult(_winrt_abi_type->put_Mask(*(void**)(&value)));
+        }
     }
     template <typename D> auto consume_Microsoft_UI_Composition_IExponentialEasingFunction<D>::Mode() const
     {
@@ -14021,6 +14275,19 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Composition::ICompositionNotificationDeferral> : produce_base<D, winrt::Microsoft::UI::Composition::ICompositionNotificationDeferral>
+    {
+        int32_t __stdcall Complete() noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Complete();
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::UI::Composition::ICompositionObject> : produce_base<D, winrt::Microsoft::UI::Composition::ICompositionObject>
     {
         int32_t __stdcall get_Compositor(void** value) noexcept final try
@@ -16415,6 +16682,125 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadow> : produce_base<D, winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadow>
+    {
+        int32_t __stdcall get_MaxOpacity(float* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<float>(this->shim().MaxOpacity());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_MaxOpacity(float value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().MaxOpacity(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_MinOpacity(float* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<float>(this->shim().MinOpacity());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_MinOpacity(float value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().MinOpacity(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_OpacityFalloff(float* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<float>(this->shim().OpacityFalloff());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_OpacityFalloff(float value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().OpacityFalloff(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowCaster> : produce_base<D, winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowCaster>
+    {
+        int32_t __stdcall get_AncestorClip(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Composition::Visual>(this->shim().AncestorClip());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_AncestorClip(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().AncestorClip(*reinterpret_cast<winrt::Microsoft::UI::Composition::Visual const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Mask(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Composition::CompositionBrush>(this->shim().Mask());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_Mask(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Mask(*reinterpret_cast<winrt::Microsoft::UI::Composition::CompositionBrush const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowReceiver> : produce_base<D, winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowReceiver>
+    {
+        int32_t __stdcall get_DrawOrder(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Composition::CompositionProjectedShadowDrawOrder>(this->shim().DrawOrder());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_DrawOrder(int32_t value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().DrawOrder(*reinterpret_cast<winrt::Microsoft::UI::Composition::CompositionProjectedShadowDrawOrder const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Mask(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Composition::CompositionBrush>(this->shim().Mask());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_Mask(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Mask(*reinterpret_cast<winrt::Microsoft::UI::Composition::CompositionBrush const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::UI::Composition::IExponentialEasingFunction> : produce_base<D, winrt::Microsoft::UI::Composition::IExponentialEasingFunction>
     {
         int32_t __stdcall get_Mode(int32_t* value) noexcept final try
@@ -18541,6 +18927,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Composition::ICompositionMaskBrush> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Composition::ICompositionMipmapSurface> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Composition::ICompositionNineGridBrush> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Composition::ICompositionNotificationDeferral> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Composition::ICompositionObject> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Composition::ICompositionObject2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Composition::ICompositionObject3> : winrt::impl::hash_base {};
@@ -18599,6 +18986,9 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Composition::IDropShadow> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Composition::IDropShadow2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Composition::IElasticEasingFunction> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadow> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowCaster> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowReceiver> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Composition::IExponentialEasingFunction> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Composition::IExpressionAnimation> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Composition::IImplicitAnimationCollection> : winrt::impl::hash_base {};
@@ -18691,6 +19081,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Composition::CompositionMaskBrush> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Composition::CompositionMipmapSurface> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Composition::CompositionNineGridBrush> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Composition::CompositionNotificationDeferral> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Composition::CompositionObject> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Composition::CompositionPath> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Composition::CompositionPathGeometry> : winrt::impl::hash_base {};

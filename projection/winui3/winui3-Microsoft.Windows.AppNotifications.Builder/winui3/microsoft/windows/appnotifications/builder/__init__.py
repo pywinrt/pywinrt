@@ -13,6 +13,7 @@ from winui3._winui3_microsoft_windows_appnotifications_builder import (
 
 __all__ = [
     "AppNotificationAudioLooping",
+    "AppNotificationButtonSettingStyle",
     "AppNotificationButtonStyle",
     "AppNotificationDuration",
     "AppNotificationImageCrop",
@@ -28,6 +29,11 @@ __all__ = [
 class AppNotificationAudioLooping(enum.IntEnum):
     NONE = 0
     LOOP = 1
+
+class AppNotificationButtonSettingStyle(enum.IntEnum):
+    NONE = 0
+    VIDEO_CALL_CONFIG = 1
+    AUDIO_CALL_CONFIG = 2
 
 class AppNotificationButtonStyle(enum.IntEnum):
     DEFAULT = 0

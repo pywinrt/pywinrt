@@ -16,10 +16,11 @@ import winrt.windows.graphics as windows_graphics
 import winrt.windows.system as windows_system
 import winrt.windows.ui.core as windows_ui_core
 import winui3.microsoft.ui as microsoft_ui
+import winui3.microsoft.ui.composition as microsoft_ui_composition
 import winui3.microsoft.ui.content as microsoft_ui_content
 import winui3.microsoft.ui.dispatching as microsoft_ui_dispatching
 
-from winui3.microsoft.ui.input import CrossSlidingState, DraggingState, FocusNavigationReason, FocusNavigationResult, GestureSettings, HoldingState, InputActivationState, InputPointerSourceDeviceKinds, InputSystemCursorShape, MoveSizeOperation, NonClientRegionKind, PointerDeviceType, PointerUpdateKind, VirtualKeyStates
+from winui3.microsoft.ui.input import CrossSlidingState, DraggingState, FocusNavigationReason, FocusNavigationResult, GestureSettings, HoldingState, InputActivationState, InputLayoutPolicy, InputPointerActivationBehavior, InputPointerSourceDeviceKinds, InputSystemCursorShape, LightDismissReason, MoveSizeOperation, NonClientRegionKind, PointerDeviceType, PointerUpdateKind, PopupPointerMode, VirtualKeyStates
 
 Self = typing.TypeVar('Self')
 
@@ -80,6 +81,16 @@ class PhysicalKeyStatus:
     def __new__(cls, repeat_count: winrt.system.UInt32 = 0, scan_code: winrt.system.UInt32 = 0, is_extended_key: bool = False, is_menu_key_down: bool = False, was_key_down: bool = False, is_key_released: bool = False) -> PhysicalKeyStatus: ...
     def __replace__(self, /, **changes: typing.Any) -> PhysicalKeyStatus: ...
     def unpack(self) -> typing.Tuple[winrt.system.UInt32, winrt.system.UInt32, bool, bool, bool, bool]: ...
+
+@typing.final
+class ProximityEvaluation:
+    @_property
+    def score(self) -> winrt.system.Int32: ...
+    @_property
+    def adjusted_point(self) -> windows_foundation.Point: ...
+    def __new__(cls, score: winrt.system.Int32 = 0, adjusted_point: windows_foundation.Point = windows_foundation.Point()) -> ProximityEvaluation: ...
+    def __replace__(self, /, **changes: typing.Any) -> ProximityEvaluation: ...
+    def unpack(self) -> typing.Tuple[winrt.system.Int32, typing.Tuple[winrt.system.Single, winrt.system.Single]]: ...
 
 @typing.final
 class CharacterReceivedEventArgs(winrt.system.Object):
@@ -488,6 +499,8 @@ class InputFocusNavigationHost(InputObject, metaclass=InputFocusNavigationHost_S
 class InputKeyboardSource_Static(InputObject_Static):
     # Microsoft.UI.Input.InputKeyboardSource Microsoft.UI.Input.InputKeyboardSource::GetForIsland(Microsoft.UI.Content.ContentIsland)
     def get_for_island(cls, island: microsoft_ui_content.ContentIsland, /) -> InputKeyboardSource: ...
+    # Microsoft.UI.Input.InputKeyboardSource Microsoft.UI.Input.InputKeyboardSource::GetForWindowId(Microsoft.UI.WindowId)
+    def get_for_window_id(cls, window_id: typing.Union[microsoft_ui.WindowId, typing.Tuple[winrt.system.UInt64]], /) -> InputKeyboardSource: ...
     # Windows.UI.Core.CoreVirtualKeyStates Microsoft.UI.Input.InputKeyboardSource::GetKeyStateForCurrentThread(Windows.System.VirtualKey)
     def get_key_state_for_current_thread(cls, virtual_key: windows_system.VirtualKey, /) -> windows_ui_core.CoreVirtualKeyStates: ...
 
@@ -524,6 +537,8 @@ class InputKeyboardSource(InputObject, metaclass=InputKeyboardSource_Static):
 
 @typing.final
 class InputLightDismissAction_Static(InputObject_Static):
+    # Microsoft.UI.Input.InputLightDismissAction Microsoft.UI.Input.InputLightDismissAction::GetForIsland(Microsoft.UI.Content.ContentIsland)
+    def get_for_island(cls, content: microsoft_ui_content.ContentIsland, /) -> InputLightDismissAction: ...
     # Microsoft.UI.Input.InputLightDismissAction Microsoft.UI.Input.InputLightDismissAction::GetForWindowId(Microsoft.UI.WindowId)
     def get_for_window_id(cls, window_id: typing.Union[microsoft_ui.WindowId, typing.Tuple[winrt.system.UInt64]], /) -> InputLightDismissAction: ...
 
@@ -536,7 +551,15 @@ class InputLightDismissAction(InputObject, metaclass=InputLightDismissAction_Sta
 
 @typing.final
 class InputLightDismissEventArgs(winrt.system.Object):
-    pass
+    # System.Boolean Microsoft.UI.Input.InputLightDismissEventArgs::get_Handled()
+    @_property
+    def handled(self) -> bool: ...
+    # System.Void Microsoft.UI.Input.InputLightDismissEventArgs::put_Handled(System.Boolean)
+    @handled.setter
+    def handled(self, value: bool) -> None: ...
+    # Microsoft.UI.Input.LightDismissReason Microsoft.UI.Input.InputLightDismissEventArgs::get_Reason()
+    @_property
+    def reason(self) -> LightDismissReason: ...
 
 @typing.final
 class InputNonClientPointerSource_Static(winrt._winrt.IInspectable_Static):
@@ -618,9 +641,17 @@ class InputObject(winrt.system.Object, metaclass=InputObject_Static):
 class InputPointerSource_Static(InputObject_Static):
     # Microsoft.UI.Input.InputPointerSource Microsoft.UI.Input.InputPointerSource::GetForIsland(Microsoft.UI.Content.ContentIsland)
     def get_for_island(cls, island: microsoft_ui_content.ContentIsland, /) -> InputPointerSource: ...
+    # Microsoft.UI.Input.InputPointerSource Microsoft.UI.Input.InputPointerSource::GetForVisual(Microsoft.UI.Composition.Visual)
+    def get_for_visual(cls, visual: microsoft_ui_composition.Visual, /) -> InputPointerSource: ...
+    # Microsoft.UI.Input.InputPointerSource Microsoft.UI.Input.InputPointerSource::GetForWindowId(Microsoft.UI.WindowId)
+    def get_for_window_id(cls, window_id: typing.Union[microsoft_ui.WindowId, typing.Tuple[winrt.system.UInt64]], /) -> InputPointerSource: ...
+    # System.Void Microsoft.UI.Input.InputPointerSource::RemoveForVisual(Microsoft.UI.Composition.Visual)
+    def remove_for_visual(cls, visual: microsoft_ui_composition.Visual, /) -> None: ...
 
 @typing.final
 class InputPointerSource(InputObject, metaclass=InputPointerSource_Static):
+    # System.Boolean Microsoft.UI.Input.InputPointerSource::TrySetDeviceKinds(Microsoft.UI.Input.InputPointerSourceDeviceKinds)
+    def try_set_device_kinds(self, device_kinds: InputPointerSourceDeviceKinds, /) -> bool: ...
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.Input.InputPointerSource::add_PointerCaptureLost(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Input.InputPointerSource,Microsoft.UI.Input.PointerEventArgs>)
     def add_pointer_capture_lost(self, handler: windows_foundation.TypedEventHandler[InputPointerSource, PointerEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Microsoft.UI.Input.InputPointerSource::remove_PointerCaptureLost(Windows.Foundation.EventRegistrationToken)
@@ -661,6 +692,14 @@ class InputPointerSource(InputObject, metaclass=InputPointerSource_Static):
     def add_pointer_wheel_changed(self, handler: windows_foundation.TypedEventHandler[InputPointerSource, PointerEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Microsoft.UI.Input.InputPointerSource::remove_PointerWheelChanged(Windows.Foundation.EventRegistrationToken)
     def remove_pointer_wheel_changed(self, token: typing.Union[windows_foundation.EventRegistrationToken, typing.Tuple[winrt.system.Int64]], /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Input.InputPointerSource::add_DirectManipulationHitTest(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Input.InputPointerSource,Microsoft.UI.Input.PointerEventArgs>)
+    def add_direct_manipulation_hit_test(self, handler: windows_foundation.TypedEventHandler[InputPointerSource, PointerEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Input.InputPointerSource::remove_DirectManipulationHitTest(Windows.Foundation.EventRegistrationToken)
+    def remove_direct_manipulation_hit_test(self, token: typing.Union[windows_foundation.EventRegistrationToken, typing.Tuple[winrt.system.Int64]], /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Input.InputPointerSource::add_TouchHitTesting(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Input.InputPointerSource,Microsoft.UI.Input.TouchHitTestingEventArgs>)
+    def add_touch_hit_testing(self, handler: windows_foundation.TypedEventHandler[InputPointerSource, TouchHitTestingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Input.InputPointerSource::remove_TouchHitTesting(Windows.Foundation.EventRegistrationToken)
+    def remove_touch_hit_testing(self, token: typing.Union[windows_foundation.EventRegistrationToken, typing.Tuple[winrt.system.Int64]], /) -> None: ...
     # Microsoft.UI.Input.InputCursor Microsoft.UI.Input.InputPointerSource::get_Cursor()
     @_property
     def cursor(self) -> InputCursor: ...
@@ -670,6 +709,30 @@ class InputPointerSource(InputObject, metaclass=InputPointerSource_Static):
     # Microsoft.UI.Input.InputPointerSourceDeviceKinds Microsoft.UI.Input.InputPointerSource::get_DeviceKinds()
     @_property
     def device_kinds(self) -> InputPointerSourceDeviceKinds: ...
+    # Microsoft.UI.Input.InputPointerActivationBehavior Microsoft.UI.Input.InputPointerSource::get_ActivationBehavior()
+    @_property
+    def activation_behavior(self) -> InputPointerActivationBehavior: ...
+    # System.Void Microsoft.UI.Input.InputPointerSource::put_ActivationBehavior(Microsoft.UI.Input.InputPointerActivationBehavior)
+    @activation_behavior.setter
+    def activation_behavior(self, value: InputPointerActivationBehavior) -> None: ...
+
+@typing.final
+class InputPopupController_Static(InputObject_Static):
+    # Microsoft.UI.Input.InputPopupController Microsoft.UI.Input.InputPopupController::GetForPopup(Microsoft.UI.Content.DesktopPopupSiteBridge)
+    def get_for_popup(cls, popup_bridge: microsoft_ui_content.DesktopPopupSiteBridge, /) -> InputPopupController: ...
+
+@typing.final
+class InputPopupController(InputObject, metaclass=InputPopupController_Static):
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Input.InputPopupController::add_LightDismissed(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Input.InputPopupController,Microsoft.UI.Input.InputLightDismissEventArgs>)
+    def add_light_dismissed(self, handler: windows_foundation.TypedEventHandler[InputPopupController, InputLightDismissEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Input.InputPopupController::remove_LightDismissed(Windows.Foundation.EventRegistrationToken)
+    def remove_light_dismissed(self, token: typing.Union[windows_foundation.EventRegistrationToken, typing.Tuple[winrt.system.Int64]], /) -> None: ...
+    # Microsoft.UI.Input.PopupPointerMode Microsoft.UI.Input.InputPopupController::get_Mode()
+    @_property
+    def mode(self) -> PopupPointerMode: ...
+    # System.Void Microsoft.UI.Input.InputPopupController::put_Mode(Microsoft.UI.Input.PopupPointerMode)
+    @mode.setter
+    def mode(self, value: PopupPointerMode) -> None: ...
 
 @typing.final
 class InputPreTranslateKeyboardSource_Static(InputObject_Static):
@@ -980,6 +1043,29 @@ class TappedEventArgs(winrt.system.Object):
     # System.UInt32 Microsoft.UI.Input.TappedEventArgs::get_TapCount()
     @_property
     def tap_count(self) -> winrt.system.UInt32: ...
+
+@typing.final
+class TouchHitTestingEventArgs(winrt.system.Object):
+    # Microsoft.UI.Input.ProximityEvaluation Microsoft.UI.Input.TouchHitTestingEventArgs::EvaluateProximityToPolygon(Windows.Foundation.Point[])
+    def evaluate_proximity_to_polygon(self, control_vertices: typing.Union[winrt.system.Array[windows_foundation.Point], winrt.system.ReadableBuffer], /) -> ProximityEvaluation: ...
+    # Microsoft.UI.Input.ProximityEvaluation Microsoft.UI.Input.TouchHitTestingEventArgs::EvaluateProximityToRect(Windows.Foundation.Rect)
+    def evaluate_proximity_to_rect(self, control_bounding_box: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> ProximityEvaluation: ...
+    # Microsoft.UI.Input.ProximityEvaluation Microsoft.UI.Input.TouchHitTestingEventArgs::GetProximityEvaluation()
+    def get_proximity_evaluation(self) -> ProximityEvaluation: ...
+    # System.Void Microsoft.UI.Input.TouchHitTestingEventArgs::SetProximityEvaluation(Microsoft.UI.Input.ProximityEvaluation)
+    def set_proximity_evaluation(self, proximity_evaluation: typing.Union[ProximityEvaluation, typing.Tuple[winrt.system.Int32, typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]]]], /) -> None: ...
+    # System.Boolean Microsoft.UI.Input.TouchHitTestingEventArgs::get_Handled()
+    @_property
+    def handled(self) -> bool: ...
+    # System.Void Microsoft.UI.Input.TouchHitTestingEventArgs::put_Handled(System.Boolean)
+    @handled.setter
+    def handled(self, value: bool) -> None: ...
+    # Windows.Foundation.Rect Microsoft.UI.Input.TouchHitTestingEventArgs::get_BoundingBox()
+    @_property
+    def bounding_box(self) -> windows_foundation.Rect: ...
+    # Windows.Foundation.Point Microsoft.UI.Input.TouchHitTestingEventArgs::get_Point()
+    @_property
+    def point(self) -> windows_foundation.Point: ...
 
 @typing.final
 class WindowRectChangedEventArgs(winrt.system.Object):

@@ -1194,6 +1194,133 @@ namespace py::cpp::Microsoft::UI::Content
         Py_TPFLAGS_DEFAULT,
         type_slots_ChildSiteLink_Static};
 
+    // ----- ContentAppWindowBridge class --------------------
+
+    static PyObject* _new_ContentAppWindowBridge(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::UI::Content::ContentAppWindowBridge>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Content::ContentAppWindowBridge>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_ContentAppWindowBridge(py::wrapper::Microsoft::UI::Content::ContentAppWindowBridge* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* ContentAppWindowBridge_GetForWindowId(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentAppWindowBridge", L"GetForWindowId", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::WindowId>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Content::ContentAppWindowBridge::GetForWindowId(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_ContentAppWindowBridge(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Content::ContentAppWindowBridge>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_ContentAppWindowBridge(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Content::ContentAppWindowBridge>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_ContentAppWindowBridge[] = {
+        { "_assign_array_", _assign_array_ContentAppWindowBridge, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_ContentAppWindowBridge), METH_O | METH_STATIC, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_ContentAppWindowBridge[] = {
+        { }};
+
+    static PyType_Slot _type_slots_ContentAppWindowBridge[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_ContentAppWindowBridge) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentAppWindowBridge) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentAppWindowBridge) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentAppWindowBridge) },
+        { }};
+
+    static PyType_Spec type_spec_ContentAppWindowBridge = {
+        "winui3._winui3_microsoft_ui_content.ContentAppWindowBridge",
+        sizeof(py::wrapper::Microsoft::UI::Content::ContentAppWindowBridge),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_ContentAppWindowBridge};
+
+    static PyGetSetDef getset_ContentAppWindowBridge_Static[] = {
+        { }};
+
+    static PyMethodDef methods_ContentAppWindowBridge_Static[] = {
+        { "get_for_window_id", reinterpret_cast<PyCFunction>(ContentAppWindowBridge_GetForWindowId), METH_VARARGS, nullptr },
+        { }};
+
+    static PyType_Slot type_slots_ContentAppWindowBridge_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ContentAppWindowBridge_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ContentAppWindowBridge_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ContentAppWindowBridge_Static = {
+        "winui3._winui3_microsoft_ui_content.ContentAppWindowBridge_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ContentAppWindowBridge_Static};
+
     // ----- ContentCoordinateConverter class --------------------
 
     static PyObject* _new_ContentCoordinateConverter(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -1978,6 +2105,909 @@ namespace py::cpp::Microsoft::UI::Content
         Py_TPFLAGS_DEFAULT,
         _type_slots_ContentEnvironmentStateChangedEventArgs};
 
+    // ----- ContentExternalBackdropLink class --------------------
+
+    static PyObject* _new_ContentExternalBackdropLink(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::UI::Content::ContentExternalBackdropLink>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Content::ContentExternalBackdropLink>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_ContentExternalBackdropLink(py::wrapper::Microsoft::UI::Content::ContentExternalBackdropLink* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* ContentExternalBackdropLink_Close(py::wrapper::Microsoft::UI::Content::ContentExternalBackdropLink* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentExternalBackdropLink", L"Close", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContentExternalBackdropLink_Create(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentExternalBackdropLink", L"Create", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Content::ContentExternalBackdropLink::Create(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContentExternalBackdropLink_get_SystemBackdrop(py::wrapper::Microsoft::UI::Content::ContentExternalBackdropLink* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentExternalBackdropLink", L"SystemBackdrop");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SystemBackdrop();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int ContentExternalBackdropLink_put_SystemBackdrop(py::wrapper::Microsoft::UI::Content::ContentExternalBackdropLink* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentExternalBackdropLink", L"SystemBackdrop");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Composition::CompositionBrush>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.SystemBackdrop(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* ContentExternalBackdropLink_get_ExternalBackdropBorderMode(py::wrapper::Microsoft::UI::Content::ContentExternalBackdropLink* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentExternalBackdropLink", L"ExternalBackdropBorderMode");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExternalBackdropBorderMode();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int ContentExternalBackdropLink_put_ExternalBackdropBorderMode(py::wrapper::Microsoft::UI::Content::ContentExternalBackdropLink* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentExternalBackdropLink", L"ExternalBackdropBorderMode");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionBorderMode>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.ExternalBackdropBorderMode(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* ContentExternalBackdropLink_get_DispatcherQueue(py::wrapper::Microsoft::UI::Content::ContentExternalBackdropLink* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentExternalBackdropLink", L"DispatcherQueue");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DispatcherQueue();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContentExternalBackdropLink_get_PlacementVisual(py::wrapper::Microsoft::UI::Content::ContentExternalBackdropLink* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentExternalBackdropLink", L"PlacementVisual");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PlacementVisual();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_ContentExternalBackdropLink(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Content::ContentExternalBackdropLink>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_ContentExternalBackdropLink(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Content::ContentExternalBackdropLink>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _enter_ContentExternalBackdropLink(py::wrapper::Microsoft::UI::Content::ContentExternalBackdropLink* self, PyObject* /*unused*/) noexcept
+    {
+        return Py_NewRef(self);
+    }
+
+    static PyObject* _exit_ContentExternalBackdropLink(py::wrapper::Microsoft::UI::Content::ContentExternalBackdropLink* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
+            Py_RETURN_FALSE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_ContentExternalBackdropLink[] = {
+        { "close", reinterpret_cast<PyCFunction>(ContentExternalBackdropLink_Close), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_ContentExternalBackdropLink, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_ContentExternalBackdropLink), METH_O | METH_STATIC, nullptr },
+        { "__enter__", reinterpret_cast<PyCFunction>(_enter_ContentExternalBackdropLink), METH_NOARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_ContentExternalBackdropLink), METH_VARARGS, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_ContentExternalBackdropLink[] = {
+        { "system_backdrop", reinterpret_cast<getter>(ContentExternalBackdropLink_get_SystemBackdrop), reinterpret_cast<setter>(ContentExternalBackdropLink_put_SystemBackdrop), nullptr, nullptr },
+        { "external_backdrop_border_mode", reinterpret_cast<getter>(ContentExternalBackdropLink_get_ExternalBackdropBorderMode), reinterpret_cast<setter>(ContentExternalBackdropLink_put_ExternalBackdropBorderMode), nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(ContentExternalBackdropLink_get_DispatcherQueue), nullptr, nullptr, nullptr },
+        { "placement_visual", reinterpret_cast<getter>(ContentExternalBackdropLink_get_PlacementVisual), nullptr, nullptr, nullptr },
+        { }};
+
+    static PyType_Slot _type_slots_ContentExternalBackdropLink[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_ContentExternalBackdropLink) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentExternalBackdropLink) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentExternalBackdropLink) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentExternalBackdropLink) },
+        { }};
+
+    static PyType_Spec type_spec_ContentExternalBackdropLink = {
+        "winui3._winui3_microsoft_ui_content.ContentExternalBackdropLink",
+        sizeof(py::wrapper::Microsoft::UI::Content::ContentExternalBackdropLink),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_ContentExternalBackdropLink};
+
+    static PyGetSetDef getset_ContentExternalBackdropLink_Static[] = {
+        { }};
+
+    static PyMethodDef methods_ContentExternalBackdropLink_Static[] = {
+        { "create", reinterpret_cast<PyCFunction>(ContentExternalBackdropLink_Create), METH_VARARGS, nullptr },
+        { }};
+
+    static PyType_Slot type_slots_ContentExternalBackdropLink_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ContentExternalBackdropLink_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ContentExternalBackdropLink_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ContentExternalBackdropLink_Static = {
+        "winui3._winui3_microsoft_ui_content.ContentExternalBackdropLink_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ContentExternalBackdropLink_Static};
+
+    // ----- ContentExternalOutputLink class --------------------
+
+    static PyObject* _new_ContentExternalOutputLink(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::UI::Content::ContentExternalOutputLink>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Content::ContentExternalOutputLink>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_ContentExternalOutputLink(py::wrapper::Microsoft::UI::Content::ContentExternalOutputLink* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* ContentExternalOutputLink_Close(py::wrapper::Microsoft::UI::Content::ContentExternalOutputLink* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentExternalOutputLink", L"Close", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContentExternalOutputLink_Create(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentExternalOutputLink", L"Create", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Content::ContentExternalOutputLink::Create(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContentExternalOutputLink_IsSupported(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentExternalOutputLink", L"IsSupported", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Content::ContentExternalOutputLink::IsSupported();
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContentExternalOutputLink_get_IsAboveContent(py::wrapper::Microsoft::UI::Content::ContentExternalOutputLink* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentExternalOutputLink", L"IsAboveContent");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsAboveContent();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int ContentExternalOutputLink_put_IsAboveContent(py::wrapper::Microsoft::UI::Content::ContentExternalOutputLink* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentExternalOutputLink", L"IsAboveContent");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.IsAboveContent(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* ContentExternalOutputLink_get_ExternalOutputBorderMode(py::wrapper::Microsoft::UI::Content::ContentExternalOutputLink* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentExternalOutputLink", L"ExternalOutputBorderMode");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExternalOutputBorderMode();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int ContentExternalOutputLink_put_ExternalOutputBorderMode(py::wrapper::Microsoft::UI::Content::ContentExternalOutputLink* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentExternalOutputLink", L"ExternalOutputBorderMode");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionBorderMode>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.ExternalOutputBorderMode(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* ContentExternalOutputLink_get_BackgroundColor(py::wrapper::Microsoft::UI::Content::ContentExternalOutputLink* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentExternalOutputLink", L"BackgroundColor");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BackgroundColor();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int ContentExternalOutputLink_put_BackgroundColor(py::wrapper::Microsoft::UI::Content::ContentExternalOutputLink* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentExternalOutputLink", L"BackgroundColor");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.BackgroundColor(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* ContentExternalOutputLink_get_DispatcherQueue(py::wrapper::Microsoft::UI::Content::ContentExternalOutputLink* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentExternalOutputLink", L"DispatcherQueue");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DispatcherQueue();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContentExternalOutputLink_get_PlacementVisual(py::wrapper::Microsoft::UI::Content::ContentExternalOutputLink* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentExternalOutputLink", L"PlacementVisual");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PlacementVisual();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_ContentExternalOutputLink(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Content::ContentExternalOutputLink>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_ContentExternalOutputLink(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Content::ContentExternalOutputLink>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _enter_ContentExternalOutputLink(py::wrapper::Microsoft::UI::Content::ContentExternalOutputLink* self, PyObject* /*unused*/) noexcept
+    {
+        return Py_NewRef(self);
+    }
+
+    static PyObject* _exit_ContentExternalOutputLink(py::wrapper::Microsoft::UI::Content::ContentExternalOutputLink* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
+            Py_RETURN_FALSE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_ContentExternalOutputLink[] = {
+        { "close", reinterpret_cast<PyCFunction>(ContentExternalOutputLink_Close), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_ContentExternalOutputLink, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_ContentExternalOutputLink), METH_O | METH_STATIC, nullptr },
+        { "__enter__", reinterpret_cast<PyCFunction>(_enter_ContentExternalOutputLink), METH_NOARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_ContentExternalOutputLink), METH_VARARGS, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_ContentExternalOutputLink[] = {
+        { "is_above_content", reinterpret_cast<getter>(ContentExternalOutputLink_get_IsAboveContent), reinterpret_cast<setter>(ContentExternalOutputLink_put_IsAboveContent), nullptr, nullptr },
+        { "external_output_border_mode", reinterpret_cast<getter>(ContentExternalOutputLink_get_ExternalOutputBorderMode), reinterpret_cast<setter>(ContentExternalOutputLink_put_ExternalOutputBorderMode), nullptr, nullptr },
+        { "background_color", reinterpret_cast<getter>(ContentExternalOutputLink_get_BackgroundColor), reinterpret_cast<setter>(ContentExternalOutputLink_put_BackgroundColor), nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(ContentExternalOutputLink_get_DispatcherQueue), nullptr, nullptr, nullptr },
+        { "placement_visual", reinterpret_cast<getter>(ContentExternalOutputLink_get_PlacementVisual), nullptr, nullptr, nullptr },
+        { }};
+
+    static PyType_Slot _type_slots_ContentExternalOutputLink[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_ContentExternalOutputLink) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ContentExternalOutputLink) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_ContentExternalOutputLink) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_ContentExternalOutputLink) },
+        { }};
+
+    static PyType_Spec type_spec_ContentExternalOutputLink = {
+        "winui3._winui3_microsoft_ui_content.ContentExternalOutputLink",
+        sizeof(py::wrapper::Microsoft::UI::Content::ContentExternalOutputLink),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_ContentExternalOutputLink};
+
+    static PyGetSetDef getset_ContentExternalOutputLink_Static[] = {
+        { }};
+
+    static PyMethodDef methods_ContentExternalOutputLink_Static[] = {
+        { "create", reinterpret_cast<PyCFunction>(ContentExternalOutputLink_Create), METH_VARARGS, nullptr },
+        { "is_supported", reinterpret_cast<PyCFunction>(ContentExternalOutputLink_IsSupported), METH_VARARGS, nullptr },
+        { }};
+
+    static PyType_Slot type_slots_ContentExternalOutputLink_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ContentExternalOutputLink_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ContentExternalOutputLink_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ContentExternalOutputLink_Static = {
+        "winui3._winui3_microsoft_ui_content.ContentExternalOutputLink_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ContentExternalOutputLink_Static};
+
     // ----- ContentIsland class --------------------
 
     static PyObject* _new_ContentIsland(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -2019,6 +3049,49 @@ namespace py::cpp::Microsoft::UI::Content
                 {
                     auto _gil = release_gil();
                     self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().Close();
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContentIsland_ConnectRemoteEndpoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentIsland", L"ConnectRemoteEndpoint", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().ConnectRemoteEndpoint(param0);
                 }
 
                 Py_RETURN_NONE;
@@ -3499,6 +4572,135 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
+    static PyObject* ContentIsland_get_ConnectionInfo(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"ConnectionInfo");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().ConnectionInfo();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContentIsland_get_IsRemoteEndpointConnected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"IsRemoteEndpointConnected");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().IsRemoteEndpointConnected();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContentIsland_get_Root(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"Root");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().Root();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int ContentIsland_put_Root(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"Root");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().Root(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
     static PyObject* ContentIsland_get_IsClosed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
@@ -3648,6 +4850,136 @@ namespace py::cpp::Microsoft::UI::Content
             {
                 auto _gil = release_gil();
                 self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().StateChanged(param0);
+            }
+
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContentIsland_add_Connected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentIsland", L"Connected");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Microsoft::UI::Content::ContentIsland>>(arg);
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().Connected(param0);
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContentIsland_remove_Connected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentIsland", L"Connected");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().Connected(param0);
+            }
+
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContentIsland_add_Disconnected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentIsland", L"Disconnected");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Microsoft::UI::Content::ContentIsland>>(arg);
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().Disconnected(param0);
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContentIsland_remove_Disconnected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentIsland", L"Disconnected");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().Disconnected(param0);
             }
 
             Py_RETURN_NONE;
@@ -3838,6 +5170,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyMethodDef _methods_ContentIsland[] = {
         { "close", reinterpret_cast<PyCFunction>(ContentIsland_Close), METH_VARARGS, nullptr },
+        { "connect_remote_endpoint", reinterpret_cast<PyCFunction>(ContentIsland_ConnectRemoteEndpoint), METH_VARARGS, nullptr },
         { "get_automation_host_provider", reinterpret_cast<PyCFunction>(ContentIsland_GetAutomationHostProvider), METH_VARARGS, nullptr },
         { "get_state_change_deferral", reinterpret_cast<PyCFunction>(ContentIsland_GetStateChangeDeferral), METH_VARARGS, nullptr },
         { "request_size", reinterpret_cast<PyCFunction>(ContentIsland_RequestSize), METH_VARARGS, nullptr },
@@ -3845,6 +5178,10 @@ namespace py::cpp::Microsoft::UI::Content
         { "remove_automation_provider_requested", reinterpret_cast<PyCFunction>(ContentIsland_remove_AutomationProviderRequested), METH_O, nullptr },
         { "add_state_changed", reinterpret_cast<PyCFunction>(ContentIsland_add_StateChanged), METH_O, nullptr },
         { "remove_state_changed", reinterpret_cast<PyCFunction>(ContentIsland_remove_StateChanged), METH_O, nullptr },
+        { "add_connected", reinterpret_cast<PyCFunction>(ContentIsland_add_Connected), METH_O, nullptr },
+        { "remove_connected", reinterpret_cast<PyCFunction>(ContentIsland_remove_Connected), METH_O, nullptr },
+        { "add_disconnected", reinterpret_cast<PyCFunction>(ContentIsland_add_Disconnected), METH_O, nullptr },
+        { "remove_disconnected", reinterpret_cast<PyCFunction>(ContentIsland_remove_Disconnected), METH_O, nullptr },
         { "add_closed", reinterpret_cast<PyCFunction>(ContentIsland_add_Closed), METH_O, nullptr },
         { "remove_closed", reinterpret_cast<PyCFunction>(ContentIsland_remove_Closed), METH_O, nullptr },
         { "add_framework_closed", reinterpret_cast<PyCFunction>(ContentIsland_add_FrameworkClosed), METH_O, nullptr },
@@ -3883,6 +5220,9 @@ namespace py::cpp::Microsoft::UI::Content
         { "next_sibling_automation_provider", reinterpret_cast<getter>(ContentIsland_get_NextSiblingAutomationProvider), nullptr, nullptr, nullptr },
         { "parent_automation_provider", reinterpret_cast<getter>(ContentIsland_get_ParentAutomationProvider), nullptr, nullptr, nullptr },
         { "previous_sibling_automation_provider", reinterpret_cast<getter>(ContentIsland_get_PreviousSiblingAutomationProvider), nullptr, nullptr, nullptr },
+        { "connection_info", reinterpret_cast<getter>(ContentIsland_get_ConnectionInfo), nullptr, nullptr, nullptr },
+        { "is_remote_endpoint_connected", reinterpret_cast<getter>(ContentIsland_get_IsRemoteEndpointConnected), nullptr, nullptr, nullptr },
+        { "root", reinterpret_cast<getter>(ContentIsland_get_Root), reinterpret_cast<setter>(ContentIsland_put_Root), nullptr, nullptr },
         { "is_closed", reinterpret_cast<getter>(ContentIsland_get_IsClosed), nullptr, nullptr, nullptr },
         { }};
 
@@ -4239,6 +5579,66 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
+    static PyObject* ContentIslandEnvironment_get_CurrentOrientation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIslandEnvironment", L"CurrentOrientation");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Content::ContentIslandEnvironment>().CurrentOrientation();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContentIslandEnvironment_get_NativeOrientation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIslandEnvironment", L"NativeOrientation");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Content::ContentIslandEnvironment>().NativeOrientation();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* ContentIslandEnvironment_add_SettingChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
     {
         try
@@ -4369,6 +5769,71 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
+    static PyObject* ContentIslandEnvironment_add_ThemeChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentIslandEnvironment", L"ThemeChanged");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::ContentIslandEnvironment, winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Content::ContentIslandEnvironment>().ThemeChanged(param0);
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContentIslandEnvironment_remove_ThemeChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentIslandEnvironment", L"ThemeChanged");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Content::ContentIslandEnvironment>().ThemeChanged(param0);
+            }
+
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_ContentIslandEnvironment(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Content::ContentIslandEnvironment>>();
@@ -4398,6 +5863,8 @@ namespace py::cpp::Microsoft::UI::Content
         { "remove_setting_changed", reinterpret_cast<PyCFunction>(ContentIslandEnvironment_remove_SettingChanged), METH_O, nullptr },
         { "add_state_changed", reinterpret_cast<PyCFunction>(ContentIslandEnvironment_add_StateChanged), METH_O, nullptr },
         { "remove_state_changed", reinterpret_cast<PyCFunction>(ContentIslandEnvironment_remove_StateChanged), METH_O, nullptr },
+        { "add_theme_changed", reinterpret_cast<PyCFunction>(ContentIslandEnvironment_add_ThemeChanged), METH_O, nullptr },
+        { "remove_theme_changed", reinterpret_cast<PyCFunction>(ContentIslandEnvironment_remove_ThemeChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_ContentIslandEnvironment, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContentIslandEnvironment), METH_O | METH_STATIC, nullptr },
         { }};
@@ -4406,6 +5873,8 @@ namespace py::cpp::Microsoft::UI::Content
         { "app_window_id", reinterpret_cast<getter>(ContentIslandEnvironment_get_AppWindowId), nullptr, nullptr, nullptr },
         { "display_id", reinterpret_cast<getter>(ContentIslandEnvironment_get_DisplayId), nullptr, nullptr, nullptr },
         { "display_scale", reinterpret_cast<getter>(ContentIslandEnvironment_get_DisplayScale), nullptr, nullptr, nullptr },
+        { "current_orientation", reinterpret_cast<getter>(ContentIslandEnvironment_get_CurrentOrientation), nullptr, nullptr, nullptr },
+        { "native_orientation", reinterpret_cast<getter>(ContentIslandEnvironment_get_NativeOrientation), nullptr, nullptr, nullptr },
         { }};
 
     static PyType_Slot _type_slots_ContentIslandEnvironment[] = {
@@ -4807,6 +6276,61 @@ namespace py::cpp::Microsoft::UI::Content
                     auto _gil = release_gil();
                     return self->obj.try_as<winrt::Microsoft::UI::Content::ContentSite>().GetIslandStateChangeDeferral();
                 }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContentSite_TryGetAutomationProvider(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentSite", L"TryGetAutomationProvider", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                winrt::Windows::Foundation::IInspectable param0{};
+
+                auto return_value = [&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.try_as<winrt::Microsoft::UI::Content::ContentSite>().TryGetAutomationProvider(param0);
+                }();
+
+                py::pyobj_handle out_return_value{ py::convert(return_value) };
+                if (!out_return_value)
+                {
+                    return nullptr;
+                }
+                py::pyobj_handle out0{ py::convert(param0) };
+                if (!out0)
+                {
+                    return nullptr;
+                }
+
+                return PyTuple_Pack(2, out_return_value.get(), out0.get());
             }
             catch (...)
             {
@@ -6095,6 +7619,7 @@ namespace py::cpp::Microsoft::UI::Content
     static PyMethodDef _methods_ContentSite[] = {
         { "close", reinterpret_cast<PyCFunction>(ContentSite_Close), METH_VARARGS, nullptr },
         { "get_island_state_change_deferral", reinterpret_cast<PyCFunction>(ContentSite_GetIslandStateChangeDeferral), METH_VARARGS, nullptr },
+        { "try_get_automation_provider", reinterpret_cast<PyCFunction>(ContentSite_TryGetAutomationProvider), METH_VARARGS, nullptr },
         { "add_requested_state_changed", reinterpret_cast<PyCFunction>(ContentSite_add_RequestedStateChanged), METH_O, nullptr },
         { "remove_requested_state_changed", reinterpret_cast<PyCFunction>(ContentSite_remove_RequestedStateChanged), METH_O, nullptr },
         { "add_closed", reinterpret_cast<PyCFunction>(ContentSite_add_Closed), METH_O, nullptr },
@@ -6428,6 +7953,47 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
+    static PyObject* ContentSiteEnvironment_NotifyThemeChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentSiteEnvironment", L"NotifyThemeChanged", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Microsoft::UI::Content::ContentSiteEnvironment>().NotifyThemeChanged();
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* ContentSiteEnvironment_get_DisplayId(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
@@ -6665,6 +8231,144 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
+    static PyObject* ContentSiteEnvironment_get_NativeOrientation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteEnvironment", L"NativeOrientation");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Content::ContentSiteEnvironment>().NativeOrientation();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int ContentSiteEnvironment_put_NativeOrientation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteEnvironment", L"NativeOrientation");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Content::ContentDisplayOrientations>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Content::ContentSiteEnvironment>().NativeOrientation(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* ContentSiteEnvironment_get_CurrentOrientation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteEnvironment", L"CurrentOrientation");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Content::ContentSiteEnvironment>().CurrentOrientation();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int ContentSiteEnvironment_put_CurrentOrientation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteEnvironment", L"CurrentOrientation");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Content::ContentDisplayOrientations>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Content::ContentSiteEnvironment>().CurrentOrientation(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
     static PyObject* _assign_array_ContentSiteEnvironment(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Content::ContentSiteEnvironment>>();
@@ -6691,6 +8395,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyMethodDef _methods_ContentSiteEnvironment[] = {
         { "notify_setting_changed", reinterpret_cast<PyCFunction>(ContentSiteEnvironment_NotifySettingChanged), METH_VARARGS, nullptr },
+        { "notify_theme_changed", reinterpret_cast<PyCFunction>(ContentSiteEnvironment_NotifyThemeChanged), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContentSiteEnvironment, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContentSiteEnvironment), METH_O | METH_STATIC, nullptr },
         { }};
@@ -6700,6 +8405,8 @@ namespace py::cpp::Microsoft::UI::Content
         { "app_window_id", reinterpret_cast<getter>(ContentSiteEnvironment_get_AppWindowId), reinterpret_cast<setter>(ContentSiteEnvironment_put_AppWindowId), nullptr, nullptr },
         { "view", reinterpret_cast<getter>(ContentSiteEnvironment_get_View), nullptr, nullptr, nullptr },
         { "display_scale", reinterpret_cast<getter>(ContentSiteEnvironment_get_DisplayScale), reinterpret_cast<setter>(ContentSiteEnvironment_put_DisplayScale), nullptr, nullptr },
+        { "native_orientation", reinterpret_cast<getter>(ContentSiteEnvironment_get_NativeOrientation), reinterpret_cast<setter>(ContentSiteEnvironment_put_NativeOrientation), nullptr, nullptr },
+        { "current_orientation", reinterpret_cast<getter>(ContentSiteEnvironment_get_CurrentOrientation), reinterpret_cast<setter>(ContentSiteEnvironment_put_CurrentOrientation), nullptr, nullptr },
         { }};
 
     static PyType_Slot _type_slots_ContentSiteEnvironment[] = {
@@ -7681,6 +9388,520 @@ namespace py::cpp::Microsoft::UI::Content
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ContentSiteView_Static};
 
+    // ----- CoreWindowSiteBridge class --------------------
+
+    static PyObject* _new_CoreWindowSiteBridge(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::UI::Content::CoreWindowSiteBridge>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Content::CoreWindowSiteBridge>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_CoreWindowSiteBridge(py::wrapper::Microsoft::UI::Content::CoreWindowSiteBridge* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* CoreWindowSiteBridge_Close(py::wrapper::Microsoft::UI::Content::CoreWindowSiteBridge* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.CoreWindowSiteBridge", L"Close", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWindowSiteBridge_Connect(py::wrapper::Microsoft::UI::Content::CoreWindowSiteBridge* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.CoreWindowSiteBridge", L"Connect", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Content::ContentIsland>(args, 0);
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.Connect(param0);
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWindowSiteBridge_Create(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.CoreWindowSiteBridge", L"Create", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Core::CoreWindow>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Content::CoreWindowSiteBridge::Create(param0, param1);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWindowSiteBridge_IsSupported(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.CoreWindowSiteBridge", L"IsSupported", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Content::CoreWindowSiteBridge::IsSupported();
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreWindowSiteBridge_get_OverrideScale(py::wrapper::Microsoft::UI::Content::CoreWindowSiteBridge* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.CoreWindowSiteBridge", L"OverrideScale");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OverrideScale();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int CoreWindowSiteBridge_put_OverrideScale(py::wrapper::Microsoft::UI::Content::CoreWindowSiteBridge* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.CoreWindowSiteBridge", L"OverrideScale");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<float>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.OverrideScale(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* CoreWindowSiteBridge_get_LayoutDirectionOverride(py::wrapper::Microsoft::UI::Content::CoreWindowSiteBridge* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.CoreWindowSiteBridge", L"LayoutDirectionOverride");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LayoutDirectionOverride();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int CoreWindowSiteBridge_put_LayoutDirectionOverride(py::wrapper::Microsoft::UI::Content::CoreWindowSiteBridge* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.CoreWindowSiteBridge", L"LayoutDirectionOverride");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Microsoft::UI::Content::ContentLayoutDirection>>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.LayoutDirectionOverride(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* CoreWindowSiteBridge_get_DispatcherQueue(py::wrapper::Microsoft::UI::Content::CoreWindowSiteBridge* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.CoreWindowSiteBridge", L"DispatcherQueue");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DispatcherQueue();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_CoreWindowSiteBridge(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Content::CoreWindowSiteBridge>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_CoreWindowSiteBridge(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Content::CoreWindowSiteBridge>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _enter_CoreWindowSiteBridge(py::wrapper::Microsoft::UI::Content::CoreWindowSiteBridge* self, PyObject* /*unused*/) noexcept
+    {
+        return Py_NewRef(self);
+    }
+
+    static PyObject* _exit_CoreWindowSiteBridge(py::wrapper::Microsoft::UI::Content::CoreWindowSiteBridge* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
+            Py_RETURN_FALSE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_CoreWindowSiteBridge[] = {
+        { "close", reinterpret_cast<PyCFunction>(CoreWindowSiteBridge_Close), METH_VARARGS, nullptr },
+        { "connect", reinterpret_cast<PyCFunction>(CoreWindowSiteBridge_Connect), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_CoreWindowSiteBridge, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_CoreWindowSiteBridge), METH_O | METH_STATIC, nullptr },
+        { "__enter__", reinterpret_cast<PyCFunction>(_enter_CoreWindowSiteBridge), METH_NOARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_CoreWindowSiteBridge), METH_VARARGS, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_CoreWindowSiteBridge[] = {
+        { "override_scale", reinterpret_cast<getter>(CoreWindowSiteBridge_get_OverrideScale), reinterpret_cast<setter>(CoreWindowSiteBridge_put_OverrideScale), nullptr, nullptr },
+        { "layout_direction_override", reinterpret_cast<getter>(CoreWindowSiteBridge_get_LayoutDirectionOverride), reinterpret_cast<setter>(CoreWindowSiteBridge_put_LayoutDirectionOverride), nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(CoreWindowSiteBridge_get_DispatcherQueue), nullptr, nullptr, nullptr },
+        { }};
+
+    static PyType_Slot _type_slots_CoreWindowSiteBridge[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_CoreWindowSiteBridge) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWindowSiteBridge) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWindowSiteBridge) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWindowSiteBridge) },
+        { }};
+
+    static PyType_Spec type_spec_CoreWindowSiteBridge = {
+        "winui3._winui3_microsoft_ui_content.CoreWindowSiteBridge",
+        sizeof(py::wrapper::Microsoft::UI::Content::CoreWindowSiteBridge),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_CoreWindowSiteBridge};
+
+    static PyGetSetDef getset_CoreWindowSiteBridge_Static[] = {
+        { }};
+
+    static PyMethodDef methods_CoreWindowSiteBridge_Static[] = {
+        { "create", reinterpret_cast<PyCFunction>(CoreWindowSiteBridge_Create), METH_VARARGS, nullptr },
+        { "is_supported", reinterpret_cast<PyCFunction>(CoreWindowSiteBridge_IsSupported), METH_VARARGS, nullptr },
+        { }};
+
+    static PyType_Slot type_slots_CoreWindowSiteBridge_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CoreWindowSiteBridge_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CoreWindowSiteBridge_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CoreWindowSiteBridge_Static = {
+        "winui3._winui3_microsoft_ui_content.CoreWindowSiteBridge_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CoreWindowSiteBridge_Static};
+
+    // ----- CoreWindowTopLevelWindowBridge class --------------------
+
+    static PyObject* _new_CoreWindowTopLevelWindowBridge(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::UI::Content::CoreWindowTopLevelWindowBridge>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Content::CoreWindowTopLevelWindowBridge>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_CoreWindowTopLevelWindowBridge(py::wrapper::Microsoft::UI::Content::CoreWindowTopLevelWindowBridge* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* _assign_array_CoreWindowTopLevelWindowBridge(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Content::CoreWindowTopLevelWindowBridge>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_CoreWindowTopLevelWindowBridge(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Content::CoreWindowTopLevelWindowBridge>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_CoreWindowTopLevelWindowBridge[] = {
+        { "_assign_array_", _assign_array_CoreWindowTopLevelWindowBridge, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_CoreWindowTopLevelWindowBridge), METH_O | METH_STATIC, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_CoreWindowTopLevelWindowBridge[] = {
+        { }};
+
+    static PyType_Slot _type_slots_CoreWindowTopLevelWindowBridge[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_CoreWindowTopLevelWindowBridge) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWindowTopLevelWindowBridge) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWindowTopLevelWindowBridge) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWindowTopLevelWindowBridge) },
+        { }};
+
+    static PyType_Spec type_spec_CoreWindowTopLevelWindowBridge = {
+        "winui3._winui3_microsoft_ui_content.CoreWindowTopLevelWindowBridge",
+        sizeof(py::wrapper::Microsoft::UI::Content::CoreWindowTopLevelWindowBridge),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_CoreWindowTopLevelWindowBridge};
+
     // ----- DesktopAttachedSiteBridge class --------------------
 
     static PyObject* _new_DesktopAttachedSiteBridge(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -8475,6 +10696,49 @@ namespace py::cpp::Microsoft::UI::Content
         Py_DECREF(tp);
     }
 
+    static PyObject* DesktopChildSiteBridge_AcceptRemoteEndpoint(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.DesktopChildSiteBridge", L"AcceptRemoteEndpoint", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.AcceptRemoteEndpoint(param0);
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* DesktopChildSiteBridge_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
@@ -8557,6 +10821,66 @@ namespace py::cpp::Microsoft::UI::Content
         else
         {
             py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DesktopChildSiteBridge_get_ConnectionInfo(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.DesktopChildSiteBridge", L"ConnectionInfo");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConnectionInfo();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DesktopChildSiteBridge_get_IsRemoteEndpointConnected(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.DesktopChildSiteBridge", L"IsRemoteEndpointConnected");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRemoteEndpointConnected();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
             return nullptr;
         }
     }
@@ -8660,6 +10984,201 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
+    static PyObject* DesktopChildSiteBridge_add_RemoteEndpointConnecting(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.DesktopChildSiteBridge", L"RemoteEndpointConnecting");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, winrt::Microsoft::UI::Content::EndpointConnectionEventArgs>>(arg);
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteEndpointConnecting(param0);
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DesktopChildSiteBridge_remove_RemoteEndpointConnecting(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.DesktopChildSiteBridge", L"RemoteEndpointConnecting");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.RemoteEndpointConnecting(param0);
+            }
+
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DesktopChildSiteBridge_add_RemoteEndpointDisconnected(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.DesktopChildSiteBridge", L"RemoteEndpointDisconnected");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, winrt::Microsoft::UI::Content::EndpointConnectionEventArgs>>(arg);
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteEndpointDisconnected(param0);
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DesktopChildSiteBridge_remove_RemoteEndpointDisconnected(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.DesktopChildSiteBridge", L"RemoteEndpointDisconnected");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.RemoteEndpointDisconnected(param0);
+            }
+
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DesktopChildSiteBridge_add_RemoteEndpointRequestedStateChanged(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.DesktopChildSiteBridge", L"RemoteEndpointRequestedStateChanged");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, winrt::Microsoft::UI::Content::EndpointRequestedStateChangedEventArgs>>(arg);
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteEndpointRequestedStateChanged(param0);
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DesktopChildSiteBridge_remove_RemoteEndpointRequestedStateChanged(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.DesktopChildSiteBridge", L"RemoteEndpointRequestedStateChanged");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.RemoteEndpointRequestedStateChanged(param0);
+            }
+
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_DesktopChildSiteBridge(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Content::DesktopChildSiteBridge>>();
@@ -8685,11 +11204,20 @@ namespace py::cpp::Microsoft::UI::Content
     }
 
     static PyMethodDef _methods_DesktopChildSiteBridge[] = {
+        { "accept_remote_endpoint", reinterpret_cast<PyCFunction>(DesktopChildSiteBridge_AcceptRemoteEndpoint), METH_VARARGS, nullptr },
+        { "add_remote_endpoint_connecting", reinterpret_cast<PyCFunction>(DesktopChildSiteBridge_add_RemoteEndpointConnecting), METH_O, nullptr },
+        { "remove_remote_endpoint_connecting", reinterpret_cast<PyCFunction>(DesktopChildSiteBridge_remove_RemoteEndpointConnecting), METH_O, nullptr },
+        { "add_remote_endpoint_disconnected", reinterpret_cast<PyCFunction>(DesktopChildSiteBridge_add_RemoteEndpointDisconnected), METH_O, nullptr },
+        { "remove_remote_endpoint_disconnected", reinterpret_cast<PyCFunction>(DesktopChildSiteBridge_remove_RemoteEndpointDisconnected), METH_O, nullptr },
+        { "add_remote_endpoint_requested_state_changed", reinterpret_cast<PyCFunction>(DesktopChildSiteBridge_add_RemoteEndpointRequestedStateChanged), METH_O, nullptr },
+        { "remove_remote_endpoint_requested_state_changed", reinterpret_cast<PyCFunction>(DesktopChildSiteBridge_remove_RemoteEndpointRequestedStateChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_DesktopChildSiteBridge, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DesktopChildSiteBridge), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_DesktopChildSiteBridge[] = {
+        { "connection_info", reinterpret_cast<getter>(DesktopChildSiteBridge_get_ConnectionInfo), nullptr, nullptr, nullptr },
+        { "is_remote_endpoint_connected", reinterpret_cast<getter>(DesktopChildSiteBridge_get_IsRemoteEndpointConnected), nullptr, nullptr, nullptr },
         { "resize_policy", reinterpret_cast<getter>(DesktopChildSiteBridge_get_ResizePolicy), reinterpret_cast<setter>(DesktopChildSiteBridge_put_ResizePolicy), nullptr, nullptr },
         { "site_view", reinterpret_cast<getter>(DesktopChildSiteBridge_get_SiteView), nullptr, nullptr, nullptr },
         { }};
@@ -10642,6 +13170,46 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
+    static PyObject* DesktopSiteBridge_TryCreatePopupSiteBridge(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"TryCreatePopupSiteBridge", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.try_as<winrt::Microsoft::UI::Content::DesktopSiteBridge>().TryCreatePopupSiteBridge();
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* DesktopSiteBridge_get_OverrideScale(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
     {
         try
@@ -11118,6 +13686,7 @@ namespace py::cpp::Microsoft::UI::Content
         { "move_in_z_order_at_top", reinterpret_cast<PyCFunction>(DesktopSiteBridge_MoveInZOrderAtTop), METH_VARARGS, nullptr },
         { "move_in_z_order_below", reinterpret_cast<PyCFunction>(DesktopSiteBridge_MoveInZOrderBelow), METH_VARARGS, nullptr },
         { "show", reinterpret_cast<PyCFunction>(DesktopSiteBridge_Show), METH_VARARGS, nullptr },
+        { "try_create_popup_site_bridge", reinterpret_cast<PyCFunction>(DesktopSiteBridge_TryCreatePopupSiteBridge), METH_VARARGS, nullptr },
         { "add_closed", reinterpret_cast<PyCFunction>(DesktopSiteBridge_add_Closed), METH_O, nullptr },
         { "remove_closed", reinterpret_cast<PyCFunction>(DesktopSiteBridge_remove_Closed), METH_O, nullptr },
         { "add_framework_closed", reinterpret_cast<PyCFunction>(DesktopSiteBridge_add_FrameworkClosed), METH_O, nullptr },
@@ -11173,6 +13742,1516 @@ namespace py::cpp::Microsoft::UI::Content
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_DesktopSiteBridge_Static};
+
+    // ----- EndpointConnectionEventArgs class --------------------
+
+    static PyObject* _new_EndpointConnectionEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::UI::Content::EndpointConnectionEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Content::EndpointConnectionEventArgs>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_EndpointConnectionEventArgs(py::wrapper::Microsoft::UI::Content::EndpointConnectionEventArgs* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* EndpointConnectionEventArgs_get_ConnectionInfo(py::wrapper::Microsoft::UI::Content::EndpointConnectionEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.EndpointConnectionEventArgs", L"ConnectionInfo");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConnectionInfo();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_EndpointConnectionEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Content::EndpointConnectionEventArgs>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_EndpointConnectionEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Content::EndpointConnectionEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_EndpointConnectionEventArgs[] = {
+        { "_assign_array_", _assign_array_EndpointConnectionEventArgs, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_EndpointConnectionEventArgs), METH_O | METH_STATIC, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_EndpointConnectionEventArgs[] = {
+        { "connection_info", reinterpret_cast<getter>(EndpointConnectionEventArgs_get_ConnectionInfo), nullptr, nullptr, nullptr },
+        { }};
+
+    static PyType_Slot _type_slots_EndpointConnectionEventArgs[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_EndpointConnectionEventArgs) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EndpointConnectionEventArgs) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_EndpointConnectionEventArgs) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_EndpointConnectionEventArgs) },
+        { }};
+
+    static PyType_Spec type_spec_EndpointConnectionEventArgs = {
+        "winui3._winui3_microsoft_ui_content.EndpointConnectionEventArgs",
+        sizeof(py::wrapper::Microsoft::UI::Content::EndpointConnectionEventArgs),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_EndpointConnectionEventArgs};
+
+    // ----- EndpointRequestedStateChangedEventArgs class --------------------
+
+    static PyObject* _new_EndpointRequestedStateChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::UI::Content::EndpointRequestedStateChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Content::EndpointRequestedStateChangedEventArgs>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_EndpointRequestedStateChangedEventArgs(py::wrapper::Microsoft::UI::Content::EndpointRequestedStateChangedEventArgs* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* EndpointRequestedStateChangedEventArgs_get_DidRequestedSizeChange(py::wrapper::Microsoft::UI::Content::EndpointRequestedStateChangedEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.EndpointRequestedStateChangedEventArgs", L"DidRequestedSizeChange");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DidRequestedSizeChange();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_EndpointRequestedStateChangedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Content::EndpointRequestedStateChangedEventArgs>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_EndpointRequestedStateChangedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Content::EndpointRequestedStateChangedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_EndpointRequestedStateChangedEventArgs[] = {
+        { "_assign_array_", _assign_array_EndpointRequestedStateChangedEventArgs, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_EndpointRequestedStateChangedEventArgs), METH_O | METH_STATIC, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_EndpointRequestedStateChangedEventArgs[] = {
+        { "did_requested_size_change", reinterpret_cast<getter>(EndpointRequestedStateChangedEventArgs_get_DidRequestedSizeChange), nullptr, nullptr, nullptr },
+        { }};
+
+    static PyType_Slot _type_slots_EndpointRequestedStateChangedEventArgs[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_EndpointRequestedStateChangedEventArgs) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EndpointRequestedStateChangedEventArgs) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_EndpointRequestedStateChangedEventArgs) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_EndpointRequestedStateChangedEventArgs) },
+        { }};
+
+    static PyType_Spec type_spec_EndpointRequestedStateChangedEventArgs = {
+        "winui3._winui3_microsoft_ui_content.EndpointRequestedStateChangedEventArgs",
+        sizeof(py::wrapper::Microsoft::UI::Content::EndpointRequestedStateChangedEventArgs),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_EndpointRequestedStateChangedEventArgs};
+
+    // ----- PopupWindowSiteBridge class --------------------
+
+    static PyObject* _new_PopupWindowSiteBridge(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::UI::Content::PopupWindowSiteBridge>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Content::PopupWindowSiteBridge>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_PopupWindowSiteBridge(py::wrapper::Microsoft::UI::Content::PopupWindowSiteBridge* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* PopupWindowSiteBridge_get_Anchored(py::wrapper::Microsoft::UI::Content::PopupWindowSiteBridge* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.PopupWindowSiteBridge", L"Anchored");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Anchored();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int PopupWindowSiteBridge_put_Anchored(py::wrapper::Microsoft::UI::Content::PopupWindowSiteBridge* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.PopupWindowSiteBridge", L"Anchored");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.Anchored(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* _assign_array_PopupWindowSiteBridge(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Content::PopupWindowSiteBridge>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_PopupWindowSiteBridge(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Content::PopupWindowSiteBridge>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_PopupWindowSiteBridge[] = {
+        { "_assign_array_", _assign_array_PopupWindowSiteBridge, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_PopupWindowSiteBridge), METH_O | METH_STATIC, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_PopupWindowSiteBridge[] = {
+        { "anchored", reinterpret_cast<getter>(PopupWindowSiteBridge_get_Anchored), reinterpret_cast<setter>(PopupWindowSiteBridge_put_Anchored), nullptr, nullptr },
+        { }};
+
+    static PyType_Slot _type_slots_PopupWindowSiteBridge[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_PopupWindowSiteBridge) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PopupWindowSiteBridge) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_PopupWindowSiteBridge) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_PopupWindowSiteBridge) },
+        { }};
+
+    static PyType_Spec type_spec_PopupWindowSiteBridge = {
+        "winui3._winui3_microsoft_ui_content.PopupWindowSiteBridge",
+        sizeof(py::wrapper::Microsoft::UI::Content::PopupWindowSiteBridge),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_PopupWindowSiteBridge};
+
+    // ----- ProcessStarter class --------------------
+
+    static PyObject* _new_ProcessStarter(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::UI::Content::ProcessStarter>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Content::ProcessStarter>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_ProcessStarter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* ProcessStarter_StartProcess(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ProcessStarter", L"StartProcess", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                uint32_t param2{};
+
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Content::ProcessStarter::StartProcess(param0, param1, param2);
+                }
+
+                py::pyobj_handle out2{ py::convert(param2) };
+                if (!out2)
+                {
+                    return nullptr;
+                }
+
+                return out2.detach();
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_ProcessStarter(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Content::ProcessStarter>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_ProcessStarter(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Content::ProcessStarter>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_ProcessStarter[] = {
+        { "_assign_array_", _assign_array_ProcessStarter, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_ProcessStarter), METH_O | METH_STATIC, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_ProcessStarter[] = {
+        { }};
+
+    static PyType_Slot _type_slots_ProcessStarter[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_ProcessStarter) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProcessStarter) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_ProcessStarter) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_ProcessStarter) },
+        { }};
+
+    static PyType_Spec type_spec_ProcessStarter = {
+        "winui3._winui3_microsoft_ui_content.ProcessStarter",
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        _type_slots_ProcessStarter};
+
+    static PyGetSetDef getset_ProcessStarter_Static[] = {
+        { }};
+
+    static PyMethodDef methods_ProcessStarter_Static[] = {
+        { "start_process", reinterpret_cast<PyCFunction>(ProcessStarter_StartProcess), METH_VARARGS, nullptr },
+        { }};
+
+    static PyType_Slot type_slots_ProcessStarter_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ProcessStarter_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ProcessStarter_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ProcessStarter_Static = {
+        "winui3._winui3_microsoft_ui_content.ProcessStarter_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_ProcessStarter_Static};
+
+    // ----- SystemVisualSiteBridge class --------------------
+
+    static PyObject* _new_SystemVisualSiteBridge(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::UI::Content::SystemVisualSiteBridge>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Content::SystemVisualSiteBridge>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_SystemVisualSiteBridge(py::wrapper::Microsoft::UI::Content::SystemVisualSiteBridge* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* SystemVisualSiteBridge_Close(py::wrapper::Microsoft::UI::Content::SystemVisualSiteBridge* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.SystemVisualSiteBridge", L"Close", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.Close();
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SystemVisualSiteBridge_Connect(py::wrapper::Microsoft::UI::Content::SystemVisualSiteBridge* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.SystemVisualSiteBridge", L"Connect", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Content::ContentIsland>(args, 0);
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.Connect(param0);
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SystemVisualSiteBridge_Create(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.SystemVisualSiteBridge", L"Create", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Dispatching::DispatcherQueue>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::ContainerVisual>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::WindowId>(args, 2);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Content::SystemVisualSiteBridge::Create(param0, param1, param2);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SystemVisualSiteBridge_get_OverrideScale(py::wrapper::Microsoft::UI::Content::SystemVisualSiteBridge* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.SystemVisualSiteBridge", L"OverrideScale");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OverrideScale();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int SystemVisualSiteBridge_put_OverrideScale(py::wrapper::Microsoft::UI::Content::SystemVisualSiteBridge* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.SystemVisualSiteBridge", L"OverrideScale");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<float>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.OverrideScale(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* SystemVisualSiteBridge_get_LayoutDirectionOverride(py::wrapper::Microsoft::UI::Content::SystemVisualSiteBridge* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.SystemVisualSiteBridge", L"LayoutDirectionOverride");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LayoutDirectionOverride();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int SystemVisualSiteBridge_put_LayoutDirectionOverride(py::wrapper::Microsoft::UI::Content::SystemVisualSiteBridge* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.SystemVisualSiteBridge", L"LayoutDirectionOverride");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Microsoft::UI::Content::ContentLayoutDirection>>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.LayoutDirectionOverride(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* SystemVisualSiteBridge_get_DispatcherQueue(py::wrapper::Microsoft::UI::Content::SystemVisualSiteBridge* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.SystemVisualSiteBridge", L"DispatcherQueue");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DispatcherQueue();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* SystemVisualSiteBridge_get_Site(py::wrapper::Microsoft::UI::Content::SystemVisualSiteBridge* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.SystemVisualSiteBridge", L"Site");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Site();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* SystemVisualSiteBridge_get_IsClosed(py::wrapper::Microsoft::UI::Content::SystemVisualSiteBridge* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.SystemVisualSiteBridge", L"IsClosed");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsClosed();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* SystemVisualSiteBridge_add_Closed(py::wrapper::Microsoft::UI::Content::SystemVisualSiteBridge* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.SystemVisualSiteBridge", L"Closed");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::ClosableNotifierHandler>(arg);
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Closed(param0);
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* SystemVisualSiteBridge_remove_Closed(py::wrapper::Microsoft::UI::Content::SystemVisualSiteBridge* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.SystemVisualSiteBridge", L"Closed");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.Closed(param0);
+            }
+
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* SystemVisualSiteBridge_add_FrameworkClosed(py::wrapper::Microsoft::UI::Content::SystemVisualSiteBridge* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.SystemVisualSiteBridge", L"FrameworkClosed");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::ClosableNotifierHandler>(arg);
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.FrameworkClosed(param0);
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* SystemVisualSiteBridge_remove_FrameworkClosed(py::wrapper::Microsoft::UI::Content::SystemVisualSiteBridge* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.SystemVisualSiteBridge", L"FrameworkClosed");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.FrameworkClosed(param0);
+            }
+
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_SystemVisualSiteBridge(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Content::SystemVisualSiteBridge>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_SystemVisualSiteBridge(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Content::SystemVisualSiteBridge>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _enter_SystemVisualSiteBridge(py::wrapper::Microsoft::UI::Content::SystemVisualSiteBridge* self, PyObject* /*unused*/) noexcept
+    {
+        return Py_NewRef(self);
+    }
+
+    static PyObject* _exit_SystemVisualSiteBridge(py::wrapper::Microsoft::UI::Content::SystemVisualSiteBridge* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            {
+                auto _gil = py::release_gil();
+                self->obj.Close();
+            }
+
+            Py_RETURN_FALSE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_SystemVisualSiteBridge[] = {
+        { "close", reinterpret_cast<PyCFunction>(SystemVisualSiteBridge_Close), METH_VARARGS, nullptr },
+        { "connect", reinterpret_cast<PyCFunction>(SystemVisualSiteBridge_Connect), METH_VARARGS, nullptr },
+        { "add_closed", reinterpret_cast<PyCFunction>(SystemVisualSiteBridge_add_Closed), METH_O, nullptr },
+        { "remove_closed", reinterpret_cast<PyCFunction>(SystemVisualSiteBridge_remove_Closed), METH_O, nullptr },
+        { "add_framework_closed", reinterpret_cast<PyCFunction>(SystemVisualSiteBridge_add_FrameworkClosed), METH_O, nullptr },
+        { "remove_framework_closed", reinterpret_cast<PyCFunction>(SystemVisualSiteBridge_remove_FrameworkClosed), METH_O, nullptr },
+        { "_assign_array_", _assign_array_SystemVisualSiteBridge, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_SystemVisualSiteBridge), METH_O | METH_STATIC, nullptr },
+        { "__enter__", reinterpret_cast<PyCFunction>(_enter_SystemVisualSiteBridge), METH_NOARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_SystemVisualSiteBridge), METH_VARARGS, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_SystemVisualSiteBridge[] = {
+        { "override_scale", reinterpret_cast<getter>(SystemVisualSiteBridge_get_OverrideScale), reinterpret_cast<setter>(SystemVisualSiteBridge_put_OverrideScale), nullptr, nullptr },
+        { "layout_direction_override", reinterpret_cast<getter>(SystemVisualSiteBridge_get_LayoutDirectionOverride), reinterpret_cast<setter>(SystemVisualSiteBridge_put_LayoutDirectionOverride), nullptr, nullptr },
+        { "dispatcher_queue", reinterpret_cast<getter>(SystemVisualSiteBridge_get_DispatcherQueue), nullptr, nullptr, nullptr },
+        { "site", reinterpret_cast<getter>(SystemVisualSiteBridge_get_Site), nullptr, nullptr, nullptr },
+        { "is_closed", reinterpret_cast<getter>(SystemVisualSiteBridge_get_IsClosed), nullptr, nullptr, nullptr },
+        { }};
+
+    static PyType_Slot _type_slots_SystemVisualSiteBridge[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_SystemVisualSiteBridge) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SystemVisualSiteBridge) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_SystemVisualSiteBridge) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_SystemVisualSiteBridge) },
+        { }};
+
+    static PyType_Spec type_spec_SystemVisualSiteBridge = {
+        "winui3._winui3_microsoft_ui_content.SystemVisualSiteBridge",
+        sizeof(py::wrapper::Microsoft::UI::Content::SystemVisualSiteBridge),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_SystemVisualSiteBridge};
+
+    static PyGetSetDef getset_SystemVisualSiteBridge_Static[] = {
+        { }};
+
+    static PyMethodDef methods_SystemVisualSiteBridge_Static[] = {
+        { "create", reinterpret_cast<PyCFunction>(SystemVisualSiteBridge_Create), METH_VARARGS, nullptr },
+        { }};
+
+    static PyType_Slot type_slots_SystemVisualSiteBridge_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SystemVisualSiteBridge_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SystemVisualSiteBridge_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SystemVisualSiteBridge_Static = {
+        "winui3._winui3_microsoft_ui_content.SystemVisualSiteBridge_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SystemVisualSiteBridge_Static};
+
+    // ----- IContentIslandEndpointConnectionPrivate interface --------------------
+
+    #if PY_VERSION_HEX < 0x030A0000
+    static PyObject* _new_IContentIslandEndpointConnectionPrivate(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::UI::Content::IContentIslandEndpointConnectionPrivate>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Content::IContentIslandEndpointConnectionPrivate>::type_name);
+        return nullptr;
+    }
+    #endif
+
+    static void _dealloc_IContentIslandEndpointConnectionPrivate(py::wrapper::Microsoft::UI::Content::IContentIslandEndpointConnectionPrivate* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* IContentIslandEndpointConnectionPrivate_ConnectRemoteEndpoint(py::wrapper::Microsoft::UI::Content::IContentIslandEndpointConnectionPrivate* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.IContentIslandEndpointConnectionPrivate", L"ConnectRemoteEndpoint", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.ConnectRemoteEndpoint(param0);
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IContentIslandEndpointConnectionPrivate_get_ConnectionInfo(py::wrapper::Microsoft::UI::Content::IContentIslandEndpointConnectionPrivate* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.IContentIslandEndpointConnectionPrivate", L"ConnectionInfo");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConnectionInfo();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* IContentIslandEndpointConnectionPrivate_get_IsRemoteEndpointConnected(py::wrapper::Microsoft::UI::Content::IContentIslandEndpointConnectionPrivate* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.IContentIslandEndpointConnectionPrivate", L"IsRemoteEndpointConnected");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRemoteEndpointConnected();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_IContentIslandEndpointConnectionPrivate[] = {
+        { "connect_remote_endpoint", reinterpret_cast<PyCFunction>(IContentIslandEndpointConnectionPrivate_ConnectRemoteEndpoint), METH_VARARGS, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_IContentIslandEndpointConnectionPrivate[] = {
+        { "connection_info", reinterpret_cast<getter>(IContentIslandEndpointConnectionPrivate_get_ConnectionInfo), nullptr, nullptr, nullptr },
+        { "is_remote_endpoint_connected", reinterpret_cast<getter>(IContentIslandEndpointConnectionPrivate_get_IsRemoteEndpointConnected), nullptr, nullptr, nullptr },
+        { }};
+
+    static PyType_Slot _type_slots_IContentIslandEndpointConnectionPrivate[] = {
+        #if PY_VERSION_HEX < 0x030A0000
+        { Py_tp_new, reinterpret_cast<void*>(_new_IContentIslandEndpointConnectionPrivate) },
+        #endif
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContentIslandEndpointConnectionPrivate) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_IContentIslandEndpointConnectionPrivate) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_IContentIslandEndpointConnectionPrivate) },
+        { }};
+
+    static PyType_Spec type_spec_IContentIslandEndpointConnectionPrivate = {
+        "winui3._winui3_microsoft_ui_content._IContentIslandEndpointConnectionPrivate",
+        sizeof(py::wrapper::Microsoft::UI::Content::IContentIslandEndpointConnectionPrivate),
+        0,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
+        _type_slots_IContentIslandEndpointConnectionPrivate};
+
+    struct ImplementsIContentIslandEndpointConnectionPrivate : py::ImplementsInterfaceT<ImplementsIContentIslandEndpointConnectionPrivate, winrt::Microsoft::UI::Content::IContentIslandEndpointConnectionPrivate>
+    {
+        ImplementsIContentIslandEndpointConnectionPrivate() = delete;
+        ImplementsIContentIslandEndpointConnectionPrivate(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIContentIslandEndpointConnectionPrivate, winrt::Microsoft::UI::Content::IContentIslandEndpointConnectionPrivate>(py_obj, runtime_class)
+        {
+        }
+
+        auto ConnectRemoteEndpoint(winrt::hstring const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "connect_remote_endpoint")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto ConnectionInfo()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "connection_info")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto IsRemoteEndpointConnected()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "is_remote_endpoint_connected")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<bool>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _assign_array_IContentIslandEndpointConnectionPrivate(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Content::IContentIslandEndpointConnectionPrivate>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_IContentIslandEndpointConnectionPrivate(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Content::IContentIslandEndpointConnectionPrivate>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _guid_ImplementsIContentIslandEndpointConnectionPrivate(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Microsoft::UI::Content::IContentIslandEndpointConnectionPrivate>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIContentIslandEndpointConnectionPrivate(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIContentIslandEndpointConnectionPrivate>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIContentIslandEndpointConnectionPrivate[] = {
+        { "_assign_array_", _assign_array_IContentIslandEndpointConnectionPrivate, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_IContentIslandEndpointConnectionPrivate), METH_O | METH_STATIC, nullptr },
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContentIslandEndpointConnectionPrivate), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContentIslandEndpointConnectionPrivate), METH_VARARGS | METH_STATIC, nullptr },
+        { }};
+
+    static PyType_Slot type_slots_ImplementsIContentIslandEndpointConnectionPrivate[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIContentIslandEndpointConnectionPrivate) },
+        { }};
+
+    static PyType_Spec type_spec_ImplementsIContentIslandEndpointConnectionPrivate = {
+        "winui3._winui3_microsoft_ui_content.IContentIslandEndpointConnectionPrivate",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
+        type_slots_ImplementsIContentIslandEndpointConnectionPrivate};
+
+    // ----- IContentNodeOwner interface --------------------
+
+    #if PY_VERSION_HEX < 0x030A0000
+    static PyObject* _new_IContentNodeOwner(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::UI::Content::IContentNodeOwner>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Content::IContentNodeOwner>::type_name);
+        return nullptr;
+    }
+    #endif
+
+    static void _dealloc_IContentNodeOwner(py::wrapper::Microsoft::UI::Content::IContentNodeOwner* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyMethodDef _methods_IContentNodeOwner[] = {
+        { }};
+
+    static PyGetSetDef _getset_IContentNodeOwner[] = {
+        { }};
+
+    static PyType_Slot _type_slots_IContentNodeOwner[] = {
+        #if PY_VERSION_HEX < 0x030A0000
+        { Py_tp_new, reinterpret_cast<void*>(_new_IContentNodeOwner) },
+        #endif
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContentNodeOwner) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_IContentNodeOwner) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_IContentNodeOwner) },
+        { }};
+
+    static PyType_Spec type_spec_IContentNodeOwner = {
+        "winui3._winui3_microsoft_ui_content._IContentNodeOwner",
+        sizeof(py::wrapper::Microsoft::UI::Content::IContentNodeOwner),
+        0,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
+        _type_slots_IContentNodeOwner};
+
+    struct ImplementsIContentNodeOwner : py::ImplementsInterfaceT<ImplementsIContentNodeOwner, winrt::Microsoft::UI::Content::IContentNodeOwner>
+    {
+        ImplementsIContentNodeOwner() = delete;
+        ImplementsIContentNodeOwner(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIContentNodeOwner, winrt::Microsoft::UI::Content::IContentNodeOwner>(py_obj, runtime_class)
+        {
+        }
+    };
+
+    static PyObject* _assign_array_IContentNodeOwner(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Content::IContentNodeOwner>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_IContentNodeOwner(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Content::IContentNodeOwner>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _guid_ImplementsIContentNodeOwner(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Microsoft::UI::Content::IContentNodeOwner>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIContentNodeOwner(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIContentNodeOwner>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIContentNodeOwner[] = {
+        { "_assign_array_", _assign_array_IContentNodeOwner, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_IContentNodeOwner), METH_O | METH_STATIC, nullptr },
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContentNodeOwner), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContentNodeOwner), METH_VARARGS | METH_STATIC, nullptr },
+        { }};
+
+    static PyType_Slot type_slots_ImplementsIContentNodeOwner[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIContentNodeOwner) },
+        { }};
+
+    static PyType_Spec type_spec_ImplementsIContentNodeOwner = {
+        "winui3._winui3_microsoft_ui_content.IContentNodeOwner",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
+        type_slots_ImplementsIContentNodeOwner};
 
     // ----- IContentSiteAutomation interface --------------------
 
@@ -12492,6 +16571,704 @@ namespace py::cpp::Microsoft::UI::Content
         ,
         type_slots_ImplementsIContentSiteBridge};
 
+    // ----- IContentSiteBridgeEndpointConnectionPrivate interface --------------------
+
+    #if PY_VERSION_HEX < 0x030A0000
+    static PyObject* _new_IContentSiteBridgeEndpointConnectionPrivate(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>::type_name);
+        return nullptr;
+    }
+    #endif
+
+    static void _dealloc_IContentSiteBridgeEndpointConnectionPrivate(py::wrapper::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* IContentSiteBridgeEndpointConnectionPrivate_AcceptRemoteEndpoint(py::wrapper::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.IContentSiteBridgeEndpointConnectionPrivate", L"AcceptRemoteEndpoint", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.AcceptRemoteEndpoint(param0);
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IContentSiteBridgeEndpointConnectionPrivate_get_ConnectionInfo(py::wrapper::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.IContentSiteBridgeEndpointConnectionPrivate", L"ConnectionInfo");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConnectionInfo();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* IContentSiteBridgeEndpointConnectionPrivate_get_IsRemoteEndpointConnected(py::wrapper::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.IContentSiteBridgeEndpointConnectionPrivate", L"IsRemoteEndpointConnected");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsRemoteEndpointConnected();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* IContentSiteBridgeEndpointConnectionPrivate_add_RemoteEndpointConnecting(py::wrapper::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.IContentSiteBridgeEndpointConnectionPrivate", L"RemoteEndpointConnecting");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, winrt::Microsoft::UI::Content::EndpointConnectionEventArgs>>(arg);
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteEndpointConnecting(param0);
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* IContentSiteBridgeEndpointConnectionPrivate_remove_RemoteEndpointConnecting(py::wrapper::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.IContentSiteBridgeEndpointConnectionPrivate", L"RemoteEndpointConnecting");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.RemoteEndpointConnecting(param0);
+            }
+
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* IContentSiteBridgeEndpointConnectionPrivate_add_RemoteEndpointDisconnected(py::wrapper::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.IContentSiteBridgeEndpointConnectionPrivate", L"RemoteEndpointDisconnected");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, winrt::Microsoft::UI::Content::EndpointConnectionEventArgs>>(arg);
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteEndpointDisconnected(param0);
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* IContentSiteBridgeEndpointConnectionPrivate_remove_RemoteEndpointDisconnected(py::wrapper::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.IContentSiteBridgeEndpointConnectionPrivate", L"RemoteEndpointDisconnected");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.RemoteEndpointDisconnected(param0);
+            }
+
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* IContentSiteBridgeEndpointConnectionPrivate_add_RemoteEndpointRequestedStateChanged(py::wrapper::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.IContentSiteBridgeEndpointConnectionPrivate", L"RemoteEndpointRequestedStateChanged");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, winrt::Microsoft::UI::Content::EndpointRequestedStateChangedEventArgs>>(arg);
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RemoteEndpointRequestedStateChanged(param0);
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* IContentSiteBridgeEndpointConnectionPrivate_remove_RemoteEndpointRequestedStateChanged(py::wrapper::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.IContentSiteBridgeEndpointConnectionPrivate", L"RemoteEndpointRequestedStateChanged");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.RemoteEndpointRequestedStateChanged(param0);
+            }
+
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_IContentSiteBridgeEndpointConnectionPrivate[] = {
+        { "accept_remote_endpoint", reinterpret_cast<PyCFunction>(IContentSiteBridgeEndpointConnectionPrivate_AcceptRemoteEndpoint), METH_VARARGS, nullptr },
+        { "add_remote_endpoint_connecting", reinterpret_cast<PyCFunction>(IContentSiteBridgeEndpointConnectionPrivate_add_RemoteEndpointConnecting), METH_O, nullptr },
+        { "remove_remote_endpoint_connecting", reinterpret_cast<PyCFunction>(IContentSiteBridgeEndpointConnectionPrivate_remove_RemoteEndpointConnecting), METH_O, nullptr },
+        { "add_remote_endpoint_disconnected", reinterpret_cast<PyCFunction>(IContentSiteBridgeEndpointConnectionPrivate_add_RemoteEndpointDisconnected), METH_O, nullptr },
+        { "remove_remote_endpoint_disconnected", reinterpret_cast<PyCFunction>(IContentSiteBridgeEndpointConnectionPrivate_remove_RemoteEndpointDisconnected), METH_O, nullptr },
+        { "add_remote_endpoint_requested_state_changed", reinterpret_cast<PyCFunction>(IContentSiteBridgeEndpointConnectionPrivate_add_RemoteEndpointRequestedStateChanged), METH_O, nullptr },
+        { "remove_remote_endpoint_requested_state_changed", reinterpret_cast<PyCFunction>(IContentSiteBridgeEndpointConnectionPrivate_remove_RemoteEndpointRequestedStateChanged), METH_O, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_IContentSiteBridgeEndpointConnectionPrivate[] = {
+        { "connection_info", reinterpret_cast<getter>(IContentSiteBridgeEndpointConnectionPrivate_get_ConnectionInfo), nullptr, nullptr, nullptr },
+        { "is_remote_endpoint_connected", reinterpret_cast<getter>(IContentSiteBridgeEndpointConnectionPrivate_get_IsRemoteEndpointConnected), nullptr, nullptr, nullptr },
+        { }};
+
+    static PyType_Slot _type_slots_IContentSiteBridgeEndpointConnectionPrivate[] = {
+        #if PY_VERSION_HEX < 0x030A0000
+        { Py_tp_new, reinterpret_cast<void*>(_new_IContentSiteBridgeEndpointConnectionPrivate) },
+        #endif
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContentSiteBridgeEndpointConnectionPrivate) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_IContentSiteBridgeEndpointConnectionPrivate) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_IContentSiteBridgeEndpointConnectionPrivate) },
+        { }};
+
+    static PyType_Spec type_spec_IContentSiteBridgeEndpointConnectionPrivate = {
+        "winui3._winui3_microsoft_ui_content._IContentSiteBridgeEndpointConnectionPrivate",
+        sizeof(py::wrapper::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate),
+        0,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
+        _type_slots_IContentSiteBridgeEndpointConnectionPrivate};
+
+    struct ImplementsIContentSiteBridgeEndpointConnectionPrivate : py::ImplementsInterfaceT<ImplementsIContentSiteBridgeEndpointConnectionPrivate, winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>
+    {
+        ImplementsIContentSiteBridgeEndpointConnectionPrivate() = delete;
+        ImplementsIContentSiteBridgeEndpointConnectionPrivate(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIContentSiteBridgeEndpointConnectionPrivate, winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>(py_obj, runtime_class)
+        {
+        }
+
+        auto AcceptRemoteEndpoint(winrt::hstring const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "accept_remote_endpoint")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto ConnectionInfo()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "connection_info")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::hstring>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto IsRemoteEndpointConnected()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle value{PyObject_GetAttrString(self.get(), "is_remote_endpoint_connected")};
+                if (!value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<bool>(value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto RemoteEndpointConnecting(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, winrt::Microsoft::UI::Content::EndpointConnectionEventArgs> const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "add_remote_endpoint_connecting")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::event_token>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto RemoteEndpointConnecting(winrt::event_token param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "remove_remote_endpoint_connecting")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto RemoteEndpointDisconnected(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, winrt::Microsoft::UI::Content::EndpointConnectionEventArgs> const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "add_remote_endpoint_disconnected")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::event_token>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto RemoteEndpointDisconnected(winrt::event_token param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "remove_remote_endpoint_disconnected")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto RemoteEndpointRequestedStateChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, winrt::Microsoft::UI::Content::EndpointRequestedStateChangedEventArgs> const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "add_remote_endpoint_requested_state_changed")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::event_token>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
+        auto RemoteEndpointRequestedStateChanged(winrt::event_token param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "remove_remote_endpoint_requested_state_changed")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _assign_array_IContentSiteBridgeEndpointConnectionPrivate(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_IContentSiteBridgeEndpointConnectionPrivate(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _guid_ImplementsIContentSiteBridgeEndpointConnectionPrivate(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIContentSiteBridgeEndpointConnectionPrivate(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIContentSiteBridgeEndpointConnectionPrivate>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIContentSiteBridgeEndpointConnectionPrivate[] = {
+        { "_assign_array_", _assign_array_IContentSiteBridgeEndpointConnectionPrivate, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_IContentSiteBridgeEndpointConnectionPrivate), METH_O | METH_STATIC, nullptr },
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIContentSiteBridgeEndpointConnectionPrivate), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIContentSiteBridgeEndpointConnectionPrivate), METH_VARARGS | METH_STATIC, nullptr },
+        { }};
+
+    static PyType_Slot type_slots_ImplementsIContentSiteBridgeEndpointConnectionPrivate[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIContentSiteBridgeEndpointConnectionPrivate) },
+        { }};
+
+    static PyType_Spec type_spec_ImplementsIContentSiteBridgeEndpointConnectionPrivate = {
+        "winui3._winui3_microsoft_ui_content.IContentSiteBridgeEndpointConnectionPrivate",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
+        type_slots_ImplementsIContentSiteBridgeEndpointConnectionPrivate};
+
     // ----- IContentSiteInput interface --------------------
 
     #if PY_VERSION_HEX < 0x030A0000
@@ -13108,6 +17885,24 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_ui_content(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle ContentAppWindowBridge_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ContentAppWindowBridge_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ContentAppWindowBridge_Static{PyType_FromSpecWithBases(&type_spec_ContentAppWindowBridge_Static, ContentAppWindowBridge_Static_bases.get())};
+    if (!type_ContentAppWindowBridge_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ContentAppWindowBridge_type{py::register_python_type(module.get(), &type_spec_ContentAppWindowBridge, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContentAppWindowBridge_Static.get()))};
+    if (!ContentAppWindowBridge_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle ContentCoordinateConverter_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
     if (!ContentCoordinateConverter_Static_bases)
     {
@@ -13140,6 +17935,42 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_ui_content(void) noexcept
 
     py::pytype_handle ContentEnvironmentStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_ContentEnvironmentStateChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ContentEnvironmentStateChangedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle ContentExternalBackdropLink_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ContentExternalBackdropLink_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ContentExternalBackdropLink_Static{PyType_FromSpecWithBases(&type_spec_ContentExternalBackdropLink_Static, ContentExternalBackdropLink_Static_bases.get())};
+    if (!type_ContentExternalBackdropLink_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ContentExternalBackdropLink_type{py::register_python_type(module.get(), &type_spec_ContentExternalBackdropLink, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContentExternalBackdropLink_Static.get()))};
+    if (!ContentExternalBackdropLink_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle ContentExternalOutputLink_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ContentExternalOutputLink_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ContentExternalOutputLink_Static{PyType_FromSpecWithBases(&type_spec_ContentExternalOutputLink_Static, ContentExternalOutputLink_Static_bases.get())};
+    if (!type_ContentExternalOutputLink_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ContentExternalOutputLink_type{py::register_python_type(module.get(), &type_spec_ContentExternalOutputLink, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContentExternalOutputLink_Static.get()))};
+    if (!ContentExternalOutputLink_type)
     {
         return nullptr;
     }
@@ -13276,6 +18107,30 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_ui_content(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle CoreWindowSiteBridge_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!CoreWindowSiteBridge_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CoreWindowSiteBridge_Static{PyType_FromSpecWithBases(&type_spec_CoreWindowSiteBridge_Static, CoreWindowSiteBridge_Static_bases.get())};
+    if (!type_CoreWindowSiteBridge_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CoreWindowSiteBridge_type{py::register_python_type(module.get(), &type_spec_CoreWindowSiteBridge, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreWindowSiteBridge_Static.get()))};
+    if (!CoreWindowSiteBridge_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CoreWindowTopLevelWindowBridge_type{py::register_python_type(module.get(), &type_spec_CoreWindowTopLevelWindowBridge, object_bases.get(), inspectable_meta_type)};
+    if (!CoreWindowTopLevelWindowBridge_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle DesktopAttachedSiteBridge_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
     if (!DesktopAttachedSiteBridge_Static_bases)
     {
@@ -13354,6 +18209,100 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_ui_content(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle EndpointConnectionEventArgs_type{py::register_python_type(module.get(), &type_spec_EndpointConnectionEventArgs, object_bases.get(), inspectable_meta_type)};
+    if (!EndpointConnectionEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle EndpointRequestedStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_EndpointRequestedStateChangedEventArgs, object_bases.get(), inspectable_meta_type)};
+    if (!EndpointRequestedStateChangedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle PopupWindowSiteBridge_bases{PyTuple_Pack(1, DesktopSiteBridge_type.get())};
+    if (!PopupWindowSiteBridge_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PopupWindowSiteBridge_type{py::register_python_type(module.get(), &type_spec_PopupWindowSiteBridge, PopupWindowSiteBridge_bases.get(), inspectable_meta_type)};
+    if (!PopupWindowSiteBridge_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle ProcessStarter_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ProcessStarter_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ProcessStarter_Static{PyType_FromSpecWithBases(&type_spec_ProcessStarter_Static, ProcessStarter_Static_bases.get())};
+    if (!type_ProcessStarter_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ProcessStarter_type{py::register_python_type(module.get(), &type_spec_ProcessStarter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ProcessStarter_Static.get()))};
+    if (!ProcessStarter_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle SystemVisualSiteBridge_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SystemVisualSiteBridge_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SystemVisualSiteBridge_Static{PyType_FromSpecWithBases(&type_spec_SystemVisualSiteBridge_Static, SystemVisualSiteBridge_Static_bases.get())};
+    if (!type_SystemVisualSiteBridge_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SystemVisualSiteBridge_type{py::register_python_type(module.get(), &type_spec_SystemVisualSiteBridge, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemVisualSiteBridge_Static.get()))};
+    if (!SystemVisualSiteBridge_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle IContentIslandEndpointConnectionPrivate_type{py::register_python_type(module.get(), &type_spec_IContentIslandEndpointConnectionPrivate, object_bases.get(), nullptr)};
+    if (!IContentIslandEndpointConnectionPrivate_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIContentIslandEndpointConnectionPrivate_type{py::register_python_type(module.get(), &type_spec_ImplementsIContentIslandEndpointConnectionPrivate, nullptr, inspectable_meta_type)};
+    if (!ImplementsIContentIslandEndpointConnectionPrivate_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIContentIslandEndpointConnectionPrivate_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle IContentNodeOwner_type{py::register_python_type(module.get(), &type_spec_IContentNodeOwner, object_bases.get(), nullptr)};
+    if (!IContentNodeOwner_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIContentNodeOwner_type{py::register_python_type(module.get(), &type_spec_ImplementsIContentNodeOwner, nullptr, inspectable_meta_type)};
+    if (!ImplementsIContentNodeOwner_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIContentNodeOwner_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IContentSiteAutomation_type{py::register_python_type(module.get(), &type_spec_IContentSiteAutomation, object_bases.get(), nullptr)};
     if (!IContentSiteAutomation_type)
     {
@@ -13384,6 +18333,23 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_ui_content(void) noexcept
     }
 
     if (PyModule_AddType(module.get(), ImplementsIContentSiteBridge_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle IContentSiteBridgeEndpointConnectionPrivate_type{py::register_python_type(module.get(), &type_spec_IContentSiteBridgeEndpointConnectionPrivate, object_bases.get(), nullptr)};
+    if (!IContentSiteBridgeEndpointConnectionPrivate_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIContentSiteBridgeEndpointConnectionPrivate_type{py::register_python_type(module.get(), &type_spec_ImplementsIContentSiteBridgeEndpointConnectionPrivate, nullptr, inspectable_meta_type)};
+    if (!ImplementsIContentSiteBridgeEndpointConnectionPrivate_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIContentSiteBridgeEndpointConnectionPrivate_type.get()) == -1)
     {
         return nullptr;
     }

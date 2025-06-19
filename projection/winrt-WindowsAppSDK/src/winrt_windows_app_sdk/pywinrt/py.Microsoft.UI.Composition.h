@@ -77,6 +77,9 @@ namespace py
     inline constexpr const char* buffer_format<winrt::Microsoft::UI::Composition::CompositionMappingMode> = "i";
 
     template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Composition::CompositionProjectedShadowDrawOrder> = "i";
+
+    template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::UI::Composition::CompositionStretch> = "i";
 
     template<>
@@ -228,6 +231,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.CompositionMappingMode";
         static constexpr const char* module_name = "winui3.microsoft.ui.composition";
         static constexpr const char* type_name = "CompositionMappingMode";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Composition::CompositionProjectedShadowDrawOrder>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.CompositionProjectedShadowDrawOrder";
+        static constexpr const char* module_name = "winui3.microsoft.ui.composition";
+        static constexpr const char* type_name = "CompositionProjectedShadowDrawOrder";
     };
 
     template<>
@@ -572,6 +583,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.CompositionNineGridBrush";
         static constexpr const char* module_name = "winui3.microsoft.ui.composition";
         static constexpr const char* type_name = "CompositionNineGridBrush";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Composition::CompositionNotificationDeferral>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.CompositionNotificationDeferral";
+        static constexpr const char* module_name = "winui3.microsoft.ui.composition";
+        static constexpr const char* type_name = "CompositionNotificationDeferral";
     };
 
     template<>
@@ -1217,6 +1236,7 @@ namespace py::wrapper::Microsoft::UI::Composition
     using CompositionMaskBrush = py::winrt_wrapper<winrt::Microsoft::UI::Composition::CompositionMaskBrush>;
     using CompositionMipmapSurface = py::winrt_wrapper<winrt::Microsoft::UI::Composition::CompositionMipmapSurface>;
     using CompositionNineGridBrush = py::winrt_wrapper<winrt::Microsoft::UI::Composition::CompositionNineGridBrush>;
+    using CompositionNotificationDeferral = py::winrt_wrapper<winrt::Microsoft::UI::Composition::CompositionNotificationDeferral>;
     using CompositionObject = py::winrt_wrapper<winrt::Microsoft::UI::Composition::CompositionObject>;
     using CompositionPath = py::winrt_wrapper<winrt::Microsoft::UI::Composition::CompositionPath>;
     using CompositionPathGeometry = py::winrt_wrapper<winrt::Microsoft::UI::Composition::CompositionPathGeometry>;

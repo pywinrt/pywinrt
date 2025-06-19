@@ -56,6 +56,9 @@ namespace py
     inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Media::PenLineJoin> = "i";
 
     template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Media::RevealBrushState> = "i";
+
+    template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Media::Stretch> = "i";
 
     template<>
@@ -154,6 +157,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.media.PenLineJoin";
         static constexpr const char* module_name = "winui3.microsoft.ui.xaml.media";
         static constexpr const char* type_name = "PenLineJoin";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Media::RevealBrushState>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.media.RevealBrushState";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.media";
+        static constexpr const char* type_name = "RevealBrushState";
     };
 
     template<>
@@ -565,6 +576,30 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Media::RevealBackgroundBrush>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.media.RevealBackgroundBrush";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.media";
+        static constexpr const char* type_name = "RevealBackgroundBrush";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Media::RevealBorderBrush>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.media.RevealBorderBrush";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.media";
+        static constexpr const char* type_name = "RevealBorderBrush";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Media::RevealBrush>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.media.RevealBrush";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.media";
+        static constexpr const char* type_name = "RevealBrush";
+    };
+
+    template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Media::RotateTransform>
     {
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.media.RotateTransform";
@@ -784,6 +819,9 @@ namespace py::wrapper::Microsoft::UI::Xaml::Media
     using RectangleGeometry = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::RectangleGeometry>;
     using RenderedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::RenderedEventArgs>;
     using RenderingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::RenderingEventArgs>;
+    using RevealBackgroundBrush = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::RevealBackgroundBrush>;
+    using RevealBorderBrush = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::RevealBorderBrush>;
+    using RevealBrush = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::RevealBrush>;
     using RotateTransform = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::RotateTransform>;
     using ScaleTransform = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::ScaleTransform>;
     using Shadow = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Shadow>;

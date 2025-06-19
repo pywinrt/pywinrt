@@ -142,12 +142,15 @@ subprocess.check_call(
 
 # generate code for windows app sdk (winui3)
 
-WINDOWS_APP_SDK_PACKAGE_METADATA = (
-    REPO_ROOT_PATH / "_tools" / "Microsoft.WindowsAppSDK" / "lib" / "uap10.0"
-)
-WINDOWS_APP_SDK_PACKAGE_METADATA2 = (
-    REPO_ROOT_PATH / "_tools" / "Microsoft.WindowsAppSDK" / "lib" / "uap10.0.18362"
-)
+windows_app_sdk_metadata_paths = [
+    REPO_ROOT_PATH / "_tools" / "Microsoft.WindowsAppSDK.AI" / "metadata",
+    REPO_ROOT_PATH / "_tools" / "Microsoft.WindowsAppSDK.Foundation" / "metadata",
+    # This is why we cannot simply find all metadata folders for WinAppSDK.
+    REPO_ROOT_PATH / "_tools" / "Microsoft.WindowsAppSDK.InteractiveExperiences" / "metadata" / "10.0.18362.0",
+    REPO_ROOT_PATH / "_tools" / "Microsoft.WindowsAppSDK.Widgets" / "metadata",
+    REPO_ROOT_PATH / "_tools" / "Microsoft.WindowsAppSDK.WinUI" / "metadata"
+]
+
 WINDOWS_APP_SDK_PACKAGE_PATH = (
     PROJECTION_PATH
     / "winrt-WindowsAppSDK"
@@ -158,15 +161,11 @@ WINDOWS_APP_SDK_PACKAGE_PATH = (
 WINDOWS_APP_SDK_NULLABILITY_JSON_PATH = (
     REPO_ROOT_PATH / "nullability" / "windows-app-sdk.json"
 )
-
-subprocess.check_call(
-    DOTNET
-    + [
-        PYWINRT_EXE,
-        "--input",
-        f"winui3;{WINDOWS_APP_SDK_PACKAGE_METADATA}",
-        "--input",
-        f"winui3;{WINDOWS_APP_SDK_PACKAGE_METADATA2}",
+windows_app_sdk_pywinrt_command = [PYWINRT_EXE]
+for metadata_path in windows_app_sdk_metadata_paths:
+    windows_app_sdk_pywinrt_command.extend(["--input", f"winui3;{metadata_path}"])
+windows_app_sdk_pywinrt_command.extend(
+    [
         "--reference",
         f"webview2;{WEBVIEW2_PACKAGE_METADATA}",
         "--reference",
@@ -178,6 +177,10 @@ subprocess.check_call(
         "--nullability-json",
         WINDOWS_APP_SDK_NULLABILITY_JSON_PATH,
     ]
+)
+
+subprocess.check_call(
+    DOTNET + windows_app_sdk_pywinrt_command
 )
 
 # generate code for test component

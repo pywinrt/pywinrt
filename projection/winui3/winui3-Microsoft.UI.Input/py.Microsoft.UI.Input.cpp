@@ -5917,6 +5917,48 @@ namespace py::cpp::Microsoft::UI::Input
         }
     }
 
+    static PyObject* InputKeyboardSource_GetForWindowId(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.InputKeyboardSource", L"GetForWindowId", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::WindowId>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Input::InputKeyboardSource::GetForWindowId(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* InputKeyboardSource_GetKeyState(py::wrapper::Microsoft::UI::Input::InputKeyboardSource* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
@@ -6456,6 +6498,7 @@ namespace py::cpp::Microsoft::UI::Input
 
     static PyMethodDef methods_InputKeyboardSource_Static[] = {
         { "get_for_island", reinterpret_cast<PyCFunction>(InputKeyboardSource_GetForIsland), METH_VARARGS, nullptr },
+        { "get_for_window_id", reinterpret_cast<PyCFunction>(InputKeyboardSource_GetForWindowId), METH_VARARGS, nullptr },
         { "get_key_state_for_current_thread", reinterpret_cast<PyCFunction>(InputKeyboardSource_GetKeyStateForCurrentThread), METH_VARARGS, nullptr },
         { }};
 
@@ -6489,6 +6532,48 @@ namespace py::cpp::Microsoft::UI::Input
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* InputLightDismissAction_GetForIsland(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.InputLightDismissAction", L"GetForIsland", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Content::ContentIsland>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Input::InputLightDismissAction::GetForIsland(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* InputLightDismissAction_GetForWindowId(PyObject* /*unused*/, PyObject* args) noexcept
@@ -6650,6 +6735,7 @@ namespace py::cpp::Microsoft::UI::Input
         { }};
 
     static PyMethodDef methods_InputLightDismissAction_Static[] = {
+        { "get_for_island", reinterpret_cast<PyCFunction>(InputLightDismissAction_GetForIsland), METH_VARARGS, nullptr },
         { "get_for_window_id", reinterpret_cast<PyCFunction>(InputLightDismissAction_GetForWindowId), METH_VARARGS, nullptr },
         { }};
 
@@ -6685,6 +6771,105 @@ namespace py::cpp::Microsoft::UI::Input
         Py_DECREF(tp);
     }
 
+    static PyObject* InputLightDismissEventArgs_get_Handled(py::wrapper::Microsoft::UI::Input::InputLightDismissEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.InputLightDismissEventArgs", L"Handled");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int InputLightDismissEventArgs_put_Handled(py::wrapper::Microsoft::UI::Input::InputLightDismissEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.InputLightDismissEventArgs", L"Handled");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* InputLightDismissEventArgs_get_Reason(py::wrapper::Microsoft::UI::Input::InputLightDismissEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.InputLightDismissEventArgs", L"Reason");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Reason();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_InputLightDismissEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Input::InputLightDismissEventArgs>>();
@@ -6715,6 +6900,8 @@ namespace py::cpp::Microsoft::UI::Input
         { }};
 
     static PyGetSetDef _getset_InputLightDismissEventArgs[] = {
+        { "handled", reinterpret_cast<getter>(InputLightDismissEventArgs_get_Handled), reinterpret_cast<setter>(InputLightDismissEventArgs_put_Handled), nullptr, nullptr },
+        { "reason", reinterpret_cast<getter>(InputLightDismissEventArgs_get_Reason), nullptr, nullptr, nullptr },
         { }};
 
     static PyType_Slot _type_slots_InputLightDismissEventArgs[] = {
@@ -8041,6 +8228,175 @@ namespace py::cpp::Microsoft::UI::Input
         }
     }
 
+    static PyObject* InputPointerSource_GetForVisual(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.InputPointerSource", L"GetForVisual", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Input::InputPointerSource::GetForVisual(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* InputPointerSource_GetForWindowId(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.InputPointerSource", L"GetForWindowId", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::WindowId>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Input::InputPointerSource::GetForWindowId(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* InputPointerSource_RemoveForVisual(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.InputPointerSource", L"RemoveForVisual", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(args, 0);
+
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Input::InputPointerSource::RemoveForVisual(param0);
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* InputPointerSource_TrySetDeviceKinds(py::wrapper::Microsoft::UI::Input::InputPointerSource* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.InputPointerSource", L"TrySetDeviceKinds", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Input::InputPointerSourceDeviceKinds>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TrySetDeviceKinds(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* InputPointerSource_get_Cursor(py::wrapper::Microsoft::UI::Input::InputPointerSource* self, void* /*unused*/) noexcept
     {
         try
@@ -8137,6 +8493,75 @@ namespace py::cpp::Microsoft::UI::Input
         {
             py::to_PyErr();
             return nullptr;
+        }
+    }
+
+    static PyObject* InputPointerSource_get_ActivationBehavior(py::wrapper::Microsoft::UI::Input::InputPointerSource* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.InputPointerSource", L"ActivationBehavior");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ActivationBehavior();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int InputPointerSource_put_ActivationBehavior(py::wrapper::Microsoft::UI::Input::InputPointerSource* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.InputPointerSource", L"ActivationBehavior");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Input::InputPointerActivationBehavior>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.ActivationBehavior(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
         }
     }
 
@@ -8790,6 +9215,136 @@ namespace py::cpp::Microsoft::UI::Input
         }
     }
 
+    static PyObject* InputPointerSource_add_DirectManipulationHitTest(py::wrapper::Microsoft::UI::Input::InputPointerSource* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Input.InputPointerSource", L"DirectManipulationHitTest");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputPointerSource, winrt::Microsoft::UI::Input::PointerEventArgs>>(arg);
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DirectManipulationHitTest(param0);
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InputPointerSource_remove_DirectManipulationHitTest(py::wrapper::Microsoft::UI::Input::InputPointerSource* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Input.InputPointerSource", L"DirectManipulationHitTest");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.DirectManipulationHitTest(param0);
+            }
+
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InputPointerSource_add_TouchHitTesting(py::wrapper::Microsoft::UI::Input::InputPointerSource* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Input.InputPointerSource", L"TouchHitTesting");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputPointerSource, winrt::Microsoft::UI::Input::TouchHitTestingEventArgs>>(arg);
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.TouchHitTesting(param0);
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InputPointerSource_remove_TouchHitTesting(py::wrapper::Microsoft::UI::Input::InputPointerSource* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Input.InputPointerSource", L"TouchHitTesting");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.TouchHitTesting(param0);
+            }
+
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_InputPointerSource(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Input::InputPointerSource>>();
@@ -8815,6 +9370,7 @@ namespace py::cpp::Microsoft::UI::Input
     }
 
     static PyMethodDef _methods_InputPointerSource[] = {
+        { "try_set_device_kinds", reinterpret_cast<PyCFunction>(InputPointerSource_TrySetDeviceKinds), METH_VARARGS, nullptr },
         { "add_pointer_capture_lost", reinterpret_cast<PyCFunction>(InputPointerSource_add_PointerCaptureLost), METH_O, nullptr },
         { "remove_pointer_capture_lost", reinterpret_cast<PyCFunction>(InputPointerSource_remove_PointerCaptureLost), METH_O, nullptr },
         { "add_pointer_entered", reinterpret_cast<PyCFunction>(InputPointerSource_add_PointerEntered), METH_O, nullptr },
@@ -8835,6 +9391,10 @@ namespace py::cpp::Microsoft::UI::Input
         { "remove_pointer_routed_to", reinterpret_cast<PyCFunction>(InputPointerSource_remove_PointerRoutedTo), METH_O, nullptr },
         { "add_pointer_wheel_changed", reinterpret_cast<PyCFunction>(InputPointerSource_add_PointerWheelChanged), METH_O, nullptr },
         { "remove_pointer_wheel_changed", reinterpret_cast<PyCFunction>(InputPointerSource_remove_PointerWheelChanged), METH_O, nullptr },
+        { "add_direct_manipulation_hit_test", reinterpret_cast<PyCFunction>(InputPointerSource_add_DirectManipulationHitTest), METH_O, nullptr },
+        { "remove_direct_manipulation_hit_test", reinterpret_cast<PyCFunction>(InputPointerSource_remove_DirectManipulationHitTest), METH_O, nullptr },
+        { "add_touch_hit_testing", reinterpret_cast<PyCFunction>(InputPointerSource_add_TouchHitTesting), METH_O, nullptr },
+        { "remove_touch_hit_testing", reinterpret_cast<PyCFunction>(InputPointerSource_remove_TouchHitTesting), METH_O, nullptr },
         { "_assign_array_", _assign_array_InputPointerSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InputPointerSource), METH_O | METH_STATIC, nullptr },
         { }};
@@ -8842,6 +9402,7 @@ namespace py::cpp::Microsoft::UI::Input
     static PyGetSetDef _getset_InputPointerSource[] = {
         { "cursor", reinterpret_cast<getter>(InputPointerSource_get_Cursor), reinterpret_cast<setter>(InputPointerSource_put_Cursor), nullptr, nullptr },
         { "device_kinds", reinterpret_cast<getter>(InputPointerSource_get_DeviceKinds), nullptr, nullptr, nullptr },
+        { "activation_behavior", reinterpret_cast<getter>(InputPointerSource_get_ActivationBehavior), reinterpret_cast<setter>(InputPointerSource_put_ActivationBehavior), nullptr, nullptr },
         { }};
 
     static PyType_Slot _type_slots_InputPointerSource[] = {
@@ -8863,6 +9424,9 @@ namespace py::cpp::Microsoft::UI::Input
 
     static PyMethodDef methods_InputPointerSource_Static[] = {
         { "get_for_island", reinterpret_cast<PyCFunction>(InputPointerSource_GetForIsland), METH_VARARGS, nullptr },
+        { "get_for_visual", reinterpret_cast<PyCFunction>(InputPointerSource_GetForVisual), METH_VARARGS, nullptr },
+        { "get_for_window_id", reinterpret_cast<PyCFunction>(InputPointerSource_GetForWindowId), METH_VARARGS, nullptr },
+        { "remove_for_visual", reinterpret_cast<PyCFunction>(InputPointerSource_RemoveForVisual), METH_VARARGS, nullptr },
         { }};
 
     static PyType_Slot type_slots_InputPointerSource_Static[] = 
@@ -8879,6 +9443,270 @@ namespace py::cpp::Microsoft::UI::Input
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
         type_slots_InputPointerSource_Static};
+
+    // ----- InputPopupController class --------------------
+
+    static PyObject* _new_InputPopupController(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::UI::Input::InputPopupController>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Input::InputPopupController>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_InputPopupController(py::wrapper::Microsoft::UI::Input::InputPopupController* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* InputPopupController_GetForPopup(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.InputPopupController", L"GetForPopup", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Content::DesktopPopupSiteBridge>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Input::InputPopupController::GetForPopup(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* InputPopupController_get_Mode(py::wrapper::Microsoft::UI::Input::InputPopupController* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.InputPopupController", L"Mode");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Mode();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int InputPopupController_put_Mode(py::wrapper::Microsoft::UI::Input::InputPopupController* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.InputPopupController", L"Mode");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Input::PopupPointerMode>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.Mode(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* InputPopupController_add_LightDismissed(py::wrapper::Microsoft::UI::Input::InputPopupController* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Input.InputPopupController", L"LightDismissed");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputPopupController, winrt::Microsoft::UI::Input::InputLightDismissEventArgs>>(arg);
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.LightDismissed(param0);
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InputPopupController_remove_LightDismissed(py::wrapper::Microsoft::UI::Input::InputPopupController* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Input.InputPopupController", L"LightDismissed");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.LightDismissed(param0);
+            }
+
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_InputPopupController(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Input::InputPopupController>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_InputPopupController(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Input::InputPopupController>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_InputPopupController[] = {
+        { "add_light_dismissed", reinterpret_cast<PyCFunction>(InputPopupController_add_LightDismissed), METH_O, nullptr },
+        { "remove_light_dismissed", reinterpret_cast<PyCFunction>(InputPopupController_remove_LightDismissed), METH_O, nullptr },
+        { "_assign_array_", _assign_array_InputPopupController, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_InputPopupController), METH_O | METH_STATIC, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_InputPopupController[] = {
+        { "mode", reinterpret_cast<getter>(InputPopupController_get_Mode), reinterpret_cast<setter>(InputPopupController_put_Mode), nullptr, nullptr },
+        { }};
+
+    static PyType_Slot _type_slots_InputPopupController[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_InputPopupController) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InputPopupController) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_InputPopupController) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_InputPopupController) },
+        { }};
+
+    static PyType_Spec type_spec_InputPopupController = {
+        "winui3._winui3_microsoft_ui_input.InputPopupController",
+        sizeof(py::wrapper::Microsoft::UI::Input::InputPopupController),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_InputPopupController};
+
+    static PyGetSetDef getset_InputPopupController_Static[] = {
+        { }};
+
+    static PyMethodDef methods_InputPopupController_Static[] = {
+        { "get_for_popup", reinterpret_cast<PyCFunction>(InputPopupController_GetForPopup), METH_VARARGS, nullptr },
+        { }};
+
+    static PyType_Slot type_slots_InputPopupController_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_InputPopupController_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_InputPopupController_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_InputPopupController_Static = {
+        "winui3._winui3_microsoft_ui_input.InputPopupController_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_InputPopupController_Static};
 
     // ----- InputPreTranslateKeyboardSource class --------------------
 
@@ -12823,6 +13651,372 @@ namespace py::cpp::Microsoft::UI::Input
         Py_TPFLAGS_DEFAULT,
         _type_slots_TappedEventArgs};
 
+    // ----- TouchHitTestingEventArgs class --------------------
+
+    static PyObject* _new_TouchHitTestingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::UI::Input::TouchHitTestingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Input::TouchHitTestingEventArgs>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_TouchHitTestingEventArgs(py::wrapper::Microsoft::UI::Input::TouchHitTestingEventArgs* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* TouchHitTestingEventArgs_EvaluateProximityToPolygon(py::wrapper::Microsoft::UI::Input::TouchHitTestingEventArgs* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.TouchHitTestingEventArgs", L"EvaluateProximityToPolygon", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Point, false>>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.EvaluateProximityToPolygon(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TouchHitTestingEventArgs_EvaluateProximityToRect(py::wrapper::Microsoft::UI::Input::TouchHitTestingEventArgs* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.TouchHitTestingEventArgs", L"EvaluateProximityToRect", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.EvaluateProximityToRect(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TouchHitTestingEventArgs_GetProximityEvaluation(py::wrapper::Microsoft::UI::Input::TouchHitTestingEventArgs* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.TouchHitTestingEventArgs", L"GetProximityEvaluation", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetProximityEvaluation();
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TouchHitTestingEventArgs_SetProximityEvaluation(py::wrapper::Microsoft::UI::Input::TouchHitTestingEventArgs* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.TouchHitTestingEventArgs", L"SetProximityEvaluation", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Input::ProximityEvaluation>(args, 0);
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.SetProximityEvaluation(param0);
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TouchHitTestingEventArgs_get_Handled(py::wrapper::Microsoft::UI::Input::TouchHitTestingEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.TouchHitTestingEventArgs", L"Handled");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Handled();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int TouchHitTestingEventArgs_put_Handled(py::wrapper::Microsoft::UI::Input::TouchHitTestingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.TouchHitTestingEventArgs", L"Handled");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.Handled(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* TouchHitTestingEventArgs_get_BoundingBox(py::wrapper::Microsoft::UI::Input::TouchHitTestingEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.TouchHitTestingEventArgs", L"BoundingBox");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.BoundingBox();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* TouchHitTestingEventArgs_get_Point(py::wrapper::Microsoft::UI::Input::TouchHitTestingEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.TouchHitTestingEventArgs", L"Point");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Point();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_TouchHitTestingEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Input::TouchHitTestingEventArgs>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_TouchHitTestingEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Input::TouchHitTestingEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_TouchHitTestingEventArgs[] = {
+        { "evaluate_proximity_to_polygon", reinterpret_cast<PyCFunction>(TouchHitTestingEventArgs_EvaluateProximityToPolygon), METH_VARARGS, nullptr },
+        { "evaluate_proximity_to_rect", reinterpret_cast<PyCFunction>(TouchHitTestingEventArgs_EvaluateProximityToRect), METH_VARARGS, nullptr },
+        { "get_proximity_evaluation", reinterpret_cast<PyCFunction>(TouchHitTestingEventArgs_GetProximityEvaluation), METH_VARARGS, nullptr },
+        { "set_proximity_evaluation", reinterpret_cast<PyCFunction>(TouchHitTestingEventArgs_SetProximityEvaluation), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_TouchHitTestingEventArgs, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_TouchHitTestingEventArgs), METH_O | METH_STATIC, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_TouchHitTestingEventArgs[] = {
+        { "handled", reinterpret_cast<getter>(TouchHitTestingEventArgs_get_Handled), reinterpret_cast<setter>(TouchHitTestingEventArgs_put_Handled), nullptr, nullptr },
+        { "bounding_box", reinterpret_cast<getter>(TouchHitTestingEventArgs_get_BoundingBox), nullptr, nullptr, nullptr },
+        { "point", reinterpret_cast<getter>(TouchHitTestingEventArgs_get_Point), nullptr, nullptr, nullptr },
+        { }};
+
+    static PyType_Slot _type_slots_TouchHitTestingEventArgs[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_TouchHitTestingEventArgs) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TouchHitTestingEventArgs) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_TouchHitTestingEventArgs) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_TouchHitTestingEventArgs) },
+        { }};
+
+    static PyType_Spec type_spec_TouchHitTestingEventArgs = {
+        "winui3._winui3_microsoft_ui_input.TouchHitTestingEventArgs",
+        sizeof(py::wrapper::Microsoft::UI::Input::TouchHitTestingEventArgs),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_TouchHitTestingEventArgs};
+
     // ----- WindowRectChangedEventArgs class --------------------
 
     static PyObject* _new_WindowRectChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -14988,6 +16182,251 @@ namespace py::cpp::Microsoft::UI::Input
         Py_TPFLAGS_DEFAULT,
         _type_slots_PhysicalKeyStatus};
 
+    // ----- ProximityEvaluation struct --------------------
+
+    winrt::Microsoft::UI::Input::ProximityEvaluation ProximityEvaluation_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Microsoft::UI::Input::ProximityEvaluation result{};
+
+        result.Score = py::convert_to<int32_t>(tuple, 0);
+        result.AdjustedPoint = py::convert_to<winrt::Windows::Foundation::Point>(tuple, 1);
+
+        return result;
+    }
+
+    PyObject* _new_ProximityEvaluation(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
+    {
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
+        {
+            return nullptr;
+        }
+
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Microsoft::UI::Input::ProximityEvaluation>*>(self_obj.get());
+        std::construct_at(&self->obj);
+
+        auto tuple_size = PyTuple_GET_SIZE(args);
+        if ((tuple_size == 0) && (!kwds))
+        {
+            return self_obj.detach();
+        }
+
+        int32_t _Score{};
+        PyObject* _AdjustedPoint{};
+
+        static const char* kwlist[] = {"score", "adjusted_point", nullptr};
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|iO", const_cast<char**>(kwlist), &_Score, &_AdjustedPoint))
+        {
+            return nullptr;
+        }
+
+        try
+        {
+            self->obj.Score = _Score;
+            self->obj.AdjustedPoint = _AdjustedPoint ? py::convert_to<winrt::Windows::Foundation::Point>(_AdjustedPoint) : winrt::Windows::Foundation::Point{};
+
+            return self_obj.detach();
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_ProximityEvaluation(py::wrapper::Microsoft::UI::Input::ProximityEvaluation* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* _assign_array_ProximityEvaluation(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Input::ProximityEvaluation>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    PyObject* _replace_ProximityEvaluation(py::wrapper::Microsoft::UI::Input::ProximityEvaluation* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            int32_t _Score{self->obj.Score};
+            PyObject* _AdjustedPoint{};
+
+            static const char* kwlist[] = {"score", "adjusted_point", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$iO", const_cast<char**>(kwlist), &_Score, &_AdjustedPoint))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Score = _Score;
+            copy.AdjustedPoint = _AdjustedPoint ? py::convert_to<winrt::Windows::Foundation::Point>(_AdjustedPoint) : self->obj.AdjustedPoint;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    PyObject* unpack_ProximityEvaluation(py::wrapper::Microsoft::UI::Input::ProximityEvaluation* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle unpack_str{PyUnicode_InternFromString("unpack")};
+        if (!unpack_str)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Score{convert(self->obj.Score)};
+        if (!Score)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle AdjustedPoint{convert(self->obj.AdjustedPoint)};
+        if (!AdjustedPoint)
+        {
+            return nullptr;
+        }
+
+        AdjustedPoint.attach(PyObject_CallMethodNoArgs(AdjustedPoint.get(), unpack_str.get()));
+        if (!AdjustedPoint)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Score.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, AdjustedPoint.detach());
+
+        return tuple.detach();
+    }
+
+    static PyMethodDef _methods_ProximityEvaluation[] = {
+        { "_assign_array_", _assign_array_ProximityEvaluation, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_ProximityEvaluation)), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_ProximityEvaluation), METH_NOARGS, nullptr },
+        { }};
+
+    static PyObject* ProximityEvaluation_get_Score(py::wrapper::Microsoft::UI::Input::ProximityEvaluation* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(self->obj.Score);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ProximityEvaluation_get_AdjustedPoint(py::wrapper::Microsoft::UI::Input::ProximityEvaluation* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(self->obj.AdjustedPoint);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyGetSetDef _getset_ProximityEvaluation[] = {
+        { "score", reinterpret_cast<getter>(ProximityEvaluation_get_Score), nullptr, nullptr, nullptr },
+        { "adjusted_point", reinterpret_cast<getter>(ProximityEvaluation_get_AdjustedPoint), nullptr, nullptr, nullptr },
+        { }};
+
+    static PyObject* _richcompare_ProximityEvaluation(py::wrapper::Microsoft::UI::Input::ProximityEvaluation* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::convert_to<winrt::Microsoft::UI::Input::ProximityEvaluation>(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _repr_ProximityEvaluation(PyObject* self) noexcept
+    {
+        py::pyobj_handle Score{PyObject_GetAttrString(self, "score")};
+        if (!Score)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle AdjustedPoint{PyObject_GetAttrString(self, "adjusted_point")};
+        if (!AdjustedPoint)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("ProximityEvaluation(score=%R, adjusted_point=%R)", Score.get(), AdjustedPoint.get());
+    }
+
+    static PyType_Slot _type_slots_ProximityEvaluation[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_ProximityEvaluation) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProximityEvaluation) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_ProximityEvaluation) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_ProximityEvaluation) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_ProximityEvaluation) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_ProximityEvaluation) },
+        { }};
+
+    static PyType_Spec type_spec_ProximityEvaluation = {
+        "winui3._winui3_microsoft_ui_input.ProximityEvaluation",
+        sizeof(py::wrapper::Microsoft::UI::Input::ProximityEvaluation),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_ProximityEvaluation};
+
     // ----- Microsoft.UI.Input Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Microsoft.UI.Input");
@@ -15405,6 +16844,30 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_ui_input(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle InputPopupController_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(InputObject_type.get())))};
+    if (!InputPopupController_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InputPopupController_Static{PyType_FromSpecWithBases(&type_spec_InputPopupController_Static, InputPopupController_Static_bases.get())};
+    if (!type_InputPopupController_Static)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle InputPopupController_bases{PyTuple_Pack(1, InputObject_type.get())};
+    if (!InputPopupController_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InputPopupController_type{py::register_python_type(module.get(), &type_spec_InputPopupController, InputPopupController_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputPopupController_Static.get()))};
+    if (!InputPopupController_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle InputPreTranslateKeyboardSource_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(InputObject_type.get())))};
     if (!InputPreTranslateKeyboardSource_Static_bases)
     {
@@ -15555,6 +17018,12 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_ui_input(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle TouchHitTestingEventArgs_type{py::register_python_type(module.get(), &type_spec_TouchHitTestingEventArgs, object_bases.get(), inspectable_meta_type)};
+    if (!TouchHitTestingEventArgs_type)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle WindowRectChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_WindowRectChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!WindowRectChangedEventArgs_type)
     {
@@ -15645,6 +17114,22 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_ui_input(void) noexcept
     }
 
     if (PyModule_AddObjectRef(module.get(), "PhysicalKeyStatus_from_tuple", PhysicalKeyStatus_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
+    py::pytype_handle ProximityEvaluation_type{py::register_python_type(module.get(), &type_spec_ProximityEvaluation, nullptr, nullptr)};
+    if (!ProximityEvaluation_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle ProximityEvaluation_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(ProximityEvaluation_from_tuple),"winui3._winui3_microsoft_ui_input.ProximityEvaluation_from_tuple", nullptr)};
+    if (!ProximityEvaluation_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "ProximityEvaluation_from_tuple", ProximityEvaluation_from_tuple_capsule.get()) == -1)
     {
         return nullptr;
     }

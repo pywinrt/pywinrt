@@ -13,8 +13,6 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::ApplicationModel::Background::
         Task(std::nullptr_t) noexcept {}
         Task(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Windows::ApplicationModel::Background::UniversalBGTask::ITask(ptr, take_ownership_from_abi) {}
         Task();
-        using winrt::Microsoft::Windows::ApplicationModel::Background::UniversalBGTask::ITask::Run;
-        using impl::consume_t<Task, winrt::Windows::ApplicationModel::Background::IBackgroundTask>::Run;
     };
 }
 #endif

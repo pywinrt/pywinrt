@@ -34,6 +34,7 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::ApplicationModel::WindowsAppRu
         static auto GetStatus();
         static auto Initialize();
         static auto Initialize(winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentInitializeOptions const& deploymentInitializeOptions);
+        static auto Repair();
     };
     struct WINRT_IMPL_EMPTY_BASES DeploymentResult : winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentResult
     {

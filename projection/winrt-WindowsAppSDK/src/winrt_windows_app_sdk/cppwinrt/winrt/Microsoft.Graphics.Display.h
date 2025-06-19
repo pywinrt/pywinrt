@@ -453,6 +453,136 @@ namespace winrt::impl
             _winrt_abi_type->remove_Destroyed(impl::bind_in(token));
         }
     }
+    template <typename D> auto consume_Microsoft_Graphics_Display_IDisplayInformation2<D>::RawDpi() const
+    {
+        void* value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Graphics::Display::IDisplayInformation2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Graphics::Display::IDisplayInformation2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Graphics::Display::IDisplayInformation2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_RawDpi(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Graphics::Display::IDisplayInformation2>**)this;
+            check_hresult(_winrt_abi_type->get_RawDpi(&value));
+        }
+        return winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Point>{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Graphics_Display_IDisplayInformation2<D>::RawPixelsPerViewPixel() const
+    {
+        double value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Graphics::Display::IDisplayInformation2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Graphics::Display::IDisplayInformation2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Graphics::Display::IDisplayInformation2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_RawPixelsPerViewPixel(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Graphics::Display::IDisplayInformation2>**)this;
+            check_hresult(_winrt_abi_type->get_RawPixelsPerViewPixel(&value));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Graphics_Display_IDisplayInformation2<D>::DpiChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Graphics::Display::DisplayInformation, winrt::Windows::Foundation::IInspectable> const& handler) const
+    {
+        winrt::event_token token{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Graphics::Display::IDisplayInformation2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Graphics::Display::IDisplayInformation2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Graphics::Display::IDisplayInformation2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->add_DpiChanged(*(void**)(&handler), put_abi(token)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Graphics::Display::IDisplayInformation2>**)this;
+            check_hresult(_winrt_abi_type->add_DpiChanged(*(void**)(&handler), put_abi(token)));
+        }
+        return token;
+    }
+    template <typename D> auto consume_Microsoft_Graphics_Display_IDisplayInformation2<D>::DpiChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Graphics::Display::DisplayInformation, winrt::Windows::Foundation::IInspectable> const& handler) const
+    {
+        return impl::make_event_revoker<D, DpiChanged_revoker>(this, DpiChanged(handler));
+    }
+    template <typename D> auto consume_Microsoft_Graphics_Display_IDisplayInformation2<D>::DpiChanged(winrt::event_token const& token) const noexcept
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Graphics::Display::IDisplayInformation2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Graphics::Display::IDisplayInformation2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Graphics::Display::IDisplayInformation2>**)&_winrt_casted_result;
+            _winrt_abi_type->remove_DpiChanged(impl::bind_in(token));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Graphics::Display::IDisplayInformation2>**)this;
+            _winrt_abi_type->remove_DpiChanged(impl::bind_in(token));
+        }
+    }
+    template <typename D> auto consume_Microsoft_Graphics_Display_IDisplayInformation2<D>::AngularOffsetFromNativeOrientation() const
+    {
+        winrt::Microsoft::Graphics::Display::DisplayOrientation value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Graphics::Display::IDisplayInformation2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Graphics::Display::IDisplayInformation2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Graphics::Display::IDisplayInformation2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_AngularOffsetFromNativeOrientation(reinterpret_cast<int32_t*>(&value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Graphics::Display::IDisplayInformation2>**)this;
+            check_hresult(_winrt_abi_type->get_AngularOffsetFromNativeOrientation(reinterpret_cast<int32_t*>(&value)));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Graphics_Display_IDisplayInformation2<D>::OrientationChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Graphics::Display::DisplayInformation, winrt::Windows::Foundation::IInspectable> const& handler) const
+    {
+        winrt::event_token token{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Graphics::Display::IDisplayInformation2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Graphics::Display::IDisplayInformation2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Graphics::Display::IDisplayInformation2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->add_OrientationChanged(*(void**)(&handler), put_abi(token)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Graphics::Display::IDisplayInformation2>**)this;
+            check_hresult(_winrt_abi_type->add_OrientationChanged(*(void**)(&handler), put_abi(token)));
+        }
+        return token;
+    }
+    template <typename D> auto consume_Microsoft_Graphics_Display_IDisplayInformation2<D>::OrientationChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Graphics::Display::DisplayInformation, winrt::Windows::Foundation::IInspectable> const& handler) const
+    {
+        return impl::make_event_revoker<D, OrientationChanged_revoker>(this, OrientationChanged(handler));
+    }
+    template <typename D> auto consume_Microsoft_Graphics_Display_IDisplayInformation2<D>::OrientationChanged(winrt::event_token const& token) const noexcept
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Graphics::Display::IDisplayInformation2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Graphics::Display::IDisplayInformation2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Graphics::Display::IDisplayInformation2>**)&_winrt_casted_result;
+            _winrt_abi_type->remove_OrientationChanged(impl::bind_in(token));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Graphics::Display::IDisplayInformation2>**)this;
+            _winrt_abi_type->remove_OrientationChanged(impl::bind_in(token));
+        }
+    }
     template <typename D> auto consume_Microsoft_Graphics_Display_IDisplayInformationStatics<D>::CreateForWindowId(winrt::Microsoft::UI::WindowId const& windowId) const
     {
         void* result{};
@@ -679,6 +809,62 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::Graphics::Display::IDisplayInformation2> : produce_base<D, winrt::Microsoft::Graphics::Display::IDisplayInformation2>
+    {
+        int32_t __stdcall get_RawDpi(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Point>>(this->shim().RawDpi());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_RawPixelsPerViewPixel(double* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<double>(this->shim().RawPixelsPerViewPixel());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall add_DpiChanged(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().DpiChanged(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Graphics::Display::DisplayInformation, winrt::Windows::Foundation::IInspectable> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_DpiChanged(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().DpiChanged(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+        int32_t __stdcall get_AngularOffsetFromNativeOrientation(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::Graphics::Display::DisplayOrientation>(this->shim().AngularOffsetFromNativeOrientation());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall add_OrientationChanged(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().OrientationChanged(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Graphics::Display::DisplayInformation, winrt::Windows::Foundation::IInspectable> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_OrientationChanged(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().OrientationChanged(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::Graphics::Display::IDisplayInformationStatics> : produce_base<D, winrt::Microsoft::Graphics::Display::IDisplayInformationStatics>
     {
         int32_t __stdcall CreateForWindowId(struct struct_Microsoft_UI_WindowId windowId, void** result) noexcept final try
@@ -716,6 +902,7 @@ namespace std
 #ifndef WINRT_LEAN_AND_MEAN
     template<> struct hash<winrt::Microsoft::Graphics::Display::IDisplayAdvancedColorInfo> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Graphics::Display::IDisplayInformation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Graphics::Display::IDisplayInformation2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Graphics::Display::IDisplayInformationStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Graphics::Display::DisplayAdvancedColorInfo> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Graphics::Display::DisplayInformation> : winrt::impl::hash_base {};

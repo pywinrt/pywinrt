@@ -90,6 +90,14 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Microsoft::Windows::AI::Imaging::ImageObjectRemover>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.ai.imaging.ImageObjectRemover";
+        static constexpr const char* module_name = "winui3.microsoft.windows.ai.imaging";
+        static constexpr const char* type_name = "ImageObjectRemover";
+    };
+
+    template<>
     struct py_type<winrt::Microsoft::Windows::AI::Imaging::ImageScaler>
     {
         static constexpr std::string_view qualified_name = "winui3.microsoft.windows.ai.imaging.ImageScaler";
@@ -177,6 +185,7 @@ namespace py::wrapper::Microsoft::Windows::AI::Imaging
     using ImageDescriptionResult = py::winrt_wrapper<winrt::Microsoft::Windows::AI::Imaging::ImageDescriptionResult>;
     using ImageObjectExtractor = py::winrt_wrapper<winrt::Microsoft::Windows::AI::Imaging::ImageObjectExtractor>;
     using ImageObjectExtractorHint = py::winrt_wrapper<winrt::Microsoft::Windows::AI::Imaging::ImageObjectExtractorHint>;
+    using ImageObjectRemover = py::winrt_wrapper<winrt::Microsoft::Windows::AI::Imaging::ImageObjectRemover>;
     using ImageScaler = py::winrt_wrapper<winrt::Microsoft::Windows::AI::Imaging::ImageScaler>;
     using RecognizedLine = py::winrt_wrapper<winrt::Microsoft::Windows::AI::Imaging::RecognizedLine>;
     using RecognizedText = py::winrt_wrapper<winrt::Microsoft::Windows::AI::Imaging::RecognizedText>;

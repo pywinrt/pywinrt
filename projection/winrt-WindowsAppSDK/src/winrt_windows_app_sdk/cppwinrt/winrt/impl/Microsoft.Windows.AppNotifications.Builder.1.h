@@ -13,6 +13,13 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::AppNotifications::Builder
         IAppNotificationBuilder(std::nullptr_t = nullptr) noexcept {}
         IAppNotificationBuilder(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IAppNotificationBuilder2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IAppNotificationBuilder2>
+    {
+        IAppNotificationBuilder2(std::nullptr_t = nullptr) noexcept {}
+        IAppNotificationBuilder2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IAppNotificationBuilderStatics :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IAppNotificationBuilderStatics>
@@ -26,6 +33,13 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::AppNotifications::Builder
     {
         IAppNotificationButton(std::nullptr_t = nullptr) noexcept {}
         IAppNotificationButton(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IAppNotificationButton2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IAppNotificationButton2>
+    {
+        IAppNotificationButton2(std::nullptr_t = nullptr) noexcept {}
+        IAppNotificationButton2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IAppNotificationButtonFactory :
         winrt::Windows::Foundation::IInspectable,

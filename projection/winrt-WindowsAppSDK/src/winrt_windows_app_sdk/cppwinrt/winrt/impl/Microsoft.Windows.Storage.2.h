@@ -16,6 +16,7 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::Storage
         static auto GetDefault();
         static auto GetForUser(winrt::Windows::System::User const& user);
         static auto GetForPackageFamily(param::hstring const& packageFamilyName);
+        static auto GetForUnpackaged(param::hstring const& publisher, param::hstring const& product);
     };
     struct WINRT_IMPL_EMPTY_BASES ApplicationDataContainer : winrt::Microsoft::Windows::Storage::IApplicationDataContainer,
         impl::require<ApplicationDataContainer, winrt::Windows::Foundation::IClosable>

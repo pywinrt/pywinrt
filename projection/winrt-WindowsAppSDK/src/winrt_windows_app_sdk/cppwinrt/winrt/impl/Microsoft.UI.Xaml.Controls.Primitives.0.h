@@ -58,10 +58,12 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct ScrollingScrollCompletedEventArgs;
     enum class ScrollingScrollMode : int32_t;
     struct ScrollingScrollOptions;
+    struct ScrollingScrollStartingEventArgs;
     struct ScrollingZoomAnimationStartingEventArgs;
     struct ScrollingZoomCompletedEventArgs;
     enum class ScrollingZoomMode : int32_t;
     struct ScrollingZoomOptions;
+    struct ScrollingZoomStartingEventArgs;
     struct SelectionChangedEventHandler;
 }
 WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Input
@@ -384,6 +386,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls::Primitives
     struct IScrollControllerScrollToRequestedEventArgsFactory;
     struct IScrollEventArgs;
     struct IScrollPresenter;
+    struct IScrollPresenter2;
     struct IScrollPresenterFactory;
     struct IScrollPresenterStatics;
     struct IScrollSnapPoint;
@@ -629,6 +632,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollControllerScrollToRequestedEventArgsFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenterFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenterStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPoint>{ using type = interface_category; };
@@ -985,6 +989,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollControllerScrollToRequestedEventArgsFactory> = L"Microsoft.UI.Xaml.Controls.Primitives.IScrollControllerScrollToRequestedEventArgsFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollEventArgs> = L"Microsoft.UI.Xaml.Controls.Primitives.IScrollEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter> = L"Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter2> = L"Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenter2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenterFactory> = L"Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenterFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenterStatics> = L"Microsoft.UI.Xaml.Controls.Primitives.IScrollPresenterStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPoint> = L"Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPoint";
@@ -1151,6 +1156,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollControllerScrollToRequestedEventArgsFactory>{ 0x01675DC4,0x1074,0x54E8,{ 0xBE,0xBB,0x66,0xB0,0x3A,0x33,0xDA,0x0D } }; // 01675DC4-1074-54E8-BEBB-66B03A33DA0D
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollEventArgs>{ 0xDBD27F11,0xF937,0x5AD0,{ 0x9F,0x75,0xB9,0x62,0xC3,0x32,0x54,0xCF } }; // DBD27F11-F937-5AD0-9F75-B962C33254CF
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>{ 0x424B8AFD,0xF7AA,0x5E5B,{ 0x9D,0x0B,0x5F,0x0E,0xA4,0xE1,0xA5,0x6E } }; // 424B8AFD-F7AA-5E5B-9D0B-5F0EA4E1A56E
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter2>{ 0xF178EEBB,0x4285,0x5969,{ 0xA2,0x22,0x4D,0x7E,0xFA,0x8D,0x6B,0x19 } }; // F178EEBB-4285-5969-A222-4D7EFA8D6B19
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenterFactory>{ 0x9F5CDC57,0xD229,0x52B2,{ 0xAE,0xE4,0x37,0xC4,0x96,0x76,0x4E,0xA3 } }; // 9F5CDC57-D229-52B2-AEE4-37C496764EA3
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenterStatics>{ 0xE27BA947,0xF8A5,0x5869,{ 0x9A,0x71,0xCD,0x51,0x4D,0x41,0xC6,0x23 } }; // E27BA947-F8A5-5869-9A71-CD514D41C623
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPoint>{ 0x73D918FF,0xD16C,0x52CD,{ 0x96,0x57,0xE3,0x92,0xEE,0x08,0x86,0x8A } }; // 73D918FF-D16C-52CD-9657-E392EE08868A
@@ -2867,6 +2873,16 @@ namespace winrt::impl
             virtual int32_t __stdcall remove_BringingIntoView(winrt::event_token) noexcept = 0;
             virtual int32_t __stdcall add_AnchorRequested(void*, winrt::event_token*) noexcept = 0;
             virtual int32_t __stdcall remove_AnchorRequested(winrt::event_token) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall add_ScrollStarting(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_ScrollStarting(winrt::event_token) noexcept = 0;
+            virtual int32_t __stdcall add_ZoomStarting(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_ZoomStarting(winrt::event_token) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenterFactory>
@@ -5117,6 +5133,22 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter>
     {
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_Primitives_IScrollPresenter<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_Primitives_IScrollPresenter2
+    {
+        auto ScrollStarting(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter, winrt::Microsoft::UI::Xaml::Controls::ScrollingScrollStartingEventArgs> const& handler) const;
+        using ScrollStarting_revoker = impl::event_revoker<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter2, &impl::abi_t<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter2>::remove_ScrollStarting>;
+        [[nodiscard]] auto ScrollStarting(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter, winrt::Microsoft::UI::Xaml::Controls::ScrollingScrollStartingEventArgs> const& handler) const;
+        auto ScrollStarting(winrt::event_token const& token) const noexcept;
+        auto ZoomStarting(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter, winrt::Microsoft::UI::Xaml::Controls::ScrollingZoomStartingEventArgs> const& handler) const;
+        using ZoomStarting_revoker = impl::event_revoker<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter2, &impl::abi_t<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter2>::remove_ZoomStarting>;
+        [[nodiscard]] auto ZoomStarting(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter, winrt::Microsoft::UI::Xaml::Controls::ScrollingZoomStartingEventArgs> const& handler) const;
+        auto ZoomStarting(winrt::event_token const& token) const noexcept;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter2>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_Primitives_IScrollPresenter2<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_Primitives_IScrollPresenterFactory

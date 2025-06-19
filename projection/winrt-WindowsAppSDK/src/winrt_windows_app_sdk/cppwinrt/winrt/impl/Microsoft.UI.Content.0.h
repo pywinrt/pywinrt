@@ -10,6 +10,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI
 }
 WINRT_EXPORT namespace winrt::Microsoft::UI::Composition
 {
+    enum class CompositionBorderMode : int32_t;
     struct Compositor;
     struct ContainerVisual;
     struct Visual;
@@ -20,6 +21,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Dispatching
 }
 WINRT_EXPORT namespace winrt::Windows::Foundation
 {
+    template <typename T> struct WINRT_IMPL_EMPTY_BASES EventHandler;
     struct EventRegistrationToken;
     template <typename T> struct WINRT_IMPL_EMPTY_BASES IReference;
     struct Point;
@@ -39,11 +41,19 @@ WINRT_EXPORT namespace winrt::Windows::Graphics
     struct RectInt32;
     struct SizeInt32;
 }
+WINRT_EXPORT namespace winrt::Windows::UI
+{
+    struct Color;
+}
 WINRT_EXPORT namespace winrt::Windows::UI::Composition
 {
     struct Compositor;
     struct ContainerVisual;
     struct Visual;
+}
+WINRT_EXPORT namespace winrt::Windows::UI::Core
+{
+    struct CoreWindow;
 }
 WINRT_EXPORT namespace winrt::Microsoft::UI::Content
 {
@@ -60,6 +70,14 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Content
         Round = 2,
         Ceiling = 3,
     };
+    enum class ContentDisplayOrientations : uint32_t
+    {
+        None = 0,
+        Landscape = 0x1,
+        Portrait = 0x2,
+        LandscapeFlipped = 0x4,
+        PortraitFlipped = 0x8,
+    };
     enum class ContentLayoutDirection : int32_t
     {
         LeftToRight = 0,
@@ -73,6 +91,8 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Content
     };
     struct IChildSiteLink;
     struct IChildSiteLinkStatics;
+    struct IContentAppWindowBridge;
+    struct IContentAppWindowBridgeStatics;
     struct IContentCoordinateConverter;
     struct IContentCoordinateConverterFactory;
     struct IContentCoordinateConverterStatics;
@@ -80,29 +100,40 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Content
     struct IContentEnvironmentSettingChangedEventArgs;
     struct IContentEnvironmentStateChangedEventArgs;
     struct IContentEnvironmentStateChangedEventArgs2;
+    struct IContentExternalBackdropLink;
+    struct IContentExternalBackdropLinkStatics;
+    struct IContentExternalOutputLink;
+    struct IContentExternalOutputLinkStatics;
     struct IContentIsland;
     struct IContentIsland2;
     struct IContentIslandAutomation;
     struct IContentIslandAutomationProviderRequestedEventArgs;
+    struct IContentIslandEndpointConnectionPrivate;
     struct IContentIslandEnvironment;
     struct IContentIslandEnvironment2;
+    struct IContentIslandEnvironmentExperimental;
     struct IContentIslandEnvironmentFactory;
+    struct IContentIslandExperimental;
     struct IContentIslandFactory;
     struct IContentIslandStateChangedEventArgs;
     struct IContentIslandStateChangedEventArgs2;
     struct IContentIslandStatics;
     struct IContentIslandStatics2;
+    struct IContentNodeOwner;
     struct IContentSite;
     struct IContentSite2;
     struct IContentSiteAutomation;
     struct IContentSiteAutomationProviderRequestedEventArgs;
     struct IContentSiteBridge;
+    struct IContentSiteBridgeEndpointConnectionPrivate;
     struct IContentSiteEnvironment;
     struct IContentSiteEnvironment2;
+    struct IContentSiteEnvironmentExperimental;
     struct IContentSiteEnvironmentFactory;
     struct IContentSiteEnvironmentView;
     struct IContentSiteEnvironmentView2;
     struct IContentSiteEnvironmentViewFactory;
+    struct IContentSiteExperimental;
     struct IContentSiteFactory;
     struct IContentSiteInput;
     struct IContentSiteLink;
@@ -111,6 +142,8 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Content
     struct IContentSiteView2;
     struct IContentSiteViewAutomation;
     struct IContentSiteViewFactory;
+    struct ICoreWindowSiteBridge;
+    struct ICoreWindowSiteBridgeStatics;
     struct IDesktopAttachedSiteBridge;
     struct IDesktopAttachedSiteBridgeStatics;
     struct IDesktopChildSiteBridge;
@@ -119,13 +152,25 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Content
     struct IDesktopPopupSiteBridge;
     struct IDesktopPopupSiteBridgeStatics;
     struct IDesktopSiteBridge;
+    struct IDesktopSiteBridge2;
     struct IDesktopSiteBridgeFactory;
     struct IDesktopSiteBridgeStatics;
+    struct IEndpointConnectionEventArgs;
+    struct IEndpointRequestedStateChangedEventArgs;
+    struct IPopupWindowSiteBridge;
+    struct IProcessStarter;
+    struct IProcessStarterFactory;
+    struct IProcessStarterStatics;
+    struct ISystemVisualSiteBridge;
+    struct ISystemVisualSiteBridgeStatics;
     struct ChildSiteLink;
+    struct ContentAppWindowBridge;
     struct ContentCoordinateConverter;
     struct ContentDeferral;
     struct ContentEnvironmentSettingChangedEventArgs;
     struct ContentEnvironmentStateChangedEventArgs;
+    struct ContentExternalBackdropLink;
+    struct ContentExternalOutputLink;
     struct ContentIsland;
     struct ContentIslandAutomationProviderRequestedEventArgs;
     struct ContentIslandEnvironment;
@@ -136,15 +181,24 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Content
     struct ContentSiteEnvironmentView;
     struct ContentSiteRequestedStateChangedEventArgs;
     struct ContentSiteView;
+    struct CoreWindowSiteBridge;
+    struct CoreWindowTopLevelWindowBridge;
     struct DesktopAttachedSiteBridge;
     struct DesktopChildSiteBridge;
     struct DesktopPopupSiteBridge;
     struct DesktopSiteBridge;
+    struct EndpointConnectionEventArgs;
+    struct EndpointRequestedStateChangedEventArgs;
+    struct PopupWindowSiteBridge;
+    struct ProcessStarter;
+    struct SystemVisualSiteBridge;
 }
 namespace winrt::impl
 {
     template <> struct category<winrt::Microsoft::UI::Content::IChildSiteLink>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IChildSiteLinkStatics>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Content::IContentAppWindowBridge>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Content::IContentAppWindowBridgeStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IContentCoordinateConverter>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IContentCoordinateConverterFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IContentCoordinateConverterStatics>{ using type = interface_category; };
@@ -152,29 +206,40 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Content::IContentEnvironmentSettingChangedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IContentEnvironmentStateChangedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IContentEnvironmentStateChangedEventArgs2>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Content::IContentExternalBackdropLink>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Content::IContentExternalBackdropLinkStatics>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Content::IContentExternalOutputLink>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Content::IContentExternalOutputLinkStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IContentIsland>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IContentIsland2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IContentIslandAutomation>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IContentIslandAutomationProviderRequestedEventArgs>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Content::IContentIslandEndpointConnectionPrivate>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IContentIslandEnvironment>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IContentIslandEnvironment2>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Content::IContentIslandEnvironmentExperimental>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IContentIslandEnvironmentFactory>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Content::IContentIslandExperimental>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IContentIslandFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IContentIslandStateChangedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IContentIslandStateChangedEventArgs2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IContentIslandStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IContentIslandStatics2>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Content::IContentNodeOwner>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IContentSite>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IContentSite2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IContentSiteAutomation>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IContentSiteAutomationProviderRequestedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IContentSiteBridge>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IContentSiteEnvironment>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IContentSiteEnvironment2>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Content::IContentSiteEnvironmentExperimental>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IContentSiteEnvironmentFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IContentSiteEnvironmentView>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IContentSiteEnvironmentView2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IContentSiteEnvironmentViewFactory>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Content::IContentSiteExperimental>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IContentSiteFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IContentSiteInput>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IContentSiteLink>{ using type = interface_category; };
@@ -183,6 +248,8 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Content::IContentSiteView2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IContentSiteViewAutomation>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IContentSiteViewFactory>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Content::ICoreWindowSiteBridge>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Content::ICoreWindowSiteBridgeStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IDesktopAttachedSiteBridge>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IDesktopAttachedSiteBridgeStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IDesktopChildSiteBridge>{ using type = interface_category; };
@@ -191,13 +258,25 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Content::IDesktopPopupSiteBridge>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IDesktopPopupSiteBridgeStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IDesktopSiteBridge>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Content::IDesktopSiteBridge2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IDesktopSiteBridgeFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::IDesktopSiteBridgeStatics>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Content::IEndpointConnectionEventArgs>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Content::IEndpointRequestedStateChangedEventArgs>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Content::IPopupWindowSiteBridge>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Content::IProcessStarter>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Content::IProcessStarterFactory>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Content::IProcessStarterStatics>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Content::ISystemVisualSiteBridge>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Content::ISystemVisualSiteBridgeStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Content::ChildSiteLink>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Content::ContentAppWindowBridge>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Content::ContentCoordinateConverter>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Content::ContentDeferral>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Content::ContentEnvironmentSettingChangedEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Content::ContentEnvironmentStateChangedEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Content::ContentExternalBackdropLink>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Content::ContentExternalOutputLink>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Content::ContentIsland>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Content::ContentIslandAutomationProviderRequestedEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Content::ContentIslandEnvironment>{ using type = class_category; };
@@ -208,19 +287,30 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Content::ContentSiteEnvironmentView>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Content::ContentSiteRequestedStateChangedEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Content::ContentSiteView>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Content::CoreWindowSiteBridge>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Content::CoreWindowTopLevelWindowBridge>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Content::DesktopAttachedSiteBridge>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Content::DesktopChildSiteBridge>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Content::DesktopPopupSiteBridge>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Content::DesktopSiteBridge>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Content::EndpointConnectionEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Content::EndpointRequestedStateChangedEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Content::PopupWindowSiteBridge>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Content::ProcessStarter>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Content::SystemVisualSiteBridge>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Content::ContentAutomationOptions>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Content::ContentCoordinateRoundingMode>{ using type = enum_category; };
+    template <> struct category<winrt::Microsoft::UI::Content::ContentDisplayOrientations>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Content::ContentLayoutDirection>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Content::ContentSizePolicy>{ using type = enum_category; };
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::ChildSiteLink> = L"Microsoft.UI.Content.ChildSiteLink";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::ContentAppWindowBridge> = L"Microsoft.UI.Content.ContentAppWindowBridge";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::ContentCoordinateConverter> = L"Microsoft.UI.Content.ContentCoordinateConverter";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::ContentDeferral> = L"Microsoft.UI.Content.ContentDeferral";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::ContentEnvironmentSettingChangedEventArgs> = L"Microsoft.UI.Content.ContentEnvironmentSettingChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::ContentEnvironmentStateChangedEventArgs> = L"Microsoft.UI.Content.ContentEnvironmentStateChangedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::ContentExternalBackdropLink> = L"Microsoft.UI.Content.ContentExternalBackdropLink";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::ContentExternalOutputLink> = L"Microsoft.UI.Content.ContentExternalOutputLink";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::ContentIsland> = L"Microsoft.UI.Content.ContentIsland";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::ContentIslandAutomationProviderRequestedEventArgs> = L"Microsoft.UI.Content.ContentIslandAutomationProviderRequestedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::ContentIslandEnvironment> = L"Microsoft.UI.Content.ContentIslandEnvironment";
@@ -231,16 +321,26 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::ContentSiteEnvironmentView> = L"Microsoft.UI.Content.ContentSiteEnvironmentView";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::ContentSiteRequestedStateChangedEventArgs> = L"Microsoft.UI.Content.ContentSiteRequestedStateChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::ContentSiteView> = L"Microsoft.UI.Content.ContentSiteView";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::CoreWindowSiteBridge> = L"Microsoft.UI.Content.CoreWindowSiteBridge";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::CoreWindowTopLevelWindowBridge> = L"Microsoft.UI.Content.CoreWindowTopLevelWindowBridge";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::DesktopAttachedSiteBridge> = L"Microsoft.UI.Content.DesktopAttachedSiteBridge";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::DesktopChildSiteBridge> = L"Microsoft.UI.Content.DesktopChildSiteBridge";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::DesktopPopupSiteBridge> = L"Microsoft.UI.Content.DesktopPopupSiteBridge";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::DesktopSiteBridge> = L"Microsoft.UI.Content.DesktopSiteBridge";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::EndpointConnectionEventArgs> = L"Microsoft.UI.Content.EndpointConnectionEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::EndpointRequestedStateChangedEventArgs> = L"Microsoft.UI.Content.EndpointRequestedStateChangedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::PopupWindowSiteBridge> = L"Microsoft.UI.Content.PopupWindowSiteBridge";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::ProcessStarter> = L"Microsoft.UI.Content.ProcessStarter";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::SystemVisualSiteBridge> = L"Microsoft.UI.Content.SystemVisualSiteBridge";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::ContentAutomationOptions> = L"Microsoft.UI.Content.ContentAutomationOptions";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::ContentCoordinateRoundingMode> = L"Microsoft.UI.Content.ContentCoordinateRoundingMode";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::ContentDisplayOrientations> = L"Microsoft.UI.Content.ContentDisplayOrientations";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::ContentLayoutDirection> = L"Microsoft.UI.Content.ContentLayoutDirection";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::ContentSizePolicy> = L"Microsoft.UI.Content.ContentSizePolicy";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IChildSiteLink> = L"Microsoft.UI.Content.IChildSiteLink";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IChildSiteLinkStatics> = L"Microsoft.UI.Content.IChildSiteLinkStatics";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentAppWindowBridge> = L"Microsoft.UI.Content.IContentAppWindowBridge";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentAppWindowBridgeStatics> = L"Microsoft.UI.Content.IContentAppWindowBridgeStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentCoordinateConverter> = L"Microsoft.UI.Content.IContentCoordinateConverter";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentCoordinateConverterFactory> = L"Microsoft.UI.Content.IContentCoordinateConverterFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentCoordinateConverterStatics> = L"Microsoft.UI.Content.IContentCoordinateConverterStatics";
@@ -248,29 +348,40 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentEnvironmentSettingChangedEventArgs> = L"Microsoft.UI.Content.IContentEnvironmentSettingChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentEnvironmentStateChangedEventArgs> = L"Microsoft.UI.Content.IContentEnvironmentStateChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentEnvironmentStateChangedEventArgs2> = L"Microsoft.UI.Content.IContentEnvironmentStateChangedEventArgs2";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentExternalBackdropLink> = L"Microsoft.UI.Content.IContentExternalBackdropLink";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentExternalBackdropLinkStatics> = L"Microsoft.UI.Content.IContentExternalBackdropLinkStatics";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentExternalOutputLink> = L"Microsoft.UI.Content.IContentExternalOutputLink";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentExternalOutputLinkStatics> = L"Microsoft.UI.Content.IContentExternalOutputLinkStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentIsland> = L"Microsoft.UI.Content.IContentIsland";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentIsland2> = L"Microsoft.UI.Content.IContentIsland2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentIslandAutomation> = L"Microsoft.UI.Content.IContentIslandAutomation";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentIslandAutomationProviderRequestedEventArgs> = L"Microsoft.UI.Content.IContentIslandAutomationProviderRequestedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentIslandEndpointConnectionPrivate> = L"Microsoft.UI.Content.IContentIslandEndpointConnectionPrivate";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentIslandEnvironment> = L"Microsoft.UI.Content.IContentIslandEnvironment";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentIslandEnvironment2> = L"Microsoft.UI.Content.IContentIslandEnvironment2";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentIslandEnvironmentExperimental> = L"Microsoft.UI.Content.IContentIslandEnvironmentExperimental";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentIslandEnvironmentFactory> = L"Microsoft.UI.Content.IContentIslandEnvironmentFactory";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentIslandExperimental> = L"Microsoft.UI.Content.IContentIslandExperimental";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentIslandFactory> = L"Microsoft.UI.Content.IContentIslandFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentIslandStateChangedEventArgs> = L"Microsoft.UI.Content.IContentIslandStateChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentIslandStateChangedEventArgs2> = L"Microsoft.UI.Content.IContentIslandStateChangedEventArgs2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentIslandStatics> = L"Microsoft.UI.Content.IContentIslandStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentIslandStatics2> = L"Microsoft.UI.Content.IContentIslandStatics2";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentNodeOwner> = L"Microsoft.UI.Content.IContentNodeOwner";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentSite> = L"Microsoft.UI.Content.IContentSite";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentSite2> = L"Microsoft.UI.Content.IContentSite2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentSiteAutomation> = L"Microsoft.UI.Content.IContentSiteAutomation";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentSiteAutomationProviderRequestedEventArgs> = L"Microsoft.UI.Content.IContentSiteAutomationProviderRequestedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentSiteBridge> = L"Microsoft.UI.Content.IContentSiteBridge";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate> = L"Microsoft.UI.Content.IContentSiteBridgeEndpointConnectionPrivate";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentSiteEnvironment> = L"Microsoft.UI.Content.IContentSiteEnvironment";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentSiteEnvironment2> = L"Microsoft.UI.Content.IContentSiteEnvironment2";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentSiteEnvironmentExperimental> = L"Microsoft.UI.Content.IContentSiteEnvironmentExperimental";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentSiteEnvironmentFactory> = L"Microsoft.UI.Content.IContentSiteEnvironmentFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentSiteEnvironmentView> = L"Microsoft.UI.Content.IContentSiteEnvironmentView";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentSiteEnvironmentView2> = L"Microsoft.UI.Content.IContentSiteEnvironmentView2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentSiteEnvironmentViewFactory> = L"Microsoft.UI.Content.IContentSiteEnvironmentViewFactory";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentSiteExperimental> = L"Microsoft.UI.Content.IContentSiteExperimental";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentSiteFactory> = L"Microsoft.UI.Content.IContentSiteFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentSiteInput> = L"Microsoft.UI.Content.IContentSiteInput";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentSiteLink> = L"Microsoft.UI.Content.IContentSiteLink";
@@ -279,6 +390,8 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentSiteView2> = L"Microsoft.UI.Content.IContentSiteView2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentSiteViewAutomation> = L"Microsoft.UI.Content.IContentSiteViewAutomation";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IContentSiteViewFactory> = L"Microsoft.UI.Content.IContentSiteViewFactory";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::ICoreWindowSiteBridge> = L"Microsoft.UI.Content.ICoreWindowSiteBridge";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::ICoreWindowSiteBridgeStatics> = L"Microsoft.UI.Content.ICoreWindowSiteBridgeStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IDesktopAttachedSiteBridge> = L"Microsoft.UI.Content.IDesktopAttachedSiteBridge";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IDesktopAttachedSiteBridgeStatics> = L"Microsoft.UI.Content.IDesktopAttachedSiteBridgeStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IDesktopChildSiteBridge> = L"Microsoft.UI.Content.IDesktopChildSiteBridge";
@@ -287,10 +400,21 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IDesktopPopupSiteBridge> = L"Microsoft.UI.Content.IDesktopPopupSiteBridge";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IDesktopPopupSiteBridgeStatics> = L"Microsoft.UI.Content.IDesktopPopupSiteBridgeStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IDesktopSiteBridge> = L"Microsoft.UI.Content.IDesktopSiteBridge";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IDesktopSiteBridge2> = L"Microsoft.UI.Content.IDesktopSiteBridge2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IDesktopSiteBridgeFactory> = L"Microsoft.UI.Content.IDesktopSiteBridgeFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IDesktopSiteBridgeStatics> = L"Microsoft.UI.Content.IDesktopSiteBridgeStatics";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IEndpointConnectionEventArgs> = L"Microsoft.UI.Content.IEndpointConnectionEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IEndpointRequestedStateChangedEventArgs> = L"Microsoft.UI.Content.IEndpointRequestedStateChangedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IPopupWindowSiteBridge> = L"Microsoft.UI.Content.IPopupWindowSiteBridge";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IProcessStarter> = L"Microsoft.UI.Content.IProcessStarter";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IProcessStarterFactory> = L"Microsoft.UI.Content.IProcessStarterFactory";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::IProcessStarterStatics> = L"Microsoft.UI.Content.IProcessStarterStatics";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::ISystemVisualSiteBridge> = L"Microsoft.UI.Content.ISystemVisualSiteBridge";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Content::ISystemVisualSiteBridgeStatics> = L"Microsoft.UI.Content.ISystemVisualSiteBridgeStatics";
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IChildSiteLink>{ 0xB5A64814,0x608B,0x5FB7,{ 0xA7,0xCB,0xEB,0x62,0x8F,0xD5,0x88,0xCD } }; // B5A64814-608B-5FB7-A7CB-EB628FD588CD
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IChildSiteLinkStatics>{ 0x28EDC98A,0x4F94,0x50B1,{ 0x8A,0x87,0x9E,0x71,0x69,0xEB,0xF4,0xB7 } }; // 28EDC98A-4F94-50B1-8A87-9E7169EBF4B7
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentAppWindowBridge>{ 0xA17D6B39,0x5B52,0x5974,{ 0x88,0xE5,0x60,0xCD,0xE3,0x96,0x7B,0x5E } }; // A17D6B39-5B52-5974-88E5-60CDE3967B5E
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentAppWindowBridgeStatics>{ 0x84B9CD9C,0xE822,0x5F12,{ 0xB2,0x1D,0x31,0xA4,0x09,0xB8,0x04,0xF5 } }; // 84B9CD9C-E822-5F12-B21D-31A409B804F5
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentCoordinateConverter>{ 0x10A11230,0x5EB4,0x5840,{ 0xA3,0x46,0x57,0x0F,0x4A,0x49,0x04,0x0F } }; // 10A11230-5EB4-5840-A346-570F4A49040F
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentCoordinateConverterFactory>{ 0xA4B216EE,0x0E26,0x56BD,{ 0x92,0x09,0xA7,0x5C,0xF9,0xD8,0x0F,0x27 } }; // A4B216EE-0E26-56BD-9209-A75CF9D80F27
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentCoordinateConverterStatics>{ 0xF56374CE,0xB6DF,0x5B42,{ 0xA5,0x8F,0x4E,0x3B,0xB0,0x39,0xE3,0xA9 } }; // F56374CE-B6DF-5B42-A58F-4E3BB039E3A9
@@ -298,29 +422,40 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentEnvironmentSettingChangedEventArgs>{ 0x76478051,0xFC80,0x5EEC,{ 0xA3,0xF3,0x62,0x60,0x6A,0xBE,0x06,0xB7 } }; // 76478051-FC80-5EEC-A3F3-62606ABE06B7
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentEnvironmentStateChangedEventArgs>{ 0x8970FA4F,0x10BA,0x5F67,{ 0x97,0x0B,0x8C,0x72,0xBC,0x00,0x9B,0x67 } }; // 8970FA4F-10BA-5F67-970B-8C72BC009B67
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentEnvironmentStateChangedEventArgs2>{ 0xCEC0497D,0x76C7,0x544B,{ 0xBF,0x6E,0x81,0x6C,0x9B,0x16,0xC9,0x9F } }; // CEC0497D-76C7-544B-BF6E-816C9B16C99F
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentExternalBackdropLink>{ 0x1054BF83,0xB35B,0x5FDE,{ 0x8D,0xD7,0xAC,0x3B,0xB3,0xE6,0xCE,0x27 } }; // 1054BF83-B35B-5FDE-8DD7-AC3BB3E6CE27
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentExternalBackdropLinkStatics>{ 0x46CAC6FB,0xBB51,0x510A,{ 0x95,0x8D,0xE0,0xEB,0x41,0x60,0xF6,0x78 } }; // 46CAC6FB-BB51-510A-958D-E0EB4160F678
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentExternalOutputLink>{ 0x3DAC8EC8,0x011F,0x5AD2,{ 0x8D,0xB7,0xB7,0x3C,0x44,0x52,0xF7,0x55 } }; // 3DAC8EC8-011F-5AD2-8DB7-B73C4452F755
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentExternalOutputLinkStatics>{ 0xB758F401,0x833E,0x587D,{ 0xB0,0xCD,0xA3,0x93,0x4E,0xBA,0x37,0x21 } }; // B758F401-833E-587D-B0CD-A3934EBA3721
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentIsland>{ 0x5B2504BA,0x361C,0x50AA,{ 0xBD,0x6E,0x41,0x22,0xC6,0xD9,0x38,0x89 } }; // 5B2504BA-361C-50AA-BD6E-4122C6D93889
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentIsland2>{ 0x9F891825,0x4F83,0x5ADA,{ 0x9E,0xBD,0x9D,0x32,0x94,0x60,0xAE,0xDE } }; // 9F891825-4F83-5ADA-9EBD-9D329460AEDE
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentIslandAutomation>{ 0x8752C11E,0x1896,0x565A,{ 0xBF,0xB0,0x2B,0x07,0x70,0x03,0x0E,0x97 } }; // 8752C11E-1896-565A-BFB0-2B0770030E97
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentIslandAutomationProviderRequestedEventArgs>{ 0x9FE24BED,0x2B9C,0x5137,{ 0x88,0x7F,0x40,0x3C,0x94,0x84,0x18,0x24 } }; // 9FE24BED-2B9C-5137-887F-403C94841824
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentIslandEndpointConnectionPrivate>{ 0x7C5D833B,0x70B8,0x5448,{ 0x84,0x72,0x94,0x06,0xE5,0x8E,0x0D,0xB4 } }; // 7C5D833B-70B8-5448-8472-9406E58E0DB4
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentIslandEnvironment>{ 0xC334236D,0xDA88,0x566D,{ 0x81,0x1D,0x74,0xAE,0xF2,0xEB,0xA9,0x78 } }; // C334236D-DA88-566D-811D-74AEF2EBA978
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentIslandEnvironment2>{ 0x6BF81A71,0xC1E4,0x54D6,{ 0xAC,0x0D,0x02,0xBC,0xFF,0x52,0x97,0xE7 } }; // 6BF81A71-C1E4-54D6-AC0D-02BCFF5297E7
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentIslandEnvironmentExperimental>{ 0x5A8339BC,0xF7A1,0x5718,{ 0x96,0xCF,0x00,0xFC,0x83,0x32,0xAC,0x47 } }; // 5A8339BC-F7A1-5718-96CF-00FC8332AC47
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentIslandEnvironmentFactory>{ 0x47A782D6,0xB177,0x5C1E,{ 0xBF,0x87,0x90,0x43,0x7D,0xD8,0x09,0xD0 } }; // 47A782D6-B177-5C1E-BF87-90437DD809D0
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentIslandExperimental>{ 0x215B5537,0x8085,0x51F8,{ 0x88,0xDB,0x00,0xBA,0x45,0xF5,0xBC,0xEE } }; // 215B5537-8085-51F8-88DB-00BA45F5BCEE
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentIslandFactory>{ 0x82383F52,0xE81A,0x5EC9,{ 0xA9,0x54,0xBA,0xC8,0xA9,0x31,0xBA,0x7D } }; // 82383F52-E81A-5EC9-A954-BAC8A931BA7D
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentIslandStateChangedEventArgs>{ 0xC828EEB2,0x0C62,0x5B40,{ 0x9D,0x48,0x77,0xC0,0x60,0x83,0xC2,0x78 } }; // C828EEB2-0C62-5B40-9D48-77C06083C278
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentIslandStateChangedEventArgs2>{ 0x8AD25BE1,0xA89A,0x5872,{ 0x89,0x6E,0x82,0x98,0xDD,0x20,0xEB,0x0D } }; // 8AD25BE1-A89A-5872-896E-8298DD20EB0D
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentIslandStatics>{ 0x7B9EB7CC,0x8C43,0x5E0A,{ 0xAB,0x23,0xAB,0x48,0x62,0x8F,0xD2,0x23 } }; // 7B9EB7CC-8C43-5E0A-AB23-AB48628FD223
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentIslandStatics2>{ 0xB2C6FA77,0x13C9,0x5064,{ 0xBB,0x1D,0xF8,0x78,0xD8,0x6A,0xCC,0x65 } }; // B2C6FA77-13C9-5064-BB1D-F878D86ACC65
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentNodeOwner>{ 0x2251C304,0x449D,0x4456,{ 0xB0,0x08,0xFE,0x71,0x63,0x40,0x3D,0x7E } }; // 2251C304-449D-4456-B008-FE7163403D7E
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentSite>{ 0x996C60C4,0x02B2,0x5EEF,{ 0x93,0xB0,0xDD,0x6B,0x1E,0xC2,0xFD,0x7B } }; // 996C60C4-02B2-5EEF-93B0-DD6B1EC2FD7B
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentSite2>{ 0xC3F0149E,0x3F8C,0x5961,{ 0x9D,0x04,0xCD,0x6C,0x8A,0x7F,0x60,0x26 } }; // C3F0149E-3F8C-5961-9D04-CD6C8A7F6026
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentSiteAutomation>{ 0xDB4F4683,0xCD76,0x50D0,{ 0x9A,0xE1,0x04,0x4C,0xEB,0x3D,0x3C,0x7A } }; // DB4F4683-CD76-50D0-9AE1-044CEB3D3C7A
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentSiteAutomationProviderRequestedEventArgs>{ 0x73A093B9,0x55D4,0x5598,{ 0xB7,0x0E,0x62,0x50,0xB7,0x32,0xF8,0x21 } }; // 73A093B9-55D4-5598-B70E-6250B732F821
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentSiteBridge>{ 0xFAAAB99E,0xA42B,0x549C,{ 0x92,0xDF,0x3B,0x6D,0x6E,0x1E,0x36,0x8B } }; // FAAAB99E-A42B-549C-92DF-3B6D6E1E368B
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>{ 0x84D1A059,0x692B,0x577D,{ 0xA7,0x91,0x6A,0xD4,0xFA,0xFB,0xEB,0x1F } }; // 84D1A059-692B-577D-A791-6AD4FAFBEB1F
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentSiteEnvironment>{ 0x685D085D,0xBE53,0x55D1,{ 0xAE,0xC4,0xBA,0x22,0x73,0xD5,0x46,0x8B } }; // 685D085D-BE53-55D1-AEC4-BA2273D5468B
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentSiteEnvironment2>{ 0x381AE3CD,0xC780,0x5A69,{ 0xBA,0x6A,0x0E,0xAD,0x85,0x60,0xA3,0x1F } }; // 381AE3CD-C780-5A69-BA6A-0EAD8560A31F
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentSiteEnvironmentExperimental>{ 0xF8AC305F,0xE22C,0x53F6,{ 0x81,0xC8,0x4E,0xCC,0xD9,0x32,0x95,0xB3 } }; // F8AC305F-E22C-53F6-81C8-4ECCD93295B3
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentSiteEnvironmentFactory>{ 0x0BEFA998,0xCB15,0x5F16,{ 0xA4,0xA5,0xC0,0xED,0x16,0x74,0xE1,0x86 } }; // 0BEFA998-CB15-5F16-A4A5-C0ED1674E186
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentSiteEnvironmentView>{ 0x5B6FE420,0x0BB3,0x54DD,{ 0x85,0x89,0x78,0x6C,0xF0,0x2E,0x38,0xF1 } }; // 5B6FE420-0BB3-54DD-8589-786CF02E38F1
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentSiteEnvironmentView2>{ 0x0B43C89A,0x9196,0x5A64,{ 0xA0,0x78,0xEB,0x15,0x0A,0xCA,0xE5,0x27 } }; // 0B43C89A-9196-5A64-A078-EB150ACAE527
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentSiteEnvironmentViewFactory>{ 0xC901EDF2,0xF184,0x5A64,{ 0x8D,0x58,0x8C,0xF8,0xEF,0xA8,0xB6,0x78 } }; // C901EDF2-F184-5A64-8D58-8CF8EFA8B678
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentSiteExperimental>{ 0xBA0DA06B,0xC976,0x549C,{ 0x85,0x2B,0x96,0x57,0xFC,0x2C,0x03,0xF9 } }; // BA0DA06B-C976-549C-852B-9657FC2C03F9
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentSiteFactory>{ 0x72FB98D5,0xB28A,0x57F1,{ 0x91,0xFA,0x24,0xC0,0x14,0xA3,0x42,0xC1 } }; // 72FB98D5-B28A-57F1-91FA-24C014A342C1
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentSiteInput>{ 0x0EAD8189,0x10D3,0x550D,{ 0xB7,0x47,0x88,0x47,0xBD,0x7C,0x9D,0x21 } }; // 0EAD8189-10D3-550D-B747-8847BD7C9D21
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentSiteLink>{ 0xD9247341,0xF5D0,0x5084,{ 0xAF,0x66,0xF5,0xDF,0x5F,0x31,0x4F,0xC0 } }; // D9247341-F5D0-5084-AF66-F5DF5F314FC0
@@ -329,6 +464,8 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentSiteView2>{ 0x628ADCE3,0x820F,0x57DE,{ 0xBD,0xC8,0x37,0x20,0xFF,0x73,0x01,0x4B } }; // 628ADCE3-820F-57DE-BDC8-3720FF73014B
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentSiteViewAutomation>{ 0xF9D1D5FF,0x9669,0x5553,{ 0xA8,0x75,0xAE,0xE0,0x3E,0x11,0xED,0xD8 } }; // F9D1D5FF-9669-5553-A875-AEE03E11EDD8
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IContentSiteViewFactory>{ 0x9EFD72F0,0x63EF,0x5B6A,{ 0xA5,0x0C,0x56,0x85,0xBD,0x81,0x00,0xF1 } }; // 9EFD72F0-63EF-5B6A-A50C-5685BD8100F1
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::ICoreWindowSiteBridge>{ 0x03E1C02E,0xE5E3,0x526A,{ 0x84,0x92,0x93,0x9E,0x26,0xEE,0x09,0xD5 } }; // 03E1C02E-E5E3-526A-8492-939E26EE09D5
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::ICoreWindowSiteBridgeStatics>{ 0xFBC56793,0x11F2,0x5754,{ 0xAD,0x70,0x30,0xE8,0x2C,0x07,0xFA,0x35 } }; // FBC56793-11F2-5754-AD70-30E82C07FA35
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IDesktopAttachedSiteBridge>{ 0xC8AD3758,0xC8D3,0x5EA5,{ 0xA2,0x74,0xCE,0x12,0xD9,0xCF,0x68,0x45 } }; // C8AD3758-C8D3-5EA5-A274-CE12D9CF6845
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IDesktopAttachedSiteBridgeStatics>{ 0x41F6930F,0x310E,0x5680,{ 0x81,0x2C,0x6D,0xAC,0x16,0xDF,0xFF,0x44 } }; // 41F6930F-310E-5680-812C-6DAC16DFFF44
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IDesktopChildSiteBridge>{ 0xB2F2FF7B,0x1825,0x51B0,{ 0xB8,0x0B,0x75,0x99,0x88,0x9C,0x56,0x9F } }; // B2F2FF7B-1825-51B0-B80B-7599889C569F
@@ -337,13 +474,25 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IDesktopPopupSiteBridge>{ 0x84EAAB23,0xF716,0x5AD8,{ 0xAC,0x00,0x3D,0x77,0xC0,0x1D,0x42,0xCC } }; // 84EAAB23-F716-5AD8-AC00-3D77C01D42CC
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IDesktopPopupSiteBridgeStatics>{ 0x4EA2B77B,0x3177,0x5E5B,{ 0x8D,0x0D,0xA7,0x6E,0x15,0xC6,0xD0,0x80 } }; // 4EA2B77B-3177-5E5B-8D0D-A76E15C6D080
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IDesktopSiteBridge>{ 0xF0AE8750,0x905C,0x50A2,{ 0x8A,0x12,0x45,0x45,0xC6,0x24,0x5B,0xB4 } }; // F0AE8750-905C-50A2-8A12-4545C6245BB4
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IDesktopSiteBridge2>{ 0x1190C041,0x82FB,0x5F3B,{ 0x91,0x11,0xCA,0x8F,0x19,0xA7,0x2B,0x75 } }; // 1190C041-82FB-5F3B-9111-CA8F19A72B75
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IDesktopSiteBridgeFactory>{ 0xD94EE1FF,0x3AF1,0x54D0,{ 0x93,0x11,0x65,0x2B,0x29,0xC5,0x7C,0x5B } }; // D94EE1FF-3AF1-54D0-9311-652B29C57C5B
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IDesktopSiteBridgeStatics>{ 0xE0B38DAF,0x9CD4,0x50C5,{ 0x83,0xEE,0xC7,0x6E,0x3C,0xF3,0x4E,0xBA } }; // E0B38DAF-9CD4-50C5-83EE-C76E3CF34EBA
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IEndpointConnectionEventArgs>{ 0x94BF2A15,0xEDF0,0x5EB2,{ 0x9C,0xEC,0x9B,0x93,0xAC,0x53,0x14,0x13 } }; // 94BF2A15-EDF0-5EB2-9CEC-9B93AC531413
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IEndpointRequestedStateChangedEventArgs>{ 0x513F95C6,0x4193,0x5388,{ 0x90,0xF8,0x8C,0xF3,0x40,0x81,0x5B,0x1E } }; // 513F95C6-4193-5388-90F8-8CF340815B1E
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IPopupWindowSiteBridge>{ 0x044597A2,0xE6EE,0x5DAB,{ 0xAB,0xE0,0x19,0x23,0xEB,0xE3,0x4C,0x2E } }; // 044597A2-E6EE-5DAB-ABE0-1923EBE34C2E
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IProcessStarter>{ 0x122D01BC,0x7753,0x5592,{ 0xB6,0x2D,0xF6,0x59,0xA3,0x0A,0x2A,0xC0 } }; // 122D01BC-7753-5592-B62D-F659A30A2AC0
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IProcessStarterFactory>{ 0xA01418D1,0x4E8B,0x54B4,{ 0xA5,0xF2,0x52,0x01,0x87,0xA5,0x8B,0x80 } }; // A01418D1-4E8B-54B4-A5F2-520187A58B80
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::IProcessStarterStatics>{ 0x76F9D59D,0x8456,0x540F,{ 0xBC,0x74,0x0D,0xCA,0xDF,0x45,0x81,0xB8 } }; // 76F9D59D-8456-540F-BC74-0DCADF4581B8
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::ISystemVisualSiteBridge>{ 0x6EEDD227,0x3802,0x5772,{ 0xB2,0x4E,0x1D,0x8B,0x73,0x6C,0xFF,0xA7 } }; // 6EEDD227-3802-5772-B24E-1D8B736CFFA7
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Content::ISystemVisualSiteBridgeStatics>{ 0x6A79501C,0x83A0,0x5889,{ 0xAA,0x21,0x42,0x01,0x00,0x30,0x32,0x76 } }; // 6A79501C-83A0-5889-AA21-420100303276
     template <> struct default_interface<winrt::Microsoft::UI::Content::ChildSiteLink>{ using type = winrt::Microsoft::UI::Content::IChildSiteLink; };
+    template <> struct default_interface<winrt::Microsoft::UI::Content::ContentAppWindowBridge>{ using type = winrt::Microsoft::UI::Content::IContentAppWindowBridge; };
     template <> struct default_interface<winrt::Microsoft::UI::Content::ContentCoordinateConverter>{ using type = winrt::Microsoft::UI::Content::IContentCoordinateConverter; };
     template <> struct default_interface<winrt::Microsoft::UI::Content::ContentDeferral>{ using type = winrt::Microsoft::UI::Content::IContentDeferral; };
     template <> struct default_interface<winrt::Microsoft::UI::Content::ContentEnvironmentSettingChangedEventArgs>{ using type = winrt::Microsoft::UI::Content::IContentEnvironmentSettingChangedEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Content::ContentEnvironmentStateChangedEventArgs>{ using type = winrt::Microsoft::UI::Content::IContentEnvironmentStateChangedEventArgs; };
+    template <> struct default_interface<winrt::Microsoft::UI::Content::ContentExternalBackdropLink>{ using type = winrt::Microsoft::UI::Content::IContentExternalBackdropLink; };
+    template <> struct default_interface<winrt::Microsoft::UI::Content::ContentExternalOutputLink>{ using type = winrt::Microsoft::UI::Content::IContentExternalOutputLink; };
     template <> struct default_interface<winrt::Microsoft::UI::Content::ContentIsland>{ using type = winrt::Microsoft::UI::Content::IContentIsland; };
     template <> struct default_interface<winrt::Microsoft::UI::Content::ContentIslandAutomationProviderRequestedEventArgs>{ using type = winrt::Microsoft::UI::Content::IContentIslandAutomationProviderRequestedEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Content::ContentIslandEnvironment>{ using type = winrt::Microsoft::UI::Content::IContentIslandEnvironment; };
@@ -354,10 +503,17 @@ namespace winrt::impl
     template <> struct default_interface<winrt::Microsoft::UI::Content::ContentSiteEnvironmentView>{ using type = winrt::Microsoft::UI::Content::IContentSiteEnvironmentView; };
     template <> struct default_interface<winrt::Microsoft::UI::Content::ContentSiteRequestedStateChangedEventArgs>{ using type = winrt::Microsoft::UI::Content::IContentSiteRequestedStateChangedEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Content::ContentSiteView>{ using type = winrt::Microsoft::UI::Content::IContentSiteView; };
+    template <> struct default_interface<winrt::Microsoft::UI::Content::CoreWindowSiteBridge>{ using type = winrt::Microsoft::UI::Content::ICoreWindowSiteBridge; };
+    template <> struct default_interface<winrt::Microsoft::UI::Content::CoreWindowTopLevelWindowBridge>{ using type = winrt::Microsoft::UI::Content::IContentNodeOwner; };
     template <> struct default_interface<winrt::Microsoft::UI::Content::DesktopAttachedSiteBridge>{ using type = winrt::Microsoft::UI::Content::IDesktopAttachedSiteBridge; };
     template <> struct default_interface<winrt::Microsoft::UI::Content::DesktopChildSiteBridge>{ using type = winrt::Microsoft::UI::Content::IDesktopChildSiteBridge; };
     template <> struct default_interface<winrt::Microsoft::UI::Content::DesktopPopupSiteBridge>{ using type = winrt::Microsoft::UI::Content::IDesktopPopupSiteBridge; };
     template <> struct default_interface<winrt::Microsoft::UI::Content::DesktopSiteBridge>{ using type = winrt::Microsoft::UI::Content::IDesktopSiteBridge; };
+    template <> struct default_interface<winrt::Microsoft::UI::Content::EndpointConnectionEventArgs>{ using type = winrt::Microsoft::UI::Content::IEndpointConnectionEventArgs; };
+    template <> struct default_interface<winrt::Microsoft::UI::Content::EndpointRequestedStateChangedEventArgs>{ using type = winrt::Microsoft::UI::Content::IEndpointRequestedStateChangedEventArgs; };
+    template <> struct default_interface<winrt::Microsoft::UI::Content::PopupWindowSiteBridge>{ using type = winrt::Microsoft::UI::Content::IPopupWindowSiteBridge; };
+    template <> struct default_interface<winrt::Microsoft::UI::Content::ProcessStarter>{ using type = winrt::Microsoft::UI::Content::IProcessStarter; };
+    template <> struct default_interface<winrt::Microsoft::UI::Content::SystemVisualSiteBridge>{ using type = winrt::Microsoft::UI::Content::ISystemVisualSiteBridge; };
     template <> struct abi<winrt::Microsoft::UI::Content::IChildSiteLink>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -377,6 +533,19 @@ namespace winrt::impl
         {
             virtual int32_t __stdcall Create(void*, void*, void**) noexcept = 0;
             virtual int32_t __stdcall CreateForSystemVisual(void*, void*, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Content::IContentAppWindowBridge>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Content::IContentAppWindowBridgeStatics>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall GetForWindowId(struct struct_Microsoft_UI_WindowId, void**) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Content::IContentCoordinateConverter>
@@ -432,6 +601,45 @@ namespace winrt::impl
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
             virtual int32_t __stdcall get_DidDisplayScaleChange(bool*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Content::IContentExternalBackdropLink>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_DispatcherQueue(void**) noexcept = 0;
+            virtual int32_t __stdcall get_ExternalBackdropBorderMode(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall put_ExternalBackdropBorderMode(int32_t) noexcept = 0;
+            virtual int32_t __stdcall get_PlacementVisual(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Content::IContentExternalBackdropLinkStatics>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall Create(void*, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Content::IContentExternalOutputLink>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_BackgroundColor(struct struct_Windows_UI_Color*) noexcept = 0;
+            virtual int32_t __stdcall put_BackgroundColor(struct struct_Windows_UI_Color) noexcept = 0;
+            virtual int32_t __stdcall get_DispatcherQueue(void**) noexcept = 0;
+            virtual int32_t __stdcall get_ExternalOutputBorderMode(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall put_ExternalOutputBorderMode(int32_t) noexcept = 0;
+            virtual int32_t __stdcall get_IsAboveContent(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_IsAboveContent(bool) noexcept = 0;
+            virtual int32_t __stdcall get_PlacementVisual(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Content::IContentExternalOutputLinkStatics>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall Create(void*, void**) noexcept = 0;
+            virtual int32_t __stdcall IsSupported(bool*) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Content::IContentIsland>
@@ -499,6 +707,15 @@ namespace winrt::impl
             virtual int32_t __stdcall put_Handled(bool) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::UI::Content::IContentIslandEndpointConnectionPrivate>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_ConnectionInfo(void**) noexcept = 0;
+            virtual int32_t __stdcall get_IsRemoteEndpointConnected(bool*) noexcept = 0;
+            virtual int32_t __stdcall ConnectRemoteEndpoint(void*) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::UI::Content::IContentIslandEnvironment>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -518,10 +735,32 @@ namespace winrt::impl
             virtual int32_t __stdcall get_DisplayScale(float*) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::UI::Content::IContentIslandEnvironmentExperimental>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_CurrentOrientation(uint32_t*) noexcept = 0;
+            virtual int32_t __stdcall get_NativeOrientation(uint32_t*) noexcept = 0;
+            virtual int32_t __stdcall add_ThemeChanged(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_ThemeChanged(winrt::event_token) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::UI::Content::IContentIslandEnvironmentFactory>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Content::IContentIslandExperimental>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_Root(void**) noexcept = 0;
+            virtual int32_t __stdcall put_Root(void*) noexcept = 0;
+            virtual int32_t __stdcall add_Connected(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_Connected(winrt::event_token) noexcept = 0;
+            virtual int32_t __stdcall add_Disconnected(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_Disconnected(winrt::event_token) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Content::IContentIslandFactory>
@@ -567,6 +806,12 @@ namespace winrt::impl
             virtual int32_t __stdcall CreateForSystemVisual(void*, void*, void**) noexcept = 0;
             virtual int32_t __stdcall FindAllForSystemCompositor(void*, uint32_t* __resultSize, void***) noexcept = 0;
             virtual int32_t __stdcall GetBySystemVisual(void*, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Content::IContentNodeOwner>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Content::IContentSite>
@@ -652,6 +897,21 @@ namespace winrt::impl
             virtual int32_t __stdcall put_OverrideScale(float) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_ConnectionInfo(void**) noexcept = 0;
+            virtual int32_t __stdcall get_IsRemoteEndpointConnected(bool*) noexcept = 0;
+            virtual int32_t __stdcall AcceptRemoteEndpoint(void*) noexcept = 0;
+            virtual int32_t __stdcall add_RemoteEndpointConnecting(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_RemoteEndpointConnecting(winrt::event_token) noexcept = 0;
+            virtual int32_t __stdcall add_RemoteEndpointDisconnected(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_RemoteEndpointDisconnected(winrt::event_token) noexcept = 0;
+            virtual int32_t __stdcall add_RemoteEndpointRequestedStateChanged(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_RemoteEndpointRequestedStateChanged(winrt::event_token) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::UI::Content::IContentSiteEnvironment>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -670,6 +930,17 @@ namespace winrt::impl
         {
             virtual int32_t __stdcall get_DisplayScale(float*) noexcept = 0;
             virtual int32_t __stdcall put_DisplayScale(float) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Content::IContentSiteEnvironmentExperimental>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_CurrentOrientation(uint32_t*) noexcept = 0;
+            virtual int32_t __stdcall put_CurrentOrientation(uint32_t) noexcept = 0;
+            virtual int32_t __stdcall get_NativeOrientation(uint32_t*) noexcept = 0;
+            virtual int32_t __stdcall put_NativeOrientation(uint32_t) noexcept = 0;
+            virtual int32_t __stdcall NotifyThemeChanged() noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Content::IContentSiteEnvironmentFactory>
@@ -697,6 +968,13 @@ namespace winrt::impl
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Content::IContentSiteExperimental>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall TryGetAutomationProvider(void**, bool*) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Content::IContentSiteFactory>
@@ -770,6 +1048,21 @@ namespace winrt::impl
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Content::ICoreWindowSiteBridge>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall Connect(void*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Content::ICoreWindowSiteBridgeStatics>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall Create(void*, void*, void**) noexcept = 0;
+            virtual int32_t __stdcall IsSupported(bool*) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Content::IDesktopAttachedSiteBridge>
@@ -855,6 +1148,13 @@ namespace winrt::impl
             virtual int32_t __stdcall Show() noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::UI::Content::IDesktopSiteBridge2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall TryCreatePopupSiteBridge(void**) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::UI::Content::IDesktopSiteBridgeFactory>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -866,6 +1166,62 @@ namespace winrt::impl
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
             virtual int32_t __stdcall IsSupported(bool*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Content::IEndpointConnectionEventArgs>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_ConnectionInfo(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Content::IEndpointRequestedStateChangedEventArgs>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_DidRequestedSizeChange(bool*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Content::IPopupWindowSiteBridge>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_Anchored(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_Anchored(bool) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Content::IProcessStarter>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Content::IProcessStarterFactory>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Content::IProcessStarterStatics>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall StartProcess(void*, void*, uint32_t*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Content::ISystemVisualSiteBridge>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_Site(void**) noexcept = 0;
+            virtual int32_t __stdcall Connect(void*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Content::ISystemVisualSiteBridgeStatics>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall Create(void*, void*, struct struct_Microsoft_UI_WindowId, void**) noexcept = 0;
         };
     };
     template <typename D>
@@ -892,6 +1248,23 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Content::IChildSiteLinkStatics>
     {
         template <typename D> using type = consume_Microsoft_UI_Content_IChildSiteLinkStatics<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Content_IContentAppWindowBridge
+    {
+    };
+    template <> struct consume<winrt::Microsoft::UI::Content::IContentAppWindowBridge>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Content_IContentAppWindowBridge<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Content_IContentAppWindowBridgeStatics
+    {
+        auto GetForWindowId(winrt::Microsoft::UI::WindowId const& childWindowId) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Content::IContentAppWindowBridgeStatics>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Content_IContentAppWindowBridgeStatics<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Content_IContentCoordinateConverter
@@ -961,6 +1334,53 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Content::IContentEnvironmentStateChangedEventArgs2>
     {
         template <typename D> using type = consume_Microsoft_UI_Content_IContentEnvironmentStateChangedEventArgs2<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Content_IContentExternalBackdropLink
+    {
+        [[nodiscard]] auto DispatcherQueue() const;
+        [[nodiscard]] auto ExternalBackdropBorderMode() const;
+        auto ExternalBackdropBorderMode(winrt::Microsoft::UI::Composition::CompositionBorderMode const& value) const;
+        [[nodiscard]] auto PlacementVisual() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Content::IContentExternalBackdropLink>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Content_IContentExternalBackdropLink<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Content_IContentExternalBackdropLinkStatics
+    {
+        auto Create(winrt::Microsoft::UI::Composition::Compositor const& compositor) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Content::IContentExternalBackdropLinkStatics>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Content_IContentExternalBackdropLinkStatics<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Content_IContentExternalOutputLink
+    {
+        [[nodiscard]] auto BackgroundColor() const;
+        auto BackgroundColor(winrt::Windows::UI::Color const& value) const;
+        [[nodiscard]] auto DispatcherQueue() const;
+        [[nodiscard]] auto ExternalOutputBorderMode() const;
+        auto ExternalOutputBorderMode(winrt::Microsoft::UI::Composition::CompositionBorderMode const& value) const;
+        [[nodiscard]] auto IsAboveContent() const;
+        auto IsAboveContent(bool value) const;
+        [[nodiscard]] auto PlacementVisual() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Content::IContentExternalOutputLink>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Content_IContentExternalOutputLink<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Content_IContentExternalOutputLinkStatics
+    {
+        auto Create(winrt::Microsoft::UI::Composition::Compositor const& compositor) const;
+        auto IsSupported() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Content::IContentExternalOutputLinkStatics>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Content_IContentExternalOutputLinkStatics<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Content_IContentIsland
@@ -1040,6 +1460,17 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_UI_Content_IContentIslandAutomationProviderRequestedEventArgs<D>;
     };
     template <typename D>
+    struct consume_Microsoft_UI_Content_IContentIslandEndpointConnectionPrivate
+    {
+        [[nodiscard]] auto ConnectionInfo() const;
+        [[nodiscard]] auto IsRemoteEndpointConnected() const;
+        auto ConnectRemoteEndpoint(param::hstring const& siteConnectionInfo) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Content::IContentIslandEndpointConnectionPrivate>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Content_IContentIslandEndpointConnectionPrivate<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_UI_Content_IContentIslandEnvironment
     {
         [[nodiscard]] auto AppWindowId() const;
@@ -1067,12 +1498,44 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_UI_Content_IContentIslandEnvironment2<D>;
     };
     template <typename D>
+    struct consume_Microsoft_UI_Content_IContentIslandEnvironmentExperimental
+    {
+        [[nodiscard]] auto CurrentOrientation() const;
+        [[nodiscard]] auto NativeOrientation() const;
+        auto ThemeChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::ContentIslandEnvironment, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        using ThemeChanged_revoker = impl::event_revoker<winrt::Microsoft::UI::Content::IContentIslandEnvironmentExperimental, &impl::abi_t<winrt::Microsoft::UI::Content::IContentIslandEnvironmentExperimental>::remove_ThemeChanged>;
+        [[nodiscard]] auto ThemeChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::ContentIslandEnvironment, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        auto ThemeChanged(winrt::event_token const& token) const noexcept;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Content::IContentIslandEnvironmentExperimental>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Content_IContentIslandEnvironmentExperimental<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_UI_Content_IContentIslandEnvironmentFactory
     {
     };
     template <> struct consume<winrt::Microsoft::UI::Content::IContentIslandEnvironmentFactory>
     {
         template <typename D> using type = consume_Microsoft_UI_Content_IContentIslandEnvironmentFactory<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Content_IContentIslandExperimental
+    {
+        [[nodiscard]] auto Root() const;
+        auto Root(winrt::Microsoft::UI::Composition::Visual const& value) const;
+        auto Connected(winrt::Windows::Foundation::EventHandler<winrt::Microsoft::UI::Content::ContentIsland> const& handler) const;
+        using Connected_revoker = impl::event_revoker<winrt::Microsoft::UI::Content::IContentIslandExperimental, &impl::abi_t<winrt::Microsoft::UI::Content::IContentIslandExperimental>::remove_Connected>;
+        [[nodiscard]] auto Connected(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Microsoft::UI::Content::ContentIsland> const& handler) const;
+        auto Connected(winrt::event_token const& token) const noexcept;
+        auto Disconnected(winrt::Windows::Foundation::EventHandler<winrt::Microsoft::UI::Content::ContentIsland> const& handler) const;
+        using Disconnected_revoker = impl::event_revoker<winrt::Microsoft::UI::Content::IContentIslandExperimental, &impl::abi_t<winrt::Microsoft::UI::Content::IContentIslandExperimental>::remove_Disconnected>;
+        [[nodiscard]] auto Disconnected(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Microsoft::UI::Content::ContentIsland> const& handler) const;
+        auto Disconnected(winrt::event_token const& token) const noexcept;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Content::IContentIslandExperimental>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Content_IContentIslandExperimental<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Content_IContentIslandFactory
@@ -1128,6 +1591,14 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Content::IContentIslandStatics2>
     {
         template <typename D> using type = consume_Microsoft_UI_Content_IContentIslandStatics2<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Content_IContentNodeOwner
+    {
+    };
+    template <> struct consume<winrt::Microsoft::UI::Content::IContentNodeOwner>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Content_IContentNodeOwner<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Content_IContentSite
@@ -1233,6 +1704,29 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_UI_Content_IContentSiteBridge<D>;
     };
     template <typename D>
+    struct consume_Microsoft_UI_Content_IContentSiteBridgeEndpointConnectionPrivate
+    {
+        [[nodiscard]] auto ConnectionInfo() const;
+        [[nodiscard]] auto IsRemoteEndpointConnected() const;
+        auto AcceptRemoteEndpoint(param::hstring const& islandConnectionInfo) const;
+        auto RemoteEndpointConnecting(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, winrt::Microsoft::UI::Content::EndpointConnectionEventArgs> const& handler) const;
+        using RemoteEndpointConnecting_revoker = impl::event_revoker<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, &impl::abi_t<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>::remove_RemoteEndpointConnecting>;
+        [[nodiscard]] auto RemoteEndpointConnecting(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, winrt::Microsoft::UI::Content::EndpointConnectionEventArgs> const& handler) const;
+        auto RemoteEndpointConnecting(winrt::event_token const& token) const noexcept;
+        auto RemoteEndpointDisconnected(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, winrt::Microsoft::UI::Content::EndpointConnectionEventArgs> const& handler) const;
+        using RemoteEndpointDisconnected_revoker = impl::event_revoker<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, &impl::abi_t<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>::remove_RemoteEndpointDisconnected>;
+        [[nodiscard]] auto RemoteEndpointDisconnected(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, winrt::Microsoft::UI::Content::EndpointConnectionEventArgs> const& handler) const;
+        auto RemoteEndpointDisconnected(winrt::event_token const& token) const noexcept;
+        auto RemoteEndpointRequestedStateChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, winrt::Microsoft::UI::Content::EndpointRequestedStateChangedEventArgs> const& handler) const;
+        using RemoteEndpointRequestedStateChanged_revoker = impl::event_revoker<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, &impl::abi_t<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>::remove_RemoteEndpointRequestedStateChanged>;
+        [[nodiscard]] auto RemoteEndpointRequestedStateChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, winrt::Microsoft::UI::Content::EndpointRequestedStateChangedEventArgs> const& handler) const;
+        auto RemoteEndpointRequestedStateChanged(winrt::event_token const& token) const noexcept;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Content_IContentSiteBridgeEndpointConnectionPrivate<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_UI_Content_IContentSiteEnvironment
     {
         [[nodiscard]] auto AppWindowId() const;
@@ -1255,6 +1749,19 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Content::IContentSiteEnvironment2>
     {
         template <typename D> using type = consume_Microsoft_UI_Content_IContentSiteEnvironment2<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Content_IContentSiteEnvironmentExperimental
+    {
+        [[nodiscard]] auto CurrentOrientation() const;
+        auto CurrentOrientation(winrt::Microsoft::UI::Content::ContentDisplayOrientations const& value) const;
+        [[nodiscard]] auto NativeOrientation() const;
+        auto NativeOrientation(winrt::Microsoft::UI::Content::ContentDisplayOrientations const& value) const;
+        auto NotifyThemeChanged() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Content::IContentSiteEnvironmentExperimental>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Content_IContentSiteEnvironmentExperimental<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Content_IContentSiteEnvironmentFactory
@@ -1290,6 +1797,15 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Content::IContentSiteEnvironmentViewFactory>
     {
         template <typename D> using type = consume_Microsoft_UI_Content_IContentSiteEnvironmentViewFactory<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Content_IContentSiteExperimental
+    {
+        auto TryGetAutomationProvider(winrt::Windows::Foundation::IInspectable& provider) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Content::IContentSiteExperimental>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Content_IContentSiteExperimental<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Content_IContentSiteFactory
@@ -1379,6 +1895,25 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Content::IContentSiteViewFactory>
     {
         template <typename D> using type = consume_Microsoft_UI_Content_IContentSiteViewFactory<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Content_ICoreWindowSiteBridge
+    {
+        auto Connect(winrt::Microsoft::UI::Content::ContentIsland const& content) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Content::ICoreWindowSiteBridge>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Content_ICoreWindowSiteBridge<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Content_ICoreWindowSiteBridgeStatics
+    {
+        auto Create(winrt::Microsoft::UI::Composition::Compositor const& compositor, winrt::Windows::UI::Core::CoreWindow const& coreWindow) const;
+        auto IsSupported() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Content::ICoreWindowSiteBridgeStatics>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Content_ICoreWindowSiteBridgeStatics<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Content_IDesktopAttachedSiteBridge
@@ -1480,6 +2015,15 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_UI_Content_IDesktopSiteBridge<D>;
     };
     template <typename D>
+    struct consume_Microsoft_UI_Content_IDesktopSiteBridge2
+    {
+        auto TryCreatePopupSiteBridge() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Content::IDesktopSiteBridge2>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Content_IDesktopSiteBridge2<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_UI_Content_IDesktopSiteBridgeFactory
     {
     };
@@ -1495,6 +2039,78 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Content::IDesktopSiteBridgeStatics>
     {
         template <typename D> using type = consume_Microsoft_UI_Content_IDesktopSiteBridgeStatics<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Content_IEndpointConnectionEventArgs
+    {
+        [[nodiscard]] auto ConnectionInfo() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Content::IEndpointConnectionEventArgs>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Content_IEndpointConnectionEventArgs<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Content_IEndpointRequestedStateChangedEventArgs
+    {
+        [[nodiscard]] auto DidRequestedSizeChange() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Content::IEndpointRequestedStateChangedEventArgs>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Content_IEndpointRequestedStateChangedEventArgs<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Content_IPopupWindowSiteBridge
+    {
+        [[nodiscard]] auto Anchored() const;
+        auto Anchored(bool value) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Content::IPopupWindowSiteBridge>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Content_IPopupWindowSiteBridge<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Content_IProcessStarter
+    {
+    };
+    template <> struct consume<winrt::Microsoft::UI::Content::IProcessStarter>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Content_IProcessStarter<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Content_IProcessStarterFactory
+    {
+    };
+    template <> struct consume<winrt::Microsoft::UI::Content::IProcessStarterFactory>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Content_IProcessStarterFactory<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Content_IProcessStarterStatics
+    {
+        auto StartProcess(param::hstring const& executablePath, param::hstring const& connectionInfo, uint32_t& processId) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Content::IProcessStarterStatics>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Content_IProcessStarterStatics<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Content_ISystemVisualSiteBridge
+    {
+        [[nodiscard]] auto Site() const;
+        auto Connect(winrt::Microsoft::UI::Content::ContentIsland const& content) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Content::ISystemVisualSiteBridge>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Content_ISystemVisualSiteBridge<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Content_ISystemVisualSiteBridgeStatics
+    {
+        auto Create(winrt::Microsoft::UI::Dispatching::DispatcherQueue const& queue, winrt::Windows::UI::Composition::ContainerVisual const& hostVisual, winrt::Microsoft::UI::WindowId const& parentForInputWindowId) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Content::ISystemVisualSiteBridgeStatics>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Content_ISystemVisualSiteBridgeStatics<D>;
     };
 }
 #endif

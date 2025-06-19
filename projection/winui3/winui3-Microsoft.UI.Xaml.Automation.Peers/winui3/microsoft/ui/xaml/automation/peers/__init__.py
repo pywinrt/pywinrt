@@ -41,6 +41,7 @@ from winui3._winui3_microsoft_ui_xaml_automation_peers import (
     HyperlinkButtonAutomationPeer,
     ImageAutomationPeer,
     InfoBarAutomationPeer,
+    InkCanvasAutomationPeer,
     ItemAutomationPeer,
     ItemContainerAutomationPeer,
     ItemsControlAutomationPeer,
@@ -67,6 +68,7 @@ from winui3._winui3_microsoft_ui_xaml_automation_peers import (
     NavigationViewAutomationPeer,
     NavigationViewItemAutomationPeer,
     NumberBoxAutomationPeer,
+    PagerControlAutomationPeer,
     PasswordBoxAutomationPeer,
     PersonPictureAutomationPeer,
     PickerFlyoutPresenterAutomationPeer,
@@ -147,6 +149,7 @@ if TYPE_CHECKING:
         HyperlinkButtonAutomationPeer_Static,
         ImageAutomationPeer_Static,
         InfoBarAutomationPeer_Static,
+        InkCanvasAutomationPeer_Static,
         ItemAutomationPeer_Static,
         ItemContainerAutomationPeer_Static,
         ItemsControlAutomationPeer_Static,
@@ -169,6 +172,7 @@ if TYPE_CHECKING:
         NavigationViewAutomationPeer_Static,
         NavigationViewItemAutomationPeer_Static,
         NumberBoxAutomationPeer_Static,
+        PagerControlAutomationPeer_Static,
         PasswordBoxAutomationPeer_Static,
         PersonPictureAutomationPeer_Static,
         PipsPagerAutomationPeer_Static,
@@ -259,6 +263,7 @@ __all__ = [
     "HyperlinkButtonAutomationPeer",
     "ImageAutomationPeer",
     "InfoBarAutomationPeer",
+    "InkCanvasAutomationPeer",
     "ItemAutomationPeer",
     "ItemContainerAutomationPeer",
     "ItemsControlAutomationPeer",
@@ -285,6 +290,7 @@ __all__ = [
     "NavigationViewAutomationPeer",
     "NavigationViewItemAutomationPeer",
     "NumberBoxAutomationPeer",
+    "PagerControlAutomationPeer",
     "PasswordBoxAutomationPeer",
     "PersonPictureAutomationPeer",
     "PickerFlyoutPresenterAutomationPeer",
@@ -410,6 +416,7 @@ class AutomationEvents(enum.IntEnum):
     CONVERSION_TARGET_CHANGED = 27
     TEXT_EDIT_TEXT_CHANGED = 28
     LAYOUT_INVALIDATED = 29
+    NOTIFICATION = 30
 
 class AutomationHeadingLevel(enum.IntEnum):
     NONE = 0

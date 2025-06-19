@@ -972,6 +972,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml
         IXamlIslandFactory(std::nullptr_t = nullptr) noexcept {}
         IXamlIslandFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IXamlIslandFeature_ExperimentalApi :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IXamlIslandFeature_ExperimentalApi>
+    {
+        IXamlIslandFeature_ExperimentalApi(std::nullptr_t = nullptr) noexcept {}
+        IXamlIslandFeature_ExperimentalApi(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IXamlResourceReferenceFailedEventArgs :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IXamlResourceReferenceFailedEventArgs>

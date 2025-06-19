@@ -38,6 +38,12 @@ namespace py
     inline constexpr const char* buffer_format<winrt::Microsoft::UI::Windowing::OverlappedPresenterState> = "i";
 
     template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Windowing::PlacementInfo> = "I";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Windowing::PlacementRestorationBehavior> = "I";
+
+    template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::UI::Windowing::TitleBarHeightOption> = "i";
 
     template<>
@@ -93,6 +99,22 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Microsoft::UI::Windowing::PlacementInfo>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.windowing.PlacementInfo";
+        static constexpr const char* module_name = "winui3.microsoft.ui.windowing";
+        static constexpr const char* type_name = "PlacementInfo";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Windowing::PlacementRestorationBehavior>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.windowing.PlacementRestorationBehavior";
+        static constexpr const char* module_name = "winui3.microsoft.ui.windowing";
+        static constexpr const char* type_name = "PlacementRestorationBehavior";
+    };
+
+    template<>
     struct py_type<winrt::Microsoft::UI::Windowing::TitleBarHeightOption>
     {
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.windowing.TitleBarHeightOption";
@@ -130,6 +152,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.windowing.AppWindowClosingEventArgs";
         static constexpr const char* module_name = "winui3.microsoft.ui.windowing";
         static constexpr const char* type_name = "AppWindowClosingEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Windowing::AppWindowPlacementDetails>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.windowing.AppWindowPlacementDetails";
+        static constexpr const char* module_name = "winui3.microsoft.ui.windowing";
+        static constexpr const char* type_name = "AppWindowPlacementDetails";
     };
 
     template<>
@@ -222,6 +252,7 @@ namespace py::wrapper::Microsoft::UI::Windowing
     using AppWindow = py::winrt_wrapper<winrt::Microsoft::UI::Windowing::AppWindow>;
     using AppWindowChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Windowing::AppWindowChangedEventArgs>;
     using AppWindowClosingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Windowing::AppWindowClosingEventArgs>;
+    using AppWindowPlacementDetails = py::winrt_wrapper<winrt::Microsoft::UI::Windowing::AppWindowPlacementDetails>;
     using AppWindowPresenter = py::winrt_wrapper<winrt::Microsoft::UI::Windowing::AppWindowPresenter>;
     using AppWindowTitleBar = py::winrt_wrapper<winrt::Microsoft::UI::Windowing::AppWindowTitleBar>;
     using CompactOverlayPresenter = py::winrt_wrapper<winrt::Microsoft::UI::Windowing::CompactOverlayPresenter>;

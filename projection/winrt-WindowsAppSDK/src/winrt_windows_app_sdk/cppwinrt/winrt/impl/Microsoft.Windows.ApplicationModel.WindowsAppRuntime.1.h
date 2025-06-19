@@ -34,6 +34,13 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::ApplicationModel::WindowsAppRu
         IDeploymentManagerStatics2(std::nullptr_t = nullptr) noexcept {}
         IDeploymentManagerStatics2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IDeploymentManagerStatics3 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IDeploymentManagerStatics3>
+    {
+        IDeploymentManagerStatics3(std::nullptr_t = nullptr) noexcept {}
+        IDeploymentManagerStatics3(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IDeploymentResult :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IDeploymentResult>

@@ -13,6 +13,7 @@
 #include "winrt/impl/Microsoft.UI.Xaml.Navigation.1.h"
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.Foundation.Collections.1.h"
+#include "winrt/impl/Windows.UI.Input.Inking.1.h"
 #include "winrt/impl/Microsoft.UI.Xaml.Controls.1.h"
 WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
 {
@@ -54,6 +55,19 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         template <typename O, typename M> ContextMenuOpeningEventHandler(std::shared_ptr<O>&& object, M method);
         template <typename O, typename LM> ContextMenuOpeningEventHandler(std::weak_ptr<O>&& object, LM&& lambda_or_method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::Controls::ContextMenuEventArgs const& e) const;
+    };
+    struct DoInkPresenterWork : winrt::Windows::Foundation::IUnknown
+    {
+        DoInkPresenterWork(std::nullptr_t = nullptr) noexcept {}
+        DoInkPresenterWork(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        template <typename L> DoInkPresenterWork(L lambda);
+        template <typename F> DoInkPresenterWork(F* function);
+        template <typename O, typename M> DoInkPresenterWork(O* object, M method);
+        template <typename O, typename M> DoInkPresenterWork(com_ptr<O>&& object, M method);
+        template <typename O, typename LM> DoInkPresenterWork(weak_ref<O>&& object, LM&& lambda_or_method);
+        template <typename O, typename M> DoInkPresenterWork(std::shared_ptr<O>&& object, M method);
+        template <typename O, typename LM> DoInkPresenterWork(std::weak_ptr<O>&& object, LM&& lambda_or_method);
+        auto operator()(winrt::Windows::UI::Input::Inking::InkPresenter const& presenter) const;
     };
     struct DragItemsStartingEventHandler : winrt::Windows::Foundation::IUnknown
     {
@@ -185,6 +199,19 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         template <typename O, typename LM> TextControlPasteEventHandler(std::weak_ptr<O>&& object, LM&& lambda_or_method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::Controls::TextControlPasteEventArgs const& e) const;
     };
+    struct FlowLayoutAnchorInfo
+    {
+        int32_t Index {};
+        double Offset {};
+    };
+    inline bool operator==(FlowLayoutAnchorInfo const& left, FlowLayoutAnchorInfo const& right) noexcept
+    {
+        return left.Index == right.Index && left.Offset == right.Offset;
+    }
+    inline bool operator!=(FlowLayoutAnchorInfo const& left, FlowLayoutAnchorInfo const& right) noexcept
+    {
+        return !(left == right);
+    }
     struct WINRT_IMPL_EMPTY_BASES AnchorRequestedEventArgs : winrt::Microsoft::UI::Xaml::Controls::IAnchorRequestedEventArgs
     {
         AnchorRequestedEventArgs(std::nullptr_t) noexcept {}
@@ -1007,6 +1034,14 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         DynamicOverflowItemsChangingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::IDynamicOverflowItemsChangingEventArgs(ptr, take_ownership_from_abi) {}
         DynamicOverflowItemsChangingEventArgs();
     };
+    struct WINRT_IMPL_EMPTY_BASES ElementFactory : winrt::Microsoft::UI::Xaml::Controls::IElementFactory,
+        impl::base<ElementFactory, winrt::Microsoft::UI::Xaml::DependencyObject>,
+        impl::require<ElementFactory, winrt::Microsoft::UI::Xaml::IElementFactory, winrt::Microsoft::UI::Xaml::IDependencyObject>
+    {
+        ElementFactory(std::nullptr_t) noexcept {}
+        ElementFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::IElementFactory(ptr, take_ownership_from_abi) {}
+        ElementFactory();
+    };
     struct WINRT_IMPL_EMPTY_BASES Expander : winrt::Microsoft::UI::Xaml::Controls::IExpander,
         impl::base<Expander, winrt::Microsoft::UI::Xaml::Controls::ContentControl, winrt::Microsoft::UI::Xaml::Controls::Control, winrt::Microsoft::UI::Xaml::FrameworkElement, winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::DependencyObject>,
         impl::require<Expander, winrt::Microsoft::UI::Xaml::Controls::IContentControl, winrt::Microsoft::UI::Xaml::Controls::IControl, winrt::Microsoft::UI::Xaml::IFrameworkElement, winrt::Microsoft::UI::Xaml::IUIElement, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Composition::IVisualElement, winrt::Microsoft::UI::Composition::IVisualElement2, winrt::Microsoft::UI::Xaml::IDependencyObject>
@@ -1053,6 +1088,24 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         FlipViewItem(std::nullptr_t) noexcept {}
         FlipViewItem(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::IFlipViewItem(ptr, take_ownership_from_abi) {}
         FlipViewItem();
+    };
+    struct WINRT_IMPL_EMPTY_BASES FlowLayout : winrt::Microsoft::UI::Xaml::Controls::IFlowLayout,
+        impl::base<FlowLayout, winrt::Microsoft::UI::Xaml::Controls::VirtualizingLayout, winrt::Microsoft::UI::Xaml::Controls::Layout, winrt::Microsoft::UI::Xaml::DependencyObject>,
+        impl::require<FlowLayout, winrt::Microsoft::UI::Xaml::Controls::IVirtualizingLayout, winrt::Microsoft::UI::Xaml::Controls::ILayout, winrt::Microsoft::UI::Xaml::Controls::ILayout2, winrt::Microsoft::UI::Xaml::IDependencyObject>
+    {
+        FlowLayout(std::nullptr_t) noexcept {}
+        FlowLayout(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::IFlowLayout(ptr, take_ownership_from_abi) {}
+        FlowLayout();
+        [[nodiscard]] static auto OrientationProperty();
+        [[nodiscard]] static auto MinRowSpacingProperty();
+        [[nodiscard]] static auto MinColumnSpacingProperty();
+        [[nodiscard]] static auto LineAlignmentProperty();
+    };
+    struct WINRT_IMPL_EMPTY_BASES FlowLayoutState : winrt::Microsoft::UI::Xaml::Controls::IFlowLayoutState
+    {
+        FlowLayoutState(std::nullptr_t) noexcept {}
+        FlowLayoutState(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::IFlowLayoutState(ptr, take_ownership_from_abi) {}
+        FlowLayoutState();
     };
     struct WINRT_IMPL_EMPTY_BASES Flyout : winrt::Microsoft::UI::Xaml::Controls::IFlyout,
         impl::base<Flyout, winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutBase, winrt::Microsoft::UI::Xaml::DependencyObject>,
@@ -1314,6 +1367,15 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         ImageIconSource();
         [[nodiscard]] static auto ImageSourceProperty();
     };
+    struct WINRT_IMPL_EMPTY_BASES IndexPath : winrt::Microsoft::UI::Xaml::Controls::IIndexPath,
+        impl::require<IndexPath, winrt::Windows::Foundation::IStringable>
+    {
+        IndexPath(std::nullptr_t) noexcept {}
+        IndexPath(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::IIndexPath(ptr, take_ownership_from_abi) {}
+        static auto CreateFrom(int32_t index);
+        static auto CreateFrom(int32_t groupIndex, int32_t itemIndex);
+        static auto CreateFromIndices(param::vector<int32_t> const& indices);
+    };
     struct WINRT_IMPL_EMPTY_BASES InfoBadge : winrt::Microsoft::UI::Xaml::Controls::IInfoBadge,
         impl::base<InfoBadge, winrt::Microsoft::UI::Xaml::Controls::Control, winrt::Microsoft::UI::Xaml::FrameworkElement, winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::DependencyObject>,
         impl::require<InfoBadge, winrt::Microsoft::UI::Xaml::Controls::IControl, winrt::Microsoft::UI::Xaml::IFrameworkElement, winrt::Microsoft::UI::Xaml::IUIElement, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Composition::IVisualElement, winrt::Microsoft::UI::Composition::IVisualElement2, winrt::Microsoft::UI::Xaml::IDependencyObject>
@@ -1337,7 +1399,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     };
     struct WINRT_IMPL_EMPTY_BASES InfoBar : winrt::Microsoft::UI::Xaml::Controls::IInfoBar,
         impl::base<InfoBar, winrt::Microsoft::UI::Xaml::Controls::Control, winrt::Microsoft::UI::Xaml::FrameworkElement, winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::DependencyObject>,
-        impl::require<InfoBar, winrt::Microsoft::UI::Xaml::Controls::IControl, winrt::Microsoft::UI::Xaml::IFrameworkElement, winrt::Microsoft::UI::Xaml::IUIElement, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Composition::IVisualElement, winrt::Microsoft::UI::Composition::IVisualElement2, winrt::Microsoft::UI::Xaml::IDependencyObject>
+        impl::require<InfoBar, winrt::Microsoft::UI::Xaml::Controls::IInfoBar2, winrt::Microsoft::UI::Xaml::Controls::IControl, winrt::Microsoft::UI::Xaml::IFrameworkElement, winrt::Microsoft::UI::Xaml::IUIElement, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Composition::IVisualElement, winrt::Microsoft::UI::Composition::IVisualElement2, winrt::Microsoft::UI::Xaml::IDependencyObject>
     {
         InfoBar(std::nullptr_t) noexcept {}
         InfoBar(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::IInfoBar(ptr, take_ownership_from_abi) {}
@@ -1367,6 +1429,11 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         InfoBarClosingEventArgs(std::nullptr_t) noexcept {}
         InfoBarClosingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::IInfoBarClosingEventArgs(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES InfoBarOpenedEventArgs : winrt::Microsoft::UI::Xaml::Controls::IInfoBarOpenedEventArgs
+    {
+        InfoBarOpenedEventArgs(std::nullptr_t) noexcept {}
+        InfoBarOpenedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::IInfoBarOpenedEventArgs(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES InfoBarTemplateSettings : winrt::Microsoft::UI::Xaml::Controls::IInfoBarTemplateSettings,
         impl::base<InfoBarTemplateSettings, winrt::Microsoft::UI::Xaml::DependencyObject>,
         impl::require<InfoBarTemplateSettings, winrt::Microsoft::UI::Xaml::IDependencyObject>
@@ -1375,6 +1442,15 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         InfoBarTemplateSettings(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::IInfoBarTemplateSettings(ptr, take_ownership_from_abi) {}
         InfoBarTemplateSettings();
         [[nodiscard]] static auto IconElementProperty();
+    };
+    struct WINRT_IMPL_EMPTY_BASES InkCanvas : winrt::Microsoft::UI::Xaml::Controls::IInkCanvas,
+        impl::base<InkCanvas, winrt::Microsoft::UI::Xaml::FrameworkElement, winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::DependencyObject>,
+        impl::require<InkCanvas, winrt::Microsoft::UI::Xaml::IFrameworkElement, winrt::Microsoft::UI::Xaml::IUIElement, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Composition::IVisualElement, winrt::Microsoft::UI::Composition::IVisualElement2, winrt::Microsoft::UI::Xaml::IDependencyObject>
+    {
+        InkCanvas(std::nullptr_t) noexcept {}
+        InkCanvas(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::IInkCanvas(ptr, take_ownership_from_abi) {}
+        InkCanvas();
+        [[nodiscard]] static auto IsEnabledProperty();
     };
     struct WINRT_IMPL_EMPTY_BASES IsTextTrimmedChangedEventArgs : winrt::Microsoft::UI::Xaml::Controls::IIsTextTrimmedChangedEventArgs
     {
@@ -1417,18 +1493,26 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     };
     struct WINRT_IMPL_EMPTY_BASES ItemContainer : winrt::Microsoft::UI::Xaml::Controls::IItemContainer,
         impl::base<ItemContainer, winrt::Microsoft::UI::Xaml::Controls::Control, winrt::Microsoft::UI::Xaml::FrameworkElement, winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::DependencyObject>,
-        impl::require<ItemContainer, winrt::Microsoft::UI::Xaml::Controls::IControl, winrt::Microsoft::UI::Xaml::IFrameworkElement, winrt::Microsoft::UI::Xaml::IUIElement, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Composition::IVisualElement, winrt::Microsoft::UI::Composition::IVisualElement2, winrt::Microsoft::UI::Xaml::IDependencyObject>
+        impl::require<ItemContainer, winrt::Microsoft::UI::Xaml::Controls::IItemContainer2, winrt::Microsoft::UI::Xaml::Controls::IControl, winrt::Microsoft::UI::Xaml::IFrameworkElement, winrt::Microsoft::UI::Xaml::IUIElement, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Composition::IVisualElement, winrt::Microsoft::UI::Composition::IVisualElement2, winrt::Microsoft::UI::Xaml::IDependencyObject>
     {
         ItemContainer(std::nullptr_t) noexcept {}
         ItemContainer(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::IItemContainer(ptr, take_ownership_from_abi) {}
         ItemContainer();
         [[nodiscard]] static auto ChildProperty();
         [[nodiscard]] static auto IsSelectedProperty();
+        [[nodiscard]] static auto CanUserSelectProperty();
+        [[nodiscard]] static auto CanUserInvokeProperty();
+        [[nodiscard]] static auto MultiSelectModeProperty();
     };
     struct WINRT_IMPL_EMPTY_BASES ItemContainerGenerator : winrt::Microsoft::UI::Xaml::Controls::IItemContainerGenerator
     {
         ItemContainerGenerator(std::nullptr_t) noexcept {}
         ItemContainerGenerator(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::IItemContainerGenerator(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ItemContainerInvokedEventArgs : winrt::Microsoft::UI::Xaml::Controls::IItemContainerInvokedEventArgs
+    {
+        ItemContainerInvokedEventArgs(std::nullptr_t) noexcept {}
+        ItemContainerInvokedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::IItemContainerInvokedEventArgs(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES ItemsControl : winrt::Microsoft::UI::Xaml::Controls::IItemsControl,
         impl::base<ItemsControl, winrt::Microsoft::UI::Xaml::Controls::Control, winrt::Microsoft::UI::Xaml::FrameworkElement, winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::DependencyObject>,
@@ -1596,6 +1680,19 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     {
         LayoutContext(std::nullptr_t) noexcept {}
         LayoutContext(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::ILayoutContext(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES LayoutPanel : winrt::Microsoft::UI::Xaml::Controls::ILayoutPanel,
+        impl::base<LayoutPanel, winrt::Microsoft::UI::Xaml::Controls::Panel, winrt::Microsoft::UI::Xaml::FrameworkElement, winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::DependencyObject>,
+        impl::require<LayoutPanel, winrt::Microsoft::UI::Xaml::Controls::IPanel, winrt::Microsoft::UI::Xaml::IFrameworkElement, winrt::Microsoft::UI::Xaml::IUIElement, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Composition::IVisualElement, winrt::Microsoft::UI::Composition::IVisualElement2, winrt::Microsoft::UI::Xaml::IDependencyObject>
+    {
+        LayoutPanel(std::nullptr_t) noexcept {}
+        LayoutPanel(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::ILayoutPanel(ptr, take_ownership_from_abi) {}
+        LayoutPanel();
+        [[nodiscard]] static auto LayoutProperty();
+        [[nodiscard]] static auto BorderBrushProperty();
+        [[nodiscard]] static auto BorderThicknessProperty();
+        [[nodiscard]] static auto PaddingProperty();
+        [[nodiscard]] static auto CornerRadiusProperty();
     };
     struct WINRT_IMPL_EMPTY_BASES LinedFlowLayout : winrt::Microsoft::UI::Xaml::Controls::ILinedFlowLayout,
         impl::base<LinedFlowLayout, winrt::Microsoft::UI::Xaml::Controls::VirtualizingLayout, winrt::Microsoft::UI::Xaml::Controls::Layout, winrt::Microsoft::UI::Xaml::DependencyObject>,
@@ -2101,7 +2198,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     };
     struct WINRT_IMPL_EMPTY_BASES NumberBox : winrt::Microsoft::UI::Xaml::Controls::INumberBox,
         impl::base<NumberBox, winrt::Microsoft::UI::Xaml::Controls::Control, winrt::Microsoft::UI::Xaml::FrameworkElement, winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::DependencyObject>,
-        impl::require<NumberBox, winrt::Microsoft::UI::Xaml::Controls::IControl, winrt::Microsoft::UI::Xaml::IFrameworkElement, winrt::Microsoft::UI::Xaml::IUIElement, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Composition::IVisualElement, winrt::Microsoft::UI::Composition::IVisualElement2, winrt::Microsoft::UI::Xaml::IDependencyObject>
+        impl::require<NumberBox, winrt::Microsoft::UI::Xaml::Controls::INumberBox2, winrt::Microsoft::UI::Xaml::Controls::IControl, winrt::Microsoft::UI::Xaml::IFrameworkElement, winrt::Microsoft::UI::Xaml::IUIElement, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Composition::IVisualElement, winrt::Microsoft::UI::Composition::IVisualElement2, winrt::Microsoft::UI::Xaml::IDependencyObject>
     {
         NumberBox(std::nullptr_t) noexcept {}
         NumberBox(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::INumberBox(ptr, take_ownership_from_abi) {}
@@ -2125,6 +2222,8 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         [[nodiscard]] static auto IsWrapEnabledProperty();
         [[nodiscard]] static auto AcceptsExpressionProperty();
         [[nodiscard]] static auto NumberFormatterProperty();
+        [[nodiscard]] static auto InputScopeProperty();
+        [[nodiscard]] static auto TextAlignmentProperty();
     };
     struct WINRT_IMPL_EMPTY_BASES NumberBoxValueChangedEventArgs : winrt::Microsoft::UI::Xaml::Controls::INumberBoxValueChangedEventArgs
     {
@@ -2141,6 +2240,46 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         [[nodiscard]] static auto FrameProperty();
         [[nodiscard]] static auto TopAppBarProperty();
         [[nodiscard]] static auto BottomAppBarProperty();
+    };
+    struct WINRT_IMPL_EMPTY_BASES PagerControl : winrt::Microsoft::UI::Xaml::Controls::IPagerControl,
+        impl::base<PagerControl, winrt::Microsoft::UI::Xaml::Controls::Control, winrt::Microsoft::UI::Xaml::FrameworkElement, winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::DependencyObject>,
+        impl::require<PagerControl, winrt::Microsoft::UI::Xaml::Controls::IControl, winrt::Microsoft::UI::Xaml::IFrameworkElement, winrt::Microsoft::UI::Xaml::IUIElement, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Composition::IVisualElement, winrt::Microsoft::UI::Composition::IVisualElement2, winrt::Microsoft::UI::Xaml::IDependencyObject>
+    {
+        PagerControl(std::nullptr_t) noexcept {}
+        PagerControl(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::IPagerControl(ptr, take_ownership_from_abi) {}
+        PagerControl();
+        [[nodiscard]] static auto DisplayModeProperty();
+        [[nodiscard]] static auto NumberOfPagesProperty();
+        [[nodiscard]] static auto FirstButtonVisibilityProperty();
+        [[nodiscard]] static auto PreviousButtonVisibilityProperty();
+        [[nodiscard]] static auto NextButtonVisibilityProperty();
+        [[nodiscard]] static auto LastButtonVisibilityProperty();
+        [[nodiscard]] static auto FirstButtonCommandProperty();
+        [[nodiscard]] static auto PreviousButtonCommandProperty();
+        [[nodiscard]] static auto NextButtonCommandProperty();
+        [[nodiscard]] static auto LastButtonCommandProperty();
+        [[nodiscard]] static auto PagerInputCommandProperty();
+        [[nodiscard]] static auto FirstButtonStyleProperty();
+        [[nodiscard]] static auto PreviousButtonStyleProperty();
+        [[nodiscard]] static auto NextButtonStyleProperty();
+        [[nodiscard]] static auto LastButtonStyleProperty();
+        [[nodiscard]] static auto ButtonPanelAlwaysShowFirstLastPageIndexProperty();
+        [[nodiscard]] static auto SelectedPageIndexProperty();
+        [[nodiscard]] static auto PrefixTextProperty();
+        [[nodiscard]] static auto SuffixTextProperty();
+    };
+    struct WINRT_IMPL_EMPTY_BASES PagerControlSelectedIndexChangedEventArgs : winrt::Microsoft::UI::Xaml::Controls::IPagerControlSelectedIndexChangedEventArgs
+    {
+        PagerControlSelectedIndexChangedEventArgs(std::nullptr_t) noexcept {}
+        PagerControlSelectedIndexChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::IPagerControlSelectedIndexChangedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES PagerControlTemplateSettings : winrt::Microsoft::UI::Xaml::Controls::IPagerControlTemplateSettings,
+        impl::base<PagerControlTemplateSettings, winrt::Microsoft::UI::Xaml::DependencyObject>,
+        impl::require<PagerControlTemplateSettings, winrt::Microsoft::UI::Xaml::IDependencyObject>
+    {
+        PagerControlTemplateSettings(std::nullptr_t) noexcept {}
+        PagerControlTemplateSettings(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::IPagerControlTemplateSettings(ptr, take_ownership_from_abi) {}
+        PagerControlTemplateSettings();
     };
     struct WINRT_IMPL_EMPTY_BASES Panel : winrt::Microsoft::UI::Xaml::Controls::IPanel,
         impl::base<Panel, winrt::Microsoft::UI::Xaml::FrameworkElement, winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::DependencyObject>,
@@ -2359,7 +2498,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     };
     struct WINRT_IMPL_EMPTY_BASES ProgressRing : winrt::Microsoft::UI::Xaml::Controls::IProgressRing,
         impl::base<ProgressRing, winrt::Microsoft::UI::Xaml::Controls::Control, winrt::Microsoft::UI::Xaml::FrameworkElement, winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::DependencyObject>,
-        impl::require<ProgressRing, winrt::Microsoft::UI::Xaml::Controls::IControl, winrt::Microsoft::UI::Xaml::IFrameworkElement, winrt::Microsoft::UI::Xaml::IUIElement, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Composition::IVisualElement, winrt::Microsoft::UI::Composition::IVisualElement2, winrt::Microsoft::UI::Xaml::IDependencyObject>
+        impl::require<ProgressRing, winrt::Microsoft::UI::Xaml::Controls::IProgressRing2, winrt::Microsoft::UI::Xaml::Controls::IControl, winrt::Microsoft::UI::Xaml::IFrameworkElement, winrt::Microsoft::UI::Xaml::IUIElement, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Composition::IVisualElement, winrt::Microsoft::UI::Composition::IVisualElement2, winrt::Microsoft::UI::Xaml::IDependencyObject>
     {
         ProgressRing(std::nullptr_t) noexcept {}
         ProgressRing(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::IProgressRing(ptr, take_ownership_from_abi) {}
@@ -2369,6 +2508,8 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         [[nodiscard]] static auto ValueProperty();
         [[nodiscard]] static auto MinimumProperty();
         [[nodiscard]] static auto MaximumProperty();
+        [[nodiscard]] static auto DeterminateSourceProperty();
+        [[nodiscard]] static auto IndeterminateSourceProperty();
     };
     struct WINRT_IMPL_EMPTY_BASES ProgressRingTemplateSettings : winrt::Microsoft::UI::Xaml::Controls::IProgressRingTemplateSettings,
         impl::base<ProgressRingTemplateSettings, winrt::Microsoft::UI::Xaml::DependencyObject>,
@@ -2466,6 +2607,23 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         RatingItemInfo(std::nullptr_t) noexcept {}
         RatingItemInfo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::IRatingItemInfo(ptr, take_ownership_from_abi) {}
         RatingItemInfo();
+    };
+    struct WINRT_IMPL_EMPTY_BASES RecyclePool : winrt::Microsoft::UI::Xaml::Controls::IRecyclePool
+    {
+        RecyclePool(std::nullptr_t) noexcept {}
+        RecyclePool(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::IRecyclePool(ptr, take_ownership_from_abi) {}
+        RecyclePool();
+        [[nodiscard]] static auto PoolInstanceProperty();
+        static auto GetPoolInstance(winrt::Microsoft::UI::Xaml::DataTemplate const& dataTemplate);
+        static auto SetPoolInstance(winrt::Microsoft::UI::Xaml::DataTemplate const& dataTemplate, winrt::Microsoft::UI::Xaml::Controls::RecyclePool const& value);
+    };
+    struct WINRT_IMPL_EMPTY_BASES RecyclingElementFactory : winrt::Microsoft::UI::Xaml::Controls::IRecyclingElementFactory,
+        impl::base<RecyclingElementFactory, winrt::Microsoft::UI::Xaml::Controls::ElementFactory, winrt::Microsoft::UI::Xaml::DependencyObject>,
+        impl::require<RecyclingElementFactory, winrt::Microsoft::UI::Xaml::Controls::IElementFactory, winrt::Microsoft::UI::Xaml::IElementFactory, winrt::Microsoft::UI::Xaml::IDependencyObject>
+    {
+        RecyclingElementFactory(std::nullptr_t) noexcept {}
+        RecyclingElementFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::IRecyclingElementFactory(ptr, take_ownership_from_abi) {}
+        RecyclingElementFactory();
     };
     struct WINRT_IMPL_EMPTY_BASES RefreshContainer : winrt::Microsoft::UI::Xaml::Controls::IRefreshContainer,
         impl::base<RefreshContainer, winrt::Microsoft::UI::Xaml::Controls::ContentControl, winrt::Microsoft::UI::Xaml::Controls::Control, winrt::Microsoft::UI::Xaml::FrameworkElement, winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::DependencyObject>,
@@ -2693,7 +2851,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     };
     struct WINRT_IMPL_EMPTY_BASES ScrollView : winrt::Microsoft::UI::Xaml::Controls::IScrollView,
         impl::base<ScrollView, winrt::Microsoft::UI::Xaml::Controls::Control, winrt::Microsoft::UI::Xaml::FrameworkElement, winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::DependencyObject>,
-        impl::require<ScrollView, winrt::Microsoft::UI::Xaml::Controls::IControl, winrt::Microsoft::UI::Xaml::IFrameworkElement, winrt::Microsoft::UI::Xaml::IUIElement, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Composition::IVisualElement, winrt::Microsoft::UI::Composition::IVisualElement2, winrt::Microsoft::UI::Xaml::IDependencyObject>
+        impl::require<ScrollView, winrt::Microsoft::UI::Xaml::Controls::IScrollView2, winrt::Microsoft::UI::Xaml::Controls::IControl, winrt::Microsoft::UI::Xaml::IFrameworkElement, winrt::Microsoft::UI::Xaml::IUIElement, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Composition::IVisualElement, winrt::Microsoft::UI::Composition::IVisualElement2, winrt::Microsoft::UI::Xaml::IDependencyObject>
     {
         ScrollView(std::nullptr_t) noexcept {}
         ScrollView(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::IScrollView(ptr, take_ownership_from_abi) {}
@@ -2842,6 +3000,11 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         explicit ScrollingScrollOptions(winrt::Microsoft::UI::Xaml::Controls::ScrollingAnimationMode const& animationMode);
         ScrollingScrollOptions(winrt::Microsoft::UI::Xaml::Controls::ScrollingAnimationMode const& animationMode, winrt::Microsoft::UI::Xaml::Controls::ScrollingSnapPointsMode const& snapPointsMode);
     };
+    struct WINRT_IMPL_EMPTY_BASES ScrollingScrollStartingEventArgs : winrt::Microsoft::UI::Xaml::Controls::IScrollingScrollStartingEventArgs
+    {
+        ScrollingScrollStartingEventArgs(std::nullptr_t) noexcept {}
+        ScrollingScrollStartingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::IScrollingScrollStartingEventArgs(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES ScrollingZoomAnimationStartingEventArgs : winrt::Microsoft::UI::Xaml::Controls::IScrollingZoomAnimationStartingEventArgs
     {
         ScrollingZoomAnimationStartingEventArgs(std::nullptr_t) noexcept {}
@@ -2859,10 +3022,20 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         explicit ScrollingZoomOptions(winrt::Microsoft::UI::Xaml::Controls::ScrollingAnimationMode const& animationMode);
         ScrollingZoomOptions(winrt::Microsoft::UI::Xaml::Controls::ScrollingAnimationMode const& animationMode, winrt::Microsoft::UI::Xaml::Controls::ScrollingSnapPointsMode const& snapPointsMode);
     };
+    struct WINRT_IMPL_EMPTY_BASES ScrollingZoomStartingEventArgs : winrt::Microsoft::UI::Xaml::Controls::IScrollingZoomStartingEventArgs
+    {
+        ScrollingZoomStartingEventArgs(std::nullptr_t) noexcept {}
+        ScrollingZoomStartingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::IScrollingZoomStartingEventArgs(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES SectionsInViewChangedEventArgs : winrt::Microsoft::UI::Xaml::Controls::ISectionsInViewChangedEventArgs
     {
         SectionsInViewChangedEventArgs(std::nullptr_t) noexcept {}
         SectionsInViewChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::ISectionsInViewChangedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES SelectTemplateEventArgs : winrt::Microsoft::UI::Xaml::Controls::ISelectTemplateEventArgs
+    {
+        SelectTemplateEventArgs(std::nullptr_t) noexcept {}
+        SelectTemplateEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::ISelectTemplateEventArgs(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES SelectionChangedEventArgs : winrt::Microsoft::UI::Xaml::Controls::ISelectionChangedEventArgs,
         impl::base<SelectionChangedEventArgs, winrt::Microsoft::UI::Xaml::RoutedEventArgs>,
@@ -2871,6 +3044,23 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         SelectionChangedEventArgs(std::nullptr_t) noexcept {}
         SelectionChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::ISelectionChangedEventArgs(ptr, take_ownership_from_abi) {}
         SelectionChangedEventArgs(param::vector<winrt::Windows::Foundation::IInspectable> const& removedItems, param::vector<winrt::Windows::Foundation::IInspectable> const& addedItems);
+    };
+    struct WINRT_IMPL_EMPTY_BASES SelectionModel : winrt::Microsoft::UI::Xaml::Controls::ISelectionModel,
+        impl::require<SelectionModel, winrt::Microsoft::UI::Xaml::Data::INotifyPropertyChanged>
+    {
+        SelectionModel(std::nullptr_t) noexcept {}
+        SelectionModel(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::ISelectionModel(ptr, take_ownership_from_abi) {}
+        SelectionModel();
+    };
+    struct WINRT_IMPL_EMPTY_BASES SelectionModelChildrenRequestedEventArgs : winrt::Microsoft::UI::Xaml::Controls::ISelectionModelChildrenRequestedEventArgs
+    {
+        SelectionModelChildrenRequestedEventArgs(std::nullptr_t) noexcept {}
+        SelectionModelChildrenRequestedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::ISelectionModelChildrenRequestedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES SelectionModelSelectionChangedEventArgs : winrt::Microsoft::UI::Xaml::Controls::ISelectionModelSelectionChangedEventArgs
+    {
+        SelectionModelSelectionChangedEventArgs(std::nullptr_t) noexcept {}
+        SelectionModelSelectionChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::ISelectionModelSelectionChangedEventArgs(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES SelectorBar : winrt::Microsoft::UI::Xaml::Controls::ISelectorBar,
         impl::base<SelectorBar, winrt::Microsoft::UI::Xaml::Controls::Control, winrt::Microsoft::UI::Xaml::FrameworkElement, winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::DependencyObject>,
@@ -2884,7 +3074,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     };
     struct WINRT_IMPL_EMPTY_BASES SelectorBarItem : winrt::Microsoft::UI::Xaml::Controls::ISelectorBarItem,
         impl::base<SelectorBarItem, winrt::Microsoft::UI::Xaml::Controls::ItemContainer, winrt::Microsoft::UI::Xaml::Controls::Control, winrt::Microsoft::UI::Xaml::FrameworkElement, winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::DependencyObject>,
-        impl::require<SelectorBarItem, winrt::Microsoft::UI::Xaml::Controls::IItemContainer, winrt::Microsoft::UI::Xaml::Controls::IControl, winrt::Microsoft::UI::Xaml::IFrameworkElement, winrt::Microsoft::UI::Xaml::IUIElement, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Composition::IVisualElement, winrt::Microsoft::UI::Composition::IVisualElement2, winrt::Microsoft::UI::Xaml::IDependencyObject>
+        impl::require<SelectorBarItem, winrt::Microsoft::UI::Xaml::Controls::IItemContainer, winrt::Microsoft::UI::Xaml::Controls::IItemContainer2, winrt::Microsoft::UI::Xaml::Controls::IControl, winrt::Microsoft::UI::Xaml::IFrameworkElement, winrt::Microsoft::UI::Xaml::IUIElement, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Composition::IVisualElement, winrt::Microsoft::UI::Composition::IVisualElement2, winrt::Microsoft::UI::Xaml::IDependencyObject>
     {
         SelectorBarItem(std::nullptr_t) noexcept {}
         SelectorBarItem(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::ISelectorBarItem(ptr, take_ownership_from_abi) {}
@@ -2982,13 +3172,20 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     };
     struct WINRT_IMPL_EMPTY_BASES StackLayout : winrt::Microsoft::UI::Xaml::Controls::IStackLayout,
         impl::base<StackLayout, winrt::Microsoft::UI::Xaml::Controls::VirtualizingLayout, winrt::Microsoft::UI::Xaml::Controls::Layout, winrt::Microsoft::UI::Xaml::DependencyObject>,
-        impl::require<StackLayout, winrt::Microsoft::UI::Xaml::Controls::IVirtualizingLayout, winrt::Microsoft::UI::Xaml::Controls::ILayout, winrt::Microsoft::UI::Xaml::Controls::ILayout2, winrt::Microsoft::UI::Xaml::IDependencyObject>
+        impl::require<StackLayout, winrt::Microsoft::UI::Xaml::Controls::IStackLayout2, winrt::Microsoft::UI::Xaml::Controls::IVirtualizingLayout, winrt::Microsoft::UI::Xaml::Controls::ILayout, winrt::Microsoft::UI::Xaml::Controls::ILayout2, winrt::Microsoft::UI::Xaml::IDependencyObject>
     {
         StackLayout(std::nullptr_t) noexcept {}
         StackLayout(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::IStackLayout(ptr, take_ownership_from_abi) {}
         StackLayout();
         [[nodiscard]] static auto OrientationProperty();
         [[nodiscard]] static auto SpacingProperty();
+        [[nodiscard]] static auto IsVirtualizationEnabledProperty();
+    };
+    struct WINRT_IMPL_EMPTY_BASES StackLayoutState : winrt::Microsoft::UI::Xaml::Controls::IStackLayoutState
+    {
+        StackLayoutState(std::nullptr_t) noexcept {}
+        StackLayoutState(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::IStackLayoutState(ptr, take_ownership_from_abi) {}
+        StackLayoutState();
     };
     struct WINRT_IMPL_EMPTY_BASES StackPanel : winrt::Microsoft::UI::Xaml::Controls::IStackPanel,
         impl::base<StackPanel, winrt::Microsoft::UI::Xaml::Controls::Panel, winrt::Microsoft::UI::Xaml::FrameworkElement, winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::DependencyObject>,
@@ -3182,7 +3379,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     };
     struct WINRT_IMPL_EMPTY_BASES TeachingTip : winrt::Microsoft::UI::Xaml::Controls::ITeachingTip,
         impl::base<TeachingTip, winrt::Microsoft::UI::Xaml::Controls::ContentControl, winrt::Microsoft::UI::Xaml::Controls::Control, winrt::Microsoft::UI::Xaml::FrameworkElement, winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::DependencyObject>,
-        impl::require<TeachingTip, winrt::Microsoft::UI::Xaml::Controls::IContentControl, winrt::Microsoft::UI::Xaml::Controls::IControl, winrt::Microsoft::UI::Xaml::IFrameworkElement, winrt::Microsoft::UI::Xaml::IUIElement, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Composition::IVisualElement, winrt::Microsoft::UI::Composition::IVisualElement2, winrt::Microsoft::UI::Xaml::IDependencyObject>
+        impl::require<TeachingTip, winrt::Microsoft::UI::Xaml::Controls::ITeachingTip2, winrt::Microsoft::UI::Xaml::Controls::IContentControl, winrt::Microsoft::UI::Xaml::Controls::IControl, winrt::Microsoft::UI::Xaml::IFrameworkElement, winrt::Microsoft::UI::Xaml::IUIElement, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Composition::IVisualElement, winrt::Microsoft::UI::Composition::IVisualElement2, winrt::Microsoft::UI::Xaml::IDependencyObject>
     {
         TeachingTip(std::nullptr_t) noexcept {}
         TeachingTip(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::ITeachingTip(ptr, take_ownership_from_abi) {}
@@ -3218,6 +3415,11 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     {
         TeachingTipClosingEventArgs(std::nullptr_t) noexcept {}
         TeachingTipClosingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::ITeachingTipClosingEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES TeachingTipOpenedEventArgs : winrt::Microsoft::UI::Xaml::Controls::ITeachingTipOpenedEventArgs
+    {
+        TeachingTipOpenedEventArgs(std::nullptr_t) noexcept {}
+        TeachingTipOpenedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::ITeachingTipOpenedEventArgs(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES TeachingTipTemplateSettings : winrt::Microsoft::UI::Xaml::Controls::ITeachingTipTemplateSettings,
         impl::base<TeachingTipTemplateSettings, winrt::Microsoft::UI::Xaml::DependencyObject>,
@@ -3653,6 +3855,12 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         [[nodiscard]] static auto ItemsStretchProperty();
         [[nodiscard]] static auto MaximumRowsOrColumnsProperty();
     };
+    struct WINRT_IMPL_EMPTY_BASES UniformGridLayoutState : winrt::Microsoft::UI::Xaml::Controls::IUniformGridLayoutState
+    {
+        UniformGridLayoutState(std::nullptr_t) noexcept {}
+        UniformGridLayoutState(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::IUniformGridLayoutState(ptr, take_ownership_from_abi) {}
+        UniformGridLayoutState();
+    };
     struct WINRT_IMPL_EMPTY_BASES UserControl : winrt::Microsoft::UI::Xaml::Controls::IUserControl,
         impl::base<UserControl, winrt::Microsoft::UI::Xaml::Controls::Control, winrt::Microsoft::UI::Xaml::FrameworkElement, winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::DependencyObject>,
         impl::require<UserControl, winrt::Microsoft::UI::Xaml::Controls::IControl, winrt::Microsoft::UI::Xaml::IFrameworkElement, winrt::Microsoft::UI::Xaml::IUIElement, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Composition::IVisualElement, winrt::Microsoft::UI::Composition::IVisualElement2, winrt::Microsoft::UI::Xaml::IDependencyObject>
@@ -3858,6 +4066,32 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         auto SelectTemplateCore(winrt::Windows::Foundation::IInspectable const& item) const;
     };
     template <typename D>
+    class IElementFactoryOverridesT
+    {
+        D& shim() noexcept { return *static_cast<D*>(this); }
+        D const& shim() const noexcept { return *static_cast<const D*>(this); }
+    public:
+        using IElementFactoryOverrides = winrt::Microsoft::UI::Xaml::Controls::IElementFactoryOverrides;
+        auto GetElementCore(winrt::Microsoft::UI::Xaml::ElementFactoryGetArgs const& args) const;
+        auto RecycleElementCore(winrt::Microsoft::UI::Xaml::ElementFactoryRecycleArgs const& args) const;
+    };
+    template <typename D>
+    class IFlowLayoutOverridesT
+    {
+        D& shim() noexcept { return *static_cast<D*>(this); }
+        D const& shim() const noexcept { return *static_cast<const D*>(this); }
+    public:
+        using IFlowLayoutOverrides = winrt::Microsoft::UI::Xaml::Controls::IFlowLayoutOverrides;
+        auto GetMeasureSize(int32_t index, winrt::Windows::Foundation::Size const& availableSize) const;
+        auto GetProvisionalArrangeSize(int32_t index, winrt::Windows::Foundation::Size const& measureSize, winrt::Windows::Foundation::Size const& desiredSize) const;
+        auto ShouldBreakLine(int32_t index, double remainingSpace) const;
+        auto GetAnchorForRealizationRect(winrt::Windows::Foundation::Size const& availableSize, winrt::Microsoft::UI::Xaml::Controls::VirtualizingLayoutContext const& context) const;
+        auto GetAnchorForTargetElement(int32_t targetIndex, winrt::Windows::Foundation::Size const& availableSize, winrt::Microsoft::UI::Xaml::Controls::VirtualizingLayoutContext const& context) const;
+        auto GetExtent(winrt::Windows::Foundation::Size const& availableSize, winrt::Microsoft::UI::Xaml::Controls::VirtualizingLayoutContext const& context, winrt::Microsoft::UI::Xaml::UIElement const& firstRealized, int32_t firstRealizedItemIndex, winrt::Windows::Foundation::Rect const& firstRealizedLayoutBounds, winrt::Microsoft::UI::Xaml::UIElement const& lastRealized, int32_t lastRealizedItemIndex, winrt::Windows::Foundation::Rect const& lastRealizedLayoutBounds) const;
+        auto OnElementMeasured(winrt::Microsoft::UI::Xaml::UIElement const& element, int32_t index, winrt::Windows::Foundation::Size const& availableSize, winrt::Windows::Foundation::Size const& measureSize, winrt::Windows::Foundation::Size const& desiredSize, winrt::Windows::Foundation::Size const& provisionalArrangeSize, winrt::Microsoft::UI::Xaml::Controls::VirtualizingLayoutContext const& context) const;
+        auto OnLineArranged(int32_t startIndex, int32_t countInLine, double lineSize, winrt::Microsoft::UI::Xaml::Controls::VirtualizingLayoutContext const& context) const;
+    };
+    template <typename D>
     class IGroupStyleSelectorOverridesT
     {
         D& shim() noexcept { return *static_cast<D*>(this); }
@@ -3954,6 +4188,25 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         auto OnNavigatedFrom(winrt::Microsoft::UI::Xaml::Navigation::NavigationEventArgs const& e) const;
         auto OnNavigatedTo(winrt::Microsoft::UI::Xaml::Navigation::NavigationEventArgs const& e) const;
         auto OnNavigatingFrom(winrt::Microsoft::UI::Xaml::Navigation::NavigatingCancelEventArgs const& e) const;
+    };
+    template <typename D>
+    class IRecyclePoolOverridesT
+    {
+        D& shim() noexcept { return *static_cast<D*>(this); }
+        D const& shim() const noexcept { return *static_cast<const D*>(this); }
+    public:
+        using IRecyclePoolOverrides = winrt::Microsoft::UI::Xaml::Controls::IRecyclePoolOverrides;
+        auto PutElementCore(winrt::Microsoft::UI::Xaml::UIElement const& element, param::hstring const& key, winrt::Microsoft::UI::Xaml::UIElement const& owner) const;
+        auto TryGetElementCore(param::hstring const& key, winrt::Microsoft::UI::Xaml::UIElement const& owner) const;
+    };
+    template <typename D>
+    class IRecyclingElementFactoryOverridesT
+    {
+        D& shim() noexcept { return *static_cast<D*>(this); }
+        D const& shim() const noexcept { return *static_cast<const D*>(this); }
+    public:
+        using IRecyclingElementFactoryOverrides = winrt::Microsoft::UI::Xaml::Controls::IRecyclingElementFactoryOverrides;
+        auto OnSelectTemplateKeyCore(winrt::Windows::Foundation::IInspectable const& dataContext, winrt::Microsoft::UI::Xaml::UIElement const& owner) const;
     };
     template <typename D>
     class IStyleSelectorOverridesT

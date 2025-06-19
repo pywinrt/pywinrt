@@ -305,6 +305,96 @@ namespace winrt::impl
         }
         return winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Microsoft::Windows::AI::AIFeatureReadyResult, double>{ operation, take_ownership_from_abi };
     }
+    template <typename D> auto consume_Microsoft_Windows_AI_Imaging_IImageObjectRemover<D>::RemoveFromSoftwareBitmap(winrt::Windows::Graphics::Imaging::SoftwareBitmap const& softwareBitmap, winrt::Windows::Graphics::Imaging::SoftwareBitmap const& softwareBitmapMask) const
+    {
+        void* result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AI::Imaging::IImageObjectRemover>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AI::Imaging::IImageObjectRemover, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Imaging::IImageObjectRemover>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->RemoveFromSoftwareBitmap(*(void**)(&softwareBitmap), *(void**)(&softwareBitmapMask), &result));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Imaging::IImageObjectRemover>**)this;
+            check_hresult(_winrt_abi_type->RemoveFromSoftwareBitmap(*(void**)(&softwareBitmap), *(void**)(&softwareBitmapMask), &result));
+        }
+        return winrt::Windows::Graphics::Imaging::SoftwareBitmap{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_AI_Imaging_IImageObjectRemover<D>::RemoveFromImageBuffer(winrt::Microsoft::Graphics::Imaging::ImageBuffer const& imageBuffer, winrt::Microsoft::Graphics::Imaging::ImageBuffer const& imageBufferMask) const
+    {
+        void* result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AI::Imaging::IImageObjectRemover>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AI::Imaging::IImageObjectRemover, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Imaging::IImageObjectRemover>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->RemoveFromImageBuffer(*(void**)(&imageBuffer), *(void**)(&imageBufferMask), &result));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Imaging::IImageObjectRemover>**)this;
+            check_hresult(_winrt_abi_type->RemoveFromImageBuffer(*(void**)(&imageBuffer), *(void**)(&imageBufferMask), &result));
+        }
+        return winrt::Microsoft::Graphics::Imaging::ImageBuffer{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_AI_Imaging_IImageObjectRemoverStatics<D>::GetReadyState() const
+    {
+        winrt::Microsoft::Windows::AI::AIFeatureReadyState result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AI::Imaging::IImageObjectRemoverStatics>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AI::Imaging::IImageObjectRemoverStatics, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Imaging::IImageObjectRemoverStatics>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->GetReadyState(reinterpret_cast<int32_t*>(&result)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Imaging::IImageObjectRemoverStatics>**)this;
+            check_hresult(_winrt_abi_type->GetReadyState(reinterpret_cast<int32_t*>(&result)));
+        }
+        return result;
+    }
+    template <typename D> auto consume_Microsoft_Windows_AI_Imaging_IImageObjectRemoverStatics<D>::EnsureReadyAsync() const
+    {
+        void* operation{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AI::Imaging::IImageObjectRemoverStatics>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AI::Imaging::IImageObjectRemoverStatics, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Imaging::IImageObjectRemoverStatics>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->EnsureReadyAsync(&operation));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Imaging::IImageObjectRemoverStatics>**)this;
+            check_hresult(_winrt_abi_type->EnsureReadyAsync(&operation));
+        }
+        return winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Microsoft::Windows::AI::AIFeatureReadyResult, double>{ operation, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_AI_Imaging_IImageObjectRemoverStatics<D>::CreateAsync() const
+    {
+        void* operation{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AI::Imaging::IImageObjectRemoverStatics>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AI::Imaging::IImageObjectRemoverStatics, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Imaging::IImageObjectRemoverStatics>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->CreateAsync(&operation));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Imaging::IImageObjectRemoverStatics>**)this;
+            check_hresult(_winrt_abi_type->CreateAsync(&operation));
+        }
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Microsoft::Windows::AI::Imaging::ImageObjectRemover>{ operation, take_ownership_from_abi };
+    }
     template <typename D> auto consume_Microsoft_Windows_AI_Imaging_IImageScaler<D>::ScaleSoftwareBitmap(winrt::Windows::Graphics::Imaging::SoftwareBitmap const& softwareBitmap, int32_t width, int32_t height) const
     {
         void* result{};
@@ -854,6 +944,57 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::Windows::AI::Imaging::IImageObjectRemover> : produce_base<D, winrt::Microsoft::Windows::AI::Imaging::IImageObjectRemover>
+    {
+        int32_t __stdcall RemoveFromSoftwareBitmap(void* softwareBitmap, void* softwareBitmapMask, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(this->shim().RemoveFromSoftwareBitmap(*reinterpret_cast<winrt::Windows::Graphics::Imaging::SoftwareBitmap const*>(&softwareBitmap), *reinterpret_cast<winrt::Windows::Graphics::Imaging::SoftwareBitmap const*>(&softwareBitmapMask)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall RemoveFromImageBuffer(void* imageBuffer, void* imageBufferMask, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::Graphics::Imaging::ImageBuffer>(this->shim().RemoveFromImageBuffer(*reinterpret_cast<winrt::Microsoft::Graphics::Imaging::ImageBuffer const*>(&imageBuffer), *reinterpret_cast<winrt::Microsoft::Graphics::Imaging::ImageBuffer const*>(&imageBufferMask)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Windows::AI::Imaging::IImageObjectRemoverStatics> : produce_base<D, winrt::Microsoft::Windows::AI::Imaging::IImageObjectRemoverStatics>
+    {
+        int32_t __stdcall GetReadyState(int32_t* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::Windows::AI::AIFeatureReadyState>(this->shim().GetReadyState());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall EnsureReadyAsync(void** operation) noexcept final try
+        {
+            clear_abi(operation);
+            typename D::abi_guard guard(this->shim());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Microsoft::Windows::AI::AIFeatureReadyResult, double>>(this->shim().EnsureReadyAsync());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall CreateAsync(void** operation) noexcept final try
+        {
+            clear_abi(operation);
+            typename D::abi_guard guard(this->shim());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Microsoft::Windows::AI::Imaging::ImageObjectRemover>>(this->shim().CreateAsync());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::Windows::AI::Imaging::IImageScaler> : produce_base<D, winrt::Microsoft::Windows::AI::Imaging::IImageScaler>
     {
         int32_t __stdcall ScaleSoftwareBitmap(void* softwareBitmap, int32_t width, int32_t height, void** result) noexcept final try
@@ -1090,6 +1231,18 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::AI::Imaging
         ImageObjectExtractorHint(impl::call_factory<ImageObjectExtractorHint, IImageObjectExtractorHintFactory>([&](IImageObjectExtractorHintFactory const& f) { return f.CreateInstance(includeRects, includePoints, excludePoints); }))
     {
     }
+    inline auto ImageObjectRemover::GetReadyState()
+    {
+        return impl::call_factory_cast<winrt::Microsoft::Windows::AI::AIFeatureReadyState(*)(IImageObjectRemoverStatics const&), ImageObjectRemover, IImageObjectRemoverStatics>([](IImageObjectRemoverStatics const& f) { return f.GetReadyState(); });
+    }
+    inline auto ImageObjectRemover::EnsureReadyAsync()
+    {
+        return impl::call_factory_cast<winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Microsoft::Windows::AI::AIFeatureReadyResult, double>(*)(IImageObjectRemoverStatics const&), ImageObjectRemover, IImageObjectRemoverStatics>([](IImageObjectRemoverStatics const& f) { return f.EnsureReadyAsync(); });
+    }
+    inline auto ImageObjectRemover::CreateAsync()
+    {
+        return impl::call_factory_cast<winrt::Windows::Foundation::IAsyncOperation<winrt::Microsoft::Windows::AI::Imaging::ImageObjectRemover>(*)(IImageObjectRemoverStatics const&), ImageObjectRemover, IImageObjectRemoverStatics>([](IImageObjectRemoverStatics const& f) { return f.CreateAsync(); });
+    }
     inline auto ImageScaler::GetReadyState()
     {
         return impl::call_factory_cast<winrt::Microsoft::Windows::AI::AIFeatureReadyState(*)(IImageScalerStatics const&), ImageScaler, IImageScalerStatics>([](IImageScalerStatics const& f) { return f.GetReadyState(); });
@@ -1125,6 +1278,8 @@ namespace std
     template<> struct hash<winrt::Microsoft::Windows::AI::Imaging::IImageObjectExtractorHint> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AI::Imaging::IImageObjectExtractorHintFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AI::Imaging::IImageObjectExtractorStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::AI::Imaging::IImageObjectRemover> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::AI::Imaging::IImageObjectRemoverStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AI::Imaging::IImageScaler> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AI::Imaging::IImageScalerStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AI::Imaging::IRecognizedLine> : winrt::impl::hash_base {};
@@ -1136,6 +1291,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::Windows::AI::Imaging::ImageDescriptionResult> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AI::Imaging::ImageObjectExtractor> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AI::Imaging::ImageObjectExtractorHint> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::AI::Imaging::ImageObjectRemover> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AI::Imaging::ImageScaler> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AI::Imaging::RecognizedLine> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AI::Imaging::RecognizedText> : winrt::impl::hash_base {};

@@ -472,6 +472,35 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Media
         RenderingEventArgs(std::nullptr_t) noexcept {}
         RenderingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Media::IRenderingEventArgs(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES RevealBackgroundBrush : winrt::Microsoft::UI::Xaml::Media::IRevealBackgroundBrush,
+        impl::base<RevealBackgroundBrush, winrt::Microsoft::UI::Xaml::Media::RevealBrush, winrt::Microsoft::UI::Xaml::Media::XamlCompositionBrushBase, winrt::Microsoft::UI::Xaml::Media::Brush, winrt::Microsoft::UI::Xaml::DependencyObject>,
+        impl::require<RevealBackgroundBrush, winrt::Microsoft::UI::Xaml::Media::IRevealBrush, winrt::Microsoft::UI::Xaml::Media::IXamlCompositionBrushBase, winrt::Microsoft::UI::Xaml::Media::IBrush, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Xaml::IDependencyObject>
+    {
+        RevealBackgroundBrush(std::nullptr_t) noexcept {}
+        RevealBackgroundBrush(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Media::IRevealBackgroundBrush(ptr, take_ownership_from_abi) {}
+        RevealBackgroundBrush();
+    };
+    struct WINRT_IMPL_EMPTY_BASES RevealBorderBrush : winrt::Microsoft::UI::Xaml::Media::IRevealBorderBrush,
+        impl::base<RevealBorderBrush, winrt::Microsoft::UI::Xaml::Media::RevealBrush, winrt::Microsoft::UI::Xaml::Media::XamlCompositionBrushBase, winrt::Microsoft::UI::Xaml::Media::Brush, winrt::Microsoft::UI::Xaml::DependencyObject>,
+        impl::require<RevealBorderBrush, winrt::Microsoft::UI::Xaml::Media::IRevealBrush, winrt::Microsoft::UI::Xaml::Media::IXamlCompositionBrushBase, winrt::Microsoft::UI::Xaml::Media::IBrush, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Xaml::IDependencyObject>
+    {
+        RevealBorderBrush(std::nullptr_t) noexcept {}
+        RevealBorderBrush(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Media::IRevealBorderBrush(ptr, take_ownership_from_abi) {}
+        RevealBorderBrush();
+    };
+    struct WINRT_IMPL_EMPTY_BASES RevealBrush : winrt::Microsoft::UI::Xaml::Media::IRevealBrush,
+        impl::base<RevealBrush, winrt::Microsoft::UI::Xaml::Media::XamlCompositionBrushBase, winrt::Microsoft::UI::Xaml::Media::Brush, winrt::Microsoft::UI::Xaml::DependencyObject>,
+        impl::require<RevealBrush, winrt::Microsoft::UI::Xaml::Media::IXamlCompositionBrushBase, winrt::Microsoft::UI::Xaml::Media::IBrush, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Xaml::IDependencyObject>
+    {
+        RevealBrush(std::nullptr_t) noexcept {}
+        RevealBrush(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Media::IRevealBrush(ptr, take_ownership_from_abi) {}
+        [[nodiscard]] static auto ColorProperty();
+        [[nodiscard]] static auto TargetThemeProperty();
+        [[nodiscard]] static auto AlwaysUseFallbackProperty();
+        [[nodiscard]] static auto StateProperty();
+        static auto SetState(winrt::Microsoft::UI::Xaml::UIElement const& element, winrt::Microsoft::UI::Xaml::Media::RevealBrushState const& value);
+        static auto GetState(winrt::Microsoft::UI::Xaml::UIElement const& element);
+    };
     struct WINRT_IMPL_EMPTY_BASES RotateTransform : winrt::Microsoft::UI::Xaml::Media::IRotateTransform,
         impl::base<RotateTransform, winrt::Microsoft::UI::Xaml::Media::Transform, winrt::Microsoft::UI::Xaml::Media::GeneralTransform, winrt::Microsoft::UI::Xaml::DependencyObject>,
         impl::require<RotateTransform, winrt::Microsoft::UI::Xaml::Media::ITransform, winrt::Microsoft::UI::Xaml::Media::IGeneralTransform, winrt::Microsoft::UI::Xaml::IDependencyObject>

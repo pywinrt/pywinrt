@@ -8,6 +8,7 @@ from winui3._winui3_microsoft_ui_input import (
     ManipulationDelta,
     ManipulationVelocities,
     PhysicalKeyStatus,
+    ProximityEvaluation,
     CharacterReceivedEventArgs,
     ContextMenuKeyEventArgs,
     CrossSlidingEventArgs,
@@ -34,6 +35,7 @@ from winui3._winui3_microsoft_ui_input import (
     InputNonClientPointerSource,
     InputObject,
     InputPointerSource,
+    InputPopupController,
     InputPreTranslateKeyboardSource,
     InputSystemCursor,
     KeyEventArgs,
@@ -51,6 +53,7 @@ from winui3._winui3_microsoft_ui_input import (
     PointerPredictor,
     RightTappedEventArgs,
     TappedEventArgs,
+    TouchHitTestingEventArgs,
     WindowRectChangedEventArgs,
     WindowRectChangingEventArgs,
     _IPointerPointTransform,
@@ -72,17 +75,22 @@ __all__ = [
     "GestureSettings",
     "HoldingState",
     "InputActivationState",
+    "InputLayoutPolicy",
+    "InputPointerActivationBehavior",
     "InputPointerSourceDeviceKinds",
     "InputSystemCursorShape",
+    "LightDismissReason",
     "MoveSizeOperation",
     "NonClientRegionKind",
     "PointerDeviceType",
     "PointerUpdateKind",
+    "PopupPointerMode",
     "VirtualKeyStates",
     "CrossSlideThresholds",
     "ManipulationDelta",
     "ManipulationVelocities",
     "PhysicalKeyStatus",
+    "ProximityEvaluation",
     "CharacterReceivedEventArgs",
     "ContextMenuKeyEventArgs",
     "CrossSlidingEventArgs",
@@ -109,6 +117,7 @@ __all__ = [
     "InputNonClientPointerSource",
     "InputObject",
     "InputPointerSource",
+    "InputPopupController",
     "InputPreTranslateKeyboardSource",
     "InputSystemCursor",
     "KeyEventArgs",
@@ -126,6 +135,7 @@ __all__ = [
     "PointerPredictor",
     "RightTappedEventArgs",
     "TappedEventArgs",
+    "TouchHitTestingEventArgs",
     "WindowRectChangedEventArgs",
     "WindowRectChangingEventArgs",
     "IPointerPointTransform",
@@ -190,6 +200,15 @@ class InputActivationState(enum.IntEnum):
     DEACTIVATED = 1
     ACTIVATED = 2
 
+class InputLayoutPolicy(enum.IntEnum):
+    LEFT_TO_RIGHT = 0
+    RIGHT_TO_LEFT = 1
+
+class InputPointerActivationBehavior(enum.IntEnum):
+    DEFAULT = 0
+    ACTIVATE = 1
+    NO_ACTIVATE = 3
+
 class InputPointerSourceDeviceKinds(enum.IntFlag):
     NONE = 0x0
     TOUCH = 0x1
@@ -213,6 +232,14 @@ class InputSystemCursorShape(enum.IntEnum):
     PIN = 14
     PERSON = 15
     APP_STARTING = 16
+
+class LightDismissReason(enum.IntEnum):
+    PROGRAMMATIC = 0
+    WINDOW_MOVED = 1
+    ACTIVATION_CHANGED = 2
+    KEYBOARD_EVENT = 3
+    POINTER_EVENT = 4
+    VISIBILITY_CHANGED = 5
 
 class MoveSizeOperation(enum.IntEnum):
     MOVE = 0
@@ -255,6 +282,11 @@ class PointerUpdateKind(enum.IntEnum):
     X_BUTTON1_RELEASED = 8
     X_BUTTON2_PRESSED = 9
     X_BUTTON2_RELEASED = 10
+
+class PopupPointerMode(enum.IntEnum):
+    DEFAULT = 0
+    MODAL = 1
+    LIGHT_DISMISS = 2
 
 class VirtualKeyStates(enum.IntFlag):
     NONE = 0x0

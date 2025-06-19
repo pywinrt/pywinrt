@@ -629,6 +629,55 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Media
         IRenderingEventArgs(std::nullptr_t = nullptr) noexcept {}
         IRenderingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IRevealBackgroundBrush :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IRevealBackgroundBrush>
+    {
+        IRevealBackgroundBrush(std::nullptr_t = nullptr) noexcept {}
+        IRevealBackgroundBrush(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IRevealBackgroundBrushFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IRevealBackgroundBrushFactory>
+    {
+        IRevealBackgroundBrushFactory(std::nullptr_t = nullptr) noexcept {}
+        IRevealBackgroundBrushFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IRevealBorderBrush :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IRevealBorderBrush>
+    {
+        IRevealBorderBrush(std::nullptr_t = nullptr) noexcept {}
+        IRevealBorderBrush(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IRevealBorderBrushFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IRevealBorderBrushFactory>
+    {
+        IRevealBorderBrushFactory(std::nullptr_t = nullptr) noexcept {}
+        IRevealBorderBrushFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IRevealBrush :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IRevealBrush>
+    {
+        IRevealBrush(std::nullptr_t = nullptr) noexcept {}
+        IRevealBrush(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IRevealBrushProtectedFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IRevealBrushProtectedFactory>
+    {
+        IRevealBrushProtectedFactory(std::nullptr_t = nullptr) noexcept {}
+        IRevealBrushProtectedFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IRevealBrushStatics :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IRevealBrushStatics>
+    {
+        IRevealBrushStatics(std::nullptr_t = nullptr) noexcept {}
+        IRevealBrushStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IRotateTransform :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IRotateTransform>

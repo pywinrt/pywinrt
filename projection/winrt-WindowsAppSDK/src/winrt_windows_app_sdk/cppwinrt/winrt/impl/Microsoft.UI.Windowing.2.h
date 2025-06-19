@@ -10,7 +10,7 @@
 WINRT_EXPORT namespace winrt::Microsoft::UI::Windowing
 {
     struct WINRT_IMPL_EMPTY_BASES AppWindow : winrt::Microsoft::UI::Windowing::IAppWindow,
-        impl::require<AppWindow, winrt::Microsoft::UI::Windowing::IAppWindow2, winrt::Microsoft::UI::Windowing::IAppWindow3, winrt::Microsoft::UI::Windowing::IAppWindow4>
+        impl::require<AppWindow, winrt::Microsoft::UI::Windowing::IAppWindow2, winrt::Microsoft::UI::Windowing::IAppWindow3, winrt::Microsoft::UI::Windowing::IAppWindow4, winrt::Microsoft::UI::Windowing::IAppWindowExperimental>
     {
         AppWindow(std::nullptr_t) noexcept {}
         AppWindow(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Windowing::IAppWindow(ptr, take_ownership_from_abi) {}
@@ -19,6 +19,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Windowing
         static auto Create(winrt::Microsoft::UI::Windowing::AppWindowPresenter const& appWindowPresenter, winrt::Microsoft::UI::WindowId const& ownerWindowId);
         static auto GetFromWindowId(winrt::Microsoft::UI::WindowId const& windowId);
         static auto Create(winrt::Microsoft::UI::Windowing::AppWindowPresenter const& appWindowPresenter, winrt::Microsoft::UI::WindowId const& ownerWindowId, winrt::Microsoft::UI::Dispatching::DispatcherQueue const& DispatcherQueue);
+        static auto SaveCurrentPlacementForAllPersistedStateIds();
     };
     struct WINRT_IMPL_EMPTY_BASES AppWindowChangedEventArgs : winrt::Microsoft::UI::Windowing::IAppWindowChangedEventArgs,
         impl::require<AppWindowChangedEventArgs, winrt::Microsoft::UI::Windowing::IAppWindowChangedEventArgs2>
@@ -30,6 +31,12 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Windowing
     {
         AppWindowClosingEventArgs(std::nullptr_t) noexcept {}
         AppWindowClosingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Windowing::IAppWindowClosingEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES AppWindowPlacementDetails : winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails
+    {
+        AppWindowPlacementDetails(std::nullptr_t) noexcept {}
+        AppWindowPlacementDetails(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails(ptr, take_ownership_from_abi) {}
+        static auto Create(winrt::Windows::Graphics::RectInt32 const& normalRect, winrt::Windows::Graphics::RectInt32 const& workArea, int32_t dpi, int32_t showCmd, winrt::Windows::Graphics::RectInt32 const& arrangeRect, winrt::Microsoft::UI::Windowing::PlacementInfo const& flags, param::hstring const& deviceName);
     };
     struct WINRT_IMPL_EMPTY_BASES AppWindowPresenter : winrt::Microsoft::UI::Windowing::IAppWindowPresenter
     {
@@ -62,6 +69,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Windowing
         static auto GetFromPoint(winrt::Windows::Graphics::PointInt32 const& point, winrt::Microsoft::UI::Windowing::DisplayAreaFallback const& displayAreaFallback);
         static auto GetFromRect(winrt::Windows::Graphics::RectInt32 const& rect, winrt::Microsoft::UI::Windowing::DisplayAreaFallback const& displayAreaFallback);
         static auto GetFromDisplayId(winrt::Microsoft::UI::DisplayId const& displayId);
+        static auto GetMetricsFromWindowId(winrt::Microsoft::UI::WindowId const& windowId);
     };
     struct WINRT_IMPL_EMPTY_BASES DisplayAreaWatcher : winrt::Microsoft::UI::Windowing::IDisplayAreaWatcher
     {

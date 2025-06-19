@@ -290,6 +290,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         IAppBarToggleButtonStatics(std::nullptr_t = nullptr) noexcept {}
         IAppBarToggleButtonStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IApplicationViewSpanningRects :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IApplicationViewSpanningRects>
+    {
+        IApplicationViewSpanningRects(std::nullptr_t = nullptr) noexcept {}
+        IApplicationViewSpanningRects(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IAutoSuggestBox :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IAutoSuggestBox>
@@ -1096,6 +1103,27 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         IDynamicOverflowItemsChangingEventArgs(std::nullptr_t = nullptr) noexcept {}
         IDynamicOverflowItemsChangingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IElementFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IElementFactory>
+    {
+        IElementFactory(std::nullptr_t = nullptr) noexcept {}
+        IElementFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IElementFactoryFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IElementFactoryFactory>
+    {
+        IElementFactoryFactory(std::nullptr_t = nullptr) noexcept {}
+        IElementFactoryFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IElementFactoryOverrides :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IElementFactoryOverrides>
+    {
+        IElementFactoryOverrides(std::nullptr_t = nullptr) noexcept {}
+        IElementFactoryOverrides(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IExpander :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IExpander>
@@ -1172,6 +1200,48 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     {
         IFlipViewStatics(std::nullptr_t = nullptr) noexcept {}
         IFlipViewStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IFlowLayout :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IFlowLayout>
+    {
+        IFlowLayout(std::nullptr_t = nullptr) noexcept {}
+        IFlowLayout(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IFlowLayoutFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IFlowLayoutFactory>
+    {
+        IFlowLayoutFactory(std::nullptr_t = nullptr) noexcept {}
+        IFlowLayoutFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IFlowLayoutOverrides :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IFlowLayoutOverrides>
+    {
+        IFlowLayoutOverrides(std::nullptr_t = nullptr) noexcept {}
+        IFlowLayoutOverrides(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IFlowLayoutState :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IFlowLayoutState>
+    {
+        IFlowLayoutState(std::nullptr_t = nullptr) noexcept {}
+        IFlowLayoutState(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IFlowLayoutStateFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IFlowLayoutStateFactory>
+    {
+        IFlowLayoutStateFactory(std::nullptr_t = nullptr) noexcept {}
+        IFlowLayoutStateFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IFlowLayoutStatics :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IFlowLayoutStatics>
+    {
+        IFlowLayoutStatics(std::nullptr_t = nullptr) noexcept {}
+        IFlowLayoutStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IFlyout :
         winrt::Windows::Foundation::IInspectable,
@@ -1607,6 +1677,20 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         IImageStatics(std::nullptr_t = nullptr) noexcept {}
         IImageStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IIndexPath :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IIndexPath>
+    {
+        IIndexPath(std::nullptr_t = nullptr) noexcept {}
+        IIndexPath(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IIndexPathStatics :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IIndexPathStatics>
+    {
+        IIndexPathStatics(std::nullptr_t = nullptr) noexcept {}
+        IIndexPathStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IInfoBadge :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IInfoBadge>
@@ -1656,6 +1740,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         IInfoBar(std::nullptr_t = nullptr) noexcept {}
         IInfoBar(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IInfoBar2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IInfoBar2>
+    {
+        IInfoBar2(std::nullptr_t = nullptr) noexcept {}
+        IInfoBar2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IInfoBarClosedEventArgs :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IInfoBarClosedEventArgs>
@@ -1691,6 +1782,20 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         IInfoBarFactory(std::nullptr_t = nullptr) noexcept {}
         IInfoBarFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IInfoBarOpenedEventArgs :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IInfoBarOpenedEventArgs>
+    {
+        IInfoBarOpenedEventArgs(std::nullptr_t = nullptr) noexcept {}
+        IInfoBarOpenedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IInfoBarOpenedEventArgsFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IInfoBarOpenedEventArgsFactory>
+    {
+        IInfoBarOpenedEventArgsFactory(std::nullptr_t = nullptr) noexcept {}
+        IInfoBarOpenedEventArgsFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IInfoBarStatics :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IInfoBarStatics>
@@ -1718,6 +1823,27 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     {
         IInfoBarTemplateSettingsStatics(std::nullptr_t = nullptr) noexcept {}
         IInfoBarTemplateSettingsStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IInkCanvas :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IInkCanvas>
+    {
+        IInkCanvas(std::nullptr_t = nullptr) noexcept {}
+        IInkCanvas(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IInkCanvasFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IInkCanvasFactory>
+    {
+        IInkCanvasFactory(std::nullptr_t = nullptr) noexcept {}
+        IInkCanvasFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IInkCanvasStatics :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IInkCanvasStatics>
+    {
+        IInkCanvasStatics(std::nullptr_t = nullptr) noexcept {}
+        IInkCanvasStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IInsertionPanel :
         winrt::Windows::Foundation::IInspectable,
@@ -1789,6 +1915,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         IItemContainer(std::nullptr_t = nullptr) noexcept {}
         IItemContainer(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IItemContainer2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IItemContainer2>
+    {
+        IItemContainer2(std::nullptr_t = nullptr) noexcept {}
+        IItemContainer2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IItemContainerFactory :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IItemContainerFactory>
@@ -1803,6 +1936,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         IItemContainerGenerator(std::nullptr_t = nullptr) noexcept {}
         IItemContainerGenerator(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IItemContainerInvokedEventArgs :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IItemContainerInvokedEventArgs>
+    {
+        IItemContainerInvokedEventArgs(std::nullptr_t = nullptr) noexcept {}
+        IItemContainerInvokedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IItemContainerMapping :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IItemContainerMapping>
@@ -1816,6 +1956,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     {
         IItemContainerStatics(std::nullptr_t = nullptr) noexcept {}
         IItemContainerStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IItemContainerStatics2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IItemContainerStatics2>
+    {
+        IItemContainerStatics2(std::nullptr_t = nullptr) noexcept {}
+        IItemContainerStatics2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IItemsControl :
         winrt::Windows::Foundation::IInspectable,
@@ -2075,6 +2222,27 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     {
         ILayoutOverrides(std::nullptr_t = nullptr) noexcept {}
         ILayoutOverrides(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ILayoutPanel :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ILayoutPanel>
+    {
+        ILayoutPanel(std::nullptr_t = nullptr) noexcept {}
+        ILayoutPanel(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ILayoutPanelFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ILayoutPanelFactory>
+    {
+        ILayoutPanelFactory(std::nullptr_t = nullptr) noexcept {}
+        ILayoutPanelFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ILayoutPanelStatics :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ILayoutPanelStatics>
+    {
+        ILayoutPanelStatics(std::nullptr_t = nullptr) noexcept {}
+        ILayoutPanelStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES ILayoutProtected :
         winrt::Windows::Foundation::IInspectable,
@@ -2930,6 +3098,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         INumberBox(std::nullptr_t = nullptr) noexcept {}
         INumberBox(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES INumberBox2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<INumberBox2>
+    {
+        INumberBox2(std::nullptr_t = nullptr) noexcept {}
+        INumberBox2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES INumberBoxFactory :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<INumberBoxFactory>
@@ -2943,6 +3118,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     {
         INumberBoxStatics(std::nullptr_t = nullptr) noexcept {}
         INumberBoxStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES INumberBoxStatics2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<INumberBoxStatics2>
+    {
+        INumberBoxStatics2(std::nullptr_t = nullptr) noexcept {}
+        INumberBoxStatics2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES INumberBoxValueChangedEventArgs :
         winrt::Windows::Foundation::IInspectable,
@@ -2978,6 +3160,48 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     {
         IPageStatics(std::nullptr_t = nullptr) noexcept {}
         IPageStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IPagerControl :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IPagerControl>
+    {
+        IPagerControl(std::nullptr_t = nullptr) noexcept {}
+        IPagerControl(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IPagerControlFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IPagerControlFactory>
+    {
+        IPagerControlFactory(std::nullptr_t = nullptr) noexcept {}
+        IPagerControlFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IPagerControlSelectedIndexChangedEventArgs :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IPagerControlSelectedIndexChangedEventArgs>
+    {
+        IPagerControlSelectedIndexChangedEventArgs(std::nullptr_t = nullptr) noexcept {}
+        IPagerControlSelectedIndexChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IPagerControlStatics :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IPagerControlStatics>
+    {
+        IPagerControlStatics(std::nullptr_t = nullptr) noexcept {}
+        IPagerControlStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IPagerControlTemplateSettings :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IPagerControlTemplateSettings>
+    {
+        IPagerControlTemplateSettings(std::nullptr_t = nullptr) noexcept {}
+        IPagerControlTemplateSettings(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IPagerControlTemplateSettingsFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IPagerControlTemplateSettingsFactory>
+    {
+        IPagerControlTemplateSettingsFactory(std::nullptr_t = nullptr) noexcept {}
+        IPagerControlTemplateSettingsFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IPanel :
         winrt::Windows::Foundation::IInspectable,
@@ -3273,6 +3497,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         IProgressRing(std::nullptr_t = nullptr) noexcept {}
         IProgressRing(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IProgressRing2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IProgressRing2>
+    {
+        IProgressRing2(std::nullptr_t = nullptr) noexcept {}
+        IProgressRing2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IProgressRingFactory :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IProgressRingFactory>
@@ -3286,6 +3517,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     {
         IProgressRingStatics(std::nullptr_t = nullptr) noexcept {}
         IProgressRingStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IProgressRingStatics2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IProgressRingStatics2>
+    {
+        IProgressRingStatics2(std::nullptr_t = nullptr) noexcept {}
+        IProgressRingStatics2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IProgressRingTemplateSettings :
         winrt::Windows::Foundation::IInspectable,
@@ -3440,6 +3678,55 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     {
         IRatingItemInfoFactory(std::nullptr_t = nullptr) noexcept {}
         IRatingItemInfoFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IRecyclePool :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IRecyclePool>
+    {
+        IRecyclePool(std::nullptr_t = nullptr) noexcept {}
+        IRecyclePool(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IRecyclePoolFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IRecyclePoolFactory>
+    {
+        IRecyclePoolFactory(std::nullptr_t = nullptr) noexcept {}
+        IRecyclePoolFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IRecyclePoolOverrides :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IRecyclePoolOverrides>
+    {
+        IRecyclePoolOverrides(std::nullptr_t = nullptr) noexcept {}
+        IRecyclePoolOverrides(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IRecyclePoolStatics :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IRecyclePoolStatics>
+    {
+        IRecyclePoolStatics(std::nullptr_t = nullptr) noexcept {}
+        IRecyclePoolStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IRecyclingElementFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IRecyclingElementFactory>
+    {
+        IRecyclingElementFactory(std::nullptr_t = nullptr) noexcept {}
+        IRecyclingElementFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IRecyclingElementFactoryFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IRecyclingElementFactoryFactory>
+    {
+        IRecyclingElementFactoryFactory(std::nullptr_t = nullptr) noexcept {}
+        IRecyclingElementFactoryFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IRecyclingElementFactoryOverrides :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IRecyclingElementFactoryOverrides>
+    {
+        IRecyclingElementFactoryOverrides(std::nullptr_t = nullptr) noexcept {}
+        IRecyclingElementFactoryOverrides(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IRefreshContainer :
         winrt::Windows::Foundation::IInspectable,
@@ -3644,6 +3931,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         IScrollView(std::nullptr_t = nullptr) noexcept {}
         IScrollView(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IScrollView2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IScrollView2>
+    {
+        IScrollView2(std::nullptr_t = nullptr) noexcept {}
+        IScrollView2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IScrollViewFactory :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IScrollViewFactory>
@@ -3735,6 +4029,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         IScrollingScrollOptionsFactory(std::nullptr_t = nullptr) noexcept {}
         IScrollingScrollOptionsFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IScrollingScrollStartingEventArgs :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IScrollingScrollStartingEventArgs>
+    {
+        IScrollingScrollStartingEventArgs(std::nullptr_t = nullptr) noexcept {}
+        IScrollingScrollStartingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IScrollingZoomAnimationStartingEventArgs :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IScrollingZoomAnimationStartingEventArgs>
@@ -3763,6 +4064,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         IScrollingZoomOptionsFactory(std::nullptr_t = nullptr) noexcept {}
         IScrollingZoomOptionsFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IScrollingZoomStartingEventArgs :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IScrollingZoomStartingEventArgs>
+    {
+        IScrollingZoomStartingEventArgs(std::nullptr_t = nullptr) noexcept {}
+        IScrollingZoomStartingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES ISectionsInViewChangedEventArgs :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ISectionsInViewChangedEventArgs>
@@ -3777,6 +4085,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         ISectionsInViewChangedEventArgsFactory(std::nullptr_t = nullptr) noexcept {}
         ISectionsInViewChangedEventArgsFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES ISelectTemplateEventArgs :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ISelectTemplateEventArgs>
+    {
+        ISelectTemplateEventArgs(std::nullptr_t = nullptr) noexcept {}
+        ISelectTemplateEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES ISelectionChangedEventArgs :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ISelectionChangedEventArgs>
@@ -3790,6 +4105,41 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     {
         ISelectionChangedEventArgsFactory(std::nullptr_t = nullptr) noexcept {}
         ISelectionChangedEventArgsFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ISelectionModel :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ISelectionModel>
+    {
+        ISelectionModel(std::nullptr_t = nullptr) noexcept {}
+        ISelectionModel(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ISelectionModelChildrenRequestedEventArgs :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ISelectionModelChildrenRequestedEventArgs>
+    {
+        ISelectionModelChildrenRequestedEventArgs(std::nullptr_t = nullptr) noexcept {}
+        ISelectionModelChildrenRequestedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ISelectionModelFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ISelectionModelFactory>
+    {
+        ISelectionModelFactory(std::nullptr_t = nullptr) noexcept {}
+        ISelectionModelFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ISelectionModelProtected :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ISelectionModelProtected>
+    {
+        ISelectionModelProtected(std::nullptr_t = nullptr) noexcept {}
+        ISelectionModelProtected(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ISelectionModelSelectionChangedEventArgs :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ISelectionModelSelectionChangedEventArgs>
+    {
+        ISelectionModelSelectionChangedEventArgs(std::nullptr_t = nullptr) noexcept {}
+        ISelectionModelSelectionChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES ISelectorBar :
         winrt::Windows::Foundation::IInspectable,
@@ -3839,6 +4189,14 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     {
         ISelectorBarStatics(std::nullptr_t = nullptr) noexcept {}
         ISelectorBarStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ISelfPlayingAnimatedVisual :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ISelfPlayingAnimatedVisual>,
+        impl::require<winrt::Microsoft::UI::Xaml::Controls::ISelfPlayingAnimatedVisual, winrt::Windows::Foundation::IClosable, winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisual>
+    {
+        ISelfPlayingAnimatedVisual(std::nullptr_t = nullptr) noexcept {}
+        ISelfPlayingAnimatedVisual(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES ISemanticZoom :
         winrt::Windows::Foundation::IInspectable,
@@ -3959,6 +4317,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         IStackLayout(std::nullptr_t = nullptr) noexcept {}
         IStackLayout(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IStackLayout2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IStackLayout2>
+    {
+        IStackLayout2(std::nullptr_t = nullptr) noexcept {}
+        IStackLayout2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IStackLayoutFactory :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IStackLayoutFactory>
@@ -3966,12 +4331,33 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         IStackLayoutFactory(std::nullptr_t = nullptr) noexcept {}
         IStackLayoutFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IStackLayoutState :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IStackLayoutState>
+    {
+        IStackLayoutState(std::nullptr_t = nullptr) noexcept {}
+        IStackLayoutState(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IStackLayoutStateFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IStackLayoutStateFactory>
+    {
+        IStackLayoutStateFactory(std::nullptr_t = nullptr) noexcept {}
+        IStackLayoutStateFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IStackLayoutStatics :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IStackLayoutStatics>
     {
         IStackLayoutStatics(std::nullptr_t = nullptr) noexcept {}
         IStackLayoutStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IStackLayoutStatics2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IStackLayoutStatics2>
+    {
+        IStackLayoutStatics2(std::nullptr_t = nullptr) noexcept {}
+        IStackLayoutStatics2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IStackPanel :
         winrt::Windows::Foundation::IInspectable,
@@ -4316,6 +4702,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         ITeachingTip(std::nullptr_t = nullptr) noexcept {}
         ITeachingTip(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES ITeachingTip2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ITeachingTip2>
+    {
+        ITeachingTip2(std::nullptr_t = nullptr) noexcept {}
+        ITeachingTip2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES ITeachingTipClosedEventArgs :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ITeachingTipClosedEventArgs>
@@ -4336,6 +4729,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     {
         ITeachingTipFactory(std::nullptr_t = nullptr) noexcept {}
         ITeachingTipFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ITeachingTipOpenedEventArgs :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ITeachingTipOpenedEventArgs>
+    {
+        ITeachingTipOpenedEventArgs(std::nullptr_t = nullptr) noexcept {}
+        ITeachingTipOpenedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES ITeachingTipStatics :
         winrt::Windows::Foundation::IInspectable,
@@ -4952,6 +5352,20 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     {
         IUniformGridLayoutFactory(std::nullptr_t = nullptr) noexcept {}
         IUniformGridLayoutFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IUniformGridLayoutState :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IUniformGridLayoutState>
+    {
+        IUniformGridLayoutState(std::nullptr_t = nullptr) noexcept {}
+        IUniformGridLayoutState(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IUniformGridLayoutStateFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IUniformGridLayoutStateFactory>
+    {
+        IUniformGridLayoutStateFactory(std::nullptr_t = nullptr) noexcept {}
+        IUniformGridLayoutStateFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IUniformGridLayoutStatics :
         winrt::Windows::Foundation::IInspectable,

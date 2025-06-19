@@ -37,6 +37,7 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::Storage
     struct IApplicationData;
     struct IApplicationDataContainer;
     struct IApplicationDataStatics;
+    struct IApplicationDataStatics2;
     struct ApplicationData;
     struct ApplicationDataContainer;
     struct ApplicationDataContract;
@@ -46,6 +47,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::Windows::Storage::IApplicationData>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Windows::Storage::IApplicationDataContainer>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Windows::Storage::IApplicationDataStatics>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::Windows::Storage::IApplicationDataStatics2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Windows::Storage::ApplicationData>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::Windows::Storage::ApplicationDataContainer>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::Windows::Storage::ApplicationDataCreateDisposition>{ using type = enum_category; };
@@ -57,10 +59,12 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::Storage::IApplicationData> = L"Microsoft.Windows.Storage.IApplicationData";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::Storage::IApplicationDataContainer> = L"Microsoft.Windows.Storage.IApplicationDataContainer";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::Storage::IApplicationDataStatics> = L"Microsoft.Windows.Storage.IApplicationDataStatics";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::Storage::IApplicationDataStatics2> = L"Microsoft.Windows.Storage.IApplicationDataStatics2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::Storage::ApplicationDataContract> = L"Microsoft.Windows.Storage.ApplicationDataContract";
     template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::Storage::IApplicationData>{ 0xFC073CE2,0x2F7B,0x5214,{ 0x95,0xFA,0x53,0x0A,0x3F,0x9D,0x1E,0xA5 } }; // FC073CE2-2F7B-5214-95FA-530A3F9D1EA5
     template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::Storage::IApplicationDataContainer>{ 0xD1FA9C23,0x2E59,0x55D8,{ 0xBD,0x86,0x88,0xC2,0xFD,0xC9,0xE7,0xC9 } }; // D1FA9C23-2E59-55D8-BD86-88C2FDC9E7C9
     template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::Storage::IApplicationDataStatics>{ 0x6A8B41F8,0x5560,0x56FB,{ 0x86,0xB0,0xD5,0x9E,0x89,0x7D,0x4D,0x95 } }; // 6A8B41F8-5560-56FB-86B0-D59E897D4D95
+    template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::Storage::IApplicationDataStatics2>{ 0x33C2CCE4,0x6697,0x54B9,{ 0xB8,0x45,0x4E,0x12,0xD2,0x63,0x06,0xFF } }; // 33C2CCE4-6697-54B9-B845-4E12D26306FF
     template <> struct default_interface<winrt::Microsoft::Windows::Storage::ApplicationData>{ using type = winrt::Microsoft::Windows::Storage::IApplicationData; };
     template <> struct default_interface<winrt::Microsoft::Windows::Storage::ApplicationDataContainer>{ using type = winrt::Microsoft::Windows::Storage::IApplicationDataContainer; };
     template <> struct abi<winrt::Microsoft::Windows::Storage::IApplicationData>
@@ -104,6 +108,13 @@ namespace winrt::impl
             virtual int32_t __stdcall GetDefault(void**) noexcept = 0;
             virtual int32_t __stdcall GetForUser(void*, void**) noexcept = 0;
             virtual int32_t __stdcall GetForPackageFamily(void*, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::Windows::Storage::IApplicationDataStatics2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall GetForUnpackaged(void*, void*, void**) noexcept = 0;
         };
     };
     template <typename D>
@@ -154,6 +165,15 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::Windows::Storage::IApplicationDataStatics>
     {
         template <typename D> using type = consume_Microsoft_Windows_Storage_IApplicationDataStatics<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_Windows_Storage_IApplicationDataStatics2
+    {
+        auto GetForUnpackaged(param::hstring const& publisher, param::hstring const& product) const;
+    };
+    template <> struct consume<winrt::Microsoft::Windows::Storage::IApplicationDataStatics2>
+    {
+        template <typename D> using type = consume_Microsoft_Windows_Storage_IApplicationDataStatics2<D>;
     };
 }
 #endif

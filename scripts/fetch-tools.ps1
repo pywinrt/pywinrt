@@ -18,7 +18,7 @@ param(
 
     # WinUI 3
     [Parameter(Mandatory=$false)]
-    [string]$WindowsAppSDKVersion = "1.7.250513003",
+    [string]$WindowsAppSDKVersion = "1.8.250610002-experimental3",
     [switch]$noWindowsAppSDK,
 
     # WebView2
@@ -66,7 +66,7 @@ if (!$noMicrosoftUiXaml) {
 }
 
 if (!$noWindowsAppSDK) {
-    & nuget install Microsoft.WindowsAppSDK -Version $WindowsAppSDKVersion -ExcludeVersion -DependencyVersion Ignore -OutputDirectory "$repoRootPath/_tools" -NoHttpCache
+    & nuget install Microsoft.WindowsAppSDK -Version $WindowsAppSDKVersion -ExcludeVersion -OutputDirectory "$repoRootPath/_tools" -NoHttpCache
 
     if ($LASTEXITCODE -ne 0) {
         exit $LASTEXITCODE

@@ -35,8 +35,16 @@ WINRT_EXPORT namespace winrt::Microsoft::Graphics::Display
         Hdr10 = 0,
         Hdr10Plus = 1,
     };
+    enum class DisplayOrientation : int32_t
+    {
+        RotateNone = 0,
+        Rotate90Degrees = 90,
+        Rotate180Degrees = 180,
+        Rotate270Degrees = 270,
+    };
     struct IDisplayAdvancedColorInfo;
     struct IDisplayInformation;
+    struct IDisplayInformation2;
     struct IDisplayInformationStatics;
     struct DisplayAdvancedColorInfo;
     struct DisplayInformation;
@@ -45,20 +53,25 @@ namespace winrt::impl
 {
     template <> struct category<winrt::Microsoft::Graphics::Display::IDisplayAdvancedColorInfo>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Graphics::Display::IDisplayInformation>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::Graphics::Display::IDisplayInformation2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Graphics::Display::IDisplayInformationStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Graphics::Display::DisplayAdvancedColorInfo>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::Graphics::Display::DisplayInformation>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::Graphics::Display::DisplayAdvancedColorKind>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::Graphics::Display::DisplayHdrMetadataFormat>{ using type = enum_category; };
+    template <> struct category<winrt::Microsoft::Graphics::Display::DisplayOrientation>{ using type = enum_category; };
     template <> inline constexpr auto& name_v<winrt::Microsoft::Graphics::Display::DisplayAdvancedColorInfo> = L"Microsoft.Graphics.Display.DisplayAdvancedColorInfo";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Graphics::Display::DisplayInformation> = L"Microsoft.Graphics.Display.DisplayInformation";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Graphics::Display::DisplayAdvancedColorKind> = L"Microsoft.Graphics.Display.DisplayAdvancedColorKind";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Graphics::Display::DisplayHdrMetadataFormat> = L"Microsoft.Graphics.Display.DisplayHdrMetadataFormat";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::Graphics::Display::DisplayOrientation> = L"Microsoft.Graphics.Display.DisplayOrientation";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Graphics::Display::IDisplayAdvancedColorInfo> = L"Microsoft.Graphics.Display.IDisplayAdvancedColorInfo";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Graphics::Display::IDisplayInformation> = L"Microsoft.Graphics.Display.IDisplayInformation";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::Graphics::Display::IDisplayInformation2> = L"Microsoft.Graphics.Display.IDisplayInformation2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Graphics::Display::IDisplayInformationStatics> = L"Microsoft.Graphics.Display.IDisplayInformationStatics";
     template <> inline constexpr guid guid_v<winrt::Microsoft::Graphics::Display::IDisplayAdvancedColorInfo>{ 0xB44F0F47,0x7065,0x5175,{ 0xBA,0x3E,0x71,0x44,0x89,0xC8,0x5A,0x3E } }; // B44F0F47-7065-5175-BA3E-714489C85A3E
     template <> inline constexpr guid guid_v<winrt::Microsoft::Graphics::Display::IDisplayInformation>{ 0xF0D58D4F,0x84CE,0x5B27,{ 0xB2,0x22,0x4F,0x8F,0x7D,0xC0,0xAA,0xEB } }; // F0D58D4F-84CE-5B27-B222-4F8F7DC0AAEB
+    template <> inline constexpr guid guid_v<winrt::Microsoft::Graphics::Display::IDisplayInformation2>{ 0x5586D03C,0xB4B6,0x594E,{ 0x96,0xAD,0x83,0x72,0x70,0x0B,0x08,0xDD } }; // 5586D03C-B4B6-594E-96AD-8372700B08DD
     template <> inline constexpr guid guid_v<winrt::Microsoft::Graphics::Display::IDisplayInformationStatics>{ 0x2DE85048,0x37FA,0x56C0,{ 0xAC,0x30,0x47,0xE2,0x04,0x4D,0x7E,0xA8 } }; // 2DE85048-37FA-56C0-AC30-47E2044D7EA8
     template <> struct default_interface<winrt::Microsoft::Graphics::Display::DisplayAdvancedColorInfo>{ using type = winrt::Microsoft::Graphics::Display::IDisplayAdvancedColorInfo; };
     template <> struct default_interface<winrt::Microsoft::Graphics::Display::DisplayInformation>{ using type = winrt::Microsoft::Graphics::Display::IDisplayInformation; };
@@ -96,6 +109,19 @@ namespace winrt::impl
             virtual int32_t __stdcall remove_AdvancedColorInfoChanged(winrt::event_token) noexcept = 0;
             virtual int32_t __stdcall add_Destroyed(void*, winrt::event_token*) noexcept = 0;
             virtual int32_t __stdcall remove_Destroyed(winrt::event_token) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::Graphics::Display::IDisplayInformation2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_RawDpi(void**) noexcept = 0;
+            virtual int32_t __stdcall get_RawPixelsPerViewPixel(double*) noexcept = 0;
+            virtual int32_t __stdcall add_DpiChanged(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_DpiChanged(winrt::event_token) noexcept = 0;
+            virtual int32_t __stdcall get_AngularOffsetFromNativeOrientation(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall add_OrientationChanged(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_OrientationChanged(winrt::event_token) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::Graphics::Display::IDisplayInformationStatics>
@@ -153,6 +179,25 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::Graphics::Display::IDisplayInformation>
     {
         template <typename D> using type = consume_Microsoft_Graphics_Display_IDisplayInformation<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_Graphics_Display_IDisplayInformation2
+    {
+        [[nodiscard]] auto RawDpi() const;
+        [[nodiscard]] auto RawPixelsPerViewPixel() const;
+        auto DpiChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Graphics::Display::DisplayInformation, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        using DpiChanged_revoker = impl::event_revoker<winrt::Microsoft::Graphics::Display::IDisplayInformation2, &impl::abi_t<winrt::Microsoft::Graphics::Display::IDisplayInformation2>::remove_DpiChanged>;
+        [[nodiscard]] auto DpiChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Graphics::Display::DisplayInformation, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        auto DpiChanged(winrt::event_token const& token) const noexcept;
+        [[nodiscard]] auto AngularOffsetFromNativeOrientation() const;
+        auto OrientationChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Graphics::Display::DisplayInformation, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        using OrientationChanged_revoker = impl::event_revoker<winrt::Microsoft::Graphics::Display::IDisplayInformation2, &impl::abi_t<winrt::Microsoft::Graphics::Display::IDisplayInformation2>::remove_OrientationChanged>;
+        [[nodiscard]] auto OrientationChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Graphics::Display::DisplayInformation, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        auto OrientationChanged(winrt::event_token const& token) const noexcept;
+    };
+    template <> struct consume<winrt::Microsoft::Graphics::Display::IDisplayInformation2>
+    {
+        template <typename D> using type = consume_Microsoft_Graphics_Display_IDisplayInformation2<D>;
     };
     template <typename D>
     struct consume_Microsoft_Graphics_Display_IDisplayInformationStatics

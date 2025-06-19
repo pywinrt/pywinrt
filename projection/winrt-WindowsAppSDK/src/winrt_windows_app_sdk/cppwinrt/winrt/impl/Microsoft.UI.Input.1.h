@@ -258,6 +258,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
         IInputKeyboardSourceStatics2(std::nullptr_t = nullptr) noexcept {}
         IInputKeyboardSourceStatics2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IInputKeyboardSourceStatics3 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IInputKeyboardSourceStatics3>
+    {
+        IInputKeyboardSourceStatics3(std::nullptr_t = nullptr) noexcept {}
+        IInputKeyboardSourceStatics3(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IInputLightDismissAction :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IInputLightDismissAction>
@@ -272,12 +279,26 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
         IInputLightDismissActionStatics(std::nullptr_t = nullptr) noexcept {}
         IInputLightDismissActionStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IInputLightDismissActionStatics2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IInputLightDismissActionStatics2>
+    {
+        IInputLightDismissActionStatics2(std::nullptr_t = nullptr) noexcept {}
+        IInputLightDismissActionStatics2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IInputLightDismissEventArgs :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IInputLightDismissEventArgs>
     {
         IInputLightDismissEventArgs(std::nullptr_t = nullptr) noexcept {}
         IInputLightDismissEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IInputLightDismissEventArgs2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IInputLightDismissEventArgs2>
+    {
+        IInputLightDismissEventArgs2(std::nullptr_t = nullptr) noexcept {}
+        IInputLightDismissEventArgs2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IInputNonClientPointerSource :
         winrt::Windows::Foundation::IInspectable,
@@ -321,12 +342,40 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
         IInputPointerSource(std::nullptr_t = nullptr) noexcept {}
         IInputPointerSource(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IInputPointerSource2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IInputPointerSource2>
+    {
+        IInputPointerSource2(std::nullptr_t = nullptr) noexcept {}
+        IInputPointerSource2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IInputPointerSourceStatics :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IInputPointerSourceStatics>
     {
         IInputPointerSourceStatics(std::nullptr_t = nullptr) noexcept {}
         IInputPointerSourceStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IInputPointerSourceStatics2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IInputPointerSourceStatics2>
+    {
+        IInputPointerSourceStatics2(std::nullptr_t = nullptr) noexcept {}
+        IInputPointerSourceStatics2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IInputPopupController :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IInputPopupController>
+    {
+        IInputPopupController(std::nullptr_t = nullptr) noexcept {}
+        IInputPopupController(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IInputPopupControllerStatics :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IInputPopupControllerStatics>
+    {
+        IInputPopupControllerStatics(std::nullptr_t = nullptr) noexcept {}
+        IInputPopupControllerStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IInputPreTranslateKeyboardSource :
         winrt::Windows::Foundation::IInspectable,
@@ -474,6 +523,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
     {
         ITappedEventArgs(std::nullptr_t = nullptr) noexcept {}
         ITappedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ITouchHitTestingEventArgs :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ITouchHitTestingEventArgs>
+    {
+        ITouchHitTestingEventArgs(std::nullptr_t = nullptr) noexcept {}
+        ITouchHitTestingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IWindowRectChangedEventArgs :
         winrt::Windows::Foundation::IInspectable,

@@ -9,10 +9,522 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.250303.1"), "Mismatche
 #include "winrt/Microsoft.Windows.AI.h"
 #include "winrt/impl/Microsoft.Windows.AI.2.h"
 #include "winrt/impl/Microsoft.Windows.AI.ContentSafety.2.h"
+#include "winrt/impl/Microsoft.Windows.AI.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
+#include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Microsoft.Windows.AI.Text.2.h"
 namespace winrt::impl
 {
+    template <typename D> auto consume_Microsoft_Windows_AI_Text_IConversationItem<D>::Participant() const
+    {
+        void* value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AI::Text::IConversationItem>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AI::Text::IConversationItem, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::IConversationItem>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_Participant(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::IConversationItem>**)this;
+            check_hresult(_winrt_abi_type->get_Participant(&value));
+        }
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_AI_Text_IConversationItem<D>::Participant(param::hstring const& value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AI::Text::IConversationItem>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AI::Text::IConversationItem, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::IConversationItem>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->put_Participant(*(void**)(&value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::IConversationItem>**)this;
+            check_hresult(_winrt_abi_type->put_Participant(*(void**)(&value)));
+        }
+    }
+    template <typename D> auto consume_Microsoft_Windows_AI_Text_IConversationItem<D>::Message() const
+    {
+        void* value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AI::Text::IConversationItem>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AI::Text::IConversationItem, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::IConversationItem>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_Message(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::IConversationItem>**)this;
+            check_hresult(_winrt_abi_type->get_Message(&value));
+        }
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_AI_Text_IConversationItem<D>::Message(param::hstring const& value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AI::Text::IConversationItem>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AI::Text::IConversationItem, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::IConversationItem>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->put_Message(*(void**)(&value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::IConversationItem>**)this;
+            check_hresult(_winrt_abi_type->put_Message(*(void**)(&value)));
+        }
+    }
+    template <typename D> auto consume_Microsoft_Windows_AI_Text_IConversationSummaryOptions<D>::InputKind() const
+    {
+        winrt::Microsoft::Windows::AI::Text::InputKind value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_InputKind(reinterpret_cast<int32_t*>(&value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions>**)this;
+            check_hresult(_winrt_abi_type->get_InputKind(reinterpret_cast<int32_t*>(&value)));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Windows_AI_Text_IConversationSummaryOptions<D>::InputKind(winrt::Microsoft::Windows::AI::Text::InputKind const& value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->put_InputKind(static_cast<int32_t>(value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions>**)this;
+            check_hresult(_winrt_abi_type->put_InputKind(static_cast<int32_t>(value)));
+        }
+    }
+    template <typename D> auto consume_Microsoft_Windows_AI_Text_IConversationSummaryOptions<D>::IncludeMessageCitations() const
+    {
+        bool value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_IncludeMessageCitations(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions>**)this;
+            check_hresult(_winrt_abi_type->get_IncludeMessageCitations(&value));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Windows_AI_Text_IConversationSummaryOptions<D>::IncludeMessageCitations(bool value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->put_IncludeMessageCitations(value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions>**)this;
+            check_hresult(_winrt_abi_type->put_IncludeMessageCitations(value));
+        }
+    }
+    template <typename D> auto consume_Microsoft_Windows_AI_Text_IConversationSummaryOptions<D>::IncludeParticipantAttribution() const
+    {
+        bool value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_IncludeParticipantAttribution(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions>**)this;
+            check_hresult(_winrt_abi_type->get_IncludeParticipantAttribution(&value));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Windows_AI_Text_IConversationSummaryOptions<D>::IncludeParticipantAttribution(bool value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->put_IncludeParticipantAttribution(value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions>**)this;
+            check_hresult(_winrt_abi_type->put_IncludeParticipantAttribution(value));
+        }
+    }
+    template <typename D> auto consume_Microsoft_Windows_AI_Text_IConversationSummaryOptions<D>::MaxKeyPoints() const
+    {
+        uint32_t value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_MaxKeyPoints(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions>**)this;
+            check_hresult(_winrt_abi_type->get_MaxKeyPoints(&value));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Windows_AI_Text_IConversationSummaryOptions<D>::MaxKeyPoints(uint32_t value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->put_MaxKeyPoints(value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions>**)this;
+            check_hresult(_winrt_abi_type->put_MaxKeyPoints(value));
+        }
+    }
+    template <typename D> auto consume_Microsoft_Windows_AI_Text_ILanguageModel2<D>::GenerateResponseAsync(param::hstring const& prompt) const
+    {
+        void* operation{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AI::Text::ILanguageModel2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AI::Text::ILanguageModel2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::ILanguageModel2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->GenerateResponseAsync(*(void**)(&prompt), &operation));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::ILanguageModel2>**)this;
+            check_hresult(_winrt_abi_type->GenerateResponseAsync(*(void**)(&prompt), &operation));
+        }
+        return winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Microsoft::Windows::AI::Text::LanguageModelResponseResult, hstring>{ operation, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_AI_Text_ILanguageModel2<D>::GenerateResponseAsync(param::hstring const& prompt, winrt::Microsoft::Windows::AI::Text::LanguageModelOptions const& options) const
+    {
+        void* operation{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AI::Text::ILanguageModel2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AI::Text::ILanguageModel2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::ILanguageModel2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->GenerateResponseAsync2(*(void**)(&prompt), *(void**)(&options), &operation));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::ILanguageModel2>**)this;
+            check_hresult(_winrt_abi_type->GenerateResponseAsync2(*(void**)(&prompt), *(void**)(&options), &operation));
+        }
+        return winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Microsoft::Windows::AI::Text::LanguageModelResponseResult, hstring>{ operation, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_AI_Text_ILanguageModel2<D>::GenerateResponseAsync(winrt::Microsoft::Windows::AI::Text::LanguageModelContext const& context, param::hstring const& prompt, winrt::Microsoft::Windows::AI::Text::LanguageModelOptions const& options) const
+    {
+        void* operation{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AI::Text::ILanguageModel2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AI::Text::ILanguageModel2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::ILanguageModel2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->GenerateResponseAsync3(*(void**)(&context), *(void**)(&prompt), *(void**)(&options), &operation));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::ILanguageModel2>**)this;
+            check_hresult(_winrt_abi_type->GenerateResponseAsync3(*(void**)(&context), *(void**)(&prompt), *(void**)(&options), &operation));
+        }
+        return winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Microsoft::Windows::AI::Text::LanguageModelResponseResult, hstring>{ operation, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_AI_Text_ILanguageModel2<D>::GenerateResponseFromEmbeddingsAsync(param::async_iterable<winrt::Microsoft::Windows::AI::Foundation::EmbeddingVector> const& promptEmbedding) const
+    {
+        void* operation{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AI::Text::ILanguageModel2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AI::Text::ILanguageModel2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::ILanguageModel2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->GenerateResponseFromEmbeddingsAsync(*(void**)(&promptEmbedding), &operation));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::ILanguageModel2>**)this;
+            check_hresult(_winrt_abi_type->GenerateResponseFromEmbeddingsAsync(*(void**)(&promptEmbedding), &operation));
+        }
+        return winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Microsoft::Windows::AI::Text::LanguageModelResponseResult, hstring>{ operation, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_AI_Text_ILanguageModel2<D>::GenerateResponseFromEmbeddingsAsync(param::async_iterable<winrt::Microsoft::Windows::AI::Foundation::EmbeddingVector> const& promptEmbedding, winrt::Microsoft::Windows::AI::Text::LanguageModelOptions const& options) const
+    {
+        void* operation{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AI::Text::ILanguageModel2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AI::Text::ILanguageModel2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::ILanguageModel2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->GenerateResponseFromEmbeddingsAsync2(*(void**)(&promptEmbedding), *(void**)(&options), &operation));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::ILanguageModel2>**)this;
+            check_hresult(_winrt_abi_type->GenerateResponseFromEmbeddingsAsync2(*(void**)(&promptEmbedding), *(void**)(&options), &operation));
+        }
+        return winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Microsoft::Windows::AI::Text::LanguageModelResponseResult, hstring>{ operation, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_AI_Text_ILanguageModel2<D>::GenerateResponseFromEmbeddingsAsync(winrt::Microsoft::Windows::AI::Text::LanguageModelContext const& context, param::async_iterable<winrt::Microsoft::Windows::AI::Foundation::EmbeddingVector> const& promptEmbedding, winrt::Microsoft::Windows::AI::Text::LanguageModelOptions const& options) const
+    {
+        void* operation{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AI::Text::ILanguageModel2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AI::Text::ILanguageModel2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::ILanguageModel2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->GenerateResponseFromEmbeddingsAsync3(*(void**)(&context), *(void**)(&promptEmbedding), *(void**)(&options), &operation));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::ILanguageModel2>**)this;
+            check_hresult(_winrt_abi_type->GenerateResponseFromEmbeddingsAsync3(*(void**)(&context), *(void**)(&promptEmbedding), *(void**)(&options), &operation));
+        }
+        return winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Microsoft::Windows::AI::Text::LanguageModelResponseResult, hstring>{ operation, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_AI_Text_ILanguageModel2<D>::GenerateEmbeddingVectors(param::hstring const& prompt) const
+    {
+        void* result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AI::Text::ILanguageModel2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AI::Text::ILanguageModel2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::ILanguageModel2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->GenerateEmbeddingVectors(*(void**)(&prompt), &result));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::ILanguageModel2>**)this;
+            check_hresult(_winrt_abi_type->GenerateEmbeddingVectors(*(void**)(&prompt), &result));
+        }
+        return winrt::Microsoft::Windows::AI::Text::LanguageModelEmbeddingVectorResult{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_AI_Text_ILanguageModel2<D>::GenerateEmbeddingVectors(param::hstring const& prompt, winrt::Microsoft::Windows::AI::ContentSafety::ContentFilterOptions const& contentFilterOptions) const
+    {
+        void* result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AI::Text::ILanguageModel2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AI::Text::ILanguageModel2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::ILanguageModel2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->GenerateEmbeddingVectors2(*(void**)(&prompt), *(void**)(&contentFilterOptions), &result));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::ILanguageModel2>**)this;
+            check_hresult(_winrt_abi_type->GenerateEmbeddingVectors2(*(void**)(&prompt), *(void**)(&contentFilterOptions), &result));
+        }
+        return winrt::Microsoft::Windows::AI::Text::LanguageModelEmbeddingVectorResult{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_AI_Text_ILanguageModel2<D>::GetUsablePromptLength(param::hstring const& prompt) const
+    {
+        uint64_t result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AI::Text::ILanguageModel2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AI::Text::ILanguageModel2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::ILanguageModel2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->GetUsablePromptLength(*(void**)(&prompt), &result));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::ILanguageModel2>**)this;
+            check_hresult(_winrt_abi_type->GetUsablePromptLength(*(void**)(&prompt), &result));
+        }
+        return result;
+    }
+    template <typename D> auto consume_Microsoft_Windows_AI_Text_ILanguageModel2<D>::GetUsablePromptLength(winrt::Microsoft::Windows::AI::Text::LanguageModelContext const& context, param::hstring const& prompt) const
+    {
+        uint64_t result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AI::Text::ILanguageModel2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AI::Text::ILanguageModel2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::ILanguageModel2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->GetUsablePromptLength2(*(void**)(&context), *(void**)(&prompt), &result));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::ILanguageModel2>**)this;
+            check_hresult(_winrt_abi_type->GetUsablePromptLength2(*(void**)(&context), *(void**)(&prompt), &result));
+        }
+        return result;
+    }
+    template <typename D> auto consume_Microsoft_Windows_AI_Text_ILanguageModel2<D>::GetVectorSpaceId() const
+    {
+        winrt::guid result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AI::Text::ILanguageModel2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AI::Text::ILanguageModel2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::ILanguageModel2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->GetVectorSpaceId(put_abi(result)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::ILanguageModel2>**)this;
+            check_hresult(_winrt_abi_type->GetVectorSpaceId(put_abi(result)));
+        }
+        return result;
+    }
+    template <typename D> auto consume_Microsoft_Windows_AI_Text_ILanguageModel2<D>::CreateContext() const
+    {
+        void* result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AI::Text::ILanguageModel2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AI::Text::ILanguageModel2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::ILanguageModel2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->CreateContext(&result));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::ILanguageModel2>**)this;
+            check_hresult(_winrt_abi_type->CreateContext(&result));
+        }
+        return winrt::Microsoft::Windows::AI::Text::LanguageModelContext{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_AI_Text_ILanguageModel2<D>::CreateContext(param::hstring const& systemPrompt) const
+    {
+        void* result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AI::Text::ILanguageModel2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AI::Text::ILanguageModel2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::ILanguageModel2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->CreateContext2(*(void**)(&systemPrompt), &result));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::ILanguageModel2>**)this;
+            check_hresult(_winrt_abi_type->CreateContext2(*(void**)(&systemPrompt), &result));
+        }
+        return winrt::Microsoft::Windows::AI::Text::LanguageModelContext{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_AI_Text_ILanguageModel2<D>::CreateContext(param::hstring const& systemPrompt, winrt::Microsoft::Windows::AI::ContentSafety::ContentFilterOptions const& contentFilterOptions) const
+    {
+        void* result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AI::Text::ILanguageModel2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AI::Text::ILanguageModel2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::ILanguageModel2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->CreateContext3(*(void**)(&systemPrompt), *(void**)(&contentFilterOptions), &result));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::ILanguageModel2>**)this;
+            check_hresult(_winrt_abi_type->CreateContext3(*(void**)(&systemPrompt), *(void**)(&contentFilterOptions), &result));
+        }
+        return winrt::Microsoft::Windows::AI::Text::LanguageModelContext{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_AI_Text_ILanguageModelEmbeddingVectorResult<D>::EmbeddingVectors() const
+    {
+        void* value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AI::Text::ILanguageModelEmbeddingVectorResult>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AI::Text::ILanguageModelEmbeddingVectorResult, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::ILanguageModelEmbeddingVectorResult>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_EmbeddingVectors(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::ILanguageModelEmbeddingVectorResult>**)this;
+            check_hresult(_winrt_abi_type->get_EmbeddingVectors(&value));
+        }
+        return winrt::Windows::Foundation::Collections::IVectorView<winrt::Microsoft::Windows::AI::Foundation::EmbeddingVector>{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_AI_Text_ILanguageModelEmbeddingVectorResult<D>::Status() const
+    {
+        winrt::Microsoft::Windows::AI::Text::LanguageModelResponseStatus value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AI::Text::ILanguageModelEmbeddingVectorResult>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AI::Text::ILanguageModelEmbeddingVectorResult, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::ILanguageModelEmbeddingVectorResult>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_Status(reinterpret_cast<int32_t*>(&value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::ILanguageModelEmbeddingVectorResult>**)this;
+            check_hresult(_winrt_abi_type->get_Status(reinterpret_cast<int32_t*>(&value)));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Windows_AI_Text_ILanguageModelEmbeddingVectorResult<D>::ExtendedError() const
+    {
+        winrt::hresult value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AI::Text::ILanguageModelEmbeddingVectorResult>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AI::Text::ILanguageModelEmbeddingVectorResult, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::ILanguageModelEmbeddingVectorResult>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_ExtendedError(put_abi(value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::ILanguageModelEmbeddingVectorResult>**)this;
+            check_hresult(_winrt_abi_type->get_ExtendedError(put_abi(value)));
+        }
+        return value;
+    }
     template <typename D> auto consume_Microsoft_Windows_AI_Text_ILanguageModelOptions<D>::Temperature() const
     {
         float value{};
@@ -329,6 +841,24 @@ namespace winrt::impl
         }
         return winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Microsoft::Windows::AI::Text::LanguageModelResponseResult, hstring>{ operation, take_ownership_from_abi };
     }
+    template <typename D> auto consume_Microsoft_Windows_AI_Text_ITextSummarizer2<D>::SummarizeConversationAsync(param::async_vector_view<winrt::Microsoft::Windows::AI::Text::ConversationItem> const& messages, winrt::Microsoft::Windows::AI::Text::ConversationSummaryOptions const& options) const
+    {
+        void* operation{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AI::Text::ITextSummarizer2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AI::Text::ITextSummarizer2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::ITextSummarizer2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->SummarizeConversationAsync(*(void**)(&messages), *(void**)(&options), &operation));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AI::Text::ITextSummarizer2>**)this;
+            check_hresult(_winrt_abi_type->SummarizeConversationAsync(*(void**)(&messages), *(void**)(&options), &operation));
+        }
+        return winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Microsoft::Windows::AI::Text::LanguageModelResponseResult, hstring>{ operation, take_ownership_from_abi };
+    }
     template <typename D> auto consume_Microsoft_Windows_AI_Text_ITextSummarizerFactory<D>::CreateInstance(winrt::Microsoft::Windows::AI::Text::LanguageModel const& languageModel) const
     {
         void* value{};
@@ -459,14 +989,256 @@ namespace winrt::impl
     }
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::Windows::AI::Text::IConversationItem> : produce_base<D, winrt::Microsoft::Windows::AI::Text::IConversationItem>
+    {
+        int32_t __stdcall get_Participant(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().Participant());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_Participant(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Participant(*reinterpret_cast<hstring const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Message(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().Message());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_Message(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Message(*reinterpret_cast<hstring const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions> : produce_base<D, winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions>
+    {
+        int32_t __stdcall get_InputKind(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::Windows::AI::Text::InputKind>(this->shim().InputKind());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_InputKind(int32_t value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().InputKind(*reinterpret_cast<winrt::Microsoft::Windows::AI::Text::InputKind const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_IncludeMessageCitations(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().IncludeMessageCitations());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_IncludeMessageCitations(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().IncludeMessageCitations(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_IncludeParticipantAttribution(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().IncludeParticipantAttribution());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_IncludeParticipantAttribution(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().IncludeParticipantAttribution(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_MaxKeyPoints(uint32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<uint32_t>(this->shim().MaxKeyPoints());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_MaxKeyPoints(uint32_t value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().MaxKeyPoints(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::Windows::AI::Text::ILanguageModel> : produce_base<D, winrt::Microsoft::Windows::AI::Text::ILanguageModel>
     {
     };
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::Windows::AI::Text::ILanguageModel2> : produce_base<D, winrt::Microsoft::Windows::AI::Text::ILanguageModel2>
+    {
+        int32_t __stdcall GenerateResponseAsync(void* prompt, void** operation) noexcept final try
+        {
+            clear_abi(operation);
+            typename D::abi_guard guard(this->shim());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Microsoft::Windows::AI::Text::LanguageModelResponseResult, hstring>>(this->shim().GenerateResponseAsync(*reinterpret_cast<hstring const*>(&prompt)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GenerateResponseAsync2(void* prompt, void* options, void** operation) noexcept final try
+        {
+            clear_abi(operation);
+            typename D::abi_guard guard(this->shim());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Microsoft::Windows::AI::Text::LanguageModelResponseResult, hstring>>(this->shim().GenerateResponseAsync(*reinterpret_cast<hstring const*>(&prompt), *reinterpret_cast<winrt::Microsoft::Windows::AI::Text::LanguageModelOptions const*>(&options)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GenerateResponseAsync3(void* context, void* prompt, void* options, void** operation) noexcept final try
+        {
+            clear_abi(operation);
+            typename D::abi_guard guard(this->shim());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Microsoft::Windows::AI::Text::LanguageModelResponseResult, hstring>>(this->shim().GenerateResponseAsync(*reinterpret_cast<winrt::Microsoft::Windows::AI::Text::LanguageModelContext const*>(&context), *reinterpret_cast<hstring const*>(&prompt), *reinterpret_cast<winrt::Microsoft::Windows::AI::Text::LanguageModelOptions const*>(&options)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GenerateResponseFromEmbeddingsAsync(void* promptEmbedding, void** operation) noexcept final try
+        {
+            clear_abi(operation);
+            typename D::abi_guard guard(this->shim());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Microsoft::Windows::AI::Text::LanguageModelResponseResult, hstring>>(this->shim().GenerateResponseFromEmbeddingsAsync(*reinterpret_cast<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::Windows::AI::Foundation::EmbeddingVector> const*>(&promptEmbedding)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GenerateResponseFromEmbeddingsAsync2(void* promptEmbedding, void* options, void** operation) noexcept final try
+        {
+            clear_abi(operation);
+            typename D::abi_guard guard(this->shim());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Microsoft::Windows::AI::Text::LanguageModelResponseResult, hstring>>(this->shim().GenerateResponseFromEmbeddingsAsync(*reinterpret_cast<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::Windows::AI::Foundation::EmbeddingVector> const*>(&promptEmbedding), *reinterpret_cast<winrt::Microsoft::Windows::AI::Text::LanguageModelOptions const*>(&options)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GenerateResponseFromEmbeddingsAsync3(void* context, void* promptEmbedding, void* options, void** operation) noexcept final try
+        {
+            clear_abi(operation);
+            typename D::abi_guard guard(this->shim());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Microsoft::Windows::AI::Text::LanguageModelResponseResult, hstring>>(this->shim().GenerateResponseFromEmbeddingsAsync(*reinterpret_cast<winrt::Microsoft::Windows::AI::Text::LanguageModelContext const*>(&context), *reinterpret_cast<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::Windows::AI::Foundation::EmbeddingVector> const*>(&promptEmbedding), *reinterpret_cast<winrt::Microsoft::Windows::AI::Text::LanguageModelOptions const*>(&options)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GenerateEmbeddingVectors(void* prompt, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::Windows::AI::Text::LanguageModelEmbeddingVectorResult>(this->shim().GenerateEmbeddingVectors(*reinterpret_cast<hstring const*>(&prompt)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GenerateEmbeddingVectors2(void* prompt, void* contentFilterOptions, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::Windows::AI::Text::LanguageModelEmbeddingVectorResult>(this->shim().GenerateEmbeddingVectors(*reinterpret_cast<hstring const*>(&prompt), *reinterpret_cast<winrt::Microsoft::Windows::AI::ContentSafety::ContentFilterOptions const*>(&contentFilterOptions)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetUsablePromptLength(void* prompt, uint64_t* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<uint64_t>(this->shim().GetUsablePromptLength(*reinterpret_cast<hstring const*>(&prompt)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetUsablePromptLength2(void* context, void* prompt, uint64_t* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<uint64_t>(this->shim().GetUsablePromptLength(*reinterpret_cast<winrt::Microsoft::Windows::AI::Text::LanguageModelContext const*>(&context), *reinterpret_cast<hstring const*>(&prompt)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetVectorSpaceId(winrt::guid* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::guid>(this->shim().GetVectorSpaceId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall CreateContext(void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::Windows::AI::Text::LanguageModelContext>(this->shim().CreateContext());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall CreateContext2(void* systemPrompt, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::Windows::AI::Text::LanguageModelContext>(this->shim().CreateContext(*reinterpret_cast<hstring const*>(&systemPrompt)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall CreateContext3(void* systemPrompt, void* contentFilterOptions, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::Windows::AI::Text::LanguageModelContext>(this->shim().CreateContext(*reinterpret_cast<hstring const*>(&systemPrompt), *reinterpret_cast<winrt::Microsoft::Windows::AI::ContentSafety::ContentFilterOptions const*>(&contentFilterOptions)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::Windows::AI::Text::ILanguageModelContext> : produce_base<D, winrt::Microsoft::Windows::AI::Text::ILanguageModelContext>
     {
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Windows::AI::Text::ILanguageModelEmbeddingVectorResult> : produce_base<D, winrt::Microsoft::Windows::AI::Text::ILanguageModelEmbeddingVectorResult>
+    {
+        int32_t __stdcall get_EmbeddingVectors(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<winrt::Microsoft::Windows::AI::Foundation::EmbeddingVector>>(this->shim().EmbeddingVectors());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Status(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::Windows::AI::Text::LanguageModelResponseStatus>(this->shim().Status());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_ExtendedError(winrt::hresult* value) noexcept final try
+        {
+            zero_abi<winrt::hresult>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::hresult>(this->shim().ExtendedError());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
     };
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
@@ -642,6 +1414,20 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::Windows::AI::Text::ITextSummarizer2> : produce_base<D, winrt::Microsoft::Windows::AI::Text::ITextSummarizer2>
+    {
+        int32_t __stdcall SummarizeConversationAsync(void* messages, void* options, void** operation) noexcept final try
+        {
+            clear_abi(operation);
+            typename D::abi_guard guard(this->shim());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Microsoft::Windows::AI::Text::LanguageModelResponseResult, hstring>>(this->shim().SummarizeConversationAsync(*reinterpret_cast<winrt::Windows::Foundation::Collections::IVectorView<winrt::Microsoft::Windows::AI::Text::ConversationItem> const*>(&messages), *reinterpret_cast<winrt::Microsoft::Windows::AI::Text::ConversationSummaryOptions const*>(&options)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::Windows::AI::Text::ITextSummarizerFactory> : produce_base<D, winrt::Microsoft::Windows::AI::Text::ITextSummarizerFactory>
     {
         int32_t __stdcall CreateInstance(void* languageModel, void** value) noexcept final try
@@ -728,6 +1514,14 @@ namespace winrt::impl
 }
 WINRT_EXPORT namespace winrt::Microsoft::Windows::AI::Text
 {
+    inline ConversationItem::ConversationItem() :
+        ConversationItem(impl::call_factory_cast<ConversationItem(*)(winrt::Windows::Foundation::IActivationFactory const&), ConversationItem>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<ConversationItem>(); }))
+    {
+    }
+    inline ConversationSummaryOptions::ConversationSummaryOptions() :
+        ConversationSummaryOptions(impl::call_factory_cast<ConversationSummaryOptions(*)(winrt::Windows::Foundation::IActivationFactory const&), ConversationSummaryOptions>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<ConversationSummaryOptions>(); }))
+    {
+    }
     inline auto LanguageModel::GetReadyState()
     {
         return impl::call_factory_cast<winrt::Microsoft::Windows::AI::AIFeatureReadyState(*)(ILanguageModelStatics const&), LanguageModel, ILanguageModelStatics>([](ILanguageModelStatics const& f) { return f.GetReadyState(); });
@@ -760,21 +1554,29 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::AI::Text
 namespace std
 {
 #ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Microsoft::Windows::AI::Text::IConversationItem> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AI::Text::ILanguageModel> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::AI::Text::ILanguageModel2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AI::Text::ILanguageModelContext> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::AI::Text::ILanguageModelEmbeddingVectorResult> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AI::Text::ILanguageModelOptions> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AI::Text::ILanguageModelResponseResult> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AI::Text::ILanguageModelStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AI::Text::ITextRewriter> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AI::Text::ITextRewriterFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AI::Text::ITextSummarizer> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::AI::Text::ITextSummarizer2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AI::Text::ITextSummarizerFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AI::Text::ITextToTableConverter> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AI::Text::ITextToTableConverterFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AI::Text::ITextToTableResponseResult> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AI::Text::ITextToTableRow> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::AI::Text::ConversationItem> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::AI::Text::ConversationSummaryOptions> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AI::Text::LanguageModel> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AI::Text::LanguageModelContext> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::AI::Text::LanguageModelEmbeddingVectorResult> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AI::Text::LanguageModelOptions> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AI::Text::LanguageModelResponseResult> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AI::Text::TextRewriter> : winrt::impl::hash_base {};

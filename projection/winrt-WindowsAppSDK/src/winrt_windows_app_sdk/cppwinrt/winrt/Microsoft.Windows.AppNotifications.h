@@ -285,6 +285,40 @@ namespace winrt::impl
             check_hresult(_winrt_abi_type->put_SuppressDisplay(value));
         }
     }
+    template <typename D> auto consume_Microsoft_Windows_AppNotifications_IAppNotification2<D>::ConferencingConfig() const
+    {
+        void* value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AppNotifications::IAppNotification2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AppNotifications::IAppNotification2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AppNotifications::IAppNotification2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_ConferencingConfig(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AppNotifications::IAppNotification2>**)this;
+            check_hresult(_winrt_abi_type->get_ConferencingConfig(&value));
+        }
+        return winrt::Microsoft::Windows::AppNotifications::AppNotificationConferencingConfig{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_AppNotifications_IAppNotification2<D>::ConferencingConfig(winrt::Microsoft::Windows::AppNotifications::AppNotificationConferencingConfig const& value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AppNotifications::IAppNotification2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AppNotifications::IAppNotification2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AppNotifications::IAppNotification2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->put_ConferencingConfig(*(void**)(&value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AppNotifications::IAppNotification2>**)this;
+            check_hresult(_winrt_abi_type->put_ConferencingConfig(*(void**)(&value)));
+        }
+    }
     template <typename D> auto consume_Microsoft_Windows_AppNotifications_IAppNotificationActivatedEventArgs<D>::Argument() const
     {
         void* value{};
@@ -338,6 +372,126 @@ namespace winrt::impl
             check_hresult(_winrt_abi_type->get_Arguments(&value));
         }
         return winrt::Windows::Foundation::Collections::IMap<hstring, hstring>{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_AppNotifications_IAppNotificationConferencingConfig<D>::VideoDeviceId() const
+    {
+        void* value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfig>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfig, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfig>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_VideoDeviceId(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfig>**)this;
+            check_hresult(_winrt_abi_type->get_VideoDeviceId(&value));
+        }
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_AppNotifications_IAppNotificationConferencingConfig<D>::VideoDeviceId(param::hstring const& value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfig>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfig, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfig>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->put_VideoDeviceId(*(void**)(&value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfig>**)this;
+            check_hresult(_winrt_abi_type->put_VideoDeviceId(*(void**)(&value)));
+        }
+    }
+    template <typename D> auto consume_Microsoft_Windows_AppNotifications_IAppNotificationConferencingConfig<D>::AudioInputDeviceId() const
+    {
+        void* value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfig>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfig, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfig>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_AudioInputDeviceId(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfig>**)this;
+            check_hresult(_winrt_abi_type->get_AudioInputDeviceId(&value));
+        }
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_AppNotifications_IAppNotificationConferencingConfig<D>::AudioInputDeviceId(param::hstring const& value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfig>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfig, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfig>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->put_AudioInputDeviceId(*(void**)(&value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfig>**)this;
+            check_hresult(_winrt_abi_type->put_AudioInputDeviceId(*(void**)(&value)));
+        }
+    }
+    template <typename D> auto consume_Microsoft_Windows_AppNotifications_IAppNotificationConferencingConfig<D>::AudioOutputDeviceId() const
+    {
+        void* value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfig>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfig, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfig>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_AudioOutputDeviceId(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfig>**)this;
+            check_hresult(_winrt_abi_type->get_AudioOutputDeviceId(&value));
+        }
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_AppNotifications_IAppNotificationConferencingConfig<D>::AudioOutputDeviceId(param::hstring const& value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfig>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfig, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfig>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->put_AudioOutputDeviceId(*(void**)(&value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfig>**)this;
+            check_hresult(_winrt_abi_type->put_AudioOutputDeviceId(*(void**)(&value)));
+        }
+    }
+    template <typename D> auto consume_Microsoft_Windows_AppNotifications_IAppNotificationConferencingConfigStatics<D>::IsCallingPreviewSupported() const
+    {
+        bool result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfigStatics>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfigStatics, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfigStatics>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->IsCallingPreviewSupported(&result));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfigStatics>**)this;
+            check_hresult(_winrt_abi_type->IsCallingPreviewSupported(&result));
+        }
+        return result;
     }
     template <typename D> auto consume_Microsoft_Windows_AppNotifications_IAppNotificationFactory<D>::CreateInstance(param::hstring const& payload) const
     {
@@ -986,6 +1140,27 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::Windows::AppNotifications::IAppNotification2> : produce_base<D, winrt::Microsoft::Windows::AppNotifications::IAppNotification2>
+    {
+        int32_t __stdcall get_ConferencingConfig(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::Windows::AppNotifications::AppNotificationConferencingConfig>(this->shim().ConferencingConfig());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_ConferencingConfig(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ConferencingConfig(*reinterpret_cast<winrt::Microsoft::Windows::AppNotifications::AppNotificationConferencingConfig const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::Windows::AppNotifications::IAppNotificationActivatedEventArgs> : produce_base<D, winrt::Microsoft::Windows::AppNotifications::IAppNotificationActivatedEventArgs>
     {
         int32_t __stdcall get_Argument(void** value) noexcept final try
@@ -1015,6 +1190,70 @@ namespace winrt::impl
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
             *value = detach_from<winrt::Windows::Foundation::Collections::IMap<hstring, hstring>>(this->shim().Arguments());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfig> : produce_base<D, winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfig>
+    {
+        int32_t __stdcall get_VideoDeviceId(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().VideoDeviceId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_VideoDeviceId(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().VideoDeviceId(*reinterpret_cast<hstring const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_AudioInputDeviceId(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().AudioInputDeviceId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_AudioInputDeviceId(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().AudioInputDeviceId(*reinterpret_cast<hstring const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_AudioOutputDeviceId(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().AudioOutputDeviceId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_AudioOutputDeviceId(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().AudioOutputDeviceId(*reinterpret_cast<hstring const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfigStatics> : produce_base<D, winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfigStatics>
+    {
+        int32_t __stdcall IsCallingPreviewSupported(bool* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<bool>(this->shim().IsCallingPreviewSupported());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1293,6 +1532,14 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::AppNotifications
         AppNotification(impl::call_factory<AppNotification, IAppNotificationFactory>([&](IAppNotificationFactory const& f) { return f.CreateInstance(payload); }))
     {
     }
+    inline AppNotificationConferencingConfig::AppNotificationConferencingConfig() :
+        AppNotificationConferencingConfig(impl::call_factory_cast<AppNotificationConferencingConfig(*)(winrt::Windows::Foundation::IActivationFactory const&), AppNotificationConferencingConfig>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<AppNotificationConferencingConfig>(); }))
+    {
+    }
+    inline auto AppNotificationConferencingConfig::IsCallingPreviewSupported()
+    {
+        return impl::call_factory_cast<bool(*)(IAppNotificationConferencingConfigStatics const&), AppNotificationConferencingConfig, IAppNotificationConferencingConfigStatics>([](IAppNotificationConferencingConfigStatics const& f) { return f.IsCallingPreviewSupported(); });
+    }
     inline auto AppNotificationManager::Default()
     {
         return impl::call_factory_cast<winrt::Microsoft::Windows::AppNotifications::AppNotificationManager(*)(IAppNotificationManagerStatics const&), AppNotificationManager, IAppNotificationManagerStatics>([](IAppNotificationManagerStatics const& f) { return f.Default(); });
@@ -1310,8 +1557,11 @@ namespace std
 {
 #ifndef WINRT_LEAN_AND_MEAN
     template<> struct hash<winrt::Microsoft::Windows::AppNotifications::IAppNotification> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::AppNotifications::IAppNotification2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AppNotifications::IAppNotificationActivatedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AppNotifications::IAppNotificationActivatedEventArgs2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfig> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfigStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AppNotifications::IAppNotificationFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AppNotifications::IAppNotificationManager> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AppNotifications::IAppNotificationManager2> : winrt::impl::hash_base {};
@@ -1321,6 +1571,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::Windows::AppNotifications::IAppNotificationProgressDataFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AppNotifications::AppNotification> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AppNotifications::AppNotificationActivatedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::AppNotifications::AppNotificationConferencingConfig> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AppNotifications::AppNotificationManager> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AppNotifications::AppNotificationProgressData> : winrt::impl::hash_base {};
 #endif

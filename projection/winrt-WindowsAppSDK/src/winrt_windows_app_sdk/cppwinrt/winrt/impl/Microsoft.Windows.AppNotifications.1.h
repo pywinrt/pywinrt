@@ -13,6 +13,13 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::AppNotifications
         IAppNotification(std::nullptr_t = nullptr) noexcept {}
         IAppNotification(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IAppNotification2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IAppNotification2>
+    {
+        IAppNotification2(std::nullptr_t = nullptr) noexcept {}
+        IAppNotification2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IAppNotificationActivatedEventArgs :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IAppNotificationActivatedEventArgs>
@@ -26,6 +33,20 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::AppNotifications
     {
         IAppNotificationActivatedEventArgs2(std::nullptr_t = nullptr) noexcept {}
         IAppNotificationActivatedEventArgs2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IAppNotificationConferencingConfig :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IAppNotificationConferencingConfig>
+    {
+        IAppNotificationConferencingConfig(std::nullptr_t = nullptr) noexcept {}
+        IAppNotificationConferencingConfig(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IAppNotificationConferencingConfigStatics :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IAppNotificationConferencingConfigStatics>
+    {
+        IAppNotificationConferencingConfigStatics(std::nullptr_t = nullptr) noexcept {}
+        IAppNotificationConferencingConfigStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IAppNotificationFactory :
         winrt::Windows::Foundation::IInspectable,

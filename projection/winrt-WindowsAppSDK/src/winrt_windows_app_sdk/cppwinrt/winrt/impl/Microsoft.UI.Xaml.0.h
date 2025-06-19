@@ -587,6 +587,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml
     struct IWindowVisibilityChangedEventArgs;
     struct IXamlIsland;
     struct IXamlIslandFactory;
+    struct IXamlIslandFeature_ExperimentalApi;
     struct IXamlResourceReferenceFailedEventArgs;
     struct IXamlRoot;
     struct IXamlRoot2;
@@ -835,6 +836,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::IWindowVisibilityChangedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::IXamlIsland>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::IXamlIslandFactory>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::IXamlIslandFeature_ExperimentalApi>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::IXamlResourceReferenceFailedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::IXamlRoot>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::IXamlRoot2>{ using type = interface_category; };
@@ -1235,6 +1237,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::IWindowVisibilityChangedEventArgs> = L"Microsoft.UI.Xaml.IWindowVisibilityChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::IXamlIsland> = L"Microsoft.UI.Xaml.IXamlIsland";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::IXamlIslandFactory> = L"Microsoft.UI.Xaml.IXamlIslandFactory";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::IXamlIslandFeature_ExperimentalApi> = L"Microsoft.UI.Xaml.IXamlIslandFeature_ExperimentalApi";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::IXamlResourceReferenceFailedEventArgs> = L"Microsoft.UI.Xaml.IXamlResourceReferenceFailedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::IXamlRoot> = L"Microsoft.UI.Xaml.IXamlRoot";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::IXamlRoot2> = L"Microsoft.UI.Xaml.IXamlRoot2";
@@ -1397,6 +1400,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::IWindowVisibilityChangedEventArgs>{ 0x7BB24A6D,0x070C,0x5CB6,{ 0x8E,0x9C,0x54,0x79,0x05,0xBE,0x82,0x65 } }; // 7BB24A6D-070C-5CB6-8E9C-547905BE8265
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::IXamlIsland>{ 0x845A5C62,0xB0F3,0x5DB8,{ 0xB4,0xFF,0x41,0x42,0xBB,0xD8,0xA0,0x44 } }; // 845A5C62-B0F3-5DB8-B4FF-4142BBD8A044
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::IXamlIslandFactory>{ 0x267F707C,0x5E18,0x57B4,{ 0x9F,0xF7,0xD1,0x1D,0xA6,0x6E,0x4A,0x11 } }; // 267F707C-5E18-57B4-9FF7-D11DA66E4A11
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::IXamlIslandFeature_ExperimentalApi>{ 0x09C746DE,0x88AC,0x502A,{ 0xA4,0x16,0xEA,0xC1,0x2F,0xF5,0x80,0xA2 } }; // 09C746DE-88AC-502A-A416-EAC12FF580A2
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::IXamlResourceReferenceFailedEventArgs>{ 0x1B175EE6,0xD08B,0x50FF,{ 0x8F,0x89,0xA1,0xFF,0x27,0xED,0xEF,0x66 } }; // 1B175EE6-D08B-50FF-8F89-A1FF27EDEF66
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::IXamlRoot>{ 0x60CB215A,0xAD15,0x520A,{ 0x8B,0x01,0x44,0x16,0x82,0x4F,0x04,0x41 } }; // 60CB215A-AD15-520A-8B01-4416824F0441
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::IXamlRoot2>{ 0xBDEE0F42,0x71CB,0x50C5,{ 0x82,0x9B,0x46,0x14,0xD9,0x8C,0x57,0x94 } }; // BDEE0F42-71CB-50C5-829B-4614D98C5794
@@ -3173,6 +3177,14 @@ namespace winrt::impl
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
             virtual int32_t __stdcall CreateInstance(void*, void**, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::IXamlIslandFeature_ExperimentalApi>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_ShouldConstrainPopupsToWorkArea(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_ShouldConstrainPopupsToWorkArea(bool) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Xaml::IXamlResourceReferenceFailedEventArgs>
@@ -5403,6 +5415,16 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Xaml::IXamlIslandFactory>
     {
         template <typename D> using type = consume_Microsoft_UI_Xaml_IXamlIslandFactory<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_IXamlIslandFeature_ExperimentalApi
+    {
+        [[nodiscard]] auto ShouldConstrainPopupsToWorkArea() const;
+        auto ShouldConstrainPopupsToWorkArea(bool value) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::IXamlIslandFeature_ExperimentalApi>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_IXamlIslandFeature_ExperimentalApi<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Xaml_IXamlResourceReferenceFailedEventArgs

@@ -169,6 +169,11 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Composition
         Absolute = 0,
         Relative = 1,
     };
+    enum class CompositionProjectedShadowDrawOrder : int32_t
+    {
+        PostChildren = 0,
+        PreChildren = 1,
+    };
     enum class CompositionStretch : int32_t
     {
         None = 0,
@@ -256,6 +261,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Composition
     struct ICompositionMaskBrush;
     struct ICompositionMipmapSurface;
     struct ICompositionNineGridBrush;
+    struct ICompositionNotificationDeferral;
     struct ICompositionObject;
     struct ICompositionObject2;
     struct ICompositionObject3;
@@ -314,6 +320,9 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Composition
     struct IDropShadow;
     struct IDropShadow2;
     struct IElasticEasingFunction;
+    struct IExpCompositionProjectedShadow;
+    struct IExpCompositionProjectedShadowCaster;
+    struct IExpCompositionProjectedShadowReceiver;
     struct IExponentialEasingFunction;
     struct IExpressionAnimation;
     struct IImplicitAnimationCollection;
@@ -406,6 +415,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Composition
     struct CompositionMaskBrush;
     struct CompositionMipmapSurface;
     struct CompositionNineGridBrush;
+    struct CompositionNotificationDeferral;
     struct CompositionObject;
     struct CompositionPath;
     struct CompositionPathGeometry;
@@ -538,6 +548,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Composition::ICompositionMaskBrush>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Composition::ICompositionMipmapSurface>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Composition::ICompositionNineGridBrush>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Composition::ICompositionNotificationDeferral>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Composition::ICompositionObject>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Composition::ICompositionObject2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Composition::ICompositionObject3>{ using type = interface_category; };
@@ -596,6 +607,9 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Composition::IDropShadow>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Composition::IDropShadow2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Composition::IElasticEasingFunction>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadow>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowCaster>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowReceiver>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Composition::IExponentialEasingFunction>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Composition::IExpressionAnimation>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Composition::IImplicitAnimationCollection>{ using type = interface_category; };
@@ -688,6 +702,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Composition::CompositionMaskBrush>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Composition::CompositionMipmapSurface>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Composition::CompositionNineGridBrush>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Composition::CompositionNotificationDeferral>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Composition::CompositionObject>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Composition::CompositionPath>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Composition::CompositionPathGeometry>{ using type = class_category; };
@@ -769,6 +784,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Composition::CompositionGetValueStatus>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Composition::CompositionGradientExtendMode>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Composition::CompositionMappingMode>{ using type = enum_category; };
+    template <> struct category<winrt::Microsoft::UI::Composition::CompositionProjectedShadowDrawOrder>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Composition::CompositionStretch>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Composition::CompositionStrokeCap>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Composition::CompositionStrokeLineJoin>{ using type = enum_category; };
@@ -812,6 +828,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Composition::CompositionMaskBrush> = L"Microsoft.UI.Composition.CompositionMaskBrush";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Composition::CompositionMipmapSurface> = L"Microsoft.UI.Composition.CompositionMipmapSurface";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Composition::CompositionNineGridBrush> = L"Microsoft.UI.Composition.CompositionNineGridBrush";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Composition::CompositionNotificationDeferral> = L"Microsoft.UI.Composition.CompositionNotificationDeferral";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Composition::CompositionObject> = L"Microsoft.UI.Composition.CompositionObject";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Composition::CompositionPath> = L"Microsoft.UI.Composition.CompositionPath";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Composition::CompositionPathGeometry> = L"Microsoft.UI.Composition.CompositionPathGeometry";
@@ -893,6 +910,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Composition::CompositionGetValueStatus> = L"Microsoft.UI.Composition.CompositionGetValueStatus";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Composition::CompositionGradientExtendMode> = L"Microsoft.UI.Composition.CompositionGradientExtendMode";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Composition::CompositionMappingMode> = L"Microsoft.UI.Composition.CompositionMappingMode";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Composition::CompositionProjectedShadowDrawOrder> = L"Microsoft.UI.Composition.CompositionProjectedShadowDrawOrder";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Composition::CompositionStretch> = L"Microsoft.UI.Composition.CompositionStretch";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Composition::CompositionStrokeCap> = L"Microsoft.UI.Composition.CompositionStrokeCap";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Composition::CompositionStrokeLineJoin> = L"Microsoft.UI.Composition.CompositionStrokeLineJoin";
@@ -962,6 +980,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Composition::ICompositionMaskBrush> = L"Microsoft.UI.Composition.ICompositionMaskBrush";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Composition::ICompositionMipmapSurface> = L"Microsoft.UI.Composition.ICompositionMipmapSurface";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Composition::ICompositionNineGridBrush> = L"Microsoft.UI.Composition.ICompositionNineGridBrush";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Composition::ICompositionNotificationDeferral> = L"Microsoft.UI.Composition.ICompositionNotificationDeferral";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Composition::ICompositionObject> = L"Microsoft.UI.Composition.ICompositionObject";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Composition::ICompositionObject2> = L"Microsoft.UI.Composition.ICompositionObject2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Composition::ICompositionObject3> = L"Microsoft.UI.Composition.ICompositionObject3";
@@ -1020,6 +1039,9 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Composition::IDropShadow> = L"Microsoft.UI.Composition.IDropShadow";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Composition::IDropShadow2> = L"Microsoft.UI.Composition.IDropShadow2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Composition::IElasticEasingFunction> = L"Microsoft.UI.Composition.IElasticEasingFunction";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadow> = L"Microsoft.UI.Composition.IExpCompositionProjectedShadow";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowCaster> = L"Microsoft.UI.Composition.IExpCompositionProjectedShadowCaster";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowReceiver> = L"Microsoft.UI.Composition.IExpCompositionProjectedShadowReceiver";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Composition::IExponentialEasingFunction> = L"Microsoft.UI.Composition.IExponentialEasingFunction";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Composition::IExpressionAnimation> = L"Microsoft.UI.Composition.IExpressionAnimation";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Composition::IImplicitAnimationCollection> = L"Microsoft.UI.Composition.IImplicitAnimationCollection";
@@ -1138,6 +1160,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Composition::ICompositionMaskBrush>{ 0xC9502786,0x65AA,0x5BE5,{ 0xA6,0x79,0xC3,0xB5,0xDB,0xFB,0x0D,0xC6 } }; // C9502786-65AA-5BE5-A679-C3B5DBFB0DC6
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Composition::ICompositionMipmapSurface>{ 0x681F1E47,0x6E43,0x5B55,{ 0xBE,0x3A,0xE5,0xC8,0x58,0xA2,0xD5,0xFA } }; // 681F1E47-6E43-5B55-BE3A-E5C858A2D5FA
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Composition::ICompositionNineGridBrush>{ 0xC77A3D21,0xC7EE,0x517A,{ 0x98,0xF4,0xAD,0x9A,0x72,0x02,0xBC,0x86 } }; // C77A3D21-C7EE-517A-98F4-AD9A7202BC86
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Composition::ICompositionNotificationDeferral>{ 0x396698B7,0x437B,0x5ACF,{ 0xAE,0xC9,0x63,0x42,0xC4,0x37,0xFA,0xF1 } }; // 396698B7-437B-5ACF-AEC9-6342C437FAF1
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Composition::ICompositionObject>{ 0x0E583D49,0xFB5E,0x5481,{ 0xA4,0x26,0xD3,0xC4,0x1E,0x05,0x9A,0x5A } }; // 0E583D49-FB5E-5481-A426-D3C41E059A5A
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Composition::ICompositionObject2>{ 0xBCBBFEBF,0x799C,0x51CE,{ 0x9C,0x82,0xB6,0xE4,0x9E,0x7E,0x62,0xE1 } }; // BCBBFEBF-799C-51CE-9C82-B6E49E7E62E1
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Composition::ICompositionObject3>{ 0xD43C5CF1,0x47DF,0x52B8,{ 0xB4,0x09,0xD5,0x83,0x15,0x03,0x90,0x5E } }; // D43C5CF1-47DF-52B8-B409-D5831503905E
@@ -1196,6 +1219,9 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Composition::IDropShadow>{ 0x977095D2,0x265F,0x5F58,{ 0x97,0x89,0xCB,0x7F,0x85,0xE9,0x8C,0x9E } }; // 977095D2-265F-5F58-9789-CB7F85E98C9E
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Composition::IDropShadow2>{ 0xCBC7C266,0x2D33,0x5711,{ 0xB3,0xB4,0x56,0x99,0x41,0x0B,0xEF,0x56 } }; // CBC7C266-2D33-5711-B3B4-5699410BEF56
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Composition::IElasticEasingFunction>{ 0xB952E12F,0x4A50,0x51A9,{ 0xA1,0x1A,0x23,0x85,0x5F,0x4A,0xAE,0x07 } }; // B952E12F-4A50-51A9-A11A-23855F4AAE07
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadow>{ 0xDA7447BF,0x78A8,0x5023,{ 0xB1,0xD5,0x4E,0xB0,0x90,0xD3,0xCE,0x25 } }; // DA7447BF-78A8-5023-B1D5-4EB090D3CE25
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowCaster>{ 0x201F3A32,0xB715,0x5A3B,{ 0xAF,0x0C,0x57,0x0F,0x1D,0xAE,0x4F,0x1B } }; // 201F3A32-B715-5A3B-AF0C-570F1DAE4F1B
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowReceiver>{ 0x85A2028B,0x896B,0x56A2,{ 0x89,0x6B,0x59,0x85,0xBA,0x7F,0xB0,0xCF } }; // 85A2028B-896B-56A2-896B-5985BA7FB0CF
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Composition::IExponentialEasingFunction>{ 0xDF29ECC1,0x3FFC,0x565F,{ 0x9D,0x6C,0x53,0x35,0x86,0x90,0x81,0x06 } }; // DF29ECC1-3FFC-565F-9D6C-533586908106
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Composition::IExpressionAnimation>{ 0x7FFF5826,0x1992,0x56C0,{ 0x90,0x60,0x5A,0xDE,0x56,0x1A,0x4F,0x2D } }; // 7FFF5826-1992-56C0-9060-5ADE561A4F2D
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Composition::IImplicitAnimationCollection>{ 0xC5C0689E,0xF5AE,0x5BED,{ 0x82,0x9B,0xC5,0x22,0xCD,0xA3,0x97,0x17 } }; // C5C0689E-F5AE-5BED-829B-C522CDA39717
@@ -1287,6 +1313,7 @@ namespace winrt::impl
     template <> struct default_interface<winrt::Microsoft::UI::Composition::CompositionMaskBrush>{ using type = winrt::Microsoft::UI::Composition::ICompositionMaskBrush; };
     template <> struct default_interface<winrt::Microsoft::UI::Composition::CompositionMipmapSurface>{ using type = winrt::Microsoft::UI::Composition::ICompositionMipmapSurface; };
     template <> struct default_interface<winrt::Microsoft::UI::Composition::CompositionNineGridBrush>{ using type = winrt::Microsoft::UI::Composition::ICompositionNineGridBrush; };
+    template <> struct default_interface<winrt::Microsoft::UI::Composition::CompositionNotificationDeferral>{ using type = winrt::Microsoft::UI::Composition::ICompositionNotificationDeferral; };
     template <> struct default_interface<winrt::Microsoft::UI::Composition::CompositionObject>{ using type = winrt::Microsoft::UI::Composition::ICompositionObject; };
     template <> struct default_interface<winrt::Microsoft::UI::Composition::CompositionPath>{ using type = winrt::Microsoft::UI::Composition::ICompositionPath; };
     template <> struct default_interface<winrt::Microsoft::UI::Composition::CompositionPathGeometry>{ using type = winrt::Microsoft::UI::Composition::ICompositionPathGeometry; };
@@ -1953,6 +1980,13 @@ namespace winrt::impl
             virtual int32_t __stdcall SetInsetScalesWithValues(float, float, float, float) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::UI::Composition::ICompositionNotificationDeferral>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall Complete() noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::UI::Composition::ICompositionObject>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -2573,6 +2607,38 @@ namespace winrt::impl
             virtual int32_t __stdcall get_Mode(int32_t*) noexcept = 0;
             virtual int32_t __stdcall get_Oscillations(int32_t*) noexcept = 0;
             virtual int32_t __stdcall get_Springiness(float*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadow>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_MaxOpacity(float*) noexcept = 0;
+            virtual int32_t __stdcall put_MaxOpacity(float) noexcept = 0;
+            virtual int32_t __stdcall get_MinOpacity(float*) noexcept = 0;
+            virtual int32_t __stdcall put_MinOpacity(float) noexcept = 0;
+            virtual int32_t __stdcall get_OpacityFalloff(float*) noexcept = 0;
+            virtual int32_t __stdcall put_OpacityFalloff(float) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowCaster>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_AncestorClip(void**) noexcept = 0;
+            virtual int32_t __stdcall put_AncestorClip(void*) noexcept = 0;
+            virtual int32_t __stdcall get_Mask(void**) noexcept = 0;
+            virtual int32_t __stdcall put_Mask(void*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowReceiver>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_DrawOrder(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall put_DrawOrder(int32_t) noexcept = 0;
+            virtual int32_t __stdcall get_Mask(void**) noexcept = 0;
+            virtual int32_t __stdcall put_Mask(void*) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Composition::IExponentialEasingFunction>
@@ -3854,6 +3920,15 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_UI_Composition_ICompositionNineGridBrush<D>;
     };
     template <typename D>
+    struct consume_Microsoft_UI_Composition_ICompositionNotificationDeferral
+    {
+        auto Complete() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Composition::ICompositionNotificationDeferral>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Composition_ICompositionNotificationDeferral<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_UI_Composition_ICompositionObject
     {
         [[nodiscard]] auto Compositor() const;
@@ -4592,6 +4667,44 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Composition::IElasticEasingFunction>
     {
         template <typename D> using type = consume_Microsoft_UI_Composition_IElasticEasingFunction<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Composition_IExpCompositionProjectedShadow
+    {
+        [[nodiscard]] auto MaxOpacity() const;
+        auto MaxOpacity(float value) const;
+        [[nodiscard]] auto MinOpacity() const;
+        auto MinOpacity(float value) const;
+        [[nodiscard]] auto OpacityFalloff() const;
+        auto OpacityFalloff(float value) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadow>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Composition_IExpCompositionProjectedShadow<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Composition_IExpCompositionProjectedShadowCaster
+    {
+        [[nodiscard]] auto AncestorClip() const;
+        auto AncestorClip(winrt::Microsoft::UI::Composition::Visual const& value) const;
+        [[nodiscard]] auto Mask() const;
+        auto Mask(winrt::Microsoft::UI::Composition::CompositionBrush const& value) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowCaster>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Composition_IExpCompositionProjectedShadowCaster<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Composition_IExpCompositionProjectedShadowReceiver
+    {
+        [[nodiscard]] auto DrawOrder() const;
+        auto DrawOrder(winrt::Microsoft::UI::Composition::CompositionProjectedShadowDrawOrder const& value) const;
+        [[nodiscard]] auto Mask() const;
+        auto Mask(winrt::Microsoft::UI::Composition::CompositionBrush const& value) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowReceiver>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Composition_IExpCompositionProjectedShadowReceiver<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Composition_IExponentialEasingFunction

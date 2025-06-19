@@ -2689,6 +2689,24 @@ namespace winrt::impl
         }
         return winrt::Microsoft::UI::Xaml::Automation::Peers::InfoBarAutomationPeer{ value, take_ownership_from_abi };
     }
+    template <typename D> auto consume_Microsoft_UI_Xaml_Automation_Peers_IInkCanvasAutomationPeerFactory<D>::CreateInstance(winrt::Microsoft::UI::Xaml::Controls::InkCanvas const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const
+    {
+        void* value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Xaml::Automation::Peers::IInkCanvasAutomationPeerFactory>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Xaml::Automation::Peers::IInkCanvasAutomationPeerFactory, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Automation::Peers::IInkCanvasAutomationPeerFactory>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->CreateInstance(*(void**)(&owner), *(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Automation::Peers::IInkCanvasAutomationPeerFactory>**)this;
+            check_hresult(_winrt_abi_type->CreateInstance(*(void**)(&owner), *(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
+        }
+        return winrt::Microsoft::UI::Xaml::Automation::Peers::InkCanvasAutomationPeer{ value, take_ownership_from_abi };
+    }
     template <typename D> auto consume_Microsoft_UI_Xaml_Automation_Peers_IItemAutomationPeer<D>::Item() const
     {
         void* value{};
@@ -3156,6 +3174,24 @@ namespace winrt::impl
             check_hresult(_winrt_abi_type->CreateInstance(*(void**)(&owner), *(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
         }
         return winrt::Microsoft::UI::Xaml::Automation::Peers::NumberBoxAutomationPeer{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_Automation_Peers_IPagerControlAutomationPeerFactory<D>::CreateInstance(winrt::Microsoft::UI::Xaml::Controls::PagerControl const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const
+    {
+        void* value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Xaml::Automation::Peers::IPagerControlAutomationPeerFactory>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Xaml::Automation::Peers::IPagerControlAutomationPeerFactory, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Automation::Peers::IPagerControlAutomationPeerFactory>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->CreateInstance(*(void**)(&owner), *(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Automation::Peers::IPagerControlAutomationPeerFactory>**)this;
+            check_hresult(_winrt_abi_type->CreateInstance(*(void**)(&owner), *(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
+        }
+        return winrt::Microsoft::UI::Xaml::Automation::Peers::PagerControlAutomationPeer{ value, take_ownership_from_abi };
     }
     template <typename D> auto consume_Microsoft_UI_Xaml_Automation_Peers_IPasswordBoxAutomationPeerFactory<D>::CreateInstanceWithOwner(winrt::Microsoft::UI::Xaml::Controls::PasswordBox const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const
     {
@@ -5594,6 +5630,29 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Xaml::Automation::Peers::IInkCanvasAutomationPeer> : produce_base<D, winrt::Microsoft::UI::Xaml::Automation::Peers::IInkCanvasAutomationPeer>
+    {
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Xaml::Automation::Peers::IInkCanvasAutomationPeerFactory> : produce_base<D, winrt::Microsoft::UI::Xaml::Automation::Peers::IInkCanvasAutomationPeerFactory>
+    {
+        int32_t __stdcall CreateInstance(void* owner, void* baseInterface, void** innerInterface, void** value) noexcept final try
+        {
+            if (innerInterface) *innerInterface = nullptr;
+            winrt::Windows::Foundation::IInspectable winrt_impl_innerInterface;
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Xaml::Automation::Peers::InkCanvasAutomationPeer>(this->shim().CreateInstance(*reinterpret_cast<winrt::Microsoft::UI::Xaml::Controls::InkCanvas const*>(&owner), *reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&baseInterface), winrt_impl_innerInterface));
+                if (innerInterface) *innerInterface = detach_abi(winrt_impl_innerInterface);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::UI::Xaml::Automation::Peers::IItemAutomationPeer> : produce_base<D, winrt::Microsoft::UI::Xaml::Automation::Peers::IItemAutomationPeer>
     {
         int32_t __stdcall get_Item(void** value) noexcept final try
@@ -6152,6 +6211,29 @@ namespace winrt::impl
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
             *value = detach_from<winrt::Microsoft::UI::Xaml::Automation::Peers::NumberBoxAutomationPeer>(this->shim().CreateInstance(*reinterpret_cast<winrt::Microsoft::UI::Xaml::Controls::NumberBox const*>(&owner), *reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&baseInterface), winrt_impl_innerInterface));
+                if (innerInterface) *innerInterface = detach_abi(winrt_impl_innerInterface);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Xaml::Automation::Peers::IPagerControlAutomationPeer> : produce_base<D, winrt::Microsoft::UI::Xaml::Automation::Peers::IPagerControlAutomationPeer>
+    {
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Xaml::Automation::Peers::IPagerControlAutomationPeerFactory> : produce_base<D, winrt::Microsoft::UI::Xaml::Automation::Peers::IPagerControlAutomationPeerFactory>
+    {
+        int32_t __stdcall CreateInstance(void* owner, void* baseInterface, void** innerInterface, void** value) noexcept final try
+        {
+            if (innerInterface) *innerInterface = nullptr;
+            winrt::Windows::Foundation::IInspectable winrt_impl_innerInterface;
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Xaml::Automation::Peers::PagerControlAutomationPeer>(this->shim().CreateInstance(*reinterpret_cast<winrt::Microsoft::UI::Xaml::Controls::PagerControl const*>(&owner), *reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&baseInterface), winrt_impl_innerInterface));
                 if (innerInterface) *innerInterface = detach_abi(winrt_impl_innerInterface);
             return 0;
         }
@@ -7744,6 +7826,11 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Automation::Peers
         winrt::Windows::Foundation::IInspectable baseInterface, innerInterface;
         *this = impl::call_factory<InfoBarAutomationPeer, IInfoBarAutomationPeerFactory>([&](IInfoBarAutomationPeerFactory const& f) { return f.CreateInstance(owner, baseInterface, innerInterface); });
     }
+    inline InkCanvasAutomationPeer::InkCanvasAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::InkCanvas const& owner)
+    {
+        winrt::Windows::Foundation::IInspectable baseInterface, innerInterface;
+        *this = impl::call_factory<InkCanvasAutomationPeer, IInkCanvasAutomationPeerFactory>([&](IInkCanvasAutomationPeerFactory const& f) { return f.CreateInstance(owner, baseInterface, innerInterface); });
+    }
     inline ItemAutomationPeer::ItemAutomationPeer(winrt::Windows::Foundation::IInspectable const& item, winrt::Microsoft::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer const& parent)
     {
         winrt::Windows::Foundation::IInspectable baseInterface, innerInterface;
@@ -7848,6 +7935,11 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Automation::Peers
     {
         winrt::Windows::Foundation::IInspectable baseInterface, innerInterface;
         *this = impl::call_factory<NumberBoxAutomationPeer, INumberBoxAutomationPeerFactory>([&](INumberBoxAutomationPeerFactory const& f) { return f.CreateInstance(owner, baseInterface, innerInterface); });
+    }
+    inline PagerControlAutomationPeer::PagerControlAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::PagerControl const& owner)
+    {
+        winrt::Windows::Foundation::IInspectable baseInterface, innerInterface;
+        *this = impl::call_factory<PagerControlAutomationPeer, IPagerControlAutomationPeerFactory>([&](IPagerControlAutomationPeerFactory const& f) { return f.CreateInstance(owner, baseInterface, innerInterface); });
     }
     inline PasswordBoxAutomationPeer::PasswordBoxAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::PasswordBox const& owner)
     {
@@ -8847,6 +8939,24 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Automation::Peers
         }
     };
     template <typename D, typename... Interfaces>
+    struct InkCanvasAutomationPeerT :
+        implements<D, winrt::Microsoft::UI::Xaml::Automation::Peers::IAutomationPeerOverrides, composing, Interfaces...>,
+        impl::require<D, winrt::Microsoft::UI::Xaml::Automation::Peers::IInkCanvasAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::IFrameworkElementAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::IAutomationPeer, winrt::Microsoft::UI::Xaml::IDependencyObject>,
+        protected impl::require<D, winrt::Microsoft::UI::Xaml::Automation::Peers::IAutomationPeerProtected>,
+        impl::base<D, InkCanvasAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer, winrt::Microsoft::UI::Xaml::DependencyObject>,
+        winrt::Microsoft::UI::Xaml::Automation::Peers::IAutomationPeerOverridesT<D>
+    {
+        using composable = InkCanvasAutomationPeer;
+        friend impl::consume_t<D, winrt::Microsoft::UI::Xaml::Automation::Peers::IAutomationPeerProtected>;
+        friend impl::require_one<D, winrt::Microsoft::UI::Xaml::Automation::Peers::IAutomationPeerProtected>;
+        friend impl::produce<D, winrt::Microsoft::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>;
+    protected:
+        InkCanvasAutomationPeerT(winrt::Microsoft::UI::Xaml::Controls::InkCanvas const& owner)
+        {
+            impl::call_factory<InkCanvasAutomationPeer, IInkCanvasAutomationPeerFactory>([&](IInkCanvasAutomationPeerFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(owner, *this, this->m_inner); });
+        }
+    };
+    template <typename D, typename... Interfaces>
     struct ItemAutomationPeerT :
         implements<D, winrt::Microsoft::UI::Xaml::Automation::Peers::IAutomationPeerOverrides, composing, Interfaces...>,
         impl::require<D, winrt::Microsoft::UI::Xaml::Automation::Peers::IItemAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Provider::IVirtualizedItemProvider, winrt::Microsoft::UI::Xaml::Automation::Peers::IAutomationPeer, winrt::Microsoft::UI::Xaml::IDependencyObject>,
@@ -9245,6 +9355,24 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Automation::Peers
         NumberBoxAutomationPeerT(winrt::Microsoft::UI::Xaml::Controls::NumberBox const& owner)
         {
             impl::call_factory<NumberBoxAutomationPeer, INumberBoxAutomationPeerFactory>([&](INumberBoxAutomationPeerFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(owner, *this, this->m_inner); });
+        }
+    };
+    template <typename D, typename... Interfaces>
+    struct PagerControlAutomationPeerT :
+        implements<D, winrt::Microsoft::UI::Xaml::Automation::Peers::IAutomationPeerOverrides, composing, Interfaces...>,
+        impl::require<D, winrt::Microsoft::UI::Xaml::Automation::Peers::IPagerControlAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::IFrameworkElementAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::IAutomationPeer, winrt::Microsoft::UI::Xaml::IDependencyObject>,
+        protected impl::require<D, winrt::Microsoft::UI::Xaml::Automation::Peers::IAutomationPeerProtected>,
+        impl::base<D, PagerControlAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer, winrt::Microsoft::UI::Xaml::DependencyObject>,
+        winrt::Microsoft::UI::Xaml::Automation::Peers::IAutomationPeerOverridesT<D>
+    {
+        using composable = PagerControlAutomationPeer;
+        friend impl::consume_t<D, winrt::Microsoft::UI::Xaml::Automation::Peers::IAutomationPeerProtected>;
+        friend impl::require_one<D, winrt::Microsoft::UI::Xaml::Automation::Peers::IAutomationPeerProtected>;
+        friend impl::produce<D, winrt::Microsoft::UI::Xaml::Automation::Peers::IAutomationPeerOverrides>;
+    protected:
+        PagerControlAutomationPeerT(winrt::Microsoft::UI::Xaml::Controls::PagerControl const& owner)
+        {
+            impl::call_factory<PagerControlAutomationPeer, IPagerControlAutomationPeerFactory>([&](IPagerControlAutomationPeerFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(owner, *this, this->m_inner); });
         }
     };
     template <typename D, typename... Interfaces>
@@ -10023,6 +10151,8 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::IImageAutomationPeerFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::IInfoBarAutomationPeer> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::IInfoBarAutomationPeerFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::IInkCanvasAutomationPeer> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::IInkCanvasAutomationPeerFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::IItemAutomationPeer> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::IItemAutomationPeerFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::IItemContainerAutomationPeer> : winrt::impl::hash_base {};
@@ -10072,6 +10202,8 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::INavigationViewItemAutomationPeerFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::INumberBoxAutomationPeer> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::INumberBoxAutomationPeerFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::IPagerControlAutomationPeer> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::IPagerControlAutomationPeerFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::IPasswordBoxAutomationPeer> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::IPasswordBoxAutomationPeerFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::IPersonPictureAutomationPeer> : winrt::impl::hash_base {};
@@ -10192,6 +10324,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::HyperlinkButtonAutomationPeer> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::ImageAutomationPeer> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::InfoBarAutomationPeer> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::InkCanvasAutomationPeer> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::ItemAutomationPeer> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::ItemContainerAutomationPeer> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer> : winrt::impl::hash_base {};
@@ -10218,6 +10351,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::NavigationViewAutomationPeer> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::NavigationViewItemAutomationPeer> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::NumberBoxAutomationPeer> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::PagerControlAutomationPeer> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::PasswordBoxAutomationPeer> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::PersonPictureAutomationPeer> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Automation::Peers::PickerFlyoutPresenterAutomationPeer> : winrt::impl::hash_base {};

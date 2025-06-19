@@ -14,7 +14,7 @@ WINRT_EXPORT namespace winrt::Microsoft::Graphics::Display
         DisplayAdvancedColorInfo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Graphics::Display::IDisplayAdvancedColorInfo(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES DisplayInformation : winrt::Microsoft::Graphics::Display::IDisplayInformation,
-        impl::require<DisplayInformation, winrt::Windows::Foundation::IClosable>
+        impl::require<DisplayInformation, winrt::Microsoft::Graphics::Display::IDisplayInformation2, winrt::Windows::Foundation::IClosable>
     {
         DisplayInformation(std::nullptr_t) noexcept {}
         DisplayInformation(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Graphics::Display::IDisplayInformation(ptr, take_ownership_from_abi) {}

@@ -14,7 +14,9 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.250303.1"), "Mismatche
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.Foundation.Numerics.2.h"
 #include "winrt/impl/Windows.Graphics.2.h"
+#include "winrt/impl/Windows.UI.2.h"
 #include "winrt/impl/Windows.UI.Composition.2.h"
+#include "winrt/impl/Windows.UI.Core.2.h"
 #include "winrt/impl/Microsoft.UI.Content.2.h"
 namespace winrt::impl
 {
@@ -173,6 +175,24 @@ namespace winrt::impl
             check_hresult(_winrt_abi_type->CreateForSystemVisual(*(void**)(&parent), *(void**)(&placementVisual), &result));
         }
         return winrt::Microsoft::UI::Content::ChildSiteLink{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentAppWindowBridgeStatics<D>::GetForWindowId(winrt::Microsoft::UI::WindowId const& childWindowId) const
+    {
+        void* result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentAppWindowBridgeStatics>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentAppWindowBridgeStatics, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentAppWindowBridgeStatics>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->GetForWindowId(impl::bind_in(childWindowId), &result));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentAppWindowBridgeStatics>**)this;
+            check_hresult(_winrt_abi_type->GetForWindowId(impl::bind_in(childWindowId), &result));
+        }
+        return winrt::Microsoft::UI::Content::ContentAppWindowBridge{ result, take_ownership_from_abi };
     }
     template <typename D> auto consume_Microsoft_UI_Content_IContentCoordinateConverter<D>::ConvertLocalToScreen(winrt::Windows::Foundation::Point const& localPoint) const
     {
@@ -408,6 +428,268 @@ namespace winrt::impl
             check_hresult(_winrt_abi_type->get_DidDisplayScaleChange(&value));
         }
         return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentExternalBackdropLink<D>::DispatcherQueue() const
+    {
+        void* value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentExternalBackdropLink>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentExternalBackdropLink, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentExternalBackdropLink>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_DispatcherQueue(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentExternalBackdropLink>**)this;
+            check_hresult(_winrt_abi_type->get_DispatcherQueue(&value));
+        }
+        return winrt::Microsoft::UI::Dispatching::DispatcherQueue{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentExternalBackdropLink<D>::ExternalBackdropBorderMode() const
+    {
+        winrt::Microsoft::UI::Composition::CompositionBorderMode value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentExternalBackdropLink>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentExternalBackdropLink, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentExternalBackdropLink>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_ExternalBackdropBorderMode(reinterpret_cast<int32_t*>(&value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentExternalBackdropLink>**)this;
+            check_hresult(_winrt_abi_type->get_ExternalBackdropBorderMode(reinterpret_cast<int32_t*>(&value)));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentExternalBackdropLink<D>::ExternalBackdropBorderMode(winrt::Microsoft::UI::Composition::CompositionBorderMode const& value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentExternalBackdropLink>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentExternalBackdropLink, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentExternalBackdropLink>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->put_ExternalBackdropBorderMode(static_cast<int32_t>(value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentExternalBackdropLink>**)this;
+            check_hresult(_winrt_abi_type->put_ExternalBackdropBorderMode(static_cast<int32_t>(value)));
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentExternalBackdropLink<D>::PlacementVisual() const
+    {
+        void* value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentExternalBackdropLink>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentExternalBackdropLink, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentExternalBackdropLink>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_PlacementVisual(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentExternalBackdropLink>**)this;
+            check_hresult(_winrt_abi_type->get_PlacementVisual(&value));
+        }
+        return winrt::Microsoft::UI::Composition::Visual{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentExternalBackdropLinkStatics<D>::Create(winrt::Microsoft::UI::Composition::Compositor const& compositor) const
+    {
+        void* result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentExternalBackdropLinkStatics>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentExternalBackdropLinkStatics, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentExternalBackdropLinkStatics>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->Create(*(void**)(&compositor), &result));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentExternalBackdropLinkStatics>**)this;
+            check_hresult(_winrt_abi_type->Create(*(void**)(&compositor), &result));
+        }
+        return winrt::Microsoft::UI::Content::ContentExternalBackdropLink{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentExternalOutputLink<D>::BackgroundColor() const
+    {
+        winrt::Windows::UI::Color value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentExternalOutputLink>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentExternalOutputLink, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentExternalOutputLink>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_BackgroundColor(put_abi(value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentExternalOutputLink>**)this;
+            check_hresult(_winrt_abi_type->get_BackgroundColor(put_abi(value)));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentExternalOutputLink<D>::BackgroundColor(winrt::Windows::UI::Color const& value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentExternalOutputLink>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentExternalOutputLink, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentExternalOutputLink>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->put_BackgroundColor(impl::bind_in(value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentExternalOutputLink>**)this;
+            check_hresult(_winrt_abi_type->put_BackgroundColor(impl::bind_in(value)));
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentExternalOutputLink<D>::DispatcherQueue() const
+    {
+        void* value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentExternalOutputLink>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentExternalOutputLink, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentExternalOutputLink>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_DispatcherQueue(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentExternalOutputLink>**)this;
+            check_hresult(_winrt_abi_type->get_DispatcherQueue(&value));
+        }
+        return winrt::Microsoft::UI::Dispatching::DispatcherQueue{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentExternalOutputLink<D>::ExternalOutputBorderMode() const
+    {
+        winrt::Microsoft::UI::Composition::CompositionBorderMode value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentExternalOutputLink>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentExternalOutputLink, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentExternalOutputLink>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_ExternalOutputBorderMode(reinterpret_cast<int32_t*>(&value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentExternalOutputLink>**)this;
+            check_hresult(_winrt_abi_type->get_ExternalOutputBorderMode(reinterpret_cast<int32_t*>(&value)));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentExternalOutputLink<D>::ExternalOutputBorderMode(winrt::Microsoft::UI::Composition::CompositionBorderMode const& value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentExternalOutputLink>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentExternalOutputLink, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentExternalOutputLink>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->put_ExternalOutputBorderMode(static_cast<int32_t>(value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentExternalOutputLink>**)this;
+            check_hresult(_winrt_abi_type->put_ExternalOutputBorderMode(static_cast<int32_t>(value)));
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentExternalOutputLink<D>::IsAboveContent() const
+    {
+        bool value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentExternalOutputLink>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentExternalOutputLink, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentExternalOutputLink>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_IsAboveContent(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentExternalOutputLink>**)this;
+            check_hresult(_winrt_abi_type->get_IsAboveContent(&value));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentExternalOutputLink<D>::IsAboveContent(bool value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentExternalOutputLink>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentExternalOutputLink, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentExternalOutputLink>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->put_IsAboveContent(value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentExternalOutputLink>**)this;
+            check_hresult(_winrt_abi_type->put_IsAboveContent(value));
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentExternalOutputLink<D>::PlacementVisual() const
+    {
+        void* value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentExternalOutputLink>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentExternalOutputLink, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentExternalOutputLink>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_PlacementVisual(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentExternalOutputLink>**)this;
+            check_hresult(_winrt_abi_type->get_PlacementVisual(&value));
+        }
+        return winrt::Microsoft::UI::Composition::Visual{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentExternalOutputLinkStatics<D>::Create(winrt::Microsoft::UI::Composition::Compositor const& compositor) const
+    {
+        void* result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentExternalOutputLinkStatics>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentExternalOutputLinkStatics, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentExternalOutputLinkStatics>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->Create(*(void**)(&compositor), &result));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentExternalOutputLinkStatics>**)this;
+            check_hresult(_winrt_abi_type->Create(*(void**)(&compositor), &result));
+        }
+        return winrt::Microsoft::UI::Content::ContentExternalOutputLink{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentExternalOutputLinkStatics<D>::IsSupported() const
+    {
+        bool result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentExternalOutputLinkStatics>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentExternalOutputLinkStatics, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentExternalOutputLinkStatics>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->IsSupported(&result));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentExternalOutputLinkStatics>**)this;
+            check_hresult(_winrt_abi_type->IsSupported(&result));
+        }
+        return result;
     }
     template <typename D> auto consume_Microsoft_UI_Content_IContentIsland<D>::ActualSize() const
     {
@@ -1137,6 +1419,58 @@ namespace winrt::impl
             check_hresult(_winrt_abi_type->put_Handled(value));
         }
     }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentIslandEndpointConnectionPrivate<D>::ConnectionInfo() const
+    {
+        void* value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentIslandEndpointConnectionPrivate>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentIslandEndpointConnectionPrivate, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentIslandEndpointConnectionPrivate>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_ConnectionInfo(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentIslandEndpointConnectionPrivate>**)this;
+            check_hresult(_winrt_abi_type->get_ConnectionInfo(&value));
+        }
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentIslandEndpointConnectionPrivate<D>::IsRemoteEndpointConnected() const
+    {
+        bool value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentIslandEndpointConnectionPrivate>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentIslandEndpointConnectionPrivate, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentIslandEndpointConnectionPrivate>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_IsRemoteEndpointConnected(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentIslandEndpointConnectionPrivate>**)this;
+            check_hresult(_winrt_abi_type->get_IsRemoteEndpointConnected(&value));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentIslandEndpointConnectionPrivate<D>::ConnectRemoteEndpoint(param::hstring const& siteConnectionInfo) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentIslandEndpointConnectionPrivate>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentIslandEndpointConnectionPrivate, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentIslandEndpointConnectionPrivate>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->ConnectRemoteEndpoint(*(void**)(&siteConnectionInfo)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentIslandEndpointConnectionPrivate>**)this;
+            check_hresult(_winrt_abi_type->ConnectRemoteEndpoint(*(void**)(&siteConnectionInfo)));
+        }
+    }
     template <typename D> auto consume_Microsoft_UI_Content_IContentIslandEnvironment<D>::AppWindowId() const
     {
         winrt::Microsoft::UI::WindowId value{};
@@ -1266,6 +1600,190 @@ namespace winrt::impl
             check_hresult(_winrt_abi_type->get_DisplayScale(&value));
         }
         return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentIslandEnvironmentExperimental<D>::CurrentOrientation() const
+    {
+        winrt::Microsoft::UI::Content::ContentDisplayOrientations value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentIslandEnvironmentExperimental>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentIslandEnvironmentExperimental, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentIslandEnvironmentExperimental>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_CurrentOrientation(reinterpret_cast<uint32_t*>(&value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentIslandEnvironmentExperimental>**)this;
+            check_hresult(_winrt_abi_type->get_CurrentOrientation(reinterpret_cast<uint32_t*>(&value)));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentIslandEnvironmentExperimental<D>::NativeOrientation() const
+    {
+        winrt::Microsoft::UI::Content::ContentDisplayOrientations value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentIslandEnvironmentExperimental>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentIslandEnvironmentExperimental, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentIslandEnvironmentExperimental>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_NativeOrientation(reinterpret_cast<uint32_t*>(&value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentIslandEnvironmentExperimental>**)this;
+            check_hresult(_winrt_abi_type->get_NativeOrientation(reinterpret_cast<uint32_t*>(&value)));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentIslandEnvironmentExperimental<D>::ThemeChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::ContentIslandEnvironment, winrt::Windows::Foundation::IInspectable> const& handler) const
+    {
+        winrt::event_token token{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentIslandEnvironmentExperimental>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentIslandEnvironmentExperimental, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentIslandEnvironmentExperimental>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->add_ThemeChanged(*(void**)(&handler), put_abi(token)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentIslandEnvironmentExperimental>**)this;
+            check_hresult(_winrt_abi_type->add_ThemeChanged(*(void**)(&handler), put_abi(token)));
+        }
+        return token;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentIslandEnvironmentExperimental<D>::ThemeChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::ContentIslandEnvironment, winrt::Windows::Foundation::IInspectable> const& handler) const
+    {
+        return impl::make_event_revoker<D, ThemeChanged_revoker>(this, ThemeChanged(handler));
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentIslandEnvironmentExperimental<D>::ThemeChanged(winrt::event_token const& token) const noexcept
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentIslandEnvironmentExperimental>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentIslandEnvironmentExperimental, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentIslandEnvironmentExperimental>**)&_winrt_casted_result;
+            _winrt_abi_type->remove_ThemeChanged(impl::bind_in(token));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentIslandEnvironmentExperimental>**)this;
+            _winrt_abi_type->remove_ThemeChanged(impl::bind_in(token));
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentIslandExperimental<D>::Root() const
+    {
+        void* value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentIslandExperimental>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentIslandExperimental, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentIslandExperimental>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_Root(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentIslandExperimental>**)this;
+            check_hresult(_winrt_abi_type->get_Root(&value));
+        }
+        return winrt::Microsoft::UI::Composition::Visual{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentIslandExperimental<D>::Root(winrt::Microsoft::UI::Composition::Visual const& value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentIslandExperimental>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentIslandExperimental, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentIslandExperimental>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->put_Root(*(void**)(&value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentIslandExperimental>**)this;
+            check_hresult(_winrt_abi_type->put_Root(*(void**)(&value)));
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentIslandExperimental<D>::Connected(winrt::Windows::Foundation::EventHandler<winrt::Microsoft::UI::Content::ContentIsland> const& handler) const
+    {
+        winrt::event_token token{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentIslandExperimental>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentIslandExperimental, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentIslandExperimental>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->add_Connected(*(void**)(&handler), put_abi(token)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentIslandExperimental>**)this;
+            check_hresult(_winrt_abi_type->add_Connected(*(void**)(&handler), put_abi(token)));
+        }
+        return token;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentIslandExperimental<D>::Connected(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Microsoft::UI::Content::ContentIsland> const& handler) const
+    {
+        return impl::make_event_revoker<D, Connected_revoker>(this, Connected(handler));
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentIslandExperimental<D>::Connected(winrt::event_token const& token) const noexcept
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentIslandExperimental>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentIslandExperimental, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentIslandExperimental>**)&_winrt_casted_result;
+            _winrt_abi_type->remove_Connected(impl::bind_in(token));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentIslandExperimental>**)this;
+            _winrt_abi_type->remove_Connected(impl::bind_in(token));
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentIslandExperimental<D>::Disconnected(winrt::Windows::Foundation::EventHandler<winrt::Microsoft::UI::Content::ContentIsland> const& handler) const
+    {
+        winrt::event_token token{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentIslandExperimental>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentIslandExperimental, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentIslandExperimental>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->add_Disconnected(*(void**)(&handler), put_abi(token)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentIslandExperimental>**)this;
+            check_hresult(_winrt_abi_type->add_Disconnected(*(void**)(&handler), put_abi(token)));
+        }
+        return token;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentIslandExperimental<D>::Disconnected(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Microsoft::UI::Content::ContentIsland> const& handler) const
+    {
+        return impl::make_event_revoker<D, Disconnected_revoker>(this, Disconnected(handler));
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentIslandExperimental<D>::Disconnected(winrt::event_token const& token) const noexcept
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentIslandExperimental>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentIslandExperimental, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentIslandExperimental>**)&_winrt_casted_result;
+            _winrt_abi_type->remove_Disconnected(impl::bind_in(token));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentIslandExperimental>**)this;
+            _winrt_abi_type->remove_Disconnected(impl::bind_in(token));
+        }
     }
     template <typename D> auto consume_Microsoft_UI_Content_IContentIslandStateChangedEventArgs<D>::DidActualSizeChange() const
     {
@@ -2472,6 +2990,172 @@ namespace winrt::impl
             check_hresult(_winrt_abi_type->put_OverrideScale(value));
         }
     }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteBridgeEndpointConnectionPrivate<D>::ConnectionInfo() const
+    {
+        void* value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_ConnectionInfo(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>**)this;
+            check_hresult(_winrt_abi_type->get_ConnectionInfo(&value));
+        }
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteBridgeEndpointConnectionPrivate<D>::IsRemoteEndpointConnected() const
+    {
+        bool value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_IsRemoteEndpointConnected(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>**)this;
+            check_hresult(_winrt_abi_type->get_IsRemoteEndpointConnected(&value));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteBridgeEndpointConnectionPrivate<D>::AcceptRemoteEndpoint(param::hstring const& islandConnectionInfo) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->AcceptRemoteEndpoint(*(void**)(&islandConnectionInfo)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>**)this;
+            check_hresult(_winrt_abi_type->AcceptRemoteEndpoint(*(void**)(&islandConnectionInfo)));
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteBridgeEndpointConnectionPrivate<D>::RemoteEndpointConnecting(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, winrt::Microsoft::UI::Content::EndpointConnectionEventArgs> const& handler) const
+    {
+        winrt::event_token token{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->add_RemoteEndpointConnecting(*(void**)(&handler), put_abi(token)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>**)this;
+            check_hresult(_winrt_abi_type->add_RemoteEndpointConnecting(*(void**)(&handler), put_abi(token)));
+        }
+        return token;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteBridgeEndpointConnectionPrivate<D>::RemoteEndpointConnecting(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, winrt::Microsoft::UI::Content::EndpointConnectionEventArgs> const& handler) const
+    {
+        return impl::make_event_revoker<D, RemoteEndpointConnecting_revoker>(this, RemoteEndpointConnecting(handler));
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteBridgeEndpointConnectionPrivate<D>::RemoteEndpointConnecting(winrt::event_token const& token) const noexcept
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>**)&_winrt_casted_result;
+            _winrt_abi_type->remove_RemoteEndpointConnecting(impl::bind_in(token));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>**)this;
+            _winrt_abi_type->remove_RemoteEndpointConnecting(impl::bind_in(token));
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteBridgeEndpointConnectionPrivate<D>::RemoteEndpointDisconnected(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, winrt::Microsoft::UI::Content::EndpointConnectionEventArgs> const& handler) const
+    {
+        winrt::event_token token{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->add_RemoteEndpointDisconnected(*(void**)(&handler), put_abi(token)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>**)this;
+            check_hresult(_winrt_abi_type->add_RemoteEndpointDisconnected(*(void**)(&handler), put_abi(token)));
+        }
+        return token;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteBridgeEndpointConnectionPrivate<D>::RemoteEndpointDisconnected(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, winrt::Microsoft::UI::Content::EndpointConnectionEventArgs> const& handler) const
+    {
+        return impl::make_event_revoker<D, RemoteEndpointDisconnected_revoker>(this, RemoteEndpointDisconnected(handler));
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteBridgeEndpointConnectionPrivate<D>::RemoteEndpointDisconnected(winrt::event_token const& token) const noexcept
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>**)&_winrt_casted_result;
+            _winrt_abi_type->remove_RemoteEndpointDisconnected(impl::bind_in(token));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>**)this;
+            _winrt_abi_type->remove_RemoteEndpointDisconnected(impl::bind_in(token));
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteBridgeEndpointConnectionPrivate<D>::RemoteEndpointRequestedStateChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, winrt::Microsoft::UI::Content::EndpointRequestedStateChangedEventArgs> const& handler) const
+    {
+        winrt::event_token token{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->add_RemoteEndpointRequestedStateChanged(*(void**)(&handler), put_abi(token)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>**)this;
+            check_hresult(_winrt_abi_type->add_RemoteEndpointRequestedStateChanged(*(void**)(&handler), put_abi(token)));
+        }
+        return token;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteBridgeEndpointConnectionPrivate<D>::RemoteEndpointRequestedStateChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, winrt::Microsoft::UI::Content::EndpointRequestedStateChangedEventArgs> const& handler) const
+    {
+        return impl::make_event_revoker<D, RemoteEndpointRequestedStateChanged_revoker>(this, RemoteEndpointRequestedStateChanged(handler));
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteBridgeEndpointConnectionPrivate<D>::RemoteEndpointRequestedStateChanged(winrt::event_token const& token) const noexcept
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>**)&_winrt_casted_result;
+            _winrt_abi_type->remove_RemoteEndpointRequestedStateChanged(impl::bind_in(token));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>**)this;
+            _winrt_abi_type->remove_RemoteEndpointRequestedStateChanged(impl::bind_in(token));
+        }
+    }
     template <typename D> auto consume_Microsoft_UI_Content_IContentSiteEnvironment<D>::AppWindowId() const
     {
         winrt::Microsoft::UI::WindowId value{};
@@ -2608,6 +3292,90 @@ namespace winrt::impl
             check_hresult(_winrt_abi_type->put_DisplayScale(value));
         }
     }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteEnvironmentExperimental<D>::CurrentOrientation() const
+    {
+        winrt::Microsoft::UI::Content::ContentDisplayOrientations value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentSiteEnvironmentExperimental>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentSiteEnvironmentExperimental, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentSiteEnvironmentExperimental>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_CurrentOrientation(reinterpret_cast<uint32_t*>(&value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentSiteEnvironmentExperimental>**)this;
+            check_hresult(_winrt_abi_type->get_CurrentOrientation(reinterpret_cast<uint32_t*>(&value)));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteEnvironmentExperimental<D>::CurrentOrientation(winrt::Microsoft::UI::Content::ContentDisplayOrientations const& value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentSiteEnvironmentExperimental>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentSiteEnvironmentExperimental, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentSiteEnvironmentExperimental>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->put_CurrentOrientation(static_cast<uint32_t>(value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentSiteEnvironmentExperimental>**)this;
+            check_hresult(_winrt_abi_type->put_CurrentOrientation(static_cast<uint32_t>(value)));
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteEnvironmentExperimental<D>::NativeOrientation() const
+    {
+        winrt::Microsoft::UI::Content::ContentDisplayOrientations value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentSiteEnvironmentExperimental>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentSiteEnvironmentExperimental, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentSiteEnvironmentExperimental>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_NativeOrientation(reinterpret_cast<uint32_t*>(&value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentSiteEnvironmentExperimental>**)this;
+            check_hresult(_winrt_abi_type->get_NativeOrientation(reinterpret_cast<uint32_t*>(&value)));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteEnvironmentExperimental<D>::NativeOrientation(winrt::Microsoft::UI::Content::ContentDisplayOrientations const& value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentSiteEnvironmentExperimental>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentSiteEnvironmentExperimental, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentSiteEnvironmentExperimental>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->put_NativeOrientation(static_cast<uint32_t>(value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentSiteEnvironmentExperimental>**)this;
+            check_hresult(_winrt_abi_type->put_NativeOrientation(static_cast<uint32_t>(value)));
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteEnvironmentExperimental<D>::NotifyThemeChanged() const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentSiteEnvironmentExperimental>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentSiteEnvironmentExperimental, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentSiteEnvironmentExperimental>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->NotifyThemeChanged());
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentSiteEnvironmentExperimental>**)this;
+            check_hresult(_winrt_abi_type->NotifyThemeChanged());
+        }
+    }
     template <typename D> auto consume_Microsoft_UI_Content_IContentSiteEnvironmentView<D>::AppWindowId() const
     {
         winrt::Microsoft::UI::WindowId value{};
@@ -2661,6 +3429,24 @@ namespace winrt::impl
             check_hresult(_winrt_abi_type->get_DisplayScale(&value));
         }
         return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteExperimental<D>::TryGetAutomationProvider(winrt::Windows::Foundation::IInspectable& provider) const
+    {
+        bool result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IContentSiteExperimental>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IContentSiteExperimental, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentSiteExperimental>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->TryGetAutomationProvider(impl::bind_out(provider), &result));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IContentSiteExperimental>**)this;
+            check_hresult(_winrt_abi_type->TryGetAutomationProvider(impl::bind_out(provider), &result));
+        }
+        return result;
     }
     template <typename D> auto consume_Microsoft_UI_Content_IContentSiteInput<D>::ProcessesKeyboardInput() const
     {
@@ -3107,6 +3893,58 @@ namespace winrt::impl
             check_hresult(_winrt_abi_type->get_AutomationOption(reinterpret_cast<int32_t*>(&value)));
         }
         return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_ICoreWindowSiteBridge<D>::Connect(winrt::Microsoft::UI::Content::ContentIsland const& content) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::ICoreWindowSiteBridge>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::ICoreWindowSiteBridge, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::ICoreWindowSiteBridge>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->Connect(*(void**)(&content)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::ICoreWindowSiteBridge>**)this;
+            check_hresult(_winrt_abi_type->Connect(*(void**)(&content)));
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_ICoreWindowSiteBridgeStatics<D>::Create(winrt::Microsoft::UI::Composition::Compositor const& compositor, winrt::Windows::UI::Core::CoreWindow const& coreWindow) const
+    {
+        void* result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::ICoreWindowSiteBridgeStatics>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::ICoreWindowSiteBridgeStatics, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::ICoreWindowSiteBridgeStatics>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->Create(*(void**)(&compositor), *(void**)(&coreWindow), &result));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::ICoreWindowSiteBridgeStatics>**)this;
+            check_hresult(_winrt_abi_type->Create(*(void**)(&compositor), *(void**)(&coreWindow), &result));
+        }
+        return winrt::Microsoft::UI::Content::CoreWindowSiteBridge{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_ICoreWindowSiteBridgeStatics<D>::IsSupported() const
+    {
+        bool result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::ICoreWindowSiteBridgeStatics>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::ICoreWindowSiteBridgeStatics, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::ICoreWindowSiteBridgeStatics>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->IsSupported(&result));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::ICoreWindowSiteBridgeStatics>**)this;
+            check_hresult(_winrt_abi_type->IsSupported(&result));
+        }
+        return result;
     }
     template <typename D> auto consume_Microsoft_UI_Content_IDesktopAttachedSiteBridge<D>::SiteView() const
     {
@@ -3698,6 +4536,24 @@ namespace winrt::impl
             check_hresult(_winrt_abi_type->Show());
         }
     }
+    template <typename D> auto consume_Microsoft_UI_Content_IDesktopSiteBridge2<D>::TryCreatePopupSiteBridge() const
+    {
+        void* result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IDesktopSiteBridge2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IDesktopSiteBridge2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IDesktopSiteBridge2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->TryCreatePopupSiteBridge(&result));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IDesktopSiteBridge2>**)this;
+            check_hresult(_winrt_abi_type->TryCreatePopupSiteBridge(&result));
+        }
+        return winrt::Microsoft::UI::Content::PopupWindowSiteBridge{ result, take_ownership_from_abi };
+    }
     template <typename D> auto consume_Microsoft_UI_Content_IDesktopSiteBridgeStatics<D>::IsSupported() const
     {
         bool result{};
@@ -3715,6 +4571,144 @@ namespace winrt::impl
             check_hresult(_winrt_abi_type->IsSupported(&result));
         }
         return result;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IEndpointConnectionEventArgs<D>::ConnectionInfo() const
+    {
+        void* value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IEndpointConnectionEventArgs>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IEndpointConnectionEventArgs, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IEndpointConnectionEventArgs>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_ConnectionInfo(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IEndpointConnectionEventArgs>**)this;
+            check_hresult(_winrt_abi_type->get_ConnectionInfo(&value));
+        }
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IEndpointRequestedStateChangedEventArgs<D>::DidRequestedSizeChange() const
+    {
+        bool value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IEndpointRequestedStateChangedEventArgs>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IEndpointRequestedStateChangedEventArgs, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IEndpointRequestedStateChangedEventArgs>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_DidRequestedSizeChange(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IEndpointRequestedStateChangedEventArgs>**)this;
+            check_hresult(_winrt_abi_type->get_DidRequestedSizeChange(&value));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IPopupWindowSiteBridge<D>::Anchored() const
+    {
+        bool value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IPopupWindowSiteBridge>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IPopupWindowSiteBridge, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IPopupWindowSiteBridge>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_Anchored(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IPopupWindowSiteBridge>**)this;
+            check_hresult(_winrt_abi_type->get_Anchored(&value));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IPopupWindowSiteBridge<D>::Anchored(bool value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IPopupWindowSiteBridge>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IPopupWindowSiteBridge, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IPopupWindowSiteBridge>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->put_Anchored(value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IPopupWindowSiteBridge>**)this;
+            check_hresult(_winrt_abi_type->put_Anchored(value));
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IProcessStarterStatics<D>::StartProcess(param::hstring const& executablePath, param::hstring const& connectionInfo, uint32_t& processId) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::IProcessStarterStatics>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::IProcessStarterStatics, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IProcessStarterStatics>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->StartProcess(*(void**)(&executablePath), *(void**)(&connectionInfo), &processId));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::IProcessStarterStatics>**)this;
+            check_hresult(_winrt_abi_type->StartProcess(*(void**)(&executablePath), *(void**)(&connectionInfo), &processId));
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_ISystemVisualSiteBridge<D>::Site() const
+    {
+        void* value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::ISystemVisualSiteBridge>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::ISystemVisualSiteBridge, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::ISystemVisualSiteBridge>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_Site(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::ISystemVisualSiteBridge>**)this;
+            check_hresult(_winrt_abi_type->get_Site(&value));
+        }
+        return winrt::Microsoft::UI::Content::ContentSite{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_ISystemVisualSiteBridge<D>::Connect(winrt::Microsoft::UI::Content::ContentIsland const& content) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::ISystemVisualSiteBridge>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::ISystemVisualSiteBridge, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::ISystemVisualSiteBridge>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->Connect(*(void**)(&content)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::ISystemVisualSiteBridge>**)this;
+            check_hresult(_winrt_abi_type->Connect(*(void**)(&content)));
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_ISystemVisualSiteBridgeStatics<D>::Create(winrt::Microsoft::UI::Dispatching::DispatcherQueue const& queue, winrt::Windows::UI::Composition::ContainerVisual const& hostVisual, winrt::Microsoft::UI::WindowId const& parentForInputWindowId) const
+    {
+        void* result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Content::ISystemVisualSiteBridgeStatics>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Content::ISystemVisualSiteBridgeStatics, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::ISystemVisualSiteBridgeStatics>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->Create(*(void**)(&queue), *(void**)(&hostVisual), impl::bind_in(parentForInputWindowId), &result));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Content::ISystemVisualSiteBridgeStatics>**)this;
+            check_hresult(_winrt_abi_type->Create(*(void**)(&queue), *(void**)(&hostVisual), impl::bind_in(parentForInputWindowId), &result));
+        }
+        return winrt::Microsoft::UI::Content::SystemVisualSiteBridge{ result, take_ownership_from_abi };
     }
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
@@ -3792,6 +4786,26 @@ namespace winrt::impl
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
             *result = detach_from<winrt::Microsoft::UI::Content::ChildSiteLink>(this->shim().CreateForSystemVisual(*reinterpret_cast<winrt::Microsoft::UI::Content::ContentIsland const*>(&parent), *reinterpret_cast<winrt::Windows::UI::Composition::ContainerVisual const*>(&placementVisual)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IContentAppWindowBridge> : produce_base<D, winrt::Microsoft::UI::Content::IContentAppWindowBridge>
+    {
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IContentAppWindowBridgeStatics> : produce_base<D, winrt::Microsoft::UI::Content::IContentAppWindowBridgeStatics>
+    {
+        int32_t __stdcall GetForWindowId(struct struct_Microsoft_UI_WindowId childWindowId, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::UI::Content::ContentAppWindowBridge>(this->shim().GetForWindowId(*reinterpret_cast<winrt::Microsoft::UI::WindowId const*>(&childWindowId)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3934,6 +4948,142 @@ namespace winrt::impl
         {
             typename D::abi_guard guard(this->shim());
             *value = detach_from<bool>(this->shim().DidDisplayScaleChange());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IContentExternalBackdropLink> : produce_base<D, winrt::Microsoft::UI::Content::IContentExternalBackdropLink>
+    {
+        int32_t __stdcall get_DispatcherQueue(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Dispatching::DispatcherQueue>(this->shim().DispatcherQueue());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_ExternalBackdropBorderMode(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Composition::CompositionBorderMode>(this->shim().ExternalBackdropBorderMode());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_ExternalBackdropBorderMode(int32_t value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ExternalBackdropBorderMode(*reinterpret_cast<winrt::Microsoft::UI::Composition::CompositionBorderMode const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_PlacementVisual(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Composition::Visual>(this->shim().PlacementVisual());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IContentExternalBackdropLinkStatics> : produce_base<D, winrt::Microsoft::UI::Content::IContentExternalBackdropLinkStatics>
+    {
+        int32_t __stdcall Create(void* compositor, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::UI::Content::ContentExternalBackdropLink>(this->shim().Create(*reinterpret_cast<winrt::Microsoft::UI::Composition::Compositor const*>(&compositor)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IContentExternalOutputLink> : produce_base<D, winrt::Microsoft::UI::Content::IContentExternalOutputLink>
+    {
+        int32_t __stdcall get_BackgroundColor(struct struct_Windows_UI_Color* value) noexcept final try
+        {
+            zero_abi<winrt::Windows::UI::Color>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::UI::Color>(this->shim().BackgroundColor());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_BackgroundColor(struct struct_Windows_UI_Color value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().BackgroundColor(*reinterpret_cast<winrt::Windows::UI::Color const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_DispatcherQueue(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Dispatching::DispatcherQueue>(this->shim().DispatcherQueue());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_ExternalOutputBorderMode(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Composition::CompositionBorderMode>(this->shim().ExternalOutputBorderMode());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_ExternalOutputBorderMode(int32_t value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ExternalOutputBorderMode(*reinterpret_cast<winrt::Microsoft::UI::Composition::CompositionBorderMode const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_IsAboveContent(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().IsAboveContent());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_IsAboveContent(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().IsAboveContent(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_PlacementVisual(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Composition::Visual>(this->shim().PlacementVisual());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IContentExternalOutputLinkStatics> : produce_base<D, winrt::Microsoft::UI::Content::IContentExternalOutputLinkStatics>
+    {
+        int32_t __stdcall Create(void* compositor, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::UI::Content::ContentExternalOutputLink>(this->shim().Create(*reinterpret_cast<winrt::Microsoft::UI::Composition::Compositor const*>(&compositor)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall IsSupported(bool* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<bool>(this->shim().IsSupported());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4267,6 +5417,32 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
     };
 #endif
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IContentIslandEndpointConnectionPrivate> : produce_base<D, winrt::Microsoft::UI::Content::IContentIslandEndpointConnectionPrivate>
+    {
+        int32_t __stdcall get_ConnectionInfo(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().ConnectionInfo());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_IsRemoteEndpointConnected(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().IsRemoteEndpointConnected());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall ConnectRemoteEndpoint(void* siteConnectionInfo) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ConnectRemoteEndpoint(*reinterpret_cast<hstring const*>(&siteConnectionInfo));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, winrt::Microsoft::UI::Content::IContentIslandEnvironment> : produce_base<D, winrt::Microsoft::UI::Content::IContentIslandEnvironment>
@@ -4332,8 +5508,91 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IContentIslandEnvironmentExperimental> : produce_base<D, winrt::Microsoft::UI::Content::IContentIslandEnvironmentExperimental>
+    {
+        int32_t __stdcall get_CurrentOrientation(uint32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Content::ContentDisplayOrientations>(this->shim().CurrentOrientation());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_NativeOrientation(uint32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Content::ContentDisplayOrientations>(this->shim().NativeOrientation());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall add_ThemeChanged(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().ThemeChanged(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::ContentIslandEnvironment, winrt::Windows::Foundation::IInspectable> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_ThemeChanged(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ThemeChanged(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::UI::Content::IContentIslandEnvironmentFactory> : produce_base<D, winrt::Microsoft::UI::Content::IContentIslandEnvironmentFactory>
     {
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IContentIslandExperimental> : produce_base<D, winrt::Microsoft::UI::Content::IContentIslandExperimental>
+    {
+        int32_t __stdcall get_Root(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Composition::Visual>(this->shim().Root());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_Root(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Root(*reinterpret_cast<winrt::Microsoft::UI::Composition::Visual const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall add_Connected(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().Connected(*reinterpret_cast<winrt::Windows::Foundation::EventHandler<winrt::Microsoft::UI::Content::ContentIsland> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_Connected(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Connected(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+        int32_t __stdcall add_Disconnected(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().Disconnected(*reinterpret_cast<winrt::Windows::Foundation::EventHandler<winrt::Microsoft::UI::Content::ContentIsland> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_Disconnected(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Disconnected(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
     };
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
@@ -4479,6 +5738,10 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
     };
 #endif
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IContentNodeOwner> : produce_base<D, winrt::Microsoft::UI::Content::IContentNodeOwner>
+    {
+    };
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, winrt::Microsoft::UI::Content::IContentSite> : produce_base<D, winrt::Microsoft::UI::Content::IContentSite>
@@ -4890,6 +6153,74 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate> : produce_base<D, winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>
+    {
+        int32_t __stdcall get_ConnectionInfo(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().ConnectionInfo());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_IsRemoteEndpointConnected(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().IsRemoteEndpointConnected());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall AcceptRemoteEndpoint(void* islandConnectionInfo) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().AcceptRemoteEndpoint(*reinterpret_cast<hstring const*>(&islandConnectionInfo));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall add_RemoteEndpointConnecting(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().RemoteEndpointConnecting(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, winrt::Microsoft::UI::Content::EndpointConnectionEventArgs> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_RemoteEndpointConnecting(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().RemoteEndpointConnecting(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+        int32_t __stdcall add_RemoteEndpointDisconnected(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().RemoteEndpointDisconnected(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, winrt::Microsoft::UI::Content::EndpointConnectionEventArgs> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_RemoteEndpointDisconnected(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().RemoteEndpointDisconnected(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+        int32_t __stdcall add_RemoteEndpointRequestedStateChanged(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().RemoteEndpointRequestedStateChanged(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate, winrt::Microsoft::UI::Content::EndpointRequestedStateChangedEventArgs> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_RemoteEndpointRequestedStateChanged(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().RemoteEndpointRequestedStateChanged(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+    };
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, winrt::Microsoft::UI::Content::IContentSiteEnvironment> : produce_base<D, winrt::Microsoft::UI::Content::IContentSiteEnvironment>
@@ -4963,6 +6294,47 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IContentSiteEnvironmentExperimental> : produce_base<D, winrt::Microsoft::UI::Content::IContentSiteEnvironmentExperimental>
+    {
+        int32_t __stdcall get_CurrentOrientation(uint32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Content::ContentDisplayOrientations>(this->shim().CurrentOrientation());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_CurrentOrientation(uint32_t value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().CurrentOrientation(*reinterpret_cast<winrt::Microsoft::UI::Content::ContentDisplayOrientations const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_NativeOrientation(uint32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Content::ContentDisplayOrientations>(this->shim().NativeOrientation());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_NativeOrientation(uint32_t value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().NativeOrientation(*reinterpret_cast<winrt::Microsoft::UI::Content::ContentDisplayOrientations const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall NotifyThemeChanged() noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().NotifyThemeChanged();
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::UI::Content::IContentSiteEnvironmentFactory> : produce_base<D, winrt::Microsoft::UI::Content::IContentSiteEnvironmentFactory>
     {
     };
@@ -5006,6 +6378,22 @@ namespace winrt::impl
     template <typename D>
     struct produce<D, winrt::Microsoft::UI::Content::IContentSiteEnvironmentViewFactory> : produce_base<D, winrt::Microsoft::UI::Content::IContentSiteEnvironmentViewFactory>
     {
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IContentSiteExperimental> : produce_base<D, winrt::Microsoft::UI::Content::IContentSiteExperimental>
+    {
+        int32_t __stdcall TryGetAutomationProvider(void** provider, bool* result) noexcept final try
+        {
+            if (provider) *provider = nullptr;
+            winrt::Windows::Foundation::IInspectable winrt_impl_provider;
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<bool>(this->shim().TryGetAutomationProvider(winrt_impl_provider));
+                if (provider) *provider = detach_abi(winrt_impl_provider);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
     };
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
@@ -5234,6 +6622,40 @@ namespace winrt::impl
     template <typename D>
     struct produce<D, winrt::Microsoft::UI::Content::IContentSiteViewFactory> : produce_base<D, winrt::Microsoft::UI::Content::IContentSiteViewFactory>
     {
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::ICoreWindowSiteBridge> : produce_base<D, winrt::Microsoft::UI::Content::ICoreWindowSiteBridge>
+    {
+        int32_t __stdcall Connect(void* content) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Connect(*reinterpret_cast<winrt::Microsoft::UI::Content::ContentIsland const*>(&content));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::ICoreWindowSiteBridgeStatics> : produce_base<D, winrt::Microsoft::UI::Content::ICoreWindowSiteBridgeStatics>
+    {
+        int32_t __stdcall Create(void* compositor, void* coreWindow, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::UI::Content::CoreWindowSiteBridge>(this->shim().Create(*reinterpret_cast<winrt::Microsoft::UI::Composition::Compositor const*>(&compositor), *reinterpret_cast<winrt::Windows::UI::Core::CoreWindow const*>(&coreWindow)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall IsSupported(bool* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<bool>(this->shim().IsSupported());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
     };
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
@@ -5541,6 +6963,20 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IDesktopSiteBridge2> : produce_base<D, winrt::Microsoft::UI::Content::IDesktopSiteBridge2>
+    {
+        int32_t __stdcall TryCreatePopupSiteBridge(void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::UI::Content::PopupWindowSiteBridge>(this->shim().TryCreatePopupSiteBridge());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::UI::Content::IDesktopSiteBridgeFactory> : produce_base<D, winrt::Microsoft::UI::Content::IDesktopSiteBridgeFactory>
     {
     };
@@ -5558,9 +6994,147 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
     };
 #endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IEndpointConnectionEventArgs> : produce_base<D, winrt::Microsoft::UI::Content::IEndpointConnectionEventArgs>
+    {
+        int32_t __stdcall get_ConnectionInfo(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().ConnectionInfo());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IEndpointRequestedStateChangedEventArgs> : produce_base<D, winrt::Microsoft::UI::Content::IEndpointRequestedStateChangedEventArgs>
+    {
+        int32_t __stdcall get_DidRequestedSizeChange(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().DidRequestedSizeChange());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IPopupWindowSiteBridge> : produce_base<D, winrt::Microsoft::UI::Content::IPopupWindowSiteBridge>
+    {
+        int32_t __stdcall get_Anchored(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().Anchored());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_Anchored(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Anchored(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IProcessStarter> : produce_base<D, winrt::Microsoft::UI::Content::IProcessStarter>
+    {
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IProcessStarterFactory> : produce_base<D, winrt::Microsoft::UI::Content::IProcessStarterFactory>
+    {
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IProcessStarterStatics> : produce_base<D, winrt::Microsoft::UI::Content::IProcessStarterStatics>
+    {
+        int32_t __stdcall StartProcess(void* executablePath, void* connectionInfo, uint32_t* processId) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().StartProcess(*reinterpret_cast<hstring const*>(&executablePath), *reinterpret_cast<hstring const*>(&connectionInfo), *processId);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::ISystemVisualSiteBridge> : produce_base<D, winrt::Microsoft::UI::Content::ISystemVisualSiteBridge>
+    {
+        int32_t __stdcall get_Site(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Content::ContentSite>(this->shim().Site());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall Connect(void* content) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Connect(*reinterpret_cast<winrt::Microsoft::UI::Content::ContentIsland const*>(&content));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::ISystemVisualSiteBridgeStatics> : produce_base<D, winrt::Microsoft::UI::Content::ISystemVisualSiteBridgeStatics>
+    {
+        int32_t __stdcall Create(void* queue, void* hostVisual, struct struct_Microsoft_UI_WindowId parentForInputWindowId, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::UI::Content::SystemVisualSiteBridge>(this->shim().Create(*reinterpret_cast<winrt::Microsoft::UI::Dispatching::DispatcherQueue const*>(&queue), *reinterpret_cast<winrt::Windows::UI::Composition::ContainerVisual const*>(&hostVisual), *reinterpret_cast<winrt::Microsoft::UI::WindowId const*>(&parentForInputWindowId)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
 }
 WINRT_EXPORT namespace winrt::Microsoft::UI::Content
 {
+    constexpr auto operator|(ContentDisplayOrientations const left, ContentDisplayOrientations const right) noexcept
+    {
+        return static_cast<ContentDisplayOrientations>(impl::to_underlying_type(left) | impl::to_underlying_type(right));
+    }
+    constexpr auto operator|=(ContentDisplayOrientations& left, ContentDisplayOrientations const right) noexcept
+    {
+        left = left | right;
+        return left;
+    }
+    constexpr auto operator&(ContentDisplayOrientations const left, ContentDisplayOrientations const right) noexcept
+    {
+        return static_cast<ContentDisplayOrientations>(impl::to_underlying_type(left) & impl::to_underlying_type(right));
+    }
+    constexpr auto operator&=(ContentDisplayOrientations& left, ContentDisplayOrientations const right) noexcept
+    {
+        left = left & right;
+        return left;
+    }
+    constexpr auto operator~(ContentDisplayOrientations const value) noexcept
+    {
+        return static_cast<ContentDisplayOrientations>(~impl::to_underlying_type(value));
+    }
+    constexpr auto operator^(ContentDisplayOrientations const left, ContentDisplayOrientations const right) noexcept
+    {
+        return static_cast<ContentDisplayOrientations>(impl::to_underlying_type(left) ^ impl::to_underlying_type(right));
+    }
+    constexpr auto operator^=(ContentDisplayOrientations& left, ContentDisplayOrientations const right) noexcept
+    {
+        left = left ^ right;
+        return left;
+    }
     inline auto ChildSiteLink::Create(winrt::Microsoft::UI::Content::ContentIsland const& parent, winrt::Microsoft::UI::Composition::ContainerVisual const& placementVisual)
     {
         return impl::call_factory<ChildSiteLink, IChildSiteLinkStatics>([&](IChildSiteLinkStatics const& f) { return f.Create(parent, placementVisual); });
@@ -5569,9 +7143,25 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Content
     {
         return impl::call_factory<ChildSiteLink, IChildSiteLinkStatics>([&](IChildSiteLinkStatics const& f) { return f.CreateForSystemVisual(parent, placementVisual); });
     }
+    inline auto ContentAppWindowBridge::GetForWindowId(winrt::Microsoft::UI::WindowId const& childWindowId)
+    {
+        return impl::call_factory<ContentAppWindowBridge, IContentAppWindowBridgeStatics>([&](IContentAppWindowBridgeStatics const& f) { return f.GetForWindowId(childWindowId); });
+    }
     inline auto ContentCoordinateConverter::CreateForWindowId(winrt::Microsoft::UI::WindowId const& windowId)
     {
         return impl::call_factory<ContentCoordinateConverter, IContentCoordinateConverterStatics>([&](IContentCoordinateConverterStatics const& f) { return f.CreateForWindowId(windowId); });
+    }
+    inline auto ContentExternalBackdropLink::Create(winrt::Microsoft::UI::Composition::Compositor const& compositor)
+    {
+        return impl::call_factory<ContentExternalBackdropLink, IContentExternalBackdropLinkStatics>([&](IContentExternalBackdropLinkStatics const& f) { return f.Create(compositor); });
+    }
+    inline auto ContentExternalOutputLink::Create(winrt::Microsoft::UI::Composition::Compositor const& compositor)
+    {
+        return impl::call_factory<ContentExternalOutputLink, IContentExternalOutputLinkStatics>([&](IContentExternalOutputLinkStatics const& f) { return f.Create(compositor); });
+    }
+    inline auto ContentExternalOutputLink::IsSupported()
+    {
+        return impl::call_factory_cast<bool(*)(IContentExternalOutputLinkStatics const&), ContentExternalOutputLink, IContentExternalOutputLinkStatics>([](IContentExternalOutputLinkStatics const& f) { return f.IsSupported(); });
     }
     inline auto ContentIsland::Create(winrt::Microsoft::UI::Composition::Visual const& Root)
     {
@@ -5605,6 +7195,14 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Content
     {
         return impl::call_factory<ContentIsland, IContentIslandStatics2>([&](IContentIslandStatics2 const& f) { return f.GetBySystemVisual(child); });
     }
+    inline auto CoreWindowSiteBridge::Create(winrt::Microsoft::UI::Composition::Compositor const& compositor, winrt::Windows::UI::Core::CoreWindow const& coreWindow)
+    {
+        return impl::call_factory<CoreWindowSiteBridge, ICoreWindowSiteBridgeStatics>([&](ICoreWindowSiteBridgeStatics const& f) { return f.Create(compositor, coreWindow); });
+    }
+    inline auto CoreWindowSiteBridge::IsSupported()
+    {
+        return impl::call_factory_cast<bool(*)(ICoreWindowSiteBridgeStatics const&), CoreWindowSiteBridge, ICoreWindowSiteBridgeStatics>([](ICoreWindowSiteBridgeStatics const& f) { return f.IsSupported(); });
+    }
     inline auto DesktopAttachedSiteBridge::CreateFromWindowId(winrt::Microsoft::UI::Dispatching::DispatcherQueue const& queue, winrt::Microsoft::UI::WindowId const& windowId)
     {
         return impl::call_factory<DesktopAttachedSiteBridge, IDesktopAttachedSiteBridgeStatics>([&](IDesktopAttachedSiteBridgeStatics const& f) { return f.CreateFromWindowId(queue, windowId); });
@@ -5625,12 +7223,22 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Content
     {
         return impl::call_factory_cast<bool(*)(IDesktopSiteBridgeStatics const&), DesktopSiteBridge, IDesktopSiteBridgeStatics>([](IDesktopSiteBridgeStatics const& f) { return f.IsSupported(); });
     }
+    inline auto ProcessStarter::StartProcess(param::hstring const& executablePath, param::hstring const& connectionInfo, uint32_t& processId)
+    {
+        impl::call_factory<ProcessStarter, IProcessStarterStatics>([&](IProcessStarterStatics const& f) { return f.StartProcess(executablePath, connectionInfo, processId); });
+    }
+    inline auto SystemVisualSiteBridge::Create(winrt::Microsoft::UI::Dispatching::DispatcherQueue const& queue, winrt::Windows::UI::Composition::ContainerVisual const& hostVisual, winrt::Microsoft::UI::WindowId const& parentForInputWindowId)
+    {
+        return impl::call_factory<SystemVisualSiteBridge, ISystemVisualSiteBridgeStatics>([&](ISystemVisualSiteBridgeStatics const& f) { return f.Create(queue, hostVisual, parentForInputWindowId); });
+    }
 }
 namespace std
 {
 #ifndef WINRT_LEAN_AND_MEAN
     template<> struct hash<winrt::Microsoft::UI::Content::IChildSiteLink> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IChildSiteLinkStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IContentAppWindowBridge> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IContentAppWindowBridgeStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentCoordinateConverter> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentCoordinateConverterFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentCoordinateConverterStatics> : winrt::impl::hash_base {};
@@ -5638,29 +7246,40 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Content::IContentEnvironmentSettingChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentEnvironmentStateChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentEnvironmentStateChangedEventArgs2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IContentExternalBackdropLink> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IContentExternalBackdropLinkStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IContentExternalOutputLink> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IContentExternalOutputLinkStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentIsland> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentIsland2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentIslandAutomation> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentIslandAutomationProviderRequestedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IContentIslandEndpointConnectionPrivate> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentIslandEnvironment> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentIslandEnvironment2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IContentIslandEnvironmentExperimental> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentIslandEnvironmentFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IContentIslandExperimental> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentIslandFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentIslandStateChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentIslandStateChangedEventArgs2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentIslandStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentIslandStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IContentNodeOwner> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentSite> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentSite2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentSiteAutomation> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentSiteAutomationProviderRequestedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentSiteBridge> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentSiteEnvironment> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentSiteEnvironment2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IContentSiteEnvironmentExperimental> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentSiteEnvironmentFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentSiteEnvironmentView> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentSiteEnvironmentView2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentSiteEnvironmentViewFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IContentSiteExperimental> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentSiteFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentSiteInput> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentSiteLink> : winrt::impl::hash_base {};
@@ -5669,6 +7288,8 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Content::IContentSiteView2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentSiteViewAutomation> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentSiteViewFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::ICoreWindowSiteBridge> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::ICoreWindowSiteBridgeStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IDesktopAttachedSiteBridge> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IDesktopAttachedSiteBridgeStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IDesktopChildSiteBridge> : winrt::impl::hash_base {};
@@ -5677,13 +7298,25 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Content::IDesktopPopupSiteBridge> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IDesktopPopupSiteBridgeStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IDesktopSiteBridge> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IDesktopSiteBridge2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IDesktopSiteBridgeFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IDesktopSiteBridgeStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IEndpointConnectionEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IEndpointRequestedStateChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IPopupWindowSiteBridge> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IProcessStarter> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IProcessStarterFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IProcessStarterStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::ISystemVisualSiteBridge> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::ISystemVisualSiteBridgeStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::ChildSiteLink> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::ContentAppWindowBridge> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::ContentCoordinateConverter> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::ContentDeferral> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::ContentEnvironmentSettingChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::ContentEnvironmentStateChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::ContentExternalBackdropLink> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::ContentExternalOutputLink> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::ContentIsland> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::ContentIslandAutomationProviderRequestedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::ContentIslandEnvironment> : winrt::impl::hash_base {};
@@ -5694,10 +7327,17 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Content::ContentSiteEnvironmentView> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::ContentSiteRequestedStateChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::ContentSiteView> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::CoreWindowSiteBridge> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::CoreWindowTopLevelWindowBridge> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::DesktopAttachedSiteBridge> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::DesktopChildSiteBridge> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::DesktopPopupSiteBridge> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::DesktopSiteBridge> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::EndpointConnectionEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::EndpointRequestedStateChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::PopupWindowSiteBridge> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::ProcessStarter> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::SystemVisualSiteBridge> : winrt::impl::hash_base {};
 #endif
 #ifdef __cpp_lib_format
 #endif

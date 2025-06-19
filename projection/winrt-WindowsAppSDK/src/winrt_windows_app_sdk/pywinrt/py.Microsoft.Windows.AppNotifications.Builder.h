@@ -20,6 +20,9 @@ namespace py
     inline constexpr const char* buffer_format<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationAudioLooping> = "i";
 
     template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationButtonSettingStyle> = "i";
+
+    template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationButtonStyle> = "i";
 
     template<>
@@ -41,6 +44,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winui3.microsoft.windows.appnotifications.builder.AppNotificationAudioLooping";
         static constexpr const char* module_name = "winui3.microsoft.windows.appnotifications.builder";
         static constexpr const char* type_name = "AppNotificationAudioLooping";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationButtonSettingStyle>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.appnotifications.builder.AppNotificationButtonSettingStyle";
+        static constexpr const char* module_name = "winui3.microsoft.windows.appnotifications.builder";
+        static constexpr const char* type_name = "AppNotificationButtonSettingStyle";
     };
 
     template<>

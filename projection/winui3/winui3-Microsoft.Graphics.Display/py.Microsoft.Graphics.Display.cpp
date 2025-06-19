@@ -754,6 +754,96 @@ namespace py::cpp::Microsoft::Graphics::Display
         }
     }
 
+    static PyObject* DisplayInformation_get_AngularOffsetFromNativeOrientation(py::wrapper::Microsoft::Graphics::Display::DisplayInformation* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Graphics.Display.DisplayInformation", L"AngularOffsetFromNativeOrientation");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AngularOffsetFromNativeOrientation();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DisplayInformation_get_RawDpi(py::wrapper::Microsoft::Graphics::Display::DisplayInformation* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Graphics.Display.DisplayInformation", L"RawDpi");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RawDpi();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DisplayInformation_get_RawPixelsPerViewPixel(py::wrapper::Microsoft::Graphics::Display::DisplayInformation* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Graphics.Display.DisplayInformation", L"RawPixelsPerViewPixel");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.RawPixelsPerViewPixel();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* DisplayInformation_add_AdvancedColorInfoChanged(py::wrapper::Microsoft::Graphics::Display::DisplayInformation* self, PyObject* arg) noexcept
     {
         try
@@ -1014,6 +1104,136 @@ namespace py::cpp::Microsoft::Graphics::Display
         }
     }
 
+    static PyObject* DisplayInformation_add_DpiChanged(py::wrapper::Microsoft::Graphics::Display::DisplayInformation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Graphics.Display.DisplayInformation", L"DpiChanged");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Graphics::Display::DisplayInformation, winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DpiChanged(param0);
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DisplayInformation_remove_DpiChanged(py::wrapper::Microsoft::Graphics::Display::DisplayInformation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Graphics.Display.DisplayInformation", L"DpiChanged");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.DpiChanged(param0);
+            }
+
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DisplayInformation_add_OrientationChanged(py::wrapper::Microsoft::Graphics::Display::DisplayInformation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Graphics.Display.DisplayInformation", L"OrientationChanged");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Graphics::Display::DisplayInformation, winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OrientationChanged(param0);
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DisplayInformation_remove_OrientationChanged(py::wrapper::Microsoft::Graphics::Display::DisplayInformation* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Graphics.Display.DisplayInformation", L"OrientationChanged");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.OrientationChanged(param0);
+            }
+
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_DisplayInformation(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::Graphics::Display::DisplayInformation>>();
@@ -1074,6 +1294,10 @@ namespace py::cpp::Microsoft::Graphics::Display
         { "remove_destroyed", reinterpret_cast<PyCFunction>(DisplayInformation_remove_Destroyed), METH_O, nullptr },
         { "add_is_stereo_enabled_changed", reinterpret_cast<PyCFunction>(DisplayInformation_add_IsStereoEnabledChanged), METH_O, nullptr },
         { "remove_is_stereo_enabled_changed", reinterpret_cast<PyCFunction>(DisplayInformation_remove_IsStereoEnabledChanged), METH_O, nullptr },
+        { "add_dpi_changed", reinterpret_cast<PyCFunction>(DisplayInformation_add_DpiChanged), METH_O, nullptr },
+        { "remove_dpi_changed", reinterpret_cast<PyCFunction>(DisplayInformation_remove_DpiChanged), METH_O, nullptr },
+        { "add_orientation_changed", reinterpret_cast<PyCFunction>(DisplayInformation_add_OrientationChanged), METH_O, nullptr },
+        { "remove_orientation_changed", reinterpret_cast<PyCFunction>(DisplayInformation_remove_OrientationChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_DisplayInformation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DisplayInformation), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_DisplayInformation), METH_NOARGS, nullptr },
@@ -1083,6 +1307,9 @@ namespace py::cpp::Microsoft::Graphics::Display
     static PyGetSetDef _getset_DisplayInformation[] = {
         { "dispatcher_queue", reinterpret_cast<getter>(DisplayInformation_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { "is_stereo_enabled", reinterpret_cast<getter>(DisplayInformation_get_IsStereoEnabled), nullptr, nullptr, nullptr },
+        { "angular_offset_from_native_orientation", reinterpret_cast<getter>(DisplayInformation_get_AngularOffsetFromNativeOrientation), nullptr, nullptr, nullptr },
+        { "raw_dpi", reinterpret_cast<getter>(DisplayInformation_get_RawDpi), nullptr, nullptr, nullptr },
+        { "raw_pixels_per_view_pixel", reinterpret_cast<getter>(DisplayInformation_get_RawPixelsPerViewPixel), nullptr, nullptr, nullptr },
         { }};
 
     static PyType_Slot _type_slots_DisplayInformation[] = {

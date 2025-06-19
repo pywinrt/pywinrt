@@ -1044,6 +1044,36 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         }
     }
 
+    static PyObject* WidgetInfo_get_Rank(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetInfo* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetInfo", L"Rank");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Rank();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_WidgetInfo(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Providers::WidgetInfo>>();
@@ -1080,6 +1110,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         { "template", reinterpret_cast<getter>(WidgetInfo_get_Template), nullptr, nullptr, nullptr },
         { "widget_context", reinterpret_cast<getter>(WidgetInfo_get_WidgetContext), nullptr, nullptr, nullptr },
         { "is_placeholder_content", reinterpret_cast<getter>(WidgetInfo_get_IsPlaceholderContent), nullptr, nullptr, nullptr },
+        { "rank", reinterpret_cast<getter>(WidgetInfo_get_Rank), nullptr, nullptr, nullptr },
         { }};
 
     static PyType_Slot _type_slots_WidgetInfo[] = {
@@ -2665,6 +2696,75 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         }
     }
 
+    static PyObject* WidgetUpdateRequestOptions_get_Rank(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetUpdateRequestOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions", L"Rank");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Rank();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int WidgetUpdateRequestOptions_put_Rank(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetUpdateRequestOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions", L"Rank");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.Rank(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
     static PyObject* WidgetUpdateRequestOptions_get_UnsetValue(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
         try
@@ -2730,6 +2830,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         { "custom_state", reinterpret_cast<getter>(WidgetUpdateRequestOptions_get_CustomState), reinterpret_cast<setter>(WidgetUpdateRequestOptions_put_CustomState), nullptr, nullptr },
         { "widget_id", reinterpret_cast<getter>(WidgetUpdateRequestOptions_get_WidgetId), nullptr, nullptr, nullptr },
         { "is_placeholder_content", reinterpret_cast<getter>(WidgetUpdateRequestOptions_get_IsPlaceholderContent), reinterpret_cast<setter>(WidgetUpdateRequestOptions_put_IsPlaceholderContent), nullptr, nullptr },
+        { "rank", reinterpret_cast<getter>(WidgetUpdateRequestOptions_get_Rank), reinterpret_cast<setter>(WidgetUpdateRequestOptions_put_Rank), nullptr, nullptr },
         { }};
 
     static PyType_Slot _type_slots_WidgetUpdateRequestOptions[] = {

@@ -5039,6 +5039,268 @@ namespace winrt::impl
         }
         return value;
     }
+    template <typename D> auto consume_Microsoft_UI_Xaml_Media_IRevealBackgroundBrushFactory<D>::CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const
+    {
+        void* value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Xaml::Media::IRevealBackgroundBrushFactory>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Xaml::Media::IRevealBackgroundBrushFactory, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Media::IRevealBackgroundBrushFactory>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Media::IRevealBackgroundBrushFactory>**)this;
+            check_hresult(_winrt_abi_type->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
+        }
+        return winrt::Microsoft::UI::Xaml::Media::RevealBackgroundBrush{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_Media_IRevealBorderBrushFactory<D>::CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const
+    {
+        void* value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Xaml::Media::IRevealBorderBrushFactory>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Xaml::Media::IRevealBorderBrushFactory, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Media::IRevealBorderBrushFactory>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Media::IRevealBorderBrushFactory>**)this;
+            check_hresult(_winrt_abi_type->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
+        }
+        return winrt::Microsoft::UI::Xaml::Media::RevealBorderBrush{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_Media_IRevealBrush<D>::Color() const
+    {
+        winrt::Windows::UI::Color value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Xaml::Media::IRevealBrush>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Xaml::Media::IRevealBrush, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Media::IRevealBrush>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_Color(put_abi(value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Media::IRevealBrush>**)this;
+            check_hresult(_winrt_abi_type->get_Color(put_abi(value)));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_Media_IRevealBrush<D>::Color(winrt::Windows::UI::Color const& value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Xaml::Media::IRevealBrush>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Xaml::Media::IRevealBrush, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Media::IRevealBrush>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->put_Color(impl::bind_in(value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Media::IRevealBrush>**)this;
+            check_hresult(_winrt_abi_type->put_Color(impl::bind_in(value)));
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_Media_IRevealBrush<D>::TargetTheme() const
+    {
+        winrt::Microsoft::UI::Xaml::ApplicationTheme value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Xaml::Media::IRevealBrush>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Xaml::Media::IRevealBrush, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Media::IRevealBrush>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_TargetTheme(reinterpret_cast<int32_t*>(&value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Media::IRevealBrush>**)this;
+            check_hresult(_winrt_abi_type->get_TargetTheme(reinterpret_cast<int32_t*>(&value)));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_Media_IRevealBrush<D>::TargetTheme(winrt::Microsoft::UI::Xaml::ApplicationTheme const& value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Xaml::Media::IRevealBrush>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Xaml::Media::IRevealBrush, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Media::IRevealBrush>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->put_TargetTheme(static_cast<int32_t>(value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Media::IRevealBrush>**)this;
+            check_hresult(_winrt_abi_type->put_TargetTheme(static_cast<int32_t>(value)));
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_Media_IRevealBrush<D>::AlwaysUseFallback() const
+    {
+        bool value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Xaml::Media::IRevealBrush>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Xaml::Media::IRevealBrush, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Media::IRevealBrush>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_AlwaysUseFallback(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Media::IRevealBrush>**)this;
+            check_hresult(_winrt_abi_type->get_AlwaysUseFallback(&value));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_Media_IRevealBrush<D>::AlwaysUseFallback(bool value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Xaml::Media::IRevealBrush>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Xaml::Media::IRevealBrush, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Media::IRevealBrush>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->put_AlwaysUseFallback(value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Media::IRevealBrush>**)this;
+            check_hresult(_winrt_abi_type->put_AlwaysUseFallback(value));
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_Media_IRevealBrushProtectedFactory<D>::CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const
+    {
+        void* value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Xaml::Media::IRevealBrushProtectedFactory>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Xaml::Media::IRevealBrushProtectedFactory, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Media::IRevealBrushProtectedFactory>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Media::IRevealBrushProtectedFactory>**)this;
+            check_hresult(_winrt_abi_type->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
+        }
+        return winrt::Microsoft::UI::Xaml::Media::RevealBrush{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_Media_IRevealBrushStatics<D>::ColorProperty() const
+    {
+        void* value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Xaml::Media::IRevealBrushStatics>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Xaml::Media::IRevealBrushStatics, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Media::IRevealBrushStatics>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_ColorProperty(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Media::IRevealBrushStatics>**)this;
+            check_hresult(_winrt_abi_type->get_ColorProperty(&value));
+        }
+        return winrt::Microsoft::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_Media_IRevealBrushStatics<D>::TargetThemeProperty() const
+    {
+        void* value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Xaml::Media::IRevealBrushStatics>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Xaml::Media::IRevealBrushStatics, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Media::IRevealBrushStatics>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_TargetThemeProperty(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Media::IRevealBrushStatics>**)this;
+            check_hresult(_winrt_abi_type->get_TargetThemeProperty(&value));
+        }
+        return winrt::Microsoft::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_Media_IRevealBrushStatics<D>::AlwaysUseFallbackProperty() const
+    {
+        void* value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Xaml::Media::IRevealBrushStatics>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Xaml::Media::IRevealBrushStatics, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Media::IRevealBrushStatics>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_AlwaysUseFallbackProperty(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Media::IRevealBrushStatics>**)this;
+            check_hresult(_winrt_abi_type->get_AlwaysUseFallbackProperty(&value));
+        }
+        return winrt::Microsoft::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_Media_IRevealBrushStatics<D>::StateProperty() const
+    {
+        void* value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Xaml::Media::IRevealBrushStatics>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Xaml::Media::IRevealBrushStatics, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Media::IRevealBrushStatics>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_StateProperty(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Media::IRevealBrushStatics>**)this;
+            check_hresult(_winrt_abi_type->get_StateProperty(&value));
+        }
+        return winrt::Microsoft::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_Media_IRevealBrushStatics<D>::SetState(winrt::Microsoft::UI::Xaml::UIElement const& element, winrt::Microsoft::UI::Xaml::Media::RevealBrushState const& value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Xaml::Media::IRevealBrushStatics>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Xaml::Media::IRevealBrushStatics, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Media::IRevealBrushStatics>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->SetState(*(void**)(&element), static_cast<int32_t>(value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Media::IRevealBrushStatics>**)this;
+            check_hresult(_winrt_abi_type->SetState(*(void**)(&element), static_cast<int32_t>(value)));
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_Media_IRevealBrushStatics<D>::GetState(winrt::Microsoft::UI::Xaml::UIElement const& element) const
+    {
+        winrt::Microsoft::UI::Xaml::Media::RevealBrushState result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Xaml::Media::IRevealBrushStatics>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Xaml::Media::IRevealBrushStatics, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Media::IRevealBrushStatics>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->GetState(*(void**)(&element), reinterpret_cast<int32_t*>(&result)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::Media::IRevealBrushStatics>**)this;
+            check_hresult(_winrt_abi_type->GetState(*(void**)(&element), reinterpret_cast<int32_t*>(&result)));
+        }
+        return result;
+    }
     template <typename D> auto consume_Microsoft_UI_Xaml_Media_IRotateTransform<D>::CenterX() const
     {
         double value{};
@@ -9350,6 +9612,170 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Xaml::Media::IRevealBackgroundBrush> : produce_base<D, winrt::Microsoft::UI::Xaml::Media::IRevealBackgroundBrush>
+    {
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Xaml::Media::IRevealBackgroundBrushFactory> : produce_base<D, winrt::Microsoft::UI::Xaml::Media::IRevealBackgroundBrushFactory>
+    {
+        int32_t __stdcall CreateInstance(void* baseInterface, void** innerInterface, void** value) noexcept final try
+        {
+            if (innerInterface) *innerInterface = nullptr;
+            winrt::Windows::Foundation::IInspectable winrt_impl_innerInterface;
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Xaml::Media::RevealBackgroundBrush>(this->shim().CreateInstance(*reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&baseInterface), winrt_impl_innerInterface));
+                if (innerInterface) *innerInterface = detach_abi(winrt_impl_innerInterface);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Xaml::Media::IRevealBorderBrush> : produce_base<D, winrt::Microsoft::UI::Xaml::Media::IRevealBorderBrush>
+    {
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Xaml::Media::IRevealBorderBrushFactory> : produce_base<D, winrt::Microsoft::UI::Xaml::Media::IRevealBorderBrushFactory>
+    {
+        int32_t __stdcall CreateInstance(void* baseInterface, void** innerInterface, void** value) noexcept final try
+        {
+            if (innerInterface) *innerInterface = nullptr;
+            winrt::Windows::Foundation::IInspectable winrt_impl_innerInterface;
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Xaml::Media::RevealBorderBrush>(this->shim().CreateInstance(*reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&baseInterface), winrt_impl_innerInterface));
+                if (innerInterface) *innerInterface = detach_abi(winrt_impl_innerInterface);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Xaml::Media::IRevealBrush> : produce_base<D, winrt::Microsoft::UI::Xaml::Media::IRevealBrush>
+    {
+        int32_t __stdcall get_Color(struct struct_Windows_UI_Color* value) noexcept final try
+        {
+            zero_abi<winrt::Windows::UI::Color>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::UI::Color>(this->shim().Color());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_Color(struct struct_Windows_UI_Color value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Color(*reinterpret_cast<winrt::Windows::UI::Color const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_TargetTheme(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Xaml::ApplicationTheme>(this->shim().TargetTheme());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_TargetTheme(int32_t value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().TargetTheme(*reinterpret_cast<winrt::Microsoft::UI::Xaml::ApplicationTheme const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_AlwaysUseFallback(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().AlwaysUseFallback());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_AlwaysUseFallback(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().AlwaysUseFallback(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Xaml::Media::IRevealBrushProtectedFactory> : produce_base<D, winrt::Microsoft::UI::Xaml::Media::IRevealBrushProtectedFactory>
+    {
+        int32_t __stdcall CreateInstance(void* baseInterface, void** innerInterface, void** value) noexcept final try
+        {
+            if (innerInterface) *innerInterface = nullptr;
+            winrt::Windows::Foundation::IInspectable winrt_impl_innerInterface;
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Xaml::Media::RevealBrush>(this->shim().CreateInstance(*reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&baseInterface), winrt_impl_innerInterface));
+                if (innerInterface) *innerInterface = detach_abi(winrt_impl_innerInterface);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Xaml::Media::IRevealBrushStatics> : produce_base<D, winrt::Microsoft::UI::Xaml::Media::IRevealBrushStatics>
+    {
+        int32_t __stdcall get_ColorProperty(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Xaml::DependencyProperty>(this->shim().ColorProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_TargetThemeProperty(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Xaml::DependencyProperty>(this->shim().TargetThemeProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_AlwaysUseFallbackProperty(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Xaml::DependencyProperty>(this->shim().AlwaysUseFallbackProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_StateProperty(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Xaml::DependencyProperty>(this->shim().StateProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall SetState(void* element, int32_t value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SetState(*reinterpret_cast<winrt::Microsoft::UI::Xaml::UIElement const*>(&element), *reinterpret_cast<winrt::Microsoft::UI::Xaml::Media::RevealBrushState const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetState(void* element, int32_t* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::UI::Xaml::Media::RevealBrushState>(this->shim().GetState(*reinterpret_cast<winrt::Microsoft::UI::Xaml::UIElement const*>(&element)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::UI::Xaml::Media::IRotateTransform> : produce_base<D, winrt::Microsoft::UI::Xaml::Media::IRotateTransform>
     {
         int32_t __stdcall get_CenterX(double* value) noexcept final try
@@ -10941,6 +11367,40 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Media
     {
         return impl::call_factory_cast<winrt::Microsoft::UI::Xaml::DependencyProperty(*)(IRectangleGeometryStatics const&), RectangleGeometry, IRectangleGeometryStatics>([](IRectangleGeometryStatics const& f) { return f.RectProperty(); });
     }
+    inline RevealBackgroundBrush::RevealBackgroundBrush()
+    {
+        winrt::Windows::Foundation::IInspectable baseInterface, innerInterface;
+        *this = impl::call_factory<RevealBackgroundBrush, IRevealBackgroundBrushFactory>([&](IRevealBackgroundBrushFactory const& f) { return f.CreateInstance(baseInterface, innerInterface); });
+    }
+    inline RevealBorderBrush::RevealBorderBrush()
+    {
+        winrt::Windows::Foundation::IInspectable baseInterface, innerInterface;
+        *this = impl::call_factory<RevealBorderBrush, IRevealBorderBrushFactory>([&](IRevealBorderBrushFactory const& f) { return f.CreateInstance(baseInterface, innerInterface); });
+    }
+    inline auto RevealBrush::ColorProperty()
+    {
+        return impl::call_factory_cast<winrt::Microsoft::UI::Xaml::DependencyProperty(*)(IRevealBrushStatics const&), RevealBrush, IRevealBrushStatics>([](IRevealBrushStatics const& f) { return f.ColorProperty(); });
+    }
+    inline auto RevealBrush::TargetThemeProperty()
+    {
+        return impl::call_factory_cast<winrt::Microsoft::UI::Xaml::DependencyProperty(*)(IRevealBrushStatics const&), RevealBrush, IRevealBrushStatics>([](IRevealBrushStatics const& f) { return f.TargetThemeProperty(); });
+    }
+    inline auto RevealBrush::AlwaysUseFallbackProperty()
+    {
+        return impl::call_factory_cast<winrt::Microsoft::UI::Xaml::DependencyProperty(*)(IRevealBrushStatics const&), RevealBrush, IRevealBrushStatics>([](IRevealBrushStatics const& f) { return f.AlwaysUseFallbackProperty(); });
+    }
+    inline auto RevealBrush::StateProperty()
+    {
+        return impl::call_factory_cast<winrt::Microsoft::UI::Xaml::DependencyProperty(*)(IRevealBrushStatics const&), RevealBrush, IRevealBrushStatics>([](IRevealBrushStatics const& f) { return f.StateProperty(); });
+    }
+    inline auto RevealBrush::SetState(winrt::Microsoft::UI::Xaml::UIElement const& element, winrt::Microsoft::UI::Xaml::Media::RevealBrushState const& value)
+    {
+        impl::call_factory<RevealBrush, IRevealBrushStatics>([&](IRevealBrushStatics const& f) { return f.SetState(element, value); });
+    }
+    inline auto RevealBrush::GetState(winrt::Microsoft::UI::Xaml::UIElement const& element)
+    {
+        return impl::call_factory<RevealBrush, IRevealBrushStatics>([&](IRevealBrushStatics const& f) { return f.GetState(element); });
+    }
     inline RotateTransform::RotateTransform() :
         RotateTransform(impl::call_factory_cast<RotateTransform(*)(winrt::Windows::Foundation::IActivationFactory const&), RotateTransform>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<RotateTransform>(); }))
     {
@@ -11316,6 +11776,63 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Media
         }
     };
     template <typename D, typename... Interfaces>
+    struct RevealBackgroundBrushT :
+        implements<D, winrt::Microsoft::UI::Xaml::Media::IXamlCompositionBrushBaseOverrides, winrt::Microsoft::UI::Xaml::Media::IBrushOverrides, composing, Interfaces...>,
+        impl::require<D, winrt::Microsoft::UI::Xaml::Media::IRevealBackgroundBrush, winrt::Microsoft::UI::Xaml::Media::IRevealBrush, winrt::Microsoft::UI::Xaml::Media::IXamlCompositionBrushBase, winrt::Microsoft::UI::Xaml::Media::IBrush, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Xaml::IDependencyObject>,
+        protected impl::require<D, winrt::Microsoft::UI::Xaml::Media::IXamlCompositionBrushBaseProtected>,
+        impl::base<D, RevealBackgroundBrush, winrt::Microsoft::UI::Xaml::Media::RevealBrush, winrt::Microsoft::UI::Xaml::Media::XamlCompositionBrushBase, winrt::Microsoft::UI::Xaml::Media::Brush, winrt::Microsoft::UI::Xaml::DependencyObject>,
+        winrt::Microsoft::UI::Xaml::Media::IXamlCompositionBrushBaseOverridesT<D>, winrt::Microsoft::UI::Xaml::Media::IBrushOverridesT<D>
+    {
+        using composable = RevealBackgroundBrush;
+        friend impl::consume_t<D, winrt::Microsoft::UI::Xaml::Media::IXamlCompositionBrushBaseProtected>;
+        friend impl::require_one<D, winrt::Microsoft::UI::Xaml::Media::IXamlCompositionBrushBaseProtected>;
+        friend impl::produce<D, winrt::Microsoft::UI::Xaml::Media::IXamlCompositionBrushBaseOverrides>;
+        friend impl::produce<D, winrt::Microsoft::UI::Xaml::Media::IBrushOverrides>;
+    protected:
+        RevealBackgroundBrushT()
+        {
+            impl::call_factory<RevealBackgroundBrush, IRevealBackgroundBrushFactory>([&](IRevealBackgroundBrushFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
+        }
+    };
+    template <typename D, typename... Interfaces>
+    struct RevealBorderBrushT :
+        implements<D, winrt::Microsoft::UI::Xaml::Media::IXamlCompositionBrushBaseOverrides, winrt::Microsoft::UI::Xaml::Media::IBrushOverrides, composing, Interfaces...>,
+        impl::require<D, winrt::Microsoft::UI::Xaml::Media::IRevealBorderBrush, winrt::Microsoft::UI::Xaml::Media::IRevealBrush, winrt::Microsoft::UI::Xaml::Media::IXamlCompositionBrushBase, winrt::Microsoft::UI::Xaml::Media::IBrush, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Xaml::IDependencyObject>,
+        protected impl::require<D, winrt::Microsoft::UI::Xaml::Media::IXamlCompositionBrushBaseProtected>,
+        impl::base<D, RevealBorderBrush, winrt::Microsoft::UI::Xaml::Media::RevealBrush, winrt::Microsoft::UI::Xaml::Media::XamlCompositionBrushBase, winrt::Microsoft::UI::Xaml::Media::Brush, winrt::Microsoft::UI::Xaml::DependencyObject>,
+        winrt::Microsoft::UI::Xaml::Media::IXamlCompositionBrushBaseOverridesT<D>, winrt::Microsoft::UI::Xaml::Media::IBrushOverridesT<D>
+    {
+        using composable = RevealBorderBrush;
+        friend impl::consume_t<D, winrt::Microsoft::UI::Xaml::Media::IXamlCompositionBrushBaseProtected>;
+        friend impl::require_one<D, winrt::Microsoft::UI::Xaml::Media::IXamlCompositionBrushBaseProtected>;
+        friend impl::produce<D, winrt::Microsoft::UI::Xaml::Media::IXamlCompositionBrushBaseOverrides>;
+        friend impl::produce<D, winrt::Microsoft::UI::Xaml::Media::IBrushOverrides>;
+    protected:
+        RevealBorderBrushT()
+        {
+            impl::call_factory<RevealBorderBrush, IRevealBorderBrushFactory>([&](IRevealBorderBrushFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
+        }
+    };
+    template <typename D, typename... Interfaces>
+    struct RevealBrushT :
+        implements<D, winrt::Microsoft::UI::Xaml::Media::IXamlCompositionBrushBaseOverrides, winrt::Microsoft::UI::Xaml::Media::IBrushOverrides, composing, Interfaces...>,
+        impl::require<D, winrt::Microsoft::UI::Xaml::Media::IRevealBrush, winrt::Microsoft::UI::Xaml::Media::IXamlCompositionBrushBase, winrt::Microsoft::UI::Xaml::Media::IBrush, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Xaml::IDependencyObject>,
+        protected impl::require<D, winrt::Microsoft::UI::Xaml::Media::IXamlCompositionBrushBaseProtected>,
+        impl::base<D, RevealBrush, winrt::Microsoft::UI::Xaml::Media::XamlCompositionBrushBase, winrt::Microsoft::UI::Xaml::Media::Brush, winrt::Microsoft::UI::Xaml::DependencyObject>,
+        winrt::Microsoft::UI::Xaml::Media::IXamlCompositionBrushBaseOverridesT<D>, winrt::Microsoft::UI::Xaml::Media::IBrushOverridesT<D>
+    {
+        using composable = RevealBrush;
+        friend impl::consume_t<D, winrt::Microsoft::UI::Xaml::Media::IXamlCompositionBrushBaseProtected>;
+        friend impl::require_one<D, winrt::Microsoft::UI::Xaml::Media::IXamlCompositionBrushBaseProtected>;
+        friend impl::produce<D, winrt::Microsoft::UI::Xaml::Media::IXamlCompositionBrushBaseOverrides>;
+        friend impl::produce<D, winrt::Microsoft::UI::Xaml::Media::IBrushOverrides>;
+    protected:
+        RevealBrushT()
+        {
+            impl::call_factory<RevealBrush, IRevealBrushProtectedFactory>([&](IRevealBrushProtectedFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
+        }
+    };
+    template <typename D, typename... Interfaces>
     struct SystemBackdropT :
         implements<D, winrt::Microsoft::UI::Xaml::Media::ISystemBackdropOverrides, composing, Interfaces...>,
         impl::require<D, winrt::Microsoft::UI::Xaml::Media::ISystemBackdrop, winrt::Microsoft::UI::Xaml::IDependencyObject>,
@@ -11488,6 +12005,13 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Xaml::Media::IRectangleGeometryStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Media::IRenderedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Media::IRenderingEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Xaml::Media::IRevealBackgroundBrush> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Xaml::Media::IRevealBackgroundBrushFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Xaml::Media::IRevealBorderBrush> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Xaml::Media::IRevealBorderBrushFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Xaml::Media::IRevealBrush> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Xaml::Media::IRevealBrushProtectedFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Xaml::Media::IRevealBrushStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Media::IRotateTransform> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Media::IRotateTransformStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Media::IScaleTransform> : winrt::impl::hash_base {};
@@ -11573,6 +12097,9 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Xaml::Media::RectangleGeometry> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Media::RenderedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Media::RenderingEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Xaml::Media::RevealBackgroundBrush> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Xaml::Media::RevealBorderBrush> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Xaml::Media::RevealBrush> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Media::RotateTransform> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Media::ScaleTransform> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::Media::Shadow> : winrt::impl::hash_base {};

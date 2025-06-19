@@ -33,8 +33,11 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::AppNotifications
         Unsupported = 5,
     };
     struct IAppNotification;
+    struct IAppNotification2;
     struct IAppNotificationActivatedEventArgs;
     struct IAppNotificationActivatedEventArgs2;
+    struct IAppNotificationConferencingConfig;
+    struct IAppNotificationConferencingConfigStatics;
     struct IAppNotificationFactory;
     struct IAppNotificationManager;
     struct IAppNotificationManager2;
@@ -44,6 +47,7 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::AppNotifications
     struct IAppNotificationProgressDataFactory;
     struct AppNotification;
     struct AppNotificationActivatedEventArgs;
+    struct AppNotificationConferencingConfig;
     struct AppNotificationManager;
     struct AppNotificationProgressData;
     struct AppNotificationsContract;
@@ -51,8 +55,11 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::AppNotifications
 namespace winrt::impl
 {
     template <> struct category<winrt::Microsoft::Windows::AppNotifications::IAppNotification>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::Windows::AppNotifications::IAppNotification2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Windows::AppNotifications::IAppNotificationActivatedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Windows::AppNotifications::IAppNotificationActivatedEventArgs2>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfig>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfigStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Windows::AppNotifications::IAppNotificationFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Windows::AppNotifications::IAppNotificationManager>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Windows::AppNotifications::IAppNotificationManager2>{ using type = interface_category; };
@@ -62,6 +69,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::Windows::AppNotifications::IAppNotificationProgressDataFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Windows::AppNotifications::AppNotification>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::Windows::AppNotifications::AppNotificationActivatedEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::Windows::AppNotifications::AppNotificationConferencingConfig>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::Windows::AppNotifications::AppNotificationManager>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::Windows::AppNotifications::AppNotificationProgressData>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::Windows::AppNotifications::AppNotificationPriority>{ using type = enum_category; };
@@ -69,14 +77,18 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::Windows::AppNotifications::AppNotificationSetting>{ using type = enum_category; };
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::AppNotification> = L"Microsoft.Windows.AppNotifications.AppNotification";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::AppNotificationActivatedEventArgs> = L"Microsoft.Windows.AppNotifications.AppNotificationActivatedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::AppNotificationConferencingConfig> = L"Microsoft.Windows.AppNotifications.AppNotificationConferencingConfig";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::AppNotificationManager> = L"Microsoft.Windows.AppNotifications.AppNotificationManager";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::AppNotificationProgressData> = L"Microsoft.Windows.AppNotifications.AppNotificationProgressData";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::AppNotificationPriority> = L"Microsoft.Windows.AppNotifications.AppNotificationPriority";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::AppNotificationProgressResult> = L"Microsoft.Windows.AppNotifications.AppNotificationProgressResult";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::AppNotificationSetting> = L"Microsoft.Windows.AppNotifications.AppNotificationSetting";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::IAppNotification> = L"Microsoft.Windows.AppNotifications.IAppNotification";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::IAppNotification2> = L"Microsoft.Windows.AppNotifications.IAppNotification2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::IAppNotificationActivatedEventArgs> = L"Microsoft.Windows.AppNotifications.IAppNotificationActivatedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::IAppNotificationActivatedEventArgs2> = L"Microsoft.Windows.AppNotifications.IAppNotificationActivatedEventArgs2";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfig> = L"Microsoft.Windows.AppNotifications.IAppNotificationConferencingConfig";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfigStatics> = L"Microsoft.Windows.AppNotifications.IAppNotificationConferencingConfigStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::IAppNotificationFactory> = L"Microsoft.Windows.AppNotifications.IAppNotificationFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::IAppNotificationManager> = L"Microsoft.Windows.AppNotifications.IAppNotificationManager";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::IAppNotificationManager2> = L"Microsoft.Windows.AppNotifications.IAppNotificationManager2";
@@ -86,8 +98,11 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::IAppNotificationProgressDataFactory> = L"Microsoft.Windows.AppNotifications.IAppNotificationProgressDataFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::AppNotificationsContract> = L"Microsoft.Windows.AppNotifications.AppNotificationsContract";
     template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::AppNotifications::IAppNotification>{ 0x373A6917,0x4116,0x5657,{ 0x93,0x6A,0x15,0xF9,0x9A,0xFD,0xD6,0x67 } }; // 373A6917-4116-5657-936A-15F99AFDD667
+    template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::AppNotifications::IAppNotification2>{ 0x53FCBAF2,0x26F4,0x5E76,{ 0xBB,0x80,0x0E,0xB6,0x3F,0x63,0x26,0x52 } }; // 53FCBAF2-26F4-5E76-BB80-0EB63F632652
     template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::AppNotifications::IAppNotificationActivatedEventArgs>{ 0x7A8AFAF9,0x31CB,0x51D5,{ 0x82,0xBE,0xDB,0x6B,0xD5,0x87,0x8B,0x77 } }; // 7A8AFAF9-31CB-51D5-82BE-DB6BD5878B77
     template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::AppNotifications::IAppNotificationActivatedEventArgs2>{ 0x52C06B9B,0x2C50,0x5037,{ 0x94,0x16,0xA3,0xBE,0x47,0xB9,0xD5,0xBD } }; // 52C06B9B-2C50-5037-9416-A3BE47B9D5BD
+    template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfig>{ 0x476C74FE,0x4672,0x514D,{ 0xA5,0xA7,0x5A,0xDD,0xF2,0x1A,0x6F,0x24 } }; // 476C74FE-4672-514D-A5A7-5ADDF21A6F24
+    template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfigStatics>{ 0xE6489BEA,0x1BA7,0x5258,{ 0x98,0x84,0x1A,0x59,0xE3,0xA1,0x80,0x59 } }; // E6489BEA-1BA7-5258-9884-1A59E3A18059
     template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::AppNotifications::IAppNotificationFactory>{ 0x9FFEE485,0x184A,0x5C65,{ 0x87,0xA9,0xC1,0xD9,0x44,0x69,0xDB,0xE7 } }; // 9FFEE485-184A-5C65-87A9-C1D94469DBE7
     template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::AppNotifications::IAppNotificationManager>{ 0x55129688,0xB4BD,0x550B,{ 0xAE,0x6B,0xC2,0x40,0x61,0x95,0x4D,0x91 } }; // 55129688-B4BD-550B-AE6B-C24061954D91
     template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::AppNotifications::IAppNotificationManager2>{ 0x38BA268D,0xE0C7,0x522E,{ 0xA7,0x9D,0x8A,0x29,0xDC,0xDD,0x71,0x35 } }; // 38BA268D-E0C7-522E-A79D-8A29DCDD7135
@@ -97,6 +112,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::AppNotifications::IAppNotificationProgressDataFactory>{ 0xC08E4A0F,0x3A75,0x55D6,{ 0x8C,0x3E,0x14,0xF0,0x3A,0xE4,0x60,0x46 } }; // C08E4A0F-3A75-55D6-8C3E-14F03AE46046
     template <> struct default_interface<winrt::Microsoft::Windows::AppNotifications::AppNotification>{ using type = winrt::Microsoft::Windows::AppNotifications::IAppNotification; };
     template <> struct default_interface<winrt::Microsoft::Windows::AppNotifications::AppNotificationActivatedEventArgs>{ using type = winrt::Microsoft::Windows::AppNotifications::IAppNotificationActivatedEventArgs; };
+    template <> struct default_interface<winrt::Microsoft::Windows::AppNotifications::AppNotificationConferencingConfig>{ using type = winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfig; };
     template <> struct default_interface<winrt::Microsoft::Windows::AppNotifications::AppNotificationManager>{ using type = winrt::Microsoft::Windows::AppNotifications::IAppNotificationManager; };
     template <> struct default_interface<winrt::Microsoft::Windows::AppNotifications::AppNotificationProgressData>{ using type = winrt::Microsoft::Windows::AppNotifications::IAppNotificationProgressData; };
     template <> struct abi<winrt::Microsoft::Windows::AppNotifications::IAppNotification>
@@ -121,6 +137,14 @@ namespace winrt::impl
             virtual int32_t __stdcall put_SuppressDisplay(bool) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::Windows::AppNotifications::IAppNotification2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_ConferencingConfig(void**) noexcept = 0;
+            virtual int32_t __stdcall put_ConferencingConfig(void*) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::Windows::AppNotifications::IAppNotificationActivatedEventArgs>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -134,6 +158,25 @@ namespace winrt::impl
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
             virtual int32_t __stdcall get_Arguments(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfig>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_VideoDeviceId(void**) noexcept = 0;
+            virtual int32_t __stdcall put_VideoDeviceId(void*) noexcept = 0;
+            virtual int32_t __stdcall get_AudioInputDeviceId(void**) noexcept = 0;
+            virtual int32_t __stdcall put_AudioInputDeviceId(void*) noexcept = 0;
+            virtual int32_t __stdcall get_AudioOutputDeviceId(void**) noexcept = 0;
+            virtual int32_t __stdcall put_AudioOutputDeviceId(void*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfigStatics>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall IsCallingPreviewSupported(bool*) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::Windows::AppNotifications::IAppNotificationFactory>
@@ -233,6 +276,16 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_Windows_AppNotifications_IAppNotification<D>;
     };
     template <typename D>
+    struct consume_Microsoft_Windows_AppNotifications_IAppNotification2
+    {
+        [[nodiscard]] auto ConferencingConfig() const;
+        auto ConferencingConfig(winrt::Microsoft::Windows::AppNotifications::AppNotificationConferencingConfig const& value) const;
+    };
+    template <> struct consume<winrt::Microsoft::Windows::AppNotifications::IAppNotification2>
+    {
+        template <typename D> using type = consume_Microsoft_Windows_AppNotifications_IAppNotification2<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_Windows_AppNotifications_IAppNotificationActivatedEventArgs
     {
         [[nodiscard]] auto Argument() const;
@@ -250,6 +303,29 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::Windows::AppNotifications::IAppNotificationActivatedEventArgs2>
     {
         template <typename D> using type = consume_Microsoft_Windows_AppNotifications_IAppNotificationActivatedEventArgs2<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_Windows_AppNotifications_IAppNotificationConferencingConfig
+    {
+        [[nodiscard]] auto VideoDeviceId() const;
+        auto VideoDeviceId(param::hstring const& value) const;
+        [[nodiscard]] auto AudioInputDeviceId() const;
+        auto AudioInputDeviceId(param::hstring const& value) const;
+        [[nodiscard]] auto AudioOutputDeviceId() const;
+        auto AudioOutputDeviceId(param::hstring const& value) const;
+    };
+    template <> struct consume<winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfig>
+    {
+        template <typename D> using type = consume_Microsoft_Windows_AppNotifications_IAppNotificationConferencingConfig<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_Windows_AppNotifications_IAppNotificationConferencingConfigStatics
+    {
+        auto IsCallingPreviewSupported() const;
+    };
+    template <> struct consume<winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfigStatics>
+    {
+        template <typename D> using type = consume_Microsoft_Windows_AppNotifications_IAppNotificationConferencingConfigStatics<D>;
     };
     template <typename D>
     struct consume_Microsoft_Windows_AppNotifications_IAppNotificationFactory

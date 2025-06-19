@@ -19,26 +19,17 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::ApplicationModel::WindowsAppRu
         Ok = 1,
         PackageInstallRequired = 2,
         PackageInstallFailed = 3,
+        PackageRepairFailed = 4,
     };
     enum class RuntimeCompatibilityChange : int32_t
     {
         None = 0,
-        EnsurePackageReadyVersionSupercedence = 56439870,
-        FixPopupClosingReentrancyCrash = 56870998,
-        FixPopupUnloadingCrash = 56686624,
-        FixRandomUIFreezeInDispatcher = 56545444,
-        FixSetProgressBarIndicatorWidthCrash = 56779522,
-        FixStuckPointerInputQueue = 56620717,
-        FixWebViewVisibilityReentrancyCrash = 56852985,
-        FixWindowCloseFocusCrash = 56873234,
-        ActivateDirectManipulationManager_CheckCanInit = 56997009,
-        DwmCoreI_OptimizeFirstFrameLatency = 57345278,
-        InputStateManager_PenInputCrashX86 = 57003641,
     };
     struct IDeploymentInitializeOptions;
     struct IDeploymentInitializeOptions2;
     struct IDeploymentManagerStatics;
     struct IDeploymentManagerStatics2;
+    struct IDeploymentManagerStatics3;
     struct IDeploymentResult;
     struct IDeploymentResultFactory;
     struct IReleaseInfoStatics;
@@ -61,6 +52,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentInitializeOptions2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentManagerStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentManagerStatics2>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentManagerStatics3>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentResult>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentResultFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IReleaseInfoStatics>{ using type = interface_category; };
@@ -88,6 +80,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentInitializeOptions2> = L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentInitializeOptions2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentManagerStatics> = L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentManagerStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentManagerStatics2> = L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentManagerStatics2";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentManagerStatics3> = L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentManagerStatics3";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentResult> = L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentResult";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentResultFactory> = L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentResultFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IReleaseInfoStatics> = L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IReleaseInfoStatics";
@@ -100,6 +93,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentInitializeOptions2>{ 0xAD902820,0x149F,0x5E16,{ 0xA5,0x66,0x9B,0x23,0x63,0x99,0x7D,0xE2 } }; // AD902820-149F-5E16-A566-9B2363997DE2
     template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentManagerStatics>{ 0x6782A9D0,0xBFD0,0x50EA,{ 0x81,0xB0,0x32,0xE9,0xED,0x37,0xCD,0xF0 } }; // 6782A9D0-BFD0-50EA-81B0-32E9ED37CDF0
     template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentManagerStatics2>{ 0xF49C16EE,0x6EBC,0x5F15,{ 0xBE,0xBB,0x2B,0xA4,0x9F,0x8C,0x0B,0x30 } }; // F49C16EE-6EBC-5F15-BEBB-2BA49F8C0B30
+    template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentManagerStatics3>{ 0xDD0D872E,0x9475,0x593E,{ 0xA9,0xFD,0xC6,0xB5,0xF5,0xDC,0xA7,0xCF } }; // DD0D872E-9475-593E-A9FD-C6B5F5DCA7CF
     template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentResult>{ 0x27203F62,0x463D,0x587A,{ 0x8E,0xB7,0x87,0x00,0x98,0x90,0x10,0x78 } }; // 27203F62-463D-587A-8EB7-870098901078
     template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentResultFactory>{ 0xACD7BDAE,0x4AE6,0x5CAC,{ 0x82,0x05,0x1E,0x8C,0x30,0x5F,0x95,0x3B } }; // ACD7BDAE-4AE6-5CAC-8205-1E8C305F953B
     template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IReleaseInfoStatics>{ 0xED9BE8FF,0x073C,0x5C66,{ 0xBF,0x97,0xEF,0x0C,0xE6,0x74,0x05,0xC3 } }; // ED9BE8FF-073C-5C66-BF97-EF0CE67405C3
@@ -137,6 +131,13 @@ namespace winrt::impl
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
             virtual int32_t __stdcall Initialize(void*, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentManagerStatics3>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall Repair(void**) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentResult>
@@ -223,6 +224,15 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentManagerStatics2>
     {
         template <typename D> using type = consume_Microsoft_Windows_ApplicationModel_WindowsAppRuntime_IDeploymentManagerStatics2<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_Windows_ApplicationModel_WindowsAppRuntime_IDeploymentManagerStatics3
+    {
+        auto Repair() const;
+    };
+    template <> struct consume<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentManagerStatics3>
+    {
+        template <typename D> using type = consume_Microsoft_Windows_ApplicationModel_WindowsAppRuntime_IDeploymentManagerStatics3<D>;
     };
     template <typename D>
     struct consume_Microsoft_Windows_ApplicationModel_WindowsAppRuntime_IDeploymentResult

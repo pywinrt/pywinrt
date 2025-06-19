@@ -6543,44 +6543,6 @@ namespace winrt::impl
             _winrt_abi_type->remove_ScreenCaptureStarting(impl::bind_in(token));
         }
     }
-    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2Frame7<D>::FrameCreated(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Frame, winrt::Microsoft::Web::WebView2::Core::CoreWebView2FrameCreatedEventArgs> const& handler) const
-    {
-        winrt::event_token token{};
-        if constexpr (!std::is_same_v<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame7>)
-        {
-            winrt::hresult _winrt_cast_result_code;
-            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame7, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
-            check_hresult(_winrt_cast_result_code);
-            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame7>**)&_winrt_casted_result;
-            check_hresult(_winrt_abi_type->add_FrameCreated(*(void**)(&handler), put_abi(token)));
-        }
-        else
-        {
-            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame7>**)this;
-            check_hresult(_winrt_abi_type->add_FrameCreated(*(void**)(&handler), put_abi(token)));
-        }
-        return token;
-    }
-    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2Frame7<D>::FrameCreated(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Frame, winrt::Microsoft::Web::WebView2::Core::CoreWebView2FrameCreatedEventArgs> const& handler) const
-    {
-        return impl::make_event_revoker<D, FrameCreated_revoker>(this, FrameCreated(handler));
-    }
-    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2Frame7<D>::FrameCreated(winrt::event_token const& token) const noexcept
-    {
-        if constexpr (!std::is_same_v<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame7>)
-        {
-            winrt::hresult _winrt_cast_result_code;
-            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame7, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
-            check_hresult(_winrt_cast_result_code);
-            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame7>**)&_winrt_casted_result;
-            _winrt_abi_type->remove_FrameCreated(impl::bind_in(token));
-        }
-        else
-        {
-            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame7>**)this;
-            _winrt_abi_type->remove_FrameCreated(impl::bind_in(token));
-        }
-    }
     template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2FrameCreatedEventArgs<D>::Frame() const
     {
         void* value{};
@@ -17040,26 +17002,6 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame7> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame7>
-    {
-        int32_t __stdcall add_FrameCreated(void* handler, winrt::event_token* token) noexcept final try
-        {
-            zero_abi<winrt::event_token>(token);
-            typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().FrameCreated(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Frame, winrt::Microsoft::Web::WebView2::Core::CoreWebView2FrameCreatedEventArgs> const*>(&handler)));
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-        int32_t __stdcall remove_FrameCreated(winrt::event_token token) noexcept final
-        {
-            typename D::abi_guard guard(this->shim());
-            this->shim().FrameCreated(*reinterpret_cast<winrt::event_token const*>(&token));
-            return 0;
-        }
-    };
-#endif
-#ifndef WINRT_LEAN_AND_MEAN
-    template <typename D>
     struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FrameCreatedEventArgs> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FrameCreatedEventArgs>
     {
         int32_t __stdcall get_Frame(void** value) noexcept final try
@@ -20953,7 +20895,6 @@ namespace std
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame4> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame5> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame6> : winrt::impl::hash_base {};
-    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame7> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FrameCreatedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FrameInfo> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FrameInfo2> : winrt::impl::hash_base {};
