@@ -392,6 +392,24 @@ namespace winrt::impl
         }
         return value;
     }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Providers_IWidgetInfo3<D>::Rank() const
+    {
+        int32_t value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::Widgets::Providers::IWidgetInfo3>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::Widgets::Providers::IWidgetInfo3, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::Widgets::Providers::IWidgetInfo3>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_Rank(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::Widgets::Providers::IWidgetInfo3>**)this;
+            check_hresult(_winrt_abi_type->get_Rank(&value));
+        }
+        return value;
+    }
     template <typename D> auto consume_Microsoft_Windows_Widgets_Providers_IWidgetManager<D>::UpdateWidget(winrt::Microsoft::Windows::Widgets::Providers::WidgetUpdateRequestOptions const& widgetUpdateRequestOptions) const
     {
         if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::Widgets::Providers::IWidgetManager>)
@@ -1162,6 +1180,40 @@ namespace winrt::impl
             check_hresult(_winrt_abi_type->put_IsPlaceholderContent(*(void**)(&value)));
         }
     }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Providers_IWidgetUpdateRequestOptions3<D>::Rank() const
+    {
+        void* value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::Widgets::Providers::IWidgetUpdateRequestOptions3>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::Widgets::Providers::IWidgetUpdateRequestOptions3, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::Widgets::Providers::IWidgetUpdateRequestOptions3>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_Rank(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::Widgets::Providers::IWidgetUpdateRequestOptions3>**)this;
+            check_hresult(_winrt_abi_type->get_Rank(&value));
+        }
+        return winrt::Windows::Foundation::IReference<int32_t>{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Providers_IWidgetUpdateRequestOptions3<D>::Rank(winrt::Windows::Foundation::IReference<int32_t> const& value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::Widgets::Providers::IWidgetUpdateRequestOptions3>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::Widgets::Providers::IWidgetUpdateRequestOptions3, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::Widgets::Providers::IWidgetUpdateRequestOptions3>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->put_Rank(*(void**)(&value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::Widgets::Providers::IWidgetUpdateRequestOptions3>**)this;
+            check_hresult(_winrt_abi_type->put_Rank(*(void**)(&value)));
+        }
+    }
     template <typename D> auto consume_Microsoft_Windows_Widgets_Providers_IWidgetUpdateRequestOptionsFactory<D>::CreateInstance(param::hstring const& widgetId) const
     {
         void* value{};
@@ -1406,6 +1458,19 @@ namespace winrt::impl
         {
             typename D::abi_guard guard(this->shim());
             *value = detach_from<bool>(this->shim().IsPlaceholderContent());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Windows::Widgets::Providers::IWidgetInfo3> : produce_base<D, winrt::Microsoft::Windows::Widgets::Providers::IWidgetInfo3>
+    {
+        int32_t __stdcall get_Rank(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<int32_t>(this->shim().Rank());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1831,6 +1896,27 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::Windows::Widgets::Providers::IWidgetUpdateRequestOptions3> : produce_base<D, winrt::Microsoft::Windows::Widgets::Providers::IWidgetUpdateRequestOptions3>
+    {
+        int32_t __stdcall get_Rank(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::IReference<int32_t>>(this->shim().Rank());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_Rank(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Rank(*reinterpret_cast<winrt::Windows::Foundation::IReference<int32_t> const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::Windows::Widgets::Providers::IWidgetUpdateRequestOptionsFactory> : produce_base<D, winrt::Microsoft::Windows::Widgets::Providers::IWidgetUpdateRequestOptionsFactory>
     {
         int32_t __stdcall CreateInstance(void* widgetId, void** value) noexcept final try
@@ -1888,6 +1974,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Providers::IWidgetErrorInfoReportedArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Providers::IWidgetInfo> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Providers::IWidgetInfo2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::Widgets::Providers::IWidgetInfo3> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Providers::IWidgetManager> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Providers::IWidgetManager2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Providers::IWidgetManagerStatics> : winrt::impl::hash_base {};
@@ -1904,6 +1991,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Providers::IWidgetResourceResponseFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Providers::IWidgetUpdateRequestOptions> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Providers::IWidgetUpdateRequestOptions2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::Widgets::Providers::IWidgetUpdateRequestOptions3> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Providers::IWidgetUpdateRequestOptionsFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Providers::IWidgetUpdateRequestOptionsStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Providers::WidgetActionInvokedArgs> : winrt::impl::hash_base {};

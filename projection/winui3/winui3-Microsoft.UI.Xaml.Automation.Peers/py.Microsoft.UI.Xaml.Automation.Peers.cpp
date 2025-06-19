@@ -13761,6 +13761,179 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_InfoBarAutomationPeer_Static};
 
+    // ----- InkCanvasAutomationPeer class --------------------
+
+    struct PyWinrtInkCanvasAutomationPeer;
+    using BasePyWinrtInkCanvasAutomationPeer = winrt::Microsoft::UI::Xaml::Automation::Peers::InkCanvasAutomationPeerT<PyWinrtInkCanvasAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtInkCanvasAutomationPeer : py::py_obj_ref, BasePyWinrtInkCanvasAutomationPeer
+    {
+        PyWinrtInkCanvasAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::InkCanvas owner) : py::py_obj_ref(py_obj), BasePyWinrtInkCanvasAutomationPeer(owner) {}
+
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
+        {
+            obj = py::py_obj_ref::get_py_obj();
+            return 0;
+        }
+
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
+        static void toggle_reference(PyWinrtInkCanvasAutomationPeer* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
+    };
+
+    static PyObject* _new_InkCanvasAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::InkCanvasAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::InkCanvas>(args, 0);
+
+                if (type != self_type)
+                {
+                    py::pyobj_handle self{type->tp_alloc(type, 0)};
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+
+                    auto obj_impl = winrt::make_self<PyWinrtInkCanvasAutomationPeer>(self.get(), param0);
+
+                    auto obj = py::make_py_obj<PyWinrtInkCanvasAutomationPeer>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
+
+                    return self.detach();
+                }
+
+                winrt::Microsoft::UI::Xaml::Automation::Peers::InkCanvasAutomationPeer instance{param0};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_InkCanvasAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* _assign_array_InkCanvasAutomationPeer(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Automation::Peers::InkCanvasAutomationPeer>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_InkCanvasAutomationPeer(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Xaml::Automation::Peers::InkCanvasAutomationPeer>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_InkCanvasAutomationPeer[] = {
+        { "_assign_array_", _assign_array_InkCanvasAutomationPeer, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_InkCanvasAutomationPeer), METH_O | METH_STATIC, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_InkCanvasAutomationPeer[] = {
+        { }};
+
+    static PyType_Slot _type_slots_InkCanvasAutomationPeer[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_InkCanvasAutomationPeer) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkCanvasAutomationPeer) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_InkCanvasAutomationPeer) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_InkCanvasAutomationPeer) },
+        { }};
+
+    static PyType_Spec type_spec_InkCanvasAutomationPeer = {
+        "winui3._winui3_microsoft_ui_xaml_automation_peers.InkCanvasAutomationPeer",
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        _type_slots_InkCanvasAutomationPeer};
+
+    static PyGetSetDef getset_InkCanvasAutomationPeer_Static[] = {
+        { }};
+
+    static PyMethodDef methods_InkCanvasAutomationPeer_Static[] = {
+        { }};
+
+    static PyType_Slot type_slots_InkCanvasAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_InkCanvasAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_InkCanvasAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_InkCanvasAutomationPeer_Static = {
+        "winui3._winui3_microsoft_ui_xaml_automation_peers.InkCanvasAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_InkCanvasAutomationPeer_Static};
+
     // ----- ItemAutomationPeer class --------------------
 
     struct PyWinrtItemAutomationPeer;
@@ -19524,6 +19697,179 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_NumberBoxAutomationPeer_Static};
+
+    // ----- PagerControlAutomationPeer class --------------------
+
+    struct PyWinrtPagerControlAutomationPeer;
+    using BasePyWinrtPagerControlAutomationPeer = winrt::Microsoft::UI::Xaml::Automation::Peers::PagerControlAutomationPeerT<PyWinrtPagerControlAutomationPeer, py::IPywinrtObject>;
+
+    struct PyWinrtPagerControlAutomationPeer : py::py_obj_ref, BasePyWinrtPagerControlAutomationPeer
+    {
+        PyWinrtPagerControlAutomationPeer(PyObject* py_obj, winrt::Microsoft::UI::Xaml::Controls::PagerControl owner) : py::py_obj_ref(py_obj), BasePyWinrtPagerControlAutomationPeer(owner) {}
+
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
+        {
+            obj = py::py_obj_ref::get_py_obj();
+            return 0;
+        }
+
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
+        static void toggle_reference(PyWinrtPagerControlAutomationPeer* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
+    };
+
+    static PyObject* _new_PagerControlAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::PagerControlAutomationPeer>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::PagerControl>(args, 0);
+
+                if (type != self_type)
+                {
+                    py::pyobj_handle self{type->tp_alloc(type, 0)};
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+
+                    auto obj_impl = winrt::make_self<PyWinrtPagerControlAutomationPeer>(self.get(), param0);
+
+                    auto obj = py::make_py_obj<PyWinrtPagerControlAutomationPeer>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
+
+                    return self.detach();
+                }
+
+                winrt::Microsoft::UI::Xaml::Automation::Peers::PagerControlAutomationPeer instance{param0};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_PagerControlAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* _assign_array_PagerControlAutomationPeer(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Automation::Peers::PagerControlAutomationPeer>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_PagerControlAutomationPeer(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Xaml::Automation::Peers::PagerControlAutomationPeer>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_PagerControlAutomationPeer[] = {
+        { "_assign_array_", _assign_array_PagerControlAutomationPeer, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_PagerControlAutomationPeer), METH_O | METH_STATIC, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_PagerControlAutomationPeer[] = {
+        { }};
+
+    static PyType_Slot _type_slots_PagerControlAutomationPeer[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_PagerControlAutomationPeer) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PagerControlAutomationPeer) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_PagerControlAutomationPeer) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_PagerControlAutomationPeer) },
+        { }};
+
+    static PyType_Spec type_spec_PagerControlAutomationPeer = {
+        "winui3._winui3_microsoft_ui_xaml_automation_peers.PagerControlAutomationPeer",
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        _type_slots_PagerControlAutomationPeer};
+
+    static PyGetSetDef getset_PagerControlAutomationPeer_Static[] = {
+        { }};
+
+    static PyMethodDef methods_PagerControlAutomationPeer_Static[] = {
+        { }};
+
+    static PyType_Slot type_slots_PagerControlAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PagerControlAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PagerControlAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PagerControlAutomationPeer_Static = {
+        "winui3._winui3_microsoft_ui_xaml_automation_peers.PagerControlAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_PagerControlAutomationPeer_Static};
 
     // ----- PasswordBoxAutomationPeer class --------------------
 
@@ -30616,6 +30962,30 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_ui_xaml_automation_peers(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle InkCanvasAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!InkCanvasAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InkCanvasAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_InkCanvasAutomationPeer_Static, InkCanvasAutomationPeer_Static_bases.get())};
+    if (!type_InkCanvasAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle InkCanvasAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!InkCanvasAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InkCanvasAutomationPeer_type{py::register_python_type(module.get(), &type_spec_InkCanvasAutomationPeer, InkCanvasAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkCanvasAutomationPeer_Static.get()))};
+    if (!InkCanvasAutomationPeer_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle ItemContainerAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
     if (!ItemContainerAutomationPeer_Static_bases)
     {
@@ -31092,6 +31462,30 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_ui_xaml_automation_peers(void) noexcept
 
     py::pytype_handle NumberBoxAutomationPeer_type{py::register_python_type(module.get(), &type_spec_NumberBoxAutomationPeer, NumberBoxAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_NumberBoxAutomationPeer_Static.get()))};
     if (!NumberBoxAutomationPeer_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle PagerControlAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!PagerControlAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PagerControlAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_PagerControlAutomationPeer_Static, PagerControlAutomationPeer_Static_bases.get())};
+    if (!type_PagerControlAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle PagerControlAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!PagerControlAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PagerControlAutomationPeer_type{py::register_python_type(module.get(), &type_spec_PagerControlAutomationPeer, PagerControlAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_PagerControlAutomationPeer_Static.get()))};
+    if (!PagerControlAutomationPeer_type)
     {
         return nullptr;
     }

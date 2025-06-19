@@ -47,6 +47,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct HyperlinkButton;
     struct Image;
     struct InfoBar;
+    struct InkCanvas;
     struct ItemContainer;
     struct ItemsControl;
     struct ItemsRepeater;
@@ -67,6 +68,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct NavigationView;
     struct NavigationViewItem;
     struct NumberBox;
+    struct PagerControl;
     struct PasswordBox;
     struct PersonPicture;
     struct PipsPager;
@@ -205,6 +207,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Automation::Peers
         ConversionTargetChanged = 27,
         TextEditTextChanged = 28,
         LayoutInvalidated = 29,
+        Notification = 30,
     };
     enum class AutomationHeadingLevel : int32_t
     {
@@ -386,6 +389,8 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Automation::Peers
     struct IImageAutomationPeerFactory;
     struct IInfoBarAutomationPeer;
     struct IInfoBarAutomationPeerFactory;
+    struct IInkCanvasAutomationPeer;
+    struct IInkCanvasAutomationPeerFactory;
     struct IItemAutomationPeer;
     struct IItemAutomationPeerFactory;
     struct IItemContainerAutomationPeer;
@@ -435,6 +440,8 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Automation::Peers
     struct INavigationViewItemAutomationPeerFactory;
     struct INumberBoxAutomationPeer;
     struct INumberBoxAutomationPeerFactory;
+    struct IPagerControlAutomationPeer;
+    struct IPagerControlAutomationPeerFactory;
     struct IPasswordBoxAutomationPeer;
     struct IPasswordBoxAutomationPeerFactory;
     struct IPersonPictureAutomationPeer;
@@ -555,6 +562,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Automation::Peers
     struct HyperlinkButtonAutomationPeer;
     struct ImageAutomationPeer;
     struct InfoBarAutomationPeer;
+    struct InkCanvasAutomationPeer;
     struct ItemAutomationPeer;
     struct ItemContainerAutomationPeer;
     struct ItemsControlAutomationPeer;
@@ -581,6 +589,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Automation::Peers
     struct NavigationViewAutomationPeer;
     struct NavigationViewItemAutomationPeer;
     struct NumberBoxAutomationPeer;
+    struct PagerControlAutomationPeer;
     struct PasswordBoxAutomationPeer;
     struct PersonPictureAutomationPeer;
     struct PickerFlyoutPresenterAutomationPeer;
@@ -704,6 +713,8 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::IImageAutomationPeerFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::IInfoBarAutomationPeer>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::IInfoBarAutomationPeerFactory>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::IInkCanvasAutomationPeer>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::IInkCanvasAutomationPeerFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::IItemAutomationPeer>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::IItemAutomationPeerFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::IItemContainerAutomationPeer>{ using type = interface_category; };
@@ -753,6 +764,8 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::INavigationViewItemAutomationPeerFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::INumberBoxAutomationPeer>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::INumberBoxAutomationPeerFactory>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::IPagerControlAutomationPeer>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::IPagerControlAutomationPeerFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::IPasswordBoxAutomationPeer>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::IPasswordBoxAutomationPeerFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::IPersonPictureAutomationPeer>{ using type = interface_category; };
@@ -873,6 +886,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::HyperlinkButtonAutomationPeer>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::ImageAutomationPeer>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::InfoBarAutomationPeer>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::InkCanvasAutomationPeer>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::ItemAutomationPeer>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::ItemContainerAutomationPeer>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer>{ using type = class_category; };
@@ -899,6 +913,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::NavigationViewAutomationPeer>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::NavigationViewItemAutomationPeer>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::NumberBoxAutomationPeer>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::PagerControlAutomationPeer>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::PasswordBoxAutomationPeer>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::PersonPictureAutomationPeer>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::PickerFlyoutPresenterAutomationPeer>{ using type = class_category; };
@@ -991,6 +1006,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::HyperlinkButtonAutomationPeer> = L"Microsoft.UI.Xaml.Automation.Peers.HyperlinkButtonAutomationPeer";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::ImageAutomationPeer> = L"Microsoft.UI.Xaml.Automation.Peers.ImageAutomationPeer";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::InfoBarAutomationPeer> = L"Microsoft.UI.Xaml.Automation.Peers.InfoBarAutomationPeer";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::InkCanvasAutomationPeer> = L"Microsoft.UI.Xaml.Automation.Peers.InkCanvasAutomationPeer";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::ItemAutomationPeer> = L"Microsoft.UI.Xaml.Automation.Peers.ItemAutomationPeer";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::ItemContainerAutomationPeer> = L"Microsoft.UI.Xaml.Automation.Peers.ItemContainerAutomationPeer";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer> = L"Microsoft.UI.Xaml.Automation.Peers.ItemsControlAutomationPeer";
@@ -1017,6 +1033,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::NavigationViewAutomationPeer> = L"Microsoft.UI.Xaml.Automation.Peers.NavigationViewAutomationPeer";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::NavigationViewItemAutomationPeer> = L"Microsoft.UI.Xaml.Automation.Peers.NavigationViewItemAutomationPeer";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::NumberBoxAutomationPeer> = L"Microsoft.UI.Xaml.Automation.Peers.NumberBoxAutomationPeer";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::PagerControlAutomationPeer> = L"Microsoft.UI.Xaml.Automation.Peers.PagerControlAutomationPeer";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::PasswordBoxAutomationPeer> = L"Microsoft.UI.Xaml.Automation.Peers.PasswordBoxAutomationPeer";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::PersonPictureAutomationPeer> = L"Microsoft.UI.Xaml.Automation.Peers.PersonPictureAutomationPeer";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::PickerFlyoutPresenterAutomationPeer> = L"Microsoft.UI.Xaml.Automation.Peers.PickerFlyoutPresenterAutomationPeer";
@@ -1149,6 +1166,8 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IImageAutomationPeerFactory> = L"Microsoft.UI.Xaml.Automation.Peers.IImageAutomationPeerFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IInfoBarAutomationPeer> = L"Microsoft.UI.Xaml.Automation.Peers.IInfoBarAutomationPeer";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IInfoBarAutomationPeerFactory> = L"Microsoft.UI.Xaml.Automation.Peers.IInfoBarAutomationPeerFactory";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IInkCanvasAutomationPeer> = L"Microsoft.UI.Xaml.Automation.Peers.IInkCanvasAutomationPeer";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IInkCanvasAutomationPeerFactory> = L"Microsoft.UI.Xaml.Automation.Peers.IInkCanvasAutomationPeerFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IItemAutomationPeer> = L"Microsoft.UI.Xaml.Automation.Peers.IItemAutomationPeer";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IItemAutomationPeerFactory> = L"Microsoft.UI.Xaml.Automation.Peers.IItemAutomationPeerFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IItemContainerAutomationPeer> = L"Microsoft.UI.Xaml.Automation.Peers.IItemContainerAutomationPeer";
@@ -1198,6 +1217,8 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::INavigationViewItemAutomationPeerFactory> = L"Microsoft.UI.Xaml.Automation.Peers.INavigationViewItemAutomationPeerFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::INumberBoxAutomationPeer> = L"Microsoft.UI.Xaml.Automation.Peers.INumberBoxAutomationPeer";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::INumberBoxAutomationPeerFactory> = L"Microsoft.UI.Xaml.Automation.Peers.INumberBoxAutomationPeerFactory";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IPagerControlAutomationPeer> = L"Microsoft.UI.Xaml.Automation.Peers.IPagerControlAutomationPeer";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IPagerControlAutomationPeerFactory> = L"Microsoft.UI.Xaml.Automation.Peers.IPagerControlAutomationPeerFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IPasswordBoxAutomationPeer> = L"Microsoft.UI.Xaml.Automation.Peers.IPasswordBoxAutomationPeer";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IPasswordBoxAutomationPeerFactory> = L"Microsoft.UI.Xaml.Automation.Peers.IPasswordBoxAutomationPeerFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IPersonPictureAutomationPeer> = L"Microsoft.UI.Xaml.Automation.Peers.IPersonPictureAutomationPeer";
@@ -1358,6 +1379,8 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IImageAutomationPeerFactory>{ 0x1B26001B,0x49A6,0x5FF4,{ 0xB1,0xB1,0x2D,0x50,0x4D,0x2E,0xF1,0x33 } }; // 1B26001B-49A6-5FF4-B1B1-2D504D2EF133
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IInfoBarAutomationPeer>{ 0xAA2C40EB,0xDF80,0x5050,{ 0x92,0xC5,0x5F,0xDA,0x5A,0xBF,0xDE,0xF2 } }; // AA2C40EB-DF80-5050-92C5-5FDA5ABFDEF2
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IInfoBarAutomationPeerFactory>{ 0x5FD3E590,0x68B9,0x5C9C,{ 0xA5,0x72,0x0B,0xC1,0x01,0x67,0xCE,0x46 } }; // 5FD3E590-68B9-5C9C-A572-0BC10167CE46
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IInkCanvasAutomationPeer>{ 0x9E7D5369,0x4F6E,0x5852,{ 0xB5,0x10,0xBD,0x14,0xD1,0xC4,0x10,0x42 } }; // 9E7D5369-4F6E-5852-B510-BD14D1C41042
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IInkCanvasAutomationPeerFactory>{ 0x1E1F2231,0x06DD,0x57EB,{ 0xAE,0x67,0x70,0x64,0xAE,0xE3,0xE9,0xC9 } }; // 1E1F2231-06DD-57EB-AE67-7064AEE3E9C9
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IItemAutomationPeer>{ 0xBE8A71BB,0x3E36,0x54D2,{ 0x92,0x0E,0x60,0x72,0x2F,0x1C,0x62,0xFF } }; // BE8A71BB-3E36-54D2-920E-60722F1C62FF
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IItemAutomationPeerFactory>{ 0xFFE08885,0x14AC,0x5859,{ 0xB0,0x31,0x5F,0x3A,0x4C,0x50,0x4E,0x6D } }; // FFE08885-14AC-5859-B031-5F3A4C504E6D
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IItemContainerAutomationPeer>{ 0xF915A1FB,0x754E,0x58C7,{ 0xAD,0x2A,0xB9,0x95,0x28,0x70,0x17,0x93 } }; // F915A1FB-754E-58C7-AD2A-B99528701793
@@ -1407,6 +1430,8 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Automation::Peers::INavigationViewItemAutomationPeerFactory>{ 0x890516D0,0x5A62,0x528B,{ 0x88,0x73,0x4F,0x71,0x40,0xB4,0x04,0x89 } }; // 890516D0-5A62-528B-8873-4F7140B40489
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Automation::Peers::INumberBoxAutomationPeer>{ 0x235BEFEB,0x6C98,0x5D35,{ 0xA2,0xE7,0x00,0x1E,0xAE,0x34,0x25,0x09 } }; // 235BEFEB-6C98-5D35-A2E7-001EAE342509
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Automation::Peers::INumberBoxAutomationPeerFactory>{ 0x659719AC,0x4405,0x58F4,{ 0xBD,0xE2,0xEF,0x61,0xDF,0xE6,0x4C,0x21 } }; // 659719AC-4405-58F4-BDE2-EF61DFE64C21
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IPagerControlAutomationPeer>{ 0x426B3254,0x1C6E,0x5F23,{ 0xB5,0x8D,0x03,0x78,0xC3,0x4B,0xDA,0xF6 } }; // 426B3254-1C6E-5F23-B58D-0378C34BDAF6
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IPagerControlAutomationPeerFactory>{ 0xE35F3D24,0x484D,0x5AF2,{ 0x8A,0x0C,0x6F,0x1E,0xDA,0x46,0x91,0xFA } }; // E35F3D24-484D-5AF2-8A0C-6F1EDA4691FA
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IPasswordBoxAutomationPeer>{ 0x49B18DBA,0xFA3B,0x5106,{ 0xA1,0xE8,0x1A,0xAA,0x3D,0x24,0xD5,0xE1 } }; // 49B18DBA-FA3B-5106-A1E8-1AAA3D24D5E1
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IPasswordBoxAutomationPeerFactory>{ 0x7B0D5CBA,0xC5B3,0x553E,{ 0x98,0x9A,0xA1,0x0E,0xE0,0x41,0x44,0xAF } }; // 7B0D5CBA-C5B3-553E-989A-A10EE04144AF
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IPersonPictureAutomationPeer>{ 0x2E71779B,0xACA4,0x52C2,{ 0x8A,0x25,0xBC,0x5F,0x1E,0xE3,0xB0,0xAE } }; // 2E71779B-ACA4-52C2-8A25-BC5F1EE3B0AE
@@ -1527,6 +1552,7 @@ namespace winrt::impl
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Automation::Peers::HyperlinkButtonAutomationPeer>{ using type = winrt::Microsoft::UI::Xaml::Automation::Peers::IHyperlinkButtonAutomationPeer; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Automation::Peers::ImageAutomationPeer>{ using type = winrt::Microsoft::UI::Xaml::Automation::Peers::IImageAutomationPeer; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Automation::Peers::InfoBarAutomationPeer>{ using type = winrt::Microsoft::UI::Xaml::Automation::Peers::IInfoBarAutomationPeer; };
+    template <> struct default_interface<winrt::Microsoft::UI::Xaml::Automation::Peers::InkCanvasAutomationPeer>{ using type = winrt::Microsoft::UI::Xaml::Automation::Peers::IInkCanvasAutomationPeer; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Automation::Peers::ItemAutomationPeer>{ using type = winrt::Microsoft::UI::Xaml::Automation::Peers::IItemAutomationPeer; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Automation::Peers::ItemContainerAutomationPeer>{ using type = winrt::Microsoft::UI::Xaml::Automation::Peers::IItemContainerAutomationPeer; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer>{ using type = winrt::Microsoft::UI::Xaml::Automation::Peers::IItemsControlAutomationPeer; };
@@ -1553,6 +1579,7 @@ namespace winrt::impl
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Automation::Peers::NavigationViewAutomationPeer>{ using type = winrt::Microsoft::UI::Xaml::Automation::Peers::INavigationViewAutomationPeer; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Automation::Peers::NavigationViewItemAutomationPeer>{ using type = winrt::Microsoft::UI::Xaml::Automation::Peers::INavigationViewItemAutomationPeer; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Automation::Peers::NumberBoxAutomationPeer>{ using type = winrt::Microsoft::UI::Xaml::Automation::Peers::INumberBoxAutomationPeer; };
+    template <> struct default_interface<winrt::Microsoft::UI::Xaml::Automation::Peers::PagerControlAutomationPeer>{ using type = winrt::Microsoft::UI::Xaml::Automation::Peers::IPagerControlAutomationPeer; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Automation::Peers::PasswordBoxAutomationPeer>{ using type = winrt::Microsoft::UI::Xaml::Automation::Peers::IPasswordBoxAutomationPeer; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Automation::Peers::PersonPictureAutomationPeer>{ using type = winrt::Microsoft::UI::Xaml::Automation::Peers::IPersonPictureAutomationPeer; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Automation::Peers::PickerFlyoutPresenterAutomationPeer>{ using type = winrt::Microsoft::UI::Xaml::Automation::Peers::IPickerFlyoutPresenterAutomationPeer; };
@@ -2202,6 +2229,19 @@ namespace winrt::impl
             virtual int32_t __stdcall CreateInstance(void*, void*, void**, void**) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Automation::Peers::IInkCanvasAutomationPeer>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Automation::Peers::IInkCanvasAutomationPeerFactory>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall CreateInstance(void*, void*, void**, void**) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Automation::Peers::IItemAutomationPeer>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -2516,6 +2556,19 @@ namespace winrt::impl
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Automation::Peers::INumberBoxAutomationPeerFactory>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall CreateInstance(void*, void*, void**, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Automation::Peers::IPagerControlAutomationPeer>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Automation::Peers::IPagerControlAutomationPeerFactory>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
@@ -3826,6 +3879,23 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_UI_Xaml_Automation_Peers_IInfoBarAutomationPeerFactory<D>;
     };
     template <typename D>
+    struct consume_Microsoft_UI_Xaml_Automation_Peers_IInkCanvasAutomationPeer
+    {
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Automation::Peers::IInkCanvasAutomationPeer>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Automation_Peers_IInkCanvasAutomationPeer<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Automation_Peers_IInkCanvasAutomationPeerFactory
+    {
+        auto CreateInstance(winrt::Microsoft::UI::Xaml::Controls::InkCanvas const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Automation::Peers::IInkCanvasAutomationPeerFactory>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Automation_Peers_IInkCanvasAutomationPeerFactory<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_UI_Xaml_Automation_Peers_IItemAutomationPeer
     {
         [[nodiscard]] auto Item() const;
@@ -4242,6 +4312,23 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Xaml::Automation::Peers::INumberBoxAutomationPeerFactory>
     {
         template <typename D> using type = consume_Microsoft_UI_Xaml_Automation_Peers_INumberBoxAutomationPeerFactory<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Automation_Peers_IPagerControlAutomationPeer
+    {
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Automation::Peers::IPagerControlAutomationPeer>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Automation_Peers_IPagerControlAutomationPeer<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Automation_Peers_IPagerControlAutomationPeerFactory
+    {
+        auto CreateInstance(winrt::Microsoft::UI::Xaml::Controls::PagerControl const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Automation::Peers::IPagerControlAutomationPeerFactory>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Automation_Peers_IPagerControlAutomationPeerFactory<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Xaml_Automation_Peers_IPasswordBoxAutomationPeer

@@ -4,6 +4,7 @@
 #ifndef WINRT_Microsoft_UI_Input_2_H
 #define WINRT_Microsoft_UI_Input_2_H
 #include "winrt/impl/Microsoft.UI.2.h"
+#include "winrt/impl/Microsoft.UI.Composition.2.h"
 #include "winrt/impl/Microsoft.UI.Content.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.System.2.h"
@@ -69,6 +70,19 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
         return left.RepeatCount == right.RepeatCount && left.ScanCode == right.ScanCode && left.IsExtendedKey == right.IsExtendedKey && left.IsMenuKeyDown == right.IsMenuKeyDown && left.WasKeyDown == right.WasKeyDown && left.IsKeyReleased == right.IsKeyReleased;
     }
     inline bool operator!=(PhysicalKeyStatus const& left, PhysicalKeyStatus const& right) noexcept
+    {
+        return !(left == right);
+    }
+    struct ProximityEvaluation
+    {
+        int32_t Score {};
+        winrt::Windows::Foundation::Point AdjustedPoint {};
+    };
+    inline bool operator==(ProximityEvaluation const& left, ProximityEvaluation const& right) noexcept
+    {
+        return left.Score == right.Score && left.AdjustedPoint == right.AdjustedPoint;
+    }
+    inline bool operator!=(ProximityEvaluation const& left, ProximityEvaluation const& right) noexcept
     {
         return !(left == right);
     }
@@ -207,6 +221,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
         InputKeyboardSource(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Input::IInputKeyboardSource(ptr, take_ownership_from_abi) {}
         static auto GetKeyStateForCurrentThread(winrt::Windows::System::VirtualKey const& virtualKey);
         static auto GetForIsland(winrt::Microsoft::UI::Content::ContentIsland const& island);
+        static auto GetForWindowId(winrt::Microsoft::UI::WindowId const& windowId);
     };
     struct WINRT_IMPL_EMPTY_BASES InputLightDismissAction : winrt::Microsoft::UI::Input::IInputLightDismissAction,
         impl::base<InputLightDismissAction, winrt::Microsoft::UI::Input::InputObject>,
@@ -215,8 +230,10 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
         InputLightDismissAction(std::nullptr_t) noexcept {}
         InputLightDismissAction(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Input::IInputLightDismissAction(ptr, take_ownership_from_abi) {}
         static auto GetForWindowId(winrt::Microsoft::UI::WindowId const& windowId);
+        static auto GetForIsland(winrt::Microsoft::UI::Content::ContentIsland const& content);
     };
-    struct WINRT_IMPL_EMPTY_BASES InputLightDismissEventArgs : winrt::Microsoft::UI::Input::IInputLightDismissEventArgs
+    struct WINRT_IMPL_EMPTY_BASES InputLightDismissEventArgs : winrt::Microsoft::UI::Input::IInputLightDismissEventArgs,
+        impl::require<InputLightDismissEventArgs, winrt::Microsoft::UI::Input::IInputLightDismissEventArgs2>
     {
         InputLightDismissEventArgs(std::nullptr_t) noexcept {}
         InputLightDismissEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Input::IInputLightDismissEventArgs(ptr, take_ownership_from_abi) {}
@@ -235,11 +252,22 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
     };
     struct WINRT_IMPL_EMPTY_BASES InputPointerSource : winrt::Microsoft::UI::Input::IInputPointerSource,
         impl::base<InputPointerSource, winrt::Microsoft::UI::Input::InputObject>,
-        impl::require<InputPointerSource, winrt::Microsoft::UI::Input::IInputObject>
+        impl::require<InputPointerSource, winrt::Microsoft::UI::Input::IInputPointerSource2, winrt::Microsoft::UI::Input::IInputObject>
     {
         InputPointerSource(std::nullptr_t) noexcept {}
         InputPointerSource(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Input::IInputPointerSource(ptr, take_ownership_from_abi) {}
         static auto GetForIsland(winrt::Microsoft::UI::Content::ContentIsland const& island);
+        static auto GetForVisual(winrt::Microsoft::UI::Composition::Visual const& visual);
+        static auto GetForWindowId(winrt::Microsoft::UI::WindowId const& windowId);
+        static auto RemoveForVisual(winrt::Microsoft::UI::Composition::Visual const& visual);
+    };
+    struct WINRT_IMPL_EMPTY_BASES InputPopupController : winrt::Microsoft::UI::Input::IInputPopupController,
+        impl::base<InputPopupController, winrt::Microsoft::UI::Input::InputObject>,
+        impl::require<InputPopupController, winrt::Microsoft::UI::Input::IInputObject>
+    {
+        InputPopupController(std::nullptr_t) noexcept {}
+        InputPopupController(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Input::IInputPopupController(ptr, take_ownership_from_abi) {}
+        static auto GetForPopup(winrt::Microsoft::UI::Content::DesktopPopupSiteBridge const& popupBridge);
     };
     struct WINRT_IMPL_EMPTY_BASES InputPreTranslateKeyboardSource : winrt::Microsoft::UI::Input::IInputPreTranslateKeyboardSource,
         impl::base<InputPreTranslateKeyboardSource, winrt::Microsoft::UI::Input::InputObject>,
@@ -333,6 +361,11 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
     {
         TappedEventArgs(std::nullptr_t) noexcept {}
         TappedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Input::ITappedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES TouchHitTestingEventArgs : winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs
+    {
+        TouchHitTestingEventArgs(std::nullptr_t) noexcept {}
+        TouchHitTestingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES WindowRectChangedEventArgs : winrt::Microsoft::UI::Input::IWindowRectChangedEventArgs
     {

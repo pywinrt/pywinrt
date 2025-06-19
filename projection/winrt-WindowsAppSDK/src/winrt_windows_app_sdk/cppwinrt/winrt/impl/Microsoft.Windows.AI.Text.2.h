@@ -7,8 +7,20 @@
 #include "winrt/impl/Microsoft.Windows.AI.Text.1.h"
 WINRT_EXPORT namespace winrt::Microsoft::Windows::AI::Text
 {
+    struct WINRT_IMPL_EMPTY_BASES ConversationItem : winrt::Microsoft::Windows::AI::Text::IConversationItem
+    {
+        ConversationItem(std::nullptr_t) noexcept {}
+        ConversationItem(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Windows::AI::Text::IConversationItem(ptr, take_ownership_from_abi) {}
+        ConversationItem();
+    };
+    struct WINRT_IMPL_EMPTY_BASES ConversationSummaryOptions : winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions
+    {
+        ConversationSummaryOptions(std::nullptr_t) noexcept {}
+        ConversationSummaryOptions(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Windows::AI::Text::IConversationSummaryOptions(ptr, take_ownership_from_abi) {}
+        ConversationSummaryOptions();
+    };
     struct WINRT_IMPL_EMPTY_BASES LanguageModel : winrt::Microsoft::Windows::AI::Text::ILanguageModel,
-        impl::require<LanguageModel, winrt::Windows::Foundation::IClosable>
+        impl::require<LanguageModel, winrt::Microsoft::Windows::AI::Text::ILanguageModel2, winrt::Windows::Foundation::IClosable>
     {
         LanguageModel(std::nullptr_t) noexcept {}
         LanguageModel(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Windows::AI::Text::ILanguageModel(ptr, take_ownership_from_abi) {}
@@ -21,6 +33,11 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::AI::Text
     {
         LanguageModelContext(std::nullptr_t) noexcept {}
         LanguageModelContext(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Windows::AI::Text::ILanguageModelContext(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES LanguageModelEmbeddingVectorResult : winrt::Microsoft::Windows::AI::Text::ILanguageModelEmbeddingVectorResult
+    {
+        LanguageModelEmbeddingVectorResult(std::nullptr_t) noexcept {}
+        LanguageModelEmbeddingVectorResult(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Windows::AI::Text::ILanguageModelEmbeddingVectorResult(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES LanguageModelOptions : winrt::Microsoft::Windows::AI::Text::ILanguageModelOptions
     {
@@ -39,7 +56,8 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::AI::Text
         TextRewriter(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Windows::AI::Text::ITextRewriter(ptr, take_ownership_from_abi) {}
         explicit TextRewriter(winrt::Microsoft::Windows::AI::Text::LanguageModel const& languageModel);
     };
-    struct WINRT_IMPL_EMPTY_BASES TextSummarizer : winrt::Microsoft::Windows::AI::Text::ITextSummarizer
+    struct WINRT_IMPL_EMPTY_BASES TextSummarizer : winrt::Microsoft::Windows::AI::Text::ITextSummarizer,
+        impl::require<TextSummarizer, winrt::Microsoft::Windows::AI::Text::ITextSummarizer2>
     {
         TextSummarizer(std::nullptr_t) noexcept {}
         TextSummarizer(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Windows::AI::Text::ITextSummarizer(ptr, take_ownership_from_abi) {}

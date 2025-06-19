@@ -14,12 +14,14 @@ import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
 import winrt.windows.foundation.numerics as windows_foundation_numerics
 import winrt.windows.graphics as windows_graphics
+import winrt.windows.ui as windows_ui
 import winrt.windows.ui.composition as windows_ui_composition
+import winrt.windows.ui.core as windows_ui_core
 import winui3.microsoft.ui as microsoft_ui
 import winui3.microsoft.ui.composition as microsoft_ui_composition
 import winui3.microsoft.ui.dispatching as microsoft_ui_dispatching
 
-from winui3.microsoft.ui.content import ContentAutomationOptions, ContentCoordinateRoundingMode, ContentLayoutDirection, ContentSizePolicy
+from winui3.microsoft.ui.content import ContentAutomationOptions, ContentCoordinateRoundingMode, ContentDisplayOrientations, ContentLayoutDirection, ContentSizePolicy
 
 Self = typing.TypeVar('Self')
 
@@ -108,6 +110,15 @@ class ChildSiteLink(winrt.system.Object, IContentSiteLink, IContentSiteInput, IC
     @_property
     def is_closed(self) -> bool: ...
 
+@typing.final
+class ContentAppWindowBridge_Static(winrt._winrt.IInspectable_Static):
+    # Microsoft.UI.Content.ContentAppWindowBridge Microsoft.UI.Content.ContentAppWindowBridge::GetForWindowId(Microsoft.UI.WindowId)
+    def get_for_window_id(cls, child_window_id: typing.Union[microsoft_ui.WindowId, typing.Tuple[winrt.system.UInt64]], /) -> ContentAppWindowBridge: ...
+
+@typing.final
+class ContentAppWindowBridge(winrt.system.Object, IContentNodeOwner, metaclass=ContentAppWindowBridge_Static):
+    pass
+
 class ContentCoordinateConverter_Static(winrt._winrt.IInspectable_Static):
     # Microsoft.UI.Content.ContentCoordinateConverter Microsoft.UI.Content.ContentCoordinateConverter::CreateForWindowId(Microsoft.UI.WindowId)
     def create_for_window_id(cls, window_id: typing.Union[microsoft_ui.WindowId, typing.Tuple[winrt.system.UInt64]], /) -> ContentCoordinateConverter: ...
@@ -158,6 +169,74 @@ class ContentEnvironmentStateChangedEventArgs(winrt.system.Object):
     @_property
     def did_display_scale_change(self) -> bool: ...
 
+@typing.final
+class ContentExternalBackdropLink_Static(winrt._winrt.IInspectable_Static):
+    # Microsoft.UI.Content.ContentExternalBackdropLink Microsoft.UI.Content.ContentExternalBackdropLink::Create(Microsoft.UI.Composition.Compositor)
+    def create(cls, compositor: microsoft_ui_composition.Compositor, /) -> ContentExternalBackdropLink: ...
+
+@typing.final
+class ContentExternalBackdropLink(winrt.system.Object, microsoft_ui_composition.ICompositionSupportsSystemBackdrop, windows_foundation.IClosable, metaclass=ContentExternalBackdropLink_Static):
+    def __enter__(self: Self) -> Self: ...
+    def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
+    # System.Void Microsoft.UI.Content.ContentExternalBackdropLink::Close()
+    def close(self) -> None: ...
+    # Windows.UI.Composition.CompositionBrush Microsoft.UI.Content.ContentExternalBackdropLink::get_SystemBackdrop()
+    @_property
+    def system_backdrop(self) -> windows_ui_composition.CompositionBrush: ...
+    # System.Void Microsoft.UI.Content.ContentExternalBackdropLink::put_SystemBackdrop(Windows.UI.Composition.CompositionBrush)
+    @system_backdrop.setter
+    def system_backdrop(self, value: windows_ui_composition.CompositionBrush) -> None: ...
+    # Microsoft.UI.Composition.CompositionBorderMode Microsoft.UI.Content.ContentExternalBackdropLink::get_ExternalBackdropBorderMode()
+    @_property
+    def external_backdrop_border_mode(self) -> microsoft_ui_composition.CompositionBorderMode: ...
+    # System.Void Microsoft.UI.Content.ContentExternalBackdropLink::put_ExternalBackdropBorderMode(Microsoft.UI.Composition.CompositionBorderMode)
+    @external_backdrop_border_mode.setter
+    def external_backdrop_border_mode(self, value: microsoft_ui_composition.CompositionBorderMode) -> None: ...
+    # Microsoft.UI.Dispatching.DispatcherQueue Microsoft.UI.Content.ContentExternalBackdropLink::get_DispatcherQueue()
+    @_property
+    def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
+    # Microsoft.UI.Composition.Visual Microsoft.UI.Content.ContentExternalBackdropLink::get_PlacementVisual()
+    @_property
+    def placement_visual(self) -> microsoft_ui_composition.Visual: ...
+
+@typing.final
+class ContentExternalOutputLink_Static(winrt._winrt.IInspectable_Static):
+    # Microsoft.UI.Content.ContentExternalOutputLink Microsoft.UI.Content.ContentExternalOutputLink::Create(Microsoft.UI.Composition.Compositor)
+    def create(cls, compositor: microsoft_ui_composition.Compositor, /) -> ContentExternalOutputLink: ...
+    # System.Boolean Microsoft.UI.Content.ContentExternalOutputLink::IsSupported()
+    def is_supported(cls) -> bool: ...
+
+@typing.final
+class ContentExternalOutputLink(winrt.system.Object, windows_foundation.IClosable, metaclass=ContentExternalOutputLink_Static):
+    def __enter__(self: Self) -> Self: ...
+    def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
+    # System.Void Microsoft.UI.Content.ContentExternalOutputLink::Close()
+    def close(self) -> None: ...
+    # System.Boolean Microsoft.UI.Content.ContentExternalOutputLink::get_IsAboveContent()
+    @_property
+    def is_above_content(self) -> bool: ...
+    # System.Void Microsoft.UI.Content.ContentExternalOutputLink::put_IsAboveContent(System.Boolean)
+    @is_above_content.setter
+    def is_above_content(self, value: bool) -> None: ...
+    # Microsoft.UI.Composition.CompositionBorderMode Microsoft.UI.Content.ContentExternalOutputLink::get_ExternalOutputBorderMode()
+    @_property
+    def external_output_border_mode(self) -> microsoft_ui_composition.CompositionBorderMode: ...
+    # System.Void Microsoft.UI.Content.ContentExternalOutputLink::put_ExternalOutputBorderMode(Microsoft.UI.Composition.CompositionBorderMode)
+    @external_output_border_mode.setter
+    def external_output_border_mode(self, value: microsoft_ui_composition.CompositionBorderMode) -> None: ...
+    # Windows.UI.Color Microsoft.UI.Content.ContentExternalOutputLink::get_BackgroundColor()
+    @_property
+    def background_color(self) -> windows_ui.Color: ...
+    # System.Void Microsoft.UI.Content.ContentExternalOutputLink::put_BackgroundColor(Windows.UI.Color)
+    @background_color.setter
+    def background_color(self, value: typing.Union[windows_ui.Color, typing.Tuple[winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8]]) -> None: ...
+    # Microsoft.UI.Dispatching.DispatcherQueue Microsoft.UI.Content.ContentExternalOutputLink::get_DispatcherQueue()
+    @_property
+    def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
+    # Microsoft.UI.Composition.Visual Microsoft.UI.Content.ContentExternalOutputLink::get_PlacementVisual()
+    @_property
+    def placement_visual(self) -> microsoft_ui_composition.Visual: ...
+
 class ContentIsland_Static(winrt._winrt.IInspectable_Static):
     # Microsoft.UI.Content.ContentIsland Microsoft.UI.Content.ContentIsland::Create(Microsoft.UI.Composition.Visual)
     def create(cls, root: microsoft_ui_composition.Visual, /) -> ContentIsland: ...
@@ -176,11 +255,13 @@ class ContentIsland_Static(winrt._winrt.IInspectable_Static):
     # Microsoft.UI.Content.ContentIsland Microsoft.UI.Content.ContentIsland::GetFromId(System.UInt64)
     def get_from_id(cls, id: winrt.system.UInt64, /) -> ContentIsland: ...
 
-class ContentIsland(winrt.system.Object, microsoft_ui_composition.ICompositionSupportsSystemBackdrop, microsoft_ui.IClosableNotifier, windows_foundation.IClosable, metaclass=ContentIsland_Static):
+class ContentIsland(winrt.system.Object, IContentIslandEndpointConnectionPrivate, microsoft_ui_composition.ICompositionSupportsSystemBackdrop, microsoft_ui.IClosableNotifier, windows_foundation.IClosable, metaclass=ContentIsland_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
     # System.Void Microsoft.UI.Content.ContentIsland::Close()
     def close(self) -> None: ...
+    # System.Void Microsoft.UI.Content.ContentIsland::ConnectRemoteEndpoint(System.String)
+    def connect_remote_endpoint(self, site_connection_info: str, /) -> None: ...
     @typing.final
     # System.Object Microsoft.UI.Content.ContentIsland::GetAutomationHostProvider()
     def get_automation_host_provider(self) -> winrt.system.Object: ...
@@ -202,6 +283,18 @@ class ContentIsland(winrt.system.Object, microsoft_ui_composition.ICompositionSu
     @typing.final
     # System.Void Microsoft.UI.Content.ContentIsland::remove_StateChanged(Windows.Foundation.EventRegistrationToken)
     def remove_state_changed(self, token: typing.Union[windows_foundation.EventRegistrationToken, typing.Tuple[winrt.system.Int64]], /) -> None: ...
+    @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Content.ContentIsland::add_Connected(Windows.Foundation.EventHandler`1<Microsoft.UI.Content.ContentIsland>)
+    def add_connected(self, handler: windows_foundation.EventHandler[ContentIsland], /) -> windows_foundation.EventRegistrationToken: ...
+    @typing.final
+    # System.Void Microsoft.UI.Content.ContentIsland::remove_Connected(Windows.Foundation.EventRegistrationToken)
+    def remove_connected(self, token: typing.Union[windows_foundation.EventRegistrationToken, typing.Tuple[winrt.system.Int64]], /) -> None: ...
+    @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Content.ContentIsland::add_Disconnected(Windows.Foundation.EventHandler`1<Microsoft.UI.Content.ContentIsland>)
+    def add_disconnected(self, handler: windows_foundation.EventHandler[ContentIsland], /) -> windows_foundation.EventRegistrationToken: ...
+    @typing.final
+    # System.Void Microsoft.UI.Content.ContentIsland::remove_Disconnected(Windows.Foundation.EventRegistrationToken)
+    def remove_disconnected(self, token: typing.Union[windows_foundation.EventRegistrationToken, typing.Tuple[winrt.system.Int64]], /) -> None: ...
     @typing.final
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.Content.ContentIsland::add_Closed(Microsoft.UI.ClosableNotifierHandler)
     def add_closed(self, handler: microsoft_ui.ClosableNotifierHandler, /) -> windows_foundation.EventRegistrationToken: ...
@@ -337,6 +430,21 @@ class ContentIsland(winrt.system.Object, microsoft_ui_composition.ICompositionSu
     @_property
     @typing.final
     def previous_sibling_automation_provider(self) -> winrt.system.Object: ...
+    # System.String Microsoft.UI.Content.ContentIsland::get_ConnectionInfo()
+    @_property
+    @typing.final
+    def connection_info(self) -> str: ...
+    # System.Boolean Microsoft.UI.Content.ContentIsland::get_IsRemoteEndpointConnected()
+    @_property
+    @typing.final
+    def is_remote_endpoint_connected(self) -> bool: ...
+    # Microsoft.UI.Composition.Visual Microsoft.UI.Content.ContentIsland::get_Root()
+    @_property
+    def root(self) -> microsoft_ui_composition.Visual: ...
+    # System.Void Microsoft.UI.Content.ContentIsland::put_Root(Microsoft.UI.Composition.Visual)
+    @root.setter
+    @typing.final
+    def root(self, value: microsoft_ui_composition.Visual) -> None: ...
     # System.Boolean Microsoft.UI.Content.ContentIsland::get_IsClosed()
     @_property
     @typing.final
@@ -373,6 +481,12 @@ class ContentIslandEnvironment(winrt.system.Object, metaclass=ContentIslandEnvir
     @typing.final
     # System.Void Microsoft.UI.Content.ContentIslandEnvironment::remove_StateChanged(Windows.Foundation.EventRegistrationToken)
     def remove_state_changed(self, token: typing.Union[windows_foundation.EventRegistrationToken, typing.Tuple[winrt.system.Int64]], /) -> None: ...
+    @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Content.ContentIslandEnvironment::add_ThemeChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Content.ContentIslandEnvironment,System.Object>)
+    def add_theme_changed(self, handler: windows_foundation.TypedEventHandler[ContentIslandEnvironment, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    @typing.final
+    # System.Void Microsoft.UI.Content.ContentIslandEnvironment::remove_ThemeChanged(Windows.Foundation.EventRegistrationToken)
+    def remove_theme_changed(self, token: typing.Union[windows_foundation.EventRegistrationToken, typing.Tuple[winrt.system.Int64]], /) -> None: ...
     # Microsoft.UI.WindowId Microsoft.UI.Content.ContentIslandEnvironment::get_AppWindowId()
     @_property
     @typing.final
@@ -385,6 +499,14 @@ class ContentIslandEnvironment(winrt.system.Object, metaclass=ContentIslandEnvir
     @_property
     @typing.final
     def display_scale(self) -> winrt.system.Single: ...
+    # Microsoft.UI.Content.ContentDisplayOrientations Microsoft.UI.Content.ContentIslandEnvironment::get_CurrentOrientation()
+    @_property
+    @typing.final
+    def current_orientation(self) -> ContentDisplayOrientations: ...
+    # Microsoft.UI.Content.ContentDisplayOrientations Microsoft.UI.Content.ContentIslandEnvironment::get_NativeOrientation()
+    @_property
+    @typing.final
+    def native_orientation(self) -> ContentDisplayOrientations: ...
 
 @typing.final
 class ContentIslandStateChangedEventArgs(winrt.system.Object):
@@ -421,6 +543,9 @@ class ContentSite(winrt.system.Object, microsoft_ui.IClosableNotifier, windows_f
     @typing.final
     # Microsoft.UI.Content.ContentDeferral Microsoft.UI.Content.ContentSite::GetIslandStateChangeDeferral()
     def get_island_state_change_deferral(self) -> ContentDeferral: ...
+    @typing.final
+    # System.Boolean Microsoft.UI.Content.ContentSite::TryGetAutomationProvider(System.Object&)
+    def try_get_automation_provider(self) -> typing.Tuple[bool, winrt.system.Object]: ...
     @typing.final
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.Content.ContentSite::add_RequestedStateChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Content.ContentSite,Microsoft.UI.Content.ContentSiteRequestedStateChangedEventArgs>)
     def add_requested_state_changed(self, handler: windows_foundation.TypedEventHandler[ContentSite, ContentSiteRequestedStateChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -575,6 +700,9 @@ class ContentSiteEnvironment(winrt.system.Object, metaclass=ContentSiteEnvironme
     @typing.final
     # System.Void Microsoft.UI.Content.ContentSiteEnvironment::NotifySettingChanged(System.String)
     def notify_setting_changed(self, setting: str, /) -> None: ...
+    @typing.final
+    # System.Void Microsoft.UI.Content.ContentSiteEnvironment::NotifyThemeChanged()
+    def notify_theme_changed(self) -> None: ...
     # Microsoft.UI.DisplayId Microsoft.UI.Content.ContentSiteEnvironment::get_DisplayId()
     @_property
     def display_id(self) -> microsoft_ui.DisplayId: ...
@@ -600,6 +728,20 @@ class ContentSiteEnvironment(winrt.system.Object, metaclass=ContentSiteEnvironme
     @display_scale.setter
     @typing.final
     def display_scale(self, value: winrt.system.Single) -> None: ...
+    # Microsoft.UI.Content.ContentDisplayOrientations Microsoft.UI.Content.ContentSiteEnvironment::get_NativeOrientation()
+    @_property
+    def native_orientation(self) -> ContentDisplayOrientations: ...
+    # System.Void Microsoft.UI.Content.ContentSiteEnvironment::put_NativeOrientation(Microsoft.UI.Content.ContentDisplayOrientations)
+    @native_orientation.setter
+    @typing.final
+    def native_orientation(self, value: ContentDisplayOrientations) -> None: ...
+    # Microsoft.UI.Content.ContentDisplayOrientations Microsoft.UI.Content.ContentSiteEnvironment::get_CurrentOrientation()
+    @_property
+    def current_orientation(self) -> ContentDisplayOrientations: ...
+    # System.Void Microsoft.UI.Content.ContentSiteEnvironment::put_CurrentOrientation(Microsoft.UI.Content.ContentDisplayOrientations)
+    @current_orientation.setter
+    @typing.final
+    def current_orientation(self, value: ContentDisplayOrientations) -> None: ...
 
 class ContentSiteEnvironmentView_Static(winrt._winrt.IInspectable_Static):
     pass
@@ -706,6 +848,41 @@ class ContentSiteView(winrt.system.Object, metaclass=ContentSiteView_Static):
     def automation_option(self) -> ContentAutomationOptions: ...
 
 @typing.final
+class CoreWindowSiteBridge_Static(winrt._winrt.IInspectable_Static):
+    # Microsoft.UI.Content.CoreWindowSiteBridge Microsoft.UI.Content.CoreWindowSiteBridge::Create(Microsoft.UI.Composition.Compositor,Windows.UI.Core.CoreWindow)
+    def create(cls, compositor: microsoft_ui_composition.Compositor, core_window: windows_ui_core.CoreWindow, /) -> CoreWindowSiteBridge: ...
+    # System.Boolean Microsoft.UI.Content.CoreWindowSiteBridge::IsSupported()
+    def is_supported(cls) -> bool: ...
+
+@typing.final
+class CoreWindowSiteBridge(winrt.system.Object, IContentSiteBridge, windows_foundation.IClosable, metaclass=CoreWindowSiteBridge_Static):
+    def __enter__(self: Self) -> Self: ...
+    def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
+    # System.Void Microsoft.UI.Content.CoreWindowSiteBridge::Close()
+    def close(self) -> None: ...
+    # System.Void Microsoft.UI.Content.CoreWindowSiteBridge::Connect(Microsoft.UI.Content.ContentIsland)
+    def connect(self, content: ContentIsland, /) -> None: ...
+    # System.Single Microsoft.UI.Content.CoreWindowSiteBridge::get_OverrideScale()
+    @_property
+    def override_scale(self) -> winrt.system.Single: ...
+    # System.Void Microsoft.UI.Content.CoreWindowSiteBridge::put_OverrideScale(System.Single)
+    @override_scale.setter
+    def override_scale(self, value: winrt.system.Single) -> None: ...
+    # Windows.Foundation.IReference`1<Microsoft.UI.Content.ContentLayoutDirection> Microsoft.UI.Content.CoreWindowSiteBridge::get_LayoutDirectionOverride()
+    @_property
+    def layout_direction_override(self) -> typing.Optional[ContentLayoutDirection]: ...
+    # System.Void Microsoft.UI.Content.CoreWindowSiteBridge::put_LayoutDirectionOverride(Windows.Foundation.IReference`1<Microsoft.UI.Content.ContentLayoutDirection>)
+    @layout_direction_override.setter
+    def layout_direction_override(self, value: typing.Optional[ContentLayoutDirection]) -> None: ...
+    # Microsoft.UI.Dispatching.DispatcherQueue Microsoft.UI.Content.CoreWindowSiteBridge::get_DispatcherQueue()
+    @_property
+    def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
+
+@typing.final
+class CoreWindowTopLevelWindowBridge(winrt.system.Object, IContentNodeOwner):
+    pass
+
+@typing.final
 class DesktopAttachedSiteBridge_Static(winrt._winrt.IInspectable_Static):
     # Microsoft.UI.Content.DesktopAttachedSiteBridge Microsoft.UI.Content.DesktopAttachedSiteBridge::CreateFromWindowId(Microsoft.UI.Dispatching.DispatcherQueue,Microsoft.UI.WindowId)
     def create_from_window_id(cls, queue: microsoft_ui_dispatching.DispatcherQueue, window_id: typing.Union[microsoft_ui.WindowId, typing.Tuple[winrt.system.UInt64]], /) -> DesktopAttachedSiteBridge: ...
@@ -771,7 +948,27 @@ class DesktopChildSiteBridge_Static(DesktopSiteBridge_Static):
     def create_with_dispatcher_queue(cls, queue: microsoft_ui_dispatching.DispatcherQueue, parent_window_id: typing.Union[microsoft_ui.WindowId, typing.Tuple[winrt.system.UInt64]], /) -> DesktopChildSiteBridge: ...
 
 @typing.final
-class DesktopChildSiteBridge(DesktopSiteBridge, metaclass=DesktopChildSiteBridge_Static):
+class DesktopChildSiteBridge(DesktopSiteBridge, IContentSiteBridgeEndpointConnectionPrivate, metaclass=DesktopChildSiteBridge_Static):
+    # System.Void Microsoft.UI.Content.DesktopChildSiteBridge::AcceptRemoteEndpoint(System.String)
+    def accept_remote_endpoint(self, island_connection_info: str, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Content.DesktopChildSiteBridge::add_RemoteEndpointConnecting(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Content.IContentSiteBridgeEndpointConnectionPrivate,Microsoft.UI.Content.EndpointConnectionEventArgs>)
+    def add_remote_endpoint_connecting(self, handler: windows_foundation.TypedEventHandler[IContentSiteBridgeEndpointConnectionPrivate, EndpointConnectionEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Content.DesktopChildSiteBridge::remove_RemoteEndpointConnecting(Windows.Foundation.EventRegistrationToken)
+    def remove_remote_endpoint_connecting(self, token: typing.Union[windows_foundation.EventRegistrationToken, typing.Tuple[winrt.system.Int64]], /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Content.DesktopChildSiteBridge::add_RemoteEndpointDisconnected(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Content.IContentSiteBridgeEndpointConnectionPrivate,Microsoft.UI.Content.EndpointConnectionEventArgs>)
+    def add_remote_endpoint_disconnected(self, handler: windows_foundation.TypedEventHandler[IContentSiteBridgeEndpointConnectionPrivate, EndpointConnectionEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Content.DesktopChildSiteBridge::remove_RemoteEndpointDisconnected(Windows.Foundation.EventRegistrationToken)
+    def remove_remote_endpoint_disconnected(self, token: typing.Union[windows_foundation.EventRegistrationToken, typing.Tuple[winrt.system.Int64]], /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Content.DesktopChildSiteBridge::add_RemoteEndpointRequestedStateChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Content.IContentSiteBridgeEndpointConnectionPrivate,Microsoft.UI.Content.EndpointRequestedStateChangedEventArgs>)
+    def add_remote_endpoint_requested_state_changed(self, handler: windows_foundation.TypedEventHandler[IContentSiteBridgeEndpointConnectionPrivate, EndpointRequestedStateChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Content.DesktopChildSiteBridge::remove_RemoteEndpointRequestedStateChanged(Windows.Foundation.EventRegistrationToken)
+    def remove_remote_endpoint_requested_state_changed(self, token: typing.Union[windows_foundation.EventRegistrationToken, typing.Tuple[winrt.system.Int64]], /) -> None: ...
+    # System.String Microsoft.UI.Content.DesktopChildSiteBridge::get_ConnectionInfo()
+    @_property
+    def connection_info(self) -> str: ...
+    # System.Boolean Microsoft.UI.Content.DesktopChildSiteBridge::get_IsRemoteEndpointConnected()
+    @_property
+    def is_remote_endpoint_connected(self) -> bool: ...
     # Microsoft.UI.Content.ContentSizePolicy Microsoft.UI.Content.DesktopChildSiteBridge::get_ResizePolicy()
     @_property
     def resize_policy(self) -> ContentSizePolicy: ...
@@ -915,6 +1112,9 @@ class DesktopSiteBridge(winrt.system.Object, IContentSiteBridge, windows_foundat
     # System.Void Microsoft.UI.Content.DesktopSiteBridge::Show()
     def show(self) -> None: ...
     @typing.final
+    # Microsoft.UI.Content.PopupWindowSiteBridge Microsoft.UI.Content.DesktopSiteBridge::TryCreatePopupSiteBridge()
+    def try_create_popup_site_bridge(self) -> PopupWindowSiteBridge: ...
+    @typing.final
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.Content.DesktopSiteBridge::add_Closed(Microsoft.UI.ClosableNotifierHandler)
     def add_closed(self, handler: microsoft_ui.ClosableNotifierHandler, /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
@@ -960,6 +1160,99 @@ class DesktopSiteBridge(winrt.system.Object, IContentSiteBridge, windows_foundat
     @_property
     @typing.final
     def is_closed(self) -> bool: ...
+
+@typing.final
+class EndpointConnectionEventArgs(winrt.system.Object):
+    # System.String Microsoft.UI.Content.EndpointConnectionEventArgs::get_ConnectionInfo()
+    @_property
+    def connection_info(self) -> str: ...
+
+@typing.final
+class EndpointRequestedStateChangedEventArgs(winrt.system.Object):
+    # System.Boolean Microsoft.UI.Content.EndpointRequestedStateChangedEventArgs::get_DidRequestedSizeChange()
+    @_property
+    def did_requested_size_change(self) -> bool: ...
+
+@typing.final
+class PopupWindowSiteBridge(DesktopSiteBridge):
+    # System.Boolean Microsoft.UI.Content.PopupWindowSiteBridge::get_Anchored()
+    @_property
+    def anchored(self) -> bool: ...
+    # System.Void Microsoft.UI.Content.PopupWindowSiteBridge::put_Anchored(System.Boolean)
+    @anchored.setter
+    def anchored(self, value: bool) -> None: ...
+
+class ProcessStarter_Static(winrt._winrt.IInspectable_Static):
+    # System.Void Microsoft.UI.Content.ProcessStarter::StartProcess(System.String,System.String,System.UInt32&)
+    def start_process(cls, executable_path: str, connection_info: str, /) -> winrt.system.UInt32: ...
+
+class ProcessStarter(winrt.system.Object, metaclass=ProcessStarter_Static):
+    pass
+
+@typing.final
+class SystemVisualSiteBridge_Static(winrt._winrt.IInspectable_Static):
+    # Microsoft.UI.Content.SystemVisualSiteBridge Microsoft.UI.Content.SystemVisualSiteBridge::Create(Microsoft.UI.Dispatching.DispatcherQueue,Windows.UI.Composition.ContainerVisual,Microsoft.UI.WindowId)
+    def create(cls, queue: microsoft_ui_dispatching.DispatcherQueue, host_visual: windows_ui_composition.ContainerVisual, parent_for_input_window_id: typing.Union[microsoft_ui.WindowId, typing.Tuple[winrt.system.UInt64]], /) -> SystemVisualSiteBridge: ...
+
+@typing.final
+class SystemVisualSiteBridge(winrt.system.Object, IContentSiteBridge, windows_foundation.IClosable, microsoft_ui.IClosableNotifier, metaclass=SystemVisualSiteBridge_Static):
+    def __enter__(self: Self) -> Self: ...
+    def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
+    # System.Void Microsoft.UI.Content.SystemVisualSiteBridge::Close()
+    def close(self) -> None: ...
+    # System.Void Microsoft.UI.Content.SystemVisualSiteBridge::Connect(Microsoft.UI.Content.ContentIsland)
+    def connect(self, content: ContentIsland, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Content.SystemVisualSiteBridge::add_Closed(Microsoft.UI.ClosableNotifierHandler)
+    def add_closed(self, handler: microsoft_ui.ClosableNotifierHandler, /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Content.SystemVisualSiteBridge::remove_Closed(Windows.Foundation.EventRegistrationToken)
+    def remove_closed(self, token: typing.Union[windows_foundation.EventRegistrationToken, typing.Tuple[winrt.system.Int64]], /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Content.SystemVisualSiteBridge::add_FrameworkClosed(Microsoft.UI.ClosableNotifierHandler)
+    def add_framework_closed(self, handler: microsoft_ui.ClosableNotifierHandler, /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Content.SystemVisualSiteBridge::remove_FrameworkClosed(Windows.Foundation.EventRegistrationToken)
+    def remove_framework_closed(self, token: typing.Union[windows_foundation.EventRegistrationToken, typing.Tuple[winrt.system.Int64]], /) -> None: ...
+    # System.Single Microsoft.UI.Content.SystemVisualSiteBridge::get_OverrideScale()
+    @_property
+    def override_scale(self) -> winrt.system.Single: ...
+    # System.Void Microsoft.UI.Content.SystemVisualSiteBridge::put_OverrideScale(System.Single)
+    @override_scale.setter
+    def override_scale(self, value: winrt.system.Single) -> None: ...
+    # Windows.Foundation.IReference`1<Microsoft.UI.Content.ContentLayoutDirection> Microsoft.UI.Content.SystemVisualSiteBridge::get_LayoutDirectionOverride()
+    @_property
+    def layout_direction_override(self) -> typing.Optional[ContentLayoutDirection]: ...
+    # System.Void Microsoft.UI.Content.SystemVisualSiteBridge::put_LayoutDirectionOverride(Windows.Foundation.IReference`1<Microsoft.UI.Content.ContentLayoutDirection>)
+    @layout_direction_override.setter
+    def layout_direction_override(self, value: typing.Optional[ContentLayoutDirection]) -> None: ...
+    # Microsoft.UI.Dispatching.DispatcherQueue Microsoft.UI.Content.SystemVisualSiteBridge::get_DispatcherQueue()
+    @_property
+    def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
+    # Microsoft.UI.Content.ContentSite Microsoft.UI.Content.SystemVisualSiteBridge::get_Site()
+    @_property
+    def site(self) -> ContentSite: ...
+    # System.Boolean Microsoft.UI.Content.SystemVisualSiteBridge::get_IsClosed()
+    @_property
+    def is_closed(self) -> bool: ...
+
+@typing.final
+class _IContentIslandEndpointConnectionPrivate: ...
+
+class IContentIslandEndpointConnectionPrivate(winrt._winrt.IInspectable):
+    # System.Void Microsoft.UI.Content.IContentIslandEndpointConnectionPrivate::ConnectRemoteEndpoint(System.String)
+    @abstractmethod
+    def connect_remote_endpoint(self, site_connection_info: str, /) -> None: ...
+    # System.String Microsoft.UI.Content.IContentIslandEndpointConnectionPrivate::get_ConnectionInfo()
+    @_property
+    @abstractmethod
+    def connection_info(self) -> str: ...
+    # System.Boolean Microsoft.UI.Content.IContentIslandEndpointConnectionPrivate::get_IsRemoteEndpointConnected()
+    @_property
+    @abstractmethod
+    def is_remote_endpoint_connected(self) -> bool: ...
+
+@typing.final
+class _IContentNodeOwner: ...
+
+class IContentNodeOwner(winrt._winrt.IInspectable):  # type: ignore[misc]
+    pass
 
 @typing.final
 class _IContentSiteAutomation: ...
@@ -1026,6 +1319,40 @@ class IContentSiteBridge(windows_foundation.IClosable, winrt._winrt.IInspectable
     @override_scale.setter
     @abstractmethod
     def override_scale(self, value: winrt.system.Single) -> None: ...
+
+@typing.final
+class _IContentSiteBridgeEndpointConnectionPrivate: ...
+
+class IContentSiteBridgeEndpointConnectionPrivate(winrt._winrt.IInspectable):
+    # System.Void Microsoft.UI.Content.IContentSiteBridgeEndpointConnectionPrivate::AcceptRemoteEndpoint(System.String)
+    @abstractmethod
+    def accept_remote_endpoint(self, island_connection_info: str, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Content.IContentSiteBridgeEndpointConnectionPrivate::add_RemoteEndpointConnecting(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Content.IContentSiteBridgeEndpointConnectionPrivate,Microsoft.UI.Content.EndpointConnectionEventArgs>)
+    @abstractmethod
+    def add_remote_endpoint_connecting(self, handler: windows_foundation.TypedEventHandler[IContentSiteBridgeEndpointConnectionPrivate, EndpointConnectionEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Content.IContentSiteBridgeEndpointConnectionPrivate::remove_RemoteEndpointConnecting(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_remote_endpoint_connecting(self, token: typing.Union[windows_foundation.EventRegistrationToken, typing.Tuple[winrt.system.Int64]], /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Content.IContentSiteBridgeEndpointConnectionPrivate::add_RemoteEndpointDisconnected(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Content.IContentSiteBridgeEndpointConnectionPrivate,Microsoft.UI.Content.EndpointConnectionEventArgs>)
+    @abstractmethod
+    def add_remote_endpoint_disconnected(self, handler: windows_foundation.TypedEventHandler[IContentSiteBridgeEndpointConnectionPrivate, EndpointConnectionEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Content.IContentSiteBridgeEndpointConnectionPrivate::remove_RemoteEndpointDisconnected(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_remote_endpoint_disconnected(self, token: typing.Union[windows_foundation.EventRegistrationToken, typing.Tuple[winrt.system.Int64]], /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Content.IContentSiteBridgeEndpointConnectionPrivate::add_RemoteEndpointRequestedStateChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Content.IContentSiteBridgeEndpointConnectionPrivate,Microsoft.UI.Content.EndpointRequestedStateChangedEventArgs>)
+    @abstractmethod
+    def add_remote_endpoint_requested_state_changed(self, handler: windows_foundation.TypedEventHandler[IContentSiteBridgeEndpointConnectionPrivate, EndpointRequestedStateChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.UI.Content.IContentSiteBridgeEndpointConnectionPrivate::remove_RemoteEndpointRequestedStateChanged(Windows.Foundation.EventRegistrationToken)
+    @abstractmethod
+    def remove_remote_endpoint_requested_state_changed(self, token: typing.Union[windows_foundation.EventRegistrationToken, typing.Tuple[winrt.system.Int64]], /) -> None: ...
+    # System.String Microsoft.UI.Content.IContentSiteBridgeEndpointConnectionPrivate::get_ConnectionInfo()
+    @_property
+    @abstractmethod
+    def connection_info(self) -> str: ...
+    # System.Boolean Microsoft.UI.Content.IContentSiteBridgeEndpointConnectionPrivate::get_IsRemoteEndpointConnected()
+    @_property
+    @abstractmethod
+    def is_remote_endpoint_connected(self) -> bool: ...
 
 @typing.final
 class _IContentSiteInput: ...

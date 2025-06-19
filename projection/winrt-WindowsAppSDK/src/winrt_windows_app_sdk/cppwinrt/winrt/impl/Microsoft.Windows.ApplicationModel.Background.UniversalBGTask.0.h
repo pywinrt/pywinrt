@@ -3,10 +3,6 @@
 #pragma once
 #ifndef WINRT_Microsoft_Windows_ApplicationModel_Background_UniversalBGTask_0_H
 #define WINRT_Microsoft_Windows_ApplicationModel_Background_UniversalBGTask_0_H
-WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Background
-{
-    struct IBackgroundTaskInstance;
-}
 WINRT_EXPORT namespace winrt::Microsoft::Windows::ApplicationModel::Background::UniversalBGTask
 {
     struct ITask;
@@ -20,19 +16,17 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::ApplicationModel::Background::UniversalBGTask::Task> = L"Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.Task";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::ApplicationModel::Background::UniversalBGTask::ITask> = L"Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.ITask";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::ApplicationModel::Background::UniversalBGTask::UniversalBackgroundTaskContract> = L"Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.UniversalBackgroundTaskContract";
-    template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::ApplicationModel::Background::UniversalBGTask::ITask>{ 0xD47C97E5,0xA23F,0x5B32,{ 0x8A,0x2E,0xB9,0x3C,0x8C,0xAE,0x42,0x99 } }; // D47C97E5-A23F-5B32-8A2E-B93C8CAE4299
+    template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::ApplicationModel::Background::UniversalBGTask::ITask>{ 0x89CF5F73,0x8195,0x590B,{ 0x81,0x58,0xBC,0x7D,0x28,0x16,0xCE,0x16 } }; // 89CF5F73-8195-590B-8158-BC7D2816CE16
     template <> struct default_interface<winrt::Microsoft::Windows::ApplicationModel::Background::UniversalBGTask::Task>{ using type = winrt::Microsoft::Windows::ApplicationModel::Background::UniversalBGTask::ITask; };
     template <> struct abi<winrt::Microsoft::Windows::ApplicationModel::Background::UniversalBGTask::ITask>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
-            virtual int32_t __stdcall Run(void*) noexcept = 0;
         };
     };
     template <typename D>
     struct consume_Microsoft_Windows_ApplicationModel_Background_UniversalBGTask_ITask
     {
-        auto Run(winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance const& taskInstance) const;
     };
     template <> struct consume<winrt::Microsoft::Windows::ApplicationModel::Background::UniversalBGTask::ITask>
     {

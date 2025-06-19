@@ -588,6 +588,75 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
         }
     }
 
+    static PyObject* AppNotification_get_ConferencingConfig(py::wrapper::Microsoft::Windows::AppNotifications::AppNotification* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.AppNotification", L"ConferencingConfig");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ConferencingConfig();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int AppNotification_put_ConferencingConfig(py::wrapper::Microsoft::Windows::AppNotifications::AppNotification* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.AppNotification", L"ConferencingConfig");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::Windows::AppNotifications::AppNotificationConferencingConfig>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.ConferencingConfig(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
     static PyObject* _assign_array_AppNotification(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::AppNotifications::AppNotification>>();
@@ -627,6 +696,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
         { "expiration", reinterpret_cast<getter>(AppNotification_get_Expiration), reinterpret_cast<setter>(AppNotification_put_Expiration), nullptr, nullptr },
         { "id", reinterpret_cast<getter>(AppNotification_get_Id), nullptr, nullptr, nullptr },
         { "payload", reinterpret_cast<getter>(AppNotification_get_Payload), nullptr, nullptr, nullptr },
+        { "conferencing_config", reinterpret_cast<getter>(AppNotification_get_ConferencingConfig), reinterpret_cast<setter>(AppNotification_put_ConferencingConfig), nullptr, nullptr },
         { }};
 
     static PyType_Slot _type_slots_AppNotification[] = {
@@ -798,6 +868,363 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_AppNotificationActivatedEventArgs};
+
+    // ----- AppNotificationConferencingConfig class --------------------
+
+    static PyObject* _new_AppNotificationConferencingConfig(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_GET_SIZE(args);
+        if (arg_count == 0)
+        {
+            try
+            {
+                winrt::Microsoft::Windows::AppNotifications::AppNotificationConferencingConfig instance{};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_AppNotificationConferencingConfig(py::wrapper::Microsoft::Windows::AppNotifications::AppNotificationConferencingConfig* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* AppNotificationConferencingConfig_IsCallingPreviewSupported(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.AppNotificationConferencingConfig", L"IsCallingPreviewSupported", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Windows::AppNotifications::AppNotificationConferencingConfig::IsCallingPreviewSupported();
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppNotificationConferencingConfig_get_VideoDeviceId(py::wrapper::Microsoft::Windows::AppNotifications::AppNotificationConferencingConfig* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.AppNotificationConferencingConfig", L"VideoDeviceId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.VideoDeviceId();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int AppNotificationConferencingConfig_put_VideoDeviceId(py::wrapper::Microsoft::Windows::AppNotifications::AppNotificationConferencingConfig* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.AppNotificationConferencingConfig", L"VideoDeviceId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.VideoDeviceId(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* AppNotificationConferencingConfig_get_AudioOutputDeviceId(py::wrapper::Microsoft::Windows::AppNotifications::AppNotificationConferencingConfig* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.AppNotificationConferencingConfig", L"AudioOutputDeviceId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AudioOutputDeviceId();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int AppNotificationConferencingConfig_put_AudioOutputDeviceId(py::wrapper::Microsoft::Windows::AppNotifications::AppNotificationConferencingConfig* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.AppNotificationConferencingConfig", L"AudioOutputDeviceId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.AudioOutputDeviceId(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* AppNotificationConferencingConfig_get_AudioInputDeviceId(py::wrapper::Microsoft::Windows::AppNotifications::AppNotificationConferencingConfig* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.AppNotificationConferencingConfig", L"AudioInputDeviceId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.AudioInputDeviceId();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int AppNotificationConferencingConfig_put_AudioInputDeviceId(py::wrapper::Microsoft::Windows::AppNotifications::AppNotificationConferencingConfig* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppNotifications.AppNotificationConferencingConfig", L"AudioInputDeviceId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.AudioInputDeviceId(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* _assign_array_AppNotificationConferencingConfig(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::AppNotifications::AppNotificationConferencingConfig>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_AppNotificationConferencingConfig(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::Windows::AppNotifications::AppNotificationConferencingConfig>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_AppNotificationConferencingConfig[] = {
+        { "_assign_array_", _assign_array_AppNotificationConferencingConfig, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_AppNotificationConferencingConfig), METH_O | METH_STATIC, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_AppNotificationConferencingConfig[] = {
+        { "video_device_id", reinterpret_cast<getter>(AppNotificationConferencingConfig_get_VideoDeviceId), reinterpret_cast<setter>(AppNotificationConferencingConfig_put_VideoDeviceId), nullptr, nullptr },
+        { "audio_output_device_id", reinterpret_cast<getter>(AppNotificationConferencingConfig_get_AudioOutputDeviceId), reinterpret_cast<setter>(AppNotificationConferencingConfig_put_AudioOutputDeviceId), nullptr, nullptr },
+        { "audio_input_device_id", reinterpret_cast<getter>(AppNotificationConferencingConfig_get_AudioInputDeviceId), reinterpret_cast<setter>(AppNotificationConferencingConfig_put_AudioInputDeviceId), nullptr, nullptr },
+        { }};
+
+    static PyType_Slot _type_slots_AppNotificationConferencingConfig[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_AppNotificationConferencingConfig) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppNotificationConferencingConfig) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_AppNotificationConferencingConfig) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_AppNotificationConferencingConfig) },
+        { }};
+
+    static PyType_Spec type_spec_AppNotificationConferencingConfig = {
+        "winui3._winui3_microsoft_windows_appnotifications.AppNotificationConferencingConfig",
+        sizeof(py::wrapper::Microsoft::Windows::AppNotifications::AppNotificationConferencingConfig),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_AppNotificationConferencingConfig};
+
+    static PyGetSetDef getset_AppNotificationConferencingConfig_Static[] = {
+        { }};
+
+    static PyMethodDef methods_AppNotificationConferencingConfig_Static[] = {
+        { "is_calling_preview_supported", reinterpret_cast<PyCFunction>(AppNotificationConferencingConfig_IsCallingPreviewSupported), METH_VARARGS, nullptr },
+        { }};
+
+    static PyType_Slot type_slots_AppNotificationConferencingConfig_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AppNotificationConferencingConfig_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AppNotificationConferencingConfig_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AppNotificationConferencingConfig_Static = {
+        "winui3._winui3_microsoft_windows_appnotifications.AppNotificationConferencingConfig_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AppNotificationConferencingConfig_Static};
 
     // ----- AppNotificationManager class --------------------
 
@@ -2096,6 +2523,24 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_windows_appnotifications(void) noexcept
 
     py::pytype_handle AppNotificationActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_AppNotificationActivatedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!AppNotificationActivatedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle AppNotificationConferencingConfig_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!AppNotificationConferencingConfig_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AppNotificationConferencingConfig_Static{PyType_FromSpecWithBases(&type_spec_AppNotificationConferencingConfig_Static, AppNotificationConferencingConfig_Static_bases.get())};
+    if (!type_AppNotificationConferencingConfig_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle AppNotificationConferencingConfig_type{py::register_python_type(module.get(), &type_spec_AppNotificationConferencingConfig, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppNotificationConferencingConfig_Static.get()))};
+    if (!AppNotificationConferencingConfig_type)
     {
         return nullptr;
     }

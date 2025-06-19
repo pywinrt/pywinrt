@@ -101,12 +101,15 @@ subprocess.check_call(
 
 # generate headers for windows app sdk (winui3)
 
-WINDOWS_APP_SDK_PACKAGE_METADATA = (
-    REPO_ROOT_PATH / "_tools" / "Microsoft.WindowsAppSDK" / "lib" / "uap10.0"
-)
-WINDOWS_APP_SDK_PACKAGE_METADATA2 = (
-    REPO_ROOT_PATH / "_tools" / "Microsoft.WindowsAppSDK" / "lib" / "uap10.0.18362"
-)
+windows_app_sdk_metadata_paths = [
+    REPO_ROOT_PATH / "_tools" / "Microsoft.WindowsAppSDK.AI" / "metadata",
+    REPO_ROOT_PATH / "_tools" / "Microsoft.WindowsAppSDK.Foundation" / "metadata",
+    # This is why we cannot simply find all metadata folders for WinAppSDK.
+    REPO_ROOT_PATH / "_tools" / "Microsoft.WindowsAppSDK.InteractiveExperiences" / "metadata" / "10.0.18362.0",
+    REPO_ROOT_PATH / "_tools" / "Microsoft.WindowsAppSDK.Widgets" / "metadata",
+    REPO_ROOT_PATH / "_tools" / "Microsoft.WindowsAppSDK.WinUI" / "metadata"
+]
+
 WINDOWS_APP_SDK_PACKAGE_PATH = (
     PROJECTION_PATH
     / "winrt-WindowsAppSDK"
@@ -116,13 +119,12 @@ WINDOWS_APP_SDK_PACKAGE_PATH = (
 )
 
 shutil.rmtree(WINDOWS_APP_SDK_PACKAGE_PATH, ignore_errors=True)
-subprocess.check_call(
+
+windows_app_sdk_cppwinrt_command = [CPPWINRT_EXE]
+for metadata_path in windows_app_sdk_metadata_paths:
+    windows_app_sdk_cppwinrt_command.extend(["-input", str(metadata_path)])
+windows_app_sdk_cppwinrt_command.extend(
     [
-        CPPWINRT_EXE,
-        "-input",
-        WINDOWS_APP_SDK_PACKAGE_METADATA,
-        "-input",
-        WINDOWS_APP_SDK_PACKAGE_METADATA2,
         "-reference",
         WEBVIEW2_PACKAGE_METADATA,
         "-reference",
@@ -131,7 +133,7 @@ subprocess.check_call(
         WINDOWS_APP_SDK_PACKAGE_PATH,
     ]
 )
-
+subprocess.check_call(windows_app_sdk_cppwinrt_command)
 
 # generate headers for test component
 

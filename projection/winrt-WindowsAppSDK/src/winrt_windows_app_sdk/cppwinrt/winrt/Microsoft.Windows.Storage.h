@@ -461,6 +461,24 @@ namespace winrt::impl
         }
         return winrt::Microsoft::Windows::Storage::ApplicationData{ result, take_ownership_from_abi };
     }
+    template <typename D> auto consume_Microsoft_Windows_Storage_IApplicationDataStatics2<D>::GetForUnpackaged(param::hstring const& publisher, param::hstring const& product) const
+    {
+        void* result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::Storage::IApplicationDataStatics2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::Storage::IApplicationDataStatics2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::Storage::IApplicationDataStatics2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->GetForUnpackaged(*(void**)(&publisher), *(void**)(&product), &result));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::Storage::IApplicationDataStatics2>**)this;
+            check_hresult(_winrt_abi_type->GetForUnpackaged(*(void**)(&publisher), *(void**)(&product), &result));
+        }
+        return winrt::Microsoft::Windows::Storage::ApplicationData{ result, take_ownership_from_abi };
+    }
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, winrt::Microsoft::Windows::Storage::IApplicationData> : produce_base<D, winrt::Microsoft::Windows::Storage::IApplicationData>
@@ -676,6 +694,20 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
     };
 #endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Windows::Storage::IApplicationDataStatics2> : produce_base<D, winrt::Microsoft::Windows::Storage::IApplicationDataStatics2>
+    {
+        int32_t __stdcall GetForUnpackaged(void* publisher, void* product, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::Windows::Storage::ApplicationData>(this->shim().GetForUnpackaged(*reinterpret_cast<hstring const*>(&publisher), *reinterpret_cast<hstring const*>(&product)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
 }
 WINRT_EXPORT namespace winrt::Microsoft::Windows::Storage
 {
@@ -691,6 +723,10 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::Storage
     {
         return impl::call_factory<ApplicationData, IApplicationDataStatics>([&](IApplicationDataStatics const& f) { return f.GetForPackageFamily(packageFamilyName); });
     }
+    inline auto ApplicationData::GetForUnpackaged(param::hstring const& publisher, param::hstring const& product)
+    {
+        return impl::call_factory<ApplicationData, IApplicationDataStatics2>([&](IApplicationDataStatics2 const& f) { return f.GetForUnpackaged(publisher, product); });
+    }
 }
 namespace std
 {
@@ -698,6 +734,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::Windows::Storage::IApplicationData> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Storage::IApplicationDataContainer> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Storage::IApplicationDataStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::Storage::IApplicationDataStatics2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Storage::ApplicationData> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Storage::ApplicationDataContainer> : winrt::impl::hash_base {};
 #endif

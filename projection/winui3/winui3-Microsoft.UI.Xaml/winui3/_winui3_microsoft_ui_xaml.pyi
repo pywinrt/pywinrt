@@ -3349,6 +3349,13 @@ class XamlIsland(winrt.system.Object, windows_foundation.IClosable, metaclass=Xa
     @_property
     @typing.final
     def content_island(self) -> microsoft_ui_content.ContentIsland: ...
+    # System.Boolean Microsoft.UI.Xaml.XamlIsland::get_ShouldConstrainPopupsToWorkArea()
+    @_property
+    def should_constrain_popups_to_work_area(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.XamlIsland::put_ShouldConstrainPopupsToWorkArea(System.Boolean)
+    @should_constrain_popups_to_work_area.setter
+    @typing.final
+    def should_constrain_popups_to_work_area(self, value: bool) -> None: ...
 
 @typing.final
 class XamlResourceReferenceFailedEventArgs(winrt.system.Object):

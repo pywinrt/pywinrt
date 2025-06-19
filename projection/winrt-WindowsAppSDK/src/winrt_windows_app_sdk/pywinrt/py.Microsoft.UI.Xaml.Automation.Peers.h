@@ -445,6 +445,14 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::InkCanvasAutomationPeer>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.automation.peers.InkCanvasAutomationPeer";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "InkCanvasAutomationPeer";
+    };
+
+    template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::ItemAutomationPeer>
     {
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.automation.peers.ItemAutomationPeer";
@@ -650,6 +658,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.automation.peers.NumberBoxAutomationPeer";
         static constexpr const char* module_name = "winui3.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "NumberBoxAutomationPeer";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::PagerControlAutomationPeer>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.automation.peers.PagerControlAutomationPeer";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "PagerControlAutomationPeer";
     };
 
     template<>
@@ -1076,6 +1092,7 @@ namespace py::wrapper::Microsoft::UI::Xaml::Automation::Peers
     using HyperlinkButtonAutomationPeer = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Automation::Peers::HyperlinkButtonAutomationPeer>;
     using ImageAutomationPeer = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Automation::Peers::ImageAutomationPeer>;
     using InfoBarAutomationPeer = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Automation::Peers::InfoBarAutomationPeer>;
+    using InkCanvasAutomationPeer = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Automation::Peers::InkCanvasAutomationPeer>;
     using ItemAutomationPeer = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Automation::Peers::ItemAutomationPeer>;
     using ItemContainerAutomationPeer = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Automation::Peers::ItemContainerAutomationPeer>;
     using ItemsControlAutomationPeer = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer>;
@@ -1102,6 +1119,7 @@ namespace py::wrapper::Microsoft::UI::Xaml::Automation::Peers
     using NavigationViewAutomationPeer = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Automation::Peers::NavigationViewAutomationPeer>;
     using NavigationViewItemAutomationPeer = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Automation::Peers::NavigationViewItemAutomationPeer>;
     using NumberBoxAutomationPeer = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Automation::Peers::NumberBoxAutomationPeer>;
+    using PagerControlAutomationPeer = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Automation::Peers::PagerControlAutomationPeer>;
     using PasswordBoxAutomationPeer = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Automation::Peers::PasswordBoxAutomationPeer>;
     using PersonPictureAutomationPeer = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Automation::Peers::PersonPictureAutomationPeer>;
     using PickerFlyoutPresenterAutomationPeer = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Automation::Peers::PickerFlyoutPresenterAutomationPeer>;

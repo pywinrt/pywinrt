@@ -41189,6 +41189,75 @@ namespace py::cpp::Microsoft::UI::Xaml
         }
     }
 
+    static PyObject* XamlIsland_get_ShouldConstrainPopupsToWorkArea(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.XamlIsland", L"ShouldConstrainPopupsToWorkArea");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::XamlIsland>().ShouldConstrainPopupsToWorkArea();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int XamlIsland_put_ShouldConstrainPopupsToWorkArea(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.XamlIsland", L"ShouldConstrainPopupsToWorkArea");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::XamlIsland>().ShouldConstrainPopupsToWorkArea(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
     static PyObject* _assign_array_XamlIsland(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::XamlIsland>>();
@@ -41248,6 +41317,7 @@ namespace py::cpp::Microsoft::UI::Xaml
         { "system_backdrop", reinterpret_cast<getter>(XamlIsland_get_SystemBackdrop), reinterpret_cast<setter>(XamlIsland_put_SystemBackdrop), nullptr, nullptr },
         { "content", reinterpret_cast<getter>(XamlIsland_get_Content), reinterpret_cast<setter>(XamlIsland_put_Content), nullptr, nullptr },
         { "content_island", reinterpret_cast<getter>(XamlIsland_get_ContentIsland), nullptr, nullptr, nullptr },
+        { "should_constrain_popups_to_work_area", reinterpret_cast<getter>(XamlIsland_get_ShouldConstrainPopupsToWorkArea), reinterpret_cast<setter>(XamlIsland_put_ShouldConstrainPopupsToWorkArea), nullptr, nullptr },
         { }};
 
     static PyType_Slot _type_slots_XamlIsland[] = {

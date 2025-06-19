@@ -16,6 +16,7 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Media.Casting.h>
 #include <winrt/Windows.Media.Playback.h>
 #include <winrt/Windows.UI.h>
+#include <winrt/Windows.UI.Input.Inking.h>
 #include <winrt/Windows.UI.Text.h>
 #include <winrt/Windows.UI.Xaml.Interop.h>
 #include <winrt/Microsoft.UI.h>
@@ -111,6 +112,9 @@ namespace py
     inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Controls::ExpandDirection> = "i";
 
     template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Controls::FlowLayoutLineAlignment> = "i";
+
+    template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Controls::IncrementalLoadingTrigger> = "i";
 
     template<>
@@ -127,6 +131,18 @@ namespace py
 
     template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Controls::ItemCollectionTransitionTriggers> = "I";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Controls::ItemContainerInteractionTrigger> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Controls::ItemContainerMultiSelectMode> = "I";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Controls::ItemContainerUserInvokeMode> = "I";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Controls::ItemContainerUserSelectMode> = "I";
 
     template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Controls::ItemsUpdatingScrollMode> = "i";
@@ -178,6 +194,12 @@ namespace py
 
     template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Controls::Orientation> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Controls::PagerControlButtonVisibility> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Controls::PagerControlDisplayMode> = "i";
 
     template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Controls::PanelScrollingDirection> = "i";
@@ -325,6 +347,9 @@ namespace py
 
     template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Controls::ZoomMode> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Controls::FlowLayoutAnchorInfo> = "T{i:index:d:offset:}";
 
 
     template<>
@@ -512,6 +537,14 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::FlowLayoutLineAlignment>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.FlowLayoutLineAlignment";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "FlowLayoutLineAlignment";
+    };
+
+    template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::IncrementalLoadingTrigger>
     {
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.IncrementalLoadingTrigger";
@@ -557,6 +590,38 @@ namespace py
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ItemCollectionTransitionTriggers";
         static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ItemCollectionTransitionTriggers";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::ItemContainerInteractionTrigger>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ItemContainerInteractionTrigger";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "ItemContainerInteractionTrigger";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::ItemContainerMultiSelectMode>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ItemContainerMultiSelectMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "ItemContainerMultiSelectMode";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::ItemContainerUserInvokeMode>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ItemContainerUserInvokeMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "ItemContainerUserInvokeMode";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::ItemContainerUserSelectMode>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ItemContainerUserSelectMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "ItemContainerUserSelectMode";
     };
 
     template<>
@@ -693,6 +758,22 @@ namespace py
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.Orientation";
         static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "Orientation";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::PagerControlButtonVisibility>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.PagerControlButtonVisibility";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "PagerControlButtonVisibility";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::PagerControlDisplayMode>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.PagerControlDisplayMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "PagerControlDisplayMode";
     };
 
     template<>
@@ -1664,6 +1745,14 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::ElementFactory>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ElementFactory";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "ElementFactory";
+    };
+
+    template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::Expander>
     {
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.Expander";
@@ -1709,6 +1798,22 @@ namespace py
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.FlipViewItem";
         static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "FlipViewItem";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::FlowLayout>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.FlowLayout";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "FlowLayout";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::FlowLayoutState>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.FlowLayoutState";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "FlowLayoutState";
     };
 
     template<>
@@ -1920,6 +2025,14 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::IndexPath>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.IndexPath";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "IndexPath";
+    };
+
+    template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::InfoBadge>
     {
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.InfoBadge";
@@ -1960,11 +2073,27 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::InfoBarOpenedEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.InfoBarOpenedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "InfoBarOpenedEventArgs";
+    };
+
+    template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::InfoBarTemplateSettings>
     {
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.InfoBarTemplateSettings";
         static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "InfoBarTemplateSettings";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::InkCanvas>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.InkCanvas";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "InkCanvas";
     };
 
     template<>
@@ -2037,6 +2166,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ItemContainerGenerator";
         static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ItemContainerGenerator";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::ItemContainerInvokedEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ItemContainerInvokedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "ItemContainerInvokedEventArgs";
     };
 
     template<>
@@ -2173,6 +2310,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.LayoutContext";
         static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "LayoutContext";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::LayoutPanel>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.LayoutPanel";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "LayoutPanel";
     };
 
     template<>
@@ -2584,6 +2729,30 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::PagerControl>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.PagerControl";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "PagerControl";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::PagerControlSelectedIndexChangedEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.PagerControlSelectedIndexChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "PagerControlSelectedIndexChangedEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::PagerControlTemplateSettings>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.PagerControlTemplateSettings";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "PagerControlTemplateSettings";
+    };
+
+    template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::Panel>
     {
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.Panel";
@@ -2808,6 +2977,22 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::RecyclePool>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.RecyclePool";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "RecyclePool";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::RecyclingElementFactory>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.RecyclingElementFactory";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "RecyclingElementFactory";
+    };
+
+    template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::RefreshContainer>
     {
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.RefreshContainer";
@@ -3008,6 +3193,14 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::ScrollingScrollStartingEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ScrollingScrollStartingEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "ScrollingScrollStartingEventArgs";
+    };
+
+    template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ScrollingZoomAnimationStartingEventArgs>
     {
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ScrollingZoomAnimationStartingEventArgs";
@@ -3032,6 +3225,14 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::ScrollingZoomStartingEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ScrollingZoomStartingEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "ScrollingZoomStartingEventArgs";
+    };
+
+    template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::SectionsInViewChangedEventArgs>
     {
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.SectionsInViewChangedEventArgs";
@@ -3040,11 +3241,43 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::SelectTemplateEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.SelectTemplateEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "SelectTemplateEventArgs";
+    };
+
+    template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::SelectionChangedEventArgs>
     {
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.SelectionChangedEventArgs";
         static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "SelectionChangedEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::SelectionModel>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.SelectionModel";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "SelectionModel";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::SelectionModelChildrenRequestedEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.SelectionModelChildrenRequestedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "SelectionModelChildrenRequestedEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::SelectionModelSelectionChangedEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.SelectionModelSelectionChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "SelectionModelSelectionChangedEventArgs";
     };
 
     template<>
@@ -3141,6 +3374,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.StackLayout";
         static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "StackLayout";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::StackLayoutState>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.StackLayoutState";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "StackLayoutState";
     };
 
     template<>
@@ -3333,6 +3574,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TeachingTipClosingEventArgs";
         static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TeachingTipClosingEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::TeachingTipOpenedEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TeachingTipOpenedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "TeachingTipOpenedEventArgs";
     };
 
     template<>
@@ -3680,6 +3929,14 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::UniformGridLayoutState>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.UniformGridLayoutState";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "UniformGridLayoutState";
+    };
+
+    template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::UserControl>
     {
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.UserControl";
@@ -3800,6 +4057,14 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::IApplicationViewSpanningRects>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls._IApplicationViewSpanningRects";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "_IApplicationViewSpanningRects";
+    };
+
+    template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ICommandBarElement>
     {
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls._ICommandBarElement";
@@ -3856,11 +4121,28 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::ISelfPlayingAnimatedVisual>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls._ISelfPlayingAnimatedVisual";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "_ISelfPlayingAnimatedVisual";
+    };
+
+    template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ISemanticZoomInformation>
     {
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls._ISemanticZoomInformation";
         static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "_ISemanticZoomInformation";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::FlowLayoutAnchorInfo>
+    {
+        static constexpr std::string_view from_tuple = "winui3._winui3_microsoft_ui_xaml_controls.FlowLayoutAnchorInfo_from_tuple";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.FlowLayoutAnchorInfo";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "FlowLayoutAnchorInfo";
     };
 }
 
@@ -3910,6 +4192,10 @@ namespace py
 
 #if __has_include("py.Windows.UI.h")
 #include "py.Windows.UI.h"
+#endif
+
+#if __has_include("py.Windows.UI.Input.Inking.h")
+#include "py.Windows.UI.Input.Inking.h"
 #endif
 
 #if __has_include("py.Windows.UI.Text.h")
@@ -4097,6 +4383,38 @@ namespace py::impl::Microsoft::UI::Xaml::Controls
                     }
 
                     py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct DoInkPresenterWork
+    {
+        static winrt::Microsoft::UI::Xaml::Controls::DoInkPresenterWork get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::UI::Input::Inking::InkPresenter const& param0)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
                     if (!return_value)
                     {
                         throw python_exception();
@@ -4605,12 +4923,15 @@ namespace py::wrapper::Microsoft::UI::Xaml::Controls
     using DragItemsStartingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::DragItemsStartingEventArgs>;
     using DropDownButton = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::DropDownButton>;
     using DynamicOverflowItemsChangingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::DynamicOverflowItemsChangingEventArgs>;
+    using ElementFactory = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::ElementFactory>;
     using Expander = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::Expander>;
     using ExpanderCollapsedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::ExpanderCollapsedEventArgs>;
     using ExpanderExpandingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::ExpanderExpandingEventArgs>;
     using ExpanderTemplateSettings = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::ExpanderTemplateSettings>;
     using FlipView = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::FlipView>;
     using FlipViewItem = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::FlipViewItem>;
+    using FlowLayout = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::FlowLayout>;
+    using FlowLayoutState = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::FlowLayoutState>;
     using Flyout = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::Flyout>;
     using FlyoutPresenter = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::FlyoutPresenter>;
     using FocusDisengagedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::FocusDisengagedEventArgs>;
@@ -4637,12 +4958,15 @@ namespace py::wrapper::Microsoft::UI::Xaml::Controls
     using Image = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::Image>;
     using ImageIcon = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::ImageIcon>;
     using ImageIconSource = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::ImageIconSource>;
+    using IndexPath = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::IndexPath>;
     using InfoBadge = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::InfoBadge>;
     using InfoBadgeTemplateSettings = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::InfoBadgeTemplateSettings>;
     using InfoBar = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::InfoBar>;
     using InfoBarClosedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::InfoBarClosedEventArgs>;
     using InfoBarClosingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::InfoBarClosingEventArgs>;
+    using InfoBarOpenedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::InfoBarOpenedEventArgs>;
     using InfoBarTemplateSettings = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::InfoBarTemplateSettings>;
+    using InkCanvas = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::InkCanvas>;
     using IsTextTrimmedChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::IsTextTrimmedChangedEventArgs>;
     using ItemClickEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::ItemClickEventArgs>;
     using ItemCollection = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::ItemCollection>;
@@ -4652,6 +4976,7 @@ namespace py::wrapper::Microsoft::UI::Xaml::Controls
     using ItemCollectionTransitionProvider = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::ItemCollectionTransitionProvider>;
     using ItemContainer = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::ItemContainer>;
     using ItemContainerGenerator = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::ItemContainerGenerator>;
+    using ItemContainerInvokedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::ItemContainerInvokedEventArgs>;
     using ItemsControl = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::ItemsControl>;
     using ItemsPanelTemplate = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::ItemsPanelTemplate>;
     using ItemsPickedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::ItemsPickedEventArgs>;
@@ -4669,6 +4994,7 @@ namespace py::wrapper::Microsoft::UI::Xaml::Controls
     using ItemsWrapGrid = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::ItemsWrapGrid>;
     using Layout = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::Layout>;
     using LayoutContext = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::LayoutContext>;
+    using LayoutPanel = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::LayoutPanel>;
     using LinedFlowLayout = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::LinedFlowLayout>;
     using LinedFlowLayoutItemCollectionTransitionProvider = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::LinedFlowLayoutItemCollectionTransitionProvider>;
     using LinedFlowLayoutItemsInfoRequestedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::LinedFlowLayoutItemsInfoRequestedEventArgs>;
@@ -4720,6 +5046,9 @@ namespace py::wrapper::Microsoft::UI::Xaml::Controls
     using NumberBox = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::NumberBox>;
     using NumberBoxValueChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::NumberBoxValueChangedEventArgs>;
     using Page = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::Page>;
+    using PagerControl = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::PagerControl>;
+    using PagerControlSelectedIndexChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::PagerControlSelectedIndexChangedEventArgs>;
+    using PagerControlTemplateSettings = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::PagerControlTemplateSettings>;
     using Panel = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::Panel>;
     using ParallaxView = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::ParallaxView>;
     using PasswordBox = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::PasswordBox>;
@@ -4748,6 +5077,8 @@ namespace py::wrapper::Microsoft::UI::Xaml::Controls
     using RatingItemFontInfo = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::RatingItemFontInfo>;
     using RatingItemImageInfo = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::RatingItemImageInfo>;
     using RatingItemInfo = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::RatingItemInfo>;
+    using RecyclePool = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::RecyclePool>;
+    using RecyclingElementFactory = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::RecyclingElementFactory>;
     using RefreshContainer = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::RefreshContainer>;
     using RefreshInteractionRatioChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::RefreshInteractionRatioChangedEventArgs>;
     using RefreshRequestedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::RefreshRequestedEventArgs>;
@@ -4773,11 +5104,17 @@ namespace py::wrapper::Microsoft::UI::Xaml::Controls
     using ScrollingScrollAnimationStartingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::ScrollingScrollAnimationStartingEventArgs>;
     using ScrollingScrollCompletedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::ScrollingScrollCompletedEventArgs>;
     using ScrollingScrollOptions = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::ScrollingScrollOptions>;
+    using ScrollingScrollStartingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::ScrollingScrollStartingEventArgs>;
     using ScrollingZoomAnimationStartingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::ScrollingZoomAnimationStartingEventArgs>;
     using ScrollingZoomCompletedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::ScrollingZoomCompletedEventArgs>;
     using ScrollingZoomOptions = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::ScrollingZoomOptions>;
+    using ScrollingZoomStartingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::ScrollingZoomStartingEventArgs>;
     using SectionsInViewChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::SectionsInViewChangedEventArgs>;
+    using SelectTemplateEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::SelectTemplateEventArgs>;
     using SelectionChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::SelectionChangedEventArgs>;
+    using SelectionModel = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::SelectionModel>;
+    using SelectionModelChildrenRequestedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::SelectionModelChildrenRequestedEventArgs>;
+    using SelectionModelSelectionChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::SelectionModelSelectionChangedEventArgs>;
     using SelectorBar = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::SelectorBar>;
     using SelectorBarItem = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::SelectorBarItem>;
     using SelectorBarSelectionChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::SelectorBarSelectionChangedEventArgs>;
@@ -4790,6 +5127,7 @@ namespace py::wrapper::Microsoft::UI::Xaml::Controls
     using SplitView = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::SplitView>;
     using SplitViewPaneClosingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::SplitViewPaneClosingEventArgs>;
     using StackLayout = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::StackLayout>;
+    using StackLayoutState = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::StackLayoutState>;
     using StackPanel = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::StackPanel>;
     using StyleSelector = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::StyleSelector>;
     using SwapChainBackgroundPanel = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::SwapChainBackgroundPanel>;
@@ -4814,6 +5152,7 @@ namespace py::wrapper::Microsoft::UI::Xaml::Controls
     using TeachingTip = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::TeachingTip>;
     using TeachingTipClosedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::TeachingTipClosedEventArgs>;
     using TeachingTipClosingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::TeachingTipClosingEventArgs>;
+    using TeachingTipOpenedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::TeachingTipOpenedEventArgs>;
     using TeachingTipTemplateSettings = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::TeachingTipTemplateSettings>;
     using TextBlock = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::TextBlock>;
     using TextBox = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::TextBox>;
@@ -4857,6 +5196,7 @@ namespace py::wrapper::Microsoft::UI::Xaml::Controls
     using TwoPaneView = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::TwoPaneView>;
     using UIElementCollection = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::UIElementCollection>;
     using UniformGridLayout = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::UniformGridLayout>;
+    using UniformGridLayoutState = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::UniformGridLayoutState>;
     using UserControl = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::UserControl>;
     using VariableSizedWrapGrid = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::VariableSizedWrapGrid>;
     using Viewbox = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::Viewbox>;
@@ -4872,6 +5212,7 @@ namespace py::wrapper::Microsoft::UI::Xaml::Controls
     using IAnimatedVisualSource = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource>;
     using IAnimatedVisualSource2 = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource2>;
     using IAnimatedVisualSource3 = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource3>;
+    using IApplicationViewSpanningRects = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::IApplicationViewSpanningRects>;
     using ICommandBarElement = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::ICommandBarElement>;
     using IDynamicAnimatedVisualSource = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::IDynamicAnimatedVisualSource>;
     using IInsertionPanel = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::IInsertionPanel>;
@@ -4879,7 +5220,9 @@ namespace py::wrapper::Microsoft::UI::Xaml::Controls
     using IKeyIndexMapping = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::IKeyIndexMapping>;
     using INavigate = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::INavigate>;
     using IScrollAnchorProvider = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::IScrollAnchorProvider>;
+    using ISelfPlayingAnimatedVisual = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::ISelfPlayingAnimatedVisual>;
     using ISemanticZoomInformation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::ISemanticZoomInformation>;
+    using FlowLayoutAnchorInfo = py::winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Controls::FlowLayoutAnchorInfo>;
 }
 
 namespace py
@@ -4900,6 +5243,12 @@ namespace py
     struct delegate_python_type<winrt::Microsoft::UI::Xaml::Controls::ContextMenuOpeningEventHandler>
     {
         using type = py::impl::Microsoft::UI::Xaml::Controls::ContextMenuOpeningEventHandler;
+    };
+
+    template <>
+    struct delegate_python_type<winrt::Microsoft::UI::Xaml::Controls::DoInkPresenterWork>
+    {
+        using type = py::impl::Microsoft::UI::Xaml::Controls::DoInkPresenterWork;
     };
 
     template <>

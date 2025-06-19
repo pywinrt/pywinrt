@@ -372,6 +372,11 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Composition
         using impl::consume_t<CompositionNineGridBrush, winrt::Microsoft::UI::Composition::ICompositionObject>::StartAnimation;
         using impl::consume_t<CompositionNineGridBrush, winrt::Microsoft::UI::Composition::ICompositionObject5>::StartAnimation;
     };
+    struct WINRT_IMPL_EMPTY_BASES CompositionNotificationDeferral : winrt::Microsoft::UI::Composition::ICompositionNotificationDeferral
+    {
+        CompositionNotificationDeferral(std::nullptr_t) noexcept {}
+        CompositionNotificationDeferral(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Composition::ICompositionNotificationDeferral(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES CompositionObject : winrt::Microsoft::UI::Composition::ICompositionObject,
         impl::require<CompositionObject, winrt::Microsoft::UI::Composition::ICompositionObject2, winrt::Microsoft::UI::Composition::ICompositionObject3, winrt::Microsoft::UI::Composition::ICompositionObject4, winrt::Microsoft::UI::Composition::ICompositionObject5, winrt::Windows::Foundation::IClosable, winrt::Microsoft::UI::Composition::IAnimationObject>
     {
@@ -400,7 +405,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Composition
     };
     struct WINRT_IMPL_EMPTY_BASES CompositionProjectedShadow : winrt::Microsoft::UI::Composition::ICompositionProjectedShadow,
         impl::base<CompositionProjectedShadow, winrt::Microsoft::UI::Composition::CompositionObject>,
-        impl::require<CompositionProjectedShadow, winrt::Microsoft::UI::Composition::ICompositionObject, winrt::Microsoft::UI::Composition::ICompositionObject2, winrt::Microsoft::UI::Composition::ICompositionObject3, winrt::Microsoft::UI::Composition::ICompositionObject4, winrt::Microsoft::UI::Composition::ICompositionObject5, winrt::Windows::Foundation::IClosable, winrt::Microsoft::UI::Composition::IAnimationObject>
+        impl::require<CompositionProjectedShadow, winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadow, winrt::Microsoft::UI::Composition::ICompositionObject, winrt::Microsoft::UI::Composition::ICompositionObject2, winrt::Microsoft::UI::Composition::ICompositionObject3, winrt::Microsoft::UI::Composition::ICompositionObject4, winrt::Microsoft::UI::Composition::ICompositionObject5, winrt::Windows::Foundation::IClosable, winrt::Microsoft::UI::Composition::IAnimationObject>
     {
         CompositionProjectedShadow(std::nullptr_t) noexcept {}
         CompositionProjectedShadow(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Composition::ICompositionProjectedShadow(ptr, take_ownership_from_abi) {}
@@ -409,7 +414,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Composition
     };
     struct WINRT_IMPL_EMPTY_BASES CompositionProjectedShadowCaster : winrt::Microsoft::UI::Composition::ICompositionProjectedShadowCaster,
         impl::base<CompositionProjectedShadowCaster, winrt::Microsoft::UI::Composition::CompositionObject>,
-        impl::require<CompositionProjectedShadowCaster, winrt::Microsoft::UI::Composition::ICompositionObject, winrt::Microsoft::UI::Composition::ICompositionObject2, winrt::Microsoft::UI::Composition::ICompositionObject3, winrt::Microsoft::UI::Composition::ICompositionObject4, winrt::Microsoft::UI::Composition::ICompositionObject5, winrt::Windows::Foundation::IClosable, winrt::Microsoft::UI::Composition::IAnimationObject>
+        impl::require<CompositionProjectedShadowCaster, winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowCaster, winrt::Microsoft::UI::Composition::ICompositionObject, winrt::Microsoft::UI::Composition::ICompositionObject2, winrt::Microsoft::UI::Composition::ICompositionObject3, winrt::Microsoft::UI::Composition::ICompositionObject4, winrt::Microsoft::UI::Composition::ICompositionObject5, winrt::Windows::Foundation::IClosable, winrt::Microsoft::UI::Composition::IAnimationObject>
     {
         CompositionProjectedShadowCaster(std::nullptr_t) noexcept {}
         CompositionProjectedShadowCaster(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Composition::ICompositionProjectedShadowCaster(ptr, take_ownership_from_abi) {}
@@ -428,7 +433,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Composition
     };
     struct WINRT_IMPL_EMPTY_BASES CompositionProjectedShadowReceiver : winrt::Microsoft::UI::Composition::ICompositionProjectedShadowReceiver,
         impl::base<CompositionProjectedShadowReceiver, winrt::Microsoft::UI::Composition::CompositionObject>,
-        impl::require<CompositionProjectedShadowReceiver, winrt::Microsoft::UI::Composition::ICompositionObject, winrt::Microsoft::UI::Composition::ICompositionObject2, winrt::Microsoft::UI::Composition::ICompositionObject3, winrt::Microsoft::UI::Composition::ICompositionObject4, winrt::Microsoft::UI::Composition::ICompositionObject5, winrt::Windows::Foundation::IClosable, winrt::Microsoft::UI::Composition::IAnimationObject>
+        impl::require<CompositionProjectedShadowReceiver, winrt::Microsoft::UI::Composition::IExpCompositionProjectedShadowReceiver, winrt::Microsoft::UI::Composition::ICompositionObject, winrt::Microsoft::UI::Composition::ICompositionObject2, winrt::Microsoft::UI::Composition::ICompositionObject3, winrt::Microsoft::UI::Composition::ICompositionObject4, winrt::Microsoft::UI::Composition::ICompositionObject5, winrt::Windows::Foundation::IClosable, winrt::Microsoft::UI::Composition::IAnimationObject>
     {
         CompositionProjectedShadowReceiver(std::nullptr_t) noexcept {}
         CompositionProjectedShadowReceiver(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Composition::ICompositionProjectedShadowReceiver(ptr, take_ownership_from_abi) {}

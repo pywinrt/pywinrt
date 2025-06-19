@@ -274,6 +274,46 @@ namespace py::cpp::Microsoft::UI::Windowing
         }
     }
 
+    static PyObject* AppWindow_GetCurrentPlacement(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindow", L"GetCurrentPlacement", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetCurrentPlacement();
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* AppWindow_GetFromWindowId(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
@@ -684,6 +724,131 @@ namespace py::cpp::Microsoft::UI::Windowing
                 }
 
                 Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppWindow_SaveCurrentPlacement(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindow", L"SaveCurrentPlacement", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.SaveCurrentPlacement();
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppWindow_SaveCurrentPlacementForAllPersistedStateIds(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindow", L"SaveCurrentPlacementForAllPersistedStateIds", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Windowing::AppWindow::SaveCurrentPlacementForAllPersistedStateIds();
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppWindow_SetCurrentPlacement(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindow", L"SetCurrentPlacement", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Windowing::AppWindowPlacementDetails>(args, 0);
+                auto param1 = py::convert_to<bool>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SetCurrentPlacement(param0, param1);
+                }());
             }
             catch (...)
             {
@@ -1575,6 +1740,144 @@ namespace py::cpp::Microsoft::UI::Windowing
         }
     }
 
+    static PyObject* AppWindow_get_PlacementRestorationBehavior(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindow", L"PlacementRestorationBehavior");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PlacementRestorationBehavior();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int AppWindow_put_PlacementRestorationBehavior(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindow", L"PlacementRestorationBehavior");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Windowing::PlacementRestorationBehavior>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.PlacementRestorationBehavior(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* AppWindow_get_PersistedStateId(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindow", L"PersistedStateId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PersistedStateId();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int AppWindow_put_PersistedStateId(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindow", L"PersistedStateId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::guid>>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.PersistedStateId(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
     static PyObject* AppWindow_add_Changed(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, PyObject* arg) noexcept
     {
         try
@@ -1797,6 +2100,7 @@ namespace py::cpp::Microsoft::UI::Windowing
     static PyMethodDef _methods_AppWindow[] = {
         { "associate_with_dispatcher_queue", reinterpret_cast<PyCFunction>(AppWindow_AssociateWithDispatcherQueue), METH_VARARGS, nullptr },
         { "destroy", reinterpret_cast<PyCFunction>(AppWindow_Destroy), METH_VARARGS, nullptr },
+        { "get_current_placement", reinterpret_cast<PyCFunction>(AppWindow_GetCurrentPlacement), METH_VARARGS, nullptr },
         { "hide", reinterpret_cast<PyCFunction>(AppWindow_Hide), METH_VARARGS, nullptr },
         { "move", reinterpret_cast<PyCFunction>(AppWindow_Move), METH_VARARGS, nullptr },
         { "move_and_resize", reinterpret_cast<PyCFunction>(AppWindow_MoveAndResize), METH_VARARGS, nullptr },
@@ -1806,6 +2110,8 @@ namespace py::cpp::Microsoft::UI::Windowing
         { "move_in_z_order_below", reinterpret_cast<PyCFunction>(AppWindow_MoveInZOrderBelow), METH_VARARGS, nullptr },
         { "resize", reinterpret_cast<PyCFunction>(AppWindow_Resize), METH_VARARGS, nullptr },
         { "resize_client", reinterpret_cast<PyCFunction>(AppWindow_ResizeClient), METH_VARARGS, nullptr },
+        { "save_current_placement", reinterpret_cast<PyCFunction>(AppWindow_SaveCurrentPlacement), METH_VARARGS, nullptr },
+        { "set_current_placement", reinterpret_cast<PyCFunction>(AppWindow_SetCurrentPlacement), METH_VARARGS, nullptr },
         { "set_icon", reinterpret_cast<PyCFunction>(AppWindow_SetIcon), METH_VARARGS, nullptr },
         { "set_icon_with_icon_id", reinterpret_cast<PyCFunction>(AppWindow_SetIconWithIconId), METH_VARARGS, nullptr },
         { "set_presenter", reinterpret_cast<PyCFunction>(AppWindow_SetPresenter), METH_VARARGS, nullptr },
@@ -1839,6 +2145,8 @@ namespace py::cpp::Microsoft::UI::Windowing
         { "title_bar", reinterpret_cast<getter>(AppWindow_get_TitleBar), nullptr, nullptr, nullptr },
         { "client_size", reinterpret_cast<getter>(AppWindow_get_ClientSize), nullptr, nullptr, nullptr },
         { "dispatcher_queue", reinterpret_cast<getter>(AppWindow_get_DispatcherQueue), nullptr, nullptr, nullptr },
+        { "placement_restoration_behavior", reinterpret_cast<getter>(AppWindow_get_PlacementRestorationBehavior), reinterpret_cast<setter>(AppWindow_put_PlacementRestorationBehavior), nullptr, nullptr },
+        { "persisted_state_id", reinterpret_cast<getter>(AppWindow_get_PersistedStateId), reinterpret_cast<setter>(AppWindow_put_PersistedStateId), nullptr, nullptr },
         { }};
 
     static PyType_Slot _type_slots_AppWindow[] = {
@@ -1864,6 +2172,7 @@ namespace py::cpp::Microsoft::UI::Windowing
         { "create_with_presenter", reinterpret_cast<PyCFunction>(AppWindow_CreateWithPresenter), METH_VARARGS, nullptr },
         { "create_with_presenter_and_owner", reinterpret_cast<PyCFunction>(AppWindow_CreateWithPresenterAndOwner), METH_VARARGS, nullptr },
         { "get_from_window_id", reinterpret_cast<PyCFunction>(AppWindow_GetFromWindowId), METH_VARARGS, nullptr },
+        { "save_current_placement_for_all_persisted_state_ids", reinterpret_cast<PyCFunction>(AppWindow_SaveCurrentPlacementForAllPersistedStateIds), METH_VARARGS, nullptr },
         { }};
 
     static PyType_Slot type_slots_AppWindow_Static[] = 
@@ -2324,6 +2633,356 @@ namespace py::cpp::Microsoft::UI::Windowing
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_AppWindowClosingEventArgs};
+
+    // ----- AppWindowPlacementDetails class --------------------
+
+    static PyObject* _new_AppWindowPlacementDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::UI::Windowing::AppWindowPlacementDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Windowing::AppWindowPlacementDetails>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_AppWindowPlacementDetails(py::wrapper::Microsoft::UI::Windowing::AppWindowPlacementDetails* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* AppWindowPlacementDetails_Create(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 7)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindowPlacementDetails", L"Create", 7);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(7);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Graphics::RectInt32>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Graphics::RectInt32>(args, 1);
+                auto param2 = py::convert_to<int32_t>(args, 2);
+                auto param3 = py::convert_to<int32_t>(args, 3);
+                auto param4 = py::convert_to<winrt::Windows::Graphics::RectInt32>(args, 4);
+                auto param5 = py::convert_to<winrt::Microsoft::UI::Windowing::PlacementInfo>(args, 5);
+                auto param6 = py::convert_to<winrt::hstring>(args, 6);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Windowing::AppWindowPlacementDetails::Create(param0, param1, param2, param3, param4, param5, param6);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppWindowPlacementDetails_get_ArrangeRect(py::wrapper::Microsoft::UI::Windowing::AppWindowPlacementDetails* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowPlacementDetails", L"ArrangeRect");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ArrangeRect();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppWindowPlacementDetails_get_DeviceName(py::wrapper::Microsoft::UI::Windowing::AppWindowPlacementDetails* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowPlacementDetails", L"DeviceName");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DeviceName();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppWindowPlacementDetails_get_Dpi(py::wrapper::Microsoft::UI::Windowing::AppWindowPlacementDetails* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowPlacementDetails", L"Dpi");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Dpi();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppWindowPlacementDetails_get_Flags(py::wrapper::Microsoft::UI::Windowing::AppWindowPlacementDetails* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowPlacementDetails", L"Flags");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Flags();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppWindowPlacementDetails_get_NormalRect(py::wrapper::Microsoft::UI::Windowing::AppWindowPlacementDetails* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowPlacementDetails", L"NormalRect");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.NormalRect();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppWindowPlacementDetails_get_ShowCmd(py::wrapper::Microsoft::UI::Windowing::AppWindowPlacementDetails* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowPlacementDetails", L"ShowCmd");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ShowCmd();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppWindowPlacementDetails_get_WorkArea(py::wrapper::Microsoft::UI::Windowing::AppWindowPlacementDetails* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowPlacementDetails", L"WorkArea");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WorkArea();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_AppWindowPlacementDetails(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Windowing::AppWindowPlacementDetails>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_AppWindowPlacementDetails(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Windowing::AppWindowPlacementDetails>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_AppWindowPlacementDetails[] = {
+        { "_assign_array_", _assign_array_AppWindowPlacementDetails, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_AppWindowPlacementDetails), METH_O | METH_STATIC, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_AppWindowPlacementDetails[] = {
+        { "arrange_rect", reinterpret_cast<getter>(AppWindowPlacementDetails_get_ArrangeRect), nullptr, nullptr, nullptr },
+        { "device_name", reinterpret_cast<getter>(AppWindowPlacementDetails_get_DeviceName), nullptr, nullptr, nullptr },
+        { "dpi", reinterpret_cast<getter>(AppWindowPlacementDetails_get_Dpi), nullptr, nullptr, nullptr },
+        { "flags", reinterpret_cast<getter>(AppWindowPlacementDetails_get_Flags), nullptr, nullptr, nullptr },
+        { "normal_rect", reinterpret_cast<getter>(AppWindowPlacementDetails_get_NormalRect), nullptr, nullptr, nullptr },
+        { "show_cmd", reinterpret_cast<getter>(AppWindowPlacementDetails_get_ShowCmd), nullptr, nullptr, nullptr },
+        { "work_area", reinterpret_cast<getter>(AppWindowPlacementDetails_get_WorkArea), nullptr, nullptr, nullptr },
+        { }};
+
+    static PyType_Slot _type_slots_AppWindowPlacementDetails[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_AppWindowPlacementDetails) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppWindowPlacementDetails) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_AppWindowPlacementDetails) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_AppWindowPlacementDetails) },
+        { }};
+
+    static PyType_Spec type_spec_AppWindowPlacementDetails = {
+        "winui3._winui3_microsoft_ui_windowing.AppWindowPlacementDetails",
+        sizeof(py::wrapper::Microsoft::UI::Windowing::AppWindowPlacementDetails),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_AppWindowPlacementDetails};
+
+    static PyGetSetDef getset_AppWindowPlacementDetails_Static[] = {
+        { }};
+
+    static PyMethodDef methods_AppWindowPlacementDetails_Static[] = {
+        { "create", reinterpret_cast<PyCFunction>(AppWindowPlacementDetails_Create), METH_VARARGS, nullptr },
+        { }};
+
+    static PyType_Slot type_slots_AppWindowPlacementDetails_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AppWindowPlacementDetails_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AppWindowPlacementDetails_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AppWindowPlacementDetails_Static = {
+        "winui3._winui3_microsoft_ui_windowing.AppWindowPlacementDetails_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AppWindowPlacementDetails_Static};
 
     // ----- AppWindowPresenter class --------------------
 
@@ -4327,6 +4986,48 @@ namespace py::cpp::Microsoft::UI::Windowing
         }
     }
 
+    static PyObject* DisplayArea_GetMetricsFromWindowId(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.DisplayArea", L"GetMetricsFromWindowId", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::WindowId>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Windowing::DisplayArea::GetMetricsFromWindowId(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* DisplayArea_get_DisplayId(py::wrapper::Microsoft::UI::Windowing::DisplayArea* self, void* /*unused*/) noexcept
     {
         try
@@ -4538,6 +5239,7 @@ namespace py::cpp::Microsoft::UI::Windowing
         { "get_from_point", reinterpret_cast<PyCFunction>(DisplayArea_GetFromPoint), METH_VARARGS, nullptr },
         { "get_from_rect", reinterpret_cast<PyCFunction>(DisplayArea_GetFromRect), METH_VARARGS, nullptr },
         { "get_from_window_id", reinterpret_cast<PyCFunction>(DisplayArea_GetFromWindowId), METH_VARARGS, nullptr },
+        { "get_metrics_from_window_id", reinterpret_cast<PyCFunction>(DisplayArea_GetMetricsFromWindowId), METH_VARARGS, nullptr },
         { }};
 
     static PyType_Slot type_slots_DisplayArea_Static[] = 
@@ -6531,6 +7233,24 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_ui_windowing(void) noexcept
 
     py::pytype_handle AppWindowClosingEventArgs_type{py::register_python_type(module.get(), &type_spec_AppWindowClosingEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!AppWindowClosingEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle AppWindowPlacementDetails_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!AppWindowPlacementDetails_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AppWindowPlacementDetails_Static{PyType_FromSpecWithBases(&type_spec_AppWindowPlacementDetails_Static, AppWindowPlacementDetails_Static_bases.get())};
+    if (!type_AppWindowPlacementDetails_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle AppWindowPlacementDetails_type{py::register_python_type(module.get(), &type_spec_AppWindowPlacementDetails, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppWindowPlacementDetails_Static.get()))};
+    if (!AppWindowPlacementDetails_type)
     {
         return nullptr;
     }

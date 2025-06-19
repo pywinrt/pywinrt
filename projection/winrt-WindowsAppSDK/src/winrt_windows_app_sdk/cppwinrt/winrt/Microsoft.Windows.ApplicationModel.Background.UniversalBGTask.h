@@ -11,33 +11,10 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.250303.1"), "Mismatche
 #include "winrt/impl/Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.2.h"
 namespace winrt::impl
 {
-    template <typename D> auto consume_Microsoft_Windows_ApplicationModel_Background_UniversalBGTask_ITask<D>::Run(winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance const& taskInstance) const
-    {
-        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::ApplicationModel::Background::UniversalBGTask::ITask>)
-        {
-            winrt::hresult _winrt_cast_result_code;
-            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::ApplicationModel::Background::UniversalBGTask::ITask, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
-            check_hresult(_winrt_cast_result_code);
-            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::ApplicationModel::Background::UniversalBGTask::ITask>**)&_winrt_casted_result;
-            check_hresult(_winrt_abi_type->Run(*(void**)(&taskInstance)));
-        }
-        else
-        {
-            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::ApplicationModel::Background::UniversalBGTask::ITask>**)this;
-            check_hresult(_winrt_abi_type->Run(*(void**)(&taskInstance)));
-        }
-    }
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, winrt::Microsoft::Windows::ApplicationModel::Background::UniversalBGTask::ITask> : produce_base<D, winrt::Microsoft::Windows::ApplicationModel::Background::UniversalBGTask::ITask>
     {
-        int32_t __stdcall Run(void* taskInstance) noexcept final try
-        {
-            typename D::abi_guard guard(this->shim());
-            this->shim().Run(*reinterpret_cast<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance const*>(&taskInstance));
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
     };
 #endif
 }

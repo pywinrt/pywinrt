@@ -720,7 +720,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls::Primitives
     };
     struct WINRT_IMPL_EMPTY_BASES ScrollPresenter : winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter,
         impl::base<ScrollPresenter, winrt::Microsoft::UI::Xaml::FrameworkElement, winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::DependencyObject>,
-        impl::require<ScrollPresenter, winrt::Microsoft::UI::Xaml::Controls::IScrollAnchorProvider, winrt::Microsoft::UI::Xaml::IFrameworkElement, winrt::Microsoft::UI::Xaml::IUIElement, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Composition::IVisualElement, winrt::Microsoft::UI::Composition::IVisualElement2, winrt::Microsoft::UI::Xaml::IDependencyObject>
+        impl::require<ScrollPresenter, winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter2, winrt::Microsoft::UI::Xaml::Controls::IScrollAnchorProvider, winrt::Microsoft::UI::Xaml::IFrameworkElement, winrt::Microsoft::UI::Xaml::IUIElement, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Composition::IVisualElement, winrt::Microsoft::UI::Composition::IVisualElement2, winrt::Microsoft::UI::Xaml::IDependencyObject>
     {
         ScrollPresenter(std::nullptr_t) noexcept {}
         ScrollPresenter(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollPresenter(ptr, take_ownership_from_abi) {}

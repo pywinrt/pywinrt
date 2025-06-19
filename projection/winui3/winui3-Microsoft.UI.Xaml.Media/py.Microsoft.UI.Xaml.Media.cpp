@@ -19631,6 +19631,888 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         Py_TPFLAGS_DEFAULT,
         _type_slots_RenderingEventArgs};
 
+    // ----- RevealBackgroundBrush class --------------------
+
+    struct PyWinrtRevealBackgroundBrush;
+    using BasePyWinrtRevealBackgroundBrush = winrt::Microsoft::UI::Xaml::Media::RevealBackgroundBrushT<PyWinrtRevealBackgroundBrush, py::IPywinrtObject>;
+
+    struct PyWinrtRevealBackgroundBrush : py::py_obj_ref, BasePyWinrtRevealBackgroundBrush
+    {
+        PyWinrtRevealBackgroundBrush(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtRevealBackgroundBrush() {}
+
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
+        {
+            obj = py::py_obj_ref::get_py_obj();
+            return 0;
+        }
+
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
+        static void toggle_reference(PyWinrtRevealBackgroundBrush* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
+    };
+
+    static PyObject* _new_RevealBackgroundBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Media::RevealBackgroundBrush>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (type != self_type)
+                {
+                    py::pyobj_handle self{type->tp_alloc(type, 0)};
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+
+                    auto obj_impl = winrt::make_self<PyWinrtRevealBackgroundBrush>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtRevealBackgroundBrush>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
+
+                    return self.detach();
+                }
+
+                winrt::Microsoft::UI::Xaml::Media::RevealBackgroundBrush instance{};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_RevealBackgroundBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* _assign_array_RevealBackgroundBrush(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::RevealBackgroundBrush>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_RevealBackgroundBrush(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Xaml::Media::RevealBackgroundBrush>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_RevealBackgroundBrush[] = {
+        { "_assign_array_", _assign_array_RevealBackgroundBrush, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_RevealBackgroundBrush), METH_O | METH_STATIC, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_RevealBackgroundBrush[] = {
+        { }};
+
+    static PyType_Slot _type_slots_RevealBackgroundBrush[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_RevealBackgroundBrush) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RevealBackgroundBrush) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_RevealBackgroundBrush) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_RevealBackgroundBrush) },
+        { }};
+
+    static PyType_Spec type_spec_RevealBackgroundBrush = {
+        "winui3._winui3_microsoft_ui_xaml_media.RevealBackgroundBrush",
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        _type_slots_RevealBackgroundBrush};
+
+    static PyGetSetDef getset_RevealBackgroundBrush_Static[] = {
+        { }};
+
+    static PyMethodDef methods_RevealBackgroundBrush_Static[] = {
+        { }};
+
+    static PyType_Slot type_slots_RevealBackgroundBrush_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RevealBackgroundBrush_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RevealBackgroundBrush_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RevealBackgroundBrush_Static = {
+        "winui3._winui3_microsoft_ui_xaml_media.RevealBackgroundBrush_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_RevealBackgroundBrush_Static};
+
+    // ----- RevealBorderBrush class --------------------
+
+    struct PyWinrtRevealBorderBrush;
+    using BasePyWinrtRevealBorderBrush = winrt::Microsoft::UI::Xaml::Media::RevealBorderBrushT<PyWinrtRevealBorderBrush, py::IPywinrtObject>;
+
+    struct PyWinrtRevealBorderBrush : py::py_obj_ref, BasePyWinrtRevealBorderBrush
+    {
+        PyWinrtRevealBorderBrush(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtRevealBorderBrush() {}
+
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
+        {
+            obj = py::py_obj_ref::get_py_obj();
+            return 0;
+        }
+
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
+        static void toggle_reference(PyWinrtRevealBorderBrush* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
+    };
+
+    static PyObject* _new_RevealBorderBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Media::RevealBorderBrush>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (type != self_type)
+                {
+                    py::pyobj_handle self{type->tp_alloc(type, 0)};
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+
+                    auto obj_impl = winrt::make_self<PyWinrtRevealBorderBrush>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtRevealBorderBrush>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
+
+                    return self.detach();
+                }
+
+                winrt::Microsoft::UI::Xaml::Media::RevealBorderBrush instance{};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_RevealBorderBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* _assign_array_RevealBorderBrush(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::RevealBorderBrush>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_RevealBorderBrush(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Xaml::Media::RevealBorderBrush>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_RevealBorderBrush[] = {
+        { "_assign_array_", _assign_array_RevealBorderBrush, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_RevealBorderBrush), METH_O | METH_STATIC, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_RevealBorderBrush[] = {
+        { }};
+
+    static PyType_Slot _type_slots_RevealBorderBrush[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_RevealBorderBrush) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RevealBorderBrush) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_RevealBorderBrush) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_RevealBorderBrush) },
+        { }};
+
+    static PyType_Spec type_spec_RevealBorderBrush = {
+        "winui3._winui3_microsoft_ui_xaml_media.RevealBorderBrush",
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        _type_slots_RevealBorderBrush};
+
+    static PyGetSetDef getset_RevealBorderBrush_Static[] = {
+        { }};
+
+    static PyMethodDef methods_RevealBorderBrush_Static[] = {
+        { }};
+
+    static PyType_Slot type_slots_RevealBorderBrush_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RevealBorderBrush_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RevealBorderBrush_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RevealBorderBrush_Static = {
+        "winui3._winui3_microsoft_ui_xaml_media.RevealBorderBrush_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_RevealBorderBrush_Static};
+
+    // ----- RevealBrush class --------------------
+
+    struct PyWinrtRevealBrush;
+    using BasePyWinrtRevealBrush = winrt::Microsoft::UI::Xaml::Media::RevealBrushT<PyWinrtRevealBrush, py::IPywinrtObject>;
+
+    struct PyWinrtRevealBrush : py::py_obj_ref, BasePyWinrtRevealBrush
+    {
+
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
+        {
+            obj = py::py_obj_ref::get_py_obj();
+            return 0;
+        }
+
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
+        static void toggle_reference(PyWinrtRevealBrush* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
+    };
+
+    static PyObject* _new_RevealBrush(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::UI::Xaml::Media::RevealBrush>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Xaml::Media::RevealBrush>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_RevealBrush(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* RevealBrush_GetState(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.RevealBrush", L"GetState", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Media::RevealBrush::GetState(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* RevealBrush_SetState(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.RevealBrush", L"SetState", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::RevealBrushState>(args, 1);
+
+                {
+                    auto _gil = release_gil();
+                    winrt::Microsoft::UI::Xaml::Media::RevealBrush::SetState(param0, param1);
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* RevealBrush_get_TargetTheme(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RevealBrush", L"TargetTheme");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RevealBrush>().TargetTheme();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int RevealBrush_put_TargetTheme(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RevealBrush", L"TargetTheme");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::ApplicationTheme>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RevealBrush>().TargetTheme(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* RevealBrush_get_Color(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RevealBrush", L"Color");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RevealBrush>().Color();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int RevealBrush_put_Color(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RevealBrush", L"Color");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RevealBrush>().Color(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* RevealBrush_get_AlwaysUseFallback(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RevealBrush", L"AlwaysUseFallback");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RevealBrush>().AlwaysUseFallback();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int RevealBrush_put_AlwaysUseFallback(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RevealBrush", L"AlwaysUseFallback");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RevealBrush>().AlwaysUseFallback(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* RevealBrush_get_AlwaysUseFallbackProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RevealBrush", L"AlwaysUseFallbackProperty");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Media::RevealBrush::AlwaysUseFallbackProperty();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* RevealBrush_get_ColorProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RevealBrush", L"ColorProperty");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Media::RevealBrush::ColorProperty();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* RevealBrush_get_StateProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RevealBrush", L"StateProperty");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Media::RevealBrush::StateProperty();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* RevealBrush_get_TargetThemeProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Media.RevealBrush", L"TargetThemeProperty");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::UI::Xaml::Media::RevealBrush::TargetThemeProperty();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_RevealBrush(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Media::RevealBrush>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_RevealBrush(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Xaml::Media::RevealBrush>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_RevealBrush[] = {
+        { "_assign_array_", _assign_array_RevealBrush, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_RevealBrush), METH_O | METH_STATIC, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_RevealBrush[] = {
+        { "target_theme", reinterpret_cast<getter>(RevealBrush_get_TargetTheme), reinterpret_cast<setter>(RevealBrush_put_TargetTheme), nullptr, nullptr },
+        { "color", reinterpret_cast<getter>(RevealBrush_get_Color), reinterpret_cast<setter>(RevealBrush_put_Color), nullptr, nullptr },
+        { "always_use_fallback", reinterpret_cast<getter>(RevealBrush_get_AlwaysUseFallback), reinterpret_cast<setter>(RevealBrush_put_AlwaysUseFallback), nullptr, nullptr },
+        { }};
+
+    static PyType_Slot _type_slots_RevealBrush[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_RevealBrush) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RevealBrush) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_RevealBrush) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_RevealBrush) },
+        { }};
+
+    static PyType_Spec type_spec_RevealBrush = {
+        "winui3._winui3_microsoft_ui_xaml_media.RevealBrush",
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        _type_slots_RevealBrush};
+
+    static PyGetSetDef getset_RevealBrush_Static[] = {
+        { "always_use_fallback_property", reinterpret_cast<getter>(RevealBrush_get_AlwaysUseFallbackProperty), nullptr, nullptr, nullptr },
+        { "color_property", reinterpret_cast<getter>(RevealBrush_get_ColorProperty), nullptr, nullptr, nullptr },
+        { "state_property", reinterpret_cast<getter>(RevealBrush_get_StateProperty), nullptr, nullptr, nullptr },
+        { "target_theme_property", reinterpret_cast<getter>(RevealBrush_get_TargetThemeProperty), nullptr, nullptr, nullptr },
+        { }};
+
+    static PyMethodDef methods_RevealBrush_Static[] = {
+        { "get_state", reinterpret_cast<PyCFunction>(RevealBrush_GetState), METH_VARARGS, nullptr },
+        { "set_state", reinterpret_cast<PyCFunction>(RevealBrush_SetState), METH_VARARGS, nullptr },
+        { }};
+
+    static PyType_Slot type_slots_RevealBrush_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RevealBrush_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RevealBrush_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RevealBrush_Static = {
+        "winui3._winui3_microsoft_ui_xaml_media.RevealBrush_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_RevealBrush_Static};
+
     // ----- RotateTransform class --------------------
 
     static PyObject* _new_RotateTransform(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -26715,6 +27597,78 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_ui_xaml_media(void) noexcept
 
     py::pytype_handle RenderingEventArgs_type{py::register_python_type(module.get(), &type_spec_RenderingEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!RenderingEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle RevealBrush_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(XamlCompositionBrushBase_type.get())))};
+    if (!RevealBrush_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_RevealBrush_Static{PyType_FromSpecWithBases(&type_spec_RevealBrush_Static, RevealBrush_Static_bases.get())};
+    if (!type_RevealBrush_Static)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle RevealBrush_bases{PyTuple_Pack(1, XamlCompositionBrushBase_type.get())};
+    if (!RevealBrush_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RevealBrush_type{py::register_python_type(module.get(), &type_spec_RevealBrush, RevealBrush_bases.get(), reinterpret_cast<PyTypeObject*>(type_RevealBrush_Static.get()))};
+    if (!RevealBrush_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle RevealBackgroundBrush_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(RevealBrush_type.get())))};
+    if (!RevealBackgroundBrush_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_RevealBackgroundBrush_Static{PyType_FromSpecWithBases(&type_spec_RevealBackgroundBrush_Static, RevealBackgroundBrush_Static_bases.get())};
+    if (!type_RevealBackgroundBrush_Static)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle RevealBackgroundBrush_bases{PyTuple_Pack(1, RevealBrush_type.get())};
+    if (!RevealBackgroundBrush_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RevealBackgroundBrush_type{py::register_python_type(module.get(), &type_spec_RevealBackgroundBrush, RevealBackgroundBrush_bases.get(), reinterpret_cast<PyTypeObject*>(type_RevealBackgroundBrush_Static.get()))};
+    if (!RevealBackgroundBrush_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle RevealBorderBrush_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(RevealBrush_type.get())))};
+    if (!RevealBorderBrush_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_RevealBorderBrush_Static{PyType_FromSpecWithBases(&type_spec_RevealBorderBrush_Static, RevealBorderBrush_Static_bases.get())};
+    if (!type_RevealBorderBrush_Static)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle RevealBorderBrush_bases{PyTuple_Pack(1, RevealBrush_type.get())};
+    if (!RevealBorderBrush_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RevealBorderBrush_type{py::register_python_type(module.get(), &type_spec_RevealBorderBrush, RevealBorderBrush_bases.get(), reinterpret_cast<PyTypeObject*>(type_RevealBorderBrush_Static.get()))};
+    if (!RevealBorderBrush_type)
     {
         return nullptr;
     }

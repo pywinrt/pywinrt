@@ -45,6 +45,7 @@ from winui3._winui3_microsoft_ui_composition import (
     CompositionMaskBrush,
     CompositionMipmapSurface,
     CompositionNineGridBrush,
+    CompositionNotificationDeferral,
     CompositionObject,
     CompositionPath,
     CompositionPathGeometry,
@@ -167,6 +168,7 @@ __all__ = [
     "CompositionGetValueStatus",
     "CompositionGradientExtendMode",
     "CompositionMappingMode",
+    "CompositionProjectedShadowDrawOrder",
     "CompositionStretch",
     "CompositionStrokeCap",
     "CompositionStrokeLineJoin",
@@ -210,6 +212,7 @@ __all__ = [
     "CompositionMaskBrush",
     "CompositionMipmapSurface",
     "CompositionNineGridBrush",
+    "CompositionNotificationDeferral",
     "CompositionObject",
     "CompositionPath",
     "CompositionPathGeometry",
@@ -381,6 +384,10 @@ class CompositionGradientExtendMode(enum.IntEnum):
 class CompositionMappingMode(enum.IntEnum):
     ABSOLUTE = 0
     RELATIVE = 1
+
+class CompositionProjectedShadowDrawOrder(enum.IntEnum):
+    POST_CHILDREN = 0
+    PRE_CHILDREN = 1
 
 class CompositionStretch(enum.IntEnum):
     NONE = 0

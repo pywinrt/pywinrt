@@ -22,6 +22,12 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::AppNotifications::Builder
         None = 0,
         Loop = 1,
     };
+    enum class AppNotificationButtonSettingStyle : int32_t
+    {
+        None = 0,
+        VideoCallConfig = 1,
+        AudioCallConfig = 2,
+    };
     enum class AppNotificationButtonStyle : int32_t
     {
         Default = 0,
@@ -75,8 +81,10 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::AppNotifications::Builder
         Call10 = 24,
     };
     struct IAppNotificationBuilder;
+    struct IAppNotificationBuilder2;
     struct IAppNotificationBuilderStatics;
     struct IAppNotificationButton;
+    struct IAppNotificationButton2;
     struct IAppNotificationButtonFactory;
     struct IAppNotificationButtonStatics;
     struct IAppNotificationComboBox;
@@ -93,8 +101,10 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::AppNotifications::Builder
 namespace winrt::impl
 {
     template <> struct category<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationBuilder>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationBuilder2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationBuilderStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationButton>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationButton2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationButtonFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationButtonStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationComboBox>{ using type = interface_category; };
@@ -107,6 +117,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationProgressBar>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationTextProperties>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationAudioLooping>{ using type = enum_category; };
+    template <> struct category<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationButtonSettingStyle>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationButtonStyle>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationDuration>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationImageCrop>{ using type = enum_category; };
@@ -118,14 +129,17 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationProgressBar> = L"Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationTextProperties> = L"Microsoft.Windows.AppNotifications.Builder.AppNotificationTextProperties";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationAudioLooping> = L"Microsoft.Windows.AppNotifications.Builder.AppNotificationAudioLooping";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationButtonSettingStyle> = L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButtonSettingStyle";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationButtonStyle> = L"Microsoft.Windows.AppNotifications.Builder.AppNotificationButtonStyle";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationDuration> = L"Microsoft.Windows.AppNotifications.Builder.AppNotificationDuration";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationImageCrop> = L"Microsoft.Windows.AppNotifications.Builder.AppNotificationImageCrop";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationScenario> = L"Microsoft.Windows.AppNotifications.Builder.AppNotificationScenario";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationSoundEvent> = L"Microsoft.Windows.AppNotifications.Builder.AppNotificationSoundEvent";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationBuilder> = L"Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilder";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationBuilder2> = L"Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilder2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationBuilderStatics> = L"Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilderStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationButton> = L"Microsoft.Windows.AppNotifications.Builder.IAppNotificationButton";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationButton2> = L"Microsoft.Windows.AppNotifications.Builder.IAppNotificationButton2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationButtonFactory> = L"Microsoft.Windows.AppNotifications.Builder.IAppNotificationButtonFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationButtonStatics> = L"Microsoft.Windows.AppNotifications.Builder.IAppNotificationButtonStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationComboBox> = L"Microsoft.Windows.AppNotifications.Builder.IAppNotificationComboBox";
@@ -134,8 +148,10 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationTextProperties> = L"Microsoft.Windows.AppNotifications.Builder.IAppNotificationTextProperties";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilderContract> = L"Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilderContract";
     template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationBuilder>{ 0xE801D31F,0xCE03,0x505C,{ 0xAD,0xEC,0x8A,0x02,0x72,0x4E,0xC9,0xDE } }; // E801D31F-CE03-505C-ADEC-8A02724EC9DE
+    template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationBuilder2>{ 0xFD3F5F12,0x4985,0x5405,{ 0xA5,0x19,0x73,0xA6,0xF9,0xF4,0xD7,0xBC } }; // FD3F5F12-4985-5405-A519-73A6F9F4D7BC
     template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationBuilderStatics>{ 0xC7042D2A,0xD319,0x520E,{ 0xA3,0x14,0x50,0x08,0x1C,0x88,0x88,0xCC } }; // C7042D2A-D319-520E-A314-50081C8888CC
     template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationButton>{ 0xA7C03031,0x5634,0x5098,{ 0xAE,0xC9,0x47,0xEC,0xB6,0x0C,0x34,0x99 } }; // A7C03031-5634-5098-AEC9-47ECB60C3499
+    template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationButton2>{ 0x2337DFA5,0x0233,0x53CB,{ 0x9C,0x5D,0x05,0xF5,0x6B,0x4C,0x00,0x99 } }; // 2337DFA5-0233-53CB-9C5D-05F56B4C0099
     template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationButtonFactory>{ 0x4F109286,0x0A6D,0x5A5E,{ 0x9E,0x8F,0x9F,0xE3,0x16,0x69,0xFB,0xB8 } }; // 4F109286-0A6D-5A5E-9E8F-9FE31669FBB8
     template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationButtonStatics>{ 0xFEAD7C18,0x4144,0x59A4,{ 0x96,0x11,0x86,0xB7,0xE8,0x19,0x18,0x53 } }; // FEAD7C18-4144-59A4-9611-86B7E8191853
     template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationComboBox>{ 0x4547C9E2,0x4815,0x538C,{ 0xBE,0x26,0x04,0x0C,0xE1,0x7F,0x8B,0x62 } }; // 4547C9E2-4815-538C-BE26-040CE17F8B62
@@ -182,6 +198,13 @@ namespace winrt::impl
             virtual int32_t __stdcall SetGroup(void*, void**) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationBuilder2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall AddCameraPreview(void**) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationBuilderStatics>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -219,6 +242,13 @@ namespace winrt::impl
             virtual int32_t __stdcall SetInputId(void*, void**) noexcept = 0;
             virtual int32_t __stdcall SetInvokeUri(void*, void**) noexcept = 0;
             virtual int32_t __stdcall SetInvokeUri2(void*, void*, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationButton2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall SetSettingStyle(int32_t, void**) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationButtonFactory>
@@ -333,6 +363,15 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_Windows_AppNotifications_Builder_IAppNotificationBuilder<D>;
     };
     template <typename D>
+    struct consume_Microsoft_Windows_AppNotifications_Builder_IAppNotificationBuilder2
+    {
+        auto AddCameraPreview() const;
+    };
+    template <> struct consume<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationBuilder2>
+    {
+        template <typename D> using type = consume_Microsoft_Windows_AppNotifications_Builder_IAppNotificationBuilder2<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_Windows_AppNotifications_Builder_IAppNotificationBuilderStatics
     {
         auto IsUrgentScenarioSupported() const;
@@ -374,6 +413,15 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationButton>
     {
         template <typename D> using type = consume_Microsoft_Windows_AppNotifications_Builder_IAppNotificationButton<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_Windows_AppNotifications_Builder_IAppNotificationButton2
+    {
+        auto SetSettingStyle(winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationButtonSettingStyle const& value) const;
+    };
+    template <> struct consume<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationButton2>
+    {
+        template <typename D> using type = consume_Microsoft_Windows_AppNotifications_Builder_IAppNotificationButton2<D>;
     };
     template <typename D>
     struct consume_Microsoft_Windows_AppNotifications_Builder_IAppNotificationButtonFactory

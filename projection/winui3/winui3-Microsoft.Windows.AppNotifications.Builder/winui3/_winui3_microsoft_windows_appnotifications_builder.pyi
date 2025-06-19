@@ -13,7 +13,7 @@ import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
 import winui3.microsoft.windows.appnotifications as microsoft_windows_appnotifications
 
-from winui3.microsoft.windows.appnotifications.builder import AppNotificationAudioLooping, AppNotificationButtonStyle, AppNotificationDuration, AppNotificationImageCrop, AppNotificationScenario, AppNotificationSoundEvent
+from winui3.microsoft.windows.appnotifications.builder import AppNotificationAudioLooping, AppNotificationButtonSettingStyle, AppNotificationButtonStyle, AppNotificationDuration, AppNotificationImageCrop, AppNotificationScenario, AppNotificationSoundEvent
 
 Self = typing.TypeVar('Self')
 
@@ -29,6 +29,8 @@ class AppNotificationBuilder(winrt.system.Object, metaclass=AppNotificationBuild
     def add_argument(self, key: str, value: str, /) -> AppNotificationBuilder: ...
     # Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder::AddButton(Microsoft.Windows.AppNotifications.Builder.AppNotificationButton)
     def add_button(self, value: AppNotificationButton, /) -> AppNotificationBuilder: ...
+    # Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder::AddCameraPreview()
+    def add_camera_preview(self) -> AppNotificationBuilder: ...
     # Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder::AddComboBox(Microsoft.Windows.AppNotifications.Builder.AppNotificationComboBox)
     def add_combo_box(self, value: AppNotificationComboBox, /) -> AppNotificationBuilder: ...
     # Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder::AddProgressBar(Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar)
@@ -111,6 +113,8 @@ class AppNotificationButton(winrt.system.Object, metaclass=AppNotificationButton
     def set_invoke_uri(self, protocol_uri: windows_foundation.Uri, /) -> AppNotificationButton: ...
     # Microsoft.Windows.AppNotifications.Builder.AppNotificationButton Microsoft.Windows.AppNotifications.Builder.AppNotificationButton::SetInvokeUri(Windows.Foundation.Uri,System.String)
     def set_invoke_uri2(self, protocol_uri: windows_foundation.Uri, target_app_id: str, /) -> AppNotificationButton: ...
+    # Microsoft.Windows.AppNotifications.Builder.AppNotificationButton Microsoft.Windows.AppNotifications.Builder.AppNotificationButton::SetSettingStyle(Microsoft.Windows.AppNotifications.Builder.AppNotificationButtonSettingStyle)
+    def set_setting_style(self, value: AppNotificationButtonSettingStyle, /) -> AppNotificationButton: ...
     # Microsoft.Windows.AppNotifications.Builder.AppNotificationButton Microsoft.Windows.AppNotifications.Builder.AppNotificationButton::SetToolTip(System.String)
     def set_tool_tip(self, value: str, /) -> AppNotificationButton: ...
     # System.String Microsoft.Windows.AppNotifications.Builder.AppNotificationButton::get_ToolTip()

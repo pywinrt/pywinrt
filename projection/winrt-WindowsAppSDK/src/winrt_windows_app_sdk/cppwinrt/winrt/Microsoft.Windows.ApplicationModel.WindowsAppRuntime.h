@@ -134,6 +134,24 @@ namespace winrt::impl
         }
         return winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentResult{ result, take_ownership_from_abi };
     }
+    template <typename D> auto consume_Microsoft_Windows_ApplicationModel_WindowsAppRuntime_IDeploymentManagerStatics3<D>::Repair() const
+    {
+        void* result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentManagerStatics3>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentManagerStatics3, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentManagerStatics3>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->Repair(&result));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentManagerStatics3>**)this;
+            check_hresult(_winrt_abi_type->Repair(&result));
+        }
+        return winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentResult{ result, take_ownership_from_abi };
+    }
     template <typename D> auto consume_Microsoft_Windows_ApplicationModel_WindowsAppRuntime_IDeploymentResult<D>::Status() const
     {
         winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentStatus value{};
@@ -494,6 +512,20 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentManagerStatics3> : produce_base<D, winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentManagerStatics3>
+    {
+        int32_t __stdcall Repair(void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentResult>(this->shim().Repair());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentResult> : produce_base<D, winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentResult>
     {
         int32_t __stdcall get_Status(int32_t* value) noexcept final try
@@ -662,6 +694,10 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::ApplicationModel::WindowsAppRu
     {
         return impl::call_factory<DeploymentManager, IDeploymentManagerStatics2>([&](IDeploymentManagerStatics2 const& f) { return f.Initialize(deploymentInitializeOptions); });
     }
+    inline auto DeploymentManager::Repair()
+    {
+        return impl::call_factory_cast<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentResult(*)(IDeploymentManagerStatics3 const&), DeploymentManager, IDeploymentManagerStatics3>([](IDeploymentManagerStatics3 const& f) { return f.Repair(); });
+    }
     inline DeploymentResult::DeploymentResult(winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentStatus const& status, winrt::hresult const& extendedError) :
         DeploymentResult(impl::call_factory<DeploymentResult, IDeploymentResultFactory>([&](IDeploymentResultFactory const& f) { return f.CreateInstance(status, extendedError); }))
     {
@@ -706,6 +742,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentInitializeOptions2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentManagerStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentManagerStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentManagerStatics3> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentResult> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentResultFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IReleaseInfoStatics> : winrt::impl::hash_base {};

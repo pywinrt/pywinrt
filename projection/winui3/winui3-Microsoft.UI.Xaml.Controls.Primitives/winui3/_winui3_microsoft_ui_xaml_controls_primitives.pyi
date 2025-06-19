@@ -2970,6 +2970,18 @@ class ScrollPresenter(microsoft_ui_xaml.FrameworkElement, microsoft_ui_xaml_cont
     @typing.final
     # System.Void Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter::remove_ZoomCompleted(Windows.Foundation.EventRegistrationToken)
     def remove_zoom_completed(self, token: typing.Union[windows_foundation.EventRegistrationToken, typing.Tuple[winrt.system.Int64]], /) -> None: ...
+    @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter::add_ScrollStarting(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter,Microsoft.UI.Xaml.Controls.ScrollingScrollStartingEventArgs>)
+    def add_scroll_starting(self, handler: windows_foundation.TypedEventHandler[ScrollPresenter, microsoft_ui_xaml_controls.ScrollingScrollStartingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter::remove_ScrollStarting(Windows.Foundation.EventRegistrationToken)
+    def remove_scroll_starting(self, token: typing.Union[windows_foundation.EventRegistrationToken, typing.Tuple[winrt.system.Int64]], /) -> None: ...
+    @typing.final
+    # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter::add_ZoomStarting(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter,Microsoft.UI.Xaml.Controls.ScrollingZoomStartingEventArgs>)
+    def add_zoom_starting(self, handler: windows_foundation.TypedEventHandler[ScrollPresenter, microsoft_ui_xaml_controls.ScrollingZoomStartingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter::remove_ZoomStarting(Windows.Foundation.EventRegistrationToken)
+    def remove_zoom_starting(self, token: typing.Union[windows_foundation.EventRegistrationToken, typing.Tuple[winrt.system.Int64]], /) -> None: ...
     # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter::get_CurrentAnchor()
     @_property
     @typing.final

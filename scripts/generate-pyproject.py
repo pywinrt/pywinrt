@@ -131,7 +131,8 @@ except KeyError:
 
 APP_SDK_EXTRA_BUILD = """
         target = self.plat_name.replace("32", "-x86").replace("amd", "x").replace("win", "win10")
-        ext.library_dirs = [os.fspath(WINDOWS_APP_SDK_PATH / "lib" / target)]
+        target2 = self.plat_name.replace("32", "-x86").replace("amd", "x")
+        ext.library_dirs = [os.fspath(WINDOWS_APP_SDK_PATH / ".." / "Microsoft.WindowsAppSDK.DWrite" / "lib" / target), os.fspath(WINDOWS_APP_SDK_PATH / ".." / "Microsoft.WindowsAppSDK.Foundation" / "lib" / target2)]
 """
 
 README_TEMPLATE = """\
@@ -393,7 +394,7 @@ def write_project_files(
                         else ""
                     )
                     + (
-                        '+ [os.fspath(WINDOWS_APP_SDK_PATH / "include")]'
+                        '+ [os.fspath(WINDOWS_APP_SDK_PATH / ".." / "Microsoft.WindowsAppSDK.DWrite" / "include"), os.fspath(WINDOWS_APP_SDK_PATH / ".." / "Microsoft.WindowsAppSDK.Foundation" / "include"), os.fspath(WINDOWS_APP_SDK_PATH / ".." / "Microsoft.WindowsAppSDK.InteractiveExperiences" / "include"), os.fspath(WINDOWS_APP_SDK_PATH / ".." / "Microsoft.WindowsAppSDK.Packages" / "include"), os.fspath(WINDOWS_APP_SDK_PATH / ".." / "Microsoft.WindowsAppSDK.WinUI" / "include")]'
                         if is_app_sdk_interop_package(package_name)
                         else ""
                     )

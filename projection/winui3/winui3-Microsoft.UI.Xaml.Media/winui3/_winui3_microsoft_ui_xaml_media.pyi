@@ -19,7 +19,7 @@ import winui3.microsoft.ui.xaml as microsoft_ui_xaml
 import winui3.microsoft.ui.xaml.controls.primitives as microsoft_ui_xaml_controls_primitives
 import winui3.microsoft.ui.xaml.media.media3d as microsoft_ui_xaml_media_media3d
 
-from winui3.microsoft.ui.xaml.media import AlignmentX, AlignmentY, BrushMappingMode, ColorInterpolationMode, ElementCompositeMode, FastPlayFallbackBehaviour, FillRule, GradientSpreadMethod, LoadedImageSourceLoadStatus, PenLineCap, PenLineJoin, Stretch, StyleSimulations, SweepDirection
+from winui3.microsoft.ui.xaml.media import AlignmentX, AlignmentY, BrushMappingMode, ColorInterpolationMode, ElementCompositeMode, FastPlayFallbackBehaviour, FillRule, GradientSpreadMethod, LoadedImageSourceLoadStatus, PenLineCap, PenLineJoin, RevealBrushState, Stretch, StyleSimulations, SweepDirection
 
 Self = typing.TypeVar('Self')
 
@@ -1456,6 +1456,63 @@ class RenderingEventArgs(winrt.system.Object):
     # Windows.Foundation.TimeSpan Microsoft.UI.Xaml.Media.RenderingEventArgs::get_RenderingTime()
     @_property
     def rendering_time(self) -> datetime.timedelta: ...
+
+class RevealBackgroundBrush_Static(RevealBrush_Static):
+    pass
+
+class RevealBackgroundBrush(RevealBrush, metaclass=RevealBackgroundBrush_Static):
+    def __new__(cls: typing.Type[Self]) -> Self: ...
+
+class RevealBorderBrush_Static(RevealBrush_Static):
+    pass
+
+class RevealBorderBrush(RevealBrush, metaclass=RevealBorderBrush_Static):
+    def __new__(cls: typing.Type[Self]) -> Self: ...
+
+class RevealBrush_Static(XamlCompositionBrushBase_Static):
+    # Microsoft.UI.Xaml.Media.RevealBrushState Microsoft.UI.Xaml.Media.RevealBrush::GetState(Microsoft.UI.Xaml.UIElement)
+    def get_state(cls, element: microsoft_ui_xaml.UIElement, /) -> RevealBrushState: ...
+    # System.Void Microsoft.UI.Xaml.Media.RevealBrush::SetState(Microsoft.UI.Xaml.UIElement,Microsoft.UI.Xaml.Media.RevealBrushState)
+    def set_state(cls, element: microsoft_ui_xaml.UIElement, value: RevealBrushState, /) -> None: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Media.RevealBrush::get_AlwaysUseFallbackProperty()
+    @_property
+    @typing.final
+    def always_use_fallback_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Media.RevealBrush::get_ColorProperty()
+    @_property
+    @typing.final
+    def color_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Media.RevealBrush::get_StateProperty()
+    @_property
+    @typing.final
+    def state_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Media.RevealBrush::get_TargetThemeProperty()
+    @_property
+    @typing.final
+    def target_theme_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+
+class RevealBrush(XamlCompositionBrushBase, metaclass=RevealBrush_Static):
+    # Microsoft.UI.Xaml.ApplicationTheme Microsoft.UI.Xaml.Media.RevealBrush::get_TargetTheme()
+    @_property
+    def target_theme(self) -> microsoft_ui_xaml.ApplicationTheme: ...
+    # System.Void Microsoft.UI.Xaml.Media.RevealBrush::put_TargetTheme(Microsoft.UI.Xaml.ApplicationTheme)
+    @target_theme.setter
+    @typing.final
+    def target_theme(self, value: microsoft_ui_xaml.ApplicationTheme) -> None: ...
+    # Windows.UI.Color Microsoft.UI.Xaml.Media.RevealBrush::get_Color()
+    @_property
+    def color(self) -> windows_ui.Color: ...
+    # System.Void Microsoft.UI.Xaml.Media.RevealBrush::put_Color(Windows.UI.Color)
+    @color.setter
+    @typing.final
+    def color(self, value: typing.Union[windows_ui.Color, typing.Tuple[winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8]]) -> None: ...
+    # System.Boolean Microsoft.UI.Xaml.Media.RevealBrush::get_AlwaysUseFallback()
+    @_property
+    def always_use_fallback(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Media.RevealBrush::put_AlwaysUseFallback(System.Boolean)
+    @always_use_fallback.setter
+    @typing.final
+    def always_use_fallback(self, value: bool) -> None: ...
 
 @typing.final
 class RotateTransform_Static(Transform_Static):

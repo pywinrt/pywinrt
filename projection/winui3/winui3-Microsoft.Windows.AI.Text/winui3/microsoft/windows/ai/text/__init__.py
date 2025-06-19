@@ -4,8 +4,11 @@ import enum
 
 import winrt.system
 from winui3._winui3_microsoft_windows_ai_text import (
+    ConversationItem,
+    ConversationSummaryOptions,
     LanguageModel,
     LanguageModelContext,
+    LanguageModelEmbeddingVectorResult,
     LanguageModelOptions,
     LanguageModelResponseResult,
     TextRewriter,
@@ -16,9 +19,13 @@ from winui3._winui3_microsoft_windows_ai_text import (
 )
 
 __all__ = [
+    "InputKind",
     "LanguageModelResponseStatus",
+    "ConversationItem",
+    "ConversationSummaryOptions",
     "LanguageModel",
     "LanguageModelContext",
+    "LanguageModelEmbeddingVectorResult",
     "LanguageModelOptions",
     "LanguageModelResponseResult",
     "TextRewriter",
@@ -27,6 +34,10 @@ __all__ = [
     "TextToTableResponseResult",
     "TextToTableRow",
 ]
+
+class InputKind(enum.IntEnum):
+    GENERAL_CONVERSATION = 0
+    EMAIL = 1
 
 class LanguageModelResponseStatus(enum.IntEnum):
     COMPLETE = 0

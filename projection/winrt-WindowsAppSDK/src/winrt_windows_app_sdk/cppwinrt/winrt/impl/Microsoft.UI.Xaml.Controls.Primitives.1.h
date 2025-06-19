@@ -902,6 +902,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls::Primitives
         IScrollPresenter(std::nullptr_t = nullptr) noexcept {}
         IScrollPresenter(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IScrollPresenter2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IScrollPresenter2>
+    {
+        IScrollPresenter2(std::nullptr_t = nullptr) noexcept {}
+        IScrollPresenter2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IScrollPresenterFactory :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IScrollPresenterFactory>

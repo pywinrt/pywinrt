@@ -349,6 +349,46 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
         }
     }
 
+    static PyObject* DeploymentManager_Repair(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentManager", L"Repair", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentManager::Repair();
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_DeploymentManager[] = {
         { }};
 
@@ -374,6 +414,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
     static PyMethodDef methods_DeploymentManager_Static[] = {
         { "get_status", reinterpret_cast<PyCFunction>(DeploymentManager_GetStatus), METH_VARARGS, nullptr },
         { "initialize", reinterpret_cast<PyCFunction>(DeploymentManager_Initialize), METH_VARARGS, nullptr },
+        { "repair", reinterpret_cast<PyCFunction>(DeploymentManager_Repair), METH_VARARGS, nullptr },
         { }};
 
     static PyType_Slot type_slots_DeploymentManager_Static[] = 

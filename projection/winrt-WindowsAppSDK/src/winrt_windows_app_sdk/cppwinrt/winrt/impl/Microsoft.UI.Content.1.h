@@ -21,6 +21,20 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Content
         IChildSiteLinkStatics(std::nullptr_t = nullptr) noexcept {}
         IChildSiteLinkStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IContentAppWindowBridge :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IContentAppWindowBridge>
+    {
+        IContentAppWindowBridge(std::nullptr_t = nullptr) noexcept {}
+        IContentAppWindowBridge(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IContentAppWindowBridgeStatics :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IContentAppWindowBridgeStatics>
+    {
+        IContentAppWindowBridgeStatics(std::nullptr_t = nullptr) noexcept {}
+        IContentAppWindowBridgeStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IContentCoordinateConverter :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IContentCoordinateConverter>
@@ -70,6 +84,34 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Content
         IContentEnvironmentStateChangedEventArgs2(std::nullptr_t = nullptr) noexcept {}
         IContentEnvironmentStateChangedEventArgs2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IContentExternalBackdropLink :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IContentExternalBackdropLink>
+    {
+        IContentExternalBackdropLink(std::nullptr_t = nullptr) noexcept {}
+        IContentExternalBackdropLink(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IContentExternalBackdropLinkStatics :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IContentExternalBackdropLinkStatics>
+    {
+        IContentExternalBackdropLinkStatics(std::nullptr_t = nullptr) noexcept {}
+        IContentExternalBackdropLinkStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IContentExternalOutputLink :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IContentExternalOutputLink>
+    {
+        IContentExternalOutputLink(std::nullptr_t = nullptr) noexcept {}
+        IContentExternalOutputLink(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IContentExternalOutputLinkStatics :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IContentExternalOutputLinkStatics>
+    {
+        IContentExternalOutputLinkStatics(std::nullptr_t = nullptr) noexcept {}
+        IContentExternalOutputLinkStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IContentIsland :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IContentIsland>
@@ -98,6 +140,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Content
         IContentIslandAutomationProviderRequestedEventArgs(std::nullptr_t = nullptr) noexcept {}
         IContentIslandAutomationProviderRequestedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IContentIslandEndpointConnectionPrivate :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IContentIslandEndpointConnectionPrivate>
+    {
+        IContentIslandEndpointConnectionPrivate(std::nullptr_t = nullptr) noexcept {}
+        IContentIslandEndpointConnectionPrivate(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IContentIslandEnvironment :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IContentIslandEnvironment>
@@ -112,12 +161,26 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Content
         IContentIslandEnvironment2(std::nullptr_t = nullptr) noexcept {}
         IContentIslandEnvironment2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IContentIslandEnvironmentExperimental :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IContentIslandEnvironmentExperimental>
+    {
+        IContentIslandEnvironmentExperimental(std::nullptr_t = nullptr) noexcept {}
+        IContentIslandEnvironmentExperimental(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IContentIslandEnvironmentFactory :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IContentIslandEnvironmentFactory>
     {
         IContentIslandEnvironmentFactory(std::nullptr_t = nullptr) noexcept {}
         IContentIslandEnvironmentFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IContentIslandExperimental :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IContentIslandExperimental>
+    {
+        IContentIslandExperimental(std::nullptr_t = nullptr) noexcept {}
+        IContentIslandExperimental(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IContentIslandFactory :
         winrt::Windows::Foundation::IInspectable,
@@ -153,6 +216,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Content
     {
         IContentIslandStatics2(std::nullptr_t = nullptr) noexcept {}
         IContentIslandStatics2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IContentNodeOwner :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IContentNodeOwner>
+    {
+        IContentNodeOwner(std::nullptr_t = nullptr) noexcept {}
+        IContentNodeOwner(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IContentSite :
         winrt::Windows::Foundation::IInspectable,
@@ -190,6 +260,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Content
         IContentSiteBridge(std::nullptr_t = nullptr) noexcept {}
         IContentSiteBridge(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IContentSiteBridgeEndpointConnectionPrivate :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IContentSiteBridgeEndpointConnectionPrivate>
+    {
+        IContentSiteBridgeEndpointConnectionPrivate(std::nullptr_t = nullptr) noexcept {}
+        IContentSiteBridgeEndpointConnectionPrivate(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IContentSiteEnvironment :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IContentSiteEnvironment>
@@ -203,6 +280,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Content
     {
         IContentSiteEnvironment2(std::nullptr_t = nullptr) noexcept {}
         IContentSiteEnvironment2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IContentSiteEnvironmentExperimental :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IContentSiteEnvironmentExperimental>
+    {
+        IContentSiteEnvironmentExperimental(std::nullptr_t = nullptr) noexcept {}
+        IContentSiteEnvironmentExperimental(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IContentSiteEnvironmentFactory :
         winrt::Windows::Foundation::IInspectable,
@@ -231,6 +315,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Content
     {
         IContentSiteEnvironmentViewFactory(std::nullptr_t = nullptr) noexcept {}
         IContentSiteEnvironmentViewFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IContentSiteExperimental :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IContentSiteExperimental>
+    {
+        IContentSiteExperimental(std::nullptr_t = nullptr) noexcept {}
+        IContentSiteExperimental(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IContentSiteFactory :
         winrt::Windows::Foundation::IInspectable,
@@ -288,6 +379,20 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Content
         IContentSiteViewFactory(std::nullptr_t = nullptr) noexcept {}
         IContentSiteViewFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES ICoreWindowSiteBridge :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ICoreWindowSiteBridge>
+    {
+        ICoreWindowSiteBridge(std::nullptr_t = nullptr) noexcept {}
+        ICoreWindowSiteBridge(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ICoreWindowSiteBridgeStatics :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ICoreWindowSiteBridgeStatics>
+    {
+        ICoreWindowSiteBridgeStatics(std::nullptr_t = nullptr) noexcept {}
+        ICoreWindowSiteBridgeStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IDesktopAttachedSiteBridge :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IDesktopAttachedSiteBridge>
@@ -344,6 +449,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Content
         IDesktopSiteBridge(std::nullptr_t = nullptr) noexcept {}
         IDesktopSiteBridge(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IDesktopSiteBridge2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IDesktopSiteBridge2>
+    {
+        IDesktopSiteBridge2(std::nullptr_t = nullptr) noexcept {}
+        IDesktopSiteBridge2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IDesktopSiteBridgeFactory :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IDesktopSiteBridgeFactory>
@@ -357,6 +469,62 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Content
     {
         IDesktopSiteBridgeStatics(std::nullptr_t = nullptr) noexcept {}
         IDesktopSiteBridgeStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IEndpointConnectionEventArgs :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IEndpointConnectionEventArgs>
+    {
+        IEndpointConnectionEventArgs(std::nullptr_t = nullptr) noexcept {}
+        IEndpointConnectionEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IEndpointRequestedStateChangedEventArgs :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IEndpointRequestedStateChangedEventArgs>
+    {
+        IEndpointRequestedStateChangedEventArgs(std::nullptr_t = nullptr) noexcept {}
+        IEndpointRequestedStateChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IPopupWindowSiteBridge :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IPopupWindowSiteBridge>
+    {
+        IPopupWindowSiteBridge(std::nullptr_t = nullptr) noexcept {}
+        IPopupWindowSiteBridge(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IProcessStarter :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IProcessStarter>
+    {
+        IProcessStarter(std::nullptr_t = nullptr) noexcept {}
+        IProcessStarter(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IProcessStarterFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IProcessStarterFactory>
+    {
+        IProcessStarterFactory(std::nullptr_t = nullptr) noexcept {}
+        IProcessStarterFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IProcessStarterStatics :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IProcessStarterStatics>
+    {
+        IProcessStarterStatics(std::nullptr_t = nullptr) noexcept {}
+        IProcessStarterStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ISystemVisualSiteBridge :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ISystemVisualSiteBridge>
+    {
+        ISystemVisualSiteBridge(std::nullptr_t = nullptr) noexcept {}
+        ISystemVisualSiteBridge(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ISystemVisualSiteBridgeStatics :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ISystemVisualSiteBridgeStatics>
+    {
+        ISystemVisualSiteBridgeStatics(std::nullptr_t = nullptr) noexcept {}
+        ISystemVisualSiteBridgeStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
 }
 #endif

@@ -6,14 +6,16 @@
 #include "winrt/impl/Microsoft.Windows.AppNotifications.Builder.1.h"
 WINRT_EXPORT namespace winrt::Microsoft::Windows::AppNotifications::Builder
 {
-    struct WINRT_IMPL_EMPTY_BASES AppNotificationBuilder : winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationBuilder
+    struct WINRT_IMPL_EMPTY_BASES AppNotificationBuilder : winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationBuilder,
+        impl::require<AppNotificationBuilder, winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationBuilder2>
     {
         AppNotificationBuilder(std::nullptr_t) noexcept {}
         AppNotificationBuilder(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationBuilder(ptr, take_ownership_from_abi) {}
         AppNotificationBuilder();
         static auto IsUrgentScenarioSupported();
     };
-    struct WINRT_IMPL_EMPTY_BASES AppNotificationButton : winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationButton
+    struct WINRT_IMPL_EMPTY_BASES AppNotificationButton : winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationButton,
+        impl::require<AppNotificationButton, winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationButton2>
     {
         AppNotificationButton(std::nullptr_t) noexcept {}
         AppNotificationButton(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationButton(ptr, take_ownership_from_abi) {}

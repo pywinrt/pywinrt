@@ -4,6 +4,596 @@
 
 namespace py::cpp::Microsoft::Windows::AI::Text
 {
+    // ----- ConversationItem class --------------------
+
+    static PyObject* _new_ConversationItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_GET_SIZE(args);
+        if (arg_count == 0)
+        {
+            try
+            {
+                winrt::Microsoft::Windows::AI::Text::ConversationItem instance{};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_ConversationItem(py::wrapper::Microsoft::Windows::AI::Text::ConversationItem* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* ConversationItem_get_Participant(py::wrapper::Microsoft::Windows::AI::Text::ConversationItem* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.Text.ConversationItem", L"Participant");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Participant();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int ConversationItem_put_Participant(py::wrapper::Microsoft::Windows::AI::Text::ConversationItem* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.Text.ConversationItem", L"Participant");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.Participant(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* ConversationItem_get_Message(py::wrapper::Microsoft::Windows::AI::Text::ConversationItem* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.Text.ConversationItem", L"Message");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Message();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int ConversationItem_put_Message(py::wrapper::Microsoft::Windows::AI::Text::ConversationItem* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.Text.ConversationItem", L"Message");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.Message(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* _assign_array_ConversationItem(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::AI::Text::ConversationItem>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_ConversationItem(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::Windows::AI::Text::ConversationItem>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_ConversationItem[] = {
+        { "_assign_array_", _assign_array_ConversationItem, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_ConversationItem), METH_O | METH_STATIC, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_ConversationItem[] = {
+        { "participant", reinterpret_cast<getter>(ConversationItem_get_Participant), reinterpret_cast<setter>(ConversationItem_put_Participant), nullptr, nullptr },
+        { "message", reinterpret_cast<getter>(ConversationItem_get_Message), reinterpret_cast<setter>(ConversationItem_put_Message), nullptr, nullptr },
+        { }};
+
+    static PyType_Slot _type_slots_ConversationItem[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_ConversationItem) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ConversationItem) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_ConversationItem) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_ConversationItem) },
+        { }};
+
+    static PyType_Spec type_spec_ConversationItem = {
+        "winui3._winui3_microsoft_windows_ai_text.ConversationItem",
+        sizeof(py::wrapper::Microsoft::Windows::AI::Text::ConversationItem),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_ConversationItem};
+
+    // ----- ConversationSummaryOptions class --------------------
+
+    static PyObject* _new_ConversationSummaryOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_GET_SIZE(args);
+        if (arg_count == 0)
+        {
+            try
+            {
+                winrt::Microsoft::Windows::AI::Text::ConversationSummaryOptions instance{};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_ConversationSummaryOptions(py::wrapper::Microsoft::Windows::AI::Text::ConversationSummaryOptions* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* ConversationSummaryOptions_get_MaxKeyPoints(py::wrapper::Microsoft::Windows::AI::Text::ConversationSummaryOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.Text.ConversationSummaryOptions", L"MaxKeyPoints");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxKeyPoints();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int ConversationSummaryOptions_put_MaxKeyPoints(py::wrapper::Microsoft::Windows::AI::Text::ConversationSummaryOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.Text.ConversationSummaryOptions", L"MaxKeyPoints");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<uint32_t>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.MaxKeyPoints(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* ConversationSummaryOptions_get_InputKind(py::wrapper::Microsoft::Windows::AI::Text::ConversationSummaryOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.Text.ConversationSummaryOptions", L"InputKind");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.InputKind();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int ConversationSummaryOptions_put_InputKind(py::wrapper::Microsoft::Windows::AI::Text::ConversationSummaryOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.Text.ConversationSummaryOptions", L"InputKind");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::Windows::AI::Text::InputKind>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.InputKind(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* ConversationSummaryOptions_get_IncludeParticipantAttribution(py::wrapper::Microsoft::Windows::AI::Text::ConversationSummaryOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.Text.ConversationSummaryOptions", L"IncludeParticipantAttribution");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IncludeParticipantAttribution();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int ConversationSummaryOptions_put_IncludeParticipantAttribution(py::wrapper::Microsoft::Windows::AI::Text::ConversationSummaryOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.Text.ConversationSummaryOptions", L"IncludeParticipantAttribution");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.IncludeParticipantAttribution(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* ConversationSummaryOptions_get_IncludeMessageCitations(py::wrapper::Microsoft::Windows::AI::Text::ConversationSummaryOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.Text.ConversationSummaryOptions", L"IncludeMessageCitations");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IncludeMessageCitations();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int ConversationSummaryOptions_put_IncludeMessageCitations(py::wrapper::Microsoft::Windows::AI::Text::ConversationSummaryOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.Text.ConversationSummaryOptions", L"IncludeMessageCitations");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.IncludeMessageCitations(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* _assign_array_ConversationSummaryOptions(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::AI::Text::ConversationSummaryOptions>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_ConversationSummaryOptions(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::Windows::AI::Text::ConversationSummaryOptions>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_ConversationSummaryOptions[] = {
+        { "_assign_array_", _assign_array_ConversationSummaryOptions, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_ConversationSummaryOptions), METH_O | METH_STATIC, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_ConversationSummaryOptions[] = {
+        { "max_key_points", reinterpret_cast<getter>(ConversationSummaryOptions_get_MaxKeyPoints), reinterpret_cast<setter>(ConversationSummaryOptions_put_MaxKeyPoints), nullptr, nullptr },
+        { "input_kind", reinterpret_cast<getter>(ConversationSummaryOptions_get_InputKind), reinterpret_cast<setter>(ConversationSummaryOptions_put_InputKind), nullptr, nullptr },
+        { "include_participant_attribution", reinterpret_cast<getter>(ConversationSummaryOptions_get_IncludeParticipantAttribution), reinterpret_cast<setter>(ConversationSummaryOptions_put_IncludeParticipantAttribution), nullptr, nullptr },
+        { "include_message_citations", reinterpret_cast<getter>(ConversationSummaryOptions_get_IncludeMessageCitations), reinterpret_cast<setter>(ConversationSummaryOptions_put_IncludeMessageCitations), nullptr, nullptr },
+        { }};
+
+    static PyType_Slot _type_slots_ConversationSummaryOptions[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_ConversationSummaryOptions) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ConversationSummaryOptions) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_ConversationSummaryOptions) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_ConversationSummaryOptions) },
+        { }};
+
+    static PyType_Spec type_spec_ConversationSummaryOptions = {
+        "winui3._winui3_microsoft_windows_ai_text.ConversationSummaryOptions",
+        sizeof(py::wrapper::Microsoft::Windows::AI::Text::ConversationSummaryOptions),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_ConversationSummaryOptions};
+
     // ----- LanguageModel class --------------------
 
     static PyObject* _new_LanguageModel(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -102,6 +692,131 @@ namespace py::cpp::Microsoft::Windows::AI::Text
         }
     }
 
+    static PyObject* LanguageModel_CreateContext(py::wrapper::Microsoft::Windows::AI::Text::LanguageModel* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AI.Text.LanguageModel", L"CreateContext", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateContext();
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LanguageModel_CreateContext2(py::wrapper::Microsoft::Windows::AI::Text::LanguageModel* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AI.Text.LanguageModel", L"CreateContext", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateContext(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LanguageModel_CreateContext3(py::wrapper::Microsoft::Windows::AI::Text::LanguageModel* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AI.Text.LanguageModel", L"CreateContext", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::Windows::AI::ContentSafety::ContentFilterOptions>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateContext(param0, param1);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* LanguageModel_EnsureReadyAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
@@ -142,6 +857,349 @@ namespace py::cpp::Microsoft::Windows::AI::Text
         }
     }
 
+    static PyObject* LanguageModel_GenerateEmbeddingVectors(py::wrapper::Microsoft::Windows::AI::Text::LanguageModel* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AI.Text.LanguageModel", L"GenerateEmbeddingVectors", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GenerateEmbeddingVectors(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LanguageModel_GenerateEmbeddingVectors2(py::wrapper::Microsoft::Windows::AI::Text::LanguageModel* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AI.Text.LanguageModel", L"GenerateEmbeddingVectors", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::Windows::AI::ContentSafety::ContentFilterOptions>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GenerateEmbeddingVectors(param0, param1);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LanguageModel_GenerateResponseAsync(py::wrapper::Microsoft::Windows::AI::Text::LanguageModel* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AI.Text.LanguageModel", L"GenerateResponseAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GenerateResponseAsync(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LanguageModel_GenerateResponseAsync2(py::wrapper::Microsoft::Windows::AI::Text::LanguageModel* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AI.Text.LanguageModel", L"GenerateResponseAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::Windows::AI::Text::LanguageModelOptions>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GenerateResponseAsync(param0, param1);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LanguageModel_GenerateResponseAsync3(py::wrapper::Microsoft::Windows::AI::Text::LanguageModel* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AI.Text.LanguageModel", L"GenerateResponseAsync", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::Windows::AI::Text::LanguageModelContext>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::Windows::AI::Text::LanguageModelOptions>(args, 2);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GenerateResponseAsync(param0, param1, param2);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LanguageModel_GenerateResponseFromEmbeddingsAsync(py::wrapper::Microsoft::Windows::AI::Text::LanguageModel* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AI.Text.LanguageModel", L"GenerateResponseFromEmbeddingsAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::Windows::AI::Foundation::EmbeddingVector>>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GenerateResponseFromEmbeddingsAsync(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LanguageModel_GenerateResponseFromEmbeddingsAsync2(py::wrapper::Microsoft::Windows::AI::Text::LanguageModel* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AI.Text.LanguageModel", L"GenerateResponseFromEmbeddingsAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::Windows::AI::Foundation::EmbeddingVector>>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::Windows::AI::Text::LanguageModelOptions>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GenerateResponseFromEmbeddingsAsync(param0, param1);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LanguageModel_GenerateResponseFromEmbeddingsAsync3(py::wrapper::Microsoft::Windows::AI::Text::LanguageModel* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AI.Text.LanguageModel", L"GenerateResponseFromEmbeddingsAsync", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::Windows::AI::Text::LanguageModelContext>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::Windows::AI::Foundation::EmbeddingVector>>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::Windows::AI::Text::LanguageModelOptions>(args, 2);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GenerateResponseFromEmbeddingsAsync(param0, param1, param2);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* LanguageModel_GetReadyState(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
@@ -167,6 +1225,131 @@ namespace py::cpp::Microsoft::Windows::AI::Text
                 {
                     auto _gil = release_gil();
                     return winrt::Microsoft::Windows::AI::Text::LanguageModel::GetReadyState();
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LanguageModel_GetUsablePromptLength(py::wrapper::Microsoft::Windows::AI::Text::LanguageModel* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AI.Text.LanguageModel", L"GetUsablePromptLength", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetUsablePromptLength(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LanguageModel_GetUsablePromptLength2(py::wrapper::Microsoft::Windows::AI::Text::LanguageModel* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AI.Text.LanguageModel", L"GetUsablePromptLength", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::Windows::AI::Text::LanguageModelContext>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetUsablePromptLength(param0, param1);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LanguageModel_GetVectorSpaceId(py::wrapper::Microsoft::Windows::AI::Text::LanguageModel* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AI.Text.LanguageModel", L"GetVectorSpaceId", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetVectorSpaceId();
                 }());
             }
             catch (...)
@@ -231,6 +1414,20 @@ namespace py::cpp::Microsoft::Windows::AI::Text
 
     static PyMethodDef _methods_LanguageModel[] = {
         { "close", reinterpret_cast<PyCFunction>(LanguageModel_Close), METH_VARARGS, nullptr },
+        { "create_context", reinterpret_cast<PyCFunction>(LanguageModel_CreateContext), METH_VARARGS, nullptr },
+        { "create_context2", reinterpret_cast<PyCFunction>(LanguageModel_CreateContext2), METH_VARARGS, nullptr },
+        { "create_context3", reinterpret_cast<PyCFunction>(LanguageModel_CreateContext3), METH_VARARGS, nullptr },
+        { "generate_embedding_vectors", reinterpret_cast<PyCFunction>(LanguageModel_GenerateEmbeddingVectors), METH_VARARGS, nullptr },
+        { "generate_embedding_vectors2", reinterpret_cast<PyCFunction>(LanguageModel_GenerateEmbeddingVectors2), METH_VARARGS, nullptr },
+        { "generate_response_async", reinterpret_cast<PyCFunction>(LanguageModel_GenerateResponseAsync), METH_VARARGS, nullptr },
+        { "generate_response_async2", reinterpret_cast<PyCFunction>(LanguageModel_GenerateResponseAsync2), METH_VARARGS, nullptr },
+        { "generate_response_async3", reinterpret_cast<PyCFunction>(LanguageModel_GenerateResponseAsync3), METH_VARARGS, nullptr },
+        { "generate_response_from_embeddings_async", reinterpret_cast<PyCFunction>(LanguageModel_GenerateResponseFromEmbeddingsAsync), METH_VARARGS, nullptr },
+        { "generate_response_from_embeddings_async2", reinterpret_cast<PyCFunction>(LanguageModel_GenerateResponseFromEmbeddingsAsync2), METH_VARARGS, nullptr },
+        { "generate_response_from_embeddings_async3", reinterpret_cast<PyCFunction>(LanguageModel_GenerateResponseFromEmbeddingsAsync3), METH_VARARGS, nullptr },
+        { "get_usable_prompt_length", reinterpret_cast<PyCFunction>(LanguageModel_GetUsablePromptLength), METH_VARARGS, nullptr },
+        { "get_usable_prompt_length2", reinterpret_cast<PyCFunction>(LanguageModel_GetUsablePromptLength2), METH_VARARGS, nullptr },
+        { "get_vector_space_id", reinterpret_cast<PyCFunction>(LanguageModel_GetVectorSpaceId), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_LanguageModel, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LanguageModel), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_LanguageModel), METH_NOARGS, nullptr },
@@ -407,6 +1604,162 @@ namespace py::cpp::Microsoft::Windows::AI::Text
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_LanguageModelContext};
+
+    // ----- LanguageModelEmbeddingVectorResult class --------------------
+
+    static PyObject* _new_LanguageModelEmbeddingVectorResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::Windows::AI::Text::LanguageModelEmbeddingVectorResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::AI::Text::LanguageModelEmbeddingVectorResult>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_LanguageModelEmbeddingVectorResult(py::wrapper::Microsoft::Windows::AI::Text::LanguageModelEmbeddingVectorResult* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* LanguageModelEmbeddingVectorResult_get_EmbeddingVectors(py::wrapper::Microsoft::Windows::AI::Text::LanguageModelEmbeddingVectorResult* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.Text.LanguageModelEmbeddingVectorResult", L"EmbeddingVectors");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EmbeddingVectors();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* LanguageModelEmbeddingVectorResult_get_ExtendedError(py::wrapper::Microsoft::Windows::AI::Text::LanguageModelEmbeddingVectorResult* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.Text.LanguageModelEmbeddingVectorResult", L"ExtendedError");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* LanguageModelEmbeddingVectorResult_get_Status(py::wrapper::Microsoft::Windows::AI::Text::LanguageModelEmbeddingVectorResult* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AI.Text.LanguageModelEmbeddingVectorResult", L"Status");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_LanguageModelEmbeddingVectorResult(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::AI::Text::LanguageModelEmbeddingVectorResult>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_LanguageModelEmbeddingVectorResult(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::Windows::AI::Text::LanguageModelEmbeddingVectorResult>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_LanguageModelEmbeddingVectorResult[] = {
+        { "_assign_array_", _assign_array_LanguageModelEmbeddingVectorResult, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_LanguageModelEmbeddingVectorResult), METH_O | METH_STATIC, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_LanguageModelEmbeddingVectorResult[] = {
+        { "embedding_vectors", reinterpret_cast<getter>(LanguageModelEmbeddingVectorResult_get_EmbeddingVectors), nullptr, nullptr, nullptr },
+        { "extended_error", reinterpret_cast<getter>(LanguageModelEmbeddingVectorResult_get_ExtendedError), nullptr, nullptr, nullptr },
+        { "status", reinterpret_cast<getter>(LanguageModelEmbeddingVectorResult_get_Status), nullptr, nullptr, nullptr },
+        { }};
+
+    static PyType_Slot _type_slots_LanguageModelEmbeddingVectorResult[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_LanguageModelEmbeddingVectorResult) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_LanguageModelEmbeddingVectorResult) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_LanguageModelEmbeddingVectorResult) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_LanguageModelEmbeddingVectorResult) },
+        { }};
+
+    static PyType_Spec type_spec_LanguageModelEmbeddingVectorResult = {
+        "winui3._winui3_microsoft_windows_ai_text.LanguageModelEmbeddingVectorResult",
+        sizeof(py::wrapper::Microsoft::Windows::AI::Text::LanguageModelEmbeddingVectorResult),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_LanguageModelEmbeddingVectorResult};
 
     // ----- LanguageModelOptions class --------------------
 
@@ -1142,6 +2495,49 @@ namespace py::cpp::Microsoft::Windows::AI::Text
         }
     }
 
+    static PyObject* TextSummarizer_SummarizeConversationAsync(py::wrapper::Microsoft::Windows::AI::Text::TextSummarizer* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AI.Text.TextSummarizer", L"SummarizeConversationAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Microsoft::Windows::AI::Text::ConversationItem>>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::Windows::AI::Text::ConversationSummaryOptions>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SummarizeConversationAsync(param0, param1);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* TextSummarizer_SummarizeParagraphAsync(py::wrapper::Microsoft::Windows::AI::Text::TextSummarizer* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
@@ -1210,6 +2606,7 @@ namespace py::cpp::Microsoft::Windows::AI::Text
 
     static PyMethodDef _methods_TextSummarizer[] = {
         { "summarize_async", reinterpret_cast<PyCFunction>(TextSummarizer_SummarizeAsync), METH_VARARGS, nullptr },
+        { "summarize_conversation_async", reinterpret_cast<PyCFunction>(TextSummarizer_SummarizeConversationAsync), METH_VARARGS, nullptr },
         { "summarize_paragraph_async", reinterpret_cast<PyCFunction>(TextSummarizer_SummarizeParagraphAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_TextSummarizer, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TextSummarizer), METH_O | METH_STATIC, nullptr },
@@ -1683,6 +3080,18 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_windows_ai_text(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle ConversationItem_type{py::register_python_type(module.get(), &type_spec_ConversationItem, object_bases.get(), inspectable_meta_type)};
+    if (!ConversationItem_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ConversationSummaryOptions_type{py::register_python_type(module.get(), &type_spec_ConversationSummaryOptions, object_bases.get(), inspectable_meta_type)};
+    if (!ConversationSummaryOptions_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle LanguageModel_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
     if (!LanguageModel_Static_bases)
     {
@@ -1703,6 +3112,12 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_windows_ai_text(void) noexcept
 
     py::pytype_handle LanguageModelContext_type{py::register_python_type(module.get(), &type_spec_LanguageModelContext, object_bases.get(), inspectable_meta_type)};
     if (!LanguageModelContext_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle LanguageModelEmbeddingVectorResult_type{py::register_python_type(module.get(), &type_spec_LanguageModelEmbeddingVectorResult, object_bases.get(), inspectable_meta_type)};
+    if (!LanguageModelEmbeddingVectorResult_type)
     {
         return nullptr;
     }

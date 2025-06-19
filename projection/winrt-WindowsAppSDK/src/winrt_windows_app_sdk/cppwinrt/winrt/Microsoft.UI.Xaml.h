@@ -14943,6 +14943,40 @@ namespace winrt::impl
         }
         return winrt::Microsoft::UI::Xaml::XamlIsland{ value, take_ownership_from_abi };
     }
+    template <typename D> auto consume_Microsoft_UI_Xaml_IXamlIslandFeature_ExperimentalApi<D>::ShouldConstrainPopupsToWorkArea() const
+    {
+        bool value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Xaml::IXamlIslandFeature_ExperimentalApi>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Xaml::IXamlIslandFeature_ExperimentalApi, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::IXamlIslandFeature_ExperimentalApi>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_ShouldConstrainPopupsToWorkArea(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::IXamlIslandFeature_ExperimentalApi>**)this;
+            check_hresult(_winrt_abi_type->get_ShouldConstrainPopupsToWorkArea(&value));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Xaml_IXamlIslandFeature_ExperimentalApi<D>::ShouldConstrainPopupsToWorkArea(bool value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Xaml::IXamlIslandFeature_ExperimentalApi>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Xaml::IXamlIslandFeature_ExperimentalApi, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::IXamlIslandFeature_ExperimentalApi>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->put_ShouldConstrainPopupsToWorkArea(value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Xaml::IXamlIslandFeature_ExperimentalApi>**)this;
+            check_hresult(_winrt_abi_type->put_ShouldConstrainPopupsToWorkArea(value));
+        }
+    }
     template <typename D> auto consume_Microsoft_UI_Xaml_IXamlResourceReferenceFailedEventArgs<D>::Message() const
     {
         void* value{};
@@ -22503,6 +22537,26 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Xaml::IXamlIslandFeature_ExperimentalApi> : produce_base<D, winrt::Microsoft::UI::Xaml::IXamlIslandFeature_ExperimentalApi>
+    {
+        int32_t __stdcall get_ShouldConstrainPopupsToWorkArea(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().ShouldConstrainPopupsToWorkArea());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_ShouldConstrainPopupsToWorkArea(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ShouldConstrainPopupsToWorkArea(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::UI::Xaml::IXamlResourceReferenceFailedEventArgs> : produce_base<D, winrt::Microsoft::UI::Xaml::IXamlResourceReferenceFailedEventArgs>
     {
         int32_t __stdcall get_Message(void** value) noexcept final try
@@ -24712,7 +24766,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml
     template <typename D, typename... Interfaces>
     struct XamlIslandT :
         implements<D, winrt::Windows::Foundation::IInspectable, composing, Interfaces...>,
-        impl::require<D, winrt::Microsoft::UI::Xaml::IXamlIsland, winrt::Windows::Foundation::IClosable>,
+        impl::require<D, winrt::Microsoft::UI::Xaml::IXamlIsland, winrt::Microsoft::UI::Xaml::IXamlIslandFeature_ExperimentalApi, winrt::Windows::Foundation::IClosable>,
         impl::base<D, XamlIsland>
     {
         using composable = XamlIsland;
@@ -24864,6 +24918,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Xaml::IWindowVisibilityChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::IXamlIsland> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::IXamlIslandFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Xaml::IXamlIslandFeature_ExperimentalApi> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::IXamlResourceReferenceFailedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::IXamlRoot> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::IXamlRoot2> : winrt::impl::hash_base {};

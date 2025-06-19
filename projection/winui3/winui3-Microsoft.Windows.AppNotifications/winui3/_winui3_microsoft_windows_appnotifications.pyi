@@ -67,6 +67,12 @@ class AppNotification(winrt.system.Object):
     # System.String Microsoft.Windows.AppNotifications.AppNotification::get_Payload()
     @_property
     def payload(self) -> str: ...
+    # Microsoft.Windows.AppNotifications.AppNotificationConferencingConfig Microsoft.Windows.AppNotifications.AppNotification::get_ConferencingConfig()
+    @_property
+    def conferencing_config(self) -> AppNotificationConferencingConfig: ...
+    # System.Void Microsoft.Windows.AppNotifications.AppNotification::put_ConferencingConfig(Microsoft.Windows.AppNotifications.AppNotificationConferencingConfig)
+    @conferencing_config.setter
+    def conferencing_config(self, value: AppNotificationConferencingConfig) -> None: ...
 
 @typing.final
 class AppNotificationActivatedEventArgs(winrt.system.Object):
@@ -79,6 +85,33 @@ class AppNotificationActivatedEventArgs(winrt.system.Object):
     # Windows.Foundation.Collections.IMap`2<System.String,System.String> Microsoft.Windows.AppNotifications.AppNotificationActivatedEventArgs::get_Arguments()
     @_property
     def arguments(self) -> typing.MutableMapping[str, str]: ...
+
+@typing.final
+class AppNotificationConferencingConfig_Static(winrt._winrt.IInspectable_Static):
+    # System.Boolean Microsoft.Windows.AppNotifications.AppNotificationConferencingConfig::IsCallingPreviewSupported()
+    def is_calling_preview_supported(cls) -> bool: ...
+
+@typing.final
+class AppNotificationConferencingConfig(winrt.system.Object, metaclass=AppNotificationConferencingConfig_Static):
+    def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.String Microsoft.Windows.AppNotifications.AppNotificationConferencingConfig::get_VideoDeviceId()
+    @_property
+    def video_device_id(self) -> str: ...
+    # System.Void Microsoft.Windows.AppNotifications.AppNotificationConferencingConfig::put_VideoDeviceId(System.String)
+    @video_device_id.setter
+    def video_device_id(self, value: str) -> None: ...
+    # System.String Microsoft.Windows.AppNotifications.AppNotificationConferencingConfig::get_AudioOutputDeviceId()
+    @_property
+    def audio_output_device_id(self) -> str: ...
+    # System.Void Microsoft.Windows.AppNotifications.AppNotificationConferencingConfig::put_AudioOutputDeviceId(System.String)
+    @audio_output_device_id.setter
+    def audio_output_device_id(self, value: str) -> None: ...
+    # System.String Microsoft.Windows.AppNotifications.AppNotificationConferencingConfig::get_AudioInputDeviceId()
+    @_property
+    def audio_input_device_id(self) -> str: ...
+    # System.Void Microsoft.Windows.AppNotifications.AppNotificationConferencingConfig::put_AudioInputDeviceId(System.String)
+    @audio_input_device_id.setter
+    def audio_input_device_id(self, value: str) -> None: ...
 
 @typing.final
 class AppNotificationManager_Static(winrt._winrt.IInspectable_Static):

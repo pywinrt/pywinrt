@@ -685,6 +685,12 @@ class InfoBarAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
 class InfoBarAutomationPeer(FrameworkElementAutomationPeer, metaclass=InfoBarAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls.InfoBar) -> Self: ...
 
+class InkCanvasAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
+    pass
+
+class InkCanvasAutomationPeer(FrameworkElementAutomationPeer, metaclass=InkCanvasAutomationPeer_Static):
+    def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls.InkCanvas) -> Self: ...
+
 class ItemAutomationPeer_Static(AutomationPeer_Static):
     pass
 
@@ -952,6 +958,12 @@ class NumberBoxAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
 
 class NumberBoxAutomationPeer(FrameworkElementAutomationPeer, metaclass=NumberBoxAutomationPeer_Static):
     def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls.NumberBox) -> Self: ...
+
+class PagerControlAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
+    pass
+
+class PagerControlAutomationPeer(FrameworkElementAutomationPeer, metaclass=PagerControlAutomationPeer_Static):
+    def __new__(cls: typing.Type[Self], owner: microsoft_ui_xaml_controls.PagerControl) -> Self: ...
 
 class PasswordBoxAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     pass

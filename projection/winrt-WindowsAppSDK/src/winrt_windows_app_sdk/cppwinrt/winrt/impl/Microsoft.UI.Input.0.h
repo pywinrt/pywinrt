@@ -7,9 +7,14 @@ WINRT_EXPORT namespace winrt::Microsoft::UI
 {
     struct WindowId;
 }
+WINRT_EXPORT namespace winrt::Microsoft::UI::Composition
+{
+    struct Visual;
+}
 WINRT_EXPORT namespace winrt::Microsoft::UI::Content
 {
     struct ContentIsland;
+    struct DesktopPopupSiteBridge;
     struct IContentSiteBridge;
     struct IContentSiteLink;
 }
@@ -111,6 +116,17 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
         Deactivated = 1,
         Activated = 2,
     };
+    enum class InputLayoutPolicy : int32_t
+    {
+        LeftToRight = 0,
+        RightToLeft = 1,
+    };
+    enum class InputPointerActivationBehavior : int32_t
+    {
+        Default = 0,
+        Activate = 1,
+        NoActivate = 3,
+    };
     enum class InputPointerSourceDeviceKinds : uint32_t
     {
         None = 0,
@@ -136,6 +152,15 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
         Pin = 14,
         Person = 15,
         AppStarting = 16,
+    };
+    enum class LightDismissReason : int32_t
+    {
+        Programmatic = 0,
+        WindowMoved = 1,
+        ActivationChanged = 2,
+        KeyboardEvent = 3,
+        PointerEvent = 4,
+        VisibilityChanged = 5,
     };
     enum class MoveSizeOperation : int32_t
     {
@@ -183,6 +208,12 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
         XButton2Pressed = 9,
         XButton2Released = 10,
     };
+    enum class PopupPointerMode : int32_t
+    {
+        Default = 0,
+        Modal = 1,
+        LightDismiss = 2,
+    };
     enum class VirtualKeyStates : uint32_t
     {
         None = 0,
@@ -225,16 +256,23 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
     struct IInputKeyboardSource2;
     struct IInputKeyboardSourceStatics;
     struct IInputKeyboardSourceStatics2;
+    struct IInputKeyboardSourceStatics3;
     struct IInputLightDismissAction;
     struct IInputLightDismissActionStatics;
+    struct IInputLightDismissActionStatics2;
     struct IInputLightDismissEventArgs;
+    struct IInputLightDismissEventArgs2;
     struct IInputNonClientPointerSource;
     struct IInputNonClientPointerSource2;
     struct IInputNonClientPointerSourceStatics;
     struct IInputObject;
     struct IInputObjectFactory;
     struct IInputPointerSource;
+    struct IInputPointerSource2;
     struct IInputPointerSourceStatics;
+    struct IInputPointerSourceStatics2;
+    struct IInputPopupController;
+    struct IInputPopupControllerStatics;
     struct IInputPreTranslateKeyboardSource;
     struct IInputPreTranslateKeyboardSourceStatics;
     struct IInputSystemCursor;
@@ -256,6 +294,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
     struct IPointerPredictorStatics;
     struct IRightTappedEventArgs;
     struct ITappedEventArgs;
+    struct ITouchHitTestingEventArgs;
     struct IWindowRectChangedEventArgs;
     struct IWindowRectChangingEventArgs;
     struct CharacterReceivedEventArgs;
@@ -284,6 +323,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
     struct InputNonClientPointerSource;
     struct InputObject;
     struct InputPointerSource;
+    struct InputPopupController;
     struct InputPreTranslateKeyboardSource;
     struct InputSystemCursor;
     struct KeyEventArgs;
@@ -301,12 +341,14 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
     struct PointerPredictor;
     struct RightTappedEventArgs;
     struct TappedEventArgs;
+    struct TouchHitTestingEventArgs;
     struct WindowRectChangedEventArgs;
     struct WindowRectChangingEventArgs;
     struct CrossSlideThresholds;
     struct ManipulationDelta;
     struct ManipulationVelocities;
     struct PhysicalKeyStatus;
+    struct ProximityEvaluation;
 }
 namespace winrt::impl
 {
@@ -346,16 +388,23 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Input::IInputKeyboardSource2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IInputKeyboardSourceStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IInputKeyboardSourceStatics2>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::IInputKeyboardSourceStatics3>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IInputLightDismissAction>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IInputLightDismissActionStatics>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::IInputLightDismissActionStatics2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IInputLightDismissEventArgs>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::IInputLightDismissEventArgs2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IInputNonClientPointerSource>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IInputNonClientPointerSource2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IInputNonClientPointerSourceStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IInputObject>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IInputObjectFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IInputPointerSource>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::IInputPointerSource2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IInputPointerSourceStatics>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::IInputPointerSourceStatics2>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::IInputPopupController>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::IInputPopupControllerStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IInputPreTranslateKeyboardSource>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IInputPreTranslateKeyboardSourceStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IInputSystemCursor>{ using type = interface_category; };
@@ -377,6 +426,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Input::IPointerPredictorStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IRightTappedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::ITappedEventArgs>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IWindowRectChangedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IWindowRectChangingEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::CharacterReceivedEventArgs>{ using type = class_category; };
@@ -405,6 +455,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Input::InputNonClientPointerSource>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Input::InputObject>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Input::InputPointerSource>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::InputPopupController>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Input::InputPreTranslateKeyboardSource>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Input::InputSystemCursor>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Input::KeyEventArgs>{ using type = class_category; };
@@ -422,6 +473,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Input::PointerPredictor>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Input::RightTappedEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Input::TappedEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::TouchHitTestingEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Input::WindowRectChangedEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Input::WindowRectChangingEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Input::CrossSlidingState>{ using type = enum_category; };
@@ -431,17 +483,22 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Input::GestureSettings>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Input::HoldingState>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Input::InputActivationState>{ using type = enum_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::InputLayoutPolicy>{ using type = enum_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::InputPointerActivationBehavior>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Input::InputPointerSourceDeviceKinds>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Input::InputSystemCursorShape>{ using type = enum_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::LightDismissReason>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Input::MoveSizeOperation>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Input::NonClientRegionKind>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Input::PointerDeviceType>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Input::PointerUpdateKind>{ using type = enum_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::PopupPointerMode>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Input::VirtualKeyStates>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Input::CrossSlideThresholds>{ using type = struct_category<float, float, float, float>; };
     template <> struct category<winrt::Microsoft::UI::Input::ManipulationDelta>{ using type = struct_category<winrt::Windows::Foundation::Point, float, float, float>; };
     template <> struct category<winrt::Microsoft::UI::Input::ManipulationVelocities>{ using type = struct_category<winrt::Windows::Foundation::Point, float, float>; };
     template <> struct category<winrt::Microsoft::UI::Input::PhysicalKeyStatus>{ using type = struct_category<uint32_t, uint32_t, bool, bool, bool, bool>; };
+    template <> struct category<winrt::Microsoft::UI::Input::ProximityEvaluation>{ using type = struct_category<int32_t, winrt::Windows::Foundation::Point>; };
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::CharacterReceivedEventArgs> = L"Microsoft.UI.Input.CharacterReceivedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::ContextMenuKeyEventArgs> = L"Microsoft.UI.Input.ContextMenuKeyEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::CrossSlidingEventArgs> = L"Microsoft.UI.Input.CrossSlidingEventArgs";
@@ -468,6 +525,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::InputNonClientPointerSource> = L"Microsoft.UI.Input.InputNonClientPointerSource";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::InputObject> = L"Microsoft.UI.Input.InputObject";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::InputPointerSource> = L"Microsoft.UI.Input.InputPointerSource";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::InputPopupController> = L"Microsoft.UI.Input.InputPopupController";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::InputPreTranslateKeyboardSource> = L"Microsoft.UI.Input.InputPreTranslateKeyboardSource";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::InputSystemCursor> = L"Microsoft.UI.Input.InputSystemCursor";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::KeyEventArgs> = L"Microsoft.UI.Input.KeyEventArgs";
@@ -485,6 +543,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::PointerPredictor> = L"Microsoft.UI.Input.PointerPredictor";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::RightTappedEventArgs> = L"Microsoft.UI.Input.RightTappedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::TappedEventArgs> = L"Microsoft.UI.Input.TappedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::TouchHitTestingEventArgs> = L"Microsoft.UI.Input.TouchHitTestingEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::WindowRectChangedEventArgs> = L"Microsoft.UI.Input.WindowRectChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::WindowRectChangingEventArgs> = L"Microsoft.UI.Input.WindowRectChangingEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::CrossSlidingState> = L"Microsoft.UI.Input.CrossSlidingState";
@@ -494,17 +553,22 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::GestureSettings> = L"Microsoft.UI.Input.GestureSettings";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::HoldingState> = L"Microsoft.UI.Input.HoldingState";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::InputActivationState> = L"Microsoft.UI.Input.InputActivationState";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::InputLayoutPolicy> = L"Microsoft.UI.Input.InputLayoutPolicy";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::InputPointerActivationBehavior> = L"Microsoft.UI.Input.InputPointerActivationBehavior";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::InputPointerSourceDeviceKinds> = L"Microsoft.UI.Input.InputPointerSourceDeviceKinds";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::InputSystemCursorShape> = L"Microsoft.UI.Input.InputSystemCursorShape";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::LightDismissReason> = L"Microsoft.UI.Input.LightDismissReason";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::MoveSizeOperation> = L"Microsoft.UI.Input.MoveSizeOperation";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::NonClientRegionKind> = L"Microsoft.UI.Input.NonClientRegionKind";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::PointerDeviceType> = L"Microsoft.UI.Input.PointerDeviceType";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::PointerUpdateKind> = L"Microsoft.UI.Input.PointerUpdateKind";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::PopupPointerMode> = L"Microsoft.UI.Input.PopupPointerMode";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::VirtualKeyStates> = L"Microsoft.UI.Input.VirtualKeyStates";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::CrossSlideThresholds> = L"Microsoft.UI.Input.CrossSlideThresholds";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::ManipulationDelta> = L"Microsoft.UI.Input.ManipulationDelta";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::ManipulationVelocities> = L"Microsoft.UI.Input.ManipulationVelocities";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::PhysicalKeyStatus> = L"Microsoft.UI.Input.PhysicalKeyStatus";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::ProximityEvaluation> = L"Microsoft.UI.Input.ProximityEvaluation";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::ICharacterReceivedEventArgs> = L"Microsoft.UI.Input.ICharacterReceivedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IContextMenuKeyEventArgs> = L"Microsoft.UI.Input.IContextMenuKeyEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::ICrossSlidingEventArgs> = L"Microsoft.UI.Input.ICrossSlidingEventArgs";
@@ -541,16 +605,23 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputKeyboardSource2> = L"Microsoft.UI.Input.IInputKeyboardSource2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputKeyboardSourceStatics> = L"Microsoft.UI.Input.IInputKeyboardSourceStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputKeyboardSourceStatics2> = L"Microsoft.UI.Input.IInputKeyboardSourceStatics2";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputKeyboardSourceStatics3> = L"Microsoft.UI.Input.IInputKeyboardSourceStatics3";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputLightDismissAction> = L"Microsoft.UI.Input.IInputLightDismissAction";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputLightDismissActionStatics> = L"Microsoft.UI.Input.IInputLightDismissActionStatics";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputLightDismissActionStatics2> = L"Microsoft.UI.Input.IInputLightDismissActionStatics2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputLightDismissEventArgs> = L"Microsoft.UI.Input.IInputLightDismissEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputLightDismissEventArgs2> = L"Microsoft.UI.Input.IInputLightDismissEventArgs2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputNonClientPointerSource> = L"Microsoft.UI.Input.IInputNonClientPointerSource";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputNonClientPointerSource2> = L"Microsoft.UI.Input.IInputNonClientPointerSource2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputNonClientPointerSourceStatics> = L"Microsoft.UI.Input.IInputNonClientPointerSourceStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputObject> = L"Microsoft.UI.Input.IInputObject";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputObjectFactory> = L"Microsoft.UI.Input.IInputObjectFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputPointerSource> = L"Microsoft.UI.Input.IInputPointerSource";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputPointerSource2> = L"Microsoft.UI.Input.IInputPointerSource2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputPointerSourceStatics> = L"Microsoft.UI.Input.IInputPointerSourceStatics";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputPointerSourceStatics2> = L"Microsoft.UI.Input.IInputPointerSourceStatics2";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputPopupController> = L"Microsoft.UI.Input.IInputPopupController";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputPopupControllerStatics> = L"Microsoft.UI.Input.IInputPopupControllerStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputPreTranslateKeyboardSource> = L"Microsoft.UI.Input.IInputPreTranslateKeyboardSource";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputPreTranslateKeyboardSourceStatics> = L"Microsoft.UI.Input.IInputPreTranslateKeyboardSourceStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputSystemCursor> = L"Microsoft.UI.Input.IInputSystemCursor";
@@ -572,6 +643,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IPointerPredictorStatics> = L"Microsoft.UI.Input.IPointerPredictorStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IRightTappedEventArgs> = L"Microsoft.UI.Input.IRightTappedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::ITappedEventArgs> = L"Microsoft.UI.Input.ITappedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs> = L"Microsoft.UI.Input.ITouchHitTestingEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IWindowRectChangedEventArgs> = L"Microsoft.UI.Input.IWindowRectChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IWindowRectChangingEventArgs> = L"Microsoft.UI.Input.IWindowRectChangingEventArgs";
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::ICharacterReceivedEventArgs>{ 0x36122718,0x9263,0x592B,{ 0x8D,0x87,0x8F,0x86,0x54,0x3F,0xFC,0x95 } }; // 36122718-9263-592B-8D87-8F86543FFC95
@@ -610,16 +682,23 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputKeyboardSource2>{ 0x79D1C9B6,0xB3C9,0x5EC2,{ 0x8A,0x5B,0x70,0x70,0x88,0x78,0x7F,0x78 } }; // 79D1C9B6-B3C9-5EC2-8A5B-707088787F78
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputKeyboardSourceStatics>{ 0xF4E1563D,0x8C2E,0x5BCD,{ 0xB7,0x84,0x47,0xAD,0xEA,0xA3,0xCD,0x7E } }; // F4E1563D-8C2E-5BCD-B784-47ADEAA3CD7E
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputKeyboardSourceStatics2>{ 0x8857518C,0x2899,0x5F11,{ 0x9B,0x64,0x0A,0xD8,0x32,0x34,0x82,0x4B } }; // 8857518C-2899-5F11-9B64-0AD83234824B
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputKeyboardSourceStatics3>{ 0x34B960C5,0xA5AE,0x52AF,{ 0x85,0x66,0x6D,0x2D,0x55,0xFF,0x52,0xD1 } }; // 34B960C5-A5AE-52AF-8566-6D2D55FF52D1
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputLightDismissAction>{ 0xE8A39502,0xA860,0x502F,{ 0x8C,0x10,0x36,0x46,0xD4,0x3A,0xEC,0xF1 } }; // E8A39502-A860-502F-8C10-3646D43AECF1
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputLightDismissActionStatics>{ 0xED9B8DEF,0x6496,0x5169,{ 0x98,0x4D,0xD4,0x4B,0x4E,0x69,0x06,0x23 } }; // ED9B8DEF-6496-5169-984D-D44B4E690623
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputLightDismissActionStatics2>{ 0xC499A8A8,0x7182,0x5179,{ 0xA2,0x8C,0xEA,0xB3,0xF3,0x69,0xB6,0xF9 } }; // C499A8A8-7182-5179-A28C-EAB3F369B6F9
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputLightDismissEventArgs>{ 0x078660EE,0x07CA,0x5808,{ 0xB9,0x82,0xE6,0xE8,0x99,0xCF,0x09,0x8C } }; // 078660EE-07CA-5808-B982-E6E899CF098C
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputLightDismissEventArgs2>{ 0x099DE760,0xB54F,0x5BAB,{ 0x8B,0x69,0x66,0xC5,0x54,0x6D,0x80,0xD1 } }; // 099DE760-B54F-5BAB-8B69-66C5546D80D1
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputNonClientPointerSource>{ 0x471732B4,0x3D07,0x5104,{ 0xB1,0x92,0xEB,0xAC,0xF7,0x1E,0x86,0xDF } }; // 471732B4-3D07-5104-B192-EBACF71E86DF
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputNonClientPointerSource2>{ 0xDD2B10C4,0x7DE6,0x5C1D,{ 0xB4,0x38,0x06,0xDD,0xC9,0x94,0x05,0x8F } }; // DD2B10C4-7DE6-5C1D-B438-06DDC994058F
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputNonClientPointerSourceStatics>{ 0x7D0B775C,0x1903,0x5DC7,{ 0xBD,0x2F,0x7A,0x4B,0x31,0xF0,0xCF,0xF2 } }; // 7D0B775C-1903-5DC7-BD2F-7A4B31F0CFF2
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputObject>{ 0x42EDBC88,0xD386,0x544D,{ 0xB1,0xB8,0x68,0x61,0x7F,0xE6,0x82,0x82 } }; // 42EDBC88-D386-544D-B1B8-68617FE68282
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputObjectFactory>{ 0xF7786BC2,0xB0B8,0x5961,{ 0x9A,0x57,0xAE,0x19,0x9D,0x45,0x21,0x06 } }; // F7786BC2-B0B8-5961-9A57-AE199D452106
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputPointerSource>{ 0x6A6C2764,0xC3F4,0x5BE5,{ 0x84,0x47,0xC9,0xA9,0x87,0x66,0xC2,0x40 } }; // 6A6C2764-C3F4-5BE5-8447-C9A98766C240
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputPointerSource2>{ 0x58757E6E,0xDA80,0x5AD2,{ 0xA0,0x88,0xB9,0x0E,0x8E,0x40,0x73,0x79 } }; // 58757E6E-DA80-5AD2-A088-B90E8E407379
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputPointerSourceStatics>{ 0xE8A19FD1,0xA914,0x533F,{ 0x9B,0x0F,0x6B,0xF0,0x06,0x5E,0x67,0x81 } }; // E8A19FD1-A914-533F-9B0F-6BF0065E6781
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputPointerSourceStatics2>{ 0x76B37B4A,0xDE02,0x531A,{ 0xA9,0xD2,0x18,0x51,0x86,0x15,0x9D,0x31 } }; // 76B37B4A-DE02-531A-A9D2-185186159D31
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputPopupController>{ 0x433EAD0D,0x3822,0x58EA,{ 0x90,0xFA,0xEB,0x3E,0x0B,0x39,0x82,0x9B } }; // 433EAD0D-3822-58EA-90FA-EB3E0B39829B
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputPopupControllerStatics>{ 0xB7EC6BDB,0xFEA5,0x581C,{ 0x96,0x6F,0x8D,0x42,0x38,0x81,0x7B,0x3B } }; // B7EC6BDB-FEA5-581C-966F-8D4238817B3B
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputPreTranslateKeyboardSource>{ 0x2F327FEB,0xB7E7,0x5E37,{ 0xA0,0xCC,0x37,0xDC,0xAB,0xE7,0x65,0x88 } }; // 2F327FEB-B7E7-5E37-A0CC-37DCABE76588
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputPreTranslateKeyboardSourceStatics>{ 0x23D584D2,0xAF8C,0x5A8A,{ 0x80,0x6F,0x2B,0xA9,0xC5,0xB1,0xA5,0xEC } }; // 23D584D2-AF8C-5A8A-806F-2BA9C5B1A5EC
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputSystemCursor>{ 0x59F538E7,0xC500,0x59AB,{ 0x8B,0x54,0x0B,0xC6,0x10,0x0F,0xD4,0x9E } }; // 59F538E7-C500-59AB-8B54-0BC6100FD49E
@@ -641,6 +720,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IPointerPredictorStatics>{ 0x78A8EF30,0x3E5C,0x55CD,{ 0x8F,0x85,0x65,0xAC,0x09,0xB1,0xA9,0x87 } }; // 78A8EF30-3E5C-55CD-8F85-65AC09B1A987
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IRightTappedEventArgs>{ 0x8FF73B39,0x887E,0x50A4,{ 0x85,0x00,0x77,0x95,0x30,0x39,0xDC,0xB4 } }; // 8FF73B39-887E-50A4-8500-77953039DCB4
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::ITappedEventArgs>{ 0xC3A01BB5,0x6076,0x5E0F,{ 0x87,0x1A,0x9D,0x94,0xA6,0xA8,0xF8,0x2B } }; // C3A01BB5-6076-5E0F-871A-9D94A6A8F82B
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs>{ 0xC2196F0C,0x60ED,0x5B5D,{ 0xB9,0x19,0xAA,0x73,0x57,0xE0,0xA2,0x5C } }; // C2196F0C-60ED-5B5D-B919-AA7357E0A25C
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IWindowRectChangedEventArgs>{ 0x8A885D28,0xD2D9,0x5DDA,{ 0x98,0x48,0xCD,0xF2,0x47,0x77,0x10,0x37 } }; // 8A885D28-D2D9-5DDA-9848-CDF247771037
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IWindowRectChangingEventArgs>{ 0xDB13ED3C,0xDEBC,0x5855,{ 0x8D,0x70,0x59,0x36,0xFD,0x81,0x34,0x57 } }; // DB13ED3C-DEBC-5855-8D70-5936FD813457
     template <> struct default_interface<winrt::Microsoft::UI::Input::CharacterReceivedEventArgs>{ using type = winrt::Microsoft::UI::Input::ICharacterReceivedEventArgs; };
@@ -669,6 +749,7 @@ namespace winrt::impl
     template <> struct default_interface<winrt::Microsoft::UI::Input::InputNonClientPointerSource>{ using type = winrt::Microsoft::UI::Input::IInputNonClientPointerSource; };
     template <> struct default_interface<winrt::Microsoft::UI::Input::InputObject>{ using type = winrt::Microsoft::UI::Input::IInputObject; };
     template <> struct default_interface<winrt::Microsoft::UI::Input::InputPointerSource>{ using type = winrt::Microsoft::UI::Input::IInputPointerSource; };
+    template <> struct default_interface<winrt::Microsoft::UI::Input::InputPopupController>{ using type = winrt::Microsoft::UI::Input::IInputPopupController; };
     template <> struct default_interface<winrt::Microsoft::UI::Input::InputPreTranslateKeyboardSource>{ using type = winrt::Microsoft::UI::Input::IInputPreTranslateKeyboardSource; };
     template <> struct default_interface<winrt::Microsoft::UI::Input::InputSystemCursor>{ using type = winrt::Microsoft::UI::Input::IInputSystemCursor; };
     template <> struct default_interface<winrt::Microsoft::UI::Input::KeyEventArgs>{ using type = winrt::Microsoft::UI::Input::IKeyEventArgs; };
@@ -686,6 +767,7 @@ namespace winrt::impl
     template <> struct default_interface<winrt::Microsoft::UI::Input::PointerPredictor>{ using type = winrt::Microsoft::UI::Input::IPointerPredictor; };
     template <> struct default_interface<winrt::Microsoft::UI::Input::RightTappedEventArgs>{ using type = winrt::Microsoft::UI::Input::IRightTappedEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Input::TappedEventArgs>{ using type = winrt::Microsoft::UI::Input::ITappedEventArgs; };
+    template <> struct default_interface<winrt::Microsoft::UI::Input::TouchHitTestingEventArgs>{ using type = winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Input::WindowRectChangedEventArgs>{ using type = winrt::Microsoft::UI::Input::IWindowRectChangedEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Input::WindowRectChangingEventArgs>{ using type = winrt::Microsoft::UI::Input::IWindowRectChangingEventArgs; };
     template <> struct abi<winrt::Microsoft::UI::Input::ICharacterReceivedEventArgs>
@@ -1042,6 +1124,13 @@ namespace winrt::impl
             virtual int32_t __stdcall GetForIsland(void*, void**) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::UI::Input::IInputKeyboardSourceStatics3>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall GetForWindowId(struct struct_Microsoft_UI_WindowId, void**) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::UI::Input::IInputLightDismissAction>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -1057,10 +1146,26 @@ namespace winrt::impl
             virtual int32_t __stdcall GetForWindowId(struct struct_Microsoft_UI_WindowId, void**) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::UI::Input::IInputLightDismissActionStatics2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall GetForIsland(void*, void**) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::UI::Input::IInputLightDismissEventArgs>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Input::IInputLightDismissEventArgs2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_Reason(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall get_Handled(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_Handled(bool) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Input::IInputNonClientPointerSource>
@@ -1153,11 +1258,50 @@ namespace winrt::impl
             virtual int32_t __stdcall remove_PointerWheelChanged(winrt::event_token) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::UI::Input::IInputPointerSource2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall TrySetDeviceKinds(uint32_t, bool*) noexcept = 0;
+            virtual int32_t __stdcall get_ActivationBehavior(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall put_ActivationBehavior(int32_t) noexcept = 0;
+            virtual int32_t __stdcall add_DirectManipulationHitTest(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_DirectManipulationHitTest(winrt::event_token) noexcept = 0;
+            virtual int32_t __stdcall add_TouchHitTesting(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_TouchHitTesting(winrt::event_token) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::UI::Input::IInputPointerSourceStatics>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
             virtual int32_t __stdcall GetForIsland(void*, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Input::IInputPointerSourceStatics2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall GetForVisual(void*, void**) noexcept = 0;
+            virtual int32_t __stdcall GetForWindowId(struct struct_Microsoft_UI_WindowId, void**) noexcept = 0;
+            virtual int32_t __stdcall RemoveForVisual(void*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Input::IInputPopupController>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_Mode(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall put_Mode(int32_t) noexcept = 0;
+            virtual int32_t __stdcall add_LightDismissed(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_LightDismissed(winrt::event_token) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Input::IInputPopupControllerStatics>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall GetForPopup(void*, void**) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Input::IInputPreTranslateKeyboardSource>
@@ -1371,6 +1515,20 @@ namespace winrt::impl
             virtual int32_t __stdcall get_PointerDeviceType(int32_t*) noexcept = 0;
             virtual int32_t __stdcall get_Position(winrt::Windows::Foundation::Point*) noexcept = 0;
             virtual int32_t __stdcall get_TapCount(uint32_t*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_BoundingBox(winrt::Windows::Foundation::Rect*) noexcept = 0;
+            virtual int32_t __stdcall get_Handled(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_Handled(bool) noexcept = 0;
+            virtual int32_t __stdcall get_Point(winrt::Windows::Foundation::Point*) noexcept = 0;
+            virtual int32_t __stdcall GetProximityEvaluation(struct struct_Microsoft_UI_Input_ProximityEvaluation*) noexcept = 0;
+            virtual int32_t __stdcall SetProximityEvaluation(struct struct_Microsoft_UI_Input_ProximityEvaluation) noexcept = 0;
+            virtual int32_t __stdcall EvaluateProximityToRect(winrt::Windows::Foundation::Rect, struct struct_Microsoft_UI_Input_ProximityEvaluation*) noexcept = 0;
+            virtual int32_t __stdcall EvaluateProximityToPolygon(uint32_t, winrt::Windows::Foundation::Point*, struct struct_Microsoft_UI_Input_ProximityEvaluation*) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Input::IWindowRectChangedEventArgs>
@@ -1865,6 +2023,15 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_UI_Input_IInputKeyboardSourceStatics2<D>;
     };
     template <typename D>
+    struct consume_Microsoft_UI_Input_IInputKeyboardSourceStatics3
+    {
+        auto GetForWindowId(winrt::Microsoft::UI::WindowId const& windowId) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Input::IInputKeyboardSourceStatics3>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Input_IInputKeyboardSourceStatics3<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_UI_Input_IInputLightDismissAction
     {
         auto Dismissed(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputLightDismissAction, winrt::Microsoft::UI::Input::InputLightDismissEventArgs> const& handler) const;
@@ -1886,12 +2053,32 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_UI_Input_IInputLightDismissActionStatics<D>;
     };
     template <typename D>
+    struct consume_Microsoft_UI_Input_IInputLightDismissActionStatics2
+    {
+        auto GetForIsland(winrt::Microsoft::UI::Content::ContentIsland const& content) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Input::IInputLightDismissActionStatics2>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Input_IInputLightDismissActionStatics2<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_UI_Input_IInputLightDismissEventArgs
     {
     };
     template <> struct consume<winrt::Microsoft::UI::Input::IInputLightDismissEventArgs>
     {
         template <typename D> using type = consume_Microsoft_UI_Input_IInputLightDismissEventArgs<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Input_IInputLightDismissEventArgs2
+    {
+        [[nodiscard]] auto Reason() const;
+        [[nodiscard]] auto Handled() const;
+        auto Handled(bool value) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Input::IInputLightDismissEventArgs2>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Input_IInputLightDismissEventArgs2<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Input_IInputNonClientPointerSource
@@ -2040,6 +2227,25 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_UI_Input_IInputPointerSource<D>;
     };
     template <typename D>
+    struct consume_Microsoft_UI_Input_IInputPointerSource2
+    {
+        auto TrySetDeviceKinds(winrt::Microsoft::UI::Input::InputPointerSourceDeviceKinds const& DeviceKinds) const;
+        [[nodiscard]] auto ActivationBehavior() const;
+        auto ActivationBehavior(winrt::Microsoft::UI::Input::InputPointerActivationBehavior const& value) const;
+        auto DirectManipulationHitTest(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputPointerSource, winrt::Microsoft::UI::Input::PointerEventArgs> const& handler) const;
+        using DirectManipulationHitTest_revoker = impl::event_revoker<winrt::Microsoft::UI::Input::IInputPointerSource2, &impl::abi_t<winrt::Microsoft::UI::Input::IInputPointerSource2>::remove_DirectManipulationHitTest>;
+        [[nodiscard]] auto DirectManipulationHitTest(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputPointerSource, winrt::Microsoft::UI::Input::PointerEventArgs> const& handler) const;
+        auto DirectManipulationHitTest(winrt::event_token const& token) const noexcept;
+        auto TouchHitTesting(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputPointerSource, winrt::Microsoft::UI::Input::TouchHitTestingEventArgs> const& handler) const;
+        using TouchHitTesting_revoker = impl::event_revoker<winrt::Microsoft::UI::Input::IInputPointerSource2, &impl::abi_t<winrt::Microsoft::UI::Input::IInputPointerSource2>::remove_TouchHitTesting>;
+        [[nodiscard]] auto TouchHitTesting(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputPointerSource, winrt::Microsoft::UI::Input::TouchHitTestingEventArgs> const& handler) const;
+        auto TouchHitTesting(winrt::event_token const& token) const noexcept;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Input::IInputPointerSource2>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Input_IInputPointerSource2<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_UI_Input_IInputPointerSourceStatics
     {
         auto GetForIsland(winrt::Microsoft::UI::Content::ContentIsland const& island) const;
@@ -2047,6 +2253,40 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Input::IInputPointerSourceStatics>
     {
         template <typename D> using type = consume_Microsoft_UI_Input_IInputPointerSourceStatics<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Input_IInputPointerSourceStatics2
+    {
+        auto GetForVisual(winrt::Microsoft::UI::Composition::Visual const& visual) const;
+        auto GetForWindowId(winrt::Microsoft::UI::WindowId const& windowId) const;
+        auto RemoveForVisual(winrt::Microsoft::UI::Composition::Visual const& visual) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Input::IInputPointerSourceStatics2>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Input_IInputPointerSourceStatics2<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Input_IInputPopupController
+    {
+        [[nodiscard]] auto Mode() const;
+        auto Mode(winrt::Microsoft::UI::Input::PopupPointerMode const& value) const;
+        auto LightDismissed(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputPopupController, winrt::Microsoft::UI::Input::InputLightDismissEventArgs> const& handler) const;
+        using LightDismissed_revoker = impl::event_revoker<winrt::Microsoft::UI::Input::IInputPopupController, &impl::abi_t<winrt::Microsoft::UI::Input::IInputPopupController>::remove_LightDismissed>;
+        [[nodiscard]] auto LightDismissed(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputPopupController, winrt::Microsoft::UI::Input::InputLightDismissEventArgs> const& handler) const;
+        auto LightDismissed(winrt::event_token const& token) const noexcept;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Input::IInputPopupController>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Input_IInputPopupController<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Input_IInputPopupControllerStatics
+    {
+        auto GetForPopup(winrt::Microsoft::UI::Content::DesktopPopupSiteBridge const& popupBridge) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Input::IInputPopupControllerStatics>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Input_IInputPopupControllerStatics<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Input_IInputPreTranslateKeyboardSource
@@ -2304,6 +2544,22 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_UI_Input_ITappedEventArgs<D>;
     };
     template <typename D>
+    struct consume_Microsoft_UI_Input_ITouchHitTestingEventArgs
+    {
+        [[nodiscard]] auto BoundingBox() const;
+        [[nodiscard]] auto Handled() const;
+        auto Handled(bool value) const;
+        [[nodiscard]] auto Point() const;
+        auto GetProximityEvaluation() const;
+        auto SetProximityEvaluation(winrt::Microsoft::UI::Input::ProximityEvaluation const& proximityEvaluation) const;
+        auto EvaluateProximityToRect(winrt::Windows::Foundation::Rect const& controlBoundingBox) const;
+        auto EvaluateProximityToPolygon(array_view<winrt::Windows::Foundation::Point const> controlVertices) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Input_ITouchHitTestingEventArgs<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_UI_Input_IWindowRectChangedEventArgs
     {
         [[nodiscard]] auto PointerScreenPoint() const;
@@ -2376,6 +2632,15 @@ namespace winrt::impl
     template <> struct abi<Microsoft::UI::Input::PhysicalKeyStatus>
     {
         using type = struct_Microsoft_UI_Input_PhysicalKeyStatus;
+    };
+    struct struct_Microsoft_UI_Input_ProximityEvaluation
+    {
+        int32_t Score;
+        winrt::Windows::Foundation::Point AdjustedPoint;
+    };
+    template <> struct abi<Microsoft::UI::Input::ProximityEvaluation>
+    {
+        using type = struct_Microsoft_UI_Input_ProximityEvaluation;
     };
 }
 #endif

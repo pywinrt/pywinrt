@@ -19,6 +19,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Composition::SystemBackdrops
 }
 WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml
 {
+    enum class ApplicationTheme : int32_t;
     struct DependencyObject;
     struct DependencyProperty;
     struct ExceptionRoutedEventHandler;
@@ -123,6 +124,12 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Media
         Miter = 0,
         Bevel = 1,
         Round = 2,
+    };
+    enum class RevealBrushState : int32_t
+    {
+        Normal = 0,
+        PointerOver = 1,
+        Pressed = 2,
     };
     enum class Stretch : int32_t
     {
@@ -232,6 +239,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Media
     struct IRectangleGeometryStatics;
     struct IRenderedEventArgs;
     struct IRenderingEventArgs;
+    struct IRevealBackgroundBrush;
+    struct IRevealBackgroundBrushFactory;
+    struct IRevealBorderBrush;
+    struct IRevealBorderBrushFactory;
+    struct IRevealBrush;
+    struct IRevealBrushProtectedFactory;
+    struct IRevealBrushStatics;
     struct IRotateTransform;
     struct IRotateTransformStatics;
     struct IScaleTransform;
@@ -317,6 +331,9 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Media
     struct RectangleGeometry;
     struct RenderedEventArgs;
     struct RenderingEventArgs;
+    struct RevealBackgroundBrush;
+    struct RevealBorderBrush;
+    struct RevealBrush;
     struct RotateTransform;
     struct ScaleTransform;
     struct Shadow;
@@ -425,6 +442,13 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Media::IRectangleGeometryStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Media::IRenderedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Media::IRenderingEventArgs>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Media::IRevealBackgroundBrush>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Media::IRevealBackgroundBrushFactory>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Media::IRevealBorderBrush>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Media::IRevealBorderBrushFactory>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Media::IRevealBrush>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Media::IRevealBrushProtectedFactory>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Media::IRevealBrushStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Media::IRotateTransform>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Media::IRotateTransformStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Media::IScaleTransform>{ using type = interface_category; };
@@ -510,6 +534,9 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Media::RectangleGeometry>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Media::RenderedEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Media::RenderingEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Media::RevealBackgroundBrush>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Media::RevealBorderBrush>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Media::RevealBrush>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Media::RotateTransform>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Media::ScaleTransform>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Media::Shadow>{ using type = class_category; };
@@ -536,6 +563,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Media::LoadedImageSourceLoadStatus>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Media::PenLineCap>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Media::PenLineJoin>{ using type = enum_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Media::RevealBrushState>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Media::Stretch>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Media::StyleSimulations>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Media::SweepDirection>{ using type = enum_category; };
@@ -588,6 +616,9 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Media::RectangleGeometry> = L"Microsoft.UI.Xaml.Media.RectangleGeometry";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Media::RenderedEventArgs> = L"Microsoft.UI.Xaml.Media.RenderedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Media::RenderingEventArgs> = L"Microsoft.UI.Xaml.Media.RenderingEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Media::RevealBackgroundBrush> = L"Microsoft.UI.Xaml.Media.RevealBackgroundBrush";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Media::RevealBorderBrush> = L"Microsoft.UI.Xaml.Media.RevealBorderBrush";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Media::RevealBrush> = L"Microsoft.UI.Xaml.Media.RevealBrush";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Media::RotateTransform> = L"Microsoft.UI.Xaml.Media.RotateTransform";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Media::ScaleTransform> = L"Microsoft.UI.Xaml.Media.ScaleTransform";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Media::Shadow> = L"Microsoft.UI.Xaml.Media.Shadow";
@@ -614,6 +645,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Media::LoadedImageSourceLoadStatus> = L"Microsoft.UI.Xaml.Media.LoadedImageSourceLoadStatus";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Media::PenLineCap> = L"Microsoft.UI.Xaml.Media.PenLineCap";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Media::PenLineJoin> = L"Microsoft.UI.Xaml.Media.PenLineJoin";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Media::RevealBrushState> = L"Microsoft.UI.Xaml.Media.RevealBrushState";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Media::Stretch> = L"Microsoft.UI.Xaml.Media.Stretch";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Media::StyleSimulations> = L"Microsoft.UI.Xaml.Media.StyleSimulations";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Media::SweepDirection> = L"Microsoft.UI.Xaml.Media.SweepDirection";
@@ -707,6 +739,13 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Media::IRectangleGeometryStatics> = L"Microsoft.UI.Xaml.Media.IRectangleGeometryStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Media::IRenderedEventArgs> = L"Microsoft.UI.Xaml.Media.IRenderedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Media::IRenderingEventArgs> = L"Microsoft.UI.Xaml.Media.IRenderingEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Media::IRevealBackgroundBrush> = L"Microsoft.UI.Xaml.Media.IRevealBackgroundBrush";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Media::IRevealBackgroundBrushFactory> = L"Microsoft.UI.Xaml.Media.IRevealBackgroundBrushFactory";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Media::IRevealBorderBrush> = L"Microsoft.UI.Xaml.Media.IRevealBorderBrush";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Media::IRevealBorderBrushFactory> = L"Microsoft.UI.Xaml.Media.IRevealBorderBrushFactory";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Media::IRevealBrush> = L"Microsoft.UI.Xaml.Media.IRevealBrush";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Media::IRevealBrushProtectedFactory> = L"Microsoft.UI.Xaml.Media.IRevealBrushProtectedFactory";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Media::IRevealBrushStatics> = L"Microsoft.UI.Xaml.Media.IRevealBrushStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Media::IRotateTransform> = L"Microsoft.UI.Xaml.Media.IRotateTransform";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Media::IRotateTransformStatics> = L"Microsoft.UI.Xaml.Media.IRotateTransformStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Media::IScaleTransform> = L"Microsoft.UI.Xaml.Media.IScaleTransform";
@@ -833,6 +872,13 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Media::IRectangleGeometryStatics>{ 0x1AE7AC26,0x8A8B,0x55A5,{ 0xB0,0x35,0x58,0x6E,0x2B,0x64,0x29,0x19 } }; // 1AE7AC26-8A8B-55A5-B035-586E2B642919
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Media::IRenderedEventArgs>{ 0xB268B885,0x118D,0x5B66,{ 0x80,0x99,0x3B,0x6B,0xB8,0x64,0x47,0x26 } }; // B268B885-118D-5B66-8099-3B6BB8644726
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Media::IRenderingEventArgs>{ 0xA67C8F8D,0x1885,0x5FC9,{ 0x97,0x5C,0x90,0x12,0x24,0xF7,0x9B,0x1E } }; // A67C8F8D-1885-5FC9-975C-901224F79B1E
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Media::IRevealBackgroundBrush>{ 0x3741D912,0xFC83,0x5C92,{ 0xA2,0x2F,0xEF,0xC2,0x95,0x88,0xB3,0x73 } }; // 3741D912-FC83-5C92-A22F-EFC29588B373
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Media::IRevealBackgroundBrushFactory>{ 0x7E6F2B0A,0xE70D,0x529F,{ 0x80,0x97,0x43,0xE0,0x23,0xF2,0x94,0x3B } }; // 7E6F2B0A-E70D-529F-8097-43E023F2943B
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Media::IRevealBorderBrush>{ 0xF85DBFCB,0x2EC6,0x5C73,{ 0xA8,0xBE,0x38,0x64,0xC9,0x80,0xB9,0x17 } }; // F85DBFCB-2EC6-5C73-A8BE-3864C980B917
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Media::IRevealBorderBrushFactory>{ 0xC677BDC2,0xF045,0x532C,{ 0xBB,0x13,0x3C,0xEE,0xE1,0x91,0x43,0xB2 } }; // C677BDC2-F045-532C-BB13-3CEEE19143B2
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Media::IRevealBrush>{ 0x30347330,0xA703,0x5086,{ 0xBD,0x82,0x4E,0x28,0xCE,0x83,0x32,0x33 } }; // 30347330-A703-5086-BD82-4E28CE833233
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Media::IRevealBrushProtectedFactory>{ 0x46A94F5B,0x8ABD,0x5571,{ 0xB0,0x49,0x7F,0x76,0xE3,0xF9,0x67,0xC9 } }; // 46A94F5B-8ABD-5571-B049-7F76E3F967C9
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Media::IRevealBrushStatics>{ 0xF44D7CCB,0x7A1E,0x5D64,{ 0xAB,0x82,0xA6,0xE5,0x29,0x0B,0xE8,0xD1 } }; // F44D7CCB-7A1E-5D64-AB82-A6E5290BE8D1
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Media::IRotateTransform>{ 0xD4686E7C,0xA374,0x5CAC,{ 0x89,0x27,0x0E,0xF0,0x7C,0x5B,0x25,0x4D } }; // D4686E7C-A374-5CAC-8927-0EF07C5B254D
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Media::IRotateTransformStatics>{ 0x8EC4C662,0x04F8,0x51D7,{ 0xBC,0xB2,0x17,0xF1,0x0C,0x2F,0xAA,0x38 } }; // 8EC4C662-04F8-51D7-BCB2-17F10C2FAA38
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Media::IScaleTransform>{ 0x94B064A4,0x34F0,0x5EF9,{ 0x8B,0x67,0x44,0x4F,0x56,0x99,0xF5,0x2A } }; // 94B064A4-34F0-5EF9-8B67-444F5699F52A
@@ -918,6 +964,9 @@ namespace winrt::impl
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Media::RectangleGeometry>{ using type = winrt::Microsoft::UI::Xaml::Media::IRectangleGeometry; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Media::RenderedEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Media::IRenderedEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Media::RenderingEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Media::IRenderingEventArgs; };
+    template <> struct default_interface<winrt::Microsoft::UI::Xaml::Media::RevealBackgroundBrush>{ using type = winrt::Microsoft::UI::Xaml::Media::IRevealBackgroundBrush; };
+    template <> struct default_interface<winrt::Microsoft::UI::Xaml::Media::RevealBorderBrush>{ using type = winrt::Microsoft::UI::Xaml::Media::IRevealBorderBrush; };
+    template <> struct default_interface<winrt::Microsoft::UI::Xaml::Media::RevealBrush>{ using type = winrt::Microsoft::UI::Xaml::Media::IRevealBrush; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Media::RotateTransform>{ using type = winrt::Microsoft::UI::Xaml::Media::IRotateTransform; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Media::ScaleTransform>{ using type = winrt::Microsoft::UI::Xaml::Media::IScaleTransform; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Media::Shadow>{ using type = winrt::Microsoft::UI::Xaml::Media::IShadow; };
@@ -1752,6 +1801,63 @@ namespace winrt::impl
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
             virtual int32_t __stdcall get_RenderingTime(int64_t*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Media::IRevealBackgroundBrush>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Media::IRevealBackgroundBrushFactory>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall CreateInstance(void*, void**, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Media::IRevealBorderBrush>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Media::IRevealBorderBrushFactory>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall CreateInstance(void*, void**, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Media::IRevealBrush>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_Color(struct struct_Windows_UI_Color*) noexcept = 0;
+            virtual int32_t __stdcall put_Color(struct struct_Windows_UI_Color) noexcept = 0;
+            virtual int32_t __stdcall get_TargetTheme(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall put_TargetTheme(int32_t) noexcept = 0;
+            virtual int32_t __stdcall get_AlwaysUseFallback(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_AlwaysUseFallback(bool) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Media::IRevealBrushProtectedFactory>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall CreateInstance(void*, void**, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Media::IRevealBrushStatics>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_ColorProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_TargetThemeProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_AlwaysUseFallbackProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_StateProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall SetState(void*, int32_t) noexcept = 0;
+            virtual int32_t __stdcall GetState(void*, int32_t*) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Media::IRotateTransform>
@@ -3078,6 +3184,77 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Xaml::Media::IRenderingEventArgs>
     {
         template <typename D> using type = consume_Microsoft_UI_Xaml_Media_IRenderingEventArgs<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Media_IRevealBackgroundBrush
+    {
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Media::IRevealBackgroundBrush>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Media_IRevealBackgroundBrush<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Media_IRevealBackgroundBrushFactory
+    {
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Media::IRevealBackgroundBrushFactory>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Media_IRevealBackgroundBrushFactory<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Media_IRevealBorderBrush
+    {
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Media::IRevealBorderBrush>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Media_IRevealBorderBrush<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Media_IRevealBorderBrushFactory
+    {
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Media::IRevealBorderBrushFactory>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Media_IRevealBorderBrushFactory<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Media_IRevealBrush
+    {
+        [[nodiscard]] auto Color() const;
+        auto Color(winrt::Windows::UI::Color const& value) const;
+        [[nodiscard]] auto TargetTheme() const;
+        auto TargetTheme(winrt::Microsoft::UI::Xaml::ApplicationTheme const& value) const;
+        [[nodiscard]] auto AlwaysUseFallback() const;
+        auto AlwaysUseFallback(bool value) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Media::IRevealBrush>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Media_IRevealBrush<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Media_IRevealBrushProtectedFactory
+    {
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Media::IRevealBrushProtectedFactory>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Media_IRevealBrushProtectedFactory<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Media_IRevealBrushStatics
+    {
+        [[nodiscard]] auto ColorProperty() const;
+        [[nodiscard]] auto TargetThemeProperty() const;
+        [[nodiscard]] auto AlwaysUseFallbackProperty() const;
+        [[nodiscard]] auto StateProperty() const;
+        auto SetState(winrt::Microsoft::UI::Xaml::UIElement const& element, winrt::Microsoft::UI::Xaml::Media::RevealBrushState const& value) const;
+        auto GetState(winrt::Microsoft::UI::Xaml::UIElement const& element) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Media::IRevealBrushStatics>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Media_IRevealBrushStatics<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Xaml_Media_IRotateTransform

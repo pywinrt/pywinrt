@@ -34,6 +34,7 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::Widgets::Feeds::Providers
     struct IFeedErrorInfoReportedArgs;
     struct IFeedManager;
     struct IFeedManager2;
+    struct IFeedManager3;
     struct IFeedManagerStatics;
     struct IFeedMessageReceivedArgs;
     struct IFeedProvider;
@@ -75,6 +76,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedErrorInfoReportedArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager2>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager3>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManagerStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedMessageReceivedArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProvider>{ using type = interface_category; };
@@ -127,6 +129,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedErrorInfoReportedArgs> = L"Microsoft.Windows.Widgets.Feeds.Providers.IFeedErrorInfoReportedArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager> = L"Microsoft.Windows.Widgets.Feeds.Providers.IFeedManager";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager2> = L"Microsoft.Windows.Widgets.Feeds.Providers.IFeedManager2";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager3> = L"Microsoft.Windows.Widgets.Feeds.Providers.IFeedManager3";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManagerStatics> = L"Microsoft.Windows.Widgets.Feeds.Providers.IFeedManagerStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedMessageReceivedArgs> = L"Microsoft.Windows.Widgets.Feeds.Providers.IFeedMessageReceivedArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProvider> = L"Microsoft.Windows.Widgets.Feeds.Providers.IFeedProvider";
@@ -151,6 +154,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedErrorInfoReportedArgs>{ 0x62DE018C,0x161E,0x52D0,{ 0x9D,0xBE,0xAE,0xC1,0x06,0xFB,0x66,0x00 } }; // 62DE018C-161E-52D0-9DBE-AEC106FB6600
     template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager>{ 0x87DF6A84,0x15AA,0x45CB,{ 0x89,0x11,0x5C,0xAF,0xAB,0x57,0xF7,0x23 } }; // 87DF6A84-15AA-45CB-8911-5CAFAB57F723
     template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager2>{ 0x5838300A,0xA069,0x455D,{ 0x99,0x43,0xBA,0x07,0x8A,0xDA,0x00,0xD8 } }; // 5838300A-A069-455D-9943-BA078ADA00D8
+    template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager3>{ 0xA6AF915B,0x0CDC,0x46F1,{ 0xA4,0xD6,0x10,0xD8,0xC6,0x44,0x98,0x4A } }; // A6AF915B-0CDC-46F1-A4D6-10D8C644984A
     template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManagerStatics>{ 0x4BAF5174,0x77D6,0x5E2A,{ 0x94,0xEA,0x4F,0x14,0xCC,0xDB,0x1F,0x2C } }; // 4BAF5174-77D6-5E2A-94EA-4F14CCDB1F2C
     template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedMessageReceivedArgs>{ 0x4ED6ECF9,0x4C74,0x5A0B,{ 0xAE,0x04,0xBE,0xF6,0xDD,0x77,0x6F,0x8A } }; // 4ED6ECF9-4C74-5A0B-AE04-BEF6DD776F8A
     template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProvider>{ 0x7293A12B,0x0329,0x458D,{ 0xAC,0x25,0x53,0x32,0xBE,0x47,0x8F,0xDE } }; // 7293A12B-0329-458D-AC25-5332BE478FDE
@@ -256,6 +260,13 @@ namespace winrt::impl
         {
             virtual int32_t __stdcall SendMessageToContent(void*, void*, void*) noexcept = 0;
             virtual int32_t __stdcall TryShowAnnouncement(void*, void*, void*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager3>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall TryRemoveAnnouncementById(void*, void*, void*) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManagerStatics>
@@ -476,6 +487,15 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager2>
     {
         template <typename D> using type = consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedManager2<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedManager3
+    {
+        auto TryRemoveAnnouncementById(param::hstring const& feedProviderDefinitionId, param::hstring const& feedDefinitionId, param::hstring const& announcementId) const;
+    };
+    template <> struct consume<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager3>
+    {
+        template <typename D> using type = consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedManager3<D>;
     };
     template <typename D>
     struct consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedManagerStatics

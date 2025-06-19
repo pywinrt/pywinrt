@@ -35698,6 +35698,136 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
+    static PyObject* ScrollPresenter_add_ScrollStarting(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ScrollStarting");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter, winrt::Microsoft::UI::Xaml::Controls::ScrollingScrollStartingEventArgs>>(arg);
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ScrollStarting(param0);
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ScrollPresenter_remove_ScrollStarting(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ScrollStarting");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ScrollStarting(param0);
+            }
+
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ScrollPresenter_add_ZoomStarting(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ZoomStarting");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter, winrt::Microsoft::UI::Xaml::Controls::ScrollingZoomStartingEventArgs>>(arg);
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ZoomStarting(param0);
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ScrollPresenter_remove_ZoomStarting(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter", L"ZoomStarting");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>().ZoomStarting(param0);
+            }
+
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_ScrollPresenter(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>>();
@@ -35753,6 +35883,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { "remove_zoom_animation_starting", reinterpret_cast<PyCFunction>(ScrollPresenter_remove_ZoomAnimationStarting), METH_O, nullptr },
         { "add_zoom_completed", reinterpret_cast<PyCFunction>(ScrollPresenter_add_ZoomCompleted), METH_O, nullptr },
         { "remove_zoom_completed", reinterpret_cast<PyCFunction>(ScrollPresenter_remove_ZoomCompleted), METH_O, nullptr },
+        { "add_scroll_starting", reinterpret_cast<PyCFunction>(ScrollPresenter_add_ScrollStarting), METH_O, nullptr },
+        { "remove_scroll_starting", reinterpret_cast<PyCFunction>(ScrollPresenter_remove_ScrollStarting), METH_O, nullptr },
+        { "add_zoom_starting", reinterpret_cast<PyCFunction>(ScrollPresenter_add_ZoomStarting), METH_O, nullptr },
+        { "remove_zoom_starting", reinterpret_cast<PyCFunction>(ScrollPresenter_remove_ZoomStarting), METH_O, nullptr },
         { "_assign_array_", _assign_array_ScrollPresenter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ScrollPresenter), METH_O | METH_STATIC, nullptr },
         { }};

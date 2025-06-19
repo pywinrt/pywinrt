@@ -55,6 +55,8 @@ class DeploymentManager_Static(winrt._winrt.IInspectable_Static):
     @typing.overload
     # Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentResult Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentManager::Initialize(Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentInitializeOptions)
     def initialize(cls, deployment_initialize_options: DeploymentInitializeOptions, /) -> DeploymentResult: ...
+    # Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentResult Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentManager::Repair()
+    def repair(cls) -> DeploymentResult: ...
 
 @typing.final
 class DeploymentManager(winrt.system.Object, metaclass=DeploymentManager_Static):

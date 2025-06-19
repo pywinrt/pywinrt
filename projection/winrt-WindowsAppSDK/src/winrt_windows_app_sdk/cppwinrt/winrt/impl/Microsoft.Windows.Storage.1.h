@@ -27,5 +27,12 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::Storage
         IApplicationDataStatics(std::nullptr_t = nullptr) noexcept {}
         IApplicationDataStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IApplicationDataStatics2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IApplicationDataStatics2>
+    {
+        IApplicationDataStatics2(std::nullptr_t = nullptr) noexcept {}
+        IApplicationDataStatics2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
 }
 #endif

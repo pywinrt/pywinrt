@@ -8,7 +8,9 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Foundation.Numerics.h>
 #include <winrt/Windows.Graphics.h>
+#include <winrt/Windows.UI.h>
 #include <winrt/Windows.UI.Composition.h>
+#include <winrt/Windows.UI.Core.h>
 #include <winrt/Microsoft.UI.h>
 #include <winrt/Microsoft.UI.Composition.h>
 #include <winrt/Microsoft.UI.Dispatching.h>
@@ -26,6 +28,9 @@ namespace py
 
     template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::UI::Content::ContentCoordinateRoundingMode> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Content::ContentDisplayOrientations> = "I";
 
     template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::UI::Content::ContentLayoutDirection> = "i";
@@ -51,6 +56,14 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Microsoft::UI::Content::ContentDisplayOrientations>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content.ContentDisplayOrientations";
+        static constexpr const char* module_name = "winui3.microsoft.ui.content";
+        static constexpr const char* type_name = "ContentDisplayOrientations";
+    };
+
+    template<>
     struct py_type<winrt::Microsoft::UI::Content::ContentLayoutDirection>
     {
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content.ContentLayoutDirection";
@@ -72,6 +85,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content.ChildSiteLink";
         static constexpr const char* module_name = "winui3.microsoft.ui.content";
         static constexpr const char* type_name = "ChildSiteLink";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Content::ContentAppWindowBridge>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content.ContentAppWindowBridge";
+        static constexpr const char* module_name = "winui3.microsoft.ui.content";
+        static constexpr const char* type_name = "ContentAppWindowBridge";
     };
 
     template<>
@@ -104,6 +125,22 @@ namespace py
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content.ContentEnvironmentStateChangedEventArgs";
         static constexpr const char* module_name = "winui3.microsoft.ui.content";
         static constexpr const char* type_name = "ContentEnvironmentStateChangedEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Content::ContentExternalBackdropLink>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content.ContentExternalBackdropLink";
+        static constexpr const char* module_name = "winui3.microsoft.ui.content";
+        static constexpr const char* type_name = "ContentExternalBackdropLink";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Content::ContentExternalOutputLink>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content.ContentExternalOutputLink";
+        static constexpr const char* module_name = "winui3.microsoft.ui.content";
+        static constexpr const char* type_name = "ContentExternalOutputLink";
     };
 
     template<>
@@ -187,6 +224,22 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Microsoft::UI::Content::CoreWindowSiteBridge>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content.CoreWindowSiteBridge";
+        static constexpr const char* module_name = "winui3.microsoft.ui.content";
+        static constexpr const char* type_name = "CoreWindowSiteBridge";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Content::CoreWindowTopLevelWindowBridge>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content.CoreWindowTopLevelWindowBridge";
+        static constexpr const char* module_name = "winui3.microsoft.ui.content";
+        static constexpr const char* type_name = "CoreWindowTopLevelWindowBridge";
+    };
+
+    template<>
     struct py_type<winrt::Microsoft::UI::Content::DesktopAttachedSiteBridge>
     {
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content.DesktopAttachedSiteBridge";
@@ -219,6 +272,62 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Microsoft::UI::Content::EndpointConnectionEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content.EndpointConnectionEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.content";
+        static constexpr const char* type_name = "EndpointConnectionEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Content::EndpointRequestedStateChangedEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content.EndpointRequestedStateChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.content";
+        static constexpr const char* type_name = "EndpointRequestedStateChangedEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Content::PopupWindowSiteBridge>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content.PopupWindowSiteBridge";
+        static constexpr const char* module_name = "winui3.microsoft.ui.content";
+        static constexpr const char* type_name = "PopupWindowSiteBridge";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Content::ProcessStarter>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content.ProcessStarter";
+        static constexpr const char* module_name = "winui3.microsoft.ui.content";
+        static constexpr const char* type_name = "ProcessStarter";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Content::SystemVisualSiteBridge>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content.SystemVisualSiteBridge";
+        static constexpr const char* module_name = "winui3.microsoft.ui.content";
+        static constexpr const char* type_name = "SystemVisualSiteBridge";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Content::IContentIslandEndpointConnectionPrivate>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content._IContentIslandEndpointConnectionPrivate";
+        static constexpr const char* module_name = "winui3.microsoft.ui.content";
+        static constexpr const char* type_name = "_IContentIslandEndpointConnectionPrivate";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Content::IContentNodeOwner>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content._IContentNodeOwner";
+        static constexpr const char* module_name = "winui3.microsoft.ui.content";
+        static constexpr const char* type_name = "_IContentNodeOwner";
+    };
+
+    template<>
     struct py_type<winrt::Microsoft::UI::Content::IContentSiteAutomation>
     {
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content._IContentSiteAutomation";
@@ -232,6 +341,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content._IContentSiteBridge";
         static constexpr const char* module_name = "winui3.microsoft.ui.content";
         static constexpr const char* type_name = "_IContentSiteBridge";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content._IContentSiteBridgeEndpointConnectionPrivate";
+        static constexpr const char* module_name = "winui3.microsoft.ui.content";
+        static constexpr const char* type_name = "_IContentSiteBridgeEndpointConnectionPrivate";
     };
 
     template<>
@@ -267,8 +384,16 @@ namespace py
 #include "py.Windows.Graphics.h"
 #endif
 
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
 #if __has_include("py.Windows.UI.Composition.h")
 #include "py.Windows.UI.Composition.h"
+#endif
+
+#if __has_include("py.Windows.UI.Core.h")
+#include "py.Windows.UI.Core.h"
 #endif
 
 #if __has_include("py.Microsoft.UI.h")
@@ -290,10 +415,13 @@ namespace py::impl::Microsoft::UI::Content
 namespace py::wrapper::Microsoft::UI::Content
 {
     using ChildSiteLink = py::winrt_wrapper<winrt::Microsoft::UI::Content::ChildSiteLink>;
+    using ContentAppWindowBridge = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentAppWindowBridge>;
     using ContentCoordinateConverter = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentCoordinateConverter>;
     using ContentDeferral = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentDeferral>;
     using ContentEnvironmentSettingChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentEnvironmentSettingChangedEventArgs>;
     using ContentEnvironmentStateChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentEnvironmentStateChangedEventArgs>;
+    using ContentExternalBackdropLink = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentExternalBackdropLink>;
+    using ContentExternalOutputLink = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentExternalOutputLink>;
     using ContentIsland = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentIsland>;
     using ContentIslandAutomationProviderRequestedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentIslandAutomationProviderRequestedEventArgs>;
     using ContentIslandEnvironment = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentIslandEnvironment>;
@@ -304,12 +432,22 @@ namespace py::wrapper::Microsoft::UI::Content
     using ContentSiteEnvironmentView = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentSiteEnvironmentView>;
     using ContentSiteRequestedStateChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentSiteRequestedStateChangedEventArgs>;
     using ContentSiteView = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentSiteView>;
+    using CoreWindowSiteBridge = py::winrt_wrapper<winrt::Microsoft::UI::Content::CoreWindowSiteBridge>;
+    using CoreWindowTopLevelWindowBridge = py::winrt_wrapper<winrt::Microsoft::UI::Content::CoreWindowTopLevelWindowBridge>;
     using DesktopAttachedSiteBridge = py::winrt_wrapper<winrt::Microsoft::UI::Content::DesktopAttachedSiteBridge>;
     using DesktopChildSiteBridge = py::winrt_wrapper<winrt::Microsoft::UI::Content::DesktopChildSiteBridge>;
     using DesktopPopupSiteBridge = py::winrt_wrapper<winrt::Microsoft::UI::Content::DesktopPopupSiteBridge>;
     using DesktopSiteBridge = py::winrt_wrapper<winrt::Microsoft::UI::Content::DesktopSiteBridge>;
+    using EndpointConnectionEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Content::EndpointConnectionEventArgs>;
+    using EndpointRequestedStateChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Content::EndpointRequestedStateChangedEventArgs>;
+    using PopupWindowSiteBridge = py::winrt_wrapper<winrt::Microsoft::UI::Content::PopupWindowSiteBridge>;
+    using ProcessStarter = py::winrt_wrapper<winrt::Microsoft::UI::Content::ProcessStarter>;
+    using SystemVisualSiteBridge = py::winrt_wrapper<winrt::Microsoft::UI::Content::SystemVisualSiteBridge>;
+    using IContentIslandEndpointConnectionPrivate = py::winrt_wrapper<winrt::Microsoft::UI::Content::IContentIslandEndpointConnectionPrivate>;
+    using IContentNodeOwner = py::winrt_wrapper<winrt::Microsoft::UI::Content::IContentNodeOwner>;
     using IContentSiteAutomation = py::winrt_wrapper<winrt::Microsoft::UI::Content::IContentSiteAutomation>;
     using IContentSiteBridge = py::winrt_wrapper<winrt::Microsoft::UI::Content::IContentSiteBridge>;
+    using IContentSiteBridgeEndpointConnectionPrivate = py::winrt_wrapper<winrt::Microsoft::UI::Content::IContentSiteBridgeEndpointConnectionPrivate>;
     using IContentSiteInput = py::winrt_wrapper<winrt::Microsoft::UI::Content::IContentSiteInput>;
     using IContentSiteLink = py::winrt_wrapper<winrt::Microsoft::UI::Content::IContentSiteLink>;
 }

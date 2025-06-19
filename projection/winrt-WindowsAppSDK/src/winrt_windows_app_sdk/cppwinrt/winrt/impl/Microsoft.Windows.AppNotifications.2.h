@@ -6,7 +6,8 @@
 #include "winrt/impl/Microsoft.Windows.AppNotifications.1.h"
 WINRT_EXPORT namespace winrt::Microsoft::Windows::AppNotifications
 {
-    struct WINRT_IMPL_EMPTY_BASES AppNotification : winrt::Microsoft::Windows::AppNotifications::IAppNotification
+    struct WINRT_IMPL_EMPTY_BASES AppNotification : winrt::Microsoft::Windows::AppNotifications::IAppNotification,
+        impl::require<AppNotification, winrt::Microsoft::Windows::AppNotifications::IAppNotification2>
     {
         AppNotification(std::nullptr_t) noexcept {}
         AppNotification(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Windows::AppNotifications::IAppNotification(ptr, take_ownership_from_abi) {}
@@ -17,6 +18,13 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::AppNotifications
     {
         AppNotificationActivatedEventArgs(std::nullptr_t) noexcept {}
         AppNotificationActivatedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Windows::AppNotifications::IAppNotificationActivatedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES AppNotificationConferencingConfig : winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfig
+    {
+        AppNotificationConferencingConfig(std::nullptr_t) noexcept {}
+        AppNotificationConferencingConfig(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Windows::AppNotifications::IAppNotificationConferencingConfig(ptr, take_ownership_from_abi) {}
+        AppNotificationConferencingConfig();
+        static auto IsCallingPreviewSupported();
     };
     struct WINRT_IMPL_EMPTY_BASES AppNotificationManager : winrt::Microsoft::Windows::AppNotifications::IAppNotificationManager,
         impl::require<AppNotificationManager, winrt::Microsoft::Windows::AppNotifications::IAppNotificationManager2>

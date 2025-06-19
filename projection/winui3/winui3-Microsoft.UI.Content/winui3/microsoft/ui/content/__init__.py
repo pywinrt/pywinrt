@@ -5,10 +5,13 @@ import enum
 import winrt.system
 from winui3._winui3_microsoft_ui_content import (
     ChildSiteLink,
+    ContentAppWindowBridge,
     ContentCoordinateConverter,
     ContentDeferral,
     ContentEnvironmentSettingChangedEventArgs,
     ContentEnvironmentStateChangedEventArgs,
+    ContentExternalBackdropLink,
+    ContentExternalOutputLink,
     ContentIsland,
     ContentIslandAutomationProviderRequestedEventArgs,
     ContentIslandEnvironment,
@@ -19,14 +22,27 @@ from winui3._winui3_microsoft_ui_content import (
     ContentSiteEnvironmentView,
     ContentSiteRequestedStateChangedEventArgs,
     ContentSiteView,
+    CoreWindowSiteBridge,
+    CoreWindowTopLevelWindowBridge,
     DesktopAttachedSiteBridge,
     DesktopChildSiteBridge,
     DesktopPopupSiteBridge,
     DesktopSiteBridge,
+    EndpointConnectionEventArgs,
+    EndpointRequestedStateChangedEventArgs,
+    PopupWindowSiteBridge,
+    ProcessStarter,
+    SystemVisualSiteBridge,
+    _IContentIslandEndpointConnectionPrivate,
+    IContentIslandEndpointConnectionPrivate,
+    _IContentNodeOwner,
+    IContentNodeOwner,
     _IContentSiteAutomation,
     IContentSiteAutomation,
     _IContentSiteBridge,
     IContentSiteBridge,
+    _IContentSiteBridgeEndpointConnectionPrivate,
+    IContentSiteBridgeEndpointConnectionPrivate,
     _IContentSiteInput,
     IContentSiteInput,
     _IContentSiteLink,
@@ -43,18 +59,23 @@ if TYPE_CHECKING:
         ContentSiteEnvironmentView_Static,
         ContentSiteView_Static,
         DesktopSiteBridge_Static,
+        ProcessStarter_Static,
     )
 
 __all__ = [
     "ContentAutomationOptions",
     "ContentCoordinateRoundingMode",
+    "ContentDisplayOrientations",
     "ContentLayoutDirection",
     "ContentSizePolicy",
     "ChildSiteLink",
+    "ContentAppWindowBridge",
     "ContentCoordinateConverter",
     "ContentDeferral",
     "ContentEnvironmentSettingChangedEventArgs",
     "ContentEnvironmentStateChangedEventArgs",
+    "ContentExternalBackdropLink",
+    "ContentExternalOutputLink",
     "ContentIsland",
     "ContentIslandAutomationProviderRequestedEventArgs",
     "ContentIslandEnvironment",
@@ -65,12 +86,22 @@ __all__ = [
     "ContentSiteEnvironmentView",
     "ContentSiteRequestedStateChangedEventArgs",
     "ContentSiteView",
+    "CoreWindowSiteBridge",
+    "CoreWindowTopLevelWindowBridge",
     "DesktopAttachedSiteBridge",
     "DesktopChildSiteBridge",
     "DesktopPopupSiteBridge",
     "DesktopSiteBridge",
+    "EndpointConnectionEventArgs",
+    "EndpointRequestedStateChangedEventArgs",
+    "PopupWindowSiteBridge",
+    "ProcessStarter",
+    "SystemVisualSiteBridge",
+    "IContentIslandEndpointConnectionPrivate",
+    "IContentNodeOwner",
     "IContentSiteAutomation",
     "IContentSiteBridge",
+    "IContentSiteBridgeEndpointConnectionPrivate",
     "IContentSiteInput",
     "IContentSiteLink",
 ]
@@ -85,6 +116,13 @@ class ContentCoordinateRoundingMode(enum.IntEnum):
     FLOOR = 1
     ROUND = 2
     CEILING = 3
+
+class ContentDisplayOrientations(enum.IntFlag):
+    NONE = 0x0
+    LANDSCAPE = 0x1
+    PORTRAIT = 0x2
+    LANDSCAPE_FLIPPED = 0x4
+    PORTRAIT_FLIPPED = 0x8
 
 class ContentLayoutDirection(enum.IntEnum):
     LEFT_TO_RIGHT = 0

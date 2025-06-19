@@ -7,6 +7,7 @@ import uuid as _uuid
 import winrt.runtime._internals
 import winrt.system
 from winui3._winui3_microsoft_ui_xaml_controls import (
+    FlowLayoutAnchorInfo,
     AnchorRequestedEventArgs,
     AnimatedIcon,
     AnimatedIconSource,
@@ -70,10 +71,13 @@ from winui3._winui3_microsoft_ui_xaml_controls import (
     DragItemsCompletedEventArgs,
     DragItemsStartingEventArgs,
     DynamicOverflowItemsChangingEventArgs,
+    ElementFactory,
     Expander,
     ExpanderCollapsedEventArgs,
     ExpanderExpandingEventArgs,
     ExpanderTemplateSettings,
+    FlowLayout,
+    FlowLayoutState,
     FlyoutPresenter,
     FocusDisengagedEventArgs,
     FocusEngagedEventArgs,
@@ -96,12 +100,15 @@ from winui3._winui3_microsoft_ui_xaml_controls import (
     Image,
     ImageIcon,
     ImageIconSource,
+    IndexPath,
     InfoBadge,
     InfoBadgeTemplateSettings,
     InfoBar,
     InfoBarClosedEventArgs,
     InfoBarClosingEventArgs,
+    InfoBarOpenedEventArgs,
     InfoBarTemplateSettings,
+    InkCanvas,
     IsTextTrimmedChangedEventArgs,
     ItemClickEventArgs,
     ItemCollection,
@@ -111,6 +118,7 @@ from winui3._winui3_microsoft_ui_xaml_controls import (
     ItemCollectionTransitionProvider,
     ItemContainer,
     ItemContainerGenerator,
+    ItemContainerInvokedEventArgs,
     ItemsControl,
     ItemsPanelTemplate,
     ItemsPickedEventArgs,
@@ -128,6 +136,7 @@ from winui3._winui3_microsoft_ui_xaml_controls import (
     ItemsWrapGrid,
     Layout,
     LayoutContext,
+    LayoutPanel,
     LinedFlowLayout,
     LinedFlowLayoutItemCollectionTransitionProvider,
     LinedFlowLayoutItemsInfoRequestedEventArgs,
@@ -171,6 +180,9 @@ from winui3._winui3_microsoft_ui_xaml_controls import (
     NumberBox,
     NumberBoxValueChangedEventArgs,
     Page,
+    PagerControl,
+    PagerControlSelectedIndexChangedEventArgs,
+    PagerControlTemplateSettings,
     Panel,
     ParallaxView,
     PasswordBox,
@@ -196,6 +208,8 @@ from winui3._winui3_microsoft_ui_xaml_controls import (
     RatingItemFontInfo,
     RatingItemImageInfo,
     RatingItemInfo,
+    RecyclePool,
+    RecyclingElementFactory,
     RefreshContainer,
     RefreshInteractionRatioChangedEventArgs,
     RefreshRequestedEventArgs,
@@ -220,11 +234,17 @@ from winui3._winui3_microsoft_ui_xaml_controls import (
     ScrollingScrollAnimationStartingEventArgs,
     ScrollingScrollCompletedEventArgs,
     ScrollingScrollOptions,
+    ScrollingScrollStartingEventArgs,
     ScrollingZoomAnimationStartingEventArgs,
     ScrollingZoomCompletedEventArgs,
     ScrollingZoomOptions,
+    ScrollingZoomStartingEventArgs,
     SectionsInViewChangedEventArgs,
+    SelectTemplateEventArgs,
     SelectionChangedEventArgs,
+    SelectionModel,
+    SelectionModelChildrenRequestedEventArgs,
+    SelectionModelSelectionChangedEventArgs,
     SelectorBar,
     SelectorBarItem,
     SelectorBarSelectionChangedEventArgs,
@@ -236,6 +256,7 @@ from winui3._winui3_microsoft_ui_xaml_controls import (
     SplitView,
     SplitViewPaneClosingEventArgs,
     StackLayout,
+    StackLayoutState,
     StackPanel,
     StyleSelector,
     SwapChainBackgroundPanel,
@@ -259,6 +280,7 @@ from winui3._winui3_microsoft_ui_xaml_controls import (
     TeachingTip,
     TeachingTipClosedEventArgs,
     TeachingTipClosingEventArgs,
+    TeachingTipOpenedEventArgs,
     TeachingTipTemplateSettings,
     TextBlock,
     TextBox,
@@ -298,6 +320,7 @@ from winui3._winui3_microsoft_ui_xaml_controls import (
     TwoPaneView,
     UIElementCollection,
     UniformGridLayout,
+    UniformGridLayoutState,
     UserControl,
     VariableSizedWrapGrid,
     Viewbox,
@@ -316,6 +339,8 @@ from winui3._winui3_microsoft_ui_xaml_controls import (
     IAnimatedVisualSource2,
     _IAnimatedVisualSource3,
     IAnimatedVisualSource3,
+    _IApplicationViewSpanningRects,
+    IApplicationViewSpanningRects,
     _ICommandBarElement,
     ICommandBarElement,
     _IDynamicAnimatedVisualSource,
@@ -330,6 +355,8 @@ from winui3._winui3_microsoft_ui_xaml_controls import (
     INavigate,
     _IScrollAnchorProvider,
     IScrollAnchorProvider,
+    _ISelfPlayingAnimatedVisual,
+    ISelfPlayingAnimatedVisual,
     _ISemanticZoomInformation,
     ISemanticZoomInformation,
 )
@@ -360,7 +387,10 @@ if TYPE_CHECKING:
         Control_Static,
         DataTemplateSelector_Static,
         DatePicker_Static,
+        ElementFactory_Static,
         Expander_Static,
+        FlowLayout_Static,
+        FlowLayoutState_Static,
         FlyoutPresenter_Static,
         FontIcon_Static,
         FontIconSource_Static,
@@ -382,7 +412,9 @@ if TYPE_CHECKING:
         InfoBar_Static,
         InfoBarClosedEventArgs_Static,
         InfoBarClosingEventArgs_Static,
+        InfoBarOpenedEventArgs_Static,
         InfoBarTemplateSettings_Static,
+        InkCanvas_Static,
         ItemCollectionTransitionProvider_Static,
         ItemContainer_Static,
         ItemsControl_Static,
@@ -392,6 +424,7 @@ if TYPE_CHECKING:
         ItemsWrapGrid_Static,
         Layout_Static,
         LayoutContext_Static,
+        LayoutPanel_Static,
         LinedFlowLayout_Static,
         LinedFlowLayoutItemCollectionTransitionProvider_Static,
         ListViewBaseHeaderItem_Static,
@@ -420,6 +453,8 @@ if TYPE_CHECKING:
         NonVirtualizingLayoutContext_Static,
         NumberBox_Static,
         Page_Static,
+        PagerControl_Static,
+        PagerControlTemplateSettings_Static,
         Panel_Static,
         ParallaxView_Static,
         PathIcon_Static,
@@ -435,6 +470,8 @@ if TYPE_CHECKING:
         RatingItemFontInfo_Static,
         RatingItemImageInfo_Static,
         RatingItemInfo_Static,
+        RecyclePool_Static,
+        RecyclingElementFactory_Static,
         RefreshContainer_Static,
         RefreshVisualizer_Static,
         RelativePanel_Static,
@@ -444,11 +481,13 @@ if TYPE_CHECKING:
         ScrollingZoomOptions_Static,
         SectionsInViewChangedEventArgs_Static,
         SelectionChangedEventArgs_Static,
+        SelectionModel_Static,
         SelectorBar_Static,
         SelectorBarItem_Static,
         SplitButton_Static,
         SplitView_Static,
         StackLayout_Static,
+        StackLayoutState_Static,
         StackPanel_Static,
         StyleSelector_Static,
         SwapChainBackgroundPanel_Static,
@@ -474,6 +513,7 @@ if TYPE_CHECKING:
         TreeViewNode_Static,
         TwoPaneView_Static,
         UniformGridLayout_Static,
+        UniformGridLayoutState_Static,
         UserControl_Static,
         VirtualizingLayout_Static,
         VirtualizingLayoutContext_Static,
@@ -553,6 +593,7 @@ if TYPE_CHECKING:
 
 if typing.TYPE_CHECKING:
     import winrt.windows.foundation as windows_foundation
+    import winrt.windows.ui.input.inking as windows_ui_input_inking
 
 __all__ = [
     "AnnotatedScrollBarScrollingEventKind",
@@ -578,12 +619,17 @@ __all__ = [
     "DisabledFormattingAccelerators",
     "ElementRealizationOptions",
     "ExpandDirection",
+    "FlowLayoutLineAlignment",
     "IncrementalLoadingTrigger",
     "IndexBasedLayoutOrientation",
     "InfoBarCloseReason",
     "InfoBarSeverity",
     "ItemCollectionTransitionOperation",
     "ItemCollectionTransitionTriggers",
+    "ItemContainerInteractionTrigger",
+    "ItemContainerMultiSelectMode",
+    "ItemContainerUserInvokeMode",
+    "ItemContainerUserSelectMode",
     "ItemsUpdatingScrollMode",
     "ItemsViewSelectionMode",
     "LightDismissOverlayMode",
@@ -601,6 +647,8 @@ __all__ = [
     "NumberBoxSpinButtonPlacementMode",
     "NumberBoxValidationMode",
     "Orientation",
+    "PagerControlButtonVisibility",
+    "PagerControlDisplayMode",
     "PanelScrollingDirection",
     "ParallaxSourceOffsetKind",
     "PasswordRevealMode",
@@ -650,6 +698,7 @@ __all__ = [
     "UniformGridLayoutItemsStretch",
     "VirtualizationMode",
     "ZoomMode",
+    "FlowLayoutAnchorInfo",
     "AnchorRequestedEventArgs",
     "AnimatedIcon",
     "AnimatedIconSource",
@@ -722,12 +771,15 @@ __all__ = [
     "DragItemsStartingEventArgs",
     "DropDownButton",
     "DynamicOverflowItemsChangingEventArgs",
+    "ElementFactory",
     "Expander",
     "ExpanderCollapsedEventArgs",
     "ExpanderExpandingEventArgs",
     "ExpanderTemplateSettings",
     "FlipView",
     "FlipViewItem",
+    "FlowLayout",
+    "FlowLayoutState",
     "Flyout",
     "FlyoutPresenter",
     "FocusDisengagedEventArgs",
@@ -754,12 +806,15 @@ __all__ = [
     "Image",
     "ImageIcon",
     "ImageIconSource",
+    "IndexPath",
     "InfoBadge",
     "InfoBadgeTemplateSettings",
     "InfoBar",
     "InfoBarClosedEventArgs",
     "InfoBarClosingEventArgs",
+    "InfoBarOpenedEventArgs",
     "InfoBarTemplateSettings",
+    "InkCanvas",
     "IsTextTrimmedChangedEventArgs",
     "ItemClickEventArgs",
     "ItemCollection",
@@ -769,6 +824,7 @@ __all__ = [
     "ItemCollectionTransitionProvider",
     "ItemContainer",
     "ItemContainerGenerator",
+    "ItemContainerInvokedEventArgs",
     "ItemsControl",
     "ItemsPanelTemplate",
     "ItemsPickedEventArgs",
@@ -786,6 +842,7 @@ __all__ = [
     "ItemsWrapGrid",
     "Layout",
     "LayoutContext",
+    "LayoutPanel",
     "LinedFlowLayout",
     "LinedFlowLayoutItemCollectionTransitionProvider",
     "LinedFlowLayoutItemsInfoRequestedEventArgs",
@@ -837,6 +894,9 @@ __all__ = [
     "NumberBox",
     "NumberBoxValueChangedEventArgs",
     "Page",
+    "PagerControl",
+    "PagerControlSelectedIndexChangedEventArgs",
+    "PagerControlTemplateSettings",
     "Panel",
     "ParallaxView",
     "PasswordBox",
@@ -865,6 +925,8 @@ __all__ = [
     "RatingItemFontInfo",
     "RatingItemImageInfo",
     "RatingItemInfo",
+    "RecyclePool",
+    "RecyclingElementFactory",
     "RefreshContainer",
     "RefreshInteractionRatioChangedEventArgs",
     "RefreshRequestedEventArgs",
@@ -890,11 +952,17 @@ __all__ = [
     "ScrollingScrollAnimationStartingEventArgs",
     "ScrollingScrollCompletedEventArgs",
     "ScrollingScrollOptions",
+    "ScrollingScrollStartingEventArgs",
     "ScrollingZoomAnimationStartingEventArgs",
     "ScrollingZoomCompletedEventArgs",
     "ScrollingZoomOptions",
+    "ScrollingZoomStartingEventArgs",
     "SectionsInViewChangedEventArgs",
+    "SelectTemplateEventArgs",
     "SelectionChangedEventArgs",
+    "SelectionModel",
+    "SelectionModelChildrenRequestedEventArgs",
+    "SelectionModelSelectionChangedEventArgs",
     "SelectorBar",
     "SelectorBarItem",
     "SelectorBarSelectionChangedEventArgs",
@@ -907,6 +975,7 @@ __all__ = [
     "SplitView",
     "SplitViewPaneClosingEventArgs",
     "StackLayout",
+    "StackLayoutState",
     "StackPanel",
     "StyleSelector",
     "SwapChainBackgroundPanel",
@@ -931,6 +1000,7 @@ __all__ = [
     "TeachingTip",
     "TeachingTipClosedEventArgs",
     "TeachingTipClosingEventArgs",
+    "TeachingTipOpenedEventArgs",
     "TeachingTipTemplateSettings",
     "TextBlock",
     "TextBox",
@@ -974,6 +1044,7 @@ __all__ = [
     "TwoPaneView",
     "UIElementCollection",
     "UniformGridLayout",
+    "UniformGridLayoutState",
     "UserControl",
     "VariableSizedWrapGrid",
     "Viewbox",
@@ -989,6 +1060,7 @@ __all__ = [
     "IAnimatedVisualSource",
     "IAnimatedVisualSource2",
     "IAnimatedVisualSource3",
+    "IApplicationViewSpanningRects",
     "ICommandBarElement",
     "IDynamicAnimatedVisualSource",
     "IInsertionPanel",
@@ -996,10 +1068,12 @@ __all__ = [
     "IKeyIndexMapping",
     "INavigate",
     "IScrollAnchorProvider",
+    "ISelfPlayingAnimatedVisual",
     "ISemanticZoomInformation",
     "CalendarViewDayItemChangingEventHandler",
     "CleanUpVirtualizedItemEventHandler",
     "ContextMenuOpeningEventHandler",
+    "DoInkPresenterWork",
     "DragItemsStartingEventHandler",
     "HubSectionHeaderClickEventHandler",
     "ItemClickEventHandler",
@@ -1105,6 +1179,7 @@ class ContentDialogButton(enum.IntEnum):
 class ContentDialogPlacement(enum.IntEnum):
     POPUP = 0
     IN_PLACE = 1
+    UNCONSTRAINED_POPUP = 2
 
 class ContentDialogResult(enum.IntEnum):
     NONE = 0
@@ -1126,6 +1201,14 @@ class ElementRealizationOptions(enum.IntFlag):
 class ExpandDirection(enum.IntEnum):
     DOWN = 0
     UP = 1
+
+class FlowLayoutLineAlignment(enum.IntEnum):
+    START = 0
+    CENTER = 1
+    END = 2
+    SPACE_AROUND = 3
+    SPACE_BETWEEN = 4
+    SPACE_EVENLY = 5
 
 class IncrementalLoadingTrigger(enum.IntEnum):
     NONE = 0
@@ -1156,6 +1239,31 @@ class ItemCollectionTransitionTriggers(enum.IntFlag):
     COLLECTION_CHANGE_REMOVE = 0x2
     COLLECTION_CHANGE_RESET = 0x4
     LAYOUT_TRANSITION = 0x8
+
+class ItemContainerInteractionTrigger(enum.IntEnum):
+    POINTER_PRESSED = 0
+    POINTER_RELEASED = 1
+    TAP = 2
+    DOUBLE_TAP = 3
+    ENTER_KEY = 4
+    SPACE_KEY = 5
+    AUTOMATION_INVOKE = 6
+
+class ItemContainerMultiSelectMode(enum.IntFlag):
+    AUTO = 0x1
+    SINGLE = 0x2
+    EXTENDED = 0x4
+    MULTIPLE = 0x8
+
+class ItemContainerUserInvokeMode(enum.IntFlag):
+    AUTO = 0x1
+    USER_CAN_INVOKE = 0x2
+    USER_CANNOT_INVOKE = 0x4
+
+class ItemContainerUserSelectMode(enum.IntFlag):
+    AUTO = 0x1
+    USER_CAN_SELECT = 0x2
+    USER_CANNOT_SELECT = 0x4
 
 class ItemsUpdatingScrollMode(enum.IntEnum):
     KEEP_ITEMS_IN_VIEW = 0
@@ -1241,6 +1349,17 @@ class NumberBoxValidationMode(enum.IntEnum):
 class Orientation(enum.IntEnum):
     VERTICAL = 0
     HORIZONTAL = 1
+
+class PagerControlButtonVisibility(enum.IntEnum):
+    VISIBLE = 0
+    HIDDEN_ON_EDGE = 1
+    HIDDEN = 2
+
+class PagerControlDisplayMode(enum.IntEnum):
+    AUTO = 0
+    COMBO_BOX = 1
+    NUMBER_BOX = 2
+    BUTTON_PANEL = 3
 
 class PanelScrollingDirection(enum.IntEnum):
     NONE = 0
@@ -1705,6 +1824,7 @@ winrt.runtime._internals.mixin_mutable_sequence(UIElementCollection)
 CalendarViewDayItemChangingEventHandler = typing.Callable[[CalendarView, CalendarViewDayItemChangingEventArgs], None]
 CleanUpVirtualizedItemEventHandler = typing.Callable[[winrt.system.Object, CleanUpVirtualizedItemEventArgs], None]
 ContextMenuOpeningEventHandler = typing.Callable[[winrt.system.Object, ContextMenuEventArgs], None]
+DoInkPresenterWork = typing.Callable[["windows_ui_input_inking.InkPresenter"], None]
 DragItemsStartingEventHandler = typing.Callable[[winrt.system.Object, DragItemsStartingEventArgs], None]
 HubSectionHeaderClickEventHandler = typing.Callable[[winrt.system.Object, HubSectionHeaderClickEventArgs], None]
 ItemClickEventHandler = typing.Callable[[winrt.system.Object, ItemClickEventArgs], None]

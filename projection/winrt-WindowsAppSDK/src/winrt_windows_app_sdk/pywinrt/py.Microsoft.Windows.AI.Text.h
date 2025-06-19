@@ -5,8 +5,10 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
+#include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Microsoft.Windows.AI.h>
 #include <winrt/Microsoft.Windows.AI.ContentSafety.h>
+#include <winrt/Microsoft.Windows.AI.Foundation.h>
 
 #include <winrt/Microsoft.Windows.AI.Text.h>
 
@@ -17,8 +19,19 @@ namespace py::proj::Microsoft::Windows::AI::Text
 namespace py
 {
     template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::Windows::AI::Text::InputKind> = "i";
+
+    template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::Windows::AI::Text::LanguageModelResponseStatus> = "i";
 
+
+    template<>
+    struct py_type<winrt::Microsoft::Windows::AI::Text::InputKind>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.ai.text.InputKind";
+        static constexpr const char* module_name = "winui3.microsoft.windows.ai.text";
+        static constexpr const char* type_name = "InputKind";
+    };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::AI::Text::LanguageModelResponseStatus>
@@ -26,6 +39,22 @@ namespace py
         static constexpr std::string_view qualified_name = "winui3.microsoft.windows.ai.text.LanguageModelResponseStatus";
         static constexpr const char* module_name = "winui3.microsoft.windows.ai.text";
         static constexpr const char* type_name = "LanguageModelResponseStatus";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::Windows::AI::Text::ConversationItem>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.ai.text.ConversationItem";
+        static constexpr const char* module_name = "winui3.microsoft.windows.ai.text";
+        static constexpr const char* type_name = "ConversationItem";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::Windows::AI::Text::ConversationSummaryOptions>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.ai.text.ConversationSummaryOptions";
+        static constexpr const char* module_name = "winui3.microsoft.windows.ai.text";
+        static constexpr const char* type_name = "ConversationSummaryOptions";
     };
 
     template<>
@@ -42,6 +71,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winui3.microsoft.windows.ai.text.LanguageModelContext";
         static constexpr const char* module_name = "winui3.microsoft.windows.ai.text";
         static constexpr const char* type_name = "LanguageModelContext";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::Windows::AI::Text::LanguageModelEmbeddingVectorResult>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.ai.text.LanguageModelEmbeddingVectorResult";
+        static constexpr const char* module_name = "winui3.microsoft.windows.ai.text";
+        static constexpr const char* type_name = "LanguageModelEmbeddingVectorResult";
     };
 
     template<>
@@ -105,6 +142,10 @@ namespace py
 #include "py.Windows.Foundation.h"
 #endif
 
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
 #if __has_include("py.Microsoft.Windows.AI.h")
 #include "py.Microsoft.Windows.AI.h"
 #endif
@@ -113,14 +154,21 @@ namespace py
 #include "py.Microsoft.Windows.AI.ContentSafety.h"
 #endif
 
+#if __has_include("py.Microsoft.Windows.AI.Foundation.h")
+#include "py.Microsoft.Windows.AI.Foundation.h"
+#endif
+
 namespace py::impl::Microsoft::Windows::AI::Text
 {
 }
 
 namespace py::wrapper::Microsoft::Windows::AI::Text
 {
+    using ConversationItem = py::winrt_wrapper<winrt::Microsoft::Windows::AI::Text::ConversationItem>;
+    using ConversationSummaryOptions = py::winrt_wrapper<winrt::Microsoft::Windows::AI::Text::ConversationSummaryOptions>;
     using LanguageModel = py::winrt_wrapper<winrt::Microsoft::Windows::AI::Text::LanguageModel>;
     using LanguageModelContext = py::winrt_wrapper<winrt::Microsoft::Windows::AI::Text::LanguageModelContext>;
+    using LanguageModelEmbeddingVectorResult = py::winrt_wrapper<winrt::Microsoft::Windows::AI::Text::LanguageModelEmbeddingVectorResult>;
     using LanguageModelOptions = py::winrt_wrapper<winrt::Microsoft::Windows::AI::Text::LanguageModelOptions>;
     using LanguageModelResponseResult = py::winrt_wrapper<winrt::Microsoft::Windows::AI::Text::LanguageModelResponseResult>;
     using TextRewriter = py::winrt_wrapper<winrt::Microsoft::Windows::AI::Text::TextRewriter>;

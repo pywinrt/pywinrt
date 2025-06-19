@@ -55,6 +55,27 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Windowing
         IAppWindowClosingEventArgs(std::nullptr_t = nullptr) noexcept {}
         IAppWindowClosingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IAppWindowExperimental :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IAppWindowExperimental>
+    {
+        IAppWindowExperimental(std::nullptr_t = nullptr) noexcept {}
+        IAppWindowExperimental(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IAppWindowPlacementDetails :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IAppWindowPlacementDetails>
+    {
+        IAppWindowPlacementDetails(std::nullptr_t = nullptr) noexcept {}
+        IAppWindowPlacementDetails(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IAppWindowPlacementDetailsStatics :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IAppWindowPlacementDetailsStatics>
+    {
+        IAppWindowPlacementDetailsStatics(std::nullptr_t = nullptr) noexcept {}
+        IAppWindowPlacementDetailsStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IAppWindowPresenter :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IAppWindowPresenter>
@@ -82,6 +103,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Windowing
     {
         IAppWindowStatics2(std::nullptr_t = nullptr) noexcept {}
         IAppWindowStatics2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IAppWindowStatics3 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IAppWindowStatics3>
+    {
+        IAppWindowStatics3(std::nullptr_t = nullptr) noexcept {}
+        IAppWindowStatics3(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IAppWindowTitleBar :
         winrt::Windows::Foundation::IInspectable,
@@ -145,6 +173,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Windowing
     {
         IDisplayAreaStatics2(std::nullptr_t = nullptr) noexcept {}
         IDisplayAreaStatics2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IDisplayAreaStatics3 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IDisplayAreaStatics3>
+    {
+        IDisplayAreaStatics3(std::nullptr_t = nullptr) noexcept {}
+        IDisplayAreaStatics3(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IDisplayAreaWatcher :
         winrt::Windows::Foundation::IInspectable,

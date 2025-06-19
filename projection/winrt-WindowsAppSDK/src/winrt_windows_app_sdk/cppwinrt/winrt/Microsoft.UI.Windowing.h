@@ -890,6 +890,270 @@ namespace winrt::impl
             check_hresult(_winrt_abi_type->put_Cancel(value));
         }
     }
+    template <typename D> auto consume_Microsoft_UI_Windowing_IAppWindowExperimental<D>::PersistedStateId() const
+    {
+        void* value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Windowing::IAppWindowExperimental>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Windowing::IAppWindowExperimental, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Windowing::IAppWindowExperimental>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_PersistedStateId(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Windowing::IAppWindowExperimental>**)this;
+            check_hresult(_winrt_abi_type->get_PersistedStateId(&value));
+        }
+        return winrt::Windows::Foundation::IReference<winrt::guid>{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Windowing_IAppWindowExperimental<D>::PersistedStateId(winrt::Windows::Foundation::IReference<winrt::guid> const& value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Windowing::IAppWindowExperimental>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Windowing::IAppWindowExperimental, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Windowing::IAppWindowExperimental>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->put_PersistedStateId(*(void**)(&value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Windowing::IAppWindowExperimental>**)this;
+            check_hresult(_winrt_abi_type->put_PersistedStateId(*(void**)(&value)));
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Windowing_IAppWindowExperimental<D>::PlacementRestorationBehavior() const
+    {
+        winrt::Microsoft::UI::Windowing::PlacementRestorationBehavior value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Windowing::IAppWindowExperimental>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Windowing::IAppWindowExperimental, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Windowing::IAppWindowExperimental>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_PlacementRestorationBehavior(reinterpret_cast<uint32_t*>(&value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Windowing::IAppWindowExperimental>**)this;
+            check_hresult(_winrt_abi_type->get_PlacementRestorationBehavior(reinterpret_cast<uint32_t*>(&value)));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Windowing_IAppWindowExperimental<D>::PlacementRestorationBehavior(winrt::Microsoft::UI::Windowing::PlacementRestorationBehavior const& value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Windowing::IAppWindowExperimental>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Windowing::IAppWindowExperimental, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Windowing::IAppWindowExperimental>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->put_PlacementRestorationBehavior(static_cast<uint32_t>(value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Windowing::IAppWindowExperimental>**)this;
+            check_hresult(_winrt_abi_type->put_PlacementRestorationBehavior(static_cast<uint32_t>(value)));
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Windowing_IAppWindowExperimental<D>::GetCurrentPlacement() const
+    {
+        void* result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Windowing::IAppWindowExperimental>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Windowing::IAppWindowExperimental, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Windowing::IAppWindowExperimental>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->GetCurrentPlacement(&result));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Windowing::IAppWindowExperimental>**)this;
+            check_hresult(_winrt_abi_type->GetCurrentPlacement(&result));
+        }
+        return winrt::Microsoft::UI::Windowing::AppWindowPlacementDetails{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Windowing_IAppWindowExperimental<D>::SaveCurrentPlacement() const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Windowing::IAppWindowExperimental>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Windowing::IAppWindowExperimental, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Windowing::IAppWindowExperimental>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->SaveCurrentPlacement());
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Windowing::IAppWindowExperimental>**)this;
+            check_hresult(_winrt_abi_type->SaveCurrentPlacement());
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Windowing_IAppWindowExperimental<D>::SetCurrentPlacement(winrt::Microsoft::UI::Windowing::AppWindowPlacementDetails const& placementDetails, bool isFirstWindow) const
+    {
+        bool result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Windowing::IAppWindowExperimental>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Windowing::IAppWindowExperimental, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Windowing::IAppWindowExperimental>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->SetCurrentPlacement(*(void**)(&placementDetails), isFirstWindow, &result));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Windowing::IAppWindowExperimental>**)this;
+            check_hresult(_winrt_abi_type->SetCurrentPlacement(*(void**)(&placementDetails), isFirstWindow, &result));
+        }
+        return result;
+    }
+    template <typename D> auto consume_Microsoft_UI_Windowing_IAppWindowPlacementDetails<D>::NormalRect() const
+    {
+        winrt::Windows::Graphics::RectInt32 value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_NormalRect(put_abi(value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails>**)this;
+            check_hresult(_winrt_abi_type->get_NormalRect(put_abi(value)));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Windowing_IAppWindowPlacementDetails<D>::WorkArea() const
+    {
+        winrt::Windows::Graphics::RectInt32 value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_WorkArea(put_abi(value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails>**)this;
+            check_hresult(_winrt_abi_type->get_WorkArea(put_abi(value)));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Windowing_IAppWindowPlacementDetails<D>::Dpi() const
+    {
+        int32_t value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_Dpi(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails>**)this;
+            check_hresult(_winrt_abi_type->get_Dpi(&value));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Windowing_IAppWindowPlacementDetails<D>::ShowCmd() const
+    {
+        int32_t value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_ShowCmd(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails>**)this;
+            check_hresult(_winrt_abi_type->get_ShowCmd(&value));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Windowing_IAppWindowPlacementDetails<D>::ArrangeRect() const
+    {
+        winrt::Windows::Graphics::RectInt32 value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_ArrangeRect(put_abi(value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails>**)this;
+            check_hresult(_winrt_abi_type->get_ArrangeRect(put_abi(value)));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Windowing_IAppWindowPlacementDetails<D>::DeviceName() const
+    {
+        void* value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_DeviceName(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails>**)this;
+            check_hresult(_winrt_abi_type->get_DeviceName(&value));
+        }
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Windowing_IAppWindowPlacementDetails<D>::Flags() const
+    {
+        winrt::Microsoft::UI::Windowing::PlacementInfo value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_Flags(reinterpret_cast<uint32_t*>(&value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails>**)this;
+            check_hresult(_winrt_abi_type->get_Flags(reinterpret_cast<uint32_t*>(&value)));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Windowing_IAppWindowPlacementDetailsStatics<D>::Create(winrt::Windows::Graphics::RectInt32 const& normalRect, winrt::Windows::Graphics::RectInt32 const& workArea, int32_t dpi, int32_t showCmd, winrt::Windows::Graphics::RectInt32 const& arrangeRect, winrt::Microsoft::UI::Windowing::PlacementInfo const& flags, param::hstring const& deviceName) const
+    {
+        void* result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetailsStatics>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetailsStatics, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetailsStatics>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->Create(impl::bind_in(normalRect), impl::bind_in(workArea), dpi, showCmd, impl::bind_in(arrangeRect), static_cast<uint32_t>(flags), *(void**)(&deviceName), &result));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetailsStatics>**)this;
+            check_hresult(_winrt_abi_type->Create(impl::bind_in(normalRect), impl::bind_in(workArea), dpi, showCmd, impl::bind_in(arrangeRect), static_cast<uint32_t>(flags), *(void**)(&deviceName), &result));
+        }
+        return winrt::Microsoft::UI::Windowing::AppWindowPlacementDetails{ result, take_ownership_from_abi };
+    }
     template <typename D> auto consume_Microsoft_UI_Windowing_IAppWindowPresenter<D>::Kind() const
     {
         winrt::Microsoft::UI::Windowing::AppWindowPresenterKind value{};
@@ -997,6 +1261,22 @@ namespace winrt::impl
             check_hresult(_winrt_abi_type->CreateWithDispatcherQueue(*(void**)(&appWindowPresenter), impl::bind_in(ownerWindowId), *(void**)(&DispatcherQueue), &result));
         }
         return winrt::Microsoft::UI::Windowing::AppWindow{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Windowing_IAppWindowStatics3<D>::SaveCurrentPlacementForAllPersistedStateIds() const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Windowing::IAppWindowStatics3>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Windowing::IAppWindowStatics3, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Windowing::IAppWindowStatics3>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->SaveCurrentPlacementForAllPersistedStateIds());
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Windowing::IAppWindowStatics3>**)this;
+            check_hresult(_winrt_abi_type->SaveCurrentPlacementForAllPersistedStateIds());
+        }
     }
     template <typename D> auto consume_Microsoft_UI_Windowing_IAppWindowTitleBar<D>::BackgroundColor() const
     {
@@ -1895,6 +2175,24 @@ namespace winrt::impl
             check_hresult(_winrt_abi_type->GetFromDisplayId(impl::bind_in(displayId), &result));
         }
         return winrt::Microsoft::UI::Windowing::DisplayArea{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Windowing_IDisplayAreaStatics3<D>::GetMetricsFromWindowId(winrt::Microsoft::UI::WindowId const& windowId) const
+    {
+        winrt::Microsoft::UI::DisplayId result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Windowing::IDisplayAreaStatics3>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Windowing::IDisplayAreaStatics3, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Windowing::IDisplayAreaStatics3>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->GetMetricsFromWindowId(impl::bind_in(windowId), put_abi(result)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Windowing::IDisplayAreaStatics3>**)this;
+            check_hresult(_winrt_abi_type->GetMetricsFromWindowId(impl::bind_in(windowId), put_abi(result)));
+        }
+        return result;
     }
     template <typename D> auto consume_Microsoft_UI_Windowing_IDisplayAreaWatcher<D>::Status() const
     {
@@ -3111,6 +3409,136 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Windowing::IAppWindowExperimental> : produce_base<D, winrt::Microsoft::UI::Windowing::IAppWindowExperimental>
+    {
+        int32_t __stdcall get_PersistedStateId(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::IReference<winrt::guid>>(this->shim().PersistedStateId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_PersistedStateId(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().PersistedStateId(*reinterpret_cast<winrt::Windows::Foundation::IReference<winrt::guid> const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_PlacementRestorationBehavior(uint32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Windowing::PlacementRestorationBehavior>(this->shim().PlacementRestorationBehavior());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_PlacementRestorationBehavior(uint32_t value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().PlacementRestorationBehavior(*reinterpret_cast<winrt::Microsoft::UI::Windowing::PlacementRestorationBehavior const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetCurrentPlacement(void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::UI::Windowing::AppWindowPlacementDetails>(this->shim().GetCurrentPlacement());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall SaveCurrentPlacement() noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SaveCurrentPlacement();
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall SetCurrentPlacement(void* placementDetails, bool isFirstWindow, bool* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<bool>(this->shim().SetCurrentPlacement(*reinterpret_cast<winrt::Microsoft::UI::Windowing::AppWindowPlacementDetails const*>(&placementDetails), isFirstWindow));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails> : produce_base<D, winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails>
+    {
+        int32_t __stdcall get_NormalRect(struct struct_Windows_Graphics_RectInt32* value) noexcept final try
+        {
+            zero_abi<winrt::Windows::Graphics::RectInt32>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Graphics::RectInt32>(this->shim().NormalRect());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_WorkArea(struct struct_Windows_Graphics_RectInt32* value) noexcept final try
+        {
+            zero_abi<winrt::Windows::Graphics::RectInt32>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Graphics::RectInt32>(this->shim().WorkArea());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Dpi(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<int32_t>(this->shim().Dpi());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_ShowCmd(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<int32_t>(this->shim().ShowCmd());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_ArrangeRect(struct struct_Windows_Graphics_RectInt32* value) noexcept final try
+        {
+            zero_abi<winrt::Windows::Graphics::RectInt32>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Graphics::RectInt32>(this->shim().ArrangeRect());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_DeviceName(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().DeviceName());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Flags(uint32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Windowing::PlacementInfo>(this->shim().Flags());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetailsStatics> : produce_base<D, winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetailsStatics>
+    {
+        int32_t __stdcall Create(struct struct_Windows_Graphics_RectInt32 normalRect, struct struct_Windows_Graphics_RectInt32 workArea, int32_t dpi, int32_t showCmd, struct struct_Windows_Graphics_RectInt32 arrangeRect, uint32_t flags, void* deviceName, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::UI::Windowing::AppWindowPlacementDetails>(this->shim().Create(*reinterpret_cast<winrt::Windows::Graphics::RectInt32 const*>(&normalRect), *reinterpret_cast<winrt::Windows::Graphics::RectInt32 const*>(&workArea), dpi, showCmd, *reinterpret_cast<winrt::Windows::Graphics::RectInt32 const*>(&arrangeRect), *reinterpret_cast<winrt::Microsoft::UI::Windowing::PlacementInfo const*>(&flags), *reinterpret_cast<hstring const*>(&deviceName)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::UI::Windowing::IAppWindowPresenter> : produce_base<D, winrt::Microsoft::UI::Windowing::IAppWindowPresenter>
     {
         int32_t __stdcall get_Kind(int32_t* value) noexcept final try
@@ -3175,6 +3603,19 @@ namespace winrt::impl
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
             *result = detach_from<winrt::Microsoft::UI::Windowing::AppWindow>(this->shim().Create(*reinterpret_cast<winrt::Microsoft::UI::Windowing::AppWindowPresenter const*>(&appWindowPresenter), *reinterpret_cast<winrt::Microsoft::UI::WindowId const*>(&ownerWindowId), *reinterpret_cast<winrt::Microsoft::UI::Dispatching::DispatcherQueue const*>(&DispatcherQueue)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Windowing::IAppWindowStatics3> : produce_base<D, winrt::Microsoft::UI::Windowing::IAppWindowStatics3>
+    {
+        int32_t __stdcall SaveCurrentPlacementForAllPersistedStateIds() noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SaveCurrentPlacementForAllPersistedStateIds();
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3623,6 +4064,20 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Windowing::IDisplayAreaStatics3> : produce_base<D, winrt::Microsoft::UI::Windowing::IDisplayAreaStatics3>
+    {
+        int32_t __stdcall GetMetricsFromWindowId(struct struct_Microsoft_UI_WindowId windowId, struct struct_Microsoft_UI_DisplayId* result) noexcept final try
+        {
+            zero_abi<winrt::Microsoft::UI::DisplayId>(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::UI::DisplayId>(this->shim().GetMetricsFromWindowId(*reinterpret_cast<winrt::Microsoft::UI::WindowId const*>(&windowId)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::UI::Windowing::IDisplayAreaWatcher> : produce_base<D, winrt::Microsoft::UI::Windowing::IDisplayAreaWatcher>
     {
         int32_t __stdcall get_Status(int32_t* value) noexcept final try
@@ -4003,6 +4458,68 @@ namespace winrt::impl
 }
 WINRT_EXPORT namespace winrt::Microsoft::UI::Windowing
 {
+    constexpr auto operator|(PlacementInfo const left, PlacementInfo const right) noexcept
+    {
+        return static_cast<PlacementInfo>(impl::to_underlying_type(left) | impl::to_underlying_type(right));
+    }
+    constexpr auto operator|=(PlacementInfo& left, PlacementInfo const right) noexcept
+    {
+        left = left | right;
+        return left;
+    }
+    constexpr auto operator&(PlacementInfo const left, PlacementInfo const right) noexcept
+    {
+        return static_cast<PlacementInfo>(impl::to_underlying_type(left) & impl::to_underlying_type(right));
+    }
+    constexpr auto operator&=(PlacementInfo& left, PlacementInfo const right) noexcept
+    {
+        left = left & right;
+        return left;
+    }
+    constexpr auto operator~(PlacementInfo const value) noexcept
+    {
+        return static_cast<PlacementInfo>(~impl::to_underlying_type(value));
+    }
+    constexpr auto operator^(PlacementInfo const left, PlacementInfo const right) noexcept
+    {
+        return static_cast<PlacementInfo>(impl::to_underlying_type(left) ^ impl::to_underlying_type(right));
+    }
+    constexpr auto operator^=(PlacementInfo& left, PlacementInfo const right) noexcept
+    {
+        left = left ^ right;
+        return left;
+    }
+    constexpr auto operator|(PlacementRestorationBehavior const left, PlacementRestorationBehavior const right) noexcept
+    {
+        return static_cast<PlacementRestorationBehavior>(impl::to_underlying_type(left) | impl::to_underlying_type(right));
+    }
+    constexpr auto operator|=(PlacementRestorationBehavior& left, PlacementRestorationBehavior const right) noexcept
+    {
+        left = left | right;
+        return left;
+    }
+    constexpr auto operator&(PlacementRestorationBehavior const left, PlacementRestorationBehavior const right) noexcept
+    {
+        return static_cast<PlacementRestorationBehavior>(impl::to_underlying_type(left) & impl::to_underlying_type(right));
+    }
+    constexpr auto operator&=(PlacementRestorationBehavior& left, PlacementRestorationBehavior const right) noexcept
+    {
+        left = left & right;
+        return left;
+    }
+    constexpr auto operator~(PlacementRestorationBehavior const value) noexcept
+    {
+        return static_cast<PlacementRestorationBehavior>(~impl::to_underlying_type(value));
+    }
+    constexpr auto operator^(PlacementRestorationBehavior const left, PlacementRestorationBehavior const right) noexcept
+    {
+        return static_cast<PlacementRestorationBehavior>(impl::to_underlying_type(left) ^ impl::to_underlying_type(right));
+    }
+    constexpr auto operator^=(PlacementRestorationBehavior& left, PlacementRestorationBehavior const right) noexcept
+    {
+        left = left ^ right;
+        return left;
+    }
     inline auto AppWindow::Create()
     {
         return impl::call_factory_cast<winrt::Microsoft::UI::Windowing::AppWindow(*)(IAppWindowStatics const&), AppWindow, IAppWindowStatics>([](IAppWindowStatics const& f) { return f.Create(); });
@@ -4022,6 +4539,14 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Windowing
     inline auto AppWindow::Create(winrt::Microsoft::UI::Windowing::AppWindowPresenter const& appWindowPresenter, winrt::Microsoft::UI::WindowId const& ownerWindowId, winrt::Microsoft::UI::Dispatching::DispatcherQueue const& DispatcherQueue)
     {
         return impl::call_factory<AppWindow, IAppWindowStatics2>([&](IAppWindowStatics2 const& f) { return f.Create(appWindowPresenter, ownerWindowId, DispatcherQueue); });
+    }
+    inline auto AppWindow::SaveCurrentPlacementForAllPersistedStateIds()
+    {
+        impl::call_factory_cast<void(*)(IAppWindowStatics3 const&), AppWindow, IAppWindowStatics3>([](IAppWindowStatics3 const& f) { return f.SaveCurrentPlacementForAllPersistedStateIds(); });
+    }
+    inline auto AppWindowPlacementDetails::Create(winrt::Windows::Graphics::RectInt32 const& normalRect, winrt::Windows::Graphics::RectInt32 const& workArea, int32_t dpi, int32_t showCmd, winrt::Windows::Graphics::RectInt32 const& arrangeRect, winrt::Microsoft::UI::Windowing::PlacementInfo const& flags, param::hstring const& deviceName)
+    {
+        return impl::call_factory<AppWindowPlacementDetails, IAppWindowPlacementDetailsStatics>([&](IAppWindowPlacementDetailsStatics const& f) { return f.Create(normalRect, workArea, dpi, showCmd, arrangeRect, flags, deviceName); });
     }
     inline auto AppWindowTitleBar::IsCustomizationSupported()
     {
@@ -4059,6 +4584,10 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Windowing
     {
         return impl::call_factory<DisplayArea, IDisplayAreaStatics2>([&](IDisplayAreaStatics2 const& f) { return f.GetFromDisplayId(displayId); });
     }
+    inline auto DisplayArea::GetMetricsFromWindowId(winrt::Microsoft::UI::WindowId const& windowId)
+    {
+        return impl::call_factory<DisplayArea, IDisplayAreaStatics3>([&](IDisplayAreaStatics3 const& f) { return f.GetMetricsFromWindowId(windowId); });
+    }
     inline auto FullScreenPresenter::Create()
     {
         return impl::call_factory_cast<winrt::Microsoft::UI::Windowing::FullScreenPresenter(*)(IFullScreenPresenterStatics const&), FullScreenPresenter, IFullScreenPresenterStatics>([](IFullScreenPresenterStatics const& f) { return f.Create(); });
@@ -4094,10 +4623,14 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Windowing::IAppWindowChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Windowing::IAppWindowChangedEventArgs2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Windowing::IAppWindowClosingEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Windowing::IAppWindowExperimental> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Windowing::IAppWindowPlacementDetailsStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Windowing::IAppWindowPresenter> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Windowing::IAppWindowPresenterFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Windowing::IAppWindowStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Windowing::IAppWindowStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Windowing::IAppWindowStatics3> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Windowing::IAppWindowTitleBar> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Windowing::IAppWindowTitleBar2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Windowing::IAppWindowTitleBar3> : winrt::impl::hash_base {};
@@ -4107,6 +4640,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Windowing::IDisplayArea> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Windowing::IDisplayAreaStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Windowing::IDisplayAreaStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Windowing::IDisplayAreaStatics3> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Windowing::IDisplayAreaWatcher> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Windowing::IFullScreenPresenter> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Windowing::IFullScreenPresenterStatics> : winrt::impl::hash_base {};
@@ -4118,6 +4652,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Windowing::AppWindow> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Windowing::AppWindowChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Windowing::AppWindowClosingEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Windowing::AppWindowPlacementDetails> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Windowing::AppWindowPresenter> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Windowing::AppWindowTitleBar> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Windowing::CompactOverlayPresenter> : winrt::impl::hash_base {};

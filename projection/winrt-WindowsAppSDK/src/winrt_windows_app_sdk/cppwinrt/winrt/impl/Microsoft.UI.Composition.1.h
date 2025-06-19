@@ -468,6 +468,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Composition
         ICompositionNineGridBrush(std::nullptr_t = nullptr) noexcept {}
         ICompositionNineGridBrush(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES ICompositionNotificationDeferral :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ICompositionNotificationDeferral>
+    {
+        ICompositionNotificationDeferral(std::nullptr_t = nullptr) noexcept {}
+        ICompositionNotificationDeferral(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES ICompositionObject :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ICompositionObject>
@@ -873,6 +880,27 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Composition
     {
         IElasticEasingFunction(std::nullptr_t = nullptr) noexcept {}
         IElasticEasingFunction(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IExpCompositionProjectedShadow :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IExpCompositionProjectedShadow>
+    {
+        IExpCompositionProjectedShadow(std::nullptr_t = nullptr) noexcept {}
+        IExpCompositionProjectedShadow(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IExpCompositionProjectedShadowCaster :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IExpCompositionProjectedShadowCaster>
+    {
+        IExpCompositionProjectedShadowCaster(std::nullptr_t = nullptr) noexcept {}
+        IExpCompositionProjectedShadowCaster(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IExpCompositionProjectedShadowReceiver :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IExpCompositionProjectedShadowReceiver>
+    {
+        IExpCompositionProjectedShadowReceiver(std::nullptr_t = nullptr) noexcept {}
+        IExpCompositionProjectedShadowReceiver(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IExponentialEasingFunction :
         winrt::Windows::Foundation::IInspectable,

@@ -573,7 +573,6 @@ WINRT_EXPORT namespace winrt::Microsoft::Web::WebView2::Core
     struct ICoreWebView2Frame4;
     struct ICoreWebView2Frame5;
     struct ICoreWebView2Frame6;
-    struct ICoreWebView2Frame7;
     struct ICoreWebView2FrameCreatedEventArgs;
     struct ICoreWebView2FrameInfo;
     struct ICoreWebView2FrameInfo2;
@@ -828,7 +827,6 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame4>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame5>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame6>{ using type = interface_category; };
-    template <> struct category<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame7>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FrameCreatedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FrameInfo>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FrameInfo2>{ using type = interface_category; };
@@ -1251,7 +1249,6 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame4> = L"Microsoft.Web.WebView2.Core.ICoreWebView2Frame4";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame5> = L"Microsoft.Web.WebView2.Core.ICoreWebView2Frame5";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame6> = L"Microsoft.Web.WebView2.Core.ICoreWebView2Frame6";
-    template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame7> = L"Microsoft.Web.WebView2.Core.ICoreWebView2Frame7";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FrameCreatedEventArgs> = L"Microsoft.Web.WebView2.Core.ICoreWebView2FrameCreatedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FrameInfo> = L"Microsoft.Web.WebView2.Core.ICoreWebView2FrameInfo";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FrameInfo2> = L"Microsoft.Web.WebView2.Core.ICoreWebView2FrameInfo2";
@@ -1434,7 +1431,6 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame4>{ 0xD46CD758,0x64B9,0x543E,{ 0xA7,0xB8,0xCA,0xC9,0xB4,0xC0,0x59,0xA7 } }; // D46CD758-64B9-543E-A7B8-CAC9B4C059A7
     template <> inline constexpr guid guid_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame5>{ 0x27C4803D,0x9A7F,0x599A,{ 0xBF,0x72,0x07,0xE8,0xDC,0x96,0x4A,0x5B } }; // 27C4803D-9A7F-599A-BF72-07E8DC964A5B
     template <> inline constexpr guid guid_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame6>{ 0xBA197DAD,0xD2F4,0x5127,{ 0x80,0xB8,0xFA,0xAB,0x02,0xEC,0x21,0x1E } }; // BA197DAD-D2F4-5127-80B8-FAAB02EC211E
-    template <> inline constexpr guid guid_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame7>{ 0x37B88DD4,0x5973,0x51AD,{ 0x98,0xC5,0x68,0x32,0xC5,0x49,0x9D,0xC0 } }; // 37B88DD4-5973-51AD-98C5-6832C5499DC0
     template <> inline constexpr guid guid_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FrameCreatedEventArgs>{ 0x527B01B8,0xFC6D,0x5543,{ 0x8D,0xCE,0x96,0xCD,0xFD,0xB3,0x2C,0x81 } }; // 527B01B8-FC6D-5543-8DCE-96CDFDB32C81
     template <> inline constexpr guid guid_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FrameInfo>{ 0xF9B82E06,0x73F3,0x513B,{ 0xBC,0x2C,0x44,0x5D,0xDE,0xDB,0xA9,0x76 } }; // F9B82E06-73F3-513B-BC2C-445DDEDBA976
     template <> inline constexpr guid guid_v<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FrameInfo2>{ 0x7F0770C6,0x0D5E,0x529B,{ 0xB0,0x0C,0xF1,0x56,0x56,0xF6,0x05,0xC4 } }; // 7F0770C6-0D5E-529B-B00C-F15656F605C4
@@ -2470,14 +2466,6 @@ namespace winrt::impl
         {
             virtual int32_t __stdcall add_ScreenCaptureStarting(void*, winrt::event_token*) noexcept = 0;
             virtual int32_t __stdcall remove_ScreenCaptureStarting(winrt::event_token) noexcept = 0;
-        };
-    };
-    template <> struct abi<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame7>
-    {
-        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
-        {
-            virtual int32_t __stdcall add_FrameCreated(void*, winrt::event_token*) noexcept = 0;
-            virtual int32_t __stdcall remove_FrameCreated(winrt::event_token) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FrameCreatedEventArgs>
@@ -4603,18 +4591,6 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame6>
     {
         template <typename D> using type = consume_Microsoft_Web_WebView2_Core_ICoreWebView2Frame6<D>;
-    };
-    template <typename D>
-    struct consume_Microsoft_Web_WebView2_Core_ICoreWebView2Frame7
-    {
-        auto FrameCreated(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Frame, winrt::Microsoft::Web::WebView2::Core::CoreWebView2FrameCreatedEventArgs> const& handler) const;
-        using FrameCreated_revoker = impl::event_revoker<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame7, &impl::abi_t<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame7>::remove_FrameCreated>;
-        [[nodiscard]] auto FrameCreated(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Frame, winrt::Microsoft::Web::WebView2::Core::CoreWebView2FrameCreatedEventArgs> const& handler) const;
-        auto FrameCreated(winrt::event_token const& token) const noexcept;
-    };
-    template <> struct consume<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame7>
-    {
-        template <typename D> using type = consume_Microsoft_Web_WebView2_Core_ICoreWebView2Frame7<D>;
     };
     template <typename D>
     struct consume_Microsoft_Web_WebView2_Core_ICoreWebView2FrameCreatedEventArgs

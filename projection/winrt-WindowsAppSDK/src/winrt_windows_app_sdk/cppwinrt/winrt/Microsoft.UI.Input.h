@@ -8,6 +8,7 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.250303.1"), "Mismatche
 #define CPPWINRT_VERSION "2.0.250303.1"
 #include "winrt/Microsoft.UI.h"
 #include "winrt/impl/Microsoft.UI.2.h"
+#include "winrt/impl/Microsoft.UI.Composition.2.h"
 #include "winrt/impl/Microsoft.UI.Content.2.h"
 #include "winrt/impl/Microsoft.UI.Dispatching.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -2490,6 +2491,24 @@ namespace winrt::impl
         }
         return winrt::Microsoft::UI::Input::InputKeyboardSource{ result, take_ownership_from_abi };
     }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputKeyboardSourceStatics3<D>::GetForWindowId(winrt::Microsoft::UI::WindowId const& windowId) const
+    {
+        void* result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Input::IInputKeyboardSourceStatics3>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Input::IInputKeyboardSourceStatics3, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputKeyboardSourceStatics3>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->GetForWindowId(impl::bind_in(windowId), &result));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputKeyboardSourceStatics3>**)this;
+            check_hresult(_winrt_abi_type->GetForWindowId(impl::bind_in(windowId), &result));
+        }
+        return winrt::Microsoft::UI::Input::InputKeyboardSource{ result, take_ownership_from_abi };
+    }
     template <typename D> auto consume_Microsoft_UI_Input_IInputLightDismissAction<D>::Dismissed(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputLightDismissAction, winrt::Microsoft::UI::Input::InputLightDismissEventArgs> const& handler) const
     {
         winrt::event_token token{};
@@ -2545,6 +2564,76 @@ namespace winrt::impl
             check_hresult(_winrt_abi_type->GetForWindowId(impl::bind_in(windowId), &result));
         }
         return winrt::Microsoft::UI::Input::InputLightDismissAction{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputLightDismissActionStatics2<D>::GetForIsland(winrt::Microsoft::UI::Content::ContentIsland const& content) const
+    {
+        void* result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Input::IInputLightDismissActionStatics2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Input::IInputLightDismissActionStatics2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputLightDismissActionStatics2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->GetForIsland(*(void**)(&content), &result));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputLightDismissActionStatics2>**)this;
+            check_hresult(_winrt_abi_type->GetForIsland(*(void**)(&content), &result));
+        }
+        return winrt::Microsoft::UI::Input::InputLightDismissAction{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputLightDismissEventArgs2<D>::Reason() const
+    {
+        winrt::Microsoft::UI::Input::LightDismissReason value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Input::IInputLightDismissEventArgs2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Input::IInputLightDismissEventArgs2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputLightDismissEventArgs2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_Reason(reinterpret_cast<int32_t*>(&value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputLightDismissEventArgs2>**)this;
+            check_hresult(_winrt_abi_type->get_Reason(reinterpret_cast<int32_t*>(&value)));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputLightDismissEventArgs2<D>::Handled() const
+    {
+        bool value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Input::IInputLightDismissEventArgs2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Input::IInputLightDismissEventArgs2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputLightDismissEventArgs2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_Handled(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputLightDismissEventArgs2>**)this;
+            check_hresult(_winrt_abi_type->get_Handled(&value));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputLightDismissEventArgs2<D>::Handled(bool value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Input::IInputLightDismissEventArgs2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Input::IInputLightDismissEventArgs2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputLightDismissEventArgs2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->put_Handled(value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputLightDismissEventArgs2>**)this;
+            check_hresult(_winrt_abi_type->put_Handled(value));
+        }
     }
     template <typename D> auto consume_Microsoft_UI_Input_IInputNonClientPointerSource<D>::DispatcherQueue() const
     {
@@ -3555,6 +3644,134 @@ namespace winrt::impl
             _winrt_abi_type->remove_PointerWheelChanged(impl::bind_in(token));
         }
     }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputPointerSource2<D>::TrySetDeviceKinds(winrt::Microsoft::UI::Input::InputPointerSourceDeviceKinds const& DeviceKinds) const
+    {
+        bool result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Input::IInputPointerSource2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Input::IInputPointerSource2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputPointerSource2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->TrySetDeviceKinds(static_cast<uint32_t>(DeviceKinds), &result));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputPointerSource2>**)this;
+            check_hresult(_winrt_abi_type->TrySetDeviceKinds(static_cast<uint32_t>(DeviceKinds), &result));
+        }
+        return result;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputPointerSource2<D>::ActivationBehavior() const
+    {
+        winrt::Microsoft::UI::Input::InputPointerActivationBehavior value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Input::IInputPointerSource2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Input::IInputPointerSource2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputPointerSource2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_ActivationBehavior(reinterpret_cast<int32_t*>(&value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputPointerSource2>**)this;
+            check_hresult(_winrt_abi_type->get_ActivationBehavior(reinterpret_cast<int32_t*>(&value)));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputPointerSource2<D>::ActivationBehavior(winrt::Microsoft::UI::Input::InputPointerActivationBehavior const& value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Input::IInputPointerSource2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Input::IInputPointerSource2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputPointerSource2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->put_ActivationBehavior(static_cast<int32_t>(value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputPointerSource2>**)this;
+            check_hresult(_winrt_abi_type->put_ActivationBehavior(static_cast<int32_t>(value)));
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputPointerSource2<D>::DirectManipulationHitTest(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputPointerSource, winrt::Microsoft::UI::Input::PointerEventArgs> const& handler) const
+    {
+        winrt::event_token token{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Input::IInputPointerSource2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Input::IInputPointerSource2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputPointerSource2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->add_DirectManipulationHitTest(*(void**)(&handler), put_abi(token)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputPointerSource2>**)this;
+            check_hresult(_winrt_abi_type->add_DirectManipulationHitTest(*(void**)(&handler), put_abi(token)));
+        }
+        return token;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputPointerSource2<D>::DirectManipulationHitTest(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputPointerSource, winrt::Microsoft::UI::Input::PointerEventArgs> const& handler) const
+    {
+        return impl::make_event_revoker<D, DirectManipulationHitTest_revoker>(this, DirectManipulationHitTest(handler));
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputPointerSource2<D>::DirectManipulationHitTest(winrt::event_token const& token) const noexcept
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Input::IInputPointerSource2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Input::IInputPointerSource2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputPointerSource2>**)&_winrt_casted_result;
+            _winrt_abi_type->remove_DirectManipulationHitTest(impl::bind_in(token));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputPointerSource2>**)this;
+            _winrt_abi_type->remove_DirectManipulationHitTest(impl::bind_in(token));
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputPointerSource2<D>::TouchHitTesting(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputPointerSource, winrt::Microsoft::UI::Input::TouchHitTestingEventArgs> const& handler) const
+    {
+        winrt::event_token token{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Input::IInputPointerSource2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Input::IInputPointerSource2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputPointerSource2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->add_TouchHitTesting(*(void**)(&handler), put_abi(token)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputPointerSource2>**)this;
+            check_hresult(_winrt_abi_type->add_TouchHitTesting(*(void**)(&handler), put_abi(token)));
+        }
+        return token;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputPointerSource2<D>::TouchHitTesting(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputPointerSource, winrt::Microsoft::UI::Input::TouchHitTestingEventArgs> const& handler) const
+    {
+        return impl::make_event_revoker<D, TouchHitTesting_revoker>(this, TouchHitTesting(handler));
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputPointerSource2<D>::TouchHitTesting(winrt::event_token const& token) const noexcept
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Input::IInputPointerSource2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Input::IInputPointerSource2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputPointerSource2>**)&_winrt_casted_result;
+            _winrt_abi_type->remove_TouchHitTesting(impl::bind_in(token));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputPointerSource2>**)this;
+            _winrt_abi_type->remove_TouchHitTesting(impl::bind_in(token));
+        }
+    }
     template <typename D> auto consume_Microsoft_UI_Input_IInputPointerSourceStatics<D>::GetForIsland(winrt::Microsoft::UI::Content::ContentIsland const& island) const
     {
         void* result{};
@@ -3572,6 +3789,148 @@ namespace winrt::impl
             check_hresult(_winrt_abi_type->GetForIsland(*(void**)(&island), &result));
         }
         return winrt::Microsoft::UI::Input::InputPointerSource{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputPointerSourceStatics2<D>::GetForVisual(winrt::Microsoft::UI::Composition::Visual const& visual) const
+    {
+        void* result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Input::IInputPointerSourceStatics2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Input::IInputPointerSourceStatics2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputPointerSourceStatics2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->GetForVisual(*(void**)(&visual), &result));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputPointerSourceStatics2>**)this;
+            check_hresult(_winrt_abi_type->GetForVisual(*(void**)(&visual), &result));
+        }
+        return winrt::Microsoft::UI::Input::InputPointerSource{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputPointerSourceStatics2<D>::GetForWindowId(winrt::Microsoft::UI::WindowId const& windowId) const
+    {
+        void* result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Input::IInputPointerSourceStatics2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Input::IInputPointerSourceStatics2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputPointerSourceStatics2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->GetForWindowId(impl::bind_in(windowId), &result));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputPointerSourceStatics2>**)this;
+            check_hresult(_winrt_abi_type->GetForWindowId(impl::bind_in(windowId), &result));
+        }
+        return winrt::Microsoft::UI::Input::InputPointerSource{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputPointerSourceStatics2<D>::RemoveForVisual(winrt::Microsoft::UI::Composition::Visual const& visual) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Input::IInputPointerSourceStatics2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Input::IInputPointerSourceStatics2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputPointerSourceStatics2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->RemoveForVisual(*(void**)(&visual)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputPointerSourceStatics2>**)this;
+            check_hresult(_winrt_abi_type->RemoveForVisual(*(void**)(&visual)));
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputPopupController<D>::Mode() const
+    {
+        winrt::Microsoft::UI::Input::PopupPointerMode value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Input::IInputPopupController>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Input::IInputPopupController, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputPopupController>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_Mode(reinterpret_cast<int32_t*>(&value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputPopupController>**)this;
+            check_hresult(_winrt_abi_type->get_Mode(reinterpret_cast<int32_t*>(&value)));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputPopupController<D>::Mode(winrt::Microsoft::UI::Input::PopupPointerMode const& value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Input::IInputPopupController>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Input::IInputPopupController, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputPopupController>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->put_Mode(static_cast<int32_t>(value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputPopupController>**)this;
+            check_hresult(_winrt_abi_type->put_Mode(static_cast<int32_t>(value)));
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputPopupController<D>::LightDismissed(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputPopupController, winrt::Microsoft::UI::Input::InputLightDismissEventArgs> const& handler) const
+    {
+        winrt::event_token token{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Input::IInputPopupController>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Input::IInputPopupController, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputPopupController>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->add_LightDismissed(*(void**)(&handler), put_abi(token)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputPopupController>**)this;
+            check_hresult(_winrt_abi_type->add_LightDismissed(*(void**)(&handler), put_abi(token)));
+        }
+        return token;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputPopupController<D>::LightDismissed(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputPopupController, winrt::Microsoft::UI::Input::InputLightDismissEventArgs> const& handler) const
+    {
+        return impl::make_event_revoker<D, LightDismissed_revoker>(this, LightDismissed(handler));
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputPopupController<D>::LightDismissed(winrt::event_token const& token) const noexcept
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Input::IInputPopupController>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Input::IInputPopupController, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputPopupController>**)&_winrt_casted_result;
+            _winrt_abi_type->remove_LightDismissed(impl::bind_in(token));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputPopupController>**)this;
+            _winrt_abi_type->remove_LightDismissed(impl::bind_in(token));
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputPopupControllerStatics<D>::GetForPopup(winrt::Microsoft::UI::Content::DesktopPopupSiteBridge const& popupBridge) const
+    {
+        void* result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Input::IInputPopupControllerStatics>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Input::IInputPopupControllerStatics, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputPopupControllerStatics>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->GetForPopup(*(void**)(&popupBridge), &result));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::IInputPopupControllerStatics>**)this;
+            check_hresult(_winrt_abi_type->GetForPopup(*(void**)(&popupBridge), &result));
+        }
+        return winrt::Microsoft::UI::Input::InputPopupController{ result, take_ownership_from_abi };
     }
     template <typename D> auto consume_Microsoft_UI_Input_IInputPreTranslateKeyboardSourceStatics<D>::GetForIsland(winrt::Microsoft::UI::Content::ContentIsland const& island) const
     {
@@ -5127,6 +5486,146 @@ namespace winrt::impl
         }
         return value;
     }
+    template <typename D> auto consume_Microsoft_UI_Input_ITouchHitTestingEventArgs<D>::BoundingBox() const
+    {
+        winrt::Windows::Foundation::Rect value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_BoundingBox(put_abi(value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs>**)this;
+            check_hresult(_winrt_abi_type->get_BoundingBox(put_abi(value)));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_ITouchHitTestingEventArgs<D>::Handled() const
+    {
+        bool value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_Handled(&value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs>**)this;
+            check_hresult(_winrt_abi_type->get_Handled(&value));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_ITouchHitTestingEventArgs<D>::Handled(bool value) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->put_Handled(value));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs>**)this;
+            check_hresult(_winrt_abi_type->put_Handled(value));
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_ITouchHitTestingEventArgs<D>::Point() const
+    {
+        winrt::Windows::Foundation::Point value{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->get_Point(put_abi(value)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs>**)this;
+            check_hresult(_winrt_abi_type->get_Point(put_abi(value)));
+        }
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_ITouchHitTestingEventArgs<D>::GetProximityEvaluation() const
+    {
+        winrt::Microsoft::UI::Input::ProximityEvaluation result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->GetProximityEvaluation(put_abi(result)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs>**)this;
+            check_hresult(_winrt_abi_type->GetProximityEvaluation(put_abi(result)));
+        }
+        return result;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_ITouchHitTestingEventArgs<D>::SetProximityEvaluation(winrt::Microsoft::UI::Input::ProximityEvaluation const& proximityEvaluation) const
+    {
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->SetProximityEvaluation(impl::bind_in(proximityEvaluation)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs>**)this;
+            check_hresult(_winrt_abi_type->SetProximityEvaluation(impl::bind_in(proximityEvaluation)));
+        }
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_ITouchHitTestingEventArgs<D>::EvaluateProximityToRect(winrt::Windows::Foundation::Rect const& controlBoundingBox) const
+    {
+        winrt::Microsoft::UI::Input::ProximityEvaluation result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->EvaluateProximityToRect(impl::bind_in(controlBoundingBox), put_abi(result)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs>**)this;
+            check_hresult(_winrt_abi_type->EvaluateProximityToRect(impl::bind_in(controlBoundingBox), put_abi(result)));
+        }
+        return result;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_ITouchHitTestingEventArgs<D>::EvaluateProximityToPolygon(array_view<winrt::Windows::Foundation::Point const> controlVertices) const
+    {
+        winrt::Microsoft::UI::Input::ProximityEvaluation result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->EvaluateProximityToPolygon(controlVertices.size(), get_abi(controlVertices), put_abi(result)));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs>**)this;
+            check_hresult(_winrt_abi_type->EvaluateProximityToPolygon(controlVertices.size(), get_abi(controlVertices), put_abi(result)));
+        }
+        return result;
+    }
     template <typename D> auto consume_Microsoft_UI_Input_IWindowRectChangedEventArgs<D>::PointerScreenPoint() const
     {
         winrt::Windows::Graphics::PointInt32 value{};
@@ -6569,6 +7068,20 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Input::IInputKeyboardSourceStatics3> : produce_base<D, winrt::Microsoft::UI::Input::IInputKeyboardSourceStatics3>
+    {
+        int32_t __stdcall GetForWindowId(struct struct_Microsoft_UI_WindowId windowId, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::UI::Input::InputKeyboardSource>(this->shim().GetForWindowId(*reinterpret_cast<winrt::Microsoft::UI::WindowId const*>(&windowId)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::UI::Input::IInputLightDismissAction> : produce_base<D, winrt::Microsoft::UI::Input::IInputLightDismissAction>
     {
         int32_t __stdcall add_Dismissed(void* handler, winrt::event_token* token) noexcept final try
@@ -6603,8 +7116,49 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Input::IInputLightDismissActionStatics2> : produce_base<D, winrt::Microsoft::UI::Input::IInputLightDismissActionStatics2>
+    {
+        int32_t __stdcall GetForIsland(void* content, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::UI::Input::InputLightDismissAction>(this->shim().GetForIsland(*reinterpret_cast<winrt::Microsoft::UI::Content::ContentIsland const*>(&content)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::UI::Input::IInputLightDismissEventArgs> : produce_base<D, winrt::Microsoft::UI::Input::IInputLightDismissEventArgs>
     {
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Input::IInputLightDismissEventArgs2> : produce_base<D, winrt::Microsoft::UI::Input::IInputLightDismissEventArgs2>
+    {
+        int32_t __stdcall get_Reason(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Input::LightDismissReason>(this->shim().Reason());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Handled(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().Handled());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_Handled(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Handled(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
     };
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
@@ -7028,6 +7582,61 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Input::IInputPointerSource2> : produce_base<D, winrt::Microsoft::UI::Input::IInputPointerSource2>
+    {
+        int32_t __stdcall TrySetDeviceKinds(uint32_t DeviceKinds, bool* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<bool>(this->shim().TrySetDeviceKinds(*reinterpret_cast<winrt::Microsoft::UI::Input::InputPointerSourceDeviceKinds const*>(&DeviceKinds)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_ActivationBehavior(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Input::InputPointerActivationBehavior>(this->shim().ActivationBehavior());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_ActivationBehavior(int32_t value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ActivationBehavior(*reinterpret_cast<winrt::Microsoft::UI::Input::InputPointerActivationBehavior const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall add_DirectManipulationHitTest(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().DirectManipulationHitTest(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputPointerSource, winrt::Microsoft::UI::Input::PointerEventArgs> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_DirectManipulationHitTest(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().DirectManipulationHitTest(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+        int32_t __stdcall add_TouchHitTesting(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().TouchHitTesting(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputPointerSource, winrt::Microsoft::UI::Input::TouchHitTestingEventArgs> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_TouchHitTesting(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().TouchHitTesting(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::UI::Input::IInputPointerSourceStatics> : produce_base<D, winrt::Microsoft::UI::Input::IInputPointerSourceStatics>
     {
         int32_t __stdcall GetForIsland(void* island, void** result) noexcept final try
@@ -7035,6 +7644,83 @@ namespace winrt::impl
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
             *result = detach_from<winrt::Microsoft::UI::Input::InputPointerSource>(this->shim().GetForIsland(*reinterpret_cast<winrt::Microsoft::UI::Content::ContentIsland const*>(&island)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Input::IInputPointerSourceStatics2> : produce_base<D, winrt::Microsoft::UI::Input::IInputPointerSourceStatics2>
+    {
+        int32_t __stdcall GetForVisual(void* visual, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::UI::Input::InputPointerSource>(this->shim().GetForVisual(*reinterpret_cast<winrt::Microsoft::UI::Composition::Visual const*>(&visual)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetForWindowId(struct struct_Microsoft_UI_WindowId windowId, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::UI::Input::InputPointerSource>(this->shim().GetForWindowId(*reinterpret_cast<winrt::Microsoft::UI::WindowId const*>(&windowId)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall RemoveForVisual(void* visual) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().RemoveForVisual(*reinterpret_cast<winrt::Microsoft::UI::Composition::Visual const*>(&visual));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Input::IInputPopupController> : produce_base<D, winrt::Microsoft::UI::Input::IInputPopupController>
+    {
+        int32_t __stdcall get_Mode(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Input::PopupPointerMode>(this->shim().Mode());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_Mode(int32_t value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Mode(*reinterpret_cast<winrt::Microsoft::UI::Input::PopupPointerMode const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall add_LightDismissed(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().LightDismissed(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputPopupController, winrt::Microsoft::UI::Input::InputLightDismissEventArgs> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_LightDismissed(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().LightDismissed(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Input::IInputPopupControllerStatics> : produce_base<D, winrt::Microsoft::UI::Input::IInputPopupControllerStatics>
+    {
+        int32_t __stdcall GetForPopup(void* popupBridge, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::UI::Input::InputPopupController>(this->shim().GetForPopup(*reinterpret_cast<winrt::Microsoft::UI::Content::DesktopPopupSiteBridge const*>(&popupBridge)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -7811,6 +8497,73 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs> : produce_base<D, winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs>
+    {
+        int32_t __stdcall get_BoundingBox(winrt::Windows::Foundation::Rect* value) noexcept final try
+        {
+            zero_abi<winrt::Windows::Foundation::Rect>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::Rect>(this->shim().BoundingBox());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Handled(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().Handled());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_Handled(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Handled(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Point(winrt::Windows::Foundation::Point* value) noexcept final try
+        {
+            zero_abi<winrt::Windows::Foundation::Point>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::Point>(this->shim().Point());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetProximityEvaluation(struct struct_Microsoft_UI_Input_ProximityEvaluation* result) noexcept final try
+        {
+            zero_abi<winrt::Microsoft::UI::Input::ProximityEvaluation>(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::UI::Input::ProximityEvaluation>(this->shim().GetProximityEvaluation());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall SetProximityEvaluation(struct struct_Microsoft_UI_Input_ProximityEvaluation proximityEvaluation) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SetProximityEvaluation(*reinterpret_cast<winrt::Microsoft::UI::Input::ProximityEvaluation const*>(&proximityEvaluation));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall EvaluateProximityToRect(winrt::Windows::Foundation::Rect controlBoundingBox, struct struct_Microsoft_UI_Input_ProximityEvaluation* result) noexcept final try
+        {
+            zero_abi<winrt::Microsoft::UI::Input::ProximityEvaluation>(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::UI::Input::ProximityEvaluation>(this->shim().EvaluateProximityToRect(*reinterpret_cast<winrt::Windows::Foundation::Rect const*>(&controlBoundingBox)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall EvaluateProximityToPolygon(uint32_t __controlVerticesSize, winrt::Windows::Foundation::Point* controlVertices, struct struct_Microsoft_UI_Input_ProximityEvaluation* result) noexcept final try
+        {
+            zero_abi<winrt::Microsoft::UI::Input::ProximityEvaluation>(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::UI::Input::ProximityEvaluation>(this->shim().EvaluateProximityToPolygon(array_view<winrt::Windows::Foundation::Point const>(reinterpret_cast<winrt::Windows::Foundation::Point const *>(controlVertices), reinterpret_cast<winrt::Windows::Foundation::Point const *>(controlVertices) + __controlVerticesSize)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::UI::Input::IWindowRectChangedEventArgs> : produce_base<D, winrt::Microsoft::UI::Input::IWindowRectChangedEventArgs>
     {
         int32_t __stdcall get_PointerScreenPoint(struct struct_Windows_Graphics_PointInt32* value) noexcept final try
@@ -8078,9 +8831,17 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
     {
         return impl::call_factory<InputKeyboardSource, IInputKeyboardSourceStatics2>([&](IInputKeyboardSourceStatics2 const& f) { return f.GetForIsland(island); });
     }
+    inline auto InputKeyboardSource::GetForWindowId(winrt::Microsoft::UI::WindowId const& windowId)
+    {
+        return impl::call_factory<InputKeyboardSource, IInputKeyboardSourceStatics3>([&](IInputKeyboardSourceStatics3 const& f) { return f.GetForWindowId(windowId); });
+    }
     inline auto InputLightDismissAction::GetForWindowId(winrt::Microsoft::UI::WindowId const& windowId)
     {
         return impl::call_factory<InputLightDismissAction, IInputLightDismissActionStatics>([&](IInputLightDismissActionStatics const& f) { return f.GetForWindowId(windowId); });
+    }
+    inline auto InputLightDismissAction::GetForIsland(winrt::Microsoft::UI::Content::ContentIsland const& content)
+    {
+        return impl::call_factory<InputLightDismissAction, IInputLightDismissActionStatics2>([&](IInputLightDismissActionStatics2 const& f) { return f.GetForIsland(content); });
     }
     inline auto InputNonClientPointerSource::GetForWindowId(winrt::Microsoft::UI::WindowId const& windowId)
     {
@@ -8089,6 +8850,22 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
     inline auto InputPointerSource::GetForIsland(winrt::Microsoft::UI::Content::ContentIsland const& island)
     {
         return impl::call_factory<InputPointerSource, IInputPointerSourceStatics>([&](IInputPointerSourceStatics const& f) { return f.GetForIsland(island); });
+    }
+    inline auto InputPointerSource::GetForVisual(winrt::Microsoft::UI::Composition::Visual const& visual)
+    {
+        return impl::call_factory<InputPointerSource, IInputPointerSourceStatics2>([&](IInputPointerSourceStatics2 const& f) { return f.GetForVisual(visual); });
+    }
+    inline auto InputPointerSource::GetForWindowId(winrt::Microsoft::UI::WindowId const& windowId)
+    {
+        return impl::call_factory<InputPointerSource, IInputPointerSourceStatics2>([&](IInputPointerSourceStatics2 const& f) { return f.GetForWindowId(windowId); });
+    }
+    inline auto InputPointerSource::RemoveForVisual(winrt::Microsoft::UI::Composition::Visual const& visual)
+    {
+        impl::call_factory<InputPointerSource, IInputPointerSourceStatics2>([&](IInputPointerSourceStatics2 const& f) { return f.RemoveForVisual(visual); });
+    }
+    inline auto InputPopupController::GetForPopup(winrt::Microsoft::UI::Content::DesktopPopupSiteBridge const& popupBridge)
+    {
+        return impl::call_factory<InputPopupController, IInputPopupControllerStatics>([&](IInputPopupControllerStatics const& f) { return f.GetForPopup(popupBridge); });
     }
     inline auto InputPreTranslateKeyboardSource::GetForIsland(winrt::Microsoft::UI::Content::ContentIsland const& island)
     {
@@ -8142,16 +8919,23 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Input::IInputKeyboardSource2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IInputKeyboardSourceStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IInputKeyboardSourceStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Input::IInputKeyboardSourceStatics3> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IInputLightDismissAction> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IInputLightDismissActionStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Input::IInputLightDismissActionStatics2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IInputLightDismissEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Input::IInputLightDismissEventArgs2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IInputNonClientPointerSource> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IInputNonClientPointerSource2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IInputNonClientPointerSourceStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IInputObject> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IInputObjectFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IInputPointerSource> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Input::IInputPointerSource2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IInputPointerSourceStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Input::IInputPointerSourceStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Input::IInputPopupController> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Input::IInputPopupControllerStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IInputPreTranslateKeyboardSource> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IInputPreTranslateKeyboardSourceStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IInputSystemCursor> : winrt::impl::hash_base {};
@@ -8173,6 +8957,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Input::IPointerPredictorStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IRightTappedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::ITappedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Input::ITouchHitTestingEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IWindowRectChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IWindowRectChangingEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::CharacterReceivedEventArgs> : winrt::impl::hash_base {};
@@ -8201,6 +8986,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Input::InputNonClientPointerSource> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::InputObject> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::InputPointerSource> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Input::InputPopupController> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::InputPreTranslateKeyboardSource> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::InputSystemCursor> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::KeyEventArgs> : winrt::impl::hash_base {};
@@ -8218,6 +9004,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Input::PointerPredictor> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::RightTappedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::TappedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Input::TouchHitTestingEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::WindowRectChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::WindowRectChangingEventArgs> : winrt::impl::hash_base {};
 #endif

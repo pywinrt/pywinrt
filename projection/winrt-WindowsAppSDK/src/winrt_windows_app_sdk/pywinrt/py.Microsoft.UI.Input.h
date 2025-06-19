@@ -10,6 +10,7 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.System.h>
 #include <winrt/Windows.UI.Core.h>
 #include <winrt/Microsoft.UI.h>
+#include <winrt/Microsoft.UI.Composition.h>
 #include <winrt/Microsoft.UI.Content.h>
 #include <winrt/Microsoft.UI.Dispatching.h>
 
@@ -43,10 +44,19 @@ namespace py
     inline constexpr const char* buffer_format<winrt::Microsoft::UI::Input::InputActivationState> = "i";
 
     template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Input::InputLayoutPolicy> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Input::InputPointerActivationBehavior> = "i";
+
+    template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::UI::Input::InputPointerSourceDeviceKinds> = "I";
 
     template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::UI::Input::InputSystemCursorShape> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Input::LightDismissReason> = "i";
 
     template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::UI::Input::MoveSizeOperation> = "i";
@@ -59,6 +69,9 @@ namespace py
 
     template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::UI::Input::PointerUpdateKind> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Input::PopupPointerMode> = "i";
 
     template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::UI::Input::VirtualKeyStates> = "I";
@@ -74,6 +87,9 @@ namespace py
 
     template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::UI::Input::PhysicalKeyStatus> = "T{I:repeat_count:I:scan_code:?:is_extended_key:?:is_menu_key_down:?:was_key_down:?:is_key_released:}";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Input::ProximityEvaluation> = "T{i:score:T{f:x:f:y:}:adjusted_point:}";
 
 
     template<>
@@ -133,6 +149,22 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Microsoft::UI::Input::InputLayoutPolicy>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.InputLayoutPolicy";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
+        static constexpr const char* type_name = "InputLayoutPolicy";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Input::InputPointerActivationBehavior>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.InputPointerActivationBehavior";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
+        static constexpr const char* type_name = "InputPointerActivationBehavior";
+    };
+
+    template<>
     struct py_type<winrt::Microsoft::UI::Input::InputPointerSourceDeviceKinds>
     {
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.InputPointerSourceDeviceKinds";
@@ -146,6 +178,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.InputSystemCursorShape";
         static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "InputSystemCursorShape";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Input::LightDismissReason>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.LightDismissReason";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
+        static constexpr const char* type_name = "LightDismissReason";
     };
 
     template<>
@@ -178,6 +218,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.PointerUpdateKind";
         static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "PointerUpdateKind";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Input::PopupPointerMode>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.PopupPointerMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
+        static constexpr const char* type_name = "PopupPointerMode";
     };
 
     template<>
@@ -397,6 +445,14 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Microsoft::UI::Input::InputPopupController>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.InputPopupController";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
+        static constexpr const char* type_name = "InputPopupController";
+    };
+
+    template<>
     struct py_type<winrt::Microsoft::UI::Input::InputPreTranslateKeyboardSource>
     {
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.InputPreTranslateKeyboardSource";
@@ -533,6 +589,14 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Microsoft::UI::Input::TouchHitTestingEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.TouchHitTestingEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
+        static constexpr const char* type_name = "TouchHitTestingEventArgs";
+    };
+
+    template<>
     struct py_type<winrt::Microsoft::UI::Input::WindowRectChangedEventArgs>
     {
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.WindowRectChangedEventArgs";
@@ -591,6 +655,15 @@ namespace py
         static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "PhysicalKeyStatus";
     };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Input::ProximityEvaluation>
+    {
+        static constexpr std::string_view from_tuple = "winui3._winui3_microsoft_ui_input.ProximityEvaluation_from_tuple";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.ProximityEvaluation";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
+        static constexpr const char* type_name = "ProximityEvaluation";
+    };
 }
 
 #if __has_include("py.Windows.Foundation.h")
@@ -615,6 +688,10 @@ namespace py
 
 #if __has_include("py.Microsoft.UI.h")
 #include "py.Microsoft.UI.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Composition.h")
+#include "py.Microsoft.UI.Composition.h"
 #endif
 
 #if __has_include("py.Microsoft.UI.Content.h")
@@ -657,6 +734,7 @@ namespace py::wrapper::Microsoft::UI::Input
     using InputNonClientPointerSource = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputNonClientPointerSource>;
     using InputObject = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputObject>;
     using InputPointerSource = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputPointerSource>;
+    using InputPopupController = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputPopupController>;
     using InputPreTranslateKeyboardSource = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputPreTranslateKeyboardSource>;
     using InputSystemCursor = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputSystemCursor>;
     using KeyEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::KeyEventArgs>;
@@ -674,6 +752,7 @@ namespace py::wrapper::Microsoft::UI::Input
     using PointerPredictor = py::winrt_wrapper<winrt::Microsoft::UI::Input::PointerPredictor>;
     using RightTappedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::RightTappedEventArgs>;
     using TappedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::TappedEventArgs>;
+    using TouchHitTestingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::TouchHitTestingEventArgs>;
     using WindowRectChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::WindowRectChangedEventArgs>;
     using WindowRectChangingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::WindowRectChangingEventArgs>;
     using IPointerPointTransform = py::winrt_wrapper<winrt::Microsoft::UI::Input::IPointerPointTransform>;
@@ -681,6 +760,7 @@ namespace py::wrapper::Microsoft::UI::Input
     using ManipulationDelta = py::winrt_struct_wrapper<winrt::Microsoft::UI::Input::ManipulationDelta>;
     using ManipulationVelocities = py::winrt_struct_wrapper<winrt::Microsoft::UI::Input::ManipulationVelocities>;
     using PhysicalKeyStatus = py::winrt_struct_wrapper<winrt::Microsoft::UI::Input::PhysicalKeyStatus>;
+    using ProximityEvaluation = py::winrt_struct_wrapper<winrt::Microsoft::UI::Input::ProximityEvaluation>;
 }
 
 namespace py

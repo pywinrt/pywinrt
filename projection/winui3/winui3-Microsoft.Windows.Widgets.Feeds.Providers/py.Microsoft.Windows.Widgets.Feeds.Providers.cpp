@@ -995,6 +995,51 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         }
     }
 
+    static PyObject* FeedManager_TryRemoveAnnouncementById(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedManager", L"TryRemoveAnnouncementById", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::hstring>(args, 2);
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.TryRemoveAnnouncementById(param0, param1, param2);
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* FeedManager_TryShowAnnouncement(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedManager* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
@@ -1068,6 +1113,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         { "get_enabled_feed_providers", reinterpret_cast<PyCFunction>(FeedManager_GetEnabledFeedProviders), METH_VARARGS, nullptr },
         { "send_message_to_content", reinterpret_cast<PyCFunction>(FeedManager_SendMessageToContent), METH_VARARGS, nullptr },
         { "set_custom_query_parameters", reinterpret_cast<PyCFunction>(FeedManager_SetCustomQueryParameters), METH_VARARGS, nullptr },
+        { "try_remove_announcement_by_id", reinterpret_cast<PyCFunction>(FeedManager_TryRemoveAnnouncementById), METH_VARARGS, nullptr },
         { "try_show_announcement", reinterpret_cast<PyCFunction>(FeedManager_TryShowAnnouncement), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_FeedManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FeedManager), METH_O | METH_STATIC, nullptr },
@@ -3213,6 +3259,235 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         ,
         type_slots_ImplementsIFeedManager2};
 
+    // ----- IFeedManager3 interface --------------------
+
+    #if PY_VERSION_HEX < 0x030A0000
+    static PyObject* _new_IFeedManager3(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager3>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager3>::type_name);
+        return nullptr;
+    }
+    #endif
+
+    static void _dealloc_IFeedManager3(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager3* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* IFeedManager3_TryRemoveAnnouncementById(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager3* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.IFeedManager3", L"TryRemoveAnnouncementById", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::hstring>(args, 2);
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.TryRemoveAnnouncementById(param0, param1, param2);
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_IFeedManager3[] = {
+        { "try_remove_announcement_by_id", reinterpret_cast<PyCFunction>(IFeedManager3_TryRemoveAnnouncementById), METH_VARARGS, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_IFeedManager3[] = {
+        { }};
+
+    static PyType_Slot _type_slots_IFeedManager3[] = {
+        #if PY_VERSION_HEX < 0x030A0000
+        { Py_tp_new, reinterpret_cast<void*>(_new_IFeedManager3) },
+        #endif
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFeedManager3) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_IFeedManager3) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_IFeedManager3) },
+        { }};
+
+    static PyType_Spec type_spec_IFeedManager3 = {
+        "winui3._winui3_microsoft_windows_widgets_feeds_providers._IFeedManager3",
+        sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager3),
+        0,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
+        _type_slots_IFeedManager3};
+
+    struct ImplementsIFeedManager3 : py::ImplementsInterfaceT<ImplementsIFeedManager3, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager3>
+    {
+        ImplementsIFeedManager3() = delete;
+        ImplementsIFeedManager3(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIFeedManager3, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager3>(py_obj, runtime_class)
+        {
+        }
+
+        auto TryRemoveAnnouncementById(winrt::hstring const& param0, winrt::hstring const& param1, winrt::hstring const& param2)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "try_remove_announcement_by_id")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param2{py::convert(param2)};
+                if (!py_param2)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(3, py_param0.get(), py_param1.get(), py_param2.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _assign_array_IFeedManager3(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager3>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_IFeedManager3(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager3>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _guid_ImplementsIFeedManager3(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager3>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIFeedManager3(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIFeedManager3>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIFeedManager3[] = {
+        { "_assign_array_", _assign_array_IFeedManager3, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_IFeedManager3), METH_O | METH_STATIC, nullptr },
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIFeedManager3), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIFeedManager3), METH_VARARGS | METH_STATIC, nullptr },
+        { }};
+
+    static PyType_Slot type_slots_ImplementsIFeedManager3[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIFeedManager3) },
+        { }};
+
+    static PyType_Spec type_spec_ImplementsIFeedManager3 = {
+        "winui3._winui3_microsoft_windows_widgets_feeds_providers.IFeedManager3",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
+        type_slots_ImplementsIFeedManager3};
+
     // ----- IFeedProvider interface --------------------
 
     #if PY_VERSION_HEX < 0x030A0000
@@ -4748,6 +5023,23 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_windows_widgets_feeds_providers(void) no
     }
 
     if (PyModule_AddType(module.get(), ImplementsIFeedManager2_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle IFeedManager3_type{py::register_python_type(module.get(), &type_spec_IFeedManager3, object_bases.get(), nullptr)};
+    if (!IFeedManager3_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIFeedManager3_type{py::register_python_type(module.get(), &type_spec_ImplementsIFeedManager3, nullptr, inspectable_meta_type)};
+    if (!ImplementsIFeedManager3_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIFeedManager3_type.get()) == -1)
     {
         return nullptr;
     }

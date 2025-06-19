@@ -54,6 +54,9 @@ from winui3._winui3_microsoft_ui_xaml_media import (
     RectangleGeometry,
     RenderedEventArgs,
     RenderingEventArgs,
+    RevealBackgroundBrush,
+    RevealBorderBrush,
+    RevealBrush,
     RotateTransform,
     ScaleTransform,
     Shadow,
@@ -86,6 +89,9 @@ if TYPE_CHECKING:
         PathSegment_Static,
         Projection_Static,
         RadialGradientBrush_Static,
+        RevealBackgroundBrush_Static,
+        RevealBorderBrush_Static,
+        RevealBrush_Static,
         Shadow_Static,
         SystemBackdrop_Static,
         ThemeShadow_Static,
@@ -107,6 +113,7 @@ __all__ = [
     "LoadedImageSourceLoadStatus",
     "PenLineCap",
     "PenLineJoin",
+    "RevealBrushState",
     "Stretch",
     "StyleSimulations",
     "SweepDirection",
@@ -159,6 +166,9 @@ __all__ = [
     "RectangleGeometry",
     "RenderedEventArgs",
     "RenderingEventArgs",
+    "RevealBackgroundBrush",
+    "RevealBorderBrush",
+    "RevealBrush",
     "RotateTransform",
     "ScaleTransform",
     "Shadow",
@@ -229,6 +239,11 @@ class PenLineJoin(enum.IntEnum):
     MITER = 0
     BEVEL = 1
     ROUND = 2
+
+class RevealBrushState(enum.IntEnum):
+    NORMAL = 0
+    POINTER_OVER = 1
+    PRESSED = 2
 
 class Stretch(enum.IntEnum):
     NONE = 0

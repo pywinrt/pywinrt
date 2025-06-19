@@ -538,6 +538,20 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Automation::Peers
         IInfoBarAutomationPeerFactory(std::nullptr_t = nullptr) noexcept {}
         IInfoBarAutomationPeerFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IInkCanvasAutomationPeer :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IInkCanvasAutomationPeer>
+    {
+        IInkCanvasAutomationPeer(std::nullptr_t = nullptr) noexcept {}
+        IInkCanvasAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IInkCanvasAutomationPeerFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IInkCanvasAutomationPeerFactory>
+    {
+        IInkCanvasAutomationPeerFactory(std::nullptr_t = nullptr) noexcept {}
+        IInkCanvasAutomationPeerFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IItemAutomationPeer :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IItemAutomationPeer>
@@ -880,6 +894,20 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Automation::Peers
     {
         INumberBoxAutomationPeerFactory(std::nullptr_t = nullptr) noexcept {}
         INumberBoxAutomationPeerFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IPagerControlAutomationPeer :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IPagerControlAutomationPeer>
+    {
+        IPagerControlAutomationPeer(std::nullptr_t = nullptr) noexcept {}
+        IPagerControlAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IPagerControlAutomationPeerFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IPagerControlAutomationPeerFactory>
+    {
+        IPagerControlAutomationPeerFactory(std::nullptr_t = nullptr) noexcept {}
+        IPagerControlAutomationPeerFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IPasswordBoxAutomationPeer :
         winrt::Windows::Foundation::IInspectable,

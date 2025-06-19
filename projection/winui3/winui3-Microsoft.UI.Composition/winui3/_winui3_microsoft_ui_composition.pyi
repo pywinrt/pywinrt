@@ -20,7 +20,7 @@ import winrt.windows.ui.composition as windows_ui_composition
 import winui3.microsoft.graphics.directx as microsoft_graphics_directx
 import winui3.microsoft.ui.dispatching as microsoft_ui_dispatching
 
-from winui3.microsoft.ui.composition import AnimationControllerProgressBehavior, AnimationDelayBehavior, AnimationDirection, AnimationIterationBehavior, AnimationPropertyAccessMode, AnimationStopBehavior, CompositionBackfaceVisibility, CompositionBatchTypes, CompositionBitmapInterpolationMode, CompositionBorderMode, CompositionColorSpace, CompositionCompositeMode, CompositionDropShadowSourcePolicy, CompositionEasingFunctionMode, CompositionEffectFactoryLoadStatus, CompositionGetValueStatus, CompositionGradientExtendMode, CompositionMappingMode, CompositionStretch, CompositionStrokeCap, CompositionStrokeLineJoin
+from winui3.microsoft.ui.composition import AnimationControllerProgressBehavior, AnimationDelayBehavior, AnimationDirection, AnimationIterationBehavior, AnimationPropertyAccessMode, AnimationStopBehavior, CompositionBackfaceVisibility, CompositionBatchTypes, CompositionBitmapInterpolationMode, CompositionBorderMode, CompositionColorSpace, CompositionCompositeMode, CompositionDropShadowSourcePolicy, CompositionEasingFunctionMode, CompositionEffectFactoryLoadStatus, CompositionGetValueStatus, CompositionGradientExtendMode, CompositionMappingMode, CompositionProjectedShadowDrawOrder, CompositionStretch, CompositionStrokeCap, CompositionStrokeLineJoin
 
 Self = typing.TypeVar('Self')
 
@@ -818,6 +818,11 @@ class CompositionNineGridBrush(CompositionBrush):
     @bottom_inset.setter
     def bottom_inset(self, value: winrt.system.Single) -> None: ...
 
+@typing.final
+class CompositionNotificationDeferral(winrt.system.Object):
+    # System.Void Microsoft.UI.Composition.CompositionNotificationDeferral::Complete()
+    def complete(self) -> None: ...
+
 class CompositionObject_Static(winrt._winrt.IInspectable_Static):
     # System.Void Microsoft.UI.Composition.CompositionObject::StartAnimationGroupWithIAnimationObject(Microsoft.UI.Composition.IAnimationObject,Microsoft.UI.Composition.ICompositionAnimationBase)
     def start_animation_group_with_ianimation_object(cls, target: IAnimationObject, animation: ICompositionAnimationBase, /) -> None: ...
@@ -921,6 +926,24 @@ class CompositionProjectedShadow(CompositionObject):
     # Microsoft.UI.Composition.CompositionProjectedShadowReceiverUnorderedCollection Microsoft.UI.Composition.CompositionProjectedShadow::get_Receivers()
     @_property
     def receivers(self) -> CompositionProjectedShadowReceiverUnorderedCollection: ...
+    # System.Single Microsoft.UI.Composition.CompositionProjectedShadow::get_OpacityFalloff()
+    @_property
+    def opacity_falloff(self) -> winrt.system.Single: ...
+    # System.Void Microsoft.UI.Composition.CompositionProjectedShadow::put_OpacityFalloff(System.Single)
+    @opacity_falloff.setter
+    def opacity_falloff(self, value: winrt.system.Single) -> None: ...
+    # System.Single Microsoft.UI.Composition.CompositionProjectedShadow::get_MinOpacity()
+    @_property
+    def min_opacity(self) -> winrt.system.Single: ...
+    # System.Void Microsoft.UI.Composition.CompositionProjectedShadow::put_MinOpacity(System.Single)
+    @min_opacity.setter
+    def min_opacity(self, value: winrt.system.Single) -> None: ...
+    # System.Single Microsoft.UI.Composition.CompositionProjectedShadow::get_MaxOpacity()
+    @_property
+    def max_opacity(self) -> winrt.system.Single: ...
+    # System.Void Microsoft.UI.Composition.CompositionProjectedShadow::put_MaxOpacity(System.Single)
+    @max_opacity.setter
+    def max_opacity(self, value: winrt.system.Single) -> None: ...
 
 @typing.final
 class CompositionProjectedShadowCaster(CompositionObject):
@@ -936,6 +959,18 @@ class CompositionProjectedShadowCaster(CompositionObject):
     # System.Void Microsoft.UI.Composition.CompositionProjectedShadowCaster::put_Brush(Microsoft.UI.Composition.CompositionBrush)
     @brush.setter
     def brush(self, value: CompositionBrush) -> None: ...
+    # Microsoft.UI.Composition.CompositionBrush Microsoft.UI.Composition.CompositionProjectedShadowCaster::get_Mask()
+    @_property
+    def mask(self) -> CompositionBrush: ...
+    # System.Void Microsoft.UI.Composition.CompositionProjectedShadowCaster::put_Mask(Microsoft.UI.Composition.CompositionBrush)
+    @mask.setter
+    def mask(self, value: CompositionBrush) -> None: ...
+    # Microsoft.UI.Composition.Visual Microsoft.UI.Composition.CompositionProjectedShadowCaster::get_AncestorClip()
+    @_property
+    def ancestor_clip(self) -> Visual: ...
+    # System.Void Microsoft.UI.Composition.CompositionProjectedShadowCaster::put_AncestorClip(Microsoft.UI.Composition.Visual)
+    @ancestor_clip.setter
+    def ancestor_clip(self, value: Visual) -> None: ...
 
 @typing.final
 class CompositionProjectedShadowCasterCollection_Static(CompositionObject_Static):
@@ -972,6 +1007,18 @@ class CompositionProjectedShadowReceiver(CompositionObject):
     # System.Void Microsoft.UI.Composition.CompositionProjectedShadowReceiver::put_ReceivingVisual(Microsoft.UI.Composition.Visual)
     @receiving_visual.setter
     def receiving_visual(self, value: Visual) -> None: ...
+    # Microsoft.UI.Composition.CompositionBrush Microsoft.UI.Composition.CompositionProjectedShadowReceiver::get_Mask()
+    @_property
+    def mask(self) -> CompositionBrush: ...
+    # System.Void Microsoft.UI.Composition.CompositionProjectedShadowReceiver::put_Mask(Microsoft.UI.Composition.CompositionBrush)
+    @mask.setter
+    def mask(self, value: CompositionBrush) -> None: ...
+    # Microsoft.UI.Composition.CompositionProjectedShadowDrawOrder Microsoft.UI.Composition.CompositionProjectedShadowReceiver::get_DrawOrder()
+    @_property
+    def draw_order(self) -> CompositionProjectedShadowDrawOrder: ...
+    # System.Void Microsoft.UI.Composition.CompositionProjectedShadowReceiver::put_DrawOrder(Microsoft.UI.Composition.CompositionProjectedShadowDrawOrder)
+    @draw_order.setter
+    def draw_order(self, value: CompositionProjectedShadowDrawOrder) -> None: ...
 
 @typing.final
 class CompositionProjectedShadowReceiverUnorderedCollection(CompositionObject):

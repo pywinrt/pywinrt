@@ -23,6 +23,9 @@ namespace py
     template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::Graphics::Display::DisplayHdrMetadataFormat> = "i";
 
+    template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::Graphics::Display::DisplayOrientation> = "i";
+
 
     template<>
     struct py_type<winrt::Microsoft::Graphics::Display::DisplayAdvancedColorKind>
@@ -38,6 +41,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winui3.microsoft.graphics.display.DisplayHdrMetadataFormat";
         static constexpr const char* module_name = "winui3.microsoft.graphics.display";
         static constexpr const char* type_name = "DisplayHdrMetadataFormat";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::Graphics::Display::DisplayOrientation>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.graphics.display.DisplayOrientation";
+        static constexpr const char* module_name = "winui3.microsoft.graphics.display";
+        static constexpr const char* type_name = "DisplayOrientation";
     };
 
     template<>

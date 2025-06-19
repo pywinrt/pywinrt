@@ -535,6 +535,24 @@ namespace winrt::impl
         }
         return winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder{ result, take_ownership_from_abi };
     }
+    template <typename D> auto consume_Microsoft_Windows_AppNotifications_Builder_IAppNotificationBuilder2<D>::AddCameraPreview() const
+    {
+        void* result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationBuilder2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationBuilder2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationBuilder2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->AddCameraPreview(&result));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationBuilder2>**)this;
+            check_hresult(_winrt_abi_type->AddCameraPreview(&result));
+        }
+        return winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder{ result, take_ownership_from_abi };
+    }
     template <typename D> auto consume_Microsoft_Windows_AppNotifications_Builder_IAppNotificationBuilderStatics<D>::IsUrgentScenarioSupported() const
     {
         bool result{};
@@ -1000,6 +1018,24 @@ namespace winrt::impl
         {
             auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationButton>**)this;
             check_hresult(_winrt_abi_type->SetInvokeUri2(*(void**)(&protocolUri), *(void**)(&targetAppId), &result));
+        }
+        return winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_AppNotifications_Builder_IAppNotificationButton2<D>::SetSettingStyle(winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationButtonSettingStyle const& value) const
+    {
+        void* result{};
+        if constexpr (!std::is_same_v<D, winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationButton2>)
+        {
+            winrt::hresult _winrt_cast_result_code;
+            auto const _winrt_casted_result = impl::try_as_with_reason<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationButton2, D const*>(static_cast<D const*>(this), _winrt_cast_result_code);
+            check_hresult(_winrt_cast_result_code);
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationButton2>**)&_winrt_casted_result;
+            check_hresult(_winrt_abi_type->SetSettingStyle(static_cast<int32_t>(value), &result));
+        }
+        else
+        {
+            auto const _winrt_abi_type = *(abi_t<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationButton2>**)this;
+            check_hresult(_winrt_abi_type->SetSettingStyle(static_cast<int32_t>(value), &result));
         }
         return winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton{ result, take_ownership_from_abi };
     }
@@ -1907,6 +1943,20 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationBuilder2> : produce_base<D, winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationBuilder2>
+    {
+        int32_t __stdcall AddCameraPreview(void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder>(this->shim().AddCameraPreview());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationBuilderStatics> : produce_base<D, winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationBuilderStatics>
     {
         int32_t __stdcall IsUrgentScenarioSupported(bool* result) noexcept final try
@@ -2116,6 +2166,20 @@ namespace winrt::impl
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
             *result = detach_from<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton>(this->shim().SetInvokeUri(*reinterpret_cast<winrt::Windows::Foundation::Uri const*>(&protocolUri), *reinterpret_cast<hstring const*>(&targetAppId)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationButton2> : produce_base<D, winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationButton2>
+    {
+        int32_t __stdcall SetSettingStyle(int32_t value, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton>(this->shim().SetSettingStyle(*reinterpret_cast<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationButtonSettingStyle const*>(&value)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2490,8 +2554,10 @@ namespace std
 {
 #ifndef WINRT_LEAN_AND_MEAN
     template<> struct hash<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationBuilder> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationBuilder2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationBuilderStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationButton> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationButton2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationButtonFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationButtonStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationComboBox> : winrt::impl::hash_base {};

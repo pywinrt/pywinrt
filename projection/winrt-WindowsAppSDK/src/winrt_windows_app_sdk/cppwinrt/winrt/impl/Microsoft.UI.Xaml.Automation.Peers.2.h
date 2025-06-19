@@ -324,6 +324,14 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Automation::Peers
         InfoBarAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Automation::Peers::IInfoBarAutomationPeer(ptr, take_ownership_from_abi) {}
         explicit InfoBarAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::InfoBar const& owner);
     };
+    struct WINRT_IMPL_EMPTY_BASES InkCanvasAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::IInkCanvasAutomationPeer,
+        impl::base<InkCanvasAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer, winrt::Microsoft::UI::Xaml::DependencyObject>,
+        impl::require<InkCanvasAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::IFrameworkElementAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::IAutomationPeer, winrt::Microsoft::UI::Xaml::IDependencyObject>
+    {
+        InkCanvasAutomationPeer(std::nullptr_t) noexcept {}
+        InkCanvasAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Automation::Peers::IInkCanvasAutomationPeer(ptr, take_ownership_from_abi) {}
+        explicit InkCanvasAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::InkCanvas const& owner);
+    };
     struct WINRT_IMPL_EMPTY_BASES ItemAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::IItemAutomationPeer,
         impl::base<ItemAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer, winrt::Microsoft::UI::Xaml::DependencyObject>,
         impl::require<ItemAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Provider::IVirtualizedItemProvider, winrt::Microsoft::UI::Xaml::Automation::Peers::IAutomationPeer, winrt::Microsoft::UI::Xaml::IDependencyObject>
@@ -526,6 +534,14 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Automation::Peers
         NumberBoxAutomationPeer(std::nullptr_t) noexcept {}
         NumberBoxAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Automation::Peers::INumberBoxAutomationPeer(ptr, take_ownership_from_abi) {}
         explicit NumberBoxAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::NumberBox const& owner);
+    };
+    struct WINRT_IMPL_EMPTY_BASES PagerControlAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::IPagerControlAutomationPeer,
+        impl::base<PagerControlAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer, winrt::Microsoft::UI::Xaml::DependencyObject>,
+        impl::require<PagerControlAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::IFrameworkElementAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::IAutomationPeer, winrt::Microsoft::UI::Xaml::IDependencyObject>
+    {
+        PagerControlAutomationPeer(std::nullptr_t) noexcept {}
+        PagerControlAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Automation::Peers::IPagerControlAutomationPeer(ptr, take_ownership_from_abi) {}
+        explicit PagerControlAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::PagerControl const& owner);
     };
     struct WINRT_IMPL_EMPTY_BASES PasswordBoxAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::IPasswordBoxAutomationPeer,
         impl::base<PasswordBoxAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer, winrt::Microsoft::UI::Xaml::DependencyObject>,

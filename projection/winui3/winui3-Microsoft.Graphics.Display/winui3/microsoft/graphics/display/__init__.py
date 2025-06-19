@@ -11,6 +11,7 @@ from winui3._winui3_microsoft_graphics_display import (
 __all__ = [
     "DisplayAdvancedColorKind",
     "DisplayHdrMetadataFormat",
+    "DisplayOrientation",
     "DisplayAdvancedColorInfo",
     "DisplayInformation",
 ]
@@ -23,4 +24,10 @@ class DisplayAdvancedColorKind(enum.IntEnum):
 class DisplayHdrMetadataFormat(enum.IntEnum):
     HDR10 = 0
     HDR10_PLUS = 1
+
+class DisplayOrientation(enum.IntEnum):
+    ROTATE_NONE = 0
+    ROTATE90_DEGREES = 90
+    ROTATE180_DEGREES = 180
+    ROTATE270_DEGREES = 270
 

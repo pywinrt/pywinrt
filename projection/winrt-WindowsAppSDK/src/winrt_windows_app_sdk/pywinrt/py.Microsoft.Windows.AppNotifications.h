@@ -66,6 +66,14 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Microsoft::Windows::AppNotifications::AppNotificationConferencingConfig>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.appnotifications.AppNotificationConferencingConfig";
+        static constexpr const char* module_name = "winui3.microsoft.windows.appnotifications";
+        static constexpr const char* type_name = "AppNotificationConferencingConfig";
+    };
+
+    template<>
     struct py_type<winrt::Microsoft::Windows::AppNotifications::AppNotificationManager>
     {
         static constexpr std::string_view qualified_name = "winui3.microsoft.windows.appnotifications.AppNotificationManager";
@@ -98,6 +106,7 @@ namespace py::wrapper::Microsoft::Windows::AppNotifications
 {
     using AppNotification = py::winrt_wrapper<winrt::Microsoft::Windows::AppNotifications::AppNotification>;
     using AppNotificationActivatedEventArgs = py::winrt_wrapper<winrt::Microsoft::Windows::AppNotifications::AppNotificationActivatedEventArgs>;
+    using AppNotificationConferencingConfig = py::winrt_wrapper<winrt::Microsoft::Windows::AppNotifications::AppNotificationConferencingConfig>;
     using AppNotificationManager = py::winrt_wrapper<winrt::Microsoft::Windows::AppNotifications::AppNotificationManager>;
     using AppNotificationProgressData = py::winrt_wrapper<winrt::Microsoft::Windows::AppNotifications::AppNotificationProgressData>;
 }
