@@ -49,6 +49,9 @@ from winrt._winrt_windows_foundation import (
     IWwwFormUrlDecoderEntry,
 )
 
+if typing.TYPE_CHECKING:
+    import winrt.windows.foundation as windows_foundation
+
 __all__ = [
     "AsyncStatus",
     "PropertyType",

@@ -25479,6 +25479,36 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle windows_ui_xaml_controls_maps_module{PyImport_ImportModule("winrt._winrt_windows_ui_xaml_controls_maps")};
+    if (!windows_ui_xaml_controls_maps_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_controls_maps_MapTileDataSource_type{PyObject_GetAttrString(windows_ui_xaml_controls_maps_module.get(), "MapTileDataSource")};
+    if (!windows_ui_xaml_controls_maps_MapTileDataSource_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_controls_maps_MapElement_type{PyObject_GetAttrString(windows_ui_xaml_controls_maps_module.get(), "MapElement")};
+    if (!windows_ui_xaml_controls_maps_MapElement_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_controls_maps_MapLayer_type{PyObject_GetAttrString(windows_ui_xaml_controls_maps_module.get(), "MapLayer")};
+    if (!windows_ui_xaml_controls_maps_MapLayer_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_controls_maps_MapCustomExperience_type{PyObject_GetAttrString(windows_ui_xaml_controls_maps_module.get(), "MapCustomExperience")};
+    if (!windows_ui_xaml_controls_maps_MapCustomExperience_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle windows_ui_xaml_module{PyImport_ImportModule("winrt._winrt_windows_ui_xaml")};
     if (!windows_ui_xaml_module)
     {

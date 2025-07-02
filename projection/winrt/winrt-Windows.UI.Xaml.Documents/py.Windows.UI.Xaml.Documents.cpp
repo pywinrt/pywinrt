@@ -18154,6 +18154,42 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle windows_ui_xaml_documents_module{PyImport_ImportModule("winrt._winrt_windows_ui_xaml_documents")};
+    if (!windows_ui_xaml_documents_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_documents_TextElement_type{PyObject_GetAttrString(windows_ui_xaml_documents_module.get(), "TextElement")};
+    if (!windows_ui_xaml_documents_TextElement_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_documents_Span_type{PyObject_GetAttrString(windows_ui_xaml_documents_module.get(), "Span")};
+    if (!windows_ui_xaml_documents_Span_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_documents_ContentLinkProvider_type{PyObject_GetAttrString(windows_ui_xaml_documents_module.get(), "ContentLinkProvider")};
+    if (!windows_ui_xaml_documents_ContentLinkProvider_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_documents_Inline_type{PyObject_GetAttrString(windows_ui_xaml_documents_module.get(), "Inline")};
+    if (!windows_ui_xaml_documents_Inline_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_documents_Block_type{PyObject_GetAttrString(windows_ui_xaml_documents_module.get(), "Block")};
+    if (!windows_ui_xaml_documents_Block_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle windows_ui_xaml_module{PyImport_ImportModule("winrt._winrt_windows_ui_xaml")};
     if (!windows_ui_xaml_module)
     {

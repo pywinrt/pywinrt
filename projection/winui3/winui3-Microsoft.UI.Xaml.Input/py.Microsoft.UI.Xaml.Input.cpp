@@ -11984,6 +11984,18 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_ui_xaml_input(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle microsoft_ui_xaml_input_module{PyImport_ImportModule("winui3._winui3_microsoft_ui_xaml_input")};
+    if (!microsoft_ui_xaml_input_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_xaml_input_XamlUICommand_type{PyObject_GetAttrString(microsoft_ui_xaml_input_module.get(), "XamlUICommand")};
+    if (!microsoft_ui_xaml_input_XamlUICommand_type)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle AccessKeyDisplayDismissedEventArgs_type{py::register_python_type(module.get(), &type_spec_AccessKeyDisplayDismissedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!AccessKeyDisplayDismissedEventArgs_type)
     {

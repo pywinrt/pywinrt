@@ -37838,6 +37838,120 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_ui_composition(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle microsoft_ui_composition_module{PyImport_ImportModule("winui3._winui3_microsoft_ui_composition")};
+    if (!microsoft_ui_composition_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_composition_CompositionLight_type{PyObject_GetAttrString(microsoft_ui_composition_module.get(), "CompositionLight")};
+    if (!microsoft_ui_composition_CompositionLight_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_composition_CompositionObject_type{PyObject_GetAttrString(microsoft_ui_composition_module.get(), "CompositionObject")};
+    if (!microsoft_ui_composition_CompositionObject_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_composition_CompositionEasingFunction_type{PyObject_GetAttrString(microsoft_ui_composition_module.get(), "CompositionEasingFunction")};
+    if (!microsoft_ui_composition_CompositionEasingFunction_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_composition_KeyFrameAnimation_type{PyObject_GetAttrString(microsoft_ui_composition_module.get(), "KeyFrameAnimation")};
+    if (!microsoft_ui_composition_KeyFrameAnimation_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_composition_ScalarNaturalMotionAnimation_type{PyObject_GetAttrString(microsoft_ui_composition_module.get(), "ScalarNaturalMotionAnimation")};
+    if (!microsoft_ui_composition_ScalarNaturalMotionAnimation_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_composition_Vector2NaturalMotionAnimation_type{PyObject_GetAttrString(microsoft_ui_composition_module.get(), "Vector2NaturalMotionAnimation")};
+    if (!microsoft_ui_composition_Vector2NaturalMotionAnimation_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_composition_Vector3NaturalMotionAnimation_type{PyObject_GetAttrString(microsoft_ui_composition_module.get(), "Vector3NaturalMotionAnimation")};
+    if (!microsoft_ui_composition_Vector3NaturalMotionAnimation_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_composition_CompositionBrush_type{PyObject_GetAttrString(microsoft_ui_composition_module.get(), "CompositionBrush")};
+    if (!microsoft_ui_composition_CompositionBrush_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_composition_CompositionShape_type{PyObject_GetAttrString(microsoft_ui_composition_module.get(), "CompositionShape")};
+    if (!microsoft_ui_composition_CompositionShape_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_composition_CompositionGeometry_type{PyObject_GetAttrString(microsoft_ui_composition_module.get(), "CompositionGeometry")};
+    if (!microsoft_ui_composition_CompositionGeometry_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_composition_CompositionClip_type{PyObject_GetAttrString(microsoft_ui_composition_module.get(), "CompositionClip")};
+    if (!microsoft_ui_composition_CompositionClip_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_composition_CompositionGradientBrush_type{PyObject_GetAttrString(microsoft_ui_composition_module.get(), "CompositionGradientBrush")};
+    if (!microsoft_ui_composition_CompositionGradientBrush_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_composition_CompositionDrawingSurface_type{PyObject_GetAttrString(microsoft_ui_composition_module.get(), "CompositionDrawingSurface")};
+    if (!microsoft_ui_composition_CompositionDrawingSurface_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_composition_Visual_type{PyObject_GetAttrString(microsoft_ui_composition_module.get(), "Visual")};
+    if (!microsoft_ui_composition_Visual_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_composition_CompositionShadow_type{PyObject_GetAttrString(microsoft_ui_composition_module.get(), "CompositionShadow")};
+    if (!microsoft_ui_composition_CompositionShadow_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_composition_CompositionAnimation_type{PyObject_GetAttrString(microsoft_ui_composition_module.get(), "CompositionAnimation")};
+    if (!microsoft_ui_composition_CompositionAnimation_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_composition_ContainerVisual_type{PyObject_GetAttrString(microsoft_ui_composition_module.get(), "ContainerVisual")};
+    if (!microsoft_ui_composition_ContainerVisual_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_composition_NaturalMotionAnimation_type{PyObject_GetAttrString(microsoft_ui_composition_module.get(), "NaturalMotionAnimation")};
+    if (!microsoft_ui_composition_NaturalMotionAnimation_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle CompositionObject_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
     if (!CompositionObject_Static_bases)
     {

@@ -3147,6 +3147,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_shapes(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle windows_ui_xaml_shapes_module{PyImport_ImportModule("winrt._winrt_windows_ui_xaml_shapes")};
+    if (!windows_ui_xaml_shapes_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_shapes_Shape_type{PyObject_GetAttrString(windows_ui_xaml_shapes_module.get(), "Shape")};
+    if (!windows_ui_xaml_shapes_Shape_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle windows_ui_xaml_module{PyImport_ImportModule("winrt._winrt_windows_ui_xaml")};
     if (!windows_ui_xaml_module)
     {

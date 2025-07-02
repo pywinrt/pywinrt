@@ -28,6 +28,9 @@ if TYPE_CHECKING:
         XamlRenderingBackgroundTask_Static,
     )
 
+if typing.TYPE_CHECKING:
+    import winrt.windows.ui.xaml.media.imaging as windows_ui_xaml_media_imaging
+
 __all__ = [
     "BitmapCreateOptions",
     "DecodePixelType",

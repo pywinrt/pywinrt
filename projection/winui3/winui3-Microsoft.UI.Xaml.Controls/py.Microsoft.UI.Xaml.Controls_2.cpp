@@ -20163,6 +20163,48 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_ui_xaml_controls_2(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle microsoft_ui_xaml_controls_2_module{PyImport_ImportModule("winui3._winui3_microsoft_ui_xaml_controls_2")};
+    if (!microsoft_ui_xaml_controls_2_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_xaml_controls_Button_type{PyObject_GetAttrString(microsoft_ui_xaml_controls_2_module.get(), "Button")};
+    if (!microsoft_ui_xaml_controls_Button_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_xaml_controls_ListViewBase_type{PyObject_GetAttrString(microsoft_ui_xaml_controls_2_module.get(), "ListViewBase")};
+    if (!microsoft_ui_xaml_controls_ListViewBase_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_xaml_controls_MenuFlyout_type{PyObject_GetAttrString(microsoft_ui_xaml_controls_2_module.get(), "MenuFlyout")};
+    if (!microsoft_ui_xaml_controls_MenuFlyout_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_xaml_controls_ListViewItem_type{PyObject_GetAttrString(microsoft_ui_xaml_controls_2_module.get(), "ListViewItem")};
+    if (!microsoft_ui_xaml_controls_ListViewItem_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_xaml_controls_CommandBarFlyout_type{PyObject_GetAttrString(microsoft_ui_xaml_controls_2_module.get(), "CommandBarFlyout")};
+    if (!microsoft_ui_xaml_controls_CommandBarFlyout_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_xaml_controls_ListView_type{PyObject_GetAttrString(microsoft_ui_xaml_controls_2_module.get(), "ListView")};
+    if (!microsoft_ui_xaml_controls_ListView_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle microsoft_ui_xaml_controls_primitives_module{PyImport_ImportModule("winui3._winui3_microsoft_ui_xaml_controls_primitives")};
     if (!microsoft_ui_xaml_controls_primitives_module)
     {

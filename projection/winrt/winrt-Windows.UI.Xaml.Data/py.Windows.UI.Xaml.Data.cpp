@@ -8821,6 +8821,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle windows_ui_xaml_data_module{PyImport_ImportModule("winrt._winrt_windows_ui_xaml_data")};
+    if (!windows_ui_xaml_data_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_data_BindingBase_type{PyObject_GetAttrString(windows_ui_xaml_data_module.get(), "BindingBase")};
+    if (!windows_ui_xaml_data_BindingBase_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_data_BindingExpressionBase_type{PyObject_GetAttrString(windows_ui_xaml_data_module.get(), "BindingExpressionBase")};
+    if (!windows_ui_xaml_data_BindingExpressionBase_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle windows_ui_xaml_module{PyImport_ImportModule("winrt._winrt_windows_ui_xaml")};
     if (!windows_ui_xaml_module)
     {

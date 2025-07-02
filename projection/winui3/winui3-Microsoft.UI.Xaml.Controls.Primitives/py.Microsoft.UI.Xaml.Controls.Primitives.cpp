@@ -42402,6 +42402,48 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_ui_xaml_controls_primitives(void) noexce
         return nullptr;
     }
 
+    py::pyobj_handle microsoft_ui_xaml_controls_primitives_module{PyImport_ImportModule("winui3._winui3_microsoft_ui_xaml_controls_primitives")};
+    if (!microsoft_ui_xaml_controls_primitives_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_xaml_controls_primitives_FlyoutBase_type{PyObject_GetAttrString(microsoft_ui_xaml_controls_primitives_module.get(), "FlyoutBase")};
+    if (!microsoft_ui_xaml_controls_primitives_FlyoutBase_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_xaml_controls_primitives_ButtonBase_type{PyObject_GetAttrString(microsoft_ui_xaml_controls_primitives_module.get(), "ButtonBase")};
+    if (!microsoft_ui_xaml_controls_primitives_ButtonBase_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_xaml_controls_primitives_ScrollSnapPointBase_type{PyObject_GetAttrString(microsoft_ui_xaml_controls_primitives_module.get(), "ScrollSnapPointBase")};
+    if (!microsoft_ui_xaml_controls_primitives_ScrollSnapPointBase_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_xaml_controls_primitives_ZoomSnapPointBase_type{PyObject_GetAttrString(microsoft_ui_xaml_controls_primitives_module.get(), "ZoomSnapPointBase")};
+    if (!microsoft_ui_xaml_controls_primitives_ZoomSnapPointBase_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_xaml_controls_primitives_RangeBase_type{PyObject_GetAttrString(microsoft_ui_xaml_controls_primitives_module.get(), "RangeBase")};
+    if (!microsoft_ui_xaml_controls_primitives_RangeBase_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_xaml_controls_primitives_SnapPointBase_type{PyObject_GetAttrString(microsoft_ui_xaml_controls_primitives_module.get(), "SnapPointBase")};
+    if (!microsoft_ui_xaml_controls_primitives_SnapPointBase_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle AppBarButtonTemplateSettings_bases{PyTuple_Pack(1, microsoft_ui_xaml_DependencyObject_type.get())};
     if (!AppBarButtonTemplateSettings_bases)
     {

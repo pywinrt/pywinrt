@@ -543,7 +543,7 @@ static class InterfaceWriterExtensions
         ProjectedType type,
         string ns,
         ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
-        IReadOnlyDictionary<string, string> packageMap
+        IReadOnlyDictionary<string, Package> packageMap
     )
     {
         var methods = type.Methods.Where(m =>

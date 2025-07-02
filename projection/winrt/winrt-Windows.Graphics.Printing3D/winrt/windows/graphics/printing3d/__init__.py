@@ -36,6 +36,9 @@ from winrt._winrt_windows_graphics_printing3d import (
     Printing3DTextureResource,
 )
 
+if typing.TYPE_CHECKING:
+    import winrt.windows.graphics.printing3d as windows_graphics_printing3d
+
 __all__ = [
     "Print3DTaskCompletion",
     "Print3DTaskDetail",

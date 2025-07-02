@@ -121,7 +121,7 @@ sealed class Members
     }
 
     public IEnumerable<QualifiedNamespace> GetRequiredNamespaces(
-        IReadOnlyDictionary<string, string> packageMap
+        IReadOnlyDictionary<string, Package> packageMap
     )
     {
         var namespaces = new SortedSet<QualifiedNamespace>();
@@ -142,7 +142,7 @@ sealed class Members
     }
 
     public IEnumerable<QualifiedNamespace> GetReferencedNamespaces(
-        IReadOnlyDictionary<string, string> packageMap,
+        IReadOnlyDictionary<string, Package> packageMap,
         bool includeDelegates = false,
         bool includeInheritedInterfaces = false
     )

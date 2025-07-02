@@ -241,7 +241,7 @@ static class MapWriterExtensions
         ProjectedType type,
         string ns,
         ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
-        IReadOnlyDictionary<string, string> packageMap,
+        IReadOnlyDictionary<string, Package> packageMap,
         out string keyParamType
     )
     {
@@ -277,7 +277,7 @@ static class MapWriterExtensions
         ProjectedType type,
         string ns,
         ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
-        IReadOnlyDictionary<string, string> packageMap,
+        IReadOnlyDictionary<string, Package> packageMap,
         string keyParamType
     )
     {

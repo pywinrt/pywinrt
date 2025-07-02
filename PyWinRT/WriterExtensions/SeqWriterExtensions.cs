@@ -218,7 +218,7 @@ static class SeqWriterExtensions
         ProjectedType type,
         string ns,
         ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
-        IReadOnlyDictionary<string, string> packageMap
+        IReadOnlyDictionary<string, Package> packageMap
     )
     {
         var method = type.Methods.Single(m => m.Name == "GetAt");
@@ -248,7 +248,7 @@ static class SeqWriterExtensions
         ProjectedType type,
         string ns,
         ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
-        IReadOnlyDictionary<string, string> packageMap
+        IReadOnlyDictionary<string, Package> packageMap
     )
     {
         var setMethod = type.Methods.Single(m => m.Name == "SetAt");

@@ -37,6 +37,9 @@ from winrt._winrt_windows_devices_smartcards import (
     SmartCardTriggerDetails,
 )
 
+if typing.TYPE_CHECKING:
+    import winrt.windows.devices.smartcards as windows_devices_smartcards
+
 __all__ = [
     "SmartCardActivationPolicyChangeResult",
     "SmartCardAppletIdGroupActivationPolicy",

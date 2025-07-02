@@ -19,6 +19,9 @@ from winrt._winrt_windows_ui_applicationsettings import (
     WebAccountProviderCommand,
 )
 
+if typing.TYPE_CHECKING:
+    import winrt.windows.ui.applicationsettings as windows_ui_applicationsettings
+
 __all__ = [
     "SettingsEdgeLocation",
     "SupportedWebAccountActions",

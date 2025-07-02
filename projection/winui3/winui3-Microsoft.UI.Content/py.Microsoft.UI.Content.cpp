@@ -13090,6 +13090,18 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_ui_content(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle microsoft_ui_content_module{PyImport_ImportModule("winui3._winui3_microsoft_ui_content")};
+    if (!microsoft_ui_content_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_content_DesktopSiteBridge_type{PyObject_GetAttrString(microsoft_ui_content_module.get(), "DesktopSiteBridge")};
+    if (!microsoft_ui_content_DesktopSiteBridge_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle ChildSiteLink_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
     if (!ChildSiteLink_Static_bases)
     {

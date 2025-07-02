@@ -24,12 +24,12 @@ static class FileWriters
         DirectoryInfo? headerPath,
         QualifiedNamespace ns,
         NamespaceNullabilityInfo nullabilityInfo,
-        IReadOnlyDictionary<string, string> packageMap,
+        IReadOnlyDictionary<string, Package> packageMap,
         IEnumerable<TypeDefinition> typeDefinitions,
         bool componentDlls
     )
     {
-        var nsPackageName = $"{ns.PyPackage}-{ns.Namespace}";
+        var nsPackageName = $"{ns.PyPackage.Name}-{ns.Namespace}";
         var nsPackageDir = new DirectoryInfo(Path.Combine(outputPath.FullName, nsPackageName));
         var rootDir = new DirectoryInfo(Path.Combine(nsPackageDir.FullName, ns.PyPackageModule));
         var nsDir = rootDir;
@@ -77,7 +77,7 @@ static class FileWriters
         WriteNamespaceDunderInitPy(nsDir, ns, nullabilityMap, packageMap, members, componentDlls);
         WriteNamespacePyi(rootDir, ns, nullabilityMap, packageMap, members, 0);
         WriteNamespacePyi(rootDir, ns, nullabilityMap, packageMap, members, 1);
-        WritePyWinRTVersionTxt(nsPackageDir);
+        WritePyWinRTVersionTxt(nsPackageDir, ns);
         WriteRequirementsTxt(nsPackageDir, packageMap, members);
 
         if (members.GetReferencedNamespaces(packageMap, includeDelegates: true).Any())
@@ -88,7 +88,7 @@ static class FileWriters
 
     private static void WriteAllRequirementsTxt(
         DirectoryInfo nsPackageDir,
-        IReadOnlyDictionary<string, string> packageMap,
+        IReadOnlyDictionary<string, Package> packageMap,
         Members members
     )
     {
@@ -100,7 +100,13 @@ static class FileWriters
 
         foreach (var ns in members.GetReferencedNamespaces(packageMap, includeDelegates: true))
         {
-            w.WriteLine($"{ns.PyPackage}-{ns.Namespace}[all]~={PyWinRT.VersionString}.0");
+            var versionRequirement = ns.PyPackage.Version ?? "";
+            if (versionRequirement.Length > 0 && char.IsDigit(versionRequirement[0]))
+            {
+                // This can happen if its a same package dependency
+                versionRequirement = $"=={versionRequirement}";
+            }
+            w.WriteLine($"{ns.PyPackage.Name}-{ns.Namespace}[all]{versionRequirement}");
         }
 
         sw.WriteFileIfChanged(nsPackageDir, "all-requirements.txt");
@@ -108,7 +114,7 @@ static class FileWriters
 
     private static void WriteRequirementsTxt(
         DirectoryInfo nsPackageDir,
-        IReadOnlyDictionary<string, string> packageMap,
+        IReadOnlyDictionary<string, Package> packageMap,
         Members members
     )
     {
@@ -117,22 +123,30 @@ static class FileWriters
 
         w.WriteLicense("#");
         w.WriteBlankLine();
-        w.WriteLine($"winrt-runtime~={PyWinRT.VersionString}.0");
+        w.WriteLine($"winrt-runtime=={PyWinRT.VersionString}");
 
         foreach (var ns in members.GetRequiredNamespaces(packageMap))
         {
-            w.WriteLine($"{ns.PyPackage}-{ns.Namespace}~={PyWinRT.VersionString}.0");
+            var versionRequirement = ns.PyPackage.Version ?? "";
+            if (versionRequirement.Length > 0 && char.IsDigit(versionRequirement[0]))
+            {
+                // This can happen if its a same package dependency
+                versionRequirement = $"=={versionRequirement}";
+            }
+            w.WriteLine($"{ns.PyPackage.Name}-{ns.Namespace}{versionRequirement}");
         }
 
         sw.WriteFileIfChanged(nsPackageDir, "requirements.txt");
     }
 
-    private static void WritePyWinRTVersionTxt(DirectoryInfo nsPackageDir)
+    private static void WritePyWinRTVersionTxt(DirectoryInfo nsPackageDir, QualifiedNamespace ns)
     {
         using var sw = new StringWriter();
         using var w = new IndentedTextWriter(sw) { NewLine = "\n" };
 
-        w.Write(PyWinRT.VersionString);
+        // Use pywinrt's version if no input version is specified.
+        var version = ns.PyPackage.Version ?? PyWinRT.VersionString;
+        w.Write(version);
 
         sw.WriteFileIfChanged(nsPackageDir, "pywinrt-version.txt");
     }
@@ -141,7 +155,7 @@ static class FileWriters
         DirectoryInfo nsWinrtDir,
         QualifiedNamespace ns,
         ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
-        IReadOnlyDictionary<string, string> packageMap,
+        IReadOnlyDictionary<string, Package> packageMap,
         Members members,
         int dependencyDepth
     )
@@ -203,7 +217,7 @@ static class FileWriters
             }
 
             var suffix = depth == 0 ? "" : $"_{depth + 1}";
-            w.WriteLine($"from {ns.PyPackage}.{ns.NsModuleName}{suffix} import (");
+            w.WriteLine($"from {ns.PyPackage.Name}.{ns.NsModuleName}{suffix} import (");
             w.Indent++;
 
             foreach (var type in dependencyTypes)
@@ -288,7 +302,7 @@ static class FileWriters
         DirectoryInfo nsDir,
         QualifiedNamespace ns,
         ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
-        IReadOnlyDictionary<string, string> packageMap,
+        IReadOnlyDictionary<string, Package> packageMap,
         Members members,
         bool componentDlls
     )
@@ -528,7 +542,7 @@ static class FileWriters
     private static void WriteNamespaceH(
         DirectoryInfo headerDir,
         QualifiedNamespace ns,
-        IReadOnlyDictionary<string, string> packageMap,
+        IReadOnlyDictionary<string, Package> packageMap,
         Members members,
         bool componentDlls
     )
@@ -672,7 +686,7 @@ static class FileWriters
     private static void WriteNamespaceCpp(
         DirectoryInfo nsPackageDir,
         QualifiedNamespace ns,
-        IReadOnlyDictionary<string, string> packageMap,
+        IReadOnlyDictionary<string, Package> packageMap,
         Members members,
         bool componentDlls,
         int dependencyDepth

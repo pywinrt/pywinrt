@@ -144,9 +144,10 @@ class CommandReader
         return result.ToString();
     }
 
-    public static (string, string)[] ParseSpec(ArgumentResult result)
+    public static (string, Package)[] ParseSpec(ArgumentResult result)
     {
         var files = new SortedDictionary<string, string>(StringComparer.Ordinal);
+        var packageVersions = new Dictionary<string, string>();
 
         foreach (var token in result.Tokens)
         {
@@ -232,7 +233,8 @@ class CommandReader
                 }
 
                 var split = value.Split(";");
-                if (split.Length != 2)
+                // package name; path[; version/version rquirement]
+                if (split.Length != 2 && split.Length != 3)
                 {
                     result.ErrorMessage = $"Invalid spec '{value}'";
                     return [];
@@ -240,6 +242,12 @@ class CommandReader
 
                 var package = split[0];
                 var path = split[1];
+                string? version = split.Length == 3 ? split[2] : null;
+
+                if (version is string v)
+                {
+                    packageVersions.TryAdd(package, v);
+                }
 
                 // spec can be path to a directory containing .winmd files
                 if (Directory.Exists(path))
@@ -264,6 +272,13 @@ class CommandReader
             }
         }
 
-        return [.. files.Select((kvp) => (kvp.Key, kvp.Value))];
+        return [.. files.Select((kvp) => {
+            var package = new Package
+            {
+                Name = kvp.Value,
+                Version = packageVersions.TryGetValue(kvp.Value, out var v) ? v : null
+            };
+            return (kvp.Key, package);
+            })];
     }
 }

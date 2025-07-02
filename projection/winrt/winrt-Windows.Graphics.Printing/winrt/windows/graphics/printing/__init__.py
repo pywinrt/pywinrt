@@ -31,6 +31,9 @@ from winrt._winrt_windows_graphics_printing import (
     IPrintTaskOptionsCoreUIConfiguration,
 )
 
+if typing.TYPE_CHECKING:
+    import winrt.windows.graphics.printing as windows_graphics_printing
+
 __all__ = [
     "PrintBinding",
     "PrintBordering",

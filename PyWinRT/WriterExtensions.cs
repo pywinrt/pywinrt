@@ -1324,7 +1324,7 @@ static class WriterExtensions
     public static void WriteNamespaceModuleInitFunction(
         this IndentedTextWriter w,
         QualifiedNamespace ns,
-        IReadOnlyDictionary<string, string> packageMap,
+        IReadOnlyDictionary<string, Package> packageMap,
         Members members,
         int dependencyDepth,
         string moduleSuffix
@@ -1446,7 +1446,7 @@ static class WriterExtensions
     static void WriteNamespaceInitPythonType(
         this IndentedTextWriter w,
         ProjectedType type,
-        IReadOnlyDictionary<string, string> packageMap
+        IReadOnlyDictionary<string, Package> packageMap
     )
     {
         var hasComposableBase =
@@ -1636,7 +1636,7 @@ static class WriterExtensions
         ProjectedMethod method,
         string ns,
         ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
-        IReadOnlyDictionary<string, string> packageMap,
+        IReadOnlyDictionary<string, Package> packageMap,
         string self = "self",
         bool isAbstract = false
     )
@@ -1683,7 +1683,7 @@ static class WriterExtensions
         ProjectedProperty prop,
         string ns,
         ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
-        IReadOnlyDictionary<string, string> packageMap,
+        IReadOnlyDictionary<string, Package> packageMap,
         string self = "self",
         bool isAbstract = false
     )

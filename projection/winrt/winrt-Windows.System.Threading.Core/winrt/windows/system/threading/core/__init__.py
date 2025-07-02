@@ -9,6 +9,9 @@ from winrt._winrt_windows_system_threading_core import (
     SignalNotifier,
 )
 
+if typing.TYPE_CHECKING:
+    import winrt.windows.system.threading.core as windows_system_threading_core
+
 __all__ = [
     "PreallocatedWorkItem",
     "SignalNotifier",

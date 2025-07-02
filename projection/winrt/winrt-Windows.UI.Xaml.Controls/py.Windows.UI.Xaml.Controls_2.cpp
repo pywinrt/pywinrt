@@ -24387,6 +24387,90 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_2(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle windows_ui_xaml_controls_2_module{PyImport_ImportModule("winrt._winrt_windows_ui_xaml_controls_2")};
+    if (!windows_ui_xaml_controls_2_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_controls_Button_type{PyObject_GetAttrString(windows_ui_xaml_controls_2_module.get(), "Button")};
+    if (!windows_ui_xaml_controls_Button_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_controls_ListViewBase_type{PyObject_GetAttrString(windows_ui_xaml_controls_2_module.get(), "ListViewBase")};
+    if (!windows_ui_xaml_controls_ListViewBase_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_controls_InkToolbarPenButton_type{PyObject_GetAttrString(windows_ui_xaml_controls_2_module.get(), "InkToolbarPenButton")};
+    if (!windows_ui_xaml_controls_InkToolbarPenButton_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_controls_InkToolbarToggleButton_type{PyObject_GetAttrString(windows_ui_xaml_controls_2_module.get(), "InkToolbarToggleButton")};
+    if (!windows_ui_xaml_controls_InkToolbarToggleButton_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_controls_InkToolbarToolButton_type{PyObject_GetAttrString(windows_ui_xaml_controls_2_module.get(), "InkToolbarToolButton")};
+    if (!windows_ui_xaml_controls_InkToolbarToolButton_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_controls_InkToolbarMenuButton_type{PyObject_GetAttrString(windows_ui_xaml_controls_2_module.get(), "InkToolbarMenuButton")};
+    if (!windows_ui_xaml_controls_InkToolbarMenuButton_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_controls_CheckBox_type{PyObject_GetAttrString(windows_ui_xaml_controls_2_module.get(), "CheckBox")};
+    if (!windows_ui_xaml_controls_CheckBox_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_controls_RadioButton_type{PyObject_GetAttrString(windows_ui_xaml_controls_2_module.get(), "RadioButton")};
+    if (!windows_ui_xaml_controls_RadioButton_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_controls_MenuFlyout_type{PyObject_GetAttrString(windows_ui_xaml_controls_2_module.get(), "MenuFlyout")};
+    if (!windows_ui_xaml_controls_MenuFlyout_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_controls_NavigationViewItemBase_type{PyObject_GetAttrString(windows_ui_xaml_controls_2_module.get(), "NavigationViewItemBase")};
+    if (!windows_ui_xaml_controls_NavigationViewItemBase_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_controls_ListViewItem_type{PyObject_GetAttrString(windows_ui_xaml_controls_2_module.get(), "ListViewItem")};
+    if (!windows_ui_xaml_controls_ListViewItem_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_controls_ListView_type{PyObject_GetAttrString(windows_ui_xaml_controls_2_module.get(), "ListView")};
+    if (!windows_ui_xaml_controls_ListView_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_controls_CommandBarFlyout_type{PyObject_GetAttrString(windows_ui_xaml_controls_2_module.get(), "CommandBarFlyout")};
+    if (!windows_ui_xaml_controls_CommandBarFlyout_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle windows_ui_xaml_controls_primitives_module{PyImport_ImportModule("winrt._winrt_windows_ui_xaml_controls_primitives")};
     if (!windows_ui_xaml_controls_primitives_module)
     {

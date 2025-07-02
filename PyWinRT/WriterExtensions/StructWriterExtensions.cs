@@ -7,7 +7,7 @@ static class StructWriterExtensions
         this IndentedTextWriter w,
         ProjectedType type,
         string ns,
-        IReadOnlyDictionary<string, string> packageMap
+        IReadOnlyDictionary<string, Package> packageMap
     )
     {
         var metaclass = "";

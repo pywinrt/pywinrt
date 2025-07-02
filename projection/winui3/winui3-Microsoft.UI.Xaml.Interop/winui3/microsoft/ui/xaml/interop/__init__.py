@@ -26,6 +26,9 @@ if TYPE_CHECKING:
         NotifyCollectionChangedEventArgs_Static,
     )
 
+if typing.TYPE_CHECKING:
+    import winui3.microsoft.ui.xaml.interop as microsoft_ui_xaml_interop
+
 __all__ = [
     "NotifyCollectionChangedAction",
     "NotifyCollectionChangedEventArgs",

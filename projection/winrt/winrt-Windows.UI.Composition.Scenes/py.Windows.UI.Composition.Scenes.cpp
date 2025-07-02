@@ -5947,6 +5947,48 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_scenes(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle windows_ui_composition_scenes_module{PyImport_ImportModule("winrt._winrt_windows_ui_composition_scenes")};
+    if (!windows_ui_composition_scenes_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_composition_scenes_SceneObject_type{PyObject_GetAttrString(windows_ui_composition_scenes_module.get(), "SceneObject")};
+    if (!windows_ui_composition_scenes_SceneObject_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_composition_scenes_SceneRendererComponent_type{PyObject_GetAttrString(windows_ui_composition_scenes_module.get(), "SceneRendererComponent")};
+    if (!windows_ui_composition_scenes_SceneRendererComponent_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_composition_scenes_ScenePbrMaterial_type{PyObject_GetAttrString(windows_ui_composition_scenes_module.get(), "ScenePbrMaterial")};
+    if (!windows_ui_composition_scenes_ScenePbrMaterial_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_composition_scenes_SceneMaterial_type{PyObject_GetAttrString(windows_ui_composition_scenes_module.get(), "SceneMaterial")};
+    if (!windows_ui_composition_scenes_SceneMaterial_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_composition_scenes_SceneComponent_type{PyObject_GetAttrString(windows_ui_composition_scenes_module.get(), "SceneComponent")};
+    if (!windows_ui_composition_scenes_SceneComponent_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_composition_scenes_SceneMaterialInput_type{PyObject_GetAttrString(windows_ui_composition_scenes_module.get(), "SceneMaterialInput")};
+    if (!windows_ui_composition_scenes_SceneMaterialInput_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle windows_ui_composition_module{PyImport_ImportModule("winrt._winrt_windows_ui_composition")};
     if (!windows_ui_composition_module)
     {

@@ -15651,6 +15651,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle windows_ui_input_module{PyImport_ImportModule("winrt._winrt_windows_ui_input")};
+    if (!windows_ui_input_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_input_AttachableInputObject_type{PyObject_GetAttrString(windows_ui_input_module.get(), "AttachableInputObject")};
+    if (!windows_ui_input_AttachableInputObject_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle AttachableInputObject_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
     if (!AttachableInputObject_Static_bases)
     {

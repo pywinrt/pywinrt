@@ -15110,6 +15110,36 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle microsoft_ui_xaml_documents_module{PyImport_ImportModule("winui3._winui3_microsoft_ui_xaml_documents")};
+    if (!microsoft_ui_xaml_documents_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_xaml_documents_TextElement_type{PyObject_GetAttrString(microsoft_ui_xaml_documents_module.get(), "TextElement")};
+    if (!microsoft_ui_xaml_documents_TextElement_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_xaml_documents_Span_type{PyObject_GetAttrString(microsoft_ui_xaml_documents_module.get(), "Span")};
+    if (!microsoft_ui_xaml_documents_Span_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_xaml_documents_Inline_type{PyObject_GetAttrString(microsoft_ui_xaml_documents_module.get(), "Inline")};
+    if (!microsoft_ui_xaml_documents_Inline_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_xaml_documents_Block_type{PyObject_GetAttrString(microsoft_ui_xaml_documents_module.get(), "Block")};
+    if (!microsoft_ui_xaml_documents_Block_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle microsoft_ui_xaml_module{PyImport_ImportModule("winui3._winui3_microsoft_ui_xaml")};
     if (!microsoft_ui_xaml_module)
     {

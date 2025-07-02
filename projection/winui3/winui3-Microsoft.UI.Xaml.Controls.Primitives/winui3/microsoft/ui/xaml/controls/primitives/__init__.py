@@ -133,6 +133,9 @@ if TYPE_CHECKING:
         TabViewListView_Static,
     )
 
+if typing.TYPE_CHECKING:
+    import winui3.microsoft.ui.xaml.controls.primitives as microsoft_ui_xaml_controls_primitives
+
 __all__ = [
     "AnimationDirection",
     "ComponentResourceLocation",

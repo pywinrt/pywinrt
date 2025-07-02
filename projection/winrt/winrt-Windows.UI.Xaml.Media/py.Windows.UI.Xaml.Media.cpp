@@ -26460,6 +26460,84 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle windows_ui_xaml_media_module{PyImport_ImportModule("winrt._winrt_windows_ui_xaml_media")};
+    if (!windows_ui_xaml_media_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_media_XamlCompositionBrushBase_type{PyObject_GetAttrString(windows_ui_xaml_media_module.get(), "XamlCompositionBrushBase")};
+    if (!windows_ui_xaml_media_XamlCompositionBrushBase_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_media_PathSegment_type{PyObject_GetAttrString(windows_ui_xaml_media_module.get(), "PathSegment")};
+    if (!windows_ui_xaml_media_PathSegment_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_media_CacheMode_type{PyObject_GetAttrString(windows_ui_xaml_media_module.get(), "CacheMode")};
+    if (!windows_ui_xaml_media_CacheMode_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_media_Transform_type{PyObject_GetAttrString(windows_ui_xaml_media_module.get(), "Transform")};
+    if (!windows_ui_xaml_media_Transform_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_media_Geometry_type{PyObject_GetAttrString(windows_ui_xaml_media_module.get(), "Geometry")};
+    if (!windows_ui_xaml_media_Geometry_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_media_Brush_type{PyObject_GetAttrString(windows_ui_xaml_media_module.get(), "Brush")};
+    if (!windows_ui_xaml_media_Brush_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_media_TileBrush_type{PyObject_GetAttrString(windows_ui_xaml_media_module.get(), "TileBrush")};
+    if (!windows_ui_xaml_media_TileBrush_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_media_GradientBrush_type{PyObject_GetAttrString(windows_ui_xaml_media_module.get(), "GradientBrush")};
+    if (!windows_ui_xaml_media_GradientBrush_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_media_Projection_type{PyObject_GetAttrString(windows_ui_xaml_media_module.get(), "Projection")};
+    if (!windows_ui_xaml_media_Projection_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_media_RevealBrush_type{PyObject_GetAttrString(windows_ui_xaml_media_module.get(), "RevealBrush")};
+    if (!windows_ui_xaml_media_RevealBrush_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_media_Shadow_type{PyObject_GetAttrString(windows_ui_xaml_media_module.get(), "Shadow")};
+    if (!windows_ui_xaml_media_Shadow_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_media_GeneralTransform_type{PyObject_GetAttrString(windows_ui_xaml_media_module.get(), "GeneralTransform")};
+    if (!windows_ui_xaml_media_GeneralTransform_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle windows_ui_xaml_module{PyImport_ImportModule("winrt._winrt_windows_ui_xaml")};
     if (!windows_ui_xaml_module)
     {

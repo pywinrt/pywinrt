@@ -1,4 +1,4 @@
-﻿using System.Collections.Concurrent;
+using System.Collections.Concurrent;
 using System.CommandLine;
 using System.CommandLine.Builder;
 using System.CommandLine.Help;
@@ -9,7 +9,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Mono.Cecil;
 
-var inputOption = new Option<(string, string)[]>(
+var inputOption = new Option<(string, Package)[]>(
     "--input",
     CommandReader.ParseSpec,
     default,
@@ -20,7 +20,7 @@ var inputOption = new Option<(string, string)[]>(
     ArgumentHelpName = "spec",
 };
 
-var referenceOption = new Option<(string, string)[]>(
+var referenceOption = new Option<(string, Package)[]>(
     "--reference",
     CommandReader.ParseSpec,
     default,
@@ -97,7 +97,7 @@ rootCommand.SetHandler(
     {
         var resolver = new MetadataResolver();
         var types = new List<TypeDefinition>();
-        var packageMap = new Dictionary<string, string>();
+        var packageMap = new Dictionary<string, Package>();
 
         var input = invocationContext.ParseResult.GetValueForOption(inputOption)!;
         var reference = invocationContext.ParseResult.GetValueForOption(referenceOption)!;
@@ -111,7 +111,7 @@ rootCommand.SetHandler(
         var componentDlls = invocationContext.ParseResult.GetValueForOption(componentDllsOption);
         var verbose = invocationContext.ParseResult.GetValueForOption(verboseOption);
 
-        var inputPackage = default(string);
+        Package? inputPackage = null;
 
         foreach (var (file, package) in input)
         {
@@ -119,7 +119,7 @@ rootCommand.SetHandler(
             {
                 inputPackage = package;
             }
-            else if (inputPackage != package)
+            else if (inputPackage.Name != package.Name || inputPackage.Version != package.Version)
             {
                 throw new Exception("All input packages must be the same python package");
             }
@@ -155,10 +155,10 @@ rootCommand.SetHandler(
             resolver.Register(assembly);
             packageMap.Add(assembly.Modules.Single().Name, package);
 
-            if (package == inputPackage)
+            if (package.Name == inputPackage.Name)
             {
                 throw new Exception(
-                    $"Reference package ({package}) must not match input package for {file}"
+                    $"Reference package ({package.Name}) must not match input package for {file}"
                 );
             }
         }

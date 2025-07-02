@@ -11928,6 +11928,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_input(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle windows_ui_xaml_input_module{PyImport_ImportModule("winrt._winrt_windows_ui_xaml_input")};
+    if (!windows_ui_xaml_input_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_input_XamlUICommand_type{PyObject_GetAttrString(windows_ui_xaml_input_module.get(), "XamlUICommand")};
+    if (!windows_ui_xaml_input_XamlUICommand_type)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle AccessKeyDisplayDismissedEventArgs_type{py::register_python_type(module.get(), &type_spec_AccessKeyDisplayDismissedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!AccessKeyDisplayDismissedEventArgs_type)
     {

@@ -33,6 +33,7 @@ param(
 )
 
 $repoRootPath = (Get-Item $PSScriptRoot).Parent.FullName
+$pywinrtVersionFileName = "pywinrt_version_52c8"
 
 try {
     Get-Command nuget -ErrorAction Stop | Out-Null
@@ -47,11 +48,19 @@ if (!$noCppWinRT) {
     if ($LASTEXITCODE -ne 0) {
         exit $LASTEXITCODE
     }
+    Write-Output "$CppWinRTVersion" > "$repoRootPath/_tools/Microsoft.Windows.CppWinRT/$pywinrtVersionFileName"
+    if ($LASTEXITCODE -ne 0) {
+        exit $LASTEXITCODE
+    }
 }
 
 if (!$noWindowsSdk) {
     & nuget install Microsoft.Windows.SDK.CPP -Version $WindowsSdkVersion -ExcludeVersion -DependencyVersion Ignore -OutputDirectory "$repoRootPath/_tools" -NoHttpCache
 
+    if ($LASTEXITCODE -ne 0) {
+        exit $LASTEXITCODE
+    }
+    Write-Output "$WindowsSdkVersion" > "$repoRootPath/_tools/Microsoft.Windows.SDK.CPP/$pywinrtVersionFileName"
     if ($LASTEXITCODE -ne 0) {
         exit $LASTEXITCODE
     }
@@ -63,11 +72,19 @@ if (!$noMicrosoftUiXaml) {
     if ($LASTEXITCODE -ne 0) {
         exit $LASTEXITCODE
     }
+    Write-Output "$MicrosoftUiXaml" > "$repoRootPath/_tools/Microsoft.UI.Xaml/$pywinrtVersionFileName"
+    if ($LASTEXITCODE -ne 0) {
+        exit $LASTEXITCODE
+    }
 }
 
 if (!$noWindowsAppSDK) {
     & nuget install Microsoft.WindowsAppSDK -Version $WindowsAppSDKVersion -ExcludeVersion -DependencyVersion Ignore -OutputDirectory "$repoRootPath/_tools" -NoHttpCache
 
+    if ($LASTEXITCODE -ne 0) {
+        exit $LASTEXITCODE
+    }
+    Write-Output "$WindowsAppSDKVersion" > "$repoRootPath/_tools/Microsoft.WindowsAppSDK/$pywinrtVersionFileName"
     if ($LASTEXITCODE -ne 0) {
         exit $LASTEXITCODE
     }
@@ -79,11 +96,19 @@ if (!$noWebView2) {
     if ($LASTEXITCODE -ne 0) {
         exit $LASTEXITCODE
     }
+    Write-Output "$WebView2Version" > "$repoRootPath/_tools/Microsoft.Web.WebView2/$pywinrtVersionFileName"
+    if ($LASTEXITCODE -ne 0) {
+        exit $LASTEXITCODE
+    }
 }
 
 if (!$noTestWinRT) {
     & nuget install PyWinRT.TestWinRT -Version $TestWinRTVersion -ExcludeVersion -DependencyVersion Ignore -OutputDirectory "$repoRootPath/_tools" -NoHttpCache
 
+    if ($LASTEXITCODE -ne 0) {
+        exit $LASTEXITCODE
+    }
+    Write-Output "$TestWinRTVersion" > "$repoRootPath/_tools/PyWinRT.TestWinRT/$pywinrtVersionFileName"
     if ($LASTEXITCODE -ne 0) {
         exit $LASTEXITCODE
     }

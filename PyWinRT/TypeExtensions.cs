@@ -329,7 +329,7 @@ static class TypeExtensions
     public static string GetDefaultPyValue(
         this TypeReference type,
         string ns,
-        IReadOnlyDictionary<string, string> packageMap
+        IReadOnlyDictionary<string, Package> packageMap
     ) =>
         type switch
         {
@@ -372,7 +372,7 @@ static class TypeExtensions
         this TypeReference type,
         string ns,
         TypeRefNullabilityInfo nullabilityInfo,
-        IReadOnlyDictionary<string, string> packageMap,
+        IReadOnlyDictionary<string, Package> packageMap,
         IReadOnlyDictionary<GenericParameter, TypeReference>? map = default,
         bool quoteImportedTypes = false,
         bool usePythonCollectionTypes = true,
@@ -487,7 +487,7 @@ static class TypeExtensions
     public static string ToPyTupleTyping(
         this TypeReference type,
         string ns,
-        IReadOnlyDictionary<string, string> packageMap,
+        IReadOnlyDictionary<string, Package> packageMap,
         bool quoteImportedTypes = false,
         bool isUnpack = false
     ) =>
@@ -497,7 +497,7 @@ static class TypeExtensions
         this ParameterDefinition param,
         string ns,
         TypeRefNullabilityInfo nullabilityInfo,
-        IReadOnlyDictionary<string, string> packageMap,
+        IReadOnlyDictionary<string, Package> packageMap,
         IReadOnlyDictionary<GenericParameter, TypeReference>? map = default,
         bool quoteImportedTypes = false
     ) =>
@@ -546,7 +546,7 @@ static class TypeExtensions
         this ParameterDefinition param,
         string ns,
         TypeRefNullabilityInfo nullabilityInfo,
-        IReadOnlyDictionary<string, string> packageMap,
+        IReadOnlyDictionary<string, Package> packageMap,
         IReadOnlyDictionary<GenericParameter, TypeReference>? map = default,
         bool quoteImportedTypes = false
     ) =>
@@ -580,7 +580,7 @@ static class TypeExtensions
         this ParameterDefinition param,
         string ns,
         TypeRefNullabilityInfo nullabilityInfo,
-        IReadOnlyDictionary<string, string> packageMap,
+        IReadOnlyDictionary<string, Package> packageMap,
         IReadOnlyDictionary<GenericParameter, TypeReference>? map = default,
         bool quoteImportedTypes = false
     ) =>
@@ -603,7 +603,7 @@ static class TypeExtensions
         this MethodDefinition method,
         string ns,
         MethodNullabilityInfo nullabilityInfo,
-        IReadOnlyDictionary<string, string> packageMap,
+        IReadOnlyDictionary<string, Package> packageMap,
         IReadOnlyDictionary<GenericParameter, TypeReference>? map = default,
         bool quoteImportedTypes = false
     )
@@ -941,10 +941,10 @@ static class TypeExtensions
 
     public static QualifiedNamespace GetQualifiedNamespace(
         this TypeReference type,
-        IReadOnlyDictionary<string, string> packageMap
+        IReadOnlyDictionary<string, Package> packageMap
     ) =>
         new(
-            type.Namespace == "System" ? "winrt" : packageMap[type.Resolve().Module.Name],
+            type.Namespace == "System" ? new Package { Name = "winrt" } : packageMap[type.Resolve().Module.Name],
             type.Namespace
         );
 }

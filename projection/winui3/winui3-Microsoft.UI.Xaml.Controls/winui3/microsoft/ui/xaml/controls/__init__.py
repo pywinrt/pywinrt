@@ -553,6 +553,7 @@ if TYPE_CHECKING:
 
 if typing.TYPE_CHECKING:
     import winrt.windows.foundation as windows_foundation
+    import winui3.microsoft.ui.xaml.controls as microsoft_ui_xaml_controls
 
 __all__ = [
     "AnnotatedScrollBarScrollingEventKind",

@@ -25,6 +25,9 @@ from winrt._winrt_windows_applicationmodel_payments import (
     PaymentToken,
 )
 
+if typing.TYPE_CHECKING:
+    import winrt.windows.applicationmodel.payments as windows_applicationmodel_payments
+
 __all__ = [
     "PaymentCanMakePaymentResultStatus",
     "PaymentOptionPresence",

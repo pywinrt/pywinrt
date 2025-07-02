@@ -21,6 +21,9 @@ from winrt._winrt_windows_devices_perception_provider import (
     IPerceptionFrameProviderManager,
 )
 
+if typing.TYPE_CHECKING:
+    import winrt.windows.devices.perception.provider as windows_devices_perception_provider
+
 __all__ = [
     "KnownPerceptionFrameKind",
     "PerceptionControlGroup",

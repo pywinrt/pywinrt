@@ -14,6 +14,9 @@ from winrt._winrt_windows_gaming_preview_gamesenumeration import (
     IGameListEntry,
 )
 
+if typing.TYPE_CHECKING:
+    import winrt.windows.gaming.preview.gamesenumeration as windows_gaming_preview_gamesenumeration
+
 __all__ = [
     "GameListCategory",
     "GameListEntryLaunchableState",

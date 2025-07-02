@@ -5947,6 +5947,48 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_ui_composition_scenes(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle microsoft_ui_composition_scenes_module{PyImport_ImportModule("winui3._winui3_microsoft_ui_composition_scenes")};
+    if (!microsoft_ui_composition_scenes_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_composition_scenes_SceneObject_type{PyObject_GetAttrString(microsoft_ui_composition_scenes_module.get(), "SceneObject")};
+    if (!microsoft_ui_composition_scenes_SceneObject_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_composition_scenes_SceneRendererComponent_type{PyObject_GetAttrString(microsoft_ui_composition_scenes_module.get(), "SceneRendererComponent")};
+    if (!microsoft_ui_composition_scenes_SceneRendererComponent_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_composition_scenes_ScenePbrMaterial_type{PyObject_GetAttrString(microsoft_ui_composition_scenes_module.get(), "ScenePbrMaterial")};
+    if (!microsoft_ui_composition_scenes_ScenePbrMaterial_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_composition_scenes_SceneMaterial_type{PyObject_GetAttrString(microsoft_ui_composition_scenes_module.get(), "SceneMaterial")};
+    if (!microsoft_ui_composition_scenes_SceneMaterial_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_composition_scenes_SceneComponent_type{PyObject_GetAttrString(microsoft_ui_composition_scenes_module.get(), "SceneComponent")};
+    if (!microsoft_ui_composition_scenes_SceneComponent_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_composition_scenes_SceneMaterialInput_type{PyObject_GetAttrString(microsoft_ui_composition_scenes_module.get(), "SceneMaterialInput")};
+    if (!microsoft_ui_composition_scenes_SceneMaterialInput_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle microsoft_ui_composition_module{PyImport_ImportModule("winui3._winui3_microsoft_ui_composition")};
     if (!microsoft_ui_composition_module)
     {

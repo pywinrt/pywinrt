@@ -81,6 +81,9 @@ from winrt._winrt_windows_media_capture import (
     VideoStreamConfiguration,
 )
 
+if typing.TYPE_CHECKING:
+    import winrt.windows.media.capture as windows_media_capture
+
 __all__ = [
     "AppBroadcastCameraCaptureState",
     "AppBroadcastCameraOverlayLocation",

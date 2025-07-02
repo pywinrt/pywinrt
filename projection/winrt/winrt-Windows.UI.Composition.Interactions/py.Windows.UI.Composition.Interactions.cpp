@@ -6967,6 +6967,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_interactions(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle windows_ui_composition_interactions_module{PyImport_ImportModule("winrt._winrt_windows_ui_composition_interactions")};
+    if (!windows_ui_composition_interactions_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_composition_interactions_InteractionTrackerInertiaModifier_type{PyObject_GetAttrString(windows_ui_composition_interactions_module.get(), "InteractionTrackerInertiaModifier")};
+    if (!windows_ui_composition_interactions_InteractionTrackerInertiaModifier_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_composition_interactions_InteractionTrackerVector2InertiaModifier_type{PyObject_GetAttrString(windows_ui_composition_interactions_module.get(), "InteractionTrackerVector2InertiaModifier")};
+    if (!windows_ui_composition_interactions_InteractionTrackerVector2InertiaModifier_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle CompositionConditionalValue_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_composition_CompositionObject_type.get())))};
     if (!CompositionConditionalValue_Static_bases)
     {

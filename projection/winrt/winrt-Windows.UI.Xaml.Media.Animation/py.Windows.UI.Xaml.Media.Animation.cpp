@@ -27996,6 +27996,66 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle windows_ui_xaml_media_animation_module{PyImport_ImportModule("winrt._winrt_windows_ui_xaml_media_animation")};
+    if (!windows_ui_xaml_media_animation_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_media_animation_Transition_type{PyObject_GetAttrString(windows_ui_xaml_media_animation_module.get(), "Transition")};
+    if (!windows_ui_xaml_media_animation_Transition_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_media_animation_EasingFunctionBase_type{PyObject_GetAttrString(windows_ui_xaml_media_animation_module.get(), "EasingFunctionBase")};
+    if (!windows_ui_xaml_media_animation_EasingFunctionBase_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_media_animation_ConnectedAnimationConfiguration_type{PyObject_GetAttrString(windows_ui_xaml_media_animation_module.get(), "ConnectedAnimationConfiguration")};
+    if (!windows_ui_xaml_media_animation_ConnectedAnimationConfiguration_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_media_animation_Timeline_type{PyObject_GetAttrString(windows_ui_xaml_media_animation_module.get(), "Timeline")};
+    if (!windows_ui_xaml_media_animation_Timeline_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_media_animation_NavigationTransitionInfo_type{PyObject_GetAttrString(windows_ui_xaml_media_animation_module.get(), "NavigationTransitionInfo")};
+    if (!windows_ui_xaml_media_animation_NavigationTransitionInfo_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_media_animation_ColorKeyFrame_type{PyObject_GetAttrString(windows_ui_xaml_media_animation_module.get(), "ColorKeyFrame")};
+    if (!windows_ui_xaml_media_animation_ColorKeyFrame_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_media_animation_DoubleKeyFrame_type{PyObject_GetAttrString(windows_ui_xaml_media_animation_module.get(), "DoubleKeyFrame")};
+    if (!windows_ui_xaml_media_animation_DoubleKeyFrame_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_media_animation_ObjectKeyFrame_type{PyObject_GetAttrString(windows_ui_xaml_media_animation_module.get(), "ObjectKeyFrame")};
+    if (!windows_ui_xaml_media_animation_ObjectKeyFrame_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_media_animation_PointKeyFrame_type{PyObject_GetAttrString(windows_ui_xaml_media_animation_module.get(), "PointKeyFrame")};
+    if (!windows_ui_xaml_media_animation_PointKeyFrame_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle windows_ui_xaml_module{PyImport_ImportModule("winrt._winrt_windows_ui_xaml")};
     if (!windows_ui_xaml_module)
     {

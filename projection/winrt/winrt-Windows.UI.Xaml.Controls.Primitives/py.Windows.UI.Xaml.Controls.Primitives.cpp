@@ -31739,6 +31739,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle windows_ui_xaml_controls_primitives_module{PyImport_ImportModule("winrt._winrt_windows_ui_xaml_controls_primitives")};
+    if (!windows_ui_xaml_controls_primitives_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_controls_primitives_FlyoutBase_type{PyObject_GetAttrString(windows_ui_xaml_controls_primitives_module.get(), "FlyoutBase")};
+    if (!windows_ui_xaml_controls_primitives_FlyoutBase_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_controls_primitives_ButtonBase_type{PyObject_GetAttrString(windows_ui_xaml_controls_primitives_module.get(), "ButtonBase")};
+    if (!windows_ui_xaml_controls_primitives_ButtonBase_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_controls_primitives_RangeBase_type{PyObject_GetAttrString(windows_ui_xaml_controls_primitives_module.get(), "RangeBase")};
+    if (!windows_ui_xaml_controls_primitives_RangeBase_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle AppBarButtonTemplateSettings_bases{PyTuple_Pack(1, windows_ui_xaml_DependencyObject_type.get())};
     if (!AppBarButtonTemplateSettings_bases)
     {
