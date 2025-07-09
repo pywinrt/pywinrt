@@ -144,7 +144,11 @@ class CommandReader
         return result.ToString();
     }
 
-    public static (string, Package)[] ParseSpec(ArgumentResult result, bool isVersionMadatory, bool isInputPackage)
+    public static (string, Package)[] ParseSpec(
+        ArgumentResult result,
+        bool isVersionMadatory,
+        bool isInputPackage
+    )
     {
         var files = new SortedDictionary<string, string>(StringComparer.Ordinal);
         var packageVersions = new Dictionary<string, string>();
@@ -244,6 +248,11 @@ class CommandReader
                 var path = split[1];
                 string? version = split.Length == 3 ? split[2] : null;
 
+                if (isVersionMadatory && version == null)
+                {
+                    throw new ArgumentException("Missing package version");
+                }
+
                 if (version is string v)
                 {
                     packageVersions.TryAdd(package, v);
@@ -283,10 +292,6 @@ class CommandReader
                         IsInputPackage = isInputPackage,
                         Version = packageVersions.TryGetValue(kvp.Value, out var v) ? v : null
                     };
-                    if (isVersionMadatory && package.Version == null)
-                    {
-                        throw new ArgumentException("Package version missing");
-                    }
                     return (kvp.Key, package);
                 }
             )
