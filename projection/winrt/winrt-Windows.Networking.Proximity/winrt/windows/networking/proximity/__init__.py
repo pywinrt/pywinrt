@@ -15,9 +15,6 @@ from winrt._winrt_windows_networking_proximity import (
     TriggeredConnectionStateChangedEventArgs,
 )
 
-if typing.TYPE_CHECKING:
-    import winrt.windows.networking.proximity as windows_networking_proximity
-
 __all__ = [
     "PeerDiscoveryTypes",
     "PeerRole",

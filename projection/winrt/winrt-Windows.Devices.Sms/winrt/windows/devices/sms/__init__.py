@@ -43,9 +43,6 @@ from winrt._winrt_windows_devices_sms import (
     ISmsTextMessage,
 )
 
-if typing.TYPE_CHECKING:
-    import winrt.windows.devices.sms as windows_devices_sms
-
 __all__ = [
     "CellularClass",
     "SmsBroadcastType",

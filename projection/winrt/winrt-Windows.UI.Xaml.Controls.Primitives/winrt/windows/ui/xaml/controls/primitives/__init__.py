@@ -97,9 +97,6 @@ if TYPE_CHECKING:
         ColorPickerSlider_Static,
     )
 
-if typing.TYPE_CHECKING:
-    import winrt.windows.ui.xaml.controls.primitives as windows_ui_xaml_controls_primitives
-
 __all__ = [
     "AnimationDirection",
     "ComponentResourceLocation",

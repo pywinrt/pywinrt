@@ -6505,18 +6505,6 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_ui_windowing(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle microsoft_ui_windowing_module{PyImport_ImportModule("winui3._winui3_microsoft_ui_windowing")};
-    if (!microsoft_ui_windowing_module)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle microsoft_ui_windowing_AppWindowPresenter_type{PyObject_GetAttrString(microsoft_ui_windowing_module.get(), "AppWindowPresenter")};
-    if (!microsoft_ui_windowing_AppWindowPresenter_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle AppWindow_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
     if (!AppWindow_Static_bases)
     {

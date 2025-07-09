@@ -464,7 +464,6 @@ if TYPE_CHECKING:
 
 if typing.TYPE_CHECKING:
     import winrt.windows.foundation as windows_foundation
-    import winrt.windows.ui.xaml.controls as windows_ui_xaml_controls
 
 __all__ = [
     "AppBarClosedDisplayMode",

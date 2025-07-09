@@ -52,9 +52,6 @@ if TYPE_CHECKING:
         RelativeSource_Static,
     )
 
-if typing.TYPE_CHECKING:
-    import winrt.windows.ui.xaml.data as windows_ui_xaml_data
-
 __all__ = [
     "BindingMode",
     "RelativeSourceMode",

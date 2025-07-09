@@ -100,9 +100,6 @@ if TYPE_CHECKING:
         XamlLight_Static,
     )
 
-if typing.TYPE_CHECKING:
-    import winrt.windows.ui.xaml.media as windows_ui_xaml_media
-
 __all__ = [
     "AcrylicBackgroundSource",
     "AlignmentX",

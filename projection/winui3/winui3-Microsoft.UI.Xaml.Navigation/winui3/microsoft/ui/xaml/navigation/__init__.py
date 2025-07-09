@@ -18,9 +18,6 @@ if TYPE_CHECKING:
         FrameNavigationOptions_Static,
     )
 
-if typing.TYPE_CHECKING:
-    import winui3.microsoft.ui.xaml.navigation as microsoft_ui_xaml_navigation
-
 __all__ = [
     "NavigationCacheMode",
     "NavigationMode",

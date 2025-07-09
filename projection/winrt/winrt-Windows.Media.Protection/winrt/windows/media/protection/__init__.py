@@ -20,9 +20,6 @@ from winrt._winrt_windows_media_protection import (
     IMediaProtectionServiceRequest,
 )
 
-if typing.TYPE_CHECKING:
-    import winrt.windows.media.protection as windows_media_protection
-
 __all__ = [
     "GraphicsTrustStatus",
     "HdcpProtection",

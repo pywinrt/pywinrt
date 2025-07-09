@@ -35,9 +35,6 @@ from winrt._winrt_windows_applicationmodel_datatransfer import (
     TargetApplicationChosenEventArgs,
 )
 
-if typing.TYPE_CHECKING:
-    import winrt.windows.applicationmodel.datatransfer as windows_applicationmodel_datatransfer
-
 __all__ = [
     "ClipboardHistoryItemsResultStatus",
     "DataPackageOperation",

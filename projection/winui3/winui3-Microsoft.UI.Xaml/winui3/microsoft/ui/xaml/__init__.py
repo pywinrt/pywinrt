@@ -133,7 +133,6 @@ if TYPE_CHECKING:
 
 if typing.TYPE_CHECKING:
     import winrt.windows.applicationmodel as windows_applicationmodel
-    import winui3.microsoft.ui.xaml as microsoft_ui_xaml
 
 __all__ = [
     "ApplicationHighContrastAdjustment",

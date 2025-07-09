@@ -54,9 +54,6 @@ from winrt._winrt_windows_storage_provider import (
     IStorageProviderUriSource,
 )
 
-if typing.TYPE_CHECKING:
-    import winrt.windows.storage.provider as windows_storage_provider
-
 __all__ = [
     "CachedFileOptions",
     "CachedFileTarget",

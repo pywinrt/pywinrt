@@ -36,9 +36,6 @@ from winrt._winrt_windows_foundation_collections import (
     IVector,
 )
 
-if typing.TYPE_CHECKING:
-    import winrt.windows.foundation.collections as windows_foundation_collections
-
 __all__ = [
     "CollectionChange",
     "PropertySet",

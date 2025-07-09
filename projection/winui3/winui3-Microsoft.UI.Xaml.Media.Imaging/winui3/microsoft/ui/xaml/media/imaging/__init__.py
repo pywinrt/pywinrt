@@ -28,9 +28,6 @@ if TYPE_CHECKING:
         XamlRenderingBackgroundTask_Static,
     )
 
-if typing.TYPE_CHECKING:
-    import winui3.microsoft.ui.xaml.media.imaging as microsoft_ui_xaml_media_imaging
-
 __all__ = [
     "BitmapCreateOptions",
     "DecodePixelType",

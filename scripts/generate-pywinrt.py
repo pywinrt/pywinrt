@@ -1,5 +1,4 @@
 import pathlib
-import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -10,6 +9,7 @@ def get_wheel_version_from_nuget_version(nuget_version:str) -> str:
     # These are the pre-release version formats that can appear in the covered packages.
     # Please adjust based on the package you want to convert.
     version = nuget_version.replace('-experimental', '.dev')
+    version = version.replace('-preview', '.dev')
     version = version.replace('-prerelease.', '.dev')
     version = version.replace('-prerelease', '.dev1')
     version = f"{VERSION_EPOCH}!{version}"
@@ -18,6 +18,7 @@ def get_wheel_version_from_nuget_version(nuget_version:str) -> str:
 def get_wheel_version_for_nuget_package(nuget_path: Path) -> str:
     # The version file is added when downloading the nuget packages.
     # See fetch-tools.ps1 for details
+    # The _528c suffix is here to avoid file name collisions within the nuget package.
     version_file = nuget_path / "pywinrt_version_52c8"
     if not version_file.exists():
         raise FileNotFoundError()
@@ -138,6 +139,7 @@ MICROSOFT_UI_XAML_PACKAGE_METADATA = (
 MICROSOFT_UI_XAML_VERSION = get_wheel_version_for_nuget_package(
     REPO_ROOT_PATH / "_tools" / "Microsoft.UI.Xaml"
 )
+MICROSOFT_UI_XAML_DEPENDENCY_ON_WEBVIEW2 = f">={get_wheel_version_from_nuget_version('1.0.2849.39')}"
 MICROSOFT_UI_XAML_PACKAGE_PATH = (
     PROJECTION_PATH
     / "winrt-Microsoft.UI.Xaml"
@@ -156,7 +158,7 @@ subprocess.check_call(
         "--input",
         f"winui2;{MICROSOFT_UI_XAML_PACKAGE_METADATA};{MICROSOFT_UI_XAML_VERSION}",
         "--reference",
-        f"webview2;{WEBVIEW2_PACKAGE_METADATA};>=1.0.2849.39",
+        f"webview2;{WEBVIEW2_PACKAGE_METADATA};{MICROSOFT_UI_XAML_DEPENDENCY_ON_WEBVIEW2}",
         "--reference",
         f"winrt;{WINDOWS_SDK}",
         "--output",
@@ -179,6 +181,8 @@ WINDOWS_APP_SDK_PACKAGE_METADATA2 = (
 WINDOWS_APP_SDK_VERSION = get_wheel_version_for_nuget_package(
     REPO_ROOT_PATH / "_tools" / "Microsoft.WindowsAppSDK"
 )
+WINDOWS_APP_SDK_DEPENDENCY_ON_WEBVIEW2 = f">={get_wheel_version_from_nuget_version('1.0.2903.40')}"
+WINDOWS_APP_SDK_DEPENDENCY_ON_WINDOWS_SDK = f">={get_wheel_version_from_nuget_version('10.0.22621.756')}"
 WINDOWS_APP_SDK_PACKAGE_PATH = (
     PROJECTION_PATH
     / "winrt-WindowsAppSDK"
@@ -199,9 +203,9 @@ subprocess.check_call(
         "--input",
         f"winui3;{WINDOWS_APP_SDK_PACKAGE_METADATA2};{WINDOWS_APP_SDK_VERSION}",
         "--reference",
-        f"webview2;{WEBVIEW2_PACKAGE_METADATA};>=1.0.2903.40",
+        f"webview2;{WEBVIEW2_PACKAGE_METADATA};{WINDOWS_APP_SDK_DEPENDENCY_ON_WEBVIEW2}",
         "--reference",
-        f"winrt;{WINDOWS_SDK};>=10.0.22621.756",
+        f"winrt;{WINDOWS_SDK};{WINDOWS_APP_SDK_DEPENDENCY_ON_WINDOWS_SDK}",
         "--output",
         PROJECTION_PATH / "winui3",
         "--header-path",
@@ -221,6 +225,9 @@ TEST_PACKAGE_METADATA = (
     / "uap10.0"
     / "TestComponent.winmd"
 )
+TEST_PACKAGE_VERSION = get_wheel_version_for_nuget_package(
+    REPO_ROOT_PATH / "_tools" / "PyWinRT.TestWinRT"
+)
 
 TEST_PACKAGE_NULLABILITY_JSON = REPO_ROOT_PATH / "nullability" / "test-winrt.json"
 
@@ -229,7 +236,7 @@ subprocess.check_call(
     + [
         PYWINRT_EXE,
         "--input",
-        f"test-winrt;{TEST_PACKAGE_METADATA}",
+        f"test-winrt;{TEST_PACKAGE_METADATA};{TEST_PACKAGE_VERSION}",
         "--reference",
         f"winrt;{WINDOWS_SDK}",
         "--output",
@@ -252,44 +259,44 @@ project_version = subprocess.run(
 # Remove the local git hash
 project_version = project_version.split('+')[0]
 
-# set versioned files for non-generated packages
-for path in [
-    PROJECTION_PATH / "winrt-sdk",
-    PROJECTION_PATH / "winrt-Microsoft.UI.Xaml",
-    PROJECTION_PATH / "winrt-WindowsAppSDK",
-    PROJECTION_PATH / "winrt-runtime",
+for package, version in [
+    ("winrt-sdk", WINDOWS_SDK_VERSION),
+    ("winrt-Microsoft.UI.Xaml", MICROSOFT_UI_XAML_VERSION),
+    ("winrt-WindowsAppSDK", WINDOWS_APP_SDK_VERSION),
+    ("winrt-runtime", project_version)
 ]:
-    try:
-        with open(path / "pywinrt-version.txt", "w") as f:
-            f.write(project_version)
-    except shutil.SameFileError:
-        pass
+    with open(PROJECTION_PATH / package / "version.txt", "w") as f:
+        f.write(version)
 
-for pair in [
-    ["winrt-Windows.Graphics.Capture.Interop", WINDOWS_SDK_VERSION],
-    ["winrt-Windows.Graphics.DirectX.Direct3D11.Interop", WINDOWS_SDK_VERSION],
-    ["winrt-Windows.Media.Interop", WINDOWS_SDK_VERSION],
-    ["winrt-Windows.System.Interop", WINDOWS_SDK_VERSION],
-    ["winrt-Windows.UI.Composition.Interop", WINDOWS_SDK_VERSION],
-    ["winrt-Windows.UI.Xaml.Hosting.Interop", WINDOWS_SDK_VERSION],
-    ["winui3-Microsoft.UI.Interop", WINDOWS_APP_SDK_VERSION],
-    ["winui3-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap", WINDOWS_APP_SDK_VERSION]
+for package, version in [
+    ("winrt-Windows.Graphics.Capture.Interop", WINDOWS_SDK_VERSION),
+    ("winrt-Windows.Graphics.DirectX.Direct3D11.Interop", WINDOWS_SDK_VERSION),
+    ("winrt-Windows.Media.Interop", WINDOWS_SDK_VERSION),
+    ("winrt-Windows.System.Interop", WINDOWS_SDK_VERSION),
+    ("winrt-Windows.UI.Composition.Interop", WINDOWS_SDK_VERSION),
+    ("winrt-Windows.UI.Xaml.Hosting.Interop", WINDOWS_SDK_VERSION),
+    ("winui3-Microsoft.UI.Interop", WINDOWS_APP_SDK_VERSION),
+    ("winui3-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap", WINDOWS_APP_SDK_VERSION)
 ]:
-    with open(PROJECTION_PATH / "interop" / pair[0] / "pywinrt-version.txt", "w") as f:
-        f.write(pair[1])
+    with open(PROJECTION_PATH / "interop" / package / "version.txt", "w") as f:
+        f.write(version)
 
 # create dependencies for non-generated packages
-
-with open(PROJECTION_PATH / "winrt-sdk" / "pywinrt-version.txt") as f:
-    version = f.read().strip()
-
-for package in ["winrt-Microsoft.UI.Xaml", "winrt-WindowsAppSDK"]:
+for package, dependencies in [
+    ("winrt-Microsoft.UI.Xaml", [
+        "winrt-sdk",
+        f"webview2-Microsoft.Web.WebView2.Core{MICROSOFT_UI_XAML_DEPENDENCY_ON_WEBVIEW2}", 
+    ]),
+    ("winrt-WindowsAppSDK", [
+        f"winrt-sdk{WINDOWS_APP_SDK_DEPENDENCY_ON_WINDOWS_SDK}",
+        f"webview2-Microsoft.Web.WebView2.Core{WINDOWS_APP_SDK_DEPENDENCY_ON_WEBVIEW2}",
+    ])
+]:
     with open(PROJECTION_PATH / package / "requirements.txt", "w", newline="\n") as f:
         f.writelines(
             [
                 "# This file is generated by scripts/generate-pywinrt.py\n",
                 "\n",
-                f"winrt-sdk=={version}\n",
-                f"webview2-Microsoft.Web.WebView2.Core=={version}\n",
+                *[f"{dependency}\n" for dependency in dependencies]
             ]
         )

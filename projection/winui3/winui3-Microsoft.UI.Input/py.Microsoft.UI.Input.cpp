@@ -15039,24 +15039,6 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_ui_input(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle microsoft_ui_input_module{PyImport_ImportModule("winui3._winui3_microsoft_ui_input")};
-    if (!microsoft_ui_input_module)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle microsoft_ui_input_InputObject_type{PyObject_GetAttrString(microsoft_ui_input_module.get(), "InputObject")};
-    if (!microsoft_ui_input_InputObject_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle microsoft_ui_input_InputCursor_type{PyObject_GetAttrString(microsoft_ui_input_module.get(), "InputCursor")};
-    if (!microsoft_ui_input_InputCursor_type)
-    {
-        return nullptr;
-    }
-
     py::pytype_handle CharacterReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_CharacterReceivedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!CharacterReceivedEventArgs_type)
     {

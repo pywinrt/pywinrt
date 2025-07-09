@@ -3147,18 +3147,6 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_ui_xaml_shapes(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle microsoft_ui_xaml_shapes_module{PyImport_ImportModule("winui3._winui3_microsoft_ui_xaml_shapes")};
-    if (!microsoft_ui_xaml_shapes_module)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle microsoft_ui_xaml_shapes_Shape_type{PyObject_GetAttrString(microsoft_ui_xaml_shapes_module.get(), "Shape")};
-    if (!microsoft_ui_xaml_shapes_Shape_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle microsoft_ui_xaml_module{PyImport_ImportModule("winui3._winui3_microsoft_ui_xaml")};
     if (!microsoft_ui_xaml_module)
     {

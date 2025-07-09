@@ -5102,18 +5102,6 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_windowmanagement(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle windows_ui_windowmanagement_module{PyImport_ImportModule("winrt._winrt_windows_ui_windowmanagement")};
-    if (!windows_ui_windowmanagement_module)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle windows_ui_windowmanagement_AppWindowPresentationConfiguration_type{PyObject_GetAttrString(windows_ui_windowmanagement_module.get(), "AppWindowPresentationConfiguration")};
-    if (!windows_ui_windowmanagement_AppWindowPresentationConfiguration_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle AppWindow_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
     if (!AppWindow_Static_bases)
     {

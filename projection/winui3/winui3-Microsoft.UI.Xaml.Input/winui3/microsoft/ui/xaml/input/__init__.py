@@ -57,9 +57,6 @@ if TYPE_CHECKING:
         XamlUICommand_Static,
     )
 
-if typing.TYPE_CHECKING:
-    import winui3.microsoft.ui.xaml.input as microsoft_ui_xaml_input
-
 __all__ = [
     "FocusInputDeviceKind",
     "FocusNavigationDirection",

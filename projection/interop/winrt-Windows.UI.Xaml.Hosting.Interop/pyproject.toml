@@ -25,7 +25,7 @@ Repository = "https://github.com/pywinrt/pywinrt"
 Changelog = "https://github.com/pywinrt/pywinrt/blob/main/CHANGELOG.md"
 
 [tool.setuptools.dynamic]
-version = { file = "pywinrt-version.txt" }
+version = { file = "version.txt" }
 
 [tool.setuptools.package-data]
 "*" = ["*.pyi", "py.typed"]

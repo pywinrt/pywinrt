@@ -12,7 +12,6 @@ from winrt._winrt_windows_system_threading import (
 
 if typing.TYPE_CHECKING:
     import winrt.windows.foundation as windows_foundation
-    import winrt.windows.system.threading as windows_system_threading
 
 __all__ = [
     "WorkItemOptions",

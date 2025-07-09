@@ -944,7 +944,7 @@ static class TypeExtensions
         IReadOnlyDictionary<string, Package> packageMap
     ) =>
         new(
-            type.Namespace == "System" ? new Package { Name = "winrt" } : packageMap[type.Resolve().Module.Name],
+            type.Namespace == "System" ? "winrt" : packageMap[type.Resolve().Module.Name].Name,
             type.Namespace
         );
 }

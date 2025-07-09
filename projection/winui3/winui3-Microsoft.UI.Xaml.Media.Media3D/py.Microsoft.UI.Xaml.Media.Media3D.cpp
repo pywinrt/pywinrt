@@ -2927,18 +2927,6 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_ui_xaml_media_media3d(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle microsoft_ui_xaml_media_media3d_module{PyImport_ImportModule("winui3._winui3_microsoft_ui_xaml_media_media3d")};
-    if (!microsoft_ui_xaml_media_media3d_module)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle microsoft_ui_xaml_media_media3d_Transform3D_type{PyObject_GetAttrString(microsoft_ui_xaml_media_media3d_module.get(), "Transform3D")};
-    if (!microsoft_ui_xaml_media_media3d_Transform3D_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle microsoft_ui_xaml_module{PyImport_ImportModule("winui3._winui3_microsoft_ui_xaml")};
     if (!microsoft_ui_xaml_module)
     {

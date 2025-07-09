@@ -94,9 +94,6 @@ from winrt._winrt_windows_applicationmodel_background import (
     IBackgroundTrigger,
 )
 
-if typing.TYPE_CHECKING:
-    import winrt.windows.applicationmodel.background as windows_applicationmodel_background
-
 __all__ = [
     "AlarmAccessStatus",
     "ApplicationTriggerResult",

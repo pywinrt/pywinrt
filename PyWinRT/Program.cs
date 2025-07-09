@@ -4,6 +4,7 @@ using System.CommandLine.Builder;
 using System.CommandLine.Help;
 using System.CommandLine.Invocation;
 using System.CommandLine.Parsing;
+using System.Diagnostics;
 using System.Text.Encodings.Web;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -11,7 +12,7 @@ using Mono.Cecil;
 
 var inputOption = new Option<(string, Package)[]>(
     "--input",
-    CommandReader.ParseSpec,
+    CommandReader.ParseInputSpec,
     default,
     "Windows metadata to include in projection"
 )
@@ -22,7 +23,7 @@ var inputOption = new Option<(string, Package)[]>(
 
 var referenceOption = new Option<(string, Package)[]>(
     "--reference",
-    CommandReader.ParseSpec,
+    CommandReader.ParseReferenceSpec,
     default,
     "Windows metadata to reference from projection"
 )
@@ -229,7 +230,7 @@ rootCommand.SetHandler(
                     FileWriters.WriteNamespaceFiles(
                         output,
                         headerPath,
-                        new QualifiedNamespace(inputPackage, group.Key),
+                        new QualifiedNamespace(inputPackage.Name, group.Key),
                         nullabilityInfo.GetOrAdd(
                             group.Key,
                             _ => new NamespaceNullabilityInfo(group.Key, [])

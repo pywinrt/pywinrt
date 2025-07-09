@@ -64,9 +64,6 @@ from winrt._winrt_windows_storage import (
     IStreamedFileDataRequest,
 )
 
-if typing.TYPE_CHECKING:
-    import winrt.windows.storage as windows_storage
-
 __all__ = [
     "ApplicationDataCreateDisposition",
     "ApplicationDataLocality",

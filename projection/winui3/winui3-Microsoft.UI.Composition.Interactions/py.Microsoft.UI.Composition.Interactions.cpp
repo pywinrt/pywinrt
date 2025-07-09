@@ -6967,24 +6967,6 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_ui_composition_interactions(void) noexce
         return nullptr;
     }
 
-    py::pyobj_handle microsoft_ui_composition_interactions_module{PyImport_ImportModule("winui3._winui3_microsoft_ui_composition_interactions")};
-    if (!microsoft_ui_composition_interactions_module)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle microsoft_ui_composition_interactions_InteractionTrackerInertiaModifier_type{PyObject_GetAttrString(microsoft_ui_composition_interactions_module.get(), "InteractionTrackerInertiaModifier")};
-    if (!microsoft_ui_composition_interactions_InteractionTrackerInertiaModifier_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle microsoft_ui_composition_interactions_InteractionTrackerVector2InertiaModifier_type{PyObject_GetAttrString(microsoft_ui_composition_interactions_module.get(), "InteractionTrackerVector2InertiaModifier")};
-    if (!microsoft_ui_composition_interactions_InteractionTrackerVector2InertiaModifier_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle CompositionConditionalValue_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(microsoft_ui_composition_CompositionObject_type.get())))};
     if (!CompositionConditionalValue_Static_bases)
     {

@@ -3729,24 +3729,6 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_ui_xaml_media_imaging(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle microsoft_ui_xaml_media_imaging_module{PyImport_ImportModule("winui3._winui3_microsoft_ui_xaml_media_imaging")};
-    if (!microsoft_ui_xaml_media_imaging_module)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle microsoft_ui_xaml_media_imaging_BitmapSource_type{PyObject_GetAttrString(microsoft_ui_xaml_media_imaging_module.get(), "BitmapSource")};
-    if (!microsoft_ui_xaml_media_imaging_BitmapSource_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle microsoft_ui_xaml_media_imaging_SurfaceImageSource_type{PyObject_GetAttrString(microsoft_ui_xaml_media_imaging_module.get(), "SurfaceImageSource")};
-    if (!microsoft_ui_xaml_media_imaging_SurfaceImageSource_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle microsoft_ui_xaml_media_module{PyImport_ImportModule("winui3._winui3_microsoft_ui_xaml_media")};
     if (!microsoft_ui_xaml_media_module)
     {

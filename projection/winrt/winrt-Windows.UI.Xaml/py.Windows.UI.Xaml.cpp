@@ -41690,66 +41690,6 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle windows_ui_xaml_module{PyImport_ImportModule("winrt._winrt_windows_ui_xaml")};
-    if (!windows_ui_xaml_module)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle windows_ui_xaml_StateTriggerBase_type{PyObject_GetAttrString(windows_ui_xaml_module.get(), "StateTriggerBase")};
-    if (!windows_ui_xaml_StateTriggerBase_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle windows_ui_xaml_RoutedEventArgs_type{PyObject_GetAttrString(windows_ui_xaml_module.get(), "RoutedEventArgs")};
-    if (!windows_ui_xaml_RoutedEventArgs_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle windows_ui_xaml_ResourceDictionary_type{PyObject_GetAttrString(windows_ui_xaml_module.get(), "ResourceDictionary")};
-    if (!windows_ui_xaml_ResourceDictionary_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle windows_ui_xaml_FrameworkTemplate_type{PyObject_GetAttrString(windows_ui_xaml_module.get(), "FrameworkTemplate")};
-    if (!windows_ui_xaml_FrameworkTemplate_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle windows_ui_xaml_DependencyObject_type{PyObject_GetAttrString(windows_ui_xaml_module.get(), "DependencyObject")};
-    if (!windows_ui_xaml_DependencyObject_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle windows_ui_xaml_TriggerBase_type{PyObject_GetAttrString(windows_ui_xaml_module.get(), "TriggerBase")};
-    if (!windows_ui_xaml_TriggerBase_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle windows_ui_xaml_UIElement_type{PyObject_GetAttrString(windows_ui_xaml_module.get(), "UIElement")};
-    if (!windows_ui_xaml_UIElement_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle windows_ui_xaml_ExceptionRoutedEventArgs_type{PyObject_GetAttrString(windows_ui_xaml_module.get(), "ExceptionRoutedEventArgs")};
-    if (!windows_ui_xaml_ExceptionRoutedEventArgs_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle windows_ui_xaml_SetterBase_type{PyObject_GetAttrString(windows_ui_xaml_module.get(), "SetterBase")};
-    if (!windows_ui_xaml_SetterBase_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle DependencyObject_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
     if (!DependencyObject_Static_bases)
     {

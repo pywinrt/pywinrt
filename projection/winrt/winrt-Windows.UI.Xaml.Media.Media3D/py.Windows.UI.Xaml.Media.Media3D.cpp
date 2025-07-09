@@ -2927,18 +2927,6 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_media3d(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle windows_ui_xaml_media_media3d_module{PyImport_ImportModule("winrt._winrt_windows_ui_xaml_media_media3d")};
-    if (!windows_ui_xaml_media_media3d_module)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle windows_ui_xaml_media_media3d_Transform3D_type{PyObject_GetAttrString(windows_ui_xaml_media_media3d_module.get(), "Transform3D")};
-    if (!windows_ui_xaml_media_media3d_Transform3D_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle windows_ui_xaml_module{PyImport_ImportModule("winrt._winrt_windows_ui_xaml")};
     if (!windows_ui_xaml_module)
     {

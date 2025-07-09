@@ -29,7 +29,9 @@ static class FileWriters
         bool componentDlls
     )
     {
-        var nsPackageName = $"{ns.PyPackage.Name}-{ns.Namespace}";
+        // The input pacakge will not be the "system winrt" package.
+        var package = packageMap.Values.First(p => p.Name == ns.PyPackage);
+        var nsPackageName = $"{ns.PyPackage}-{ns.Namespace}";
         var nsPackageDir = new DirectoryInfo(Path.Combine(outputPath.FullName, nsPackageName));
         var rootDir = new DirectoryInfo(Path.Combine(nsPackageDir.FullName, ns.PyPackageModule));
         var nsDir = rootDir;
@@ -77,7 +79,7 @@ static class FileWriters
         WriteNamespaceDunderInitPy(nsDir, ns, nullabilityMap, packageMap, members, componentDlls);
         WriteNamespacePyi(rootDir, ns, nullabilityMap, packageMap, members, 0);
         WriteNamespacePyi(rootDir, ns, nullabilityMap, packageMap, members, 1);
-        WritePyWinRTVersionTxt(nsPackageDir, ns);
+        WritePyWinRTVersionTxt(nsPackageDir, package);
         WriteRequirementsTxt(nsPackageDir, packageMap, members);
 
         if (members.GetReferencedNamespaces(packageMap, includeDelegates: true).Any())
@@ -100,13 +102,16 @@ static class FileWriters
 
         foreach (var ns in members.GetReferencedNamespaces(packageMap, includeDelegates: true))
         {
-            var versionRequirement = ns.PyPackage.Version ?? "";
-            if (versionRequirement.Length > 0 && char.IsDigit(versionRequirement[0]))
+            // This will work as the "system winrt" won't be here
+            var package = packageMap.Values.First(p => p.Name == ns.PyPackage);
+            var versionRequirement = package.Version ?? "";
+            if (package.IsInputPackage)
             {
-                // This can happen if its a same package dependency
+                // Convert the input pacakge's version to a version requirement.
+                // This represents the dependency on the input package itself.
                 versionRequirement = $"=={versionRequirement}";
             }
-            w.WriteLine($"{ns.PyPackage.Name}-{ns.Namespace}[all]{versionRequirement}");
+            w.WriteLine($"{ns.PyPackage}-{ns.Namespace}[all]{versionRequirement}");
         }
 
         sw.WriteFileIfChanged(nsPackageDir, "all-requirements.txt");
@@ -123,32 +128,35 @@ static class FileWriters
 
         w.WriteLicense("#");
         w.WriteBlankLine();
-        w.WriteLine($"winrt-runtime=={PyWinRT.VersionString}");
+        w.WriteLine($"winrt-runtime~={PyWinRT.VersionString}.0");
 
         foreach (var ns in members.GetRequiredNamespaces(packageMap))
         {
-            var versionRequirement = ns.PyPackage.Version ?? "";
-            if (versionRequirement.Length > 0 && char.IsDigit(versionRequirement[0]))
+            // This will work as the "system winrt" won't be here
+            var package = packageMap.Values.First(p => p.Name == ns.PyPackage);
+            var versionRequirement = package.Version ?? "";
+            if (package.IsInputPackage)
             {
-                // This can happen if its a same package dependency
+                // Convert the input pacakge's version to a version requirement.
+                // This represents the dependency on the input package itself.
                 versionRequirement = $"=={versionRequirement}";
             }
-            w.WriteLine($"{ns.PyPackage.Name}-{ns.Namespace}{versionRequirement}");
+            w.WriteLine($"{ns.PyPackage}-{ns.Namespace}{versionRequirement}");
         }
 
         sw.WriteFileIfChanged(nsPackageDir, "requirements.txt");
     }
 
-    private static void WritePyWinRTVersionTxt(DirectoryInfo nsPackageDir, QualifiedNamespace ns)
+    private static void WritePyWinRTVersionTxt(DirectoryInfo nsPackageDir, Package pacakge)
     {
         using var sw = new StringWriter();
         using var w = new IndentedTextWriter(sw) { NewLine = "\n" };
 
         // Use pywinrt's version if no input version is specified.
-        var version = ns.PyPackage.Version ?? PyWinRT.VersionString;
+        var version = pacakge.Version ?? PyWinRT.VersionString;
         w.Write(version);
 
-        sw.WriteFileIfChanged(nsPackageDir, "pywinrt-version.txt");
+        sw.WriteFileIfChanged(nsPackageDir, "version.txt");
     }
 
     private static void WriteNamespacePyi(
@@ -217,7 +225,7 @@ static class FileWriters
             }
 
             var suffix = depth == 0 ? "" : $"_{depth + 1}";
-            w.WriteLine($"from {ns.PyPackage.Name}.{ns.NsModuleName}{suffix} import (");
+            w.WriteLine($"from {ns.PyPackage}.{ns.NsModuleName}{suffix} import (");
             w.Indent++;
 
             foreach (var type in dependencyTypes)

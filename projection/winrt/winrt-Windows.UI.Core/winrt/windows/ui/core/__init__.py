@@ -52,9 +52,6 @@ from winrt._winrt_windows_ui_core import (
     IInitializeWithCoreWindow,
 )
 
-if typing.TYPE_CHECKING:
-    import winrt.windows.ui.core as windows_ui_core
-
 __all__ = [
     "AppViewBackButtonVisibility",
     "CoreAcceleratorKeyEventType",

@@ -17,9 +17,6 @@ if TYPE_CHECKING:
         PrintDocument_Static,
     )
 
-if typing.TYPE_CHECKING:
-    import winui3.microsoft.ui.xaml.printing as microsoft_ui_xaml_printing
-
 __all__ = [
     "PreviewPageCountType",
     "AddPagesEventArgs",

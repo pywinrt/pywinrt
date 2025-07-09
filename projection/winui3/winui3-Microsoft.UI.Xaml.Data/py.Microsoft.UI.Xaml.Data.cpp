@@ -9368,24 +9368,6 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle microsoft_ui_xaml_data_module{PyImport_ImportModule("winui3._winui3_microsoft_ui_xaml_data")};
-    if (!microsoft_ui_xaml_data_module)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle microsoft_ui_xaml_data_BindingBase_type{PyObject_GetAttrString(microsoft_ui_xaml_data_module.get(), "BindingBase")};
-    if (!microsoft_ui_xaml_data_BindingBase_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle microsoft_ui_xaml_data_BindingExpressionBase_type{PyObject_GetAttrString(microsoft_ui_xaml_data_module.get(), "BindingExpressionBase")};
-    if (!microsoft_ui_xaml_data_BindingExpressionBase_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle microsoft_ui_xaml_module{PyImport_ImportModule("winui3._winui3_microsoft_ui_xaml")};
     if (!microsoft_ui_xaml_module)
     {

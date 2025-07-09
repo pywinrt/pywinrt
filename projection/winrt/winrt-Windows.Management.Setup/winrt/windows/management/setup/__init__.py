@@ -16,9 +16,6 @@ from winrt._winrt_windows_management_setup import (
     MachineProvisioningProgressReporter,
 )
 
-if typing.TYPE_CHECKING:
-    import winrt.windows.management.setup as windows_management_setup
-
 __all__ = [
     "DeploymentAgentProgressState",
     "DeploymentSessionConnectionChange",

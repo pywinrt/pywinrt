@@ -17,9 +17,6 @@ if TYPE_CHECKING:
         PrintDocument_Static,
     )
 
-if typing.TYPE_CHECKING:
-    import winrt.windows.ui.xaml.printing as windows_ui_xaml_printing
-
 __all__ = [
     "PreviewPageCountType",
     "AddPagesEventArgs",

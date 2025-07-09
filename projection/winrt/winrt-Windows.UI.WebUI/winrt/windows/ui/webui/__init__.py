@@ -79,7 +79,6 @@ from winrt._winrt_windows_ui_webui import (
 if typing.TYPE_CHECKING:
     import winrt.windows.applicationmodel as windows_applicationmodel
     import winrt.windows.applicationmodel.activation as windows_applicationmodel_activation
-    import winrt.windows.ui.webui as windows_ui_webui
 
 __all__ = [
     "PrintContent",

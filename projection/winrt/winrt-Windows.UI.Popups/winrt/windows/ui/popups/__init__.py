@@ -14,9 +14,6 @@ from winrt._winrt_windows_ui_popups import (
     IUICommand,
 )
 
-if typing.TYPE_CHECKING:
-    import winrt.windows.ui.popups as windows_ui_popups
-
 __all__ = [
     "MessageDialogOptions",
     "Placement",
