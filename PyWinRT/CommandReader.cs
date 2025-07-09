@@ -146,7 +146,7 @@ class CommandReader
 
     public static (string, Package)[] ParseSpec(
         ArgumentResult result,
-        bool isVersionMadatory,
+        bool isVersionMandatory,
         bool isInputPackage
     )
     {
@@ -237,7 +237,7 @@ class CommandReader
                 }
 
                 var split = value.Split(";");
-                // package name; path[; version/version rquirement]
+                // package name; path[; version/version requirement]
                 if (split.Length != 2 && split.Length != 3)
                 {
                     result.ErrorMessage = $"Invalid spec '{value}'";
@@ -248,7 +248,7 @@ class CommandReader
                 var path = split[1];
                 string? version = split.Length == 3 ? split[2] : null;
 
-                if (isVersionMadatory && version == null)
+                if (isVersionMandatory && version == null)
                 {
                     throw new ArgumentException("Missing package version");
                 }

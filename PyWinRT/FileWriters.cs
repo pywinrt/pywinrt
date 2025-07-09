@@ -137,7 +137,7 @@ static class FileWriters
             var versionRequirement = package.Version ?? "";
             if (package.IsInputPackage)
             {
-                // Convert the input pacakge's version to a version requirement.
+                // Convert the input package's version to a version requirement.
                 // This represents the dependency on the input package itself.
                 versionRequirement = $"=={versionRequirement}";
             }
@@ -147,13 +147,13 @@ static class FileWriters
         sw.WriteFileIfChanged(nsPackageDir, "requirements.txt");
     }
 
-    private static void WritePyWinRTVersionTxt(DirectoryInfo nsPackageDir, Package pacakge)
+    private static void WritePyWinRTVersionTxt(DirectoryInfo nsPackageDir, Package package)
     {
         using var sw = new StringWriter();
         using var w = new IndentedTextWriter(sw) { NewLine = "\n" };
 
         // Use pywinrt's version if no input version is specified.
-        var version = pacakge.Version ?? PyWinRT.VersionString;
+        var version = package.Version ?? PyWinRT.VersionString;
         w.Write(version);
 
         sw.WriteFileIfChanged(nsPackageDir, "version.txt");
