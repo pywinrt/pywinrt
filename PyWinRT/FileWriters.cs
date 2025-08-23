@@ -77,7 +77,6 @@ static class FileWriters
         WriteNamespaceDunderInitPy(nsDir, ns, nullabilityMap, packageMap, members, componentDlls);
         WriteNamespacePyi(rootDir, ns, nullabilityMap, packageMap, members, 0);
         WriteNamespacePyi(rootDir, ns, nullabilityMap, packageMap, members, 1);
-        WritePyWinRTVersionTxt(nsPackageDir);
         WriteRequirementsTxt(nsPackageDir, packageMap, members);
 
         if (members.GetReferencedNamespaces(packageMap, includeDelegates: true).Any())
@@ -125,16 +124,6 @@ static class FileWriters
         }
 
         sw.WriteFileIfChanged(nsPackageDir, "requirements.txt");
-    }
-
-    private static void WritePyWinRTVersionTxt(DirectoryInfo nsPackageDir)
-    {
-        using var sw = new StringWriter();
-        using var w = new IndentedTextWriter(sw) { NewLine = "\n" };
-
-        w.Write(PyWinRT.VersionString);
-
-        sw.WriteFileIfChanged(nsPackageDir, "version.txt");
     }
 
     private static void WriteNamespacePyi(
