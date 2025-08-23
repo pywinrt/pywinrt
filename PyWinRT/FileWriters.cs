@@ -134,7 +134,7 @@ static class FileWriters
 
         w.Write(PyWinRT.VersionString);
 
-        sw.WriteFileIfChanged(nsPackageDir, "pywinrt-version.txt");
+        sw.WriteFileIfChanged(nsPackageDir, "version.txt");
     }
 
     private static void WriteNamespacePyi(

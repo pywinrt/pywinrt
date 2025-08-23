@@ -226,16 +226,16 @@ for path in itertools.chain(
                 PROJECTION_PATH
                 / "winrt"
                 / "winrt-Windows.Foundation"
-                / "pywinrt-version.txt"
+                / "version.txt"
             ),
-            os.fspath(path / "pywinrt-version.txt"),
+            os.fspath(path / "version.txt"),
         )
     except shutil.SameFileError:
         pass
 
 # create dependencies for non-generated packages
 
-with open(PROJECTION_PATH / "winrt-sdk" / "pywinrt-version.txt") as f:
+with open(PROJECTION_PATH / "winrt-sdk" / "version.txt") as f:
     version = f.read().strip()
 
 for package in ["winrt-Microsoft.UI.Xaml", "winrt-WindowsAppSDK"]:
