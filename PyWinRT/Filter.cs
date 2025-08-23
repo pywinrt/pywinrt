@@ -1,4 +1,3 @@
-
 static class Filter
 {
     public static bool Includes(string type, string[] includes, string[] excludes)
