@@ -30,7 +30,7 @@ Repository = "https://github.com/pywinrt/pywinrt"
 Changelog = "https://github.com/pywinrt/pywinrt/blob/main/CHANGELOG.md"
 
 [tool.setuptools.dynamic]
-version = {{ file = "pywinrt-version.txt" }}{dependencies}{optional_dependencies}
+version = {{ file = "version.txt" }}{dependencies}{optional_dependencies}
 {find_src}
 """
 
