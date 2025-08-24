@@ -77,15 +77,10 @@ static class FileWriters
         WriteNamespaceDunderInitPy(nsDir, ns, nullabilityMap, packageMap, members, componentDlls);
         WriteNamespacePyi(rootDir, ns, nullabilityMap, packageMap, members, 0);
         WriteNamespacePyi(rootDir, ns, nullabilityMap, packageMap, members, 1);
-        WriteRequirementsTxt(nsPackageDir, packageMap, members);
-
-        if (members.GetReferencedNamespaces(packageMap, includeDelegates: true).Any())
-        {
-            WriteAllRequirementsTxt(nsPackageDir, packageMap, members);
-        }
+        WriteDepsJson(nsPackageDir, packageMap, members);
     }
 
-    private static void WriteAllRequirementsTxt(
+    private static void WriteDepsJson(
         DirectoryInfo nsPackageDir,
         IReadOnlyDictionary<string, string> packageMap,
         Members members
@@ -94,36 +89,42 @@ static class FileWriters
         using var sw = new StringWriter();
         using var w = new IndentedTextWriter(sw) { NewLine = "\n" };
 
-        w.WriteLicense("#");
-        w.WriteBlankLine();
-
-        foreach (var ns in members.GetReferencedNamespaces(packageMap, includeDelegates: true))
+        w.WriteBlock(() =>
         {
-            w.WriteLine($"{ns.PyPackage}-{ns.Namespace}[all]~={PyWinRT.VersionString}.0");
-        }
+            w.Write("\"pywinrt\": ");
+            w.WriteBlock(() => w.WriteLine($"\"version\": \"{PyWinRT.VersionString}\""), ",");
+            w.WriteLine("\"required\": [");
+            w.Indent++;
+            var requiredNamespaces = members.GetRequiredNamespaces(packageMap);
+            foreach (
+                var (ns, isLast) in requiredNamespaces.Select(
+                    (n, i) => (n, i == requiredNamespaces.Count - 1)
+                )
+            )
+            {
+                w.WriteLine($"\"{ns.PyPackage}-{ns.Namespace}\"{(isLast ? "" : ",")}");
+            }
+            w.Indent--;
+            w.WriteLine("],");
+            w.WriteLine("\"referenced\": [");
+            w.Indent++;
+            var referencedNamespaces = members.GetReferencedNamespaces(
+                packageMap,
+                includeDelegates: true
+            );
+            foreach (
+                var (ns, isLast) in referencedNamespaces.Select(
+                    (n, i) => (n, i == referencedNamespaces.Count - 1)
+                )
+            )
+            {
+                w.WriteLine($"\"{ns.PyPackage}-{ns.Namespace}\"{(isLast ? "" : ",")}");
+            }
+            w.Indent--;
+            w.WriteLine("]");
+        });
 
-        sw.WriteFileIfChanged(nsPackageDir, "all-requirements.txt");
-    }
-
-    private static void WriteRequirementsTxt(
-        DirectoryInfo nsPackageDir,
-        IReadOnlyDictionary<string, string> packageMap,
-        Members members
-    )
-    {
-        using var sw = new StringWriter();
-        using var w = new IndentedTextWriter(sw) { NewLine = "\n" };
-
-        w.WriteLicense("#");
-        w.WriteBlankLine();
-        w.WriteLine($"winrt-runtime~={PyWinRT.VersionString}.0");
-
-        foreach (var ns in members.GetRequiredNamespaces(packageMap))
-        {
-            w.WriteLine($"{ns.PyPackage}-{ns.Namespace}~={PyWinRT.VersionString}.0");
-        }
-
-        sw.WriteFileIfChanged(nsPackageDir, "requirements.txt");
+        sw.WriteFileIfChanged(nsPackageDir, "deps.json");
     }
 
     private static void WriteNamespacePyi(

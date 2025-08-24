@@ -1,0 +1,12 @@
+{
+    "pywinrt": {
+        "version": "0.0.0"
+    },
+    "required": [
+    ],
+    "referenced": [
+        "winrt-Windows.Devices.Adc.Provider",
+        "winrt-Windows.Foundation",
+        "winrt-Windows.Foundation.Collections"
+    ]
+}

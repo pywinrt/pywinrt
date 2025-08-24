@@ -1,0 +1,17 @@
+{
+    "pywinrt": {
+        "version": "0.0.0"
+    },
+    "required": [
+    ],
+    "referenced": [
+        "winrt-Windows.Devices.Bluetooth.GenericAttributeProfile",
+        "winrt-Windows.Devices.Bluetooth.Rfcomm",
+        "winrt-Windows.Devices.Enumeration",
+        "winrt-Windows.Devices.Radios",
+        "winrt-Windows.Foundation",
+        "winrt-Windows.Foundation.Collections",
+        "winrt-Windows.Networking",
+        "winrt-Windows.Storage.Streams"
+    ]
+}

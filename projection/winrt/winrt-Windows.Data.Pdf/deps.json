@@ -1,0 +1,13 @@
+{
+    "pywinrt": {
+        "version": "0.0.0"
+    },
+    "required": [
+    ],
+    "referenced": [
+        "winrt-Windows.Foundation",
+        "winrt-Windows.Storage",
+        "winrt-Windows.Storage.Streams",
+        "winrt-Windows.UI"
+    ]
+}

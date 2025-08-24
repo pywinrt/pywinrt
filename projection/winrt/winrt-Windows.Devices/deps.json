@@ -1,0 +1,14 @@
+{
+    "pywinrt": {
+        "version": "0.0.0"
+    },
+    "required": [
+    ],
+    "referenced": [
+        "winrt-Windows.Devices.Adc.Provider",
+        "winrt-Windows.Devices.Gpio.Provider",
+        "winrt-Windows.Devices.I2c.Provider",
+        "winrt-Windows.Devices.Pwm.Provider",
+        "winrt-Windows.Devices.Spi.Provider"
+    ]
+}

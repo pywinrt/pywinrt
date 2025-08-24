@@ -1,0 +1,11 @@
+{
+    "pywinrt": {
+        "version": "0.0.0"
+    },
+    "required": [
+    ],
+    "referenced": [
+        "winrt-Windows.UI.Xaml.Interop",
+        "winui3-Microsoft.UI.Xaml.Markup"
+    ]
+}

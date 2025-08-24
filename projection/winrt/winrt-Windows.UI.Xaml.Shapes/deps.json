@@ -1,0 +1,13 @@
+{
+    "pywinrt": {
+        "version": "0.0.0"
+    },
+    "required": [
+        "winrt-Windows.UI.Xaml"
+    ],
+    "referenced": [
+        "winrt-Windows.UI.Composition",
+        "winrt-Windows.UI.Xaml",
+        "winrt-Windows.UI.Xaml.Media"
+    ]
+}

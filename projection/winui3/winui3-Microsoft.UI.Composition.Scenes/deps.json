@@ -1,0 +1,15 @@
+{
+    "pywinrt": {
+        "version": "0.0.0"
+    },
+    "required": [
+        "winui3-Microsoft.UI.Composition"
+    ],
+    "referenced": [
+        "winrt-Windows.Foundation",
+        "winrt-Windows.Foundation.Collections",
+        "winrt-Windows.Foundation.Numerics",
+        "winui3-Microsoft.Graphics.DirectX",
+        "winui3-Microsoft.UI.Composition"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "pywinrt": {
+        "version": "0.0.0"
+    },
+    "required": [
+    ],
+    "referenced": [
+        "winrt-Windows.ApplicationModel.Appointments",
+        "winrt-Windows.ApplicationModel.Contacts",
+        "winrt-Windows.ApplicationModel.Email",
+        "winrt-Windows.ApplicationModel.UserDataTasks",
+        "winrt-Windows.Foundation",
+        "winrt-Windows.Foundation.Collections",
+        "winrt-Windows.Storage.Streams",
+        "winrt-Windows.System"
+    ]
+}
