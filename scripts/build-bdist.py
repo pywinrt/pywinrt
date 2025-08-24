@@ -1,3 +1,4 @@
+import json
 import os
 import shutil
 import subprocess
@@ -6,10 +7,27 @@ from itertools import chain
 from pathlib import Path
 
 PROJECT_DIR = Path(__file__).parent.parent
+
+TOOLS_JSON_PATH = PROJECT_DIR / ".config" / "_tools.json"
+
+with open(TOOLS_JSON_PATH) as f:
+    tools_json = json.load(f)
+
+
+def versioned_package(package: str) -> str:
+    return f"{package}.{tools_json[package]}"
+
+
 PROJECTION_PATH = (PROJECT_DIR / "projection").resolve()
-WEBVIEW2_PATH = (PROJECT_DIR / "_tools/Microsoft.Web.WebView2").resolve()
-MICROSOFT_UI_XAML_PATH = (PROJECT_DIR / "_tools/Microsoft.UI.Xaml").resolve()
-WINDOWS_APP_SDK_PATH = (PROJECT_DIR / "_tools/Microsoft.WindowsAppSDK").resolve()
+WEBVIEW2_PATH = (
+    PROJECT_DIR / "_tools" / versioned_package("Microsoft.Web.WebView2")
+).resolve()
+MICROSOFT_UI_XAML_PATH = (
+    PROJECT_DIR / "_tools" / versioned_package("Microsoft.UI.Xaml")
+).resolve()
+WINDOWS_APP_SDK_PATH = (
+    PROJECT_DIR / "_tools" / versioned_package("Microsoft.WindowsAppSDK")
+).resolve()
 
 os.environ["WEBVIEW2_PATH"] = os.fspath(WEBVIEW2_PATH)
 os.environ["MICROSOFT_UI_XAML_PATH"] = os.fspath(MICROSOFT_UI_XAML_PATH)
