@@ -53,28 +53,17 @@ set(WINRT_WEBVIEW2_PATH "webview2/webview2-Microsoft.Web.WebView2.Core/webview2"
 set(WINDOWS_APP_SDK_PATH "../_tools/Microsoft.WindowsAppSDK.${WINDOWS_APP_SDK_VERSION}")
 set(WEBVIEW2_PATH "../_tools/Microsoft.Web.WebView2.${WEBVIEW2_VERSION}")
 
-if (CMAKE_CXX_COMPILER_ARCHITECTURE_ID)
+if (MSVC)
     string(TOLOWER ${CMAKE_CXX_COMPILER_ARCHITECTURE_ID} WINDOWS_APP_SDK_ARCH)
 else()
-    execute_process(
-        COMMAND ${CMAKE_CXX_COMPILER} -dumpmachine
-        RESULT_VARIABLE EXIT_CODE
-        OUTPUT_VARIABLE TARGET_TRIPLE
-        ERROR_QUIET
-    )
-
-    if (EXIT_CODE)
-        message(FATAL_ERROR "Failed to get target architecture triple: ${EXIT_CODE}")
-    endif()
-
-    if (TARGET_TRIPLE MATCHES "^x86_64-.*")
-        set(WINDOWS_APP_SDK_ARCH "x64")
-    elseif (TARGET_TRIPLE MATCHES "^i686-.*")
+    if (CMAKE_CXX_COMPILER_ARCHITECTURE_ID MATCHES "^i\\d86$")
         set(WINDOWS_APP_SDK_ARCH "x86")
-    elseif (TARGET_TRIPLE MATCHES "^aarch64-.*")
+    elseif (CMAKE_CXX_COMPILER_ARCHITECTURE_ID STREQUAL "x86_64")
+        set(WINDOWS_APP_SDK_ARCH "x64")
+    elseif (CMAKE_CXX_COMPILER_ARCHITECTURE_ID STREQUAL "aarch64")
         set(WINDOWS_APP_SDK_ARCH "arm64")
     else()
-        message(FATAL_ERROR "Unsupported target architecture: ${TARGET_TRIPLE}")
+        message(FATAL_ERROR "Unsupported compiler architecture: ${CMAKE_CXX_COMPILER_ARCHITECTURE_ID}")
     endif()
 endif()
 message(STATUS "Windows App SDK architecture: ${WINDOWS_APP_SDK_ARCH}")
