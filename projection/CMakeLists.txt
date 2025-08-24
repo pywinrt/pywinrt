@@ -13,6 +13,12 @@ set(CMAKE_INSTALL_MESSAGE NEVER)
 option(PYWINRT_FULL_PROJECTION "Build full projection" ON)
 set(PYWINRT_SITE_PACKAGES_DIR "." CACHE STRING "Python site-packages install prefix")
 
+# .config/_tools.json is the single source of truth for NuGet package versions
+file(READ "../.config/_tools.json" TOOLS_JSON)
+string(JSON WINDOWS_APP_SDK_VERSION GET ${TOOLS_JSON} "Microsoft.WindowsAppSDK")
+string(JSON WEBVIEW2_VERSION GET ${TOOLS_JSON} "Microsoft.Web.WebView2")
+string(JSON TEST_WINRT_VERSION GET ${TOOLS_JSON} "PyWinRT.TestWinRT")
+
 set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL")
 link_libraries("RuntimeObject.lib")
 
@@ -44,8 +50,8 @@ set(WINRT_SDK_PATH "winrt-sdk/src/winrt_sdk")
 set(WINRT_MICROSOFT_UI_XAML_PATH "winrt-Microsoft.UI.Xaml/src/winrt_microsoft_ui_xaml")
 set(WINRT_WINDOWS_APP_SDK_PATH "winrt-WindowsAppSDK/src/winrt_windows_app_sdk")
 set(WINRT_WEBVIEW2_PATH "webview2/webview2-Microsoft.Web.WebView2.Core/webview2")
-set(WINDOWS_APP_SDK_PATH "../_tools/Microsoft.WindowsAppSDK")
-set(WEBVIEW2_PATH "../_tools/Microsoft.Web.WebView2")
+set(WINDOWS_APP_SDK_PATH "../_tools/Microsoft.WindowsAppSDK.${WINDOWS_APP_SDK_VERSION}")
+set(WEBVIEW2_PATH "../_tools/Microsoft.Web.WebView2.${WEBVIEW2_VERSION}")
 
 if (CMAKE_CXX_COMPILER_ARCHITECTURE_ID)
     string(TOLOWER ${CMAKE_CXX_COMPILER_ARCHITECTURE_ID} WINDOWS_APP_SDK_ARCH)
@@ -311,5 +317,5 @@ endforeach()
 ################################################################################
 
 pywinrt_add_namespace_package("test-winrt/test-winrt-TestComponent")
-install(FILES "../_tools/PyWinRT.TestWinRT/runtimes/win10-${WINDOWS_APP_SDK_ARCH}/native/TestComponent.dll"
+install(FILES "../_tools/PyWinRT.TestWinRT.${TEST_WINRT_VERSION}/runtimes/win10-${WINDOWS_APP_SDK_ARCH}/native/TestComponent.dll"
     DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/test_winrt/testcomponent/")
