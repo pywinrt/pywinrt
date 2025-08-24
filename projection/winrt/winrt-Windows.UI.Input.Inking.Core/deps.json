@@ -1,0 +1,15 @@
+{
+    "pywinrt": {
+        "version": "0.0.0"
+    },
+    "required": [
+    ],
+    "referenced": [
+        "winrt-Windows.Foundation",
+        "winrt-Windows.Foundation.Collections",
+        "winrt-Windows.Foundation.Numerics",
+        "winrt-Windows.UI.Composition",
+        "winrt-Windows.UI.Core",
+        "winrt-Windows.UI.Input.Inking"
+    ]
+}

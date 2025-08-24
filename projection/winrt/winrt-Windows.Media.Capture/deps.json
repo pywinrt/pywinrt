@@ -1,0 +1,27 @@
+{
+    "pywinrt": {
+        "version": "0.0.0"
+    },
+    "required": [
+    ],
+    "referenced": [
+        "winrt-Windows.Devices.Enumeration",
+        "winrt-Windows.Foundation",
+        "winrt-Windows.Foundation.Collections",
+        "winrt-Windows.Graphics.DirectX.Direct3D11",
+        "winrt-Windows.Graphics.Imaging",
+        "winrt-Windows.Media",
+        "winrt-Windows.Media.Capture.Core",
+        "winrt-Windows.Media.Capture.Frames",
+        "winrt-Windows.Media.Core",
+        "winrt-Windows.Media.Devices",
+        "winrt-Windows.Media.Effects",
+        "winrt-Windows.Media.MediaProperties",
+        "winrt-Windows.Security.Authentication.Web",
+        "winrt-Windows.Security.Credentials",
+        "winrt-Windows.Storage",
+        "winrt-Windows.Storage.Streams",
+        "winrt-Windows.System",
+        "winrt-Windows.UI.WindowManagement"
+    ]
+}

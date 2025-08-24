@@ -1,0 +1,16 @@
+{
+    "pywinrt": {
+        "version": "0.0.0"
+    },
+    "required": [
+    ],
+    "referenced": [
+        "winrt-Windows.ApplicationModel.DataTransfer",
+        "winrt-Windows.Foundation",
+        "winrt-Windows.Foundation.Collections",
+        "winrt-Windows.Storage.Streams",
+        "winrt-Windows.UI",
+        "winrt-Windows.Web",
+        "winrt-Windows.Web.Http"
+    ]
+}

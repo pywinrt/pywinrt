@@ -1,0 +1,14 @@
+{
+    "pywinrt": {
+        "version": "0.0.0"
+    },
+    "required": [
+    ],
+    "referenced": [
+        "winrt-Windows.ApplicationModel.DataTransfer",
+        "winrt-Windows.Foundation",
+        "winrt-Windows.Graphics.Imaging",
+        "winui3-Microsoft.UI.Content",
+        "winui3-Microsoft.UI.Input"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "pywinrt": {
+        "version": "0.0.0"
+    },
+    "required": [
+    ],
+    "referenced": [
+        "winrt-Windows.Foundation",
+        "winrt-Windows.Foundation.Numerics",
+        "winrt-Windows.Perception",
+        "winrt-Windows.Perception.Spatial",
+        "winrt-Windows.UI.Input",
+        "winrt-Windows.UI.Input.Spatial"
+    ]
+}

@@ -120,7 +120,7 @@ sealed class Members
         }
     }
 
-    public IEnumerable<QualifiedNamespace> GetRequiredNamespaces(
+    public IReadOnlyCollection<QualifiedNamespace> GetRequiredNamespaces(
         IReadOnlyDictionary<string, string> packageMap
     )
     {
@@ -141,7 +141,7 @@ sealed class Members
         return namespaces;
     }
 
-    public IEnumerable<QualifiedNamespace> GetReferencedNamespaces(
+    public IReadOnlyCollection<QualifiedNamespace> GetReferencedNamespaces(
         IReadOnlyDictionary<string, string> packageMap,
         bool includeDelegates = false,
         bool includeInheritedInterfaces = false

@@ -1,0 +1,14 @@
+{
+    "pywinrt": {
+        "version": "0.0.0"
+    },
+    "required": [
+    ],
+    "referenced": [
+        "winrt-Windows.ApplicationModel",
+        "winrt-Windows.Data.Xml.Dom",
+        "winrt-Windows.Foundation",
+        "winrt-Windows.Foundation.Collections",
+        "winrt-Windows.System"
+    ]
+}

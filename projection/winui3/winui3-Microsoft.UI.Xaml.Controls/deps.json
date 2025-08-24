@@ -1,0 +1,40 @@
+{
+    "pywinrt": {
+        "version": "0.0.0"
+    },
+    "required": [
+        "winui3-Microsoft.UI.Xaml",
+        "winui3-Microsoft.UI.Xaml.Automation.Peers",
+        "winui3-Microsoft.UI.Xaml.Controls.Primitives"
+    ],
+    "referenced": [
+        "webview2-Microsoft.Web.WebView2.Core",
+        "winrt-Windows.ApplicationModel.Contacts",
+        "winrt-Windows.ApplicationModel.DataTransfer",
+        "winrt-Windows.Devices.Geolocation",
+        "winrt-Windows.Foundation",
+        "winrt-Windows.Foundation.Collections",
+        "winrt-Windows.Foundation.Numerics",
+        "winrt-Windows.Globalization",
+        "winrt-Windows.Globalization.NumberFormatting",
+        "winrt-Windows.Media.Casting",
+        "winrt-Windows.Media.Playback",
+        "winrt-Windows.UI",
+        "winrt-Windows.UI.Text",
+        "winrt-Windows.UI.Xaml.Interop",
+        "winui3-Microsoft.UI",
+        "winui3-Microsoft.UI.Composition",
+        "winui3-Microsoft.UI.Input",
+        "winui3-Microsoft.UI.Text",
+        "winui3-Microsoft.UI.Xaml",
+        "winui3-Microsoft.UI.Xaml.Automation.Peers",
+        "winui3-Microsoft.UI.Xaml.Controls.Primitives",
+        "winui3-Microsoft.UI.Xaml.Data",
+        "winui3-Microsoft.UI.Xaml.Documents",
+        "winui3-Microsoft.UI.Xaml.Input",
+        "winui3-Microsoft.UI.Xaml.Interop",
+        "winui3-Microsoft.UI.Xaml.Media",
+        "winui3-Microsoft.UI.Xaml.Media.Animation",
+        "winui3-Microsoft.UI.Xaml.Navigation"
+    ]
+}

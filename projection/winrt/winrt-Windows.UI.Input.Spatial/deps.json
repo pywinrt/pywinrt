@@ -1,0 +1,18 @@
+{
+    "pywinrt": {
+        "version": "0.0.0"
+    },
+    "required": [
+    ],
+    "referenced": [
+        "winrt-Windows.Devices.Haptics",
+        "winrt-Windows.Devices.Power",
+        "winrt-Windows.Foundation",
+        "winrt-Windows.Foundation.Collections",
+        "winrt-Windows.Foundation.Numerics",
+        "winrt-Windows.Perception",
+        "winrt-Windows.Perception.People",
+        "winrt-Windows.Perception.Spatial",
+        "winrt-Windows.Storage.Streams"
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "pywinrt": {
+        "version": "0.0.0"
+    },
+    "required": [
+        "winrt-Windows.UI.Xaml",
+        "winrt-Windows.UI.Xaml.Controls"
+    ],
+    "referenced": [
+        "winrt-Windows.Devices.Geolocation",
+        "winrt-Windows.Foundation",
+        "winrt-Windows.Foundation.Collections",
+        "winrt-Windows.Foundation.Numerics",
+        "winrt-Windows.Services.Maps",
+        "winrt-Windows.Services.Maps.LocalSearch",
+        "winrt-Windows.Storage.Streams",
+        "winrt-Windows.UI",
+        "winrt-Windows.UI.Xaml",
+        "winrt-Windows.UI.Xaml.Controls"
+    ]
+}

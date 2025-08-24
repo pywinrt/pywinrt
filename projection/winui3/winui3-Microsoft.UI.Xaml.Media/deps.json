@@ -1,0 +1,19 @@
+{
+    "pywinrt": {
+        "version": "0.0.0"
+    },
+    "required": [
+        "winui3-Microsoft.UI.Xaml"
+    ],
+    "referenced": [
+        "winrt-Windows.Foundation",
+        "winrt-Windows.Foundation.Collections",
+        "winrt-Windows.Storage.Streams",
+        "winrt-Windows.UI",
+        "winui3-Microsoft.UI.Composition",
+        "winui3-Microsoft.UI.Composition.SystemBackdrops",
+        "winui3-Microsoft.UI.Xaml",
+        "winui3-Microsoft.UI.Xaml.Controls.Primitives",
+        "winui3-Microsoft.UI.Xaml.Media.Media3D"
+    ]
+}

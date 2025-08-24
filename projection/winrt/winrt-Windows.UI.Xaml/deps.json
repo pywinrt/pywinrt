@@ -1,0 +1,32 @@
+{
+    "pywinrt": {
+        "version": "0.0.0"
+    },
+    "required": [
+    ],
+    "referenced": [
+        "winrt-Windows.ApplicationModel",
+        "winrt-Windows.ApplicationModel.Activation",
+        "winrt-Windows.ApplicationModel.Core",
+        "winrt-Windows.ApplicationModel.DataTransfer",
+        "winrt-Windows.ApplicationModel.DataTransfer.DragDrop",
+        "winrt-Windows.Foundation",
+        "winrt-Windows.Foundation.Collections",
+        "winrt-Windows.Foundation.Numerics",
+        "winrt-Windows.Graphics.Imaging",
+        "winrt-Windows.UI",
+        "winrt-Windows.UI.Composition",
+        "winrt-Windows.UI.Core",
+        "winrt-Windows.UI.Input",
+        "winrt-Windows.UI.Xaml.Automation.Peers",
+        "winrt-Windows.UI.Xaml.Controls",
+        "winrt-Windows.UI.Xaml.Controls.Primitives",
+        "winrt-Windows.UI.Xaml.Data",
+        "winrt-Windows.UI.Xaml.Input",
+        "winrt-Windows.UI.Xaml.Interop",
+        "winrt-Windows.UI.Xaml.Media",
+        "winrt-Windows.UI.Xaml.Media.Animation",
+        "winrt-Windows.UI.Xaml.Media.Imaging",
+        "winrt-Windows.UI.Xaml.Media.Media3D"
+    ]
+}

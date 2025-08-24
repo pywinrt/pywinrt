@@ -1,0 +1,16 @@
+{
+    "pywinrt": {
+        "version": "0.0.0"
+    },
+    "required": [
+    ],
+    "referenced": [
+        "winrt-Windows.Foundation",
+        "winrt-Windows.Foundation.Collections",
+        "winrt-Windows.Graphics",
+        "winrt-Windows.Graphics.Imaging",
+        "winui3-Microsoft.Graphics.Imaging",
+        "winui3-Microsoft.Windows.AI",
+        "winui3-Microsoft.Windows.AI.ContentSafety"
+    ]
+}

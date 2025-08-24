@@ -1,0 +1,15 @@
+{
+    "pywinrt": {
+        "version": "0.0.0"
+    },
+    "required": [
+    ],
+    "referenced": [
+        "winrt-Windows.Foundation",
+        "winrt-Windows.Foundation.Collections",
+        "winrt-Windows.Globalization",
+        "winrt-Windows.Networking",
+        "winrt-Windows.Storage.Streams",
+        "winrt-Windows.Web.Http"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "pywinrt": {
+        "version": "0.0.0"
+    },
+    "required": [
+        "winrt-Windows.UI.Xaml.Automation.Peers"
+    ],
+    "referenced": [
+        "winrt-Windows.UI.Xaml.Automation",
+        "winrt-Windows.UI.Xaml.Automation.Peers",
+        "winui2-Microsoft.UI.Xaml.Controls",
+        "winui2-Microsoft.UI.Xaml.Controls.Primitives"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "pywinrt": {
+        "version": "0.0.0"
+    },
+    "required": [
+    ],
+    "referenced": [
+        "winrt-Windows.Foundation",
+        "winrt-Windows.UI.Composition",
+        "winrt-Windows.UI.WindowManagement",
+        "winrt-Windows.UI.Xaml",
+        "winrt-Windows.UI.Xaml.Controls",
+        "winrt-Windows.UI.Xaml.Controls.Primitives"
+    ]
+}

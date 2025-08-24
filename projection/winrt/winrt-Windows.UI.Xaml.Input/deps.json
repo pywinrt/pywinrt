@@ -1,0 +1,18 @@
+{
+    "pywinrt": {
+        "version": "0.0.0"
+    },
+    "required": [
+        "winrt-Windows.UI.Xaml"
+    ],
+    "referenced": [
+        "winrt-Windows.Devices.Input",
+        "winrt-Windows.Foundation",
+        "winrt-Windows.Foundation.Collections",
+        "winrt-Windows.System",
+        "winrt-Windows.UI.Core",
+        "winrt-Windows.UI.Input",
+        "winrt-Windows.UI.Xaml",
+        "winrt-Windows.UI.Xaml.Controls"
+    ]
+}

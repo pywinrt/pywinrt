@@ -1,0 +1,16 @@
+{
+    "pywinrt": {
+        "version": "0.0.0"
+    },
+    "required": [
+        "winui3-Microsoft.UI.Xaml"
+    ],
+    "referenced": [
+        "winrt-Windows.Foundation",
+        "winrt-Windows.UI",
+        "winui3-Microsoft.UI.Xaml",
+        "winui3-Microsoft.UI.Xaml.Automation",
+        "winui3-Microsoft.UI.Xaml.Automation.Peers",
+        "winui3-Microsoft.UI.Xaml.Automation.Text"
+    ]
+}

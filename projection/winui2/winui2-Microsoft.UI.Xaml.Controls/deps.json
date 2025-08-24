@@ -1,0 +1,29 @@
+{
+    "pywinrt": {
+        "version": "0.0.0"
+    },
+    "required": [
+        "winrt-Windows.UI.Xaml",
+        "winrt-Windows.UI.Xaml.Controls",
+        "winrt-Windows.UI.Xaml.Controls.Primitives"
+    ],
+    "referenced": [
+        "webview2-Microsoft.Web.WebView2.Core",
+        "winrt-Windows.ApplicationModel.Contacts",
+        "winrt-Windows.ApplicationModel.DataTransfer",
+        "winrt-Windows.Foundation",
+        "winrt-Windows.Foundation.Collections",
+        "winrt-Windows.Foundation.Numerics",
+        "winrt-Windows.Globalization.NumberFormatting",
+        "winrt-Windows.UI",
+        "winrt-Windows.UI.Composition",
+        "winrt-Windows.UI.Text",
+        "winrt-Windows.UI.Xaml",
+        "winrt-Windows.UI.Xaml.Controls",
+        "winrt-Windows.UI.Xaml.Controls.Primitives",
+        "winrt-Windows.UI.Xaml.Input",
+        "winrt-Windows.UI.Xaml.Interop",
+        "winrt-Windows.UI.Xaml.Media",
+        "winrt-Windows.UI.Xaml.Media.Animation"
+    ]
+}
