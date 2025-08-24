@@ -1,10 +1,11 @@
-cmake_minimum_required(VERSION 3.25)
+cmake_minimum_required(VERSION 3.31)
 cmake_policy(SET CMP0091 NEW)
 project(pywinrt-projection LANGUAGES CXX)
 
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_SCAN_FOR_MODULES 0)
 
 # This can be a lot of files, so this really speeds up the install and prevents
 # filling up the console buffer with the output.
