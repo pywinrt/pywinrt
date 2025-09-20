@@ -5,50 +5,13 @@ on:
       tags: [wheels/*]
 
 jobs:
-  sdist:
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements-sdist.txt
-      - name: Build winrt-sdk
-        run: pyproject-build --outdir wheelhouse projection/winrt-sdk
-      - name: Install winrt-sdk
-        run: |
-          $whl = (Get-ChildItem wheelhouse/winrt_sdk-*.whl | Select-Object -First 1).FullName
-          pip install --no-deps $whl
-      - name: Build winrt-Microsoft.UI.Xaml
-        run: pyproject-build --outdir wheelhouse projection/winrt-Microsoft.UI.Xaml
-      - name: Install winrt-Microsoft.UI.Xaml
-        run: |
-          $whl = (Get-ChildItem wheelhouse/winrt_microsoft_ui_xaml-*.whl | Select-Object -First 1).FullName
-          pip install --no-deps $whl
-      - name: Build winrt-WindowsAppSDK
-        run: pyproject-build --outdir wheelhouse projection/winrt-WindowsAppSDK
-      - name: Install winrt-WindowsAppSDK
-        run: |
-          $whl = (Get-ChildItem wheelhouse/winrt_WindowsAppSDK-*.whl | Select-Object -First 1).FullName
-          pip install --no-deps $whl
-      - name: Build sdists
-        run: python scripts/build-sdist.py
-      - name: Upload wheels
-        uses: actions/upload-artifact@v4
-        with:
-          name: sdist_${{ github.run_id }}
-          path: wheelhouse/
   bdist:
     runs-on: windows-latest
     strategy:
       fail-fast: false
       matrix:
         py:
-          - cp39
-          - cp310
-          - cp311
-          - cp312
-          - cp313
+          - cp314
         arch:
           - win_amd64
           - win32
@@ -72,7 +35,7 @@ jobs:
           name: bdist_${{ matrix.py }}-${{ matrix.arch }}_${{ github.run_id }}
           path: wheelhouse/
   publish:
-    needs: [sdist, bdist]
+    needs: [bdist]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v4
