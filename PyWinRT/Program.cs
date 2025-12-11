@@ -278,7 +278,7 @@ var parser = new CommandLineBuilder(rootCommand)
                     Console.WriteLine("Where <spec> is one or more of:");
                     Console.WriteLine();
                     Console.WriteLine(
-                        "  <package>:<path>    Python package name and path to winmd file or recursively scanned folder"
+                        "  <package>;<path>    Python package name and path to winmd file or recursively scanned folder"
                     );
                     Console.WriteLine(
                         "  local               Local %WinDir%\\System32\\WinMetadata folder"
