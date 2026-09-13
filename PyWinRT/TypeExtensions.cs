@@ -819,11 +819,27 @@ static class TypeExtensions
         }
     }
 
-    private static TypeDefinition? TryResolve(TypeReference type)
+    /// <summary>
+    /// Resolves <paramref name="type"/> to a type definition or returns
+    /// <c>null</c> if it cannot be resolved (e.g. fundamental types).
+    /// </summary>
+    public static TypeDefinition? TryResolve(this TypeReference? type)
     {
+        if (type is null)
+        {
+            return null;
+        }
+
+        // Fast path: avoid the cost of throwing and catching exceptions for
+        // unresolvable types, e.g. System.Object base types.
+        if (type.Module?.MetadataResolver is MetadataResolver resolver)
+        {
+            return resolver.TryResolve(type);
+        }
+
         try
         {
-            return type?.Resolve();
+            return type.Resolve();
         }
         catch
         {
@@ -926,18 +942,9 @@ static class TypeExtensions
             || gen.ElementType.FullName == "Windows.Foundation.Collections.IMapView`2"
         );
 
-    public static bool IsStruct(this TypeReference type)
-    {
-        try
-        {
-            return type.Resolve().GetCategory() == Category.Struct;
-        }
-        catch
-        {
-            // if we can't resolve, then it is a fundamental type, so not a struct
-            return false;
-        }
-    }
+    public static bool IsStruct(this TypeReference type) =>
+        // if we can't resolve, then it is a fundamental type, so not a struct
+        TryResolve(type)?.GetCategory() == Category.Struct;
 
     public static QualifiedNamespace GetQualifiedNamespace(
         this TypeReference type,
