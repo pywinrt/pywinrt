@@ -1,12 +1,8 @@
-﻿using System.Collections.Concurrent;
-using System.CommandLine;
+﻿using System.CommandLine;
 using System.CommandLine.Builder;
 using System.CommandLine.Help;
 using System.CommandLine.Invocation;
 using System.CommandLine.Parsing;
-using System.Text.Encodings.Web;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 using Mono.Cecil;
 
 var inputOption = new Option<(string, string)[]>(
@@ -197,29 +193,7 @@ rootCommand.SetHandler(
             );
         }
 
-        var oldNullabilityInfo = default(List<NamespaceNullabilityInfo>);
-
-        if (nullabilityInfoPath is not null && nullabilityInfoPath.Exists)
-        {
-            using var stream = nullabilityInfoPath.OpenRead();
-            oldNullabilityInfo = JsonSerializer.Deserialize<List<NamespaceNullabilityInfo>>(
-                stream,
-                new JsonSerializerOptions
-                {
-                    PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-                    Converters = { new JsonStringEnumConverter(JsonNamingPolicy.CamelCase) }
-                }
-            );
-        }
-
-        if (oldNullabilityInfo is null)
-        {
-            oldNullabilityInfo = new();
-        }
-
-        var nullabilityInfo = new ConcurrentDictionary<string, NamespaceNullabilityInfo>(
-            oldNullabilityInfo.ToDictionary(i => i.Namespace)
-        );
+        var nullabilityFile = NullabilityInfoFile.Load(nullabilityInfoPath);
 
         foreach (var group in types.GroupBy(t => t.Namespace))
         {
@@ -230,10 +204,7 @@ rootCommand.SetHandler(
                         output,
                         headerPath,
                         new QualifiedNamespace(inputPackage, group.Key),
-                        nullabilityInfo.GetOrAdd(
-                            group.Key,
-                            _ => new NamespaceNullabilityInfo(group.Key, [])
-                        ),
+                        nullabilityFile.GetOrAdd(group.Key),
                         packageMap,
                         group,
                         componentDlls
@@ -246,22 +217,7 @@ rootCommand.SetHandler(
 
         if (nullabilityInfoPath is not null)
         {
-            using var stream = nullabilityInfoPath.Create();
-
-            JsonSerializer.Serialize(
-                stream,
-                nullabilityInfo
-                    .OrderBy(i => i.Key, StringComparer.Ordinal)
-                    .Select(i => i.Value)
-                    .ToList(),
-                new JsonSerializerOptions
-                {
-                    WriteIndented = true,
-                    PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-                    Converters = { new JsonStringEnumConverter(JsonNamingPolicy.CamelCase) },
-                    Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
-                }
-            );
+            NullabilityJson.Write(nullabilityInfoPath, nullabilityFile.ToSortedList());
         }
     }
 );
