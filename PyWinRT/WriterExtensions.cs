@@ -1,5 +1,7 @@
+using System.Buffers;
 using System.CodeDom.Compiler;
 using System.Collections.ObjectModel;
+using System.Text;
 using Mono.Cecil;
 
 static class WriterExtensions
@@ -13,26 +15,53 @@ static class WriterExtensions
 
     public static void WriteFileIfChanged(this StringWriter w, DirectoryInfo path, string fileName)
     {
-        var filePath = Path.Combine(path.FullName, fileName);
-        var newContent = w.ToString();
+        var sb = w.GetStringBuilder();
 
-        // don't write the file if it hasn't changed, otherwise it
-        // triggers any file watches and may cause unnecessary rebuilds
-        if (File.Exists(filePath))
+        FileContent.WriteIfChanged(path, fileName, sink => WriteUtf8(sb, sink));
+    }
+
+    /// <summary>
+    /// Writes the content of <paramref name="sb"/> to <paramref name="sink"/>
+    /// as UTF-8 (without BOM).
+    /// </summary>
+    /// <remarks>
+    /// This encodes chunk by chunk to avoid creating a (potentially
+    /// multi-megabyte) intermediate string or byte array.
+    /// </remarks>
+    private static void WriteUtf8(StringBuilder sb, ByteSink sink)
+    {
+        var encoder = Encoding.UTF8.GetEncoder();
+        var buffer = ArrayPool<byte>.Shared.Rent(64 * 1024);
+
+        try
         {
-            var oldContent = File.ReadAllText(filePath);
-
-            if (oldContent == newContent)
+            foreach (var chunk in sb.GetChunks())
             {
-                return;
-            }
-        }
-        else
-        {
-            Directory.CreateDirectory(path.FullName);
-        }
+                var chars = chunk.Span;
 
-        File.WriteAllText(filePath, newContent);
+                while (!chars.IsEmpty)
+                {
+                    encoder.Convert(
+                        chars,
+                        buffer,
+                        flush: false,
+                        out var charsUsed,
+                        out var bytesUsed,
+                        out _
+                    );
+
+                    sink.Write(buffer.AsSpan(0, bytesUsed));
+                    chars = chars[charsUsed..];
+                }
+            }
+
+            encoder.Convert([], buffer, flush: true, out _, out var finalBytesUsed, out _);
+            sink.Write(buffer.AsSpan(0, finalBytesUsed));
+        }
+        finally
+        {
+            ArrayPool<byte>.Shared.Return(buffer);
+        }
     }
 
     public static void WriteBlock(this IndentedTextWriter w, Action writeInner, string suffix = "")
