@@ -75,13 +75,31 @@ static class FileWriters
                 .Select(m => new KeyValuePair<string, MethodNullabilityInfo>(m.Signature, m))
         ).AsReadOnly();
 
-        WriteNamespaceCpp(nsPackageDir, ns, packageMap, members, componentDlls, 0);
-        WriteNamespaceCpp(nsPackageDir, ns, packageMap, members, componentDlls, 1);
-        WriteNamespaceH(headerDir, ns, packageMap, members, componentDlls);
-        WriteNamespaceDunderInitPy(nsDir, ns, nullabilityMap, packageMap, members, componentDlls);
-        WriteNamespacePyi(rootDir, ns, nullabilityMap, packageMap, members, 0);
-        WriteNamespacePyi(rootDir, ns, nullabilityMap, packageMap, members, 1);
-        WriteDepsJson(nsPackageDir, packageMap, members);
+        // Warm the caches that are shared by the writers below so that they
+        // are read-only while the writers run in parallel.
+        members.GetReferencedNamespaces(packageMap, includeDelegates: true);
+        members.GetReferencedNamespaces(packageMap, includeInheritedInterfaces: true);
+
+        // The generated files are independent of each other, so write them
+        // in parallel. This helps the largest namespaces, which would
+        // otherwise be the last ones still running at the end.
+        Parallel.Invoke(
+            () => WriteNamespaceCpp(nsPackageDir, ns, packageMap, members, componentDlls, 0),
+            () => WriteNamespaceCpp(nsPackageDir, ns, packageMap, members, componentDlls, 1),
+            () => WriteNamespaceH(headerDir, ns, packageMap, members, componentDlls),
+            () =>
+                WriteNamespaceDunderInitPy(
+                    nsDir,
+                    ns,
+                    nullabilityMap,
+                    packageMap,
+                    members,
+                    componentDlls
+                ),
+            () => WriteNamespacePyi(rootDir, ns, nullabilityMap, packageMap, members, 0),
+            () => WriteNamespacePyi(rootDir, ns, nullabilityMap, packageMap, members, 1),
+            () => WriteDepsJson(nsPackageDir, packageMap, members)
+        );
     }
 
     private static void WriteDepsJson(
