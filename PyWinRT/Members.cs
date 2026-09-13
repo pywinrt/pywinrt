@@ -95,13 +95,27 @@ sealed class Members
             }
         }
 
-        Enums = enums.Select(e => new ProjectedType(e)).ToArray();
-        Structs = structs.Select(s => new ProjectedType(s)).ToArray();
-        Interfaces = interfaces.Select(i => new ProjectedType(i)).ToArray();
-        Classes = classes.Select(c => new ProjectedType(c)).ToArray();
-        Delegates = delegates.Select(d => new ProjectedType(d)).ToArray();
-        Attributes = attributes.Select(a => new ProjectedType(a)).ToArray();
-        Contracts = contracts.Select(c => new ProjectedType(c)).ToArray();
+        Enums = Project(enums);
+        Structs = Project(structs);
+        Interfaces = Project(interfaces);
+        Classes = Project(classes);
+        Delegates = Project(delegates);
+        Attributes = Project(attributes);
+        Contracts = Project(contracts);
+    }
+
+    private static ProjectedType[] Project(List<TypeDefinition> types)
+    {
+        // Analyzing a type is relatively expensive and independent of other
+        // types, so for large namespaces, do it in parallel. This helps the
+        // largest namespaces, which would otherwise be the last ones still
+        // running at the end.
+        if (types.Count < 32)
+        {
+            return types.Select(t => new ProjectedType(t)).ToArray();
+        }
+
+        return types.AsParallel().AsOrdered().Select(t => new ProjectedType(t)).ToArray();
     }
 
     private static IEnumerable<TypeReference> RecursiveGetTypes(TypeReference type)
