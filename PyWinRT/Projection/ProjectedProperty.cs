@@ -48,7 +48,7 @@ class ProjectedProperty(
     /// Gets the set method of the property.
     /// </summary>
     public ProjectedMethod? SetMethod { get; } =
-        property.SetMethod is null || !property.SetMethod.IsPublic
-            ? default
-            : new ProjectedMethod(property.SetMethod, inheritance, genericArgMap);
+        ModulePreloader.GetSetMethod(property) is { IsPublic: true } setMethod
+            ? new ProjectedMethod(setMethod, inheritance, genericArgMap)
+            : default;
 }
