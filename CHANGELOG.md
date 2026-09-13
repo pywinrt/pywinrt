@@ -4,6 +4,9 @@
 
 ## [Unreleased]
 
+### Changed
+- Greatly improved the speed of the `PyWinRT` code generation tool.
+
 ## [v3.2.1] - 2025-06-06
 
 ## Changed
