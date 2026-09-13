@@ -1,8 +1,10 @@
-﻿using System.CommandLine;
+﻿using System.Collections.Concurrent;
+using System.CommandLine;
 using System.CommandLine.Builder;
 using System.CommandLine.Help;
 using System.CommandLine.Invocation;
 using System.CommandLine.Parsing;
+using System.Diagnostics;
 using Mono.Cecil;
 
 var inputOption = new Option<(string, string)[]>(
@@ -108,8 +110,45 @@ rootCommand.SetHandler(
         var verbose = invocationContext.ParseResult.GetValueForOption(verboseOption);
 
         var inputPackage = default(string);
+        var stopwatch = Stopwatch.StartNew();
 
-        foreach (var (file, package) in input)
+        // The nullability info file can be large, so start loading it right
+        // away in parallel with everything else. It isn't needed until the
+        // generated files are written.
+        var nullabilityLoadTime = TimeSpan.Zero;
+        var nullabilityFileTask = Task.Run(() =>
+        {
+            var nullabilityStopwatch = Stopwatch.StartNew();
+            var nullabilityFile = NullabilityInfoFile.Load(nullabilityInfoPath);
+            nullabilityLoadTime = nullabilityStopwatch.Elapsed;
+            return nullabilityFile;
+        });
+
+        // Reading the metadata files is independent of each other, so it can
+        // be done in parallel, but registration must be done in order.
+        var inputAssemblies = input
+            .AsParallel()
+            .AsOrdered()
+            .Select(spec =>
+                AssemblyDefinition.ReadAssembly(
+                    spec.Item1,
+                    new ReaderParameters { MetadataResolver = resolver }
+                )
+            )
+            .ToList();
+
+        var referenceAssemblies = reference
+            .AsParallel()
+            .AsOrdered()
+            .Select(spec =>
+                AssemblyDefinition.ReadAssembly(
+                    spec.Item1,
+                    new ReaderParameters { MetadataResolver = resolver }
+                )
+            )
+            .ToList();
+
+        foreach (var ((file, package), assembly) in input.Zip(inputAssemblies))
         {
             if (inputPackage is null)
             {
@@ -120,20 +159,8 @@ rootCommand.SetHandler(
                 throw new Exception("All input packages must be the same python package");
             }
 
-            var assembly = AssemblyDefinition.ReadAssembly(
-                file,
-                new ReaderParameters { MetadataResolver = resolver }
-            );
-
             resolver.Register(assembly);
             packageMap.Add(assembly.Modules.Single().Name, package);
-
-            types.AddRange(
-                assembly
-                    .MainModule.Types.Where(TypeExtensions.IsWindowsRuntime)
-                    .Where(t => !t.IsExclusiveTo())
-                    .Where(t => Filter.Includes(t.FullName, include, exclude))
-            );
         }
 
         if (inputPackage is null)
@@ -141,13 +168,8 @@ rootCommand.SetHandler(
             throw new Exception("At least one input package is required");
         }
 
-        foreach (var (file, package) in reference)
+        foreach (var ((file, package), assembly) in reference.Zip(referenceAssemblies))
         {
-            var assembly = AssemblyDefinition.ReadAssembly(
-                file,
-                new ReaderParameters { MetadataResolver = resolver }
-            );
-
             resolver.Register(assembly);
             packageMap.Add(assembly.Modules.Single().Name, package);
 
@@ -158,6 +180,36 @@ rootCommand.SetHandler(
                 );
             }
         }
+
+        var loadTime = stopwatch.Elapsed;
+        stopwatch.Restart();
+
+        var tasks = new List<Task>();
+
+        // if we are building the base projection (not user components),
+        // then emit some extra files
+        if (reference.Length == 0)
+        {
+            tasks.Add(
+                Task.Run(() =>
+                {
+                    FileWriters.WriteBaseFiles(headerPath ?? output);
+                })
+            );
+        }
+
+        foreach (var assembly in inputAssemblies)
+        {
+            types.AddRange(
+                assembly
+                    .MainModule.Types.Where(TypeExtensions.IsWindowsRuntime)
+                    .Where(t => !t.IsExclusiveTo())
+                    .Where(t => Filter.Includes(t.FullName, include, exclude))
+            );
+        }
+
+        var filterTime = stopwatch.Elapsed;
+        stopwatch.Restart();
 
         if (verbose)
         {
@@ -177,47 +229,93 @@ rootCommand.SetHandler(
             Console.WriteLine($"Include: {string.Join(";", include)}");
             Console.WriteLine($"Exclude: {string.Join(";", exclude)}");
             Console.WriteLine($"Header Path: {headerPath?.FullName ?? "<default>"}");
+            Console.WriteLine($"Loaded metadata in {loadTime.TotalMilliseconds:F0} ms");
+            Console.WriteLine($"Filtered types in {filterTime.TotalMilliseconds:F0} ms");
         }
 
-        var tasks = new List<Task>();
+        var namespaceTimes = new ConcurrentBag<(string Namespace, TimeSpan Elapsed)>();
 
-        // if we are building the base projection (not user components),
-        // then emit some extra files
-        if (reference.Length == 0)
+        // Generation is pipelined: the metadata for each namespace is
+        // preloaded on this thread (see ModulePreloader for why) and then the
+        // namespace is handed off to the thread pool to be generated while
+        // the next namespace is being preloaded. The largest namespaces are
+        // started first so that they are not left running alone at the end
+        // after all of the smaller ones are done.
+        var preloader = new ModulePreloader();
+
+        // The preloading on this thread gates the whole pipeline, so give it
+        // priority over the thread pool threads that generate the code.
+        var priority = Thread.CurrentThread.Priority;
+        Thread.CurrentThread.Priority = ThreadPriority.AboveNormal;
+
+        foreach (
+            var group in types
+                .GroupBy(t => t.Namespace)
+                .Select(g => g.ToList())
+                .OrderByDescending(g =>
+                    g.Sum(t => t.GetCategory() is Category.Class or Category.Interface ? 4 : 1)
+                )
+        )
         {
+            var groupNamespace = group[0].Namespace;
+
+            preloader.Preload(group);
+
             tasks.Add(
                 Task.Run(() =>
                 {
-                    FileWriters.WriteBaseFiles(headerPath ?? output);
-                })
-            );
-        }
+                    var nsStopwatch = Stopwatch.StartNew();
 
-        var nullabilityFile = NullabilityInfoFile.Load(nullabilityInfoPath);
-
-        foreach (var group in types.GroupBy(t => t.Namespace))
-        {
-            tasks.Add(
-                Task.Run(() =>
-                {
                     FileWriters.WriteNamespaceFiles(
                         output,
                         headerPath,
-                        new QualifiedNamespace(inputPackage, group.Key),
-                        nullabilityFile.GetOrAdd(group.Key),
+                        new QualifiedNamespace(inputPackage, groupNamespace),
+                        () => nullabilityFileTask.Result.GetOrAdd(groupNamespace),
                         packageMap,
                         group,
                         componentDlls
                     );
+
+                    namespaceTimes.Add((groupNamespace, nsStopwatch.Elapsed));
                 })
             );
         }
 
+        var preloadTime = stopwatch.Elapsed;
+        Thread.CurrentThread.Priority = priority;
+
         await Task.WhenAll(tasks);
+
+        var nullabilityFile = await nullabilityFileTask;
+
+        if (verbose)
+        {
+            Console.WriteLine($"Preloaded metadata in {preloadTime.TotalMilliseconds:F0} ms");
+            Console.WriteLine(
+                $"Loaded nullability info in {nullabilityLoadTime.TotalMilliseconds:F0} ms (in parallel)"
+            );
+            Console.WriteLine($"Generated projection in {stopwatch.ElapsedMilliseconds} ms");
+            Console.WriteLine("Slowest namespaces:");
+
+            foreach (var (ns, elapsed) in namespaceTimes.OrderByDescending(t => t.Elapsed).Take(10))
+            {
+                Console.WriteLine($"    {ns}: {elapsed.TotalMilliseconds:F0} ms");
+            }
+
+            stopwatch.Restart();
+        }
 
         if (nullabilityInfoPath is not null)
         {
             NullabilityJson.Write(nullabilityInfoPath, nullabilityFile.ToSortedList());
+        }
+
+        if (verbose)
+        {
+            Console.WriteLine($"Wrote nullability info in {stopwatch.ElapsedMilliseconds} ms");
+            Console.WriteLine(
+                $"GC: gen0 {GC.CollectionCount(0)}, gen1 {GC.CollectionCount(1)}, gen2 {GC.CollectionCount(2)}, total pause {GC.GetTotalPauseDuration().TotalMilliseconds:F0} ms, allocated {GC.GetTotalAllocatedBytes() / (1024 * 1024)} MB"
+            );
         }
     }
 );

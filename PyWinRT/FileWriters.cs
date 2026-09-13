@@ -23,7 +23,7 @@ static class FileWriters
         DirectoryInfo outputPath,
         DirectoryInfo? headerPath,
         QualifiedNamespace ns,
-        NamespaceNullabilityInfo nullabilityInfo,
+        Func<NamespaceNullabilityInfo> getNullabilityInfo,
         IReadOnlyDictionary<string, string> packageMap,
         IEnumerable<TypeDefinition> typeDefinitions,
         bool componentDlls
@@ -55,6 +55,10 @@ static class FileWriters
         {
             return;
         }
+
+        // NB: this may block until the nullability info has been loaded, so
+        // it is deferred until after the (independent) analysis of the types.
+        var nullabilityInfo = getNullabilityInfo();
 
         foreach (var type in members.Classes.Concat(members.Interfaces).Concat(members.Delegates))
         {

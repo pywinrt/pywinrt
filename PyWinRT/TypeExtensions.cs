@@ -322,7 +322,10 @@ static class TypeExtensions
             { FullName: "Windows.Foundation.HResult" } => "winrt::hresult",
             { Namespace: "Windows.Foundation.Numerics" } when type.IsCustomNumeric(out var cppName)
                 => $"winrt::{type.Namespace.ToCppNamespace()}::{cppName}",
-            { HasGenericParameters: true }
+            // NB: Checking the name for the generic arity suffix instead of
+            // HasGenericParameters avoids Mono.Cecil taking the module lock
+            // on every call for types that haven't been loaded yet.
+            TypeDefinition { Name: var name } when name.Contains('`')
                 => $"winrt::{type.Namespace.ToCppNamespace()}::{type.Name.ToNonGeneric()}<{string.Join(", ", type.GenericParameters.Select(p => p.ToCppTypeName(map)))}>",
             _ => $"winrt::{type.FullName.ToCppNamespace()}"
         };

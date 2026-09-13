@@ -210,9 +210,9 @@ sealed class Members
                     .Concat(
                         type.Properties.SelectMany(p =>
                             (IEnumerable<MethodDefinition>)(
-                                p.Property.SetMethod is null
-                                    ? [p.Property.GetMethod]
-                                    : [p.Property.GetMethod, p.Property.SetMethod]
+                                p.SetMethod is null
+                                    ? [p.GetMethod.Method]
+                                    : [p.GetMethod.Method, p.SetMethod.Method]
                             )
                         )
                     )
