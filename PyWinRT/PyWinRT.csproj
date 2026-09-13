@@ -10,6 +10,20 @@
     <ToolCommandName>pywinrt</ToolCommandName>
   </PropertyGroup>
 
+  <!--
+    Runtime tuning for a short-lived, highly parallel, allocation-heavy batch
+    tool. Server GC avoids the frequent stop-the-world collections that
+    workstation GC does when many threads allocate at once. Background GC
+    only adds overhead for a batch process. We use invariant globalization
+    since all string handling is ordinal and this avoids loading ICU.
+  -->
+  <PropertyGroup>
+    <ServerGarbageCollection>true</ServerGarbageCollection>
+    <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
+    <TieredPGO>false</TieredPGO>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
   <!-- https://learn.microsoft.com/en-us/nuget/reference/msbuild-targets -->
   <PropertyGroup>
     <Authors>Microsoft,dlech</Authors>
