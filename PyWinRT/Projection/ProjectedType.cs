@@ -392,9 +392,17 @@ class ProjectedType
     {
         var factories = new Dictionary<string, FactoryInfo>();
 
+        // NB: Only the factory attributes are of interest here. Reading the
+        // constructor arguments of every metadata attribute (e.g. the
+        // ContractVersionAttribute that is on everything) is relatively
+        // expensive and the information is not used.
         foreach (
             var attr in type.CustomAttributes.Where(a =>
                 a.AttributeType.Namespace == "Windows.Foundation.Metadata"
+                && a.AttributeType.Name
+                    is "ActivatableAttribute"
+                        or "StaticAttribute"
+                        or "ComposableAttribute"
             )
         )
         {

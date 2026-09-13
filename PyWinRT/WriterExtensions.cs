@@ -52,7 +52,15 @@ static class WriterExtensions
         string moduleSuffix
     )
     {
-        var category = type.Category.ToString().ToLowerInvariant();
+        var category = type.Category switch
+        {
+            Category.Enum => "enum",
+            Category.Struct => "struct",
+            Category.Interface => "interface",
+            Category.Class => "class",
+            Category.Delegate => "delegate",
+            _ => throw new NotImplementedException(),
+        };
 
         w.WriteLine($"// ----- {type.Name} {category} --------------------");
 

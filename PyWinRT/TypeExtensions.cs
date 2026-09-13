@@ -1,3 +1,4 @@
+using System.Collections.Concurrent;
 using System.Diagnostics.CodeAnalysis;
 using System.Text;
 using Mono.Cecil;
@@ -718,17 +719,38 @@ static class TypeExtensions
             _ => throw new NotImplementedException(),
         };
 
-    public static bool ImplementsInterface(this TypeDefinition type, string interfaceName)
+    private static readonly ConcurrentDictionary<
+        TypeDefinition,
+        HashSet<string>
+    > implementedInterfaceNames =
+        new(Environment.ProcessorCount * 4, 1 << 14, ReferenceEqualityComparer.Instance);
+
+    /// <summary>
+    /// Gets the full names of <paramref name="type"/> and all interfaces it
+    /// implements, directly or indirectly.
+    /// </summary>
+    /// <remarks>
+    /// The result is cached since this is queried many times per type.
+    /// </remarks>
+    private static HashSet<string> GetImplementedInterfaceNames(TypeDefinition type)
     {
-        if (type.FullName == interfaceName)
+        if (implementedInterfaceNames.TryGetValue(type, out var names))
         {
-            return true;
+            return names;
         }
 
-        return type.Interfaces.Any(i =>
-            i.InterfaceType.Resolve().ImplementsInterface(interfaceName)
-        );
+        names = [type.FullName];
+
+        foreach (var iface in type.Interfaces)
+        {
+            names.UnionWith(GetImplementedInterfaceNames(iface.InterfaceType.Resolve()));
+        }
+
+        return implementedInterfaceNames.GetOrAdd(type, names);
     }
+
+    public static bool ImplementsInterface(this TypeDefinition type, string interfaceName) =>
+        GetImplementedInterfaceNames(type).Contains(interfaceName);
 
     static bool ImplementsIAsyncInfo(this TypeDefinition type) =>
         type.ImplementsInterface("Windows.Foundation.IAsyncInfo");
@@ -946,12 +968,34 @@ static class TypeExtensions
         // if we can't resolve, then it is a fundamental type, so not a struct
         TryResolve(type)?.GetCategory() == Category.Struct;
 
+    private static readonly ConcurrentDictionary<
+        TypeReference,
+        QualifiedNamespace
+    > qualifiedNamespaces =
+        new(Environment.ProcessorCount * 4, 1 << 14, ReferenceEqualityComparer.Instance);
+
     public static QualifiedNamespace GetQualifiedNamespace(
         this TypeReference type,
         IReadOnlyDictionary<string, string> packageMap
-    ) =>
-        new(
-            type.Namespace == "System" ? "winrt" : packageMap[type.Resolve().Module.Name],
-            type.Namespace
+    )
+    {
+        // NB: Mono.Cecil shares TypeReference instances for the same metadata
+        // row within a module, so the element type is a good cache key. Generic
+        // instances are distinct objects, so we use the element type instead.
+        var elementType = type.GetElementType();
+
+        if (qualifiedNamespaces.TryGetValue(elementType, out var ns))
+        {
+            return ns;
+        }
+
+        ns = new(
+            elementType.Namespace == "System"
+                ? "winrt"
+                : packageMap[elementType.Resolve().Module.Name],
+            elementType.Namespace
         );
+
+        return qualifiedNamespaces.GetOrAdd(elementType, ns);
+    }
 }

@@ -1,3 +1,4 @@
+using System.Collections.Concurrent;
 using System.Diagnostics.CodeAnalysis;
 using Mono.Cecil;
 
@@ -8,48 +9,154 @@ using Mono.Cecil;
 /// This is a wrapper around a <see cref="MethodDefinition"/> that provides
 /// information relevant to the Python projection of the WinRT method.
 /// </remarks>
-class ProjectedMethod(
-    MethodDefinition method,
-    IEnumerable<TypeReference> inheritance,
-    IReadOnlyDictionary<GenericParameter, TypeReference>? genericArgMap
-)
+class ProjectedMethod
 {
-    // TODO: this should eventually made private
-    public readonly MethodDefinition Method = method;
+    /// <summary>
+    /// Information about a method that depends only on the method definition
+    /// and not on the type that is projecting it.
+    /// </summary>
+    /// <remarks>
+    /// Interface methods are projected once for each class that implements
+    /// the interface, so this is cached to avoid recomputing it for each class.
+    /// </remarks>
+    private sealed class MethodInfo
+    {
+        public MethodInfo(MethodDefinition method)
+        {
+            var overloadName = default(string);
+            var deprecated = default(CustomAttribute);
 
-    private static string GetName(MethodDefinition method) =>
-        (
-            method.CustomAttributes.SingleOrDefault(a =>
-                a.AttributeType.FullName == "Windows.Foundation.Metadata.OverloadAttribute"
-            ) is
-            { ConstructorArguments: { Count: 1 } args }
-        )
-            ? args[0].Value as string ?? throw new InvalidOperationException()
-            : method.Name;
+            foreach (var attr in method.CustomAttributes)
+            {
+                switch (attr.AttributeType.FullName)
+                {
+                    case "Windows.Foundation.Metadata.OverloadAttribute":
+                        if (attr.ConstructorArguments.Count == 1)
+                        {
+                            if (overloadName is not null)
+                            {
+                                throw new InvalidOperationException(
+                                    $"Multiple overload attributes on {method}"
+                                );
+                            }
+
+                            overloadName =
+                                attr.ConstructorArguments[0].Value as string
+                                ?? throw new InvalidOperationException();
+                        }
+                        break;
+                    case "Windows.Foundation.Metadata.DefaultOverloadAttribute":
+                        IsDefaultOverload = true;
+                        break;
+                    case "Windows.Foundation.Metadata.DeprecatedAttribute":
+                        if (deprecated is not null)
+                        {
+                            throw new InvalidOperationException(
+                                $"Multiple deprecated attributes on {method}"
+                            );
+                        }
+
+                        deprecated = attr;
+                        IsDeprecated = true;
+                        break;
+                }
+            }
+
+            Name = overloadName ?? method.Name;
+            CppName = method.IsSpecialName
+                ? method.Name.Substring(method.Name.IndexOf('_') + 1)
+                : method.Name;
+            PyName =
+                (method.IsPublic ? "" : "_")
+                + Name.ToPythonIdentifier(isTypeMethod: method.IsStatic);
+            Signature = method.ToString();
+            DeprecatedMessage = deprecated?.ConstructorArguments[0].Value as string;
+
+            foreach (var o in method.Overrides)
+            {
+                if (o.DeclaringType.Resolve().IsExclusiveTo())
+                {
+                    IsExclusiveTo = true;
+                }
+
+                if (method.IsFamily)
+                {
+                    foreach (var i in method.DeclaringType.Interfaces)
+                    {
+                        if (i.InterfaceType.FullName != o.DeclaringType.FullName)
+                        {
+                            continue;
+                        }
+
+                        foreach (var a in i.CustomAttributes)
+                        {
+                            switch (a.AttributeType.FullName)
+                            {
+                                case "Windows.Foundation.Metadata.ProtectedAttribute":
+                                    IsProtected = true;
+                                    break;
+                                case "Windows.Foundation.Metadata.OverridableAttribute":
+                                    IsOverridable = true;
+                                    break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public string Name { get; }
+        public string CppName { get; }
+        public string PyName { get; }
+        public string Signature { get; }
+        public bool IsDefaultOverload { get; }
+        public bool IsExclusiveTo { get; }
+        public bool IsProtected { get; }
+        public bool IsOverridable { get; }
+        public bool IsDeprecated { get; }
+        public string? DeprecatedMessage { get; }
+    }
+
+    private static readonly ConcurrentDictionary<MethodDefinition, MethodInfo> methodInfoCache =
+        new(Environment.ProcessorCount * 4, 1 << 17, ReferenceEqualityComparer.Instance);
+
+    private readonly MethodInfo info;
+
+    public ProjectedMethod(
+        MethodDefinition method,
+        IEnumerable<TypeReference> inheritance,
+        IReadOnlyDictionary<GenericParameter, TypeReference>? genericArgMap
+    )
+    {
+        Method = method;
+        info = methodInfoCache.GetOrAdd(method, static m => new MethodInfo(m));
+        Inheritance = inheritance.ToList();
+        GenericArgMap = genericArgMap;
+    }
+
+    // TODO: this should eventually made private
+    public readonly MethodDefinition Method;
 
     /// <summary>
     /// Gets the projected name of the method. For many overloaded methods, this
     /// is different from the C++/WinRT name.
     /// </summary>
-    public string Name { get; } = GetName(method);
+    public string Name => info.Name;
 
     /// <summary>
     /// Gets the C++/WinRT name of the method.
     /// </summary>
-    public string CppName { get; } =
-        method.IsSpecialName ? method.Name.Substring(method.Name.IndexOf('_') + 1) : method.Name;
+    public string CppName => info.CppName;
 
     /// <summary>
     /// Gets the Python name of the method.
     /// </summary>
-    public string PyName { get; } =
-        (method.IsPublic ? "" : "_")
-        + GetName(method).ToPythonIdentifier(isTypeMethod: method.IsStatic);
+    public string PyName => info.PyName;
 
     /// <summary>
     /// Gets the signature of the method.
     /// </summary>
-    public string Signature { get; } = method.ToString();
+    public string Signature => info.Signature;
 
     /// <summary>
     /// Gets the inherence chain of the method.
@@ -57,7 +164,7 @@ class ProjectedMethod(
     /// <remarks>
     /// The last item in the list is the declaring type of the method.
     /// </remarks>
-    public IReadOnlyList<TypeReference> Inheritance { get; } = inheritance.ToList();
+    public IReadOnlyList<TypeReference> Inheritance { get; }
 
     /// <summary>
     /// Gets a map of generic parameters to their type arguments.
@@ -67,99 +174,56 @@ class ProjectedMethod(
     /// with generic parameters and is referenced by a class or interface
     /// that provides type arguments for those parameters.
     /// </remarks>
-    public IReadOnlyDictionary<GenericParameter, TypeReference>? GenericArgMap { get; } =
-        genericArgMap;
+    public IReadOnlyDictionary<GenericParameter, TypeReference>? GenericArgMap { get; }
 
     /// <summary>
     /// Gets a value indicating whether the method is the default overload.
     /// </summary>
-    public bool IsDefaultOverload { get; } =
-        method.CustomAttributes.Any(a =>
-            a.AttributeType.FullName == "Windows.Foundation.Metadata.DefaultOverloadAttribute"
-        );
+    public bool IsDefaultOverload => info.IsDefaultOverload;
 
     /// <summary>
     /// Gets a value indicating whether the method is a constructor.
     /// </summary>
-    public bool IsConstructor { get; } = method.IsConstructor;
+    public bool IsConstructor => Method.IsConstructor;
 
     /// <summary>
     /// Gets a value indicating whether the method is a special name.
     /// </summary>
-    public bool IsSpecialName { get; } = method.IsSpecialName;
+    public bool IsSpecialName => Method.IsSpecialName;
 
     /// <summary>
     /// Gets a value indicating whether the method is static.
     /// </summary>
-    public bool IsStatic { get; } = method.IsStatic;
+    public bool IsStatic => Method.IsStatic;
 
     /// <summary>
     /// Gets a value indicating whether the method is public.
     /// </summary>
-    public bool IsPublic { get; } = method.IsPublic;
+    public bool IsPublic => Method.IsPublic;
 
     /// <summary>
     /// Gets a value indicating whether the method is implementing an exclusive interface.
     /// </summary>
-    public bool IsExclusiveTo { get; } =
-        method.Overrides.Any(o =>
-            o.DeclaringType.Resolve()
-                .CustomAttributes.Any(a =>
-                    a.AttributeType.FullName == "Windows.Foundation.Metadata.ExclusiveToAttribute"
-                )
-        );
+    public bool IsExclusiveTo => info.IsExclusiveTo;
 
     /// <summary>
     /// Gets a value indicating if the method has WinRT protected semantics
     /// </summary>
-    public bool IsProtected { get; } =
-        method.IsFamily
-        && method
-            .Overrides.SelectMany(o =>
-                method.DeclaringType.Interfaces.Where(i =>
-                    i.InterfaceType.FullName == o.DeclaringType.FullName
-                )
-            )
-            .Any(i =>
-                i.CustomAttributes.Any(a =>
-                    a.AttributeType.FullName == "Windows.Foundation.Metadata.ProtectedAttribute"
-                )
-            );
+    public bool IsProtected => info.IsProtected;
 
     /// <summary>
     /// Gets a value indicating if the method has WinRT overridable semantics
     /// </summary>
-    public bool IsOverridable { get; } =
-        method.IsFamily
-        && method
-            .Overrides.SelectMany(o =>
-                method.DeclaringType.Interfaces.Where(i =>
-                    i.InterfaceType.FullName == o.DeclaringType.FullName
-                )
-            )
-            .Any(i =>
-                i.CustomAttributes.Any(a =>
-                    a.AttributeType.FullName == "Windows.Foundation.Metadata.OverridableAttribute"
-                )
-            );
+    public bool IsOverridable => info.IsOverridable;
 
     /// <summary>
     /// Gets a value indicating whether the method is deprecated.
     /// </summary>
     [MemberNotNullWhen(true, nameof(DeprecatedMessage))]
-    public bool IsDeprecated { get; } =
-        method.CustomAttributes.Any(a =>
-            a.AttributeType.FullName == "Windows.Foundation.Metadata.DeprecatedAttribute"
-        );
+    public bool IsDeprecated => info.IsDeprecated;
 
     /// <summary>
     /// Gets the message associated with the deprecation of the method.
     /// </summary>
-    public string? DeprecatedMessage { get; } =
-        method
-            .CustomAttributes.SingleOrDefault(a =>
-                a.AttributeType.FullName == "Windows.Foundation.Metadata.DeprecatedAttribute"
-            )
-            ?.ConstructorArguments[0]
-            .Value as string;
+    public string? DeprecatedMessage => info.DeprecatedMessage;
 }

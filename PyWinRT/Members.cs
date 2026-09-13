@@ -141,10 +141,30 @@ sealed class Members
         return namespaces;
     }
 
+    private readonly IReadOnlyCollection<QualifiedNamespace>?[] referencedNamespacesCache =
+        new IReadOnlyCollection<QualifiedNamespace>?[4];
+
     public IReadOnlyCollection<QualifiedNamespace> GetReferencedNamespaces(
         IReadOnlyDictionary<string, string> packageMap,
         bool includeDelegates = false,
         bool includeInheritedInterfaces = false
+    )
+    {
+        // This is called several times per namespace with the same arguments
+        // (once for each generated file), so the result is cached.
+        var cacheIndex = (includeDelegates ? 1 : 0) | (includeInheritedInterfaces ? 2 : 0);
+
+        return referencedNamespacesCache[cacheIndex] ??= ComputeReferencedNamespaces(
+            packageMap,
+            includeDelegates,
+            includeInheritedInterfaces
+        );
+    }
+
+    private IReadOnlyCollection<QualifiedNamespace> ComputeReferencedNamespaces(
+        IReadOnlyDictionary<string, string> packageMap,
+        bool includeDelegates,
+        bool includeInheritedInterfaces
     )
     {
         var namespaces = new SortedSet<QualifiedNamespace>();
