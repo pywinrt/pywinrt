@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -198,9 +199,15 @@ class SmartCardChallengeContext(winrt.system.Object, windows_foundation.IClosabl
     def change_administrative_key_async(self, response: winrt.system.Buffer, new_administrative_key: winrt.system.Buffer, /) -> windows_foundation.IAsyncAction: ...
     # System.Void Windows.Devices.SmartCards.SmartCardChallengeContext::Close()
     def close(self) -> None: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Devices.SmartCards.SmartCardChallengeContext::ProvisionAsync(Windows.Storage.Streams.IBuffer,System.Boolean)
     def provision_async(self, response: winrt.system.Buffer, format_card: bool, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Devices.SmartCards.SmartCardChallengeContext::ProvisionAsync(Windows.Storage.Streams.IBuffer,System.Boolean,System.Guid)
+    def provision_async(self, response: winrt.system.Buffer, format_card: bool, new_card_id: _uuid.UUID, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of provision_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Devices.SmartCards.SmartCardChallengeContext::ProvisionAsync(Windows.Storage.Streams.IBuffer,System.Boolean,System.Guid)
+    @deprecated("Use provision_async() instead.")
     def provision_async_with_new_card_id(self, response: winrt.system.Buffer, format_card: bool, new_card_id: _uuid.UUID, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Devices.SmartCards.SmartCardChallengeContext::VerifyResponseAsync(Windows.Storage.Streams.IBuffer)
     def verify_response_async(self, response: winrt.system.Buffer, /) -> windows_foundation.IAsyncOperation[bool]: ...
@@ -234,9 +241,15 @@ class SmartCardCryptogramGenerator(winrt.system.Object, metaclass=SmartCardCrypt
     def delete_cryptogram_material_storage_key_async(self, storage_key_name: str, /) -> windows_foundation.IAsyncOperation[SmartCardCryptogramGeneratorOperationStatus]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult> Windows.Devices.SmartCards.SmartCardCryptogramGenerator::GetAllCryptogramMaterialCharacteristicsAsync(Windows.Devices.SmartCards.SmartCardUnlockPromptingBehavior,System.String)
     def get_all_cryptogram_material_characteristics_async(self, prompting_behavior: SmartCardUnlockPromptingBehavior, material_package_name: str, /) -> windows_foundation.IAsyncOperation[SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult> Windows.Devices.SmartCards.SmartCardCryptogramGenerator::GetAllCryptogramMaterialPackageCharacteristicsAsync()
     def get_all_cryptogram_material_package_characteristics_async(self) -> windows_foundation.IAsyncOperation[SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult> Windows.Devices.SmartCards.SmartCardCryptogramGenerator::GetAllCryptogramMaterialPackageCharacteristicsAsync(System.String)
+    def get_all_cryptogram_material_package_characteristics_async(self, storage_key_name: str, /) -> windows_foundation.IAsyncOperation[SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult]: ...
+    # Deprecated alias of get_all_cryptogram_material_package_characteristics_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult> Windows.Devices.SmartCards.SmartCardCryptogramGenerator::GetAllCryptogramMaterialPackageCharacteristicsAsync(System.String)
+    @deprecated("Use get_all_cryptogram_material_package_characteristics_async() instead.")
     def get_all_cryptogram_material_package_characteristics_with_storage_key_async(self, storage_key_name: str, /) -> windows_foundation.IAsyncOperation[SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.SmartCards.SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult> Windows.Devices.SmartCards.SmartCardCryptogramGenerator::GetAllCryptogramStorageKeyCharacteristicsAsync()
     def get_all_cryptogram_storage_key_characteristics_async(self) -> windows_foundation.IAsyncOperation[SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult]: ...
@@ -486,14 +499,26 @@ class SmartCardEmulator(winrt.system.Object, metaclass=SmartCardEmulator_Static)
 
 @typing.final
 class SmartCardEmulatorApduReceivedEventArgs(winrt.system.Object):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs::TryRespondAsync(Windows.Storage.Streams.IBuffer)
     def try_respond_async(self, response_apdu: winrt.system.Buffer, /) -> windows_foundation.IAsyncOperation[bool]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus> Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs::TryRespondWithCryptogramsAsync(Windows.Storage.Streams.IBuffer,Windows.Foundation.Collections.IIterable`1<Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep>,Windows.Foundation.IReference`1<System.UInt32>)
-    def try_respond_with_cryptograms_and_state_async(self, response_template: winrt.system.Buffer, cryptogram_placement_steps: typing.Iterable[SmartCardCryptogramPlacementStep], next_state: typing.Optional[winrt.system.UInt32], /) -> windows_foundation.IAsyncOperation[SmartCardCryptogramGeneratorOperationStatus]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs::TryRespondAsync(Windows.Storage.Streams.IBuffer,Windows.Foundation.IReference`1<System.UInt32>)
+    def try_respond_async(self, response_apdu: winrt.system.Buffer, next_state: typing.Optional[winrt.system.UInt32], /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Deprecated alias of try_respond_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs::TryRespondAsync(Windows.Storage.Streams.IBuffer,Windows.Foundation.IReference`1<System.UInt32>)
+    @deprecated("Use try_respond_async() instead.")
+    def try_respond_with_state_async(self, response_apdu: winrt.system.Buffer, next_state: typing.Optional[winrt.system.UInt32], /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus> Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs::TryRespondWithCryptogramsAsync(Windows.Storage.Streams.IBuffer,Windows.Foundation.Collections.IIterable`1<Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep>)
     def try_respond_with_cryptograms_async(self, response_template: winrt.system.Buffer, cryptogram_placement_steps: typing.Iterable[SmartCardCryptogramPlacementStep], /) -> windows_foundation.IAsyncOperation[SmartCardCryptogramGeneratorOperationStatus]: ...
-    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs::TryRespondAsync(Windows.Storage.Streams.IBuffer,Windows.Foundation.IReference`1<System.UInt32>)
-    def try_respond_with_state_async(self, response_apdu: winrt.system.Buffer, next_state: typing.Optional[winrt.system.UInt32], /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus> Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs::TryRespondWithCryptogramsAsync(Windows.Storage.Streams.IBuffer,Windows.Foundation.Collections.IIterable`1<Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep>,Windows.Foundation.IReference`1<System.UInt32>)
+    def try_respond_with_cryptograms_async(self, response_template: winrt.system.Buffer, cryptogram_placement_steps: typing.Iterable[SmartCardCryptogramPlacementStep], next_state: typing.Optional[winrt.system.UInt32], /) -> windows_foundation.IAsyncOperation[SmartCardCryptogramGeneratorOperationStatus]: ...
+    # Deprecated alias of try_respond_with_cryptograms_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus> Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs::TryRespondWithCryptogramsAsync(Windows.Storage.Streams.IBuffer,Windows.Foundation.Collections.IIterable`1<Windows.Devices.SmartCards.SmartCardCryptogramPlacementStep>,Windows.Foundation.IReference`1<System.UInt32>)
+    @deprecated("Use try_respond_with_cryptograms_async() instead.")
+    def try_respond_with_cryptograms_and_state_async(self, response_template: winrt.system.Buffer, cryptogram_placement_steps: typing.Iterable[SmartCardCryptogramPlacementStep], next_state: typing.Optional[winrt.system.UInt32], /) -> windows_foundation.IAsyncOperation[SmartCardCryptogramGeneratorOperationStatus]: ...
     # Windows.Devices.SmartCards.SmartCardAutomaticResponseStatus Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs::get_AutomaticResponseStatus()
     @_property
     def automatic_response_status(self) -> SmartCardAutomaticResponseStatus: ...
@@ -587,13 +612,25 @@ class SmartCardPinResetRequest(winrt.system.Object):
 class SmartCardProvisioning_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.SmartCards.SmartCardProvisioning> Windows.Devices.SmartCards.SmartCardProvisioning::FromSmartCardAsync(Windows.Devices.SmartCards.SmartCard)
     def from_smart_card_async(cls, card: SmartCard, /) -> windows_foundation.IAsyncOperation[SmartCardProvisioning]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.SmartCards.SmartCardProvisioning> Windows.Devices.SmartCards.SmartCardProvisioning::RequestAttestedVirtualSmartCardCreationAsync(System.String,Windows.Storage.Streams.IBuffer,Windows.Devices.SmartCards.SmartCardPinPolicy)
     def request_attested_virtual_smart_card_creation_async(cls, friendly_name: str, administrative_key: winrt.system.Buffer, pin_policy: SmartCardPinPolicy, /) -> windows_foundation.IAsyncOperation[SmartCardProvisioning]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.SmartCards.SmartCardProvisioning> Windows.Devices.SmartCards.SmartCardProvisioning::RequestAttestedVirtualSmartCardCreationAsync(System.String,Windows.Storage.Streams.IBuffer,Windows.Devices.SmartCards.SmartCardPinPolicy,System.Guid)
+    def request_attested_virtual_smart_card_creation_async(cls, friendly_name: str, administrative_key: winrt.system.Buffer, pin_policy: SmartCardPinPolicy, card_id: _uuid.UUID, /) -> windows_foundation.IAsyncOperation[SmartCardProvisioning]: ...
+    # Deprecated alias of request_attested_virtual_smart_card_creation_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.SmartCards.SmartCardProvisioning> Windows.Devices.SmartCards.SmartCardProvisioning::RequestAttestedVirtualSmartCardCreationAsync(System.String,Windows.Storage.Streams.IBuffer,Windows.Devices.SmartCards.SmartCardPinPolicy,System.Guid)
+    @deprecated("Use request_attested_virtual_smart_card_creation_async() instead.")
     def request_attested_virtual_smart_card_creation_async_with_card_id(cls, friendly_name: str, administrative_key: winrt.system.Buffer, pin_policy: SmartCardPinPolicy, card_id: _uuid.UUID, /) -> windows_foundation.IAsyncOperation[SmartCardProvisioning]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.SmartCards.SmartCardProvisioning> Windows.Devices.SmartCards.SmartCardProvisioning::RequestVirtualSmartCardCreationAsync(System.String,Windows.Storage.Streams.IBuffer,Windows.Devices.SmartCards.SmartCardPinPolicy)
     def request_virtual_smart_card_creation_async(cls, friendly_name: str, administrative_key: winrt.system.Buffer, pin_policy: SmartCardPinPolicy, /) -> windows_foundation.IAsyncOperation[SmartCardProvisioning]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.SmartCards.SmartCardProvisioning> Windows.Devices.SmartCards.SmartCardProvisioning::RequestVirtualSmartCardCreationAsync(System.String,Windows.Storage.Streams.IBuffer,Windows.Devices.SmartCards.SmartCardPinPolicy,System.Guid)
+    def request_virtual_smart_card_creation_async(cls, friendly_name: str, administrative_key: winrt.system.Buffer, pin_policy: SmartCardPinPolicy, card_id: _uuid.UUID, /) -> windows_foundation.IAsyncOperation[SmartCardProvisioning]: ...
+    # Deprecated alias of request_virtual_smart_card_creation_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.SmartCards.SmartCardProvisioning> Windows.Devices.SmartCards.SmartCardProvisioning::RequestVirtualSmartCardCreationAsync(System.String,Windows.Storage.Streams.IBuffer,Windows.Devices.SmartCards.SmartCardPinPolicy,System.Guid)
+    @deprecated("Use request_virtual_smart_card_creation_async() instead.")
     def request_virtual_smart_card_creation_async_with_card_id(cls, friendly_name: str, administrative_key: winrt.system.Buffer, pin_policy: SmartCardPinPolicy, card_id: _uuid.UUID, /) -> windows_foundation.IAsyncOperation[SmartCardProvisioning]: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Devices.SmartCards.SmartCardProvisioning::RequestVirtualSmartCardDeletionAsync(Windows.Devices.SmartCards.SmartCard)
     def request_virtual_smart_card_deletion_async(cls, card: SmartCard, /) -> windows_foundation.IAsyncOperation[bool]: ...
@@ -620,9 +657,15 @@ class SmartCardProvisioning(winrt.system.Object, metaclass=SmartCardProvisioning
 class SmartCardReader_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.SmartCards.SmartCardReader> Windows.Devices.SmartCards.SmartCardReader::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[SmartCardReader]: ...
+    @typing.overload
     # System.String Windows.Devices.SmartCards.SmartCardReader::GetDeviceSelector()
     def get_device_selector(cls) -> str: ...
+    @typing.overload
     # System.String Windows.Devices.SmartCards.SmartCardReader::GetDeviceSelector(Windows.Devices.SmartCards.SmartCardReaderKind)
+    def get_device_selector(cls, kind: SmartCardReaderKind, /) -> str: ...
+    # Deprecated alias of get_device_selector() for pywinrt v3.x compatibility.
+    # System.String Windows.Devices.SmartCards.SmartCardReader::GetDeviceSelector(Windows.Devices.SmartCards.SmartCardReaderKind)
+    @deprecated("Use get_device_selector() instead.")
     def get_device_selector_with_kind(cls, kind: SmartCardReaderKind, /) -> str: ...
 
 @typing.final
@@ -651,9 +694,15 @@ class SmartCardReader(winrt.system.Object, metaclass=SmartCardReader_Static):
 
 @typing.final
 class SmartCardTriggerDetails(winrt.system.Object):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Devices.SmartCards.SmartCardTriggerDetails::TryLaunchCurrentAppAsync(System.String)
     def try_launch_current_app_async(self, arguments: str, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Devices.SmartCards.SmartCardTriggerDetails::TryLaunchCurrentAppAsync(System.String,Windows.Devices.SmartCards.SmartCardLaunchBehavior)
+    def try_launch_current_app_async(self, arguments: str, behavior: SmartCardLaunchBehavior, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Deprecated alias of try_launch_current_app_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Devices.SmartCards.SmartCardTriggerDetails::TryLaunchCurrentAppAsync(System.String,Windows.Devices.SmartCards.SmartCardLaunchBehavior)
+    @deprecated("Use try_launch_current_app_async() instead.")
     def try_launch_current_app_with_behavior_async(self, arguments: str, behavior: SmartCardLaunchBehavior, /) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Storage.Streams.IBuffer Windows.Devices.SmartCards.SmartCardTriggerDetails::get_SourceAppletId()
     @_property

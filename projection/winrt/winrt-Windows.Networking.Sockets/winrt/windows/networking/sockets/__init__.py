@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_networking_sockets import (
     BandwidthStatistics,
@@ -209,3 +210,26 @@ class SocketSslErrorSeverity(enum.IntEnum):
     IGNORABLE = 1
     FATAL = 2
 
+winrt.runtime._internals.alias_method(DatagramSocket, "bind_service_name_and_adapter_async", "bind_service_name_async")
+winrt.runtime._internals.alias_method(DatagramSocket, "connect_with_endpoint_pair_async", "connect_async")
+winrt.runtime._internals.alias_method(DatagramSocket, "enable_transfer_ownership_with_connected_standby_action", "enable_transfer_ownership")
+winrt.runtime._internals.alias_static_method(DatagramSocket, "get_endpoint_pairs_with_sort_options_async", "get_endpoint_pairs_async")
+winrt.runtime._internals.alias_method(DatagramSocket, "get_output_stream_with_endpoint_pair_async", "get_output_stream_async")
+winrt.runtime._internals.alias_method(DatagramSocket, "transfer_ownership_with_context", "transfer_ownership")
+winrt.runtime._internals.alias_method(DatagramSocket, "transfer_ownership_with_context_and_keep_alive_time", "transfer_ownership")
+winrt.runtime._internals.alias_method(MessageWebSocket, "close_with_status", "close")
+winrt.runtime._internals.alias_method(ServerMessageWebSocket, "close_with_status", "close")
+winrt.runtime._internals.alias_method(ServerStreamWebSocket, "close_with_status", "close")
+winrt.runtime._internals.alias_method(StreamSocket, "connect_with_endpoint_pair_async", "connect_async")
+winrt.runtime._internals.alias_method(StreamSocket, "connect_with_protection_level_and_adapter_async", "connect_async")
+winrt.runtime._internals.alias_method(StreamSocket, "connect_with_protection_level_async", "connect_async")
+winrt.runtime._internals.alias_method(StreamSocket, "enable_transfer_ownership_with_connected_standby_action", "enable_transfer_ownership")
+winrt.runtime._internals.alias_static_method(StreamSocket, "get_endpoint_pairs_with_sort_options_async", "get_endpoint_pairs_async")
+winrt.runtime._internals.alias_method(StreamSocket, "transfer_ownership_with_context", "transfer_ownership")
+winrt.runtime._internals.alias_method(StreamSocket, "transfer_ownership_with_context_and_keep_alive_time", "transfer_ownership")
+winrt.runtime._internals.alias_method(StreamSocketListener, "bind_service_name_with_protection_level_and_adapter_async", "bind_service_name_async")
+winrt.runtime._internals.alias_method(StreamSocketListener, "bind_service_name_with_protection_level_async", "bind_service_name_async")
+winrt.runtime._internals.alias_method(StreamSocketListener, "enable_transfer_ownership_with_connected_standby_action", "enable_transfer_ownership")
+winrt.runtime._internals.alias_method(StreamSocketListener, "transfer_ownership_with_context", "transfer_ownership")
+winrt.runtime._internals.alias_method(StreamWebSocket, "close_with_status", "close")
+winrt.runtime._internals.alias_method(_IWebSocket, "close_with_status", "close")

@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_media_speechrecognition import (
     SpeechContinuousRecognitionCompletedEventArgs,
@@ -111,3 +112,4 @@ class SpeechRecognizerState(enum.IntEnum):
     SPEECH_DETECTED = 5
     PAUSED = 6
 
+winrt.runtime._internals.alias_method(SpeechContinuousRecognitionSession, "start_with_mode_async", "start_async")

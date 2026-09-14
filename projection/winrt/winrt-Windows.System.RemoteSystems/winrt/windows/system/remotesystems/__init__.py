@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_system_remotesystems import (
     KnownRemoteSystemCapabilities,
@@ -180,3 +181,5 @@ class RemoteSystemWatcherError(enum.IntEnum):
     INTERNET_NOT_AVAILABLE = 1
     AUTHENTICATION_ERROR = 2
 
+winrt.runtime._internals.alias_static_method(RemoteSystem, "create_watcher_with_filters", "create_watcher")
+winrt.runtime._internals.alias_static_method(RemoteSystem, "create_watcher_with_filters_for_user", "create_watcher_for_user")

@@ -93,5 +93,9 @@ class ShareUITheme(enum.IntEnum):
 
 winrt.runtime._internals.mixin_mutable_mapping(DataPackagePropertySet)
 winrt.runtime._internals.mixin_mapping(DataPackagePropertySetView)
+winrt.runtime._internals.alias_method(DataPackage, "set_storage_items_read_only", "set_storage_items")
+winrt.runtime._internals.alias_method(DataPackageView, "get_custom_text_async", "get_text_async")
+winrt.runtime._internals.alias_method(DataPackageView, "request_access_with_enterprise_id_async", "request_access_async")
+winrt.runtime._internals.alias_static_method(DataTransferManager, "show_share_ui_with_options", "show_share_ui")
 DataProviderHandler = typing.Callable[[DataProviderRequest], None]
 ShareProviderHandler = typing.Callable[[ShareProviderOperation], None]

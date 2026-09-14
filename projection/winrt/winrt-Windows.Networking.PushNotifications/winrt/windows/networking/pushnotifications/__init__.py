@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_networking_pushnotifications import (
     PushNotificationChannel,
@@ -29,3 +30,6 @@ class PushNotificationType(enum.IntEnum):
     RAW = 3
     TILE_FLYOUT = 4
 
+winrt.runtime._internals.alias_static_method(PushNotificationChannelManager, "create_push_notification_channel_for_application_async_with_id", "create_push_notification_channel_for_application_async")
+winrt.runtime._internals.alias_method(PushNotificationChannelManagerForUser, "create_push_notification_channel_for_application_async_with_id", "create_push_notification_channel_for_application_async")
+winrt.runtime._internals.alias_method(PushNotificationChannelManagerForUser, "create_raw_push_notification_channel_with_alternate_key_for_application_async_with_id", "create_raw_push_notification_channel_with_alternate_key_for_application_async")

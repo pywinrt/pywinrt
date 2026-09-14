@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_storage_streams import (
     Buffer,
@@ -95,3 +96,10 @@ class UnicodeEncoding(enum.IntEnum):
     UTF16_L_E = 1
     UTF16_B_E = 2
 
+winrt.runtime._internals.alias_method(DataWriter, "write_buffer_range", "write_buffer")
+winrt.runtime._internals.alias_static_method(FileRandomAccessStream, "open_with_options_async", "open_async")
+winrt.runtime._internals.alias_static_method(FileRandomAccessStream, "open_for_user_with_options_async", "open_for_user_async")
+winrt.runtime._internals.alias_static_method(FileRandomAccessStream, "open_transacted_write_with_options_async", "open_transacted_write_async")
+winrt.runtime._internals.alias_static_method(FileRandomAccessStream, "open_transacted_write_for_user_with_options_async", "open_transacted_write_for_user_async")
+winrt.runtime._internals.alias_static_method(RandomAccessStream, "copy_size_async", "copy_async")
+winrt.runtime._internals.alias_method(_IDataWriter, "write_buffer_range", "write_buffer")

@@ -1716,18 +1716,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* RenderTargetBitmap_RenderToSizeAsync(py::wrapper::Microsoft::UI::Xaml::Media::Imaging::RenderTargetBitmap* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -1914,7 +1903,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
     static PyMethodDef _methods_RenderTargetBitmap[] = {
         { "get_pixels_async", reinterpret_cast<PyCFunction>(RenderTargetBitmap_GetPixelsAsync), METH_VARARGS, nullptr },
         { "render_async", reinterpret_cast<PyCFunction>(RenderTargetBitmap_RenderAsync), METH_VARARGS, nullptr },
-        { "render_to_size_async", reinterpret_cast<PyCFunction>(RenderTargetBitmap_RenderToSizeAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_RenderTargetBitmap, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RenderTargetBitmap), METH_O | METH_STATIC, nullptr },
         { }};
@@ -3567,7 +3555,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         Py_DECREF(tp);
     }
 
-    static PyObject* XamlRenderingBackgroundTask_OnRun(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* XamlRenderingBackgroundTask_OnRun_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -3635,7 +3623,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
     }
 
     static PyMethodDef _methods_XamlRenderingBackgroundTask[] = {
-        { "_on_run", reinterpret_cast<PyCFunction>(XamlRenderingBackgroundTask_OnRun), METH_VARARGS, nullptr },
+        { "_on_run", reinterpret_cast<PyCFunction>(XamlRenderingBackgroundTask_OnRun_protected), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_XamlRenderingBackgroundTask, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_XamlRenderingBackgroundTask), METH_O | METH_STATIC, nullptr },
         { }};

@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -16,9 +17,15 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class PlatformTelemetryClient_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationResult Windows.System.Diagnostics.Telemetry.PlatformTelemetryClient::Register(System.String)
     def register(cls, id: str, /) -> PlatformTelemetryRegistrationResult: ...
+    @typing.overload
     # Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationResult Windows.System.Diagnostics.Telemetry.PlatformTelemetryClient::Register(System.String,Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationSettings)
+    def register(cls, id: str, settings: PlatformTelemetryRegistrationSettings, /) -> PlatformTelemetryRegistrationResult: ...
+    # Deprecated alias of register() for pywinrt v3.x compatibility.
+    # Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationResult Windows.System.Diagnostics.Telemetry.PlatformTelemetryClient::Register(System.String,Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationSettings)
+    @deprecated("Use register() instead.")
     def register_with_settings(cls, id: str, settings: PlatformTelemetryRegistrationSettings, /) -> PlatformTelemetryRegistrationResult: ...
 
 @typing.final

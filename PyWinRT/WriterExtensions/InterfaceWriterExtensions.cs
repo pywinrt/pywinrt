@@ -41,11 +41,7 @@ static class InterfaceWriterExtensions
                                 {
                                     w.WriteLine("py::pyobj_handle self{this->get_py_obj()};");
                                     w.WriteBlankLine();
-                                    w.WriteLine(
-                                        $"py::pyobj_handle method{{PyObject_GetAttrString(self.get(), \"{method.PyName}\")}};"
-                                    );
-                                    w.WriteLine("if (!method)");
-                                    w.WriteBlock(() => w.WriteLine("throw python_exception();"));
+                                    w.WriteGetPythonMethod(method, "self.get()");
                                     w.WriteBlankLine();
                                 },
                                 ensureGil: false,
@@ -353,9 +349,9 @@ static class InterfaceWriterExtensions
             {
                 w.WriteLine($"virtual ~{type.Name}() {{}};");
 
-                foreach (var method in type.Methods.Select(m => m.Name).Distinct())
+                foreach (var group in type.MethodGroups)
                 {
-                    w.WriteLine($"virtual PyObject* {method}(PyObject*) noexcept = 0;");
+                    w.WriteLine($"virtual PyObject* {group.Name}(PyObject*) noexcept = 0;");
                 }
 
                 foreach (var property in type.Properties)
@@ -429,10 +425,10 @@ static class InterfaceWriterExtensions
             {
                 w.WriteLine($"{type.Name}({type.CppWinrtType} o) : _obj(o) {{}}");
 
-                foreach (var methodName in type.Methods.Select(m => m.Name).Distinct())
+                foreach (var group in type.MethodGroups)
                 {
-                    w.WriteLine($"PyObject* {methodName}(PyObject* args) noexcept override");
-                    w.WriteBlock(() => w.WriteMethodOverloads(type, methodName, componentDlls));
+                    w.WriteLine($"PyObject* {group.Name}(PyObject* args) noexcept override");
+                    w.WriteBlock(() => w.WriteMethodOverloads(type, group, componentDlls));
                 }
 
                 foreach (var prop in type.Properties)
@@ -546,9 +542,15 @@ static class InterfaceWriterExtensions
         IReadOnlyDictionary<string, string> packageMap
     )
     {
-        var methods = type.Methods.Where(m =>
-            m.Method.DeclaringType.FullName == type.Type.FullName
-        );
+        // NB: overloads of the same method can come from more than one required
+        // interface, in which case all of them have to be declared here so that
+        // the complete set of overloads is visible to type checkers
+        var methodGroups = type
+            .MethodGroups.Where(g =>
+                g.Overloads.Any(m => m.Method.DeclaringType.FullName == type.Type.FullName)
+            )
+            .ToList();
+        var methods = methodGroups.SelectMany(g => g.Overloads);
         var events = type.Events.Where(e => e.Event.DeclaringType.FullName == type.Type.FullName);
         var properties = type.Properties.Where(p =>
             p.Property.DeclaringType.FullName == type.Type.FullName
@@ -703,9 +705,40 @@ static class InterfaceWriterExtensions
             w.WriteLine($"def wait(self, timeout: float) -> {statusTypeName}: ...");
         }
 
-        foreach (var method in methods)
+        foreach (var group in methodGroups)
         {
-            w.WritePythonMethodTyping(method, ns, nullabilityMap, packageMap, isAbstract: true);
+            foreach (var method in group.Overloads)
+            {
+                // mypy rule: all overloads of an abstract method must be abstract
+                if (group.IsOverloaded)
+                {
+                    w.WriteLine("@typing.overload");
+                }
+
+                w.WritePythonMethodTyping(method, ns, nullabilityMap, packageMap, isAbstract: true);
+            }
+
+            // aliases are not abstract so that implementations don't have to
+            // provide the deprecated name
+            foreach (var alias in group.Aliases)
+            {
+                foreach (var method in alias.Methods)
+                {
+                    if (alias.Methods.Count > 1)
+                    {
+                        w.WriteLine("@typing.overload");
+                    }
+
+                    w.WritePythonMethodTyping(
+                        method,
+                        ns,
+                        nullabilityMap,
+                        packageMap,
+                        aliasPyName: alias.PyName,
+                        aliasTarget: group.PyName
+                    );
+                }
+            }
         }
 
         foreach (var evt in events)

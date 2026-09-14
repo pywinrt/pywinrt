@@ -4,6 +4,7 @@ import enum
 import typing
 import uuid as _uuid
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_devices_smartcards import (
     CardAddedEventArgs,
@@ -244,4 +245,12 @@ class SmartCardUnlockPromptingBehavior(enum.IntEnum):
     REQUIRE_UNLOCK_PROMPT = 1
     PREVENT_UNLOCK_PROMPT = 2
 
+winrt.runtime._internals.alias_method(SmartCardChallengeContext, "provision_async_with_new_card_id", "provision_async")
+winrt.runtime._internals.alias_method(SmartCardCryptogramGenerator, "get_all_cryptogram_material_package_characteristics_with_storage_key_async", "get_all_cryptogram_material_package_characteristics_async")
+winrt.runtime._internals.alias_method(SmartCardEmulatorApduReceivedEventArgs, "try_respond_with_state_async", "try_respond_async")
+winrt.runtime._internals.alias_method(SmartCardEmulatorApduReceivedEventArgs, "try_respond_with_cryptograms_and_state_async", "try_respond_with_cryptograms_async")
+winrt.runtime._internals.alias_static_method(SmartCardProvisioning, "request_attested_virtual_smart_card_creation_async_with_card_id", "request_attested_virtual_smart_card_creation_async")
+winrt.runtime._internals.alias_static_method(SmartCardProvisioning, "request_virtual_smart_card_creation_async_with_card_id", "request_virtual_smart_card_creation_async")
+winrt.runtime._internals.alias_static_method(SmartCardReader, "get_device_selector_with_kind", "get_device_selector")
+winrt.runtime._internals.alias_method(SmartCardTriggerDetails, "try_launch_current_app_with_behavior_async", "try_launch_current_app_async")
 SmartCardPinResetHandler = typing.Callable[[SmartCardProvisioning, SmartCardPinResetRequest], None]

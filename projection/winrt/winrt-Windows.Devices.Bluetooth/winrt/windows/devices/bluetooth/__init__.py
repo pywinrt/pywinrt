@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_devices_bluetooth import (
     BluetoothAdapter,
@@ -175,3 +176,9 @@ class BluetoothServiceCapabilities(enum.IntFlag):
     TELEPHONE_SERVICE = 0x200
     INFORMATION_SERVICE = 0x400
 
+winrt.runtime._internals.alias_method(BluetoothDevice, "get_rfcomm_services_with_cache_mode_async", "get_rfcomm_services_async")
+winrt.runtime._internals.alias_method(BluetoothDevice, "get_rfcomm_services_for_id_with_cache_mode_async", "get_rfcomm_services_for_id_async")
+winrt.runtime._internals.alias_static_method(BluetoothLEDevice, "from_bluetooth_address_with_bluetooth_address_type_async", "from_bluetooth_address_async")
+winrt.runtime._internals.alias_static_method(BluetoothLEDevice, "get_device_selector_from_bluetooth_address_with_bluetooth_address_type", "get_device_selector_from_bluetooth_address")
+winrt.runtime._internals.alias_method(BluetoothLEDevice, "get_gatt_services_with_cache_mode_async", "get_gatt_services_async")
+winrt.runtime._internals.alias_method(BluetoothLEDevice, "get_gatt_services_for_uuid_with_cache_mode_async", "get_gatt_services_for_uuid_async")

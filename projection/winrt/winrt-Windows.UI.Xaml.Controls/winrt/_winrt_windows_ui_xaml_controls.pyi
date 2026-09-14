@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -1692,9 +1693,15 @@ class CalendarViewDayItem(Control, metaclass=CalendarViewDayItem_Static):
 
 @typing.final
 class CalendarViewDayItemChangingEventArgs(winrt.system.Object):
+    @typing.overload
     # System.Void Windows.UI.Xaml.Controls.CalendarViewDayItemChangingEventArgs::RegisterUpdateCallback(Windows.Foundation.TypedEventHandler`2<Windows.UI.Xaml.Controls.CalendarView,Windows.UI.Xaml.Controls.CalendarViewDayItemChangingEventArgs>)
     def register_update_callback(self, callback: windows_foundation.TypedEventHandler[CalendarView, CalendarViewDayItemChangingEventArgs], /) -> None: ...
+    @typing.overload
     # System.Void Windows.UI.Xaml.Controls.CalendarViewDayItemChangingEventArgs::RegisterUpdateCallback(System.UInt32,Windows.Foundation.TypedEventHandler`2<Windows.UI.Xaml.Controls.CalendarView,Windows.UI.Xaml.Controls.CalendarViewDayItemChangingEventArgs>)
+    def register_update_callback(self, callback_phase: winrt.system.UInt32, callback: windows_foundation.TypedEventHandler[CalendarView, CalendarViewDayItemChangingEventArgs], /) -> None: ...
+    # Deprecated alias of register_update_callback() for pywinrt v3.x compatibility.
+    # System.Void Windows.UI.Xaml.Controls.CalendarViewDayItemChangingEventArgs::RegisterUpdateCallback(System.UInt32,Windows.Foundation.TypedEventHandler`2<Windows.UI.Xaml.Controls.CalendarView,Windows.UI.Xaml.Controls.CalendarViewDayItemChangingEventArgs>)
+    @deprecated("Use register_update_callback() instead.")
     def register_update_callback_with_phase(self, callback_phase: winrt.system.UInt32, callback: windows_foundation.TypedEventHandler[CalendarView, CalendarViewDayItemChangingEventArgs], /) -> None: ...
     # System.Boolean Windows.UI.Xaml.Controls.CalendarViewDayItemChangingEventArgs::get_InRecycleQueue()
     @_property
@@ -2234,9 +2241,15 @@ class CommandBarOverflowPresenter(ItemsControl, metaclass=CommandBarOverflowPres
 @typing.final
 class ContainerContentChangingEventArgs(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    @typing.overload
     # System.Void Windows.UI.Xaml.Controls.ContainerContentChangingEventArgs::RegisterUpdateCallback(Windows.Foundation.TypedEventHandler`2<Windows.UI.Xaml.Controls.ListViewBase,Windows.UI.Xaml.Controls.ContainerContentChangingEventArgs>)
     def register_update_callback(self, callback: windows_foundation.TypedEventHandler[ListViewBase, ContainerContentChangingEventArgs], /) -> None: ...
+    @typing.overload
     # System.Void Windows.UI.Xaml.Controls.ContainerContentChangingEventArgs::RegisterUpdateCallback(System.UInt32,Windows.Foundation.TypedEventHandler`2<Windows.UI.Xaml.Controls.ListViewBase,Windows.UI.Xaml.Controls.ContainerContentChangingEventArgs>)
+    def register_update_callback(self, callback_phase: winrt.system.UInt32, callback: windows_foundation.TypedEventHandler[ListViewBase, ContainerContentChangingEventArgs], /) -> None: ...
+    # Deprecated alias of register_update_callback() for pywinrt v3.x compatibility.
+    # System.Void Windows.UI.Xaml.Controls.ContainerContentChangingEventArgs::RegisterUpdateCallback(System.UInt32,Windows.Foundation.TypedEventHandler`2<Windows.UI.Xaml.Controls.ListViewBase,Windows.UI.Xaml.Controls.ContainerContentChangingEventArgs>)
+    @deprecated("Use register_update_callback() instead.")
     def register_update_callback_with_phase(self, callback_phase: winrt.system.UInt32, callback: windows_foundation.TypedEventHandler[ListViewBase, ContainerContentChangingEventArgs], /) -> None: ...
     # System.Boolean Windows.UI.Xaml.Controls.ContainerContentChangingEventArgs::get_Handled()
     @_property
@@ -2398,11 +2411,17 @@ class ContentDialog(ContentControl, metaclass=ContentDialog_Static):
     @typing.final
     # System.Void Windows.UI.Xaml.Controls.ContentDialog::Hide()
     def hide(self) -> None: ...
+    @typing.overload
     @typing.final
     # Windows.Foundation.IAsyncOperation`1<Windows.UI.Xaml.Controls.ContentDialogResult> Windows.UI.Xaml.Controls.ContentDialog::ShowAsync()
     def show_async(self) -> windows_foundation.IAsyncOperation[ContentDialogResult]: ...
-    @typing.final
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.UI.Xaml.Controls.ContentDialogResult> Windows.UI.Xaml.Controls.ContentDialog::ShowAsync(Windows.UI.Xaml.Controls.ContentDialogPlacement)
+    def show_async(self, placement: ContentDialogPlacement, /) -> windows_foundation.IAsyncOperation[ContentDialogResult]: ...
+    @typing.final
+    # Deprecated alias of show_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.UI.Xaml.Controls.ContentDialogResult> Windows.UI.Xaml.Controls.ContentDialog::ShowAsync(Windows.UI.Xaml.Controls.ContentDialogPlacement)
+    @deprecated("Use show_async() instead.")
     def show_async_with_placement(self, placement: ContentDialogPlacement, /) -> windows_foundation.IAsyncOperation[ContentDialogResult]: ...
     @typing.final
     # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.ContentDialog::add_Closed(Windows.Foundation.TypedEventHandler`2<Windows.UI.Xaml.Controls.ContentDialog,Windows.UI.Xaml.Controls.ContentDialogClosedEventArgs>)
@@ -3419,14 +3438,20 @@ class DataTemplateSelector(winrt.system.Object, windows_ui_xaml.IElementFactory,
     def get_element(self, args: windows_ui_xaml.ElementFactoryGetArgs, /) -> windows_ui_xaml.UIElement: ...
     # System.Void Windows.UI.Xaml.Controls.DataTemplateSelector::RecycleElement(Windows.UI.Xaml.ElementFactoryRecycleArgs)
     def recycle_element(self, args: windows_ui_xaml.ElementFactoryRecycleArgs, /) -> None: ...
-    @typing.final
-    # Windows.UI.Xaml.DataTemplate Windows.UI.Xaml.Controls.DataTemplateSelector::SelectTemplate(System.Object,Windows.UI.Xaml.DependencyObject)
-    def select_template(self, item: winrt.system.Object, container: windows_ui_xaml.DependencyObject, /) -> windows_ui_xaml.DataTemplate: ...
-    # Windows.UI.Xaml.DataTemplate Windows.UI.Xaml.Controls.DataTemplateSelector::SelectTemplateCore(System.Object,Windows.UI.Xaml.DependencyObject)
-    def _select_template_core(self, item: winrt.system.Object, container: windows_ui_xaml.DependencyObject, /) -> windows_ui_xaml.DataTemplate: ...
+    @typing.overload
     @typing.final
     # Windows.UI.Xaml.DataTemplate Windows.UI.Xaml.Controls.DataTemplateSelector::SelectTemplate(System.Object)
+    def select_template(self, item: winrt.system.Object, /) -> windows_ui_xaml.DataTemplate: ...
+    @typing.overload
+    # Windows.UI.Xaml.DataTemplate Windows.UI.Xaml.Controls.DataTemplateSelector::SelectTemplate(System.Object,Windows.UI.Xaml.DependencyObject)
+    def select_template(self, item: winrt.system.Object, container: windows_ui_xaml.DependencyObject, /) -> windows_ui_xaml.DataTemplate: ...
+    @typing.final
+    # Deprecated alias of select_template() for pywinrt v3.x compatibility.
+    # Windows.UI.Xaml.DataTemplate Windows.UI.Xaml.Controls.DataTemplateSelector::SelectTemplate(System.Object)
+    @deprecated("Use select_template() instead.")
     def select_template_for_item(self, item: winrt.system.Object, /) -> windows_ui_xaml.DataTemplate: ...
+    # Windows.UI.Xaml.DataTemplate Windows.UI.Xaml.Controls.DataTemplateSelector::SelectTemplateCore(System.Object,Windows.UI.Xaml.DependencyObject)
+    def _select_template_core(self, item: winrt.system.Object, container: windows_ui_xaml.DependencyObject, /) -> windows_ui_xaml.DataTemplate: ...
     # Windows.UI.Xaml.DataTemplate Windows.UI.Xaml.Controls.DataTemplateSelector::SelectTemplateCore(System.Object)
     def _select_template_for_item_core(self, item: winrt.system.Object, /) -> windows_ui_xaml.DataTemplate: ...
 
@@ -3992,11 +4017,17 @@ class Frame(ContentControl, INavigate, metaclass=Frame_Static):
     @typing.final
     # System.Boolean Windows.UI.Xaml.Controls.Frame::NavigateToType(Windows.UI.Xaml.Interop.TypeName,System.Object,Windows.UI.Xaml.Navigation.FrameNavigationOptions)
     def navigate_to_type(self, source_page_type: typing.Union[windows_ui_xaml_interop.TypeName, typing.Tuple[str, windows_ui_xaml_interop.TypeKind]], parameter: winrt.system.Object, navigation_options: windows_ui_xaml_navigation.FrameNavigationOptions, /) -> bool: ...
+    @typing.overload
     @typing.final
     # System.Void Windows.UI.Xaml.Controls.Frame::SetNavigationState(System.String)
     def set_navigation_state(self, navigation_state: str, /) -> None: ...
-    @typing.final
+    @typing.overload
     # System.Void Windows.UI.Xaml.Controls.Frame::SetNavigationState(System.String,System.Boolean)
+    def set_navigation_state(self, navigation_state: str, suppress_navigate: bool, /) -> None: ...
+    @typing.final
+    # Deprecated alias of set_navigation_state() for pywinrt v3.x compatibility.
+    # System.Void Windows.UI.Xaml.Controls.Frame::SetNavigationState(System.String,System.Boolean)
+    @deprecated("Use set_navigation_state() instead.")
     def set_navigation_state_with_navigation_control(self, navigation_state: str, suppress_navigate: bool, /) -> None: ...
     @typing.final
     # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.Frame::add_Navigated(Windows.UI.Xaml.Navigation.NavigatedEventHandler)
@@ -9534,9 +9565,15 @@ class ScrollViewer_Static(ContentControl_Static):
 @typing.final
 class ScrollViewer(ContentControl, IScrollAnchorProvider, metaclass=ScrollViewer_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    @typing.overload
     # System.Boolean Windows.UI.Xaml.Controls.ScrollViewer::ChangeView(Windows.Foundation.IReference`1<System.Double>,Windows.Foundation.IReference`1<System.Double>,Windows.Foundation.IReference`1<System.Single>)
     def change_view(self, horizontal_offset: typing.Optional[winrt.system.Double], vertical_offset: typing.Optional[winrt.system.Double], zoom_factor: typing.Optional[winrt.system.Single], /) -> bool: ...
+    @typing.overload
     # System.Boolean Windows.UI.Xaml.Controls.ScrollViewer::ChangeView(Windows.Foundation.IReference`1<System.Double>,Windows.Foundation.IReference`1<System.Double>,Windows.Foundation.IReference`1<System.Single>,System.Boolean)
+    def change_view(self, horizontal_offset: typing.Optional[winrt.system.Double], vertical_offset: typing.Optional[winrt.system.Double], zoom_factor: typing.Optional[winrt.system.Single], disable_animation: bool, /) -> bool: ...
+    # Deprecated alias of change_view() for pywinrt v3.x compatibility.
+    # System.Boolean Windows.UI.Xaml.Controls.ScrollViewer::ChangeView(Windows.Foundation.IReference`1<System.Double>,Windows.Foundation.IReference`1<System.Double>,Windows.Foundation.IReference`1<System.Single>,System.Boolean)
+    @deprecated("Use change_view() instead.")
     def change_view_with_optional_animation(self, horizontal_offset: typing.Optional[winrt.system.Double], vertical_offset: typing.Optional[winrt.system.Double], zoom_factor: typing.Optional[winrt.system.Single], disable_animation: bool, /) -> bool: ...
     # System.Void Windows.UI.Xaml.Controls.ScrollViewer::InvalidateScrollInfo()
     def invalidate_scroll_info(self) -> None: ...

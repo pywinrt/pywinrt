@@ -10,7 +10,8 @@ from collections.abc import (
 )
 from pathlib import Path
 import sys
-from typing import Any, TypeVar, Protocol, TYPE_CHECKING
+from typing import Any, Type, TypeVar, Protocol, TYPE_CHECKING
+import warnings
 
 from typing_extensions import Self
 
@@ -46,6 +47,63 @@ def register_dll_search_path(module_path: str) -> _DllCookie:
         An cookie object that will remove the search path when closed.
     """
     return _DllCookie(add_dll_directory(os.fspath(Path(module_path).parent.resolve())))
+
+
+# Staged deprecation of the method names that pywinrt v3.x used for overloaded
+# methods. DeprecationWarning is aimed at developers of code that uses pywinrt.
+# In a future release, this will become FutureWarning, which is shown to end
+# users as well, and after that the aliases will be removed.
+# https://docs.python.org/3/library/exceptions.html#DeprecationWarning
+#
+# NB: The calls to the functions below are generated. See the note on the
+# aliases in PyWinRT/Projection/ProjectedType.cs for everything that has to be
+# removed when the aliases go away.
+_LEGACY_METHOD_WARNING: Type[Warning] = DeprecationWarning
+
+
+def _add_alias(target: type, owner: type, alias: str, name: str) -> None:
+    # a real attribute of the type always wins over an alias
+    if alias in vars(target):
+        return
+
+    def method(self: Any, *args: Any) -> Any:
+        warnings.warn(
+            f"{owner.__name__}.{alias}() is deprecated, use {name}() instead",
+            _LEGACY_METHOD_WARNING,
+            stacklevel=2,
+        )
+        return getattr(self, name)(*args)
+
+    method.__name__ = alias
+    method.__qualname__ = f"{owner.__name__}.{alias}"
+    method.__doc__ = f"Deprecated alias of ``{name}()``."
+
+    setattr(target, alias, method)
+
+
+def alias_method(typ: type, alias: str, name: str) -> None:
+    """
+    Adds a deprecated alias of a method to a projected type.
+
+    Args:
+        typ: The projected type.
+        alias: The name the method had in pywinrt v3.x.
+        name: The name of the method now.
+    """
+    _add_alias(typ, typ, alias, name)
+
+
+def alias_static_method(typ: type, alias: str, name: str) -> None:
+    """
+    Adds a deprecated alias of a static method to a projected type.
+
+    Args:
+        typ: The projected type.
+        alias: The name the method had in pywinrt v3.x.
+        name: The name of the method now.
+    """
+    # static methods are implemented by the metaclass of the projected type
+    _add_alias(type(typ), typ, alias, name)
 
 
 # NB: The types implemented in C cannot inherit from abc.ABC since Python 3.12

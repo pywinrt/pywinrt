@@ -4,6 +4,7 @@ import enum
 import typing
 import uuid as _uuid
 
+import winrt.runtime._internals
 import winrt.system
 from winui3._winui3_microsoft_ui_dispatching import (
     DispatcherExitDeferral,
@@ -34,4 +35,6 @@ class DispatcherRunOptions(enum.IntFlag):
     CONTINUE_ON_QUIT = 0x1
     QUIT_ONLY_LOCAL_LOOP = 0x2
 
+winrt.runtime._internals.alias_method(DispatcherQueue, "run_event_loop_with_options", "run_event_loop")
+winrt.runtime._internals.alias_method(DispatcherQueue, "try_enqueue_with_priority", "try_enqueue")
 DispatcherQueueHandler = typing.Callable[[], None]

@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_data_pdf import (
     PdfDocument,
@@ -24,3 +25,6 @@ class PdfPageRotation(enum.IntEnum):
     ROTATE180 = 2
     ROTATE270 = 3
 
+winrt.runtime._internals.alias_static_method(PdfDocument, "load_from_file_with_password_async", "load_from_file_async")
+winrt.runtime._internals.alias_static_method(PdfDocument, "load_from_stream_with_password_async", "load_from_stream_async")
+winrt.runtime._internals.alias_method(PdfPage, "render_with_options_to_stream_async", "render_to_stream_async")

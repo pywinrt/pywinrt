@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_media import (
     MediaTimeRange,
@@ -129,3 +130,11 @@ class SystemMediaTransportControlsButton(enum.IntEnum):
 class SystemMediaTransportControlsProperty(enum.IntEnum):
     SOUND_LEVEL = 0
 
+winrt.runtime._internals.alias_method(MediaExtensionManager, "register_audio_decoder_with_settings", "register_audio_decoder")
+winrt.runtime._internals.alias_method(MediaExtensionManager, "register_audio_encoder_with_settings", "register_audio_encoder")
+winrt.runtime._internals.alias_method(MediaExtensionManager, "register_byte_stream_handler_with_settings", "register_byte_stream_handler")
+winrt.runtime._internals.alias_method(MediaExtensionManager, "register_scheme_handler_with_settings", "register_scheme_handler")
+winrt.runtime._internals.alias_method(MediaExtensionManager, "register_video_decoder_with_settings", "register_video_decoder")
+winrt.runtime._internals.alias_method(MediaExtensionManager, "register_video_encoder_with_settings", "register_video_encoder")
+winrt.runtime._internals.alias_method(VideoFrame, "copy_to_with_bounds_async", "copy_to_async")
+winrt.runtime._internals.alias_static_method(VideoFrame, "create_as_direct3d11_surface_backed_with_device", "create_as_direct3d11_surface_backed")

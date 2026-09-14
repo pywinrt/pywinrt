@@ -67,7 +67,36 @@ namespace py::cpp::Windows::Storage::FileProperties
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
-        if (arg_count == 1)
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.BasicProperties", L"SavePropertiesAsync", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SavePropertiesAsync();
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 1)
         {
             try
             {
@@ -90,46 +119,6 @@ namespace py::cpp::Windows::Storage::FileProperties
                 {
                     auto _gil = release_gil();
                     return self->obj.SavePropertiesAsync(param0);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* BasicProperties_SavePropertiesAsyncOverloadDefault(py::wrapper::Windows::Storage::FileProperties::BasicProperties* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 0)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.BasicProperties", L"SavePropertiesAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.SavePropertiesAsync();
                 }());
             }
             catch (...)
@@ -262,7 +251,6 @@ namespace py::cpp::Windows::Storage::FileProperties
     static PyMethodDef _methods_BasicProperties[] = {
         { "retrieve_properties_async", reinterpret_cast<PyCFunction>(BasicProperties_RetrievePropertiesAsync), METH_VARARGS, nullptr },
         { "save_properties_async", reinterpret_cast<PyCFunction>(BasicProperties_SavePropertiesAsync), METH_VARARGS, nullptr },
-        { "save_properties_async_overload_default", reinterpret_cast<PyCFunction>(BasicProperties_SavePropertiesAsyncOverloadDefault), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BasicProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BasicProperties), METH_O | METH_STATIC, nullptr },
         { }};
@@ -350,7 +338,36 @@ namespace py::cpp::Windows::Storage::FileProperties
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
-        if (arg_count == 1)
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.DocumentProperties", L"SavePropertiesAsync", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SavePropertiesAsync();
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 1)
         {
             try
             {
@@ -373,46 +390,6 @@ namespace py::cpp::Windows::Storage::FileProperties
                 {
                     auto _gil = release_gil();
                     return self->obj.SavePropertiesAsync(param0);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* DocumentProperties_SavePropertiesAsyncOverloadDefault(py::wrapper::Windows::Storage::FileProperties::DocumentProperties* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 0)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.DocumentProperties", L"SavePropertiesAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.SavePropertiesAsync();
                 }());
             }
             catch (...)
@@ -653,7 +630,6 @@ namespace py::cpp::Windows::Storage::FileProperties
     static PyMethodDef _methods_DocumentProperties[] = {
         { "retrieve_properties_async", reinterpret_cast<PyCFunction>(DocumentProperties_RetrievePropertiesAsync), METH_VARARGS, nullptr },
         { "save_properties_async", reinterpret_cast<PyCFunction>(DocumentProperties_SavePropertiesAsync), METH_VARARGS, nullptr },
-        { "save_properties_async_overload_default", reinterpret_cast<PyCFunction>(DocumentProperties_SavePropertiesAsyncOverloadDefault), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DocumentProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DocumentProperties), METH_O | METH_STATIC, nullptr },
         { }};
@@ -922,7 +898,36 @@ namespace py::cpp::Windows::Storage::FileProperties
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
-        if (arg_count == 1)
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.ImageProperties", L"SavePropertiesAsync", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SavePropertiesAsync();
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 1)
         {
             try
             {
@@ -945,46 +950,6 @@ namespace py::cpp::Windows::Storage::FileProperties
                 {
                     auto _gil = release_gil();
                     return self->obj.SavePropertiesAsync(param0);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* ImageProperties_SavePropertiesAsyncOverloadDefault(py::wrapper::Windows::Storage::FileProperties::ImageProperties* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 0)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.ImageProperties", L"SavePropertiesAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.SavePropertiesAsync();
                 }());
             }
             catch (...)
@@ -1582,7 +1547,6 @@ namespace py::cpp::Windows::Storage::FileProperties
     static PyMethodDef _methods_ImageProperties[] = {
         { "retrieve_properties_async", reinterpret_cast<PyCFunction>(ImageProperties_RetrievePropertiesAsync), METH_VARARGS, nullptr },
         { "save_properties_async", reinterpret_cast<PyCFunction>(ImageProperties_SavePropertiesAsync), METH_VARARGS, nullptr },
-        { "save_properties_async_overload_default", reinterpret_cast<PyCFunction>(ImageProperties_SavePropertiesAsyncOverloadDefault), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ImageProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ImageProperties), METH_O | METH_STATIC, nullptr },
         { }};
@@ -1679,7 +1643,36 @@ namespace py::cpp::Windows::Storage::FileProperties
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
-        if (arg_count == 1)
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.MusicProperties", L"SavePropertiesAsync", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SavePropertiesAsync();
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 1)
         {
             try
             {
@@ -1702,46 +1695,6 @@ namespace py::cpp::Windows::Storage::FileProperties
                 {
                     auto _gil = release_gil();
                     return self->obj.SavePropertiesAsync(param0);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* MusicProperties_SavePropertiesAsyncOverloadDefault(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 0)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.MusicProperties", L"SavePropertiesAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.SavePropertiesAsync();
                 }());
             }
             catch (...)
@@ -2615,7 +2568,6 @@ namespace py::cpp::Windows::Storage::FileProperties
     static PyMethodDef _methods_MusicProperties[] = {
         { "retrieve_properties_async", reinterpret_cast<PyCFunction>(MusicProperties_RetrievePropertiesAsync), METH_VARARGS, nullptr },
         { "save_properties_async", reinterpret_cast<PyCFunction>(MusicProperties_SavePropertiesAsync), METH_VARARGS, nullptr },
-        { "save_properties_async_overload_default", reinterpret_cast<PyCFunction>(MusicProperties_SavePropertiesAsyncOverloadDefault), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MusicProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MusicProperties), METH_O | METH_STATIC, nullptr },
         { }};
@@ -2876,7 +2828,36 @@ namespace py::cpp::Windows::Storage::FileProperties
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
-        if (arg_count == 1)
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.StorageItemContentProperties", L"SavePropertiesAsync", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SavePropertiesAsync();
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 1)
         {
             try
             {
@@ -2899,46 +2880,6 @@ namespace py::cpp::Windows::Storage::FileProperties
                 {
                     auto _gil = release_gil();
                     return self->obj.SavePropertiesAsync(param0);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* StorageItemContentProperties_SavePropertiesAsyncOverloadDefault(py::wrapper::Windows::Storage::FileProperties::StorageItemContentProperties* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 0)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.StorageItemContentProperties", L"SavePropertiesAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.SavePropertiesAsync();
                 }());
             }
             catch (...)
@@ -2985,7 +2926,6 @@ namespace py::cpp::Windows::Storage::FileProperties
         { "get_video_properties_async", reinterpret_cast<PyCFunction>(StorageItemContentProperties_GetVideoPropertiesAsync), METH_VARARGS, nullptr },
         { "retrieve_properties_async", reinterpret_cast<PyCFunction>(StorageItemContentProperties_RetrievePropertiesAsync), METH_VARARGS, nullptr },
         { "save_properties_async", reinterpret_cast<PyCFunction>(StorageItemContentProperties_SavePropertiesAsync), METH_VARARGS, nullptr },
-        { "save_properties_async_overload_default", reinterpret_cast<PyCFunction>(StorageItemContentProperties_SavePropertiesAsyncOverloadDefault), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_StorageItemContentProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StorageItemContentProperties), METH_O | METH_STATIC, nullptr },
         { }};
@@ -3818,7 +3758,36 @@ namespace py::cpp::Windows::Storage::FileProperties
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
-        if (arg_count == 1)
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.VideoProperties", L"SavePropertiesAsync", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SavePropertiesAsync();
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 1)
         {
             try
             {
@@ -3841,46 +3810,6 @@ namespace py::cpp::Windows::Storage::FileProperties
                 {
                     auto _gil = release_gil();
                     return self->obj.SavePropertiesAsync(param0);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* VideoProperties_SavePropertiesAsyncOverloadDefault(py::wrapper::Windows::Storage::FileProperties::VideoProperties* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 0)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.VideoProperties", L"SavePropertiesAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.SavePropertiesAsync();
                 }());
             }
             catch (...)
@@ -4598,7 +4527,6 @@ namespace py::cpp::Windows::Storage::FileProperties
     static PyMethodDef _methods_VideoProperties[] = {
         { "retrieve_properties_async", reinterpret_cast<PyCFunction>(VideoProperties_RetrievePropertiesAsync), METH_VARARGS, nullptr },
         { "save_properties_async", reinterpret_cast<PyCFunction>(VideoProperties_SavePropertiesAsync), METH_VARARGS, nullptr },
-        { "save_properties_async_overload_default", reinterpret_cast<PyCFunction>(VideoProperties_SavePropertiesAsyncOverloadDefault), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_VideoProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VideoProperties), METH_O | METH_STATIC, nullptr },
         { }};
@@ -4701,7 +4629,36 @@ namespace py::cpp::Windows::Storage::FileProperties
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
-        if (arg_count == 1)
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.IStorageItemExtraProperties", L"SavePropertiesAsync", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SavePropertiesAsync();
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 1)
         {
             try
             {
@@ -4739,50 +4696,9 @@ namespace py::cpp::Windows::Storage::FileProperties
         }
     }
 
-    static PyObject* IStorageItemExtraProperties_SavePropertiesAsyncOverloadDefault(py::wrapper::Windows::Storage::FileProperties::IStorageItemExtraProperties* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 0)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.FileProperties.IStorageItemExtraProperties", L"SavePropertiesAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.SavePropertiesAsync();
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_IStorageItemExtraProperties[] = {
         { "retrieve_properties_async", reinterpret_cast<PyCFunction>(IStorageItemExtraProperties_RetrievePropertiesAsync), METH_VARARGS, nullptr },
         { "save_properties_async", reinterpret_cast<PyCFunction>(IStorageItemExtraProperties_SavePropertiesAsync), METH_VARARGS, nullptr },
-        { "save_properties_async_overload_default", reinterpret_cast<PyCFunction>(IStorageItemExtraProperties_SavePropertiesAsyncOverloadDefault), METH_VARARGS, nullptr },
         { }};
 
     static PyGetSetDef _getset_IStorageItemExtraProperties[] = {
@@ -4847,6 +4763,42 @@ namespace py::cpp::Windows::Storage::FileProperties
             }
         }
 
+        auto SavePropertiesAsync()
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "save_properties_async_overload_default")};
+                if (!method)
+                {
+                    if (!PyErr_ExceptionMatches(PyExc_AttributeError))
+                    {
+                        throw python_exception();
+                    }
+
+                    PyErr_Clear();
+                    method.attach(PyObject_GetAttrString(self.get(), "save_properties_async"));
+                    if (!method)
+                    {
+                        throw python_exception();
+                    }
+                }
+
+                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+
+                return py::convert_to<winrt::Windows::Foundation::IAsyncAction>(return_value.get());
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+
         auto SavePropertiesAsync(winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Foundation::IInspectable>> const& param0)
         {
             try
@@ -4866,32 +4818,6 @@ namespace py::cpp::Windows::Storage::FileProperties
                 }
 
                 py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
-                if (!return_value)
-                {
-                    throw python_exception();
-                }
-
-                return py::convert_to<winrt::Windows::Foundation::IAsyncAction>(return_value.get());
-            }
-            catch (python_exception)
-            {
-                py::write_unraisable_and_throw();
-            }
-        }
-
-        auto SavePropertiesAsync()
-        {
-            try
-            {
-                py::pyobj_handle self{this->get_py_obj()};
-
-                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "save_properties_async_overload_default")};
-                if (!method)
-                {
-                    throw python_exception();
-                }
-
-                py::pyobj_handle return_value{PyObject_CallNoArgs(method.get())};
                 if (!return_value)
                 {
                     throw python_exception();

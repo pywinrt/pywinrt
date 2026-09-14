@@ -4,6 +4,7 @@ import enum
 import typing
 import uuid as _uuid
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_system import (
     AppActivationResult,
@@ -456,4 +457,26 @@ class VirtualKeyModifiers(enum.IntFlag):
     SHIFT = 0x4
     WINDOWS = 0x8
 
+winrt.runtime._internals.alias_static_method(AppDiagnosticInfo, "request_info_for_app_user_model_id", "request_info_for_app_async")
+winrt.runtime._internals.alias_method(DispatcherQueue, "try_enqueue_with_priority", "try_enqueue")
+winrt.runtime._internals.alias_static_method(Launcher, "find_uri_scheme_handlers_with_launch_uri_type_async", "find_uri_scheme_handlers_async")
+winrt.runtime._internals.alias_static_method(Launcher, "launch_file_with_options_async", "launch_file_async")
+winrt.runtime._internals.alias_static_method(Launcher, "launch_folder_with_options_async", "launch_folder_async")
+winrt.runtime._internals.alias_static_method(Launcher, "launch_folder_path_with_options_async", "launch_folder_path_async")
+winrt.runtime._internals.alias_static_method(Launcher, "launch_folder_path_with_options_for_user_async", "launch_folder_path_for_user_async")
+winrt.runtime._internals.alias_static_method(Launcher, "launch_uri_with_data_async", "launch_uri_async")
+winrt.runtime._internals.alias_static_method(Launcher, "launch_uri_with_options_async", "launch_uri_async")
+winrt.runtime._internals.alias_static_method(Launcher, "launch_uri_for_results_with_data_async", "launch_uri_for_results_async")
+winrt.runtime._internals.alias_static_method(Launcher, "launch_uri_for_results_with_data_for_user_async", "launch_uri_for_results_for_user_async")
+winrt.runtime._internals.alias_static_method(Launcher, "launch_uri_with_data_for_user_async", "launch_uri_for_user_async")
+winrt.runtime._internals.alias_static_method(Launcher, "launch_uri_with_options_for_user_async", "launch_uri_for_user_async")
+winrt.runtime._internals.alias_static_method(Launcher, "query_app_uri_support_with_package_family_name_async", "query_app_uri_support_async")
+winrt.runtime._internals.alias_static_method(Launcher, "query_file_support_with_package_family_name_async", "query_file_support_async")
+winrt.runtime._internals.alias_static_method(Launcher, "query_uri_support_with_package_family_name_async", "query_uri_support_async")
+winrt.runtime._internals.alias_static_method(ProcessLauncher, "run_to_completion_async_with_options", "run_to_completion_async")
+winrt.runtime._internals.alias_static_method(RemoteLauncher, "launch_uri_with_data_async", "launch_uri_async")
+winrt.runtime._internals.alias_static_method(RemoteLauncher, "launch_uri_with_options_async", "launch_uri_async")
+winrt.runtime._internals.alias_static_method(ShutdownManager, "enter_power_state_with_time_span", "enter_power_state")
+winrt.runtime._internals.alias_static_method(User, "find_all_async_by_type", "find_all_async")
+winrt.runtime._internals.alias_static_method(User, "find_all_async_by_type_and_status", "find_all_async")
 DispatcherQueueHandler = typing.Callable[[], None]

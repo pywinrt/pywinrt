@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_ui_viewmanagement_core import (
     CoreFrameworkInputView,
@@ -55,3 +56,4 @@ class CoreInputViewXYFocusTransferDirection(enum.IntEnum):
     DOWN = 2
     LEFT = 3
 
+winrt.runtime._internals.alias_method(CoreInputView, "try_show_with_kind", "try_show")

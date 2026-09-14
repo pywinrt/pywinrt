@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_applicationmodel_wallet import (
     WalletBarcode,
@@ -82,3 +83,5 @@ class WalletSummaryViewPosition(enum.IntEnum):
     FIELD1 = 1
     FIELD2 = 2
 
+winrt.runtime._internals.alias_method(WalletItemStore, "get_items_with_kind_async", "get_items_async")
+winrt.runtime._internals.alias_method(WalletItemStore, "show_item_async", "show_async")

@@ -210,7 +210,7 @@ def remove_registry_keys():
 
 def show_toast():
     manager = ToastNotificationManager.get_default()
-    toaster = manager.create_toast_notifier_with_id(APP_USER_MODULE_ID)
+    toaster = manager.create_toast_notifier(APP_USER_MODULE_ID)
 
     # https://learn.microsoft.com/en-us/uwp/schemas/tiles/toastschema/schema-root
     xml = XmlDocument()
@@ -278,7 +278,7 @@ def interactive_prompt():
 
 def uninstall():
     manager = ToastNotificationManager.get_default()
-    notifier = manager.create_toast_notifier_with_id(APP_USER_MODULE_ID)
+    notifier = manager.create_toast_notifier(APP_USER_MODULE_ID)
 
     # Remove any scheduled notifications that haven't been shown yet. Do
     # this first to avoid race condition with clearing history.
@@ -286,7 +286,7 @@ def uninstall():
         notifier.remove_from_schedule(n)
 
     # Remove any notifications that might currently exist.
-    manager.history.clear_with_id(APP_USER_MODULE_ID)
+    manager.history.clear(APP_USER_MODULE_ID)
 
     remove_registry_keys()
 

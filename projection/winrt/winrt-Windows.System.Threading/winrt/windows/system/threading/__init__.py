@@ -4,6 +4,7 @@ import enum
 import typing
 import uuid as _uuid
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_system_threading import (
     ThreadPool,
@@ -32,6 +33,10 @@ class WorkItemPriority(enum.IntEnum):
     NORMAL = 0
     HIGH = 1
 
+winrt.runtime._internals.alias_static_method(ThreadPool, "run_with_priority_and_options_async", "run_async")
+winrt.runtime._internals.alias_static_method(ThreadPool, "run_with_priority_async", "run_async")
+winrt.runtime._internals.alias_static_method(ThreadPoolTimer, "create_periodic_timer_with_completion", "create_periodic_timer")
+winrt.runtime._internals.alias_static_method(ThreadPoolTimer, "create_timer_with_completion", "create_timer")
 TimerDestroyedHandler = typing.Callable[[ThreadPoolTimer], None]
 TimerElapsedHandler = typing.Callable[[ThreadPoolTimer], None]
 WorkItemHandler = typing.Callable[["windows_foundation.IAsyncAction"], None]

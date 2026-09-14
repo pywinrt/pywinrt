@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -78,11 +79,17 @@ class ActionEntityFactory(winrt.system.Object, windows_foundation.IClosable, met
     @typing.final
     # Windows.AI.Actions.TableActionEntity Windows.AI.Actions.ActionEntityFactory::CreateTableEntity(System.String[],System.UInt32)
     def create_table_entity(self, data: typing.Union[winrt.system.Array[str], winrt.system.ReadableBuffer], column_count: winrt.system.UInt32, /) -> TableActionEntity: ...
+    @typing.overload
     @typing.final
     # Windows.AI.Actions.TextActionEntity Windows.AI.Actions.ActionEntityFactory::CreateTextEntity(System.String)
     def create_text_entity(self, text: str, /) -> TextActionEntity: ...
-    @typing.final
+    @typing.overload
     # Windows.AI.Actions.TextActionEntity Windows.AI.Actions.ActionEntityFactory::CreateTextEntity(System.String,Windows.AI.Actions.ActionEntityTextFormat)
+    def create_text_entity(self, text: str, text_format: ActionEntityTextFormat, /) -> TextActionEntity: ...
+    @typing.final
+    # Deprecated alias of create_text_entity() for pywinrt v3.x compatibility.
+    # Windows.AI.Actions.TextActionEntity Windows.AI.Actions.ActionEntityFactory::CreateTextEntity(System.String,Windows.AI.Actions.ActionEntityTextFormat)
+    @deprecated("Use create_text_entity() instead.")
     def create_text_entity_with_text_format(self, text: str, text_format: ActionEntityTextFormat, /) -> TextActionEntity: ...
 
 @typing.final

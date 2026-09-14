@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_devices_gpio import (
     GpioChangeCount,
@@ -63,3 +64,4 @@ class GpioSharingMode(enum.IntEnum):
     EXCLUSIVE = 0
     SHARED_READ_ONLY = 1
 
+winrt.runtime._internals.alias_method(GpioController, "open_pin_with_sharing_mode", "open_pin")

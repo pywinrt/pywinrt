@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -115,11 +116,18 @@ class SecondaryAuthenticationFactorRegistration_Static(winrt._winrt.IInspectable
     # System.Boolean Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration::IsDevicePresenceMonitoringSupported()
     # @deprecated("IsDevicePresenceMonitoringSupported is deprecated and might not work on all platforms. For more info, see MSDN.")
     def is_device_presence_monitoring_supported(cls) -> bool: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus> Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration::RegisterDevicePresenceMonitoringAsync(System.String,System.String,Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresenceMonitoringMode)
     # @deprecated("RegisterDevicePresenceMonitoringAsync is deprecated and might not work on all platforms. For more info, see MSDN.")
     def register_device_presence_monitoring_async(cls, device_id: str, device_instance_path: str, monitoring_mode: SecondaryAuthenticationFactorDevicePresenceMonitoringMode, /) -> windows_foundation.IAsyncOperation[SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus> Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration::RegisterDevicePresenceMonitoringAsync(System.String,System.String,Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresenceMonitoringMode,System.String,System.String,Windows.Storage.Streams.IBuffer)
     # @deprecated("RegisterDevicePresenceMonitoringWithNewDeviceAsync is deprecated and might not work on all platforms. For more info, see MSDN.")
+    def register_device_presence_monitoring_async(cls, device_id: str, device_instance_path: str, monitoring_mode: SecondaryAuthenticationFactorDevicePresenceMonitoringMode, device_friendly_name: str, device_model_number: str, device_configuration_data: winrt.system.Buffer, /) -> windows_foundation.IAsyncOperation[SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus]: ...
+    # Deprecated alias of register_device_presence_monitoring_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus> Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration::RegisterDevicePresenceMonitoringAsync(System.String,System.String,Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresenceMonitoringMode,System.String,System.String,Windows.Storage.Streams.IBuffer)
+    # @deprecated("RegisterDevicePresenceMonitoringWithNewDeviceAsync is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("Use register_device_presence_monitoring_async() instead.")
     def register_device_presence_monitoring_with_new_device_async(cls, device_id: str, device_instance_path: str, monitoring_mode: SecondaryAuthenticationFactorDevicePresenceMonitoringMode, device_friendly_name: str, device_model_number: str, device_configuration_data: winrt.system.Buffer, /) -> windows_foundation.IAsyncOperation[SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistrationResult> Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration::RequestStartRegisteringDeviceAsync(System.String,Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDeviceCapabilities,System.String,System.String,Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer)
     # @deprecated("SecondaryAuthenticationFactorRegistration is deprecated and might not work on all platforms. For more info, see MSDN.")

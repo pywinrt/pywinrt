@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_ui_viewmanagement import (
     AccessibilitySettings,
@@ -151,3 +152,12 @@ class ViewSizePreference(enum.IntEnum):
     USE_NONE = 5
     CUSTOM = 6
 
+winrt.runtime._internals.alias_method(ActivationViewSwitcher, "show_as_standalone_with_size_preference_async", "show_as_standalone_async")
+winrt.runtime._internals.alias_method(ApplicationView, "try_enter_view_mode_with_preferences_async", "try_enter_view_mode_async")
+winrt.runtime._internals.alias_static_method(ApplicationViewSwitcher, "switch_from_view_async", "switch_async")
+winrt.runtime._internals.alias_static_method(ApplicationViewSwitcher, "switch_from_view_with_options_async", "switch_async")
+winrt.runtime._internals.alias_static_method(ApplicationViewSwitcher, "try_show_as_standalone_with_anchor_view_and_size_preference_async", "try_show_as_standalone_async")
+winrt.runtime._internals.alias_static_method(ApplicationViewSwitcher, "try_show_as_standalone_with_size_preference_async", "try_show_as_standalone_async")
+winrt.runtime._internals.alias_static_method(ApplicationViewSwitcher, "try_show_as_view_mode_with_preferences_async", "try_show_as_view_mode_async")
+winrt.runtime._internals.alias_static_method(ProjectionManager, "request_start_projecting_with_placement_async", "request_start_projecting_async")
+winrt.runtime._internals.alias_static_method(ProjectionManager, "start_projecting_with_device_info_async", "start_projecting_async")

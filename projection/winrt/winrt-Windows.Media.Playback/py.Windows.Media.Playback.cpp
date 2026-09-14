@@ -12407,18 +12407,7 @@ namespace py::cpp::Windows::Media::Playback
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* MediaPlayer_CopyFrameToVideoSurfaceWithTargetRectangle(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -12698,18 +12687,7 @@ namespace py::cpp::Windows::Media::Playback
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* MediaPlayer_RenderSubtitlesToSurfaceWithTargetRectangle(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -15541,14 +15519,12 @@ namespace py::cpp::Windows::Media::Playback
         { "close", reinterpret_cast<PyCFunction>(MediaPlayer_Close), METH_VARARGS, nullptr },
         { "copy_frame_to_stereoscopic_video_surfaces", reinterpret_cast<PyCFunction>(MediaPlayer_CopyFrameToStereoscopicVideoSurfaces), METH_VARARGS, nullptr },
         { "copy_frame_to_video_surface", reinterpret_cast<PyCFunction>(MediaPlayer_CopyFrameToVideoSurface), METH_VARARGS, nullptr },
-        { "copy_frame_to_video_surface_with_target_rectangle", reinterpret_cast<PyCFunction>(MediaPlayer_CopyFrameToVideoSurfaceWithTargetRectangle), METH_VARARGS, nullptr },
         { "get_as_casting_source", reinterpret_cast<PyCFunction>(MediaPlayer_GetAsCastingSource), METH_VARARGS, nullptr },
         { "get_surface", reinterpret_cast<PyCFunction>(MediaPlayer_GetSurface), METH_VARARGS, nullptr },
         { "pause", reinterpret_cast<PyCFunction>(MediaPlayer_Pause), METH_VARARGS, nullptr },
         { "play", reinterpret_cast<PyCFunction>(MediaPlayer_Play), METH_VARARGS, nullptr },
         { "remove_all_effects", reinterpret_cast<PyCFunction>(MediaPlayer_RemoveAllEffects), METH_VARARGS, nullptr },
         { "render_subtitles_to_surface", reinterpret_cast<PyCFunction>(MediaPlayer_RenderSubtitlesToSurface), METH_VARARGS, nullptr },
-        { "render_subtitles_to_surface_with_target_rectangle", reinterpret_cast<PyCFunction>(MediaPlayer_RenderSubtitlesToSurfaceWithTargetRectangle), METH_VARARGS, nullptr },
         { "set_file_source", reinterpret_cast<PyCFunction>(MediaPlayer_SetFileSource), METH_VARARGS, nullptr },
         { "set_media_source", reinterpret_cast<PyCFunction>(MediaPlayer_SetMediaSource), METH_VARARGS, nullptr },
         { "set_stream_source", reinterpret_cast<PyCFunction>(MediaPlayer_SetStreamSource), METH_VARARGS, nullptr },

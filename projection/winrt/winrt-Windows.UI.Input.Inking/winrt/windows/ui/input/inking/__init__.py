@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_ui_input_inking import (
     InkDrawingAttributes,
@@ -136,3 +137,5 @@ class PenTipShape(enum.IntEnum):
     CIRCLE = 0
     RECTANGLE = 1
 
+winrt.runtime._internals.alias_method(InkManager, "recognize_async2", "recognize_async")
+winrt.runtime._internals.alias_method(InkStrokeContainer, "save_with_format_async", "save_async")

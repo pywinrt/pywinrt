@@ -1924,7 +1924,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
-    static PyObject* Brush_PopulatePropertyInfoOverride(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Brush_PopulatePropertyInfoOverride_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -2291,7 +2291,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyMethodDef _methods_Brush[] = {
         { "populate_property_info", reinterpret_cast<PyCFunction>(Brush_PopulatePropertyInfo), METH_VARARGS, nullptr },
-        { "_populate_property_info_override", reinterpret_cast<PyCFunction>(Brush_PopulatePropertyInfoOverride), METH_VARARGS, nullptr },
+        { "_populate_property_info_override", reinterpret_cast<PyCFunction>(Brush_PopulatePropertyInfoOverride_protected), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Brush, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Brush), METH_O | METH_STATIC, nullptr },
         { }};
@@ -6371,7 +6371,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
-    static PyObject* GeneralTransform_TransformBoundsCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* GeneralTransform_TransformBoundsCore_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -6511,7 +6511,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
-    static PyObject* GeneralTransform_TryTransformCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* GeneralTransform_TryTransformCore_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -6623,10 +6623,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyMethodDef _methods_GeneralTransform[] = {
         { "transform_bounds", reinterpret_cast<PyCFunction>(GeneralTransform_TransformBounds), METH_VARARGS, nullptr },
-        { "_transform_bounds_core", reinterpret_cast<PyCFunction>(GeneralTransform_TransformBoundsCore), METH_VARARGS, nullptr },
+        { "_transform_bounds_core", reinterpret_cast<PyCFunction>(GeneralTransform_TransformBoundsCore_protected), METH_VARARGS, nullptr },
         { "transform_point", reinterpret_cast<PyCFunction>(GeneralTransform_TransformPoint), METH_VARARGS, nullptr },
         { "try_transform", reinterpret_cast<PyCFunction>(GeneralTransform_TryTransform), METH_VARARGS, nullptr },
-        { "_try_transform_core", reinterpret_cast<PyCFunction>(GeneralTransform_TryTransformCore), METH_VARARGS, nullptr },
+        { "_try_transform_core", reinterpret_cast<PyCFunction>(GeneralTransform_TryTransformCore_protected), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_GeneralTransform, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GeneralTransform), METH_O | METH_STATIC, nullptr },
         { }};
@@ -11131,18 +11131,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* LoadedImageSurface_StartLoadFromStreamWithSize(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -11216,18 +11205,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* LoadedImageSurface_StartLoadFromUriWithSize(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -11503,9 +11481,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyMethodDef methods_LoadedImageSurface_Static[] = {
         { "start_load_from_stream", reinterpret_cast<PyCFunction>(LoadedImageSurface_StartLoadFromStream), METH_VARARGS, nullptr },
-        { "start_load_from_stream_with_size", reinterpret_cast<PyCFunction>(LoadedImageSurface_StartLoadFromStreamWithSize), METH_VARARGS, nullptr },
         { "start_load_from_uri", reinterpret_cast<PyCFunction>(LoadedImageSurface_StartLoadFromUri), METH_VARARGS, nullptr },
-        { "start_load_from_uri_with_size", reinterpret_cast<PyCFunction>(LoadedImageSurface_StartLoadFromUriWithSize), METH_VARARGS, nullptr },
         { }};
 
     static PyType_Slot type_slots_LoadedImageSurface_Static[] = 
@@ -21580,7 +21556,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
-    static PyObject* SystemBackdrop_OnDefaultSystemBackdropConfigurationChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* SystemBackdrop_OnDefaultSystemBackdropConfigurationChanged_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -21624,7 +21600,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
-    static PyObject* SystemBackdrop_OnTargetConnected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* SystemBackdrop_OnTargetConnected_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -21668,7 +21644,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
-    static PyObject* SystemBackdrop_OnTargetDisconnected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* SystemBackdrop_OnTargetDisconnected_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -21737,9 +21713,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyMethodDef _methods_SystemBackdrop[] = {
         { "get_default_system_backdrop_configuration", reinterpret_cast<PyCFunction>(SystemBackdrop_GetDefaultSystemBackdropConfiguration), METH_VARARGS, nullptr },
-        { "_on_default_system_backdrop_configuration_changed", reinterpret_cast<PyCFunction>(SystemBackdrop_OnDefaultSystemBackdropConfigurationChanged), METH_VARARGS, nullptr },
-        { "_on_target_connected", reinterpret_cast<PyCFunction>(SystemBackdrop_OnTargetConnected), METH_VARARGS, nullptr },
-        { "_on_target_disconnected", reinterpret_cast<PyCFunction>(SystemBackdrop_OnTargetDisconnected), METH_VARARGS, nullptr },
+        { "_on_default_system_backdrop_configuration_changed", reinterpret_cast<PyCFunction>(SystemBackdrop_OnDefaultSystemBackdropConfigurationChanged_protected), METH_VARARGS, nullptr },
+        { "_on_target_connected", reinterpret_cast<PyCFunction>(SystemBackdrop_OnTargetConnected_protected), METH_VARARGS, nullptr },
+        { "_on_target_disconnected", reinterpret_cast<PyCFunction>(SystemBackdrop_OnTargetDisconnected_protected), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SystemBackdrop, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SystemBackdrop), METH_O | METH_STATIC, nullptr },
         { }};
@@ -23892,50 +23868,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
-    static PyObject* VisualTreeHelper_FindAllElementsInHostCoordinatesPoint(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.VisualTreeHelper", L"FindElementsInHostCoordinates", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 1);
-                auto param2 = py::convert_to<bool>(args, 2);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return winrt::Microsoft::UI::Xaml::Media::VisualTreeHelper::FindElementsInHostCoordinates(param0, param1, param2);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
     static PyObject* VisualTreeHelper_FindAllElementsInHostCoordinatesRect(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
@@ -23980,7 +23912,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
-    static PyObject* VisualTreeHelper_FindElementsInHostCoordinatesPoint(PyObject* /*unused*/, PyObject* args) noexcept
+    static PyObject* VisualTreeHelper_FindElementsInHostCoordinates(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -24008,6 +23940,39 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 {
                     auto _gil = release_gil();
                     return winrt::Microsoft::UI::Xaml::Media::VisualTreeHelper::FindElementsInHostCoordinates(param0, param1);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.VisualTreeHelper", L"FindElementsInHostCoordinates", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 1);
+                auto param2 = py::convert_to<bool>(args, 2);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Microsoft::UI::Xaml::Media::VisualTreeHelper::FindElementsInHostCoordinates(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -24328,9 +24293,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyMethodDef methods_VisualTreeHelper_Static[] = {
         { "disconnect_children_recursive", reinterpret_cast<PyCFunction>(VisualTreeHelper_DisconnectChildrenRecursive), METH_VARARGS, nullptr },
-        { "find_all_elements_in_host_coordinates_point", reinterpret_cast<PyCFunction>(VisualTreeHelper_FindAllElementsInHostCoordinatesPoint), METH_VARARGS, nullptr },
         { "find_all_elements_in_host_coordinates_rect", reinterpret_cast<PyCFunction>(VisualTreeHelper_FindAllElementsInHostCoordinatesRect), METH_VARARGS, nullptr },
-        { "find_elements_in_host_coordinates_point", reinterpret_cast<PyCFunction>(VisualTreeHelper_FindElementsInHostCoordinatesPoint), METH_VARARGS, nullptr },
+        { "find_elements_in_host_coordinates", reinterpret_cast<PyCFunction>(VisualTreeHelper_FindElementsInHostCoordinates), METH_VARARGS, nullptr },
         { "find_elements_in_host_coordinates_rect", reinterpret_cast<PyCFunction>(VisualTreeHelper_FindElementsInHostCoordinatesRect), METH_VARARGS, nullptr },
         { "get_child", reinterpret_cast<PyCFunction>(VisualTreeHelper_GetChild), METH_VARARGS, nullptr },
         { "get_children_count", reinterpret_cast<PyCFunction>(VisualTreeHelper_GetChildrenCount), METH_VARARGS, nullptr },
@@ -24457,7 +24421,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         Py_DECREF(tp);
     }
 
-    static PyObject* XamlCompositionBrushBase_OnConnected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* XamlCompositionBrushBase_OnConnected_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -24498,7 +24462,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
-    static PyObject* XamlCompositionBrushBase_OnDisconnected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* XamlCompositionBrushBase_OnDisconnected_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -24663,8 +24627,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     }
 
     static PyMethodDef _methods_XamlCompositionBrushBase[] = {
-        { "_on_connected", reinterpret_cast<PyCFunction>(XamlCompositionBrushBase_OnConnected), METH_VARARGS, nullptr },
-        { "_on_disconnected", reinterpret_cast<PyCFunction>(XamlCompositionBrushBase_OnDisconnected), METH_VARARGS, nullptr },
+        { "_on_connected", reinterpret_cast<PyCFunction>(XamlCompositionBrushBase_OnConnected_protected), METH_VARARGS, nullptr },
+        { "_on_disconnected", reinterpret_cast<PyCFunction>(XamlCompositionBrushBase_OnDisconnected_protected), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_XamlCompositionBrushBase, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_XamlCompositionBrushBase), METH_O | METH_STATIC, nullptr },
         { }};
@@ -24993,7 +24957,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
-    static PyObject* XamlLight_GetId(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* XamlLight_GetId_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -25033,7 +24997,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
-    static PyObject* XamlLight_OnConnected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* XamlLight_OnConnected_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -25076,7 +25040,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
-    static PyObject* XamlLight_OnDisconnected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* XamlLight_OnDisconnected_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -25232,9 +25196,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
     }
 
     static PyMethodDef _methods_XamlLight[] = {
-        { "_get_id", reinterpret_cast<PyCFunction>(XamlLight_GetId), METH_VARARGS, nullptr },
-        { "_on_connected", reinterpret_cast<PyCFunction>(XamlLight_OnConnected), METH_VARARGS, nullptr },
-        { "_on_disconnected", reinterpret_cast<PyCFunction>(XamlLight_OnDisconnected), METH_VARARGS, nullptr },
+        { "_get_id", reinterpret_cast<PyCFunction>(XamlLight_GetId_protected), METH_VARARGS, nullptr },
+        { "_on_connected", reinterpret_cast<PyCFunction>(XamlLight_OnConnected_protected), METH_VARARGS, nullptr },
+        { "_on_disconnected", reinterpret_cast<PyCFunction>(XamlLight_OnDisconnected_protected), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_XamlLight, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_XamlLight), METH_O | METH_STATIC, nullptr },
         { }};

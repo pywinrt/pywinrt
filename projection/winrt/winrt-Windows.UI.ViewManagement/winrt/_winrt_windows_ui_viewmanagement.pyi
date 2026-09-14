@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -39,9 +40,15 @@ class AccessibilitySettings(winrt.system.Object):
 class ActivationViewSwitcher(winrt.system.Object):
     # System.Boolean Windows.UI.ViewManagement.ActivationViewSwitcher::IsViewPresentedOnActivationVirtualDesktop(System.Int32)
     def is_view_presented_on_activation_virtual_desktop(self, view_id: winrt.system.Int32, /) -> bool: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.UI.ViewManagement.ActivationViewSwitcher::ShowAsStandaloneAsync(System.Int32)
     def show_as_standalone_async(self, view_id: winrt.system.Int32, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.UI.ViewManagement.ActivationViewSwitcher::ShowAsStandaloneAsync(System.Int32,Windows.UI.ViewManagement.ViewSizePreference)
+    def show_as_standalone_async(self, view_id: winrt.system.Int32, size_preference: ViewSizePreference, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of show_as_standalone_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.UI.ViewManagement.ActivationViewSwitcher::ShowAsStandaloneAsync(System.Int32,Windows.UI.ViewManagement.ViewSizePreference)
+    @deprecated("Use show_as_standalone_async() instead.")
     def show_as_standalone_with_size_preference_async(self, view_id: winrt.system.Int32, size_preference: ViewSizePreference, /) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
@@ -100,9 +107,15 @@ class ApplicationView(winrt.system.Object, metaclass=ApplicationView_Static):
     def try_consolidate_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
     # System.Boolean Windows.UI.ViewManagement.ApplicationView::TryEnterFullScreenMode()
     def try_enter_full_screen_mode(self) -> bool: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.ViewManagement.ApplicationView::TryEnterViewModeAsync(Windows.UI.ViewManagement.ApplicationViewMode)
     def try_enter_view_mode_async(self, view_mode: ApplicationViewMode, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.ViewManagement.ApplicationView::TryEnterViewModeAsync(Windows.UI.ViewManagement.ApplicationViewMode,Windows.UI.ViewManagement.ViewModePreferences)
+    def try_enter_view_mode_async(self, view_mode: ApplicationViewMode, view_mode_preferences: ViewModePreferences, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Deprecated alias of try_enter_view_mode_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.ViewManagement.ApplicationView::TryEnterViewModeAsync(Windows.UI.ViewManagement.ApplicationViewMode,Windows.UI.ViewManagement.ViewModePreferences)
+    @deprecated("Use try_enter_view_mode_async() instead.")
     def try_enter_view_mode_with_preferences_async(self, view_mode: ApplicationViewMode, view_mode_preferences: ViewModePreferences, /) -> windows_foundation.IAsyncOperation[bool]: ...
     # System.Boolean Windows.UI.ViewManagement.ApplicationView::TryResizeView(Windows.Foundation.Size)
     def try_resize_view(self, value: typing.Union[windows_foundation.Size, typing.Tuple[winrt.system.Single, winrt.system.Single]], /) -> bool: ...
@@ -213,21 +226,49 @@ class ApplicationViewSwitcher_Static(winrt._winrt.IInspectable_Static):
     def disable_system_view_activation_policy(cls) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.ViewManagement.ApplicationViewSwitcher::PrepareForCustomAnimatedSwitchAsync(System.Int32,System.Int32,Windows.UI.ViewManagement.ApplicationViewSwitchingOptions)
     def prepare_for_custom_animated_switch_async(cls, to_view_id: winrt.system.Int32, from_view_id: winrt.system.Int32, options: ApplicationViewSwitchingOptions, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.UI.ViewManagement.ApplicationViewSwitcher::SwitchAsync(System.Int32)
     def switch_async(cls, view_id: winrt.system.Int32, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.UI.ViewManagement.ApplicationViewSwitcher::SwitchAsync(System.Int32,System.Int32)
-    def switch_from_view_async(cls, to_view_id: winrt.system.Int32, from_view_id: winrt.system.Int32, /) -> windows_foundation.IAsyncAction: ...
+    def switch_async(cls, to_view_id: winrt.system.Int32, from_view_id: winrt.system.Int32, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.UI.ViewManagement.ApplicationViewSwitcher::SwitchAsync(System.Int32,System.Int32,Windows.UI.ViewManagement.ApplicationViewSwitchingOptions)
+    def switch_async(cls, to_view_id: winrt.system.Int32, from_view_id: winrt.system.Int32, options: ApplicationViewSwitchingOptions, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of switch_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.UI.ViewManagement.ApplicationViewSwitcher::SwitchAsync(System.Int32,System.Int32)
+    @deprecated("Use switch_async() instead.")
+    def switch_from_view_async(cls, to_view_id: winrt.system.Int32, from_view_id: winrt.system.Int32, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of switch_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.UI.ViewManagement.ApplicationViewSwitcher::SwitchAsync(System.Int32,System.Int32,Windows.UI.ViewManagement.ApplicationViewSwitchingOptions)
+    @deprecated("Use switch_async() instead.")
     def switch_from_view_with_options_async(cls, to_view_id: winrt.system.Int32, from_view_id: winrt.system.Int32, options: ApplicationViewSwitchingOptions, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.ViewManagement.ApplicationViewSwitcher::TryShowAsStandaloneAsync(System.Int32)
     def try_show_as_standalone_async(cls, view_id: winrt.system.Int32, /) -> windows_foundation.IAsyncOperation[bool]: ...
-    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.ViewManagement.ApplicationViewSwitcher::TryShowAsStandaloneAsync(System.Int32,Windows.UI.ViewManagement.ViewSizePreference,System.Int32,Windows.UI.ViewManagement.ViewSizePreference)
-    def try_show_as_standalone_with_anchor_view_and_size_preference_async(cls, view_id: winrt.system.Int32, size_preference: ViewSizePreference, anchor_view_id: winrt.system.Int32, anchor_size_preference: ViewSizePreference, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.ViewManagement.ApplicationViewSwitcher::TryShowAsStandaloneAsync(System.Int32,Windows.UI.ViewManagement.ViewSizePreference)
+    def try_show_as_standalone_async(cls, view_id: winrt.system.Int32, size_preference: ViewSizePreference, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.ViewManagement.ApplicationViewSwitcher::TryShowAsStandaloneAsync(System.Int32,Windows.UI.ViewManagement.ViewSizePreference,System.Int32,Windows.UI.ViewManagement.ViewSizePreference)
+    def try_show_as_standalone_async(cls, view_id: winrt.system.Int32, size_preference: ViewSizePreference, anchor_view_id: winrt.system.Int32, anchor_size_preference: ViewSizePreference, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Deprecated alias of try_show_as_standalone_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.ViewManagement.ApplicationViewSwitcher::TryShowAsStandaloneAsync(System.Int32,Windows.UI.ViewManagement.ViewSizePreference,System.Int32,Windows.UI.ViewManagement.ViewSizePreference)
+    @deprecated("Use try_show_as_standalone_async() instead.")
+    def try_show_as_standalone_with_anchor_view_and_size_preference_async(cls, view_id: winrt.system.Int32, size_preference: ViewSizePreference, anchor_view_id: winrt.system.Int32, anchor_size_preference: ViewSizePreference, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Deprecated alias of try_show_as_standalone_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.ViewManagement.ApplicationViewSwitcher::TryShowAsStandaloneAsync(System.Int32,Windows.UI.ViewManagement.ViewSizePreference)
+    @deprecated("Use try_show_as_standalone_async() instead.")
     def try_show_as_standalone_with_size_preference_async(cls, view_id: winrt.system.Int32, size_preference: ViewSizePreference, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.ViewManagement.ApplicationViewSwitcher::TryShowAsViewModeAsync(System.Int32,Windows.UI.ViewManagement.ApplicationViewMode)
     def try_show_as_view_mode_async(cls, view_id: winrt.system.Int32, view_mode: ApplicationViewMode, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.ViewManagement.ApplicationViewSwitcher::TryShowAsViewModeAsync(System.Int32,Windows.UI.ViewManagement.ApplicationViewMode,Windows.UI.ViewManagement.ViewModePreferences)
+    def try_show_as_view_mode_async(cls, view_id: winrt.system.Int32, view_mode: ApplicationViewMode, view_mode_preferences: ViewModePreferences, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Deprecated alias of try_show_as_view_mode_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.ViewManagement.ApplicationViewSwitcher::TryShowAsViewModeAsync(System.Int32,Windows.UI.ViewManagement.ApplicationViewMode,Windows.UI.ViewManagement.ViewModePreferences)
+    @deprecated("Use try_show_as_view_mode_async() instead.")
     def try_show_as_view_mode_with_preferences_async(cls, view_id: winrt.system.Int32, view_mode: ApplicationViewMode, view_mode_preferences: ViewModePreferences, /) -> windows_foundation.IAsyncOperation[bool]: ...
 
 @typing.final
@@ -372,13 +413,25 @@ class InputPaneVisibilityEventArgs(winrt.system.Object):
 class ProjectionManager_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.UI.ViewManagement.ProjectionManager::GetDeviceSelector()
     def get_device_selector(cls) -> str: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.ViewManagement.ProjectionManager::RequestStartProjectingAsync(System.Int32,System.Int32,Windows.Foundation.Rect)
     def request_start_projecting_async(cls, projection_view_id: winrt.system.Int32, anchor_view_id: winrt.system.Int32, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.ViewManagement.ProjectionManager::RequestStartProjectingAsync(System.Int32,System.Int32,Windows.Foundation.Rect,Windows.UI.Popups.Placement)
+    def request_start_projecting_async(cls, projection_view_id: winrt.system.Int32, anchor_view_id: winrt.system.Int32, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], preffered_placement: windows_ui_popups.Placement, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Deprecated alias of request_start_projecting_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.ViewManagement.ProjectionManager::RequestStartProjectingAsync(System.Int32,System.Int32,Windows.Foundation.Rect,Windows.UI.Popups.Placement)
+    @deprecated("Use request_start_projecting_async() instead.")
     def request_start_projecting_with_placement_async(cls, projection_view_id: winrt.system.Int32, anchor_view_id: winrt.system.Int32, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], preffered_placement: windows_ui_popups.Placement, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.UI.ViewManagement.ProjectionManager::StartProjectingAsync(System.Int32,System.Int32)
     def start_projecting_async(cls, projection_view_id: winrt.system.Int32, anchor_view_id: winrt.system.Int32, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.UI.ViewManagement.ProjectionManager::StartProjectingAsync(System.Int32,System.Int32,Windows.Devices.Enumeration.DeviceInformation)
+    def start_projecting_async(cls, projection_view_id: winrt.system.Int32, anchor_view_id: winrt.system.Int32, display_device_info: windows_devices_enumeration.DeviceInformation, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of start_projecting_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.UI.ViewManagement.ProjectionManager::StartProjectingAsync(System.Int32,System.Int32,Windows.Devices.Enumeration.DeviceInformation)
+    @deprecated("Use start_projecting_async() instead.")
     def start_projecting_with_device_info_async(cls, projection_view_id: winrt.system.Int32, anchor_view_id: winrt.system.Int32, display_device_info: windows_devices_enumeration.DeviceInformation, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.UI.ViewManagement.ProjectionManager::StopProjectingAsync(System.Int32,System.Int32)
     def stop_projecting_async(cls, projection_view_id: winrt.system.Int32, anchor_view_id: winrt.system.Int32, /) -> windows_foundation.IAsyncAction: ...

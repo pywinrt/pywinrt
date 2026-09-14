@@ -375,7 +375,7 @@ class TestJson(unittest.TestCase):
 
     def test_JsonObject_get_named_boolean_default(self):
         o = wdj.JsonObject.parse('{ "spam": true }')
-        v = o.get_named_boolean_or_default("more-spam", True)
+        v = o.get_named_boolean("more-spam", True)
         self.assertTrue(v)
 
     def test_JsonObject_get_named_number(self):
@@ -385,7 +385,7 @@ class TestJson(unittest.TestCase):
 
     def test_JsonObject_get_named_number_default(self):
         o = wdj.JsonObject.parse('{ "spam": true }')
-        v = o.get_named_number_or_default("more-spam", 16)
+        v = o.get_named_number("more-spam", 16)
         self.assertEqual(v, 16)
 
 

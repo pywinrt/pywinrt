@@ -30,7 +30,7 @@ static class IterWriterExtensions
         {
             w.WriteTryCatch(() =>
             {
-                var method = type.Methods.Single(m => m.Name == "First");
+                var method = type.GetMethod("First", 0);
                 var self = type.GetMethodInvokeContext(method);
 
                 w.WriteLine("return py::convert([&]()");
@@ -54,7 +54,7 @@ static class IterWriterExtensions
     {
         w.WriteTryCatch(() =>
         {
-            var method = type.Methods.Single(m => m.Name == "MoveNext");
+            var method = type.GetMethod("MoveNext", 0);
             var self = type.GetMethodInvokeContext(method);
 
             w.WriteLine($"if ({self}HasCurrent())");

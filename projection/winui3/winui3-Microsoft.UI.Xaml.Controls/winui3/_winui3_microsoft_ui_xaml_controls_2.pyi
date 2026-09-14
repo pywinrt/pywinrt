@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -1209,11 +1210,17 @@ class ListViewBase(microsoft_ui_xaml_controls_primitives.Selector, ISemanticZoom
     @typing.final
     # Microsoft.UI.Xaml.Media.Animation.ConnectedAnimation Microsoft.UI.Xaml.Controls.ListViewBase::PrepareConnectedAnimation(System.String,System.Object,System.String)
     def prepare_connected_animation(self, key: str, item: winrt.system.Object, element_name: str, /) -> microsoft_ui_xaml_media_animation.ConnectedAnimation: ...
+    @typing.overload
     @typing.final
     # System.Void Microsoft.UI.Xaml.Controls.ListViewBase::ScrollIntoView(System.Object)
     def scroll_into_view(self, item: winrt.system.Object, /) -> None: ...
-    @typing.final
+    @typing.overload
     # System.Void Microsoft.UI.Xaml.Controls.ListViewBase::ScrollIntoView(System.Object,Microsoft.UI.Xaml.Controls.ScrollIntoViewAlignment)
+    def scroll_into_view(self, item: winrt.system.Object, alignment: ScrollIntoViewAlignment, /) -> None: ...
+    @typing.final
+    # Deprecated alias of scroll_into_view() for pywinrt v3.x compatibility.
+    # System.Void Microsoft.UI.Xaml.Controls.ListViewBase::ScrollIntoView(System.Object,Microsoft.UI.Xaml.Controls.ScrollIntoViewAlignment)
+    @deprecated("Use scroll_into_view() instead.")
     def scroll_into_view_with_alignment(self, item: winrt.system.Object, alignment: ScrollIntoViewAlignment, /) -> None: ...
     @typing.final
     # System.Void Microsoft.UI.Xaml.Controls.ListViewBase::SelectAll()

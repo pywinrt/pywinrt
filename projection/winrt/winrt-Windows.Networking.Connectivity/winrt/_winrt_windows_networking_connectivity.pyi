@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -123,11 +124,18 @@ class ConnectionProfile(winrt.system.Object):
     def get_data_plan_status(self) -> DataPlanStatus: ...
     # Windows.Networking.Connectivity.DomainConnectivityLevel Windows.Networking.Connectivity.ConnectionProfile::GetDomainConnectivityLevel()
     def get_domain_connectivity_level(self) -> DomainConnectivityLevel: ...
+    @typing.overload
     # Windows.Networking.Connectivity.DataUsage Windows.Networking.Connectivity.ConnectionProfile::GetLocalUsage(Windows.Foundation.DateTime,Windows.Foundation.DateTime)
     # @deprecated("GetLocalUsage may be altered or unavailable for releases after Windows 8.1. Instead, use GetNetworkUsageAsync.")
     def get_local_usage(self, start_time: datetime.datetime, end_time: datetime.datetime, /) -> DataUsage: ...
+    @typing.overload
     # Windows.Networking.Connectivity.DataUsage Windows.Networking.Connectivity.ConnectionProfile::GetLocalUsage(Windows.Foundation.DateTime,Windows.Foundation.DateTime,Windows.Networking.Connectivity.RoamingStates)
     # @deprecated("GetLocalUsage may be altered or unavailable for releases after Windows 8.1. Instead, use GetNetworkUsageAsync.")
+    def get_local_usage(self, start_time: datetime.datetime, end_time: datetime.datetime, states: RoamingStates, /) -> DataUsage: ...
+    # Deprecated alias of get_local_usage() for pywinrt v3.x compatibility.
+    # Windows.Networking.Connectivity.DataUsage Windows.Networking.Connectivity.ConnectionProfile::GetLocalUsage(Windows.Foundation.DateTime,Windows.Foundation.DateTime,Windows.Networking.Connectivity.RoamingStates)
+    # @deprecated("GetLocalUsage may be altered or unavailable for releases after Windows 8.1. Instead, use GetNetworkUsageAsync.")
+    @deprecated("Use get_local_usage() instead.")
     def get_local_usage_per_roaming_states(self, start_time: datetime.datetime, end_time: datetime.datetime, states: RoamingStates, /) -> DataUsage: ...
     # Windows.Networking.Connectivity.NetworkConnectivityLevel Windows.Networking.Connectivity.ConnectionProfile::GetNetworkConnectivityLevel()
     def get_network_connectivity_level(self) -> NetworkConnectivityLevel: ...

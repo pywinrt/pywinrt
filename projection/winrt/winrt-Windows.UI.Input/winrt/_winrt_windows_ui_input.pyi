@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -583,13 +584,25 @@ class PhysicalGestureRecognizer(winrt.system.Object):
 
 @typing.final
 class PointerPoint_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.UI.Input.PointerPoint Windows.UI.Input.PointerPoint::GetCurrentPoint(System.UInt32)
     def get_current_point(cls, pointer_id: winrt.system.UInt32, /) -> PointerPoint: ...
+    @typing.overload
     # Windows.UI.Input.PointerPoint Windows.UI.Input.PointerPoint::GetCurrentPoint(System.UInt32,Windows.UI.Input.IPointerPointTransform)
+    def get_current_point(cls, pointer_id: winrt.system.UInt32, transform: IPointerPointTransform, /) -> PointerPoint: ...
+    # Deprecated alias of get_current_point() for pywinrt v3.x compatibility.
+    # Windows.UI.Input.PointerPoint Windows.UI.Input.PointerPoint::GetCurrentPoint(System.UInt32,Windows.UI.Input.IPointerPointTransform)
+    @deprecated("Use get_current_point() instead.")
     def get_current_point_transformed(cls, pointer_id: winrt.system.UInt32, transform: IPointerPointTransform, /) -> PointerPoint: ...
+    @typing.overload
     # Windows.Foundation.Collections.IVector`1<Windows.UI.Input.PointerPoint> Windows.UI.Input.PointerPoint::GetIntermediatePoints(System.UInt32)
     def get_intermediate_points(cls, pointer_id: winrt.system.UInt32, /) -> typing.MutableSequence[PointerPoint]: ...
+    @typing.overload
     # Windows.Foundation.Collections.IVector`1<Windows.UI.Input.PointerPoint> Windows.UI.Input.PointerPoint::GetIntermediatePoints(System.UInt32,Windows.UI.Input.IPointerPointTransform)
+    def get_intermediate_points(cls, pointer_id: winrt.system.UInt32, transform: IPointerPointTransform, /) -> typing.MutableSequence[PointerPoint]: ...
+    # Deprecated alias of get_intermediate_points() for pywinrt v3.x compatibility.
+    # Windows.Foundation.Collections.IVector`1<Windows.UI.Input.PointerPoint> Windows.UI.Input.PointerPoint::GetIntermediatePoints(System.UInt32,Windows.UI.Input.IPointerPointTransform)
+    @deprecated("Use get_intermediate_points() instead.")
     def get_intermediate_points_transformed(cls, pointer_id: winrt.system.UInt32, transform: IPointerPointTransform, /) -> typing.MutableSequence[PointerPoint]: ...
 
 @typing.final
@@ -892,9 +905,15 @@ class RadialControllerMenu(winrt.system.Object):
 
 @typing.final
 class RadialControllerMenuItem_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.UI.Input.RadialControllerMenuItem Windows.UI.Input.RadialControllerMenuItem::CreateFromFontGlyph(System.String,System.String,System.String)
     def create_from_font_glyph(cls, display_text: str, glyph: str, font_family: str, /) -> RadialControllerMenuItem: ...
+    @typing.overload
     # Windows.UI.Input.RadialControllerMenuItem Windows.UI.Input.RadialControllerMenuItem::CreateFromFontGlyph(System.String,System.String,System.String,Windows.Foundation.Uri)
+    def create_from_font_glyph(cls, display_text: str, glyph: str, font_family: str, font_uri: windows_foundation.Uri, /) -> RadialControllerMenuItem: ...
+    # Deprecated alias of create_from_font_glyph() for pywinrt v3.x compatibility.
+    # Windows.UI.Input.RadialControllerMenuItem Windows.UI.Input.RadialControllerMenuItem::CreateFromFontGlyph(System.String,System.String,System.String,Windows.Foundation.Uri)
+    @deprecated("Use create_from_font_glyph() instead.")
     def create_from_font_glyph_with_uri(cls, display_text: str, glyph: str, font_family: str, font_uri: windows_foundation.Uri, /) -> RadialControllerMenuItem: ...
     # Windows.UI.Input.RadialControllerMenuItem Windows.UI.Input.RadialControllerMenuItem::CreateFromIcon(System.String,Windows.Storage.Streams.RandomAccessStreamReference)
     def create_from_icon(cls, display_text: str, icon: windows_storage_streams.RandomAccessStreamReference, /) -> RadialControllerMenuItem: ...

@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -105,14 +106,26 @@ class MapLocation(winrt.system.Object):
 
 @typing.final
 class MapLocationFinder_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.MapLocationFinderResult> Windows.Services.Maps.MapLocationFinder::FindLocationsAsync(System.String,Windows.Devices.Geolocation.Geopoint)
     def find_locations_async(cls, search_text: str, reference_point: windows_devices_geolocation.Geopoint, /) -> windows_foundation.IAsyncOperation[MapLocationFinderResult]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.MapLocationFinderResult> Windows.Services.Maps.MapLocationFinder::FindLocationsAsync(System.String,Windows.Devices.Geolocation.Geopoint,System.UInt32)
+    def find_locations_async(cls, search_text: str, reference_point: windows_devices_geolocation.Geopoint, max_count: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[MapLocationFinderResult]: ...
+    # Deprecated alias of find_locations_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.MapLocationFinderResult> Windows.Services.Maps.MapLocationFinder::FindLocationsAsync(System.String,Windows.Devices.Geolocation.Geopoint,System.UInt32)
+    @deprecated("Use find_locations_async() instead.")
+    def find_locations_with_max_count_async(cls, search_text: str, reference_point: windows_devices_geolocation.Geopoint, max_count: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[MapLocationFinderResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.MapLocationFinderResult> Windows.Services.Maps.MapLocationFinder::FindLocationsAtAsync(Windows.Devices.Geolocation.Geopoint)
     def find_locations_at_async(cls, query_point: windows_devices_geolocation.Geopoint, /) -> windows_foundation.IAsyncOperation[MapLocationFinderResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.MapLocationFinderResult> Windows.Services.Maps.MapLocationFinder::FindLocationsAtAsync(Windows.Devices.Geolocation.Geopoint,Windows.Services.Maps.MapLocationDesiredAccuracy)
+    def find_locations_at_async(cls, query_point: windows_devices_geolocation.Geopoint, accuracy: MapLocationDesiredAccuracy, /) -> windows_foundation.IAsyncOperation[MapLocationFinderResult]: ...
+    # Deprecated alias of find_locations_at_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.MapLocationFinderResult> Windows.Services.Maps.MapLocationFinder::FindLocationsAtAsync(Windows.Devices.Geolocation.Geopoint,Windows.Services.Maps.MapLocationDesiredAccuracy)
+    @deprecated("Use find_locations_at_async() instead.")
     def find_locations_at_with_accuracy_async(cls, query_point: windows_devices_geolocation.Geopoint, accuracy: MapLocationDesiredAccuracy, /) -> windows_foundation.IAsyncOperation[MapLocationFinderResult]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.MapLocationFinderResult> Windows.Services.Maps.MapLocationFinder::FindLocationsAsync(System.String,Windows.Devices.Geolocation.Geopoint,System.UInt32)
-    def find_locations_with_max_count_async(cls, search_text: str, reference_point: windows_devices_geolocation.Geopoint, max_count: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[MapLocationFinderResult]: ...
 
 @typing.final
 class MapLocationFinder(winrt.system.Object, metaclass=MapLocationFinder_Static):
@@ -210,28 +223,66 @@ class MapRouteDrivingOptions(winrt.system.Object):
 
 @typing.final
 class MapRouteFinder_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.MapRouteFinderResult> Windows.Services.Maps.MapRouteFinder::GetDrivingRouteAsync(Windows.Devices.Geolocation.Geopoint,Windows.Devices.Geolocation.Geopoint)
     def get_driving_route_async(cls, start_point: windows_devices_geolocation.Geopoint, end_point: windows_devices_geolocation.Geopoint, /) -> windows_foundation.IAsyncOperation[MapRouteFinderResult]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.MapRouteFinderResult> Windows.Services.Maps.MapRouteFinder::GetDrivingRouteAsync(Windows.Devices.Geolocation.Geopoint,Windows.Devices.Geolocation.Geopoint,Windows.Services.Maps.MapRouteDrivingOptions)
+    def get_driving_route_async(cls, start_point: windows_devices_geolocation.Geopoint, end_point: windows_devices_geolocation.Geopoint, options: MapRouteDrivingOptions, /) -> windows_foundation.IAsyncOperation[MapRouteFinderResult]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.MapRouteFinderResult> Windows.Services.Maps.MapRouteFinder::GetDrivingRouteAsync(Windows.Devices.Geolocation.Geopoint,Windows.Devices.Geolocation.Geopoint,Windows.Services.Maps.MapRouteOptimization,Windows.Services.Maps.MapRouteRestrictions)
+    def get_driving_route_async(cls, start_point: windows_devices_geolocation.Geopoint, end_point: windows_devices_geolocation.Geopoint, optimization: MapRouteOptimization, restrictions: MapRouteRestrictions, /) -> windows_foundation.IAsyncOperation[MapRouteFinderResult]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.MapRouteFinderResult> Windows.Services.Maps.MapRouteFinder::GetDrivingRouteAsync(Windows.Devices.Geolocation.Geopoint,Windows.Devices.Geolocation.Geopoint,Windows.Services.Maps.MapRouteOptimization,Windows.Services.Maps.MapRouteRestrictions,System.Double)
+    def get_driving_route_async(cls, start_point: windows_devices_geolocation.Geopoint, end_point: windows_devices_geolocation.Geopoint, optimization: MapRouteOptimization, restrictions: MapRouteRestrictions, heading_in_degrees: winrt.system.Double, /) -> windows_foundation.IAsyncOperation[MapRouteFinderResult]: ...
+    # Deprecated alias of get_driving_route_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.MapRouteFinderResult> Windows.Services.Maps.MapRouteFinder::GetDrivingRouteAsync(Windows.Devices.Geolocation.Geopoint,Windows.Devices.Geolocation.Geopoint,Windows.Services.Maps.MapRouteOptimization,Windows.Services.Maps.MapRouteRestrictions)
+    @deprecated("Use get_driving_route_async() instead.")
+    def get_driving_route_with_optimization_and_restrictions_async(cls, start_point: windows_devices_geolocation.Geopoint, end_point: windows_devices_geolocation.Geopoint, optimization: MapRouteOptimization, restrictions: MapRouteRestrictions, /) -> windows_foundation.IAsyncOperation[MapRouteFinderResult]: ...
+    # Deprecated alias of get_driving_route_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.MapRouteFinderResult> Windows.Services.Maps.MapRouteFinder::GetDrivingRouteAsync(Windows.Devices.Geolocation.Geopoint,Windows.Devices.Geolocation.Geopoint,Windows.Services.Maps.MapRouteOptimization,Windows.Services.Maps.MapRouteRestrictions,System.Double)
+    @deprecated("Use get_driving_route_async() instead.")
+    def get_driving_route_with_optimization_restrictions_and_heading_async(cls, start_point: windows_devices_geolocation.Geopoint, end_point: windows_devices_geolocation.Geopoint, optimization: MapRouteOptimization, restrictions: MapRouteRestrictions, heading_in_degrees: winrt.system.Double, /) -> windows_foundation.IAsyncOperation[MapRouteFinderResult]: ...
+    # Deprecated alias of get_driving_route_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.MapRouteFinderResult> Windows.Services.Maps.MapRouteFinder::GetDrivingRouteAsync(Windows.Devices.Geolocation.Geopoint,Windows.Devices.Geolocation.Geopoint,Windows.Services.Maps.MapRouteDrivingOptions)
+    @deprecated("Use get_driving_route_async() instead.")
+    def get_driving_route_with_options_async(cls, start_point: windows_devices_geolocation.Geopoint, end_point: windows_devices_geolocation.Geopoint, options: MapRouteDrivingOptions, /) -> windows_foundation.IAsyncOperation[MapRouteFinderResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.MapRouteFinderResult> Windows.Services.Maps.MapRouteFinder::GetDrivingRouteFromEnhancedWaypointsAsync(Windows.Foundation.Collections.IIterable`1<Windows.Services.Maps.EnhancedWaypoint>)
     def get_driving_route_from_enhanced_waypoints_async(cls, waypoints: typing.Iterable[EnhancedWaypoint], /) -> windows_foundation.IAsyncOperation[MapRouteFinderResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.MapRouteFinderResult> Windows.Services.Maps.MapRouteFinder::GetDrivingRouteFromEnhancedWaypointsAsync(Windows.Foundation.Collections.IIterable`1<Windows.Services.Maps.EnhancedWaypoint>,Windows.Services.Maps.MapRouteDrivingOptions)
+    def get_driving_route_from_enhanced_waypoints_async(cls, waypoints: typing.Iterable[EnhancedWaypoint], options: MapRouteDrivingOptions, /) -> windows_foundation.IAsyncOperation[MapRouteFinderResult]: ...
+    # Deprecated alias of get_driving_route_from_enhanced_waypoints_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.MapRouteFinderResult> Windows.Services.Maps.MapRouteFinder::GetDrivingRouteFromEnhancedWaypointsAsync(Windows.Foundation.Collections.IIterable`1<Windows.Services.Maps.EnhancedWaypoint>,Windows.Services.Maps.MapRouteDrivingOptions)
+    @deprecated("Use get_driving_route_from_enhanced_waypoints_async() instead.")
     def get_driving_route_from_enhanced_waypoints_with_options_async(cls, waypoints: typing.Iterable[EnhancedWaypoint], options: MapRouteDrivingOptions, /) -> windows_foundation.IAsyncOperation[MapRouteFinderResult]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.MapRouteFinderResult> Windows.Services.Maps.MapRouteFinder::GetDrivingRouteFromWaypointsAsync(Windows.Foundation.Collections.IIterable`1<Windows.Devices.Geolocation.Geopoint>,Windows.Services.Maps.MapRouteOptimization)
-    def get_driving_route_from_waypoints_and_optimization_async(cls, way_points: typing.Iterable[windows_devices_geolocation.Geopoint], optimization: MapRouteOptimization, /) -> windows_foundation.IAsyncOperation[MapRouteFinderResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.MapRouteFinderResult> Windows.Services.Maps.MapRouteFinder::GetDrivingRouteFromWaypointsAsync(Windows.Foundation.Collections.IIterable`1<Windows.Devices.Geolocation.Geopoint>)
     def get_driving_route_from_waypoints_async(cls, way_points: typing.Iterable[windows_devices_geolocation.Geopoint], /) -> windows_foundation.IAsyncOperation[MapRouteFinderResult]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.MapRouteFinderResult> Windows.Services.Maps.MapRouteFinder::GetDrivingRouteFromWaypointsAsync(Windows.Foundation.Collections.IIterable`1<Windows.Devices.Geolocation.Geopoint>,Windows.Services.Maps.MapRouteOptimization)
+    def get_driving_route_from_waypoints_async(cls, way_points: typing.Iterable[windows_devices_geolocation.Geopoint], optimization: MapRouteOptimization, /) -> windows_foundation.IAsyncOperation[MapRouteFinderResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.MapRouteFinderResult> Windows.Services.Maps.MapRouteFinder::GetDrivingRouteFromWaypointsAsync(Windows.Foundation.Collections.IIterable`1<Windows.Devices.Geolocation.Geopoint>,Windows.Services.Maps.MapRouteOptimization,Windows.Services.Maps.MapRouteRestrictions)
-    def get_driving_route_from_waypoints_optimization_and_restrictions_async(cls, way_points: typing.Iterable[windows_devices_geolocation.Geopoint], optimization: MapRouteOptimization, restrictions: MapRouteRestrictions, /) -> windows_foundation.IAsyncOperation[MapRouteFinderResult]: ...
+    def get_driving_route_from_waypoints_async(cls, way_points: typing.Iterable[windows_devices_geolocation.Geopoint], optimization: MapRouteOptimization, restrictions: MapRouteRestrictions, /) -> windows_foundation.IAsyncOperation[MapRouteFinderResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.MapRouteFinderResult> Windows.Services.Maps.MapRouteFinder::GetDrivingRouteFromWaypointsAsync(Windows.Foundation.Collections.IIterable`1<Windows.Devices.Geolocation.Geopoint>,Windows.Services.Maps.MapRouteOptimization,Windows.Services.Maps.MapRouteRestrictions,System.Double)
+    def get_driving_route_from_waypoints_async(cls, way_points: typing.Iterable[windows_devices_geolocation.Geopoint], optimization: MapRouteOptimization, restrictions: MapRouteRestrictions, heading_in_degrees: winrt.system.Double, /) -> windows_foundation.IAsyncOperation[MapRouteFinderResult]: ...
+    # Deprecated alias of get_driving_route_from_waypoints_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.MapRouteFinderResult> Windows.Services.Maps.MapRouteFinder::GetDrivingRouteFromWaypointsAsync(Windows.Foundation.Collections.IIterable`1<Windows.Devices.Geolocation.Geopoint>,Windows.Services.Maps.MapRouteOptimization)
+    @deprecated("Use get_driving_route_from_waypoints_async() instead.")
+    def get_driving_route_from_waypoints_and_optimization_async(cls, way_points: typing.Iterable[windows_devices_geolocation.Geopoint], optimization: MapRouteOptimization, /) -> windows_foundation.IAsyncOperation[MapRouteFinderResult]: ...
+    # Deprecated alias of get_driving_route_from_waypoints_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.MapRouteFinderResult> Windows.Services.Maps.MapRouteFinder::GetDrivingRouteFromWaypointsAsync(Windows.Foundation.Collections.IIterable`1<Windows.Devices.Geolocation.Geopoint>,Windows.Services.Maps.MapRouteOptimization,Windows.Services.Maps.MapRouteRestrictions)
+    @deprecated("Use get_driving_route_from_waypoints_async() instead.")
+    def get_driving_route_from_waypoints_optimization_and_restrictions_async(cls, way_points: typing.Iterable[windows_devices_geolocation.Geopoint], optimization: MapRouteOptimization, restrictions: MapRouteRestrictions, /) -> windows_foundation.IAsyncOperation[MapRouteFinderResult]: ...
+    # Deprecated alias of get_driving_route_from_waypoints_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.MapRouteFinderResult> Windows.Services.Maps.MapRouteFinder::GetDrivingRouteFromWaypointsAsync(Windows.Foundation.Collections.IIterable`1<Windows.Devices.Geolocation.Geopoint>,Windows.Services.Maps.MapRouteOptimization,Windows.Services.Maps.MapRouteRestrictions,System.Double)
+    @deprecated("Use get_driving_route_from_waypoints_async() instead.")
     def get_driving_route_from_waypoints_optimization_restrictions_and_heading_async(cls, way_points: typing.Iterable[windows_devices_geolocation.Geopoint], optimization: MapRouteOptimization, restrictions: MapRouteRestrictions, heading_in_degrees: winrt.system.Double, /) -> windows_foundation.IAsyncOperation[MapRouteFinderResult]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.MapRouteFinderResult> Windows.Services.Maps.MapRouteFinder::GetDrivingRouteAsync(Windows.Devices.Geolocation.Geopoint,Windows.Devices.Geolocation.Geopoint,Windows.Services.Maps.MapRouteOptimization,Windows.Services.Maps.MapRouteRestrictions)
-    def get_driving_route_with_optimization_and_restrictions_async(cls, start_point: windows_devices_geolocation.Geopoint, end_point: windows_devices_geolocation.Geopoint, optimization: MapRouteOptimization, restrictions: MapRouteRestrictions, /) -> windows_foundation.IAsyncOperation[MapRouteFinderResult]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.MapRouteFinderResult> Windows.Services.Maps.MapRouteFinder::GetDrivingRouteAsync(Windows.Devices.Geolocation.Geopoint,Windows.Devices.Geolocation.Geopoint,Windows.Services.Maps.MapRouteOptimization)
     def get_driving_route_with_optimization_async(cls, start_point: windows_devices_geolocation.Geopoint, end_point: windows_devices_geolocation.Geopoint, optimization: MapRouteOptimization, /) -> windows_foundation.IAsyncOperation[MapRouteFinderResult]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.MapRouteFinderResult> Windows.Services.Maps.MapRouteFinder::GetDrivingRouteAsync(Windows.Devices.Geolocation.Geopoint,Windows.Devices.Geolocation.Geopoint,Windows.Services.Maps.MapRouteOptimization,Windows.Services.Maps.MapRouteRestrictions,System.Double)
-    def get_driving_route_with_optimization_restrictions_and_heading_async(cls, start_point: windows_devices_geolocation.Geopoint, end_point: windows_devices_geolocation.Geopoint, optimization: MapRouteOptimization, restrictions: MapRouteRestrictions, heading_in_degrees: winrt.system.Double, /) -> windows_foundation.IAsyncOperation[MapRouteFinderResult]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.MapRouteFinderResult> Windows.Services.Maps.MapRouteFinder::GetDrivingRouteAsync(Windows.Devices.Geolocation.Geopoint,Windows.Devices.Geolocation.Geopoint,Windows.Services.Maps.MapRouteDrivingOptions)
-    def get_driving_route_with_options_async(cls, start_point: windows_devices_geolocation.Geopoint, end_point: windows_devices_geolocation.Geopoint, options: MapRouteDrivingOptions, /) -> windows_foundation.IAsyncOperation[MapRouteFinderResult]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.MapRouteFinderResult> Windows.Services.Maps.MapRouteFinder::GetWalkingRouteAsync(Windows.Devices.Geolocation.Geopoint,Windows.Devices.Geolocation.Geopoint)
     def get_walking_route_async(cls, start_point: windows_devices_geolocation.Geopoint, end_point: windows_devices_geolocation.Geopoint, /) -> windows_foundation.IAsyncOperation[MapRouteFinderResult]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.MapRouteFinderResult> Windows.Services.Maps.MapRouteFinder::GetWalkingRouteFromWaypointsAsync(Windows.Foundation.Collections.IIterable`1<Windows.Devices.Geolocation.Geopoint>)
@@ -337,29 +388,53 @@ class MapService(winrt.system.Object, metaclass=MapService_Static):
 
 @typing.final
 class PlaceInfo_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Services.Maps.PlaceInfo Windows.Services.Maps.PlaceInfo::Create(Windows.Devices.Geolocation.Geopoint)
     def create(cls, reference_point: windows_devices_geolocation.Geopoint, /) -> PlaceInfo: ...
+    @typing.overload
+    # Windows.Services.Maps.PlaceInfo Windows.Services.Maps.PlaceInfo::Create(Windows.Devices.Geolocation.Geopoint,Windows.Services.Maps.PlaceInfoCreateOptions)
+    def create(cls, reference_point: windows_devices_geolocation.Geopoint, options: PlaceInfoCreateOptions, /) -> PlaceInfo: ...
+    # Deprecated alias of create() for pywinrt v3.x compatibility.
+    # Windows.Services.Maps.PlaceInfo Windows.Services.Maps.PlaceInfo::Create(Windows.Devices.Geolocation.Geopoint,Windows.Services.Maps.PlaceInfoCreateOptions)
+    @deprecated("Use create() instead.")
+    def create_with_geopoint_and_options(cls, reference_point: windows_devices_geolocation.Geopoint, options: PlaceInfoCreateOptions, /) -> PlaceInfo: ...
+    @typing.overload
     # Windows.Services.Maps.PlaceInfo Windows.Services.Maps.PlaceInfo::CreateFromAddress(System.String)
     def create_from_address(cls, display_address: str, /) -> PlaceInfo: ...
+    @typing.overload
     # Windows.Services.Maps.PlaceInfo Windows.Services.Maps.PlaceInfo::CreateFromAddress(System.String,System.String)
+    def create_from_address(cls, display_address: str, display_name: str, /) -> PlaceInfo: ...
+    # Deprecated alias of create_from_address() for pywinrt v3.x compatibility.
+    # Windows.Services.Maps.PlaceInfo Windows.Services.Maps.PlaceInfo::CreateFromAddress(System.String,System.String)
+    @deprecated("Use create_from_address() instead.")
     def create_from_address_with_name(cls, display_address: str, display_name: str, /) -> PlaceInfo: ...
+    @typing.overload
     # Windows.Services.Maps.PlaceInfo Windows.Services.Maps.PlaceInfo::CreateFromIdentifier(System.String)
     def create_from_identifier(cls, identifier: str, /) -> PlaceInfo: ...
+    @typing.overload
     # Windows.Services.Maps.PlaceInfo Windows.Services.Maps.PlaceInfo::CreateFromIdentifier(System.String,Windows.Devices.Geolocation.Geopoint,Windows.Services.Maps.PlaceInfoCreateOptions)
+    def create_from_identifier(cls, identifier: str, default_point: windows_devices_geolocation.Geopoint, options: PlaceInfoCreateOptions, /) -> PlaceInfo: ...
+    # Deprecated alias of create_from_identifier() for pywinrt v3.x compatibility.
+    # Windows.Services.Maps.PlaceInfo Windows.Services.Maps.PlaceInfo::CreateFromIdentifier(System.String,Windows.Devices.Geolocation.Geopoint,Windows.Services.Maps.PlaceInfoCreateOptions)
+    @deprecated("Use create_from_identifier() instead.")
     def create_from_identifier_with_options(cls, identifier: str, default_point: windows_devices_geolocation.Geopoint, options: PlaceInfoCreateOptions, /) -> PlaceInfo: ...
     # Windows.Services.Maps.PlaceInfo Windows.Services.Maps.PlaceInfo::CreateFromMapLocation(Windows.Services.Maps.MapLocation)
     def create_from_map_location(cls, location: MapLocation, /) -> PlaceInfo: ...
-    # Windows.Services.Maps.PlaceInfo Windows.Services.Maps.PlaceInfo::Create(Windows.Devices.Geolocation.Geopoint,Windows.Services.Maps.PlaceInfoCreateOptions)
-    def create_with_geopoint_and_options(cls, reference_point: windows_devices_geolocation.Geopoint, options: PlaceInfoCreateOptions, /) -> PlaceInfo: ...
     # System.Boolean Windows.Services.Maps.PlaceInfo::get_IsShowSupported()
     @_property
     def is_show_supported(cls) -> bool: ...
 
 @typing.final
 class PlaceInfo(winrt.system.Object, metaclass=PlaceInfo_Static):
+    @typing.overload
     # System.Void Windows.Services.Maps.PlaceInfo::Show(Windows.Foundation.Rect)
     def show(self, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> None: ...
+    @typing.overload
     # System.Void Windows.Services.Maps.PlaceInfo::Show(Windows.Foundation.Rect,Windows.UI.Popups.Placement)
+    def show(self, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], preferred_placement: windows_ui_popups.Placement, /) -> None: ...
+    # Deprecated alias of show() for pywinrt v3.x compatibility.
+    # System.Void Windows.Services.Maps.PlaceInfo::Show(Windows.Foundation.Rect,Windows.UI.Popups.Placement)
+    @deprecated("Use show() instead.")
     def show_with_preferred_placement(self, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], preferred_placement: windows_ui_popups.Placement, /) -> None: ...
     # System.String Windows.Services.Maps.PlaceInfo::get_DisplayAddress()
     @_property

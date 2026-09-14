@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -50,9 +51,15 @@ class ShareOperation(winrt.system.Object):
     def dismiss_ui(self) -> None: ...
     # System.Void Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation::RemoveThisQuickLink()
     def remove_this_quick_link(self) -> None: ...
+    @typing.overload
     # System.Void Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation::ReportCompleted()
     def report_completed(self) -> None: ...
+    @typing.overload
     # System.Void Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation::ReportCompleted(Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink)
+    def report_completed(self, quicklink: QuickLink, /) -> None: ...
+    # Deprecated alias of report_completed() for pywinrt v3.x compatibility.
+    # System.Void Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation::ReportCompleted(Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink)
+    @deprecated("Use report_completed() instead.")
     def report_completed_with_quick_link(self, quicklink: QuickLink, /) -> None: ...
     # System.Void Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation::ReportDataRetrieved()
     def report_data_retrieved(self) -> None: ...

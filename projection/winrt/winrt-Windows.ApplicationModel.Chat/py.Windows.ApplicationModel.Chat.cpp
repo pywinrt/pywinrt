@@ -266,18 +266,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* ChatCapabilitiesManager_GetCachedCapabilitiesForTransportAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -351,18 +340,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* ChatCapabilitiesManager_GetCapabilitiesFromNetworkForTransportAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -425,9 +403,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyMethodDef methods_ChatCapabilitiesManager_Static[] = {
         { "get_cached_capabilities_async", reinterpret_cast<PyCFunction>(ChatCapabilitiesManager_GetCachedCapabilitiesAsync), METH_VARARGS, nullptr },
-        { "get_cached_capabilities_for_transport_async", reinterpret_cast<PyCFunction>(ChatCapabilitiesManager_GetCachedCapabilitiesForTransportAsync), METH_VARARGS, nullptr },
         { "get_capabilities_from_network_async", reinterpret_cast<PyCFunction>(ChatCapabilitiesManager_GetCapabilitiesFromNetworkAsync), METH_VARARGS, nullptr },
-        { "get_capabilities_from_network_for_transport_async", reinterpret_cast<PyCFunction>(ChatCapabilitiesManager_GetCapabilitiesFromNetworkForTransportAsync), METH_VARARGS, nullptr },
         { }};
 
     static PyType_Slot type_slots_ChatCapabilitiesManager_Static[] = 
@@ -542,7 +518,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         }
     }
 
-    static PyObject* ChatConversation_MarkAllMessagesAsReadAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatConversation* self, PyObject* args) noexcept
+    static PyObject* ChatConversation_MarkMessagesAsReadAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatConversation* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -575,18 +551,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* ChatConversation_MarkMessagesAsReadAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatConversation* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -1233,7 +1198,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     static PyMethodDef _methods_ChatConversation[] = {
         { "delete_async", reinterpret_cast<PyCFunction>(ChatConversation_DeleteAsync), METH_VARARGS, nullptr },
         { "get_message_reader", reinterpret_cast<PyCFunction>(ChatConversation_GetMessageReader), METH_VARARGS, nullptr },
-        { "mark_all_messages_as_read_async", reinterpret_cast<PyCFunction>(ChatConversation_MarkAllMessagesAsReadAsync), METH_VARARGS, nullptr },
         { "mark_messages_as_read_async", reinterpret_cast<PyCFunction>(ChatConversation_MarkMessagesAsReadAsync), METH_VARARGS, nullptr },
         { "notify_local_participant_composing", reinterpret_cast<PyCFunction>(ChatConversation_NotifyLocalParticipantComposing), METH_VARARGS, nullptr },
         { "notify_remote_participant_composing", reinterpret_cast<PyCFunction>(ChatConversation_NotifyRemoteParticipantComposing), METH_VARARGS, nullptr },
@@ -1320,18 +1284,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* ChatConversationReader_ReadBatchWithCountAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatConversationReader* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -1395,7 +1348,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyMethodDef _methods_ChatConversationReader[] = {
         { "read_batch_async", reinterpret_cast<PyCFunction>(ChatConversationReader_ReadBatchAsync), METH_VARARGS, nullptr },
-        { "read_batch_with_count_async", reinterpret_cast<PyCFunction>(ChatConversationReader_ReadBatchWithCountAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ChatConversationReader, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ChatConversationReader), METH_O | METH_STATIC, nullptr },
         { }};
@@ -5569,18 +5521,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* ChatMessageReader_ReadBatchWithCountAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageReader* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -5644,7 +5585,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyMethodDef _methods_ChatMessageReader[] = {
         { "read_batch_async", reinterpret_cast<PyCFunction>(ChatMessageReader_ReadBatchAsync), METH_VARARGS, nullptr },
-        { "read_batch_with_count_async", reinterpret_cast<PyCFunction>(ChatMessageReader_ReadBatchWithCountAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ChatMessageReader, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ChatMessageReader), METH_O | METH_STATIC, nullptr },
         { }};
@@ -5845,18 +5785,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* ChatMessageStore_GetConversationForTransportsAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStore* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -5880,48 +5809,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 {
                     auto _gil = release_gil();
                     return self->obj.GetConversationAsync(param0, param1);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* ChatMessageStore_GetConversationForTransportsReader(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStore* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageStore", L"GetConversationReader", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.GetConversationReader(param0);
                 }());
             }
             catch (...)
@@ -6004,6 +5891,37 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 {
                     auto _gil = release_gil();
                     return self->obj.GetConversationReader();
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Chat.ChatMessageStore", L"GetConversationReader", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetConversationReader(param0);
                 }());
             }
             catch (...)
@@ -6146,7 +6064,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         }
     }
 
-    static PyObject* ChatMessageStore_GetMessageReader1(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStore* self, PyObject* args) noexcept
+    static PyObject* ChatMessageStore_GetMessageReader(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStore* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -6179,18 +6097,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* ChatMessageStore_GetMessageReader2(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStore* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -6303,18 +6210,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* ChatMessageStore_GetUnseenCountForTransportsReaderAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStore* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -6385,18 +6281,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* ChatMessageStore_MarkAsSeenForTransportsAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStore* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -6917,20 +6802,15 @@ namespace py::cpp::Windows::ApplicationModel::Chat
         { "download_message_async", reinterpret_cast<PyCFunction>(ChatMessageStore_DownloadMessageAsync), METH_VARARGS, nullptr },
         { "forward_message_async", reinterpret_cast<PyCFunction>(ChatMessageStore_ForwardMessageAsync), METH_VARARGS, nullptr },
         { "get_conversation_async", reinterpret_cast<PyCFunction>(ChatMessageStore_GetConversationAsync), METH_VARARGS, nullptr },
-        { "get_conversation_for_transports_async", reinterpret_cast<PyCFunction>(ChatMessageStore_GetConversationForTransportsAsync), METH_VARARGS, nullptr },
-        { "get_conversation_for_transports_reader", reinterpret_cast<PyCFunction>(ChatMessageStore_GetConversationForTransportsReader), METH_VARARGS, nullptr },
         { "get_conversation_from_threading_info_async", reinterpret_cast<PyCFunction>(ChatMessageStore_GetConversationFromThreadingInfoAsync), METH_VARARGS, nullptr },
         { "get_conversation_reader", reinterpret_cast<PyCFunction>(ChatMessageStore_GetConversationReader), METH_VARARGS, nullptr },
         { "get_message_async", reinterpret_cast<PyCFunction>(ChatMessageStore_GetMessageAsync), METH_VARARGS, nullptr },
         { "get_message_by_remote_id_async", reinterpret_cast<PyCFunction>(ChatMessageStore_GetMessageByRemoteIdAsync), METH_VARARGS, nullptr },
         { "get_message_by_sync_id_async", reinterpret_cast<PyCFunction>(ChatMessageStore_GetMessageBySyncIdAsync), METH_VARARGS, nullptr },
-        { "get_message_reader1", reinterpret_cast<PyCFunction>(ChatMessageStore_GetMessageReader1), METH_VARARGS, nullptr },
-        { "get_message_reader2", reinterpret_cast<PyCFunction>(ChatMessageStore_GetMessageReader2), METH_VARARGS, nullptr },
+        { "get_message_reader", reinterpret_cast<PyCFunction>(ChatMessageStore_GetMessageReader), METH_VARARGS, nullptr },
         { "get_search_reader", reinterpret_cast<PyCFunction>(ChatMessageStore_GetSearchReader), METH_VARARGS, nullptr },
         { "get_unseen_count_async", reinterpret_cast<PyCFunction>(ChatMessageStore_GetUnseenCountAsync), METH_VARARGS, nullptr },
-        { "get_unseen_count_for_transports_reader_async", reinterpret_cast<PyCFunction>(ChatMessageStore_GetUnseenCountForTransportsReaderAsync), METH_VARARGS, nullptr },
         { "mark_as_seen_async", reinterpret_cast<PyCFunction>(ChatMessageStore_MarkAsSeenAsync), METH_VARARGS, nullptr },
-        { "mark_as_seen_for_transports_async", reinterpret_cast<PyCFunction>(ChatMessageStore_MarkAsSeenForTransportsAsync), METH_VARARGS, nullptr },
         { "mark_message_read_async", reinterpret_cast<PyCFunction>(ChatMessageStore_MarkMessageReadAsync), METH_VARARGS, nullptr },
         { "retry_send_message_async", reinterpret_cast<PyCFunction>(ChatMessageStore_RetrySendMessageAsync), METH_VARARGS, nullptr },
         { "save_message_async", reinterpret_cast<PyCFunction>(ChatMessageStore_SaveMessageAsync), METH_VARARGS, nullptr },
@@ -8439,18 +8319,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* ChatSearchReader_ReadBatchWithCountAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatSearchReader* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -8514,7 +8383,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyMethodDef _methods_ChatSearchReader[] = {
         { "read_batch_async", reinterpret_cast<PyCFunction>(ChatSearchReader_ReadBatchAsync), METH_VARARGS, nullptr },
-        { "read_batch_with_count_async", reinterpret_cast<PyCFunction>(ChatSearchReader_ReadBatchWithCountAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ChatSearchReader, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ChatSearchReader), METH_O | METH_STATIC, nullptr },
         { }};

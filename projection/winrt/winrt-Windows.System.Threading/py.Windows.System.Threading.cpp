@@ -48,18 +48,39 @@ namespace py::cpp::Windows::System::Threading
                 return nullptr;
             }
         }
-        else
+        else if (arg_count == 2)
         {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Threading.ThreadPool", L"RunAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::System::Threading::WorkItemHandler>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::System::Threading::WorkItemPriority>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::System::Threading::ThreadPool::RunAsync(param0, param1);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
         }
-    }
-
-    static PyObject* ThreadPool_RunWithPriorityAndOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -99,49 +120,6 @@ namespace py::cpp::Windows::System::Threading
         }
     }
 
-    static PyObject* ThreadPool_RunWithPriorityAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Threading.ThreadPool", L"RunAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::System::Threading::WorkItemHandler>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::System::Threading::WorkItemPriority>(args, 1);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return winrt::Windows::System::Threading::ThreadPool::RunAsync(param0, param1);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_ThreadPool[] = {
         { }};
 
@@ -166,8 +144,6 @@ namespace py::cpp::Windows::System::Threading
 
     static PyMethodDef methods_ThreadPool_Static[] = {
         { "run_async", reinterpret_cast<PyCFunction>(ThreadPool_RunAsync), METH_VARARGS, nullptr },
-        { "run_with_priority_and_options_async", reinterpret_cast<PyCFunction>(ThreadPool_RunWithPriorityAndOptionsAsync), METH_VARARGS, nullptr },
-        { "run_with_priority_async", reinterpret_cast<PyCFunction>(ThreadPool_RunWithPriorityAsync), METH_VARARGS, nullptr },
         { }};
 
     static PyType_Slot type_slots_ThreadPool_Static[] = 
@@ -279,18 +255,7 @@ namespace py::cpp::Windows::System::Threading
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* ThreadPoolTimer_CreatePeriodicTimerWithCompletion(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -366,18 +331,7 @@ namespace py::cpp::Windows::System::Threading
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* ThreadPoolTimer_CreateTimerWithCompletion(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -531,9 +485,7 @@ namespace py::cpp::Windows::System::Threading
 
     static PyMethodDef methods_ThreadPoolTimer_Static[] = {
         { "create_periodic_timer", reinterpret_cast<PyCFunction>(ThreadPoolTimer_CreatePeriodicTimer), METH_VARARGS, nullptr },
-        { "create_periodic_timer_with_completion", reinterpret_cast<PyCFunction>(ThreadPoolTimer_CreatePeriodicTimerWithCompletion), METH_VARARGS, nullptr },
         { "create_timer", reinterpret_cast<PyCFunction>(ThreadPoolTimer_CreateTimer), METH_VARARGS, nullptr },
-        { "create_timer_with_completion", reinterpret_cast<PyCFunction>(ThreadPoolTimer_CreateTimerWithCompletion), METH_VARARGS, nullptr },
         { }};
 
     static PyType_Slot type_slots_ThreadPoolTimer_Static[] = 

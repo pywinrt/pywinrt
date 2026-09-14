@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_networking_networkoperators import (
     ESimProfileInstallProgress,
@@ -499,3 +500,11 @@ class UssdResultCode(enum.IntEnum):
     OPERATION_NOT_SUPPORTED = 4
     NETWORK_TIMEOUT = 5
 
+winrt.runtime._internals.alias_method(ESim, "discover_with_server_address_and_matching_id", "discover")
+winrt.runtime._internals.alias_method(ESim, "discover_with_server_address_and_matching_id_async", "discover_async")
+winrt.runtime._internals.alias_method(ESimProfileMetadata, "confirm_install_with_confirmation_code_async", "confirm_install_async")
+winrt.runtime._internals.alias_method(MobileBroadbandModem, "get_is_passthrough_enabled_with_slot_index", "get_is_passthrough_enabled")
+winrt.runtime._internals.alias_method(MobileBroadbandModem, "get_is_passthrough_enabled_with_slot_index_async", "get_is_passthrough_enabled_async")
+winrt.runtime._internals.alias_method(MobileBroadbandModem, "set_is_passthrough_enabled_with_slot_index", "set_is_passthrough_enabled")
+winrt.runtime._internals.alias_method(MobileBroadbandModem, "set_is_passthrough_enabled_with_slot_index_async", "set_is_passthrough_enabled_async")
+winrt.runtime._internals.alias_static_method(NetworkOperatorTetheringManager, "create_from_connection_profile_with_target_adapter", "create_from_connection_profile")

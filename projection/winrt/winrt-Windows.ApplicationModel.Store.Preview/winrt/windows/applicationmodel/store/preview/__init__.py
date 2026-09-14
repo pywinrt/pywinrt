@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_applicationmodel_store_preview import (
     DeliveryOptimizationSettings,
@@ -89,3 +90,4 @@ class StoreSystemFeature(enum.IntEnum):
     VIDEO_MEMORY_1_GB = 33
     ARCHITECTURE_ARM64 = 34
 
+winrt.runtime._internals.alias_static_method(WebAuthenticationCoreManagerHelper, "request_token_with_ui_element_hosting_and_web_account_async", "request_token_with_ui_element_hosting_async")

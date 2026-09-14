@@ -40,3 +40,9 @@ class JsonValueType(enum.IntEnum):
 
 winrt.runtime._internals.mixin_mutable_sequence(JsonArray)
 winrt.runtime._internals.mixin_mutable_mapping(JsonObject)
+winrt.runtime._internals.alias_method(JsonObject, "get_named_array_or_default", "get_named_array")
+winrt.runtime._internals.alias_method(JsonObject, "get_named_boolean_or_default", "get_named_boolean")
+winrt.runtime._internals.alias_method(JsonObject, "get_named_number_or_default", "get_named_number")
+winrt.runtime._internals.alias_method(JsonObject, "get_named_object_or_default", "get_named_object")
+winrt.runtime._internals.alias_method(JsonObject, "get_named_string_or_default", "get_named_string")
+winrt.runtime._internals.alias_method(JsonObject, "get_named_value_or_default", "get_named_value")

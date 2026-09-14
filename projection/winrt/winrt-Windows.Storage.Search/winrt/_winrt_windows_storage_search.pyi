@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -33,20 +34,37 @@ class SortEntry:
 
 @typing.final
 class ContentIndexer_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Storage.Search.ContentIndexer Windows.Storage.Search.ContentIndexer::GetIndexer()
     def get_indexer(cls) -> ContentIndexer: ...
+    @typing.overload
     # Windows.Storage.Search.ContentIndexer Windows.Storage.Search.ContentIndexer::GetIndexer(System.String)
+    def get_indexer(cls, index_name: str, /) -> ContentIndexer: ...
+    # Deprecated alias of get_indexer() for pywinrt v3.x compatibility.
+    # Windows.Storage.Search.ContentIndexer Windows.Storage.Search.ContentIndexer::GetIndexer(System.String)
+    @deprecated("Use get_indexer() instead.")
     def get_indexer_with_name(cls, index_name: str, /) -> ContentIndexer: ...
 
 @typing.final
 class ContentIndexer(winrt.system.Object, metaclass=ContentIndexer_Static):
     # Windows.Foundation.IAsyncAction Windows.Storage.Search.ContentIndexer::AddAsync(Windows.Storage.Search.IIndexableContent)
     def add_async(self, indexable_content: IIndexableContent, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Storage.Search.ContentIndexerQuery Windows.Storage.Search.ContentIndexer::CreateQuery(System.String,Windows.Foundation.Collections.IIterable`1<System.String>)
     def create_query(self, search_filter: str, properties_to_retrieve: typing.Iterable[str], /) -> ContentIndexerQuery: ...
+    @typing.overload
     # Windows.Storage.Search.ContentIndexerQuery Windows.Storage.Search.ContentIndexer::CreateQuery(System.String,Windows.Foundation.Collections.IIterable`1<System.String>,Windows.Foundation.Collections.IIterable`1<Windows.Storage.Search.SortEntry>)
-    def create_query_with_sort_order(self, search_filter: str, properties_to_retrieve: typing.Iterable[str], sort_order: typing.Iterable[SortEntry], /) -> ContentIndexerQuery: ...
+    def create_query(self, search_filter: str, properties_to_retrieve: typing.Iterable[str], sort_order: typing.Iterable[SortEntry], /) -> ContentIndexerQuery: ...
+    @typing.overload
     # Windows.Storage.Search.ContentIndexerQuery Windows.Storage.Search.ContentIndexer::CreateQuery(System.String,Windows.Foundation.Collections.IIterable`1<System.String>,Windows.Foundation.Collections.IIterable`1<Windows.Storage.Search.SortEntry>,System.String)
+    def create_query(self, search_filter: str, properties_to_retrieve: typing.Iterable[str], sort_order: typing.Iterable[SortEntry], search_filter_language: str, /) -> ContentIndexerQuery: ...
+    # Deprecated alias of create_query() for pywinrt v3.x compatibility.
+    # Windows.Storage.Search.ContentIndexerQuery Windows.Storage.Search.ContentIndexer::CreateQuery(System.String,Windows.Foundation.Collections.IIterable`1<System.String>,Windows.Foundation.Collections.IIterable`1<Windows.Storage.Search.SortEntry>)
+    @deprecated("Use create_query() instead.")
+    def create_query_with_sort_order(self, search_filter: str, properties_to_retrieve: typing.Iterable[str], sort_order: typing.Iterable[SortEntry], /) -> ContentIndexerQuery: ...
+    # Deprecated alias of create_query() for pywinrt v3.x compatibility.
+    # Windows.Storage.Search.ContentIndexerQuery Windows.Storage.Search.ContentIndexer::CreateQuery(System.String,Windows.Foundation.Collections.IIterable`1<System.String>,Windows.Foundation.Collections.IIterable`1<Windows.Storage.Search.SortEntry>,System.String)
+    @deprecated("Use create_query() instead.")
     def create_query_with_sort_order_and_language(self, search_filter: str, properties_to_retrieve: typing.Iterable[str], sort_order: typing.Iterable[SortEntry], search_filter_language: str, /) -> ContentIndexerQuery: ...
     # Windows.Foundation.IAsyncAction Windows.Storage.Search.ContentIndexer::DeleteAllAsync()
     def delete_all_async(self) -> windows_foundation.IAsyncAction: ...
@@ -64,16 +82,28 @@ class ContentIndexer(winrt.system.Object, metaclass=ContentIndexer_Static):
 
 @typing.final
 class ContentIndexerQuery(winrt.system.Object):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.Search.IIndexableContent>> Windows.Storage.Search.ContentIndexerQuery::GetAsync()
     def get_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[IIndexableContent]]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.Search.IIndexableContent>> Windows.Storage.Search.ContentIndexerQuery::GetAsync(System.UInt32,System.UInt32)
+    def get_async(self, start_index: winrt.system.UInt32, max_items: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[typing.Sequence[IIndexableContent]]: ...
+    # Deprecated alias of get_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.Search.IIndexableContent>> Windows.Storage.Search.ContentIndexerQuery::GetAsync(System.UInt32,System.UInt32)
+    @deprecated("Use get_async() instead.")
+    def get_range_async(self, start_index: winrt.system.UInt32, max_items: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[typing.Sequence[IIndexableContent]]: ...
     # Windows.Foundation.IAsyncOperation`1<System.UInt32> Windows.Storage.Search.ContentIndexerQuery::GetCountAsync()
     def get_count_async(self) -> windows_foundation.IAsyncOperation[winrt.system.UInt32]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Foundation.Collections.IMapView`2<System.String,System.Object>>> Windows.Storage.Search.ContentIndexerQuery::GetPropertiesAsync()
     def get_properties_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[typing.Mapping[str, winrt.system.Object]]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Foundation.Collections.IMapView`2<System.String,System.Object>>> Windows.Storage.Search.ContentIndexerQuery::GetPropertiesAsync(System.UInt32,System.UInt32)
+    def get_properties_async(self, start_index: winrt.system.UInt32, max_items: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[typing.Sequence[typing.Mapping[str, winrt.system.Object]]]: ...
+    # Deprecated alias of get_properties_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Foundation.Collections.IMapView`2<System.String,System.Object>>> Windows.Storage.Search.ContentIndexerQuery::GetPropertiesAsync(System.UInt32,System.UInt32)
+    @deprecated("Use get_properties_async() instead.")
     def get_properties_range_async(self, start_index: winrt.system.UInt32, max_items: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[typing.Sequence[typing.Mapping[str, winrt.system.Object]]]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.Search.IIndexableContent>> Windows.Storage.Search.ContentIndexerQuery::GetAsync(System.UInt32,System.UInt32)
-    def get_range_async(self, start_index: winrt.system.UInt32, max_items: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[typing.Sequence[IIndexableContent]]: ...
     # Windows.Storage.StorageFolder Windows.Storage.Search.ContentIndexerQuery::get_QueryFolder()
     @_property
     def query_folder(self) -> windows_storage.StorageFolder: ...
@@ -217,9 +247,15 @@ class StorageFileQueryResult(winrt.system.Object, IStorageQueryResultBase):
     def find_start_index_async(self, value: winrt.system.Object, /) -> windows_foundation.IAsyncOperation[winrt.system.UInt32]: ...
     # Windows.Storage.Search.QueryOptions Windows.Storage.Search.StorageFileQueryResult::GetCurrentQueryOptions()
     def get_current_query_options(self) -> QueryOptions: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFile>> Windows.Storage.Search.StorageFileQueryResult::GetFilesAsync()
+    def get_files_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[windows_storage.StorageFile]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFile>> Windows.Storage.Search.StorageFileQueryResult::GetFilesAsync(System.UInt32,System.UInt32)
     def get_files_async(self, start_index: winrt.system.UInt32, max_number_of_items: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[typing.Sequence[windows_storage.StorageFile]]: ...
+    # Deprecated alias of get_files_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFile>> Windows.Storage.Search.StorageFileQueryResult::GetFilesAsync()
+    @deprecated("Use get_files_async() instead.")
     def get_files_async_default_start_and_count(self) -> windows_foundation.IAsyncOperation[typing.Sequence[windows_storage.StorageFile]]: ...
     # Windows.Foundation.IAsyncOperation`1<System.UInt32> Windows.Storage.Search.StorageFileQueryResult::GetItemCountAsync()
     def get_item_count_async(self) -> windows_foundation.IAsyncOperation[winrt.system.UInt32]: ...
@@ -245,9 +281,15 @@ class StorageFolderQueryResult(winrt.system.Object, IStorageQueryResultBase):
     def find_start_index_async(self, value: winrt.system.Object, /) -> windows_foundation.IAsyncOperation[winrt.system.UInt32]: ...
     # Windows.Storage.Search.QueryOptions Windows.Storage.Search.StorageFolderQueryResult::GetCurrentQueryOptions()
     def get_current_query_options(self) -> QueryOptions: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFolder>> Windows.Storage.Search.StorageFolderQueryResult::GetFoldersAsync()
+    def get_folders_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[windows_storage.StorageFolder]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFolder>> Windows.Storage.Search.StorageFolderQueryResult::GetFoldersAsync(System.UInt32,System.UInt32)
     def get_folders_async(self, start_index: winrt.system.UInt32, max_number_of_items: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[typing.Sequence[windows_storage.StorageFolder]]: ...
+    # Deprecated alias of get_folders_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFolder>> Windows.Storage.Search.StorageFolderQueryResult::GetFoldersAsync()
+    @deprecated("Use get_folders_async() instead.")
     def get_folders_async_default_start_and_count(self) -> windows_foundation.IAsyncOperation[typing.Sequence[windows_storage.StorageFolder]]: ...
     # Windows.Foundation.IAsyncOperation`1<System.UInt32> Windows.Storage.Search.StorageFolderQueryResult::GetItemCountAsync()
     def get_item_count_async(self) -> windows_foundation.IAsyncOperation[winrt.system.UInt32]: ...
@@ -273,9 +315,15 @@ class StorageItemQueryResult(winrt.system.Object, IStorageQueryResultBase):
     def get_current_query_options(self) -> QueryOptions: ...
     # Windows.Foundation.IAsyncOperation`1<System.UInt32> Windows.Storage.Search.StorageItemQueryResult::GetItemCountAsync()
     def get_item_count_async(self) -> windows_foundation.IAsyncOperation[winrt.system.UInt32]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.IStorageItem>> Windows.Storage.Search.StorageItemQueryResult::GetItemsAsync()
+    def get_items_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[windows_storage.IStorageItem]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.IStorageItem>> Windows.Storage.Search.StorageItemQueryResult::GetItemsAsync(System.UInt32,System.UInt32)
     def get_items_async(self, start_index: winrt.system.UInt32, max_number_of_items: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[typing.Sequence[windows_storage.IStorageItem]]: ...
+    # Deprecated alias of get_items_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.IStorageItem>> Windows.Storage.Search.StorageItemQueryResult::GetItemsAsync()
+    @deprecated("Use get_items_async() instead.")
     def get_items_async_default_start_and_count(self) -> windows_foundation.IAsyncOperation[typing.Sequence[windows_storage.IStorageItem]]: ...
     # Windows.Foundation.EventRegistrationToken Windows.Storage.Search.StorageItemQueryResult::add_ContentsChanged(Windows.Foundation.TypedEventHandler`2<Windows.Storage.Search.IStorageQueryResultBase,System.Object>)
     def add_contents_changed(self, handler: windows_foundation.TypedEventHandler[IStorageQueryResultBase, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
@@ -362,20 +410,32 @@ class IStorageFolderQueryOperations(winrt._winrt.IInspectable):
     # System.Boolean Windows.Storage.Search.IStorageFolderQueryOperations::AreQueryOptionsSupported(Windows.Storage.Search.QueryOptions)
     @abstractmethod
     def are_query_options_supported(self, query_options: QueryOptions, /) -> bool: ...
+    @typing.overload
+    # Windows.Storage.Search.StorageFileQueryResult Windows.Storage.Search.IStorageFolderQueryOperations::CreateFileQuery()
+    @abstractmethod
+    def create_file_query(self) -> StorageFileQueryResult: ...
+    @typing.overload
     # Windows.Storage.Search.StorageFileQueryResult Windows.Storage.Search.IStorageFolderQueryOperations::CreateFileQuery(Windows.Storage.Search.CommonFileQuery)
     @abstractmethod
     def create_file_query(self, query: CommonFileQuery, /) -> StorageFileQueryResult: ...
+    # Deprecated alias of create_file_query() for pywinrt v3.x compatibility.
     # Windows.Storage.Search.StorageFileQueryResult Windows.Storage.Search.IStorageFolderQueryOperations::CreateFileQuery()
-    @abstractmethod
+    @deprecated("Use create_file_query() instead.")
     def create_file_query_overload_default(self) -> StorageFileQueryResult: ...
     # Windows.Storage.Search.StorageFileQueryResult Windows.Storage.Search.IStorageFolderQueryOperations::CreateFileQueryWithOptions(Windows.Storage.Search.QueryOptions)
     @abstractmethod
     def create_file_query_with_options(self, query_options: QueryOptions, /) -> StorageFileQueryResult: ...
+    @typing.overload
+    # Windows.Storage.Search.StorageFolderQueryResult Windows.Storage.Search.IStorageFolderQueryOperations::CreateFolderQuery()
+    @abstractmethod
+    def create_folder_query(self) -> StorageFolderQueryResult: ...
+    @typing.overload
     # Windows.Storage.Search.StorageFolderQueryResult Windows.Storage.Search.IStorageFolderQueryOperations::CreateFolderQuery(Windows.Storage.Search.CommonFolderQuery)
     @abstractmethod
     def create_folder_query(self, query: CommonFolderQuery, /) -> StorageFolderQueryResult: ...
+    # Deprecated alias of create_folder_query() for pywinrt v3.x compatibility.
     # Windows.Storage.Search.StorageFolderQueryResult Windows.Storage.Search.IStorageFolderQueryOperations::CreateFolderQuery()
-    @abstractmethod
+    @deprecated("Use create_folder_query() instead.")
     def create_folder_query_overload_default(self) -> StorageFolderQueryResult: ...
     # Windows.Storage.Search.StorageFolderQueryResult Windows.Storage.Search.IStorageFolderQueryOperations::CreateFolderQueryWithOptions(Windows.Storage.Search.QueryOptions)
     @abstractmethod
@@ -386,17 +446,29 @@ class IStorageFolderQueryOperations(winrt._winrt.IInspectable):
     # Windows.Storage.Search.StorageItemQueryResult Windows.Storage.Search.IStorageFolderQueryOperations::CreateItemQueryWithOptions(Windows.Storage.Search.QueryOptions)
     @abstractmethod
     def create_item_query_with_options(self, query_options: QueryOptions, /) -> StorageItemQueryResult: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFile>> Windows.Storage.Search.IStorageFolderQueryOperations::GetFilesAsync(Windows.Storage.Search.CommonFileQuery)
+    @abstractmethod
+    def get_files_async(self, query: CommonFileQuery, /) -> windows_foundation.IAsyncOperation[typing.Sequence[windows_storage.StorageFile]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFile>> Windows.Storage.Search.IStorageFolderQueryOperations::GetFilesAsync(Windows.Storage.Search.CommonFileQuery,System.UInt32,System.UInt32)
     @abstractmethod
     def get_files_async(self, query: CommonFileQuery, start_index: winrt.system.UInt32, max_items_to_retrieve: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[typing.Sequence[windows_storage.StorageFile]]: ...
+    # Deprecated alias of get_files_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFile>> Windows.Storage.Search.IStorageFolderQueryOperations::GetFilesAsync(Windows.Storage.Search.CommonFileQuery)
-    @abstractmethod
+    @deprecated("Use get_files_async() instead.")
     def get_files_async_overload_default_start_and_count(self, query: CommonFileQuery, /) -> windows_foundation.IAsyncOperation[typing.Sequence[windows_storage.StorageFile]]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFolder>> Windows.Storage.Search.IStorageFolderQueryOperations::GetFoldersAsync(Windows.Storage.Search.CommonFolderQuery)
+    @abstractmethod
+    def get_folders_async(self, query: CommonFolderQuery, /) -> windows_foundation.IAsyncOperation[typing.Sequence[windows_storage.StorageFolder]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFolder>> Windows.Storage.Search.IStorageFolderQueryOperations::GetFoldersAsync(Windows.Storage.Search.CommonFolderQuery,System.UInt32,System.UInt32)
     @abstractmethod
     def get_folders_async(self, query: CommonFolderQuery, start_index: winrt.system.UInt32, max_items_to_retrieve: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[typing.Sequence[windows_storage.StorageFolder]]: ...
+    # Deprecated alias of get_folders_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFolder>> Windows.Storage.Search.IStorageFolderQueryOperations::GetFoldersAsync(Windows.Storage.Search.CommonFolderQuery)
-    @abstractmethod
+    @deprecated("Use get_folders_async() instead.")
     def get_folders_async_overload_default_start_and_count(self, query: CommonFolderQuery, /) -> windows_foundation.IAsyncOperation[typing.Sequence[windows_storage.StorageFolder]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Search.IndexedState> Windows.Storage.Search.IStorageFolderQueryOperations::GetIndexedStateAsync()
     @abstractmethod

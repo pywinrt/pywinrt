@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -26,13 +27,25 @@ class MicrosoftAccountMultiFactorAuthenticationManager_Static(winrt._winrt.IInsp
 class MicrosoftAccountMultiFactorAuthenticationManager(winrt.system.Object, metaclass=MicrosoftAccountMultiFactorAuthenticationManager_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse> Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager::AddDeviceAsync(System.String,System.String,System.String)
     def add_device_async(self, user_account_id: str, authentication_token: str, wns_channel_id: str, /) -> windows_foundation.IAsyncOperation[MicrosoftAccountMultiFactorServiceResponse]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse> Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager::ApproveSessionAsync(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionAuthenticationStatus,Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo)
+    def approve_session_async(self, session_authentiction_status: MicrosoftAccountMultiFactorSessionAuthenticationStatus, authentication_session_info: MicrosoftAccountMultiFactorSessionInfo, /) -> windows_foundation.IAsyncOperation[MicrosoftAccountMultiFactorServiceResponse]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse> Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager::ApproveSessionAsync(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionAuthenticationStatus,System.String,System.String,Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationType)
     def approve_session_async(self, session_authentiction_status: MicrosoftAccountMultiFactorSessionAuthenticationStatus, user_account_id: str, session_id: str, session_authentication_type: MicrosoftAccountMultiFactorAuthenticationType, /) -> windows_foundation.IAsyncOperation[MicrosoftAccountMultiFactorServiceResponse]: ...
+    # Deprecated alias of approve_session_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse> Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager::ApproveSessionAsync(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionAuthenticationStatus,Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo)
+    @deprecated("Use approve_session_async() instead.")
     def approve_session_using_auth_session_info_async(self, session_authentiction_status: MicrosoftAccountMultiFactorSessionAuthenticationStatus, authentication_session_info: MicrosoftAccountMultiFactorSessionInfo, /) -> windows_foundation.IAsyncOperation[MicrosoftAccountMultiFactorServiceResponse]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse> Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager::DenySessionAsync(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo)
+    def deny_session_async(self, authentication_session_info: MicrosoftAccountMultiFactorSessionInfo, /) -> windows_foundation.IAsyncOperation[MicrosoftAccountMultiFactorServiceResponse]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse> Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager::DenySessionAsync(System.String,System.String,Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationType)
     def deny_session_async(self, user_account_id: str, session_id: str, session_authentication_type: MicrosoftAccountMultiFactorAuthenticationType, /) -> windows_foundation.IAsyncOperation[MicrosoftAccountMultiFactorServiceResponse]: ...
+    # Deprecated alias of deny_session_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse> Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager::DenySessionAsync(Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo)
+    @deprecated("Use deny_session_async() instead.")
     def deny_session_using_auth_session_info_async(self, authentication_session_info: MicrosoftAccountMultiFactorSessionInfo, /) -> windows_foundation.IAsyncOperation[MicrosoftAccountMultiFactorServiceResponse]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo> Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager::GetOneTimePassCodeAsync(System.String,System.UInt32)
     def get_one_time_pass_code_async(self, user_account_id: str, code_length: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[MicrosoftAccountMultiFactorOneTimeCodedInfo]: ...

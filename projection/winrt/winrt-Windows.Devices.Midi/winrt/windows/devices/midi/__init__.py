@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_devices_midi import (
     MidiActiveSensingMessage,
@@ -82,3 +83,4 @@ class MidiMessageType(enum.IntEnum):
     ACTIVE_SENSING = 254
     SYSTEM_RESET = 255
 
+winrt.runtime._internals.alias_static_method(MidiSynthesizer, "create_from_audio_device_async", "create_async")

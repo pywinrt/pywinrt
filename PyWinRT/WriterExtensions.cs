@@ -186,10 +186,10 @@ static class WriterExtensions
         w.WriteLine($"static PyMethodDef methods_{type.Name}_Static[] = {{");
         w.Indent++;
 
-        foreach (var method in type.Methods.Where(m => m.IsStatic).DistinctBy(m => m.Name))
+        foreach (var group in type.MethodGroups.Where(g => g.IsStatic))
         {
             w.WriteLine(
-                $"{{ \"{method.PyName}\", reinterpret_cast<PyCFunction>({type.Name}_{method.Name}), METH_VARARGS, nullptr }},"
+                $"{{ \"{group.PyName}\", reinterpret_cast<PyCFunction>({type.Name}_{group.Name}), METH_VARARGS, nullptr }},"
             );
         }
 
@@ -398,6 +398,15 @@ static class WriterExtensions
                 _ => throw new NotImplementedException(),
             };
 
+        void writeGroupRow(ProjectedMethodGroup group)
+        {
+            var argumentConventionFlag = getArgumentConventionFlag(group.Overloads[0]);
+
+            w.WriteLine(
+                $"{{ \"{group.PyName}\", reinterpret_cast<PyCFunction>({type.Name}_{group.Name}), {argumentConventionFlag}, nullptr }},"
+            );
+        }
+
         void writeRow(ProjectedMethod method)
         {
             var argumentConventionFlag = getArgumentConventionFlag(method);
@@ -411,9 +420,9 @@ static class WriterExtensions
         w.WriteLine($"static PyMethodDef _methods_{type.Name}[] = {{");
         w.Indent++;
 
-        foreach (var method in type.Methods.Where(m => !m.IsStatic).DistinctBy(m => m.Name))
+        foreach (var group in type.MethodGroups.Where(g => !g.IsStatic))
         {
-            writeRow(method);
+            writeGroupRow(group);
         }
 
         if (type.Type.IsCustomNumeric())
@@ -546,27 +555,23 @@ static class WriterExtensions
         bool componentDlls
     )
     {
-        foreach (
-            var (methodName, isStatic, isProtected) in type
-                .Methods.Select(m => (m.Name, m.IsStatic, m.IsProtected || m.IsOverridable))
-                .Distinct()
-        )
+        foreach (var group in type.MethodGroups)
         {
-            var selfParam = type.GetMethodSelfParam(isStatic);
+            var selfParam = type.GetMethodSelfParam(group.IsStatic);
 
             w.WriteBlankLine();
             w.WriteLine(
-                $"static PyObject* {type.Name}_{methodName}({selfParam}, PyObject* args) noexcept"
+                $"static PyObject* {type.Name}_{group.Name}({selfParam}, PyObject* args) noexcept"
             );
             w.WriteBlock(() =>
             {
                 if (type.IsGeneric)
                 {
-                    w.WriteLine($"return self->impl->{methodName}(args);");
+                    w.WriteLine($"return self->impl->{group.Name}(args);");
                 }
                 else
                 {
-                    w.WriteMethodOverloads(type, methodName, componentDlls);
+                    w.WriteMethodOverloads(type, group, componentDlls);
                 }
             });
         }
@@ -627,7 +632,7 @@ static class WriterExtensions
                 () =>
                     w.WriteTryCatch(() =>
                     {
-                        var closeMethod = type.Methods.Single(m => m.Name == "Close");
+                        var closeMethod = type.GetMethod("Close", 0);
 
                         w.WriteBlock(() =>
                         {
@@ -666,7 +671,7 @@ static class WriterExtensions
 
         if (type.IsPyStringable)
         {
-            var method = type.Methods.Single(m => m.Name == "ToString");
+            var method = type.GetMethod("ToString", 0);
 
             w.WriteBlankLine();
             w.WriteLine(
@@ -943,23 +948,59 @@ static class WriterExtensions
         });
     }
 
+    /// <summary>
+    /// Writes the code to get the Python method that implements a WinRT method.
+    /// </summary>
+    /// <remarks>
+    /// If the method was renamed by pywinrt v3.x, the old name is tried first
+    /// so that classes written for that version keep working.
+    /// </remarks>
+    public static void WriteGetPythonMethod(
+        this IndentedTextWriter w,
+        ProjectedMethod method,
+        string self
+    )
+    {
+        if (method.LegacyPyName == method.PyName)
+        {
+            w.WriteLine(
+                $"py::pyobj_handle method{{PyObject_GetAttrString({self}, \"{method.PyName}\")}};"
+            );
+            w.WriteLine("if (!method)");
+            w.WriteBlock(() => w.WriteLine("throw python_exception();"));
+
+            return;
+        }
+
+        w.WriteLine(
+            $"py::pyobj_handle method{{PyObject_GetAttrString({self}, \"{method.LegacyPyName}\")}};"
+        );
+        w.WriteLine("if (!method)");
+        w.WriteBlock(() =>
+        {
+            w.WriteLine("if (!PyErr_ExceptionMatches(PyExc_AttributeError))");
+            w.WriteBlock(() => w.WriteLine("throw python_exception();"));
+            w.WriteBlankLine();
+            w.WriteLine("PyErr_Clear();");
+            w.WriteLine($"method.attach(PyObject_GetAttrString({self}, \"{method.PyName}\"));");
+            w.WriteLine("if (!method)");
+            w.WriteBlock(() => w.WriteLine("throw python_exception();"));
+        });
+    }
+
     public static void WriteMethodOverloads(
         this IndentedTextWriter w,
         ProjectedType type,
-        string methodName,
+        ProjectedMethodGroup group,
         bool componentDlls
     )
     {
         w.WriteLine("auto arg_count = PyTuple_GET_SIZE(args);");
         w.WriteBlankLine();
 
-        foreach (
-            var (i, method) in type
-                .Methods.Where(m => m.Name == methodName)
-                .Select((m, i) => (i, m))
-        )
+        foreach (var (i, method) in group.Overloads.Select((m, i) => (i, m)))
         {
-            var pyInParamCount = method.Method.Parameters.Count(p => p.IsPythonInParam());
+            var pyInParamCount = method.PyInParamCount;
             var inParamCount = method.Method.Parameters.Count(p => p.IsInParam());
             var ns = type.Namespace;
 
@@ -1675,13 +1716,20 @@ static class WriterExtensions
         ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
         IReadOnlyDictionary<string, string> packageMap,
         string self = "self",
-        bool isAbstract = false
+        bool isAbstract = false,
+        string? aliasPyName = null,
+        string? aliasTarget = null
     )
     {
         var nullabilityInfo = nullabilityMap.GetValueOrDefault(
             method.Signature,
             new MethodNullabilityInfo(method.Method)
         );
+
+        if (aliasPyName is not null)
+        {
+            w.WriteLine($"# Deprecated alias of {aliasTarget}() for pywinrt v3.x compatibility.");
+        }
 
         w.WriteLine($"# {method.Signature}");
 
@@ -1691,7 +1739,11 @@ static class WriterExtensions
             w.WriteLine($"# @deprecated(\"{method.DeprecatedMessage}\")");
         }
 
-        if (isAbstract)
+        if (aliasPyName is not null)
+        {
+            w.WriteLine($"@deprecated(\"Use {aliasTarget}() instead.\")");
+        }
+        else if (isAbstract)
         {
             w.WriteLine("@abstractmethod");
         }
@@ -1710,7 +1762,7 @@ static class WriterExtensions
         }
 
         w.WriteLine(
-            $"def {method.PyName}({self}{paramList}) -> {method.Method.ToPyReturnTyping(ns, nullabilityInfo, packageMap, method.GenericArgMap)}: ...{typeIgnore}"
+            $"def {aliasPyName ?? method.PyName}({self}{paramList}) -> {method.Method.ToPyReturnTyping(ns, nullabilityInfo, packageMap, method.GenericArgMap)}: ...{typeIgnore}"
         );
     }
 
@@ -1814,7 +1866,7 @@ static class WriterExtensions
         w.WriteStaCheck();
         w.WriteBlankLine();
 
-        var method = type.Methods.Single(m => m.Name == "GetResults");
+        var method = type.GetMethod("GetResults", 0);
 
         if (method.Method.ReturnType.FullName == "System.Void")
         {

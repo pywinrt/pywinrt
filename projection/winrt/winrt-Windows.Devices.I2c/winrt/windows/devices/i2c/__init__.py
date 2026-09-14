@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_devices_i2c import (
     I2cTransferResult,
@@ -38,3 +39,5 @@ class I2cTransferStatus(enum.IntEnum):
     CLOCK_STRETCH_TIMEOUT = 3
     UNKNOWN_ERROR = 4
 
+winrt.runtime._internals.alias_static_method(I2cDevice, "get_device_selector_from_friendly_name", "get_device_selector")
+winrt.runtime._internals.alias_method(_II2cDeviceStatics, "get_device_selector_from_friendly_name", "get_device_selector")

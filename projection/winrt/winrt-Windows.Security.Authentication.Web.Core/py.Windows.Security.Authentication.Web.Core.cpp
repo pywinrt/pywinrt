@@ -1061,18 +1061,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* WebAuthenticationCoreManager_FindAccountProviderWithAuthorityAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -1104,18 +1093,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* WebAuthenticationCoreManager_FindAccountProviderWithAuthorityForUserAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -1190,18 +1168,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* WebAuthenticationCoreManager_FindAllAccountsWithClientIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -1275,18 +1242,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* WebAuthenticationCoreManager_FindSystemAccountProviderWithAuthorityAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -1318,18 +1274,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* WebAuthenticationCoreManager_FindSystemAccountProviderWithAuthorityForUserAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -1404,18 +1349,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* WebAuthenticationCoreManager_GetTokenSilentlyWithWebAccountAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -1489,18 +1423,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* WebAuthenticationCoreManager_RequestTokenWithWebAccountAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -1566,17 +1489,10 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
         { "create_web_account_monitor", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManager_CreateWebAccountMonitor), METH_VARARGS, nullptr },
         { "find_account_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManager_FindAccountAsync), METH_VARARGS, nullptr },
         { "find_account_provider_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManager_FindAccountProviderAsync), METH_VARARGS, nullptr },
-        { "find_account_provider_with_authority_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManager_FindAccountProviderWithAuthorityAsync), METH_VARARGS, nullptr },
-        { "find_account_provider_with_authority_for_user_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManager_FindAccountProviderWithAuthorityForUserAsync), METH_VARARGS, nullptr },
         { "find_all_accounts_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManager_FindAllAccountsAsync), METH_VARARGS, nullptr },
-        { "find_all_accounts_with_client_id_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManager_FindAllAccountsWithClientIdAsync), METH_VARARGS, nullptr },
         { "find_system_account_provider_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManager_FindSystemAccountProviderAsync), METH_VARARGS, nullptr },
-        { "find_system_account_provider_with_authority_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManager_FindSystemAccountProviderWithAuthorityAsync), METH_VARARGS, nullptr },
-        { "find_system_account_provider_with_authority_for_user_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManager_FindSystemAccountProviderWithAuthorityForUserAsync), METH_VARARGS, nullptr },
         { "get_token_silently_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManager_GetTokenSilentlyAsync), METH_VARARGS, nullptr },
-        { "get_token_silently_with_web_account_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManager_GetTokenSilentlyWithWebAccountAsync), METH_VARARGS, nullptr },
         { "request_token_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManager_RequestTokenAsync), METH_VARARGS, nullptr },
-        { "request_token_with_web_account_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManager_RequestTokenWithWebAccountAsync), METH_VARARGS, nullptr },
         { }};
 
     static PyType_Slot type_slots_WebAuthenticationCoreManager_Static[] = 

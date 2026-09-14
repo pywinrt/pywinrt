@@ -216,3 +216,5 @@ class TimedMetadataTrackPresentationMode(enum.IntEnum):
 winrt.runtime._internals.mixin_sequence(MediaPlaybackAudioTrackList)
 winrt.runtime._internals.mixin_sequence(MediaPlaybackTimedMetadataTrackList)
 winrt.runtime._internals.mixin_sequence(MediaPlaybackVideoTrackList)
+winrt.runtime._internals.alias_method(MediaPlayer, "copy_frame_to_video_surface_with_target_rectangle", "copy_frame_to_video_surface")
+winrt.runtime._internals.alias_method(MediaPlayer, "render_subtitles_to_surface_with_target_rectangle", "render_subtitles_to_surface")

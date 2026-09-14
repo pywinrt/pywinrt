@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_media_audio import (
     AudioDeviceInputNode,
@@ -196,3 +197,25 @@ class SpatialAudioModel(enum.IntEnum):
     OBJECT_BASED = 0
     FOLD_DOWN = 1
 
+winrt.runtime._internals.alias_method(AudioDeviceInputNode, "add_outgoing_connection_with_gain", "add_outgoing_connection")
+winrt.runtime._internals.alias_method(AudioFileInputNode, "add_outgoing_connection_with_gain", "add_outgoing_connection")
+winrt.runtime._internals.alias_method(AudioFrameInputNode, "add_outgoing_connection_with_gain", "add_outgoing_connection")
+winrt.runtime._internals.alias_method(AudioGraph, "create_device_input_node_with_format_and_emitter_on_device_async", "create_device_input_node_async")
+winrt.runtime._internals.alias_method(AudioGraph, "create_device_input_node_with_format_async", "create_device_input_node_async")
+winrt.runtime._internals.alias_method(AudioGraph, "create_device_input_node_with_format_on_device_async", "create_device_input_node_async")
+winrt.runtime._internals.alias_method(AudioGraph, "create_file_input_node_with_emitter_async", "create_file_input_node_async")
+winrt.runtime._internals.alias_method(AudioGraph, "create_file_output_node_with_file_profile_async", "create_file_output_node_async")
+winrt.runtime._internals.alias_method(AudioGraph, "create_frame_input_node_with_format", "create_frame_input_node")
+winrt.runtime._internals.alias_method(AudioGraph, "create_frame_input_node_with_format_and_emitter", "create_frame_input_node")
+winrt.runtime._internals.alias_method(AudioGraph, "create_frame_output_node_with_format", "create_frame_output_node")
+winrt.runtime._internals.alias_method(AudioGraph, "create_media_source_audio_input_node_with_emitter_async", "create_media_source_audio_input_node_async")
+winrt.runtime._internals.alias_method(AudioGraph, "create_submix_node_with_format", "create_submix_node")
+winrt.runtime._internals.alias_method(AudioGraph, "create_submix_node_with_format_and_emitter", "create_submix_node")
+winrt.runtime._internals.alias_static_method(AudioStateMonitor, "create_for_capture_monitoring_with_category", "create_for_capture_monitoring")
+winrt.runtime._internals.alias_static_method(AudioStateMonitor, "create_for_capture_monitoring_with_category_and_device_role", "create_for_capture_monitoring")
+winrt.runtime._internals.alias_static_method(AudioStateMonitor, "create_for_render_monitoring_with_category", "create_for_render_monitoring")
+winrt.runtime._internals.alias_static_method(AudioStateMonitor, "create_for_render_monitoring_with_category_and_device_role", "create_for_render_monitoring")
+winrt.runtime._internals.alias_method(AudioSubmixNode, "add_outgoing_connection_with_gain", "add_outgoing_connection")
+winrt.runtime._internals.alias_method(MediaSourceAudioInputNode, "add_outgoing_connection_with_gain", "add_outgoing_connection")
+winrt.runtime._internals.alias_method(_IAudioInputNode, "add_outgoing_connection_with_gain", "add_outgoing_connection")
+winrt.runtime._internals.alias_method(_IAudioInputNode2, "add_outgoing_connection_with_gain", "add_outgoing_connection")

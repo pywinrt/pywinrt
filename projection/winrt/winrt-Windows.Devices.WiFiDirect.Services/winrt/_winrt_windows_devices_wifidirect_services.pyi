@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -24,16 +25,28 @@ Self = typing.TypeVar('Self')
 class WiFiDirectService_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFiDirect.Services.WiFiDirectService> Windows.Devices.WiFiDirect.Services.WiFiDirectService::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[WiFiDirectService]: ...
+    @typing.overload
     # System.String Windows.Devices.WiFiDirect.Services.WiFiDirectService::GetSelector(System.String)
     def get_selector(cls, service_name: str, /) -> str: ...
+    @typing.overload
     # System.String Windows.Devices.WiFiDirect.Services.WiFiDirectService::GetSelector(System.String,Windows.Storage.Streams.IBuffer)
+    def get_selector(cls, service_name: str, service_info_filter: winrt.system.Buffer, /) -> str: ...
+    # Deprecated alias of get_selector() for pywinrt v3.x compatibility.
+    # System.String Windows.Devices.WiFiDirect.Services.WiFiDirectService::GetSelector(System.String,Windows.Storage.Streams.IBuffer)
+    @deprecated("Use get_selector() instead.")
     def get_selector_with_filter(cls, service_name: str, service_info_filter: winrt.system.Buffer, /) -> str: ...
 
 @typing.final
 class WiFiDirectService(winrt.system.Object, metaclass=WiFiDirectService_Static):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession> Windows.Devices.WiFiDirect.Services.WiFiDirectService::ConnectAsync()
     def connect_async(self) -> windows_foundation.IAsyncOperation[WiFiDirectServiceSession]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession> Windows.Devices.WiFiDirect.Services.WiFiDirectService::ConnectAsync(System.String)
+    def connect_async(self, pin: str, /) -> windows_foundation.IAsyncOperation[WiFiDirectServiceSession]: ...
+    # Deprecated alias of connect_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession> Windows.Devices.WiFiDirect.Services.WiFiDirectService::ConnectAsync(System.String)
+    @deprecated("Use connect_async() instead.")
     def connect_async_with_pin(self, pin: str, /) -> windows_foundation.IAsyncOperation[WiFiDirectServiceSession]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFiDirect.Services.WiFiDirectServiceProvisioningInfo> Windows.Devices.WiFiDirect.Services.WiFiDirectService::GetProvisioningInfoAsync(Windows.Devices.WiFiDirect.Services.WiFiDirectServiceConfigurationMethod)
     def get_provisioning_info_async(self, selected_configuration_method: WiFiDirectServiceConfigurationMethod, /) -> windows_foundation.IAsyncOperation[WiFiDirectServiceProvisioningInfo]: ...
@@ -66,9 +79,15 @@ class WiFiDirectService(winrt.system.Object, metaclass=WiFiDirectService_Static)
 @typing.final
 class WiFiDirectServiceAdvertiser(winrt.system.Object):
     def __new__(cls: typing.Type[Self], service_name: str) -> Self: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession> Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser::ConnectAsync(Windows.Devices.Enumeration.DeviceInformation)
     def connect_async(self, device_info: windows_devices_enumeration.DeviceInformation, /) -> windows_foundation.IAsyncOperation[WiFiDirectServiceSession]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession> Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser::ConnectAsync(Windows.Devices.Enumeration.DeviceInformation,System.String)
+    def connect_async(self, device_info: windows_devices_enumeration.DeviceInformation, pin: str, /) -> windows_foundation.IAsyncOperation[WiFiDirectServiceSession]: ...
+    # Deprecated alias of connect_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession> Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser::ConnectAsync(Windows.Devices.Enumeration.DeviceInformation,System.String)
+    @deprecated("Use connect_async() instead.")
     def connect_async_with_pin(self, device_info: windows_devices_enumeration.DeviceInformation, pin: str, /) -> windows_foundation.IAsyncOperation[WiFiDirectServiceSession]: ...
     # System.Void Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser::Start()
     def start(self) -> None: ...

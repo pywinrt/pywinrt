@@ -2344,18 +2344,7 @@ namespace py::cpp::Windows::Storage::Streams
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* DataWriter_WriteBufferRange(py::wrapper::Windows::Storage::Streams::DataWriter* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -3221,7 +3210,6 @@ namespace py::cpp::Windows::Storage::Streams
         { "store_async", reinterpret_cast<PyCFunction>(DataWriter_StoreAsync), METH_VARARGS, nullptr },
         { "write_boolean", reinterpret_cast<PyCFunction>(DataWriter_WriteBoolean), METH_VARARGS, nullptr },
         { "write_buffer", reinterpret_cast<PyCFunction>(DataWriter_WriteBuffer), METH_VARARGS, nullptr },
-        { "write_buffer_range", reinterpret_cast<PyCFunction>(DataWriter_WriteBufferRange), METH_VARARGS, nullptr },
         { "write_byte", reinterpret_cast<PyCFunction>(DataWriter_WriteByte), METH_VARARGS, nullptr },
         { "write_bytes", reinterpret_cast<PyCFunction>(DataWriter_WriteBytes), METH_VARARGS, nullptr },
         { "write_date_time", reinterpret_cast<PyCFunction>(DataWriter_WriteDateTime), METH_VARARGS, nullptr },
@@ -4316,6 +4304,40 @@ namespace py::cpp::Windows::Storage::Streams
                 return nullptr;
             }
         }
+        else if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Streams.FileRandomAccessStream", L"OpenAsync", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Storage::FileAccessMode>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Storage::StorageOpenOptions>(args, 2);
+                auto param3 = py::convert_to<winrt::Windows::Storage::Streams::FileOpenDisposition>(args, 3);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Storage::Streams::FileRandomAccessStream::OpenAsync(param0, param1, param2, param3);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -4360,18 +4382,7 @@ namespace py::cpp::Windows::Storage::Streams
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* FileRandomAccessStream_OpenForUserWithOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 5)
+        else if (arg_count == 5)
         {
             try
             {
@@ -4448,6 +4459,39 @@ namespace py::cpp::Windows::Storage::Streams
                 return nullptr;
             }
         }
+        else if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Streams.FileRandomAccessStream", L"OpenTransactedWriteAsync", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Storage::StorageOpenOptions>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Storage::Streams::FileOpenDisposition>(args, 2);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Storage::Streams::FileRandomAccessStream::OpenTransactedWriteAsync(param0, param1, param2);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -4491,18 +4535,7 @@ namespace py::cpp::Windows::Storage::Streams
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* FileRandomAccessStream_OpenTransactedWriteForUserWithOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 4)
+        else if (arg_count == 4)
         {
             try
             {
@@ -4528,95 +4561,6 @@ namespace py::cpp::Windows::Storage::Streams
                 {
                     auto _gil = release_gil();
                     return winrt::Windows::Storage::Streams::FileRandomAccessStream::OpenTransactedWriteForUserAsync(param0, param1, param2, param3);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* FileRandomAccessStream_OpenTransactedWriteWithOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Streams.FileRandomAccessStream", L"OpenTransactedWriteAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Storage::StorageOpenOptions>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Storage::Streams::FileOpenDisposition>(args, 2);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return winrt::Windows::Storage::Streams::FileRandomAccessStream::OpenTransactedWriteAsync(param0, param1, param2);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* FileRandomAccessStream_OpenWithOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Streams.FileRandomAccessStream", L"OpenAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Storage::FileAccessMode>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Storage::StorageOpenOptions>(args, 2);
-                auto param3 = py::convert_to<winrt::Windows::Storage::Streams::FileOpenDisposition>(args, 3);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return winrt::Windows::Storage::Streams::FileRandomAccessStream::OpenAsync(param0, param1, param2, param3);
                 }());
             }
             catch (...)
@@ -5009,12 +4953,8 @@ namespace py::cpp::Windows::Storage::Streams
     static PyMethodDef methods_FileRandomAccessStream_Static[] = {
         { "open_async", reinterpret_cast<PyCFunction>(FileRandomAccessStream_OpenAsync), METH_VARARGS, nullptr },
         { "open_for_user_async", reinterpret_cast<PyCFunction>(FileRandomAccessStream_OpenForUserAsync), METH_VARARGS, nullptr },
-        { "open_for_user_with_options_async", reinterpret_cast<PyCFunction>(FileRandomAccessStream_OpenForUserWithOptionsAsync), METH_VARARGS, nullptr },
         { "open_transacted_write_async", reinterpret_cast<PyCFunction>(FileRandomAccessStream_OpenTransactedWriteAsync), METH_VARARGS, nullptr },
         { "open_transacted_write_for_user_async", reinterpret_cast<PyCFunction>(FileRandomAccessStream_OpenTransactedWriteForUserAsync), METH_VARARGS, nullptr },
-        { "open_transacted_write_for_user_with_options_async", reinterpret_cast<PyCFunction>(FileRandomAccessStream_OpenTransactedWriteForUserWithOptionsAsync), METH_VARARGS, nullptr },
-        { "open_transacted_write_with_options_async", reinterpret_cast<PyCFunction>(FileRandomAccessStream_OpenTransactedWriteWithOptionsAsync), METH_VARARGS, nullptr },
-        { "open_with_options_async", reinterpret_cast<PyCFunction>(FileRandomAccessStream_OpenWithOptionsAsync), METH_VARARGS, nullptr },
         { }};
 
     static PyType_Slot type_slots_FileRandomAccessStream_Static[] = 
@@ -6124,18 +6064,7 @@ namespace py::cpp::Windows::Storage::Streams
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* RandomAccessStream_CopySizeAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -6200,7 +6129,6 @@ namespace py::cpp::Windows::Storage::Streams
     static PyMethodDef methods_RandomAccessStream_Static[] = {
         { "copy_and_close_async", reinterpret_cast<PyCFunction>(RandomAccessStream_CopyAndCloseAsync), METH_VARARGS, nullptr },
         { "copy_async", reinterpret_cast<PyCFunction>(RandomAccessStream_CopyAsync), METH_VARARGS, nullptr },
-        { "copy_size_async", reinterpret_cast<PyCFunction>(RandomAccessStream_CopySizeAsync), METH_VARARGS, nullptr },
         { }};
 
     static PyType_Slot type_slots_RandomAccessStream_Static[] = 
@@ -9694,18 +9622,7 @@ namespace py::cpp::Windows::Storage::Streams
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* IDataWriter_WriteBufferRange(py::wrapper::Windows::Storage::Streams::IDataWriter* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -10523,7 +10440,6 @@ namespace py::cpp::Windows::Storage::Streams
         { "store_async", reinterpret_cast<PyCFunction>(IDataWriter_StoreAsync), METH_VARARGS, nullptr },
         { "write_boolean", reinterpret_cast<PyCFunction>(IDataWriter_WriteBoolean), METH_VARARGS, nullptr },
         { "write_buffer", reinterpret_cast<PyCFunction>(IDataWriter_WriteBuffer), METH_VARARGS, nullptr },
-        { "write_buffer_range", reinterpret_cast<PyCFunction>(IDataWriter_WriteBufferRange), METH_VARARGS, nullptr },
         { "write_byte", reinterpret_cast<PyCFunction>(IDataWriter_WriteByte), METH_VARARGS, nullptr },
         { "write_bytes", reinterpret_cast<PyCFunction>(IDataWriter_WriteBytes), METH_VARARGS, nullptr },
         { "write_date_time", reinterpret_cast<PyCFunction>(IDataWriter_WriteDateTime), METH_VARARGS, nullptr },
@@ -10778,7 +10694,17 @@ namespace py::cpp::Windows::Storage::Streams
                 py::pyobj_handle method{PyObject_GetAttrString(self.get(), "write_buffer_range")};
                 if (!method)
                 {
-                    throw python_exception();
+                    if (!PyErr_ExceptionMatches(PyExc_AttributeError))
+                    {
+                        throw python_exception();
+                    }
+
+                    PyErr_Clear();
+                    method.attach(PyObject_GetAttrString(self.get(), "write_buffer"));
+                    if (!method)
+                    {
+                        throw python_exception();
+                    }
                 }
 
                 py::pyobj_handle py_param0{py::convert(param0)};

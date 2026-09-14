@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_devices_serialcommunication import (
     ErrorReceivedEventArgs,
@@ -52,3 +53,4 @@ class SerialStopBitCount(enum.IntEnum):
     ONE_POINT_FIVE = 1
     TWO = 2
 
+winrt.runtime._internals.alias_static_method(SerialDevice, "get_device_selector_from_port_name", "get_device_selector")

@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_ai_actions import (
     ActionEntity,
@@ -93,3 +94,4 @@ class RemoteFileKind(enum.IntEnum):
     PHOTO = 1
     FILE = 2
 
+winrt.runtime._internals.alias_method(ActionEntityFactory, "create_text_entity_with_text_format", "create_text_entity")

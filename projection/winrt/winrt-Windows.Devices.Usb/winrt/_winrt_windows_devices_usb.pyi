@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -159,11 +160,22 @@ class UsbDevice_Static(winrt._winrt.IInspectable_Static):
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[UsbDevice]: ...
     # System.String Windows.Devices.Usb.UsbDevice::GetDeviceClassSelector(Windows.Devices.Usb.UsbDeviceClass)
     def get_device_class_selector(cls, usb_class: UsbDeviceClass, /) -> str: ...
+    @typing.overload
+    # System.String Windows.Devices.Usb.UsbDevice::GetDeviceSelector(System.Guid)
+    def get_device_selector(cls, win_usb_interface_class: _uuid.UUID, /) -> str: ...
+    @typing.overload
+    # System.String Windows.Devices.Usb.UsbDevice::GetDeviceSelector(System.UInt32,System.UInt32)
+    def get_device_selector(cls, vendor_id: winrt.system.UInt32, product_id: winrt.system.UInt32, /) -> str: ...
+    @typing.overload
     # System.String Windows.Devices.Usb.UsbDevice::GetDeviceSelector(System.UInt32,System.UInt32,System.Guid)
     def get_device_selector(cls, vendor_id: winrt.system.UInt32, product_id: winrt.system.UInt32, win_usb_interface_class: _uuid.UUID, /) -> str: ...
+    # Deprecated alias of get_device_selector() for pywinrt v3.x compatibility.
     # System.String Windows.Devices.Usb.UsbDevice::GetDeviceSelector(System.Guid)
+    @deprecated("Use get_device_selector() instead.")
     def get_device_selector_guid_only(cls, win_usb_interface_class: _uuid.UUID, /) -> str: ...
+    # Deprecated alias of get_device_selector() for pywinrt v3.x compatibility.
     # System.String Windows.Devices.Usb.UsbDevice::GetDeviceSelector(System.UInt32,System.UInt32)
+    @deprecated("Use get_device_selector() instead.")
     def get_device_selector_vid_pid_only(cls, vendor_id: winrt.system.UInt32, product_id: winrt.system.UInt32, /) -> str: ...
 
 @typing.final
@@ -172,13 +184,25 @@ class UsbDevice(winrt.system.Object, windows_foundation.IClosable, metaclass=Usb
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
     # System.Void Windows.Devices.Usb.UsbDevice::Close()
     def close(self) -> None: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IBuffer> Windows.Devices.Usb.UsbDevice::SendControlInTransferAsync(Windows.Devices.Usb.UsbSetupPacket)
+    def send_control_in_transfer_async(self, setup_packet: UsbSetupPacket, /) -> windows_foundation.IAsyncOperation[winrt.system.Buffer]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IBuffer> Windows.Devices.Usb.UsbDevice::SendControlInTransferAsync(Windows.Devices.Usb.UsbSetupPacket,Windows.Storage.Streams.IBuffer)
     def send_control_in_transfer_async(self, setup_packet: UsbSetupPacket, buffer: winrt.system.Buffer, /) -> windows_foundation.IAsyncOperation[winrt.system.Buffer]: ...
+    # Deprecated alias of send_control_in_transfer_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IBuffer> Windows.Devices.Usb.UsbDevice::SendControlInTransferAsync(Windows.Devices.Usb.UsbSetupPacket)
+    @deprecated("Use send_control_in_transfer_async() instead.")
     def send_control_in_transfer_async_no_buffer(self, setup_packet: UsbSetupPacket, /) -> windows_foundation.IAsyncOperation[winrt.system.Buffer]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<System.UInt32> Windows.Devices.Usb.UsbDevice::SendControlOutTransferAsync(Windows.Devices.Usb.UsbSetupPacket)
+    def send_control_out_transfer_async(self, setup_packet: UsbSetupPacket, /) -> windows_foundation.IAsyncOperation[winrt.system.UInt32]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.UInt32> Windows.Devices.Usb.UsbDevice::SendControlOutTransferAsync(Windows.Devices.Usb.UsbSetupPacket,Windows.Storage.Streams.IBuffer)
     def send_control_out_transfer_async(self, setup_packet: UsbSetupPacket, buffer: winrt.system.Buffer, /) -> windows_foundation.IAsyncOperation[winrt.system.UInt32]: ...
+    # Deprecated alias of send_control_out_transfer_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<System.UInt32> Windows.Devices.Usb.UsbDevice::SendControlOutTransferAsync(Windows.Devices.Usb.UsbSetupPacket)
+    @deprecated("Use send_control_out_transfer_async() instead.")
     def send_control_out_transfer_async_no_buffer(self, setup_packet: UsbSetupPacket, /) -> windows_foundation.IAsyncOperation[winrt.system.UInt32]: ...
     # Windows.Devices.Usb.UsbConfiguration Windows.Devices.Usb.UsbDevice::get_Configuration()
     @_property

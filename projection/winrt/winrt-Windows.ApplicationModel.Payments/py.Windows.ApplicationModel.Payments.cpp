@@ -2420,18 +2420,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PaymentMediator_SubmitPaymentRequestWithChangeHandlerAsync(py::wrapper::Windows::ApplicationModel::Payments::PaymentMediator* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -2498,7 +2487,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
         { "can_make_payment_async", reinterpret_cast<PyCFunction>(PaymentMediator_CanMakePaymentAsync), METH_VARARGS, nullptr },
         { "get_supported_method_ids_async", reinterpret_cast<PyCFunction>(PaymentMediator_GetSupportedMethodIdsAsync), METH_VARARGS, nullptr },
         { "submit_payment_request_async", reinterpret_cast<PyCFunction>(PaymentMediator_SubmitPaymentRequestAsync), METH_VARARGS, nullptr },
-        { "submit_payment_request_with_change_handler_async", reinterpret_cast<PyCFunction>(PaymentMediator_SubmitPaymentRequestWithChangeHandlerAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PaymentMediator, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PaymentMediator), METH_O | METH_STATIC, nullptr },
         { }};

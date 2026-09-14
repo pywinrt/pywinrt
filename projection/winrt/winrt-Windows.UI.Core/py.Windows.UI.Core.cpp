@@ -2976,18 +2976,7 @@ namespace py::cpp::Windows::UI::Core
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* CoreDispatcher_ShouldYieldToPriority(py::wrapper::Windows::UI::Core::CoreDispatcher* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -3344,7 +3333,6 @@ namespace py::cpp::Windows::UI::Core
         { "run_async", reinterpret_cast<PyCFunction>(CoreDispatcher_RunAsync), METH_VARARGS, nullptr },
         { "run_idle_async", reinterpret_cast<PyCFunction>(CoreDispatcher_RunIdleAsync), METH_VARARGS, nullptr },
         { "should_yield", reinterpret_cast<PyCFunction>(CoreDispatcher_ShouldYield), METH_VARARGS, nullptr },
-        { "should_yield_to_priority", reinterpret_cast<PyCFunction>(CoreDispatcher_ShouldYieldToPriority), METH_VARARGS, nullptr },
         { "stop_process_events", reinterpret_cast<PyCFunction>(CoreDispatcher_StopProcessEvents), METH_VARARGS, nullptr },
         { "try_run_async", reinterpret_cast<PyCFunction>(CoreDispatcher_TryRunAsync), METH_VARARGS, nullptr },
         { "try_run_idle_async", reinterpret_cast<PyCFunction>(CoreDispatcher_TryRunIdleAsync), METH_VARARGS, nullptr },
@@ -4699,18 +4687,7 @@ namespace py::cpp::Windows::UI::Core
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* CoreIndependentInputSourceController_SetControlledInputWithFilters(py::wrapper::Windows::UI::Core::CoreIndependentInputSourceController* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -4969,7 +4946,6 @@ namespace py::cpp::Windows::UI::Core
     static PyMethodDef _methods_CoreIndependentInputSourceController[] = {
         { "close", reinterpret_cast<PyCFunction>(CoreIndependentInputSourceController_Close), METH_VARARGS, nullptr },
         { "set_controlled_input", reinterpret_cast<PyCFunction>(CoreIndependentInputSourceController_SetControlledInput), METH_VARARGS, nullptr },
-        { "set_controlled_input_with_filters", reinterpret_cast<PyCFunction>(CoreIndependentInputSourceController_SetControlledInputWithFilters), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreIndependentInputSourceController, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreIndependentInputSourceController), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_CoreIndependentInputSourceController), METH_NOARGS, nullptr },
@@ -10219,6 +10195,48 @@ namespace py::cpp::Windows::UI::Core
         Py_DECREF(tp);
     }
 
+    static PyObject* TouchHitTestingEventArgs_EvaluateProximity(py::wrapper::Windows::UI::Core::TouchHitTestingEventArgs* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.TouchHitTestingEventArgs", L"EvaluateProximity", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.EvaluateProximity(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* TouchHitTestingEventArgs_EvaluateProximityToPolygon(py::wrapper::Windows::UI::Core::TouchHitTestingEventArgs* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
@@ -10241,48 +10259,6 @@ namespace py::cpp::Windows::UI::Core
                 }
 
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Point, false>>(args, 0);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.EvaluateProximity(param0);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* TouchHitTestingEventArgs_EvaluateProximityToRect(py::wrapper::Windows::UI::Core::TouchHitTestingEventArgs* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Core.TouchHitTestingEventArgs", L"EvaluateProximity", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
 
                 return py::convert([&]()
                 {
@@ -10526,8 +10502,8 @@ namespace py::cpp::Windows::UI::Core
     }
 
     static PyMethodDef _methods_TouchHitTestingEventArgs[] = {
+        { "evaluate_proximity", reinterpret_cast<PyCFunction>(TouchHitTestingEventArgs_EvaluateProximity), METH_VARARGS, nullptr },
         { "evaluate_proximity_to_polygon", reinterpret_cast<PyCFunction>(TouchHitTestingEventArgs_EvaluateProximityToPolygon), METH_VARARGS, nullptr },
-        { "evaluate_proximity_to_rect", reinterpret_cast<PyCFunction>(TouchHitTestingEventArgs_EvaluateProximityToRect), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_TouchHitTestingEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TouchHitTestingEventArgs), METH_O | METH_STATIC, nullptr },
         { }};

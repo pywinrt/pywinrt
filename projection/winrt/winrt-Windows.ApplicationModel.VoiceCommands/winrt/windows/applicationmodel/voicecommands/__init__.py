@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_applicationmodel_voicecommands import (
     VoiceCommand,
@@ -50,3 +51,5 @@ class VoiceCommandContentTileType(enum.IntEnum):
     TITLE_WITH280X140_ICON = 6
     TITLE_WITH280X140_ICON_AND_TEXT = 7
 
+winrt.runtime._internals.alias_static_method(VoiceCommandResponse, "create_response_with_tiles", "create_response")
+winrt.runtime._internals.alias_static_method(VoiceCommandResponse, "create_response_for_prompt_with_tiles", "create_response_for_prompt")

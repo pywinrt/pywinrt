@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_media_casting import (
     CastingConnection,
@@ -48,3 +49,4 @@ class CastingPlaybackTypes(enum.IntFlag):
     VIDEO = 0x2
     PICTURE = 0x4
 
+winrt.runtime._internals.alias_method(CastingDevicePicker, "show_with_placement", "show")

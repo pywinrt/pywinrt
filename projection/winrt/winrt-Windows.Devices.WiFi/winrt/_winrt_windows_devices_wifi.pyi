@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -31,13 +32,29 @@ class WiFiAdapter_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class WiFiAdapter(winrt.system.Object, metaclass=WiFiAdapter_Static):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFi.WiFiConnectionResult> Windows.Devices.WiFi.WiFiAdapter::ConnectAsync(Windows.Devices.WiFi.WiFiAvailableNetwork,Windows.Devices.WiFi.WiFiReconnectionKind)
     def connect_async(self, available_network: WiFiAvailableNetwork, reconnection_kind: WiFiReconnectionKind, /) -> windows_foundation.IAsyncOperation[WiFiConnectionResult]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFi.WiFiConnectionResult> Windows.Devices.WiFi.WiFiAdapter::ConnectAsync(Windows.Devices.WiFi.WiFiAvailableNetwork,Windows.Devices.WiFi.WiFiReconnectionKind,Windows.Security.Credentials.PasswordCredential,System.String,Windows.Devices.WiFi.WiFiConnectionMethod)
-    def connect_with_password_credential_and_ssid_and_connection_method_async(self, available_network: WiFiAvailableNetwork, reconnection_kind: WiFiReconnectionKind, password_credential: windows_security_credentials.PasswordCredential, ssid: str, connection_method: WiFiConnectionMethod, /) -> windows_foundation.IAsyncOperation[WiFiConnectionResult]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFi.WiFiConnectionResult> Windows.Devices.WiFi.WiFiAdapter::ConnectAsync(Windows.Devices.WiFi.WiFiAvailableNetwork,Windows.Devices.WiFi.WiFiReconnectionKind,Windows.Security.Credentials.PasswordCredential,System.String)
-    def connect_with_password_credential_and_ssid_async(self, available_network: WiFiAvailableNetwork, reconnection_kind: WiFiReconnectionKind, password_credential: windows_security_credentials.PasswordCredential, ssid: str, /) -> windows_foundation.IAsyncOperation[WiFiConnectionResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFi.WiFiConnectionResult> Windows.Devices.WiFi.WiFiAdapter::ConnectAsync(Windows.Devices.WiFi.WiFiAvailableNetwork,Windows.Devices.WiFi.WiFiReconnectionKind,Windows.Security.Credentials.PasswordCredential)
+    def connect_async(self, available_network: WiFiAvailableNetwork, reconnection_kind: WiFiReconnectionKind, password_credential: windows_security_credentials.PasswordCredential, /) -> windows_foundation.IAsyncOperation[WiFiConnectionResult]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFi.WiFiConnectionResult> Windows.Devices.WiFi.WiFiAdapter::ConnectAsync(Windows.Devices.WiFi.WiFiAvailableNetwork,Windows.Devices.WiFi.WiFiReconnectionKind,Windows.Security.Credentials.PasswordCredential,System.String)
+    def connect_async(self, available_network: WiFiAvailableNetwork, reconnection_kind: WiFiReconnectionKind, password_credential: windows_security_credentials.PasswordCredential, ssid: str, /) -> windows_foundation.IAsyncOperation[WiFiConnectionResult]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFi.WiFiConnectionResult> Windows.Devices.WiFi.WiFiAdapter::ConnectAsync(Windows.Devices.WiFi.WiFiAvailableNetwork,Windows.Devices.WiFi.WiFiReconnectionKind,Windows.Security.Credentials.PasswordCredential,System.String,Windows.Devices.WiFi.WiFiConnectionMethod)
+    def connect_async(self, available_network: WiFiAvailableNetwork, reconnection_kind: WiFiReconnectionKind, password_credential: windows_security_credentials.PasswordCredential, ssid: str, connection_method: WiFiConnectionMethod, /) -> windows_foundation.IAsyncOperation[WiFiConnectionResult]: ...
+    # Deprecated alias of connect_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFi.WiFiConnectionResult> Windows.Devices.WiFi.WiFiAdapter::ConnectAsync(Windows.Devices.WiFi.WiFiAvailableNetwork,Windows.Devices.WiFi.WiFiReconnectionKind,Windows.Security.Credentials.PasswordCredential,System.String,Windows.Devices.WiFi.WiFiConnectionMethod)
+    @deprecated("Use connect_async() instead.")
+    def connect_with_password_credential_and_ssid_and_connection_method_async(self, available_network: WiFiAvailableNetwork, reconnection_kind: WiFiReconnectionKind, password_credential: windows_security_credentials.PasswordCredential, ssid: str, connection_method: WiFiConnectionMethod, /) -> windows_foundation.IAsyncOperation[WiFiConnectionResult]: ...
+    # Deprecated alias of connect_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFi.WiFiConnectionResult> Windows.Devices.WiFi.WiFiAdapter::ConnectAsync(Windows.Devices.WiFi.WiFiAvailableNetwork,Windows.Devices.WiFi.WiFiReconnectionKind,Windows.Security.Credentials.PasswordCredential,System.String)
+    @deprecated("Use connect_async() instead.")
+    def connect_with_password_credential_and_ssid_async(self, available_network: WiFiAvailableNetwork, reconnection_kind: WiFiReconnectionKind, password_credential: windows_security_credentials.PasswordCredential, ssid: str, /) -> windows_foundation.IAsyncOperation[WiFiConnectionResult]: ...
+    # Deprecated alias of connect_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFi.WiFiConnectionResult> Windows.Devices.WiFi.WiFiAdapter::ConnectAsync(Windows.Devices.WiFi.WiFiAvailableNetwork,Windows.Devices.WiFi.WiFiReconnectionKind,Windows.Security.Credentials.PasswordCredential)
+    @deprecated("Use connect_async() instead.")
     def connect_with_password_credential_async(self, available_network: WiFiAvailableNetwork, reconnection_kind: WiFiReconnectionKind, password_credential: windows_security_credentials.PasswordCredential, /) -> windows_foundation.IAsyncOperation[WiFiConnectionResult]: ...
     # System.Void Windows.Devices.WiFi.WiFiAdapter::Disconnect()
     def disconnect(self) -> None: ...

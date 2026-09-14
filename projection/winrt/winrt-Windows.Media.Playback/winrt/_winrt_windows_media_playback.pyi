@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -880,9 +881,15 @@ class MediaPlayer(winrt.system.Object, windows_foundation.IClosable):
     def close(self) -> None: ...
     # System.Void Windows.Media.Playback.MediaPlayer::CopyFrameToStereoscopicVideoSurfaces(Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface,Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface)
     def copy_frame_to_stereoscopic_video_surfaces(self, destination_left_eye: windows_graphics_directx_direct3d11.IDirect3DSurface, destination_right_eye: windows_graphics_directx_direct3d11.IDirect3DSurface, /) -> None: ...
+    @typing.overload
     # System.Void Windows.Media.Playback.MediaPlayer::CopyFrameToVideoSurface(Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface)
     def copy_frame_to_video_surface(self, destination: windows_graphics_directx_direct3d11.IDirect3DSurface, /) -> None: ...
+    @typing.overload
     # System.Void Windows.Media.Playback.MediaPlayer::CopyFrameToVideoSurface(Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface,Windows.Foundation.Rect)
+    def copy_frame_to_video_surface(self, destination: windows_graphics_directx_direct3d11.IDirect3DSurface, target_rectangle: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> None: ...
+    # Deprecated alias of copy_frame_to_video_surface() for pywinrt v3.x compatibility.
+    # System.Void Windows.Media.Playback.MediaPlayer::CopyFrameToVideoSurface(Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface,Windows.Foundation.Rect)
+    @deprecated("Use copy_frame_to_video_surface() instead.")
     def copy_frame_to_video_surface_with_target_rectangle(self, destination: windows_graphics_directx_direct3d11.IDirect3DSurface, target_rectangle: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> None: ...
     # Windows.Media.Casting.CastingSource Windows.Media.Playback.MediaPlayer::GetAsCastingSource()
     def get_as_casting_source(self) -> windows_media_casting.CastingSource: ...
@@ -894,9 +901,15 @@ class MediaPlayer(winrt.system.Object, windows_foundation.IClosable):
     def play(self) -> None: ...
     # System.Void Windows.Media.Playback.MediaPlayer::RemoveAllEffects()
     def remove_all_effects(self) -> None: ...
+    @typing.overload
     # System.Boolean Windows.Media.Playback.MediaPlayer::RenderSubtitlesToSurface(Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface)
     def render_subtitles_to_surface(self, destination: windows_graphics_directx_direct3d11.IDirect3DSurface, /) -> bool: ...
+    @typing.overload
     # System.Boolean Windows.Media.Playback.MediaPlayer::RenderSubtitlesToSurface(Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface,Windows.Foundation.Rect)
+    def render_subtitles_to_surface(self, destination: windows_graphics_directx_direct3d11.IDirect3DSurface, target_rectangle: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> bool: ...
+    # Deprecated alias of render_subtitles_to_surface() for pywinrt v3.x compatibility.
+    # System.Boolean Windows.Media.Playback.MediaPlayer::RenderSubtitlesToSurface(Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface,Windows.Foundation.Rect)
+    @deprecated("Use render_subtitles_to_surface() instead.")
     def render_subtitles_to_surface_with_target_rectangle(self, destination: windows_graphics_directx_direct3d11.IDirect3DSurface, target_rectangle: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> bool: ...
     # System.Void Windows.Media.Playback.MediaPlayer::SetFileSource(Windows.Storage.IStorageFile)
     # @deprecated("Use Source instead of SetFileSource.  For more info, see MSDN.")

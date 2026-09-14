@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_devices_humaninterfacedevice import (
     HidBooleanControl,
@@ -46,3 +47,8 @@ class HidReportType(enum.IntEnum):
     OUTPUT = 1
     FEATURE = 2
 
+winrt.runtime._internals.alias_method(HidDevice, "create_feature_report_by_id", "create_feature_report")
+winrt.runtime._internals.alias_method(HidDevice, "create_output_report_by_id", "create_output_report")
+winrt.runtime._internals.alias_static_method(HidDevice, "get_device_selector_vid_pid", "get_device_selector")
+winrt.runtime._internals.alias_method(HidDevice, "get_feature_report_by_id_async", "get_feature_report_async")
+winrt.runtime._internals.alias_method(HidDevice, "get_input_report_by_id_async", "get_input_report_async")

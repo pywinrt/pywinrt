@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_devices_wifi import (
     WiFiAdapter,
@@ -127,3 +128,6 @@ class WiFiWpsKind(enum.IntEnum):
     ETHERNET = 4
     USB = 5
 
+winrt.runtime._internals.alias_method(WiFiAdapter, "connect_with_password_credential_and_ssid_and_connection_method_async", "connect_async")
+winrt.runtime._internals.alias_method(WiFiAdapter, "connect_with_password_credential_and_ssid_async", "connect_async")
+winrt.runtime._internals.alias_method(WiFiAdapter, "connect_with_password_credential_async", "connect_async")

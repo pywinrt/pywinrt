@@ -94,3 +94,15 @@ class IndexerOption(enum.IntEnum):
     ONLY_USE_INDEXER_AND_OPTIMIZE_FOR_INDEXED_PROPERTIES = 3
 
 winrt.runtime._internals.mixin_mutable_sequence(SortEntryVector)
+winrt.runtime._internals.alias_method(ContentIndexer, "create_query_with_sort_order", "create_query")
+winrt.runtime._internals.alias_method(ContentIndexer, "create_query_with_sort_order_and_language", "create_query")
+winrt.runtime._internals.alias_static_method(ContentIndexer, "get_indexer_with_name", "get_indexer")
+winrt.runtime._internals.alias_method(ContentIndexerQuery, "get_range_async", "get_async")
+winrt.runtime._internals.alias_method(ContentIndexerQuery, "get_properties_range_async", "get_properties_async")
+winrt.runtime._internals.alias_method(StorageFileQueryResult, "get_files_async_default_start_and_count", "get_files_async")
+winrt.runtime._internals.alias_method(StorageFolderQueryResult, "get_folders_async_default_start_and_count", "get_folders_async")
+winrt.runtime._internals.alias_method(StorageItemQueryResult, "get_items_async_default_start_and_count", "get_items_async")
+winrt.runtime._internals.alias_method(_IStorageFolderQueryOperations, "create_file_query_overload_default", "create_file_query")
+winrt.runtime._internals.alias_method(_IStorageFolderQueryOperations, "create_folder_query_overload_default", "create_folder_query")
+winrt.runtime._internals.alias_method(_IStorageFolderQueryOperations, "get_files_async_overload_default_start_and_count", "get_files_async")
+winrt.runtime._internals.alias_method(_IStorageFolderQueryOperations, "get_folders_async_overload_default_start_and_count", "get_folders_async")

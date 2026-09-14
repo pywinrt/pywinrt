@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_devices_pwm import (
     PwmController,
@@ -18,3 +19,4 @@ class PwmPulsePolarity(enum.IntEnum):
     ACTIVE_HIGH = 0
     ACTIVE_LOW = 1
 
+winrt.runtime._internals.alias_static_method(PwmController, "get_device_selector_from_friendly_name", "get_device_selector")

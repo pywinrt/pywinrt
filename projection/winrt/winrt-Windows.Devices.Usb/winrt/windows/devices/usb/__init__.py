@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_devices_usb import (
     UsbBulkInEndpointDescriptor,
@@ -93,3 +94,7 @@ class UsbWriteOptions(enum.IntFlag):
     AUTO_CLEAR_STALL = 0x1
     SHORT_PACKET_TERMINATE = 0x2
 
+winrt.runtime._internals.alias_static_method(UsbDevice, "get_device_selector_guid_only", "get_device_selector")
+winrt.runtime._internals.alias_static_method(UsbDevice, "get_device_selector_vid_pid_only", "get_device_selector")
+winrt.runtime._internals.alias_method(UsbDevice, "send_control_in_transfer_async_no_buffer", "send_control_in_transfer_async")
+winrt.runtime._internals.alias_method(UsbDevice, "send_control_out_transfer_async_no_buffer", "send_control_out_transfer_async")

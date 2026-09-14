@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -16,17 +17,33 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class ApiInformation_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # System.Boolean Windows.Foundation.Metadata.ApiInformation::IsApiContractPresent(System.String,System.UInt16)
-    def is_api_contract_present_by_major(cls, contract_name: str, major_version: winrt.system.UInt16, /) -> bool: ...
+    def is_api_contract_present(cls, contract_name: str, major_version: winrt.system.UInt16, /) -> bool: ...
+    @typing.overload
     # System.Boolean Windows.Foundation.Metadata.ApiInformation::IsApiContractPresent(System.String,System.UInt16,System.UInt16)
+    def is_api_contract_present(cls, contract_name: str, major_version: winrt.system.UInt16, minor_version: winrt.system.UInt16, /) -> bool: ...
+    # Deprecated alias of is_api_contract_present() for pywinrt v3.x compatibility.
+    # System.Boolean Windows.Foundation.Metadata.ApiInformation::IsApiContractPresent(System.String,System.UInt16)
+    @deprecated("Use is_api_contract_present() instead.")
+    def is_api_contract_present_by_major(cls, contract_name: str, major_version: winrt.system.UInt16, /) -> bool: ...
+    # Deprecated alias of is_api_contract_present() for pywinrt v3.x compatibility.
+    # System.Boolean Windows.Foundation.Metadata.ApiInformation::IsApiContractPresent(System.String,System.UInt16,System.UInt16)
+    @deprecated("Use is_api_contract_present() instead.")
     def is_api_contract_present_by_major_and_minor(cls, contract_name: str, major_version: winrt.system.UInt16, minor_version: winrt.system.UInt16, /) -> bool: ...
     # System.Boolean Windows.Foundation.Metadata.ApiInformation::IsEnumNamedValuePresent(System.String,System.String)
     def is_enum_named_value_present(cls, enum_type_name: str, value_name: str, /) -> bool: ...
     # System.Boolean Windows.Foundation.Metadata.ApiInformation::IsEventPresent(System.String,System.String)
     def is_event_present(cls, type_name: str, event_name: str, /) -> bool: ...
+    @typing.overload
     # System.Boolean Windows.Foundation.Metadata.ApiInformation::IsMethodPresent(System.String,System.String)
     def is_method_present(cls, type_name: str, method_name: str, /) -> bool: ...
+    @typing.overload
     # System.Boolean Windows.Foundation.Metadata.ApiInformation::IsMethodPresent(System.String,System.String,System.UInt32)
+    def is_method_present(cls, type_name: str, method_name: str, input_parameter_count: winrt.system.UInt32, /) -> bool: ...
+    # Deprecated alias of is_method_present() for pywinrt v3.x compatibility.
+    # System.Boolean Windows.Foundation.Metadata.ApiInformation::IsMethodPresent(System.String,System.String,System.UInt32)
+    @deprecated("Use is_method_present() instead.")
     def is_method_present_with_arity(cls, type_name: str, method_name: str, input_parameter_count: winrt.system.UInt32, /) -> bool: ...
     # System.Boolean Windows.Foundation.Metadata.ApiInformation::IsPropertyPresent(System.String,System.String)
     def is_property_present(cls, type_name: str, property_name: str, /) -> bool: ...

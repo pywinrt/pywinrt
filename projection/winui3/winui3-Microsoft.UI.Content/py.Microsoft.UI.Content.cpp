@@ -1211,7 +1211,7 @@ namespace py::cpp::Microsoft::UI::Content
         Py_DECREF(tp);
     }
 
-    static PyObject* ContentCoordinateConverter_ConvertLocalToScreenWithPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* ContentCoordinateConverter_ConvertLocalToScreen(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -1238,6 +1238,38 @@ namespace py::cpp::Microsoft::UI::Content
                 {
                     auto _gil = release_gil();
                     return self->obj.try_as<winrt::Microsoft::UI::Content::ContentCoordinateConverter>().ConvertLocalToScreen(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentCoordinateConverter", L"ConvertLocalToScreen", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Point, false>>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Content::ContentCoordinateRoundingMode>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.try_as<winrt::Microsoft::UI::Content::ContentCoordinateConverter>().ConvertLocalToScreen(param0, param1);
                 }());
             }
             catch (...)
@@ -1295,49 +1327,6 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentCoordinateConverter_ConvertLocalToScreenWithPointsAndRoundingMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentCoordinateConverter", L"ConvertLocalToScreen", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Point, false>>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Content::ContentCoordinateRoundingMode>(args, 1);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.try_as<winrt::Microsoft::UI::Content::ContentCoordinateConverter>().ConvertLocalToScreen(param0, param1);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
     static PyObject* ContentCoordinateConverter_ConvertLocalToScreenWithRect(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
@@ -1380,7 +1369,7 @@ namespace py::cpp::Microsoft::UI::Content
         }
     }
 
-    static PyObject* ContentCoordinateConverter_ConvertScreenToLocalWithPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* ContentCoordinateConverter_ConvertScreenToLocal(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -1573,11 +1562,10 @@ namespace py::cpp::Microsoft::UI::Content
     }
 
     static PyMethodDef _methods_ContentCoordinateConverter[] = {
-        { "convert_local_to_screen_with_point", reinterpret_cast<PyCFunction>(ContentCoordinateConverter_ConvertLocalToScreenWithPoint), METH_VARARGS, nullptr },
+        { "convert_local_to_screen", reinterpret_cast<PyCFunction>(ContentCoordinateConverter_ConvertLocalToScreen), METH_VARARGS, nullptr },
         { "convert_local_to_screen_with_points", reinterpret_cast<PyCFunction>(ContentCoordinateConverter_ConvertLocalToScreenWithPoints), METH_VARARGS, nullptr },
-        { "convert_local_to_screen_with_points_and_rounding_mode", reinterpret_cast<PyCFunction>(ContentCoordinateConverter_ConvertLocalToScreenWithPointsAndRoundingMode), METH_VARARGS, nullptr },
         { "convert_local_to_screen_with_rect", reinterpret_cast<PyCFunction>(ContentCoordinateConverter_ConvertLocalToScreenWithRect), METH_VARARGS, nullptr },
-        { "convert_screen_to_local_with_point", reinterpret_cast<PyCFunction>(ContentCoordinateConverter_ConvertScreenToLocalWithPoint), METH_VARARGS, nullptr },
+        { "convert_screen_to_local", reinterpret_cast<PyCFunction>(ContentCoordinateConverter_ConvertScreenToLocal), METH_VARARGS, nullptr },
         { "convert_screen_to_local_with_points", reinterpret_cast<PyCFunction>(ContentCoordinateConverter_ConvertScreenToLocalWithPoints), METH_VARARGS, nullptr },
         { "convert_screen_to_local_with_rect", reinterpret_cast<PyCFunction>(ContentCoordinateConverter_ConvertScreenToLocalWithRect), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContentCoordinateConverter, METH_O | METH_STATIC, nullptr },

@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -85,9 +86,15 @@ class SpiDevice_Static(winrt._winrt.IInspectable_Static):
     def from_id_async(cls, bus_id: str, settings: SpiConnectionSettings, /) -> windows_foundation.IAsyncOperation[SpiDevice]: ...
     # Windows.Devices.Spi.SpiBusInfo Windows.Devices.Spi.SpiDevice::GetBusInfo(System.String)
     def get_bus_info(cls, bus_id: str, /) -> SpiBusInfo: ...
+    @typing.overload
     # System.String Windows.Devices.Spi.SpiDevice::GetDeviceSelector()
     def get_device_selector(cls) -> str: ...
+    @typing.overload
     # System.String Windows.Devices.Spi.SpiDevice::GetDeviceSelector(System.String)
+    def get_device_selector(cls, friendly_name: str, /) -> str: ...
+    # Deprecated alias of get_device_selector() for pywinrt v3.x compatibility.
+    # System.String Windows.Devices.Spi.SpiDevice::GetDeviceSelector(System.String)
+    @deprecated("Use get_device_selector() instead.")
     def get_device_selector_from_friendly_name(cls, friendly_name: str, /) -> str: ...
 
 @typing.final
@@ -121,10 +128,16 @@ class ISpiDeviceStatics(winrt._winrt.IInspectable):
     # Windows.Devices.Spi.SpiBusInfo Windows.Devices.Spi.ISpiDeviceStatics::GetBusInfo(System.String)
     @abstractmethod
     def get_bus_info(self, bus_id: str, /) -> SpiBusInfo: ...
+    @typing.overload
     # System.String Windows.Devices.Spi.ISpiDeviceStatics::GetDeviceSelector()
     @abstractmethod
     def get_device_selector(self) -> str: ...
+    @typing.overload
     # System.String Windows.Devices.Spi.ISpiDeviceStatics::GetDeviceSelector(System.String)
     @abstractmethod
+    def get_device_selector(self, friendly_name: str, /) -> str: ...
+    # Deprecated alias of get_device_selector() for pywinrt v3.x compatibility.
+    # System.String Windows.Devices.Spi.ISpiDeviceStatics::GetDeviceSelector(System.String)
+    @deprecated("Use get_device_selector() instead.")
     def get_device_selector_from_friendly_name(self, friendly_name: str, /) -> str: ...
 

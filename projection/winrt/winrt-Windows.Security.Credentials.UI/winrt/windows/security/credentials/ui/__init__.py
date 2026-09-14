@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_security_credentials_ui import (
     CredentialPicker,
@@ -51,3 +52,6 @@ class UserConsentVerifierAvailability(enum.IntEnum):
     DISABLED_BY_POLICY = 3
     DEVICE_BUSY = 4
 
+winrt.runtime._internals.alias_static_method(CredentialPicker, "pick_with_caption_async", "pick_async")
+winrt.runtime._internals.alias_static_method(CredentialPicker, "pick_with_message_async", "pick_async")
+winrt.runtime._internals.alias_static_method(CredentialPicker, "pick_with_options_async", "pick_async")

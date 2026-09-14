@@ -2008,18 +2008,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* ColorKeyFrameAnimation_InsertKeyFrameWithEasingFunction(py::wrapper::Windows::UI::Composition::ColorKeyFrameAnimation* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -2155,7 +2144,6 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyMethodDef _methods_ColorKeyFrameAnimation[] = {
         { "insert_key_frame", reinterpret_cast<PyCFunction>(ColorKeyFrameAnimation_InsertKeyFrame), METH_VARARGS, nullptr },
-        { "insert_key_frame_with_easing_function", reinterpret_cast<PyCFunction>(ColorKeyFrameAnimation_InsertKeyFrameWithEasingFunction), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ColorKeyFrameAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ColorKeyFrameAnimation), METH_O | METH_STATIC, nullptr },
         { }};
@@ -5778,18 +5766,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* CompositionDrawingSurface_ScrollRect(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -5812,51 +5789,6 @@ namespace py::cpp::Windows::UI::Composition
                 {
                     auto _gil = release_gil();
                     self->obj.try_as<winrt::Windows::UI::Composition::CompositionDrawingSurface>().Scroll(param0, param1);
-                }
-
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* CompositionDrawingSurface_ScrollRectWithClip(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionDrawingSurface", L"ScrollWithClip", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Graphics::PointInt32>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Graphics::RectInt32>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Graphics::RectInt32>(args, 2);
-
-                {
-                    auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Composition::CompositionDrawingSurface>().ScrollWithClip(param0, param1, param2);
                 }
 
                 Py_RETURN_NONE;
@@ -5901,6 +5833,40 @@ namespace py::cpp::Windows::UI::Composition
                 {
                     auto _gil = release_gil();
                     self->obj.try_as<winrt::Windows::UI::Composition::CompositionDrawingSurface>().ScrollWithClip(param0, param1);
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionDrawingSurface", L"ScrollWithClip", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Graphics::PointInt32>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Graphics::RectInt32>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Graphics::RectInt32>(args, 2);
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Windows::UI::Composition::CompositionDrawingSurface>().ScrollWithClip(param0, param1, param2);
                 }
 
                 Py_RETURN_NONE;
@@ -6065,8 +6031,6 @@ namespace py::cpp::Windows::UI::Composition
     static PyMethodDef _methods_CompositionDrawingSurface[] = {
         { "resize", reinterpret_cast<PyCFunction>(CompositionDrawingSurface_Resize), METH_VARARGS, nullptr },
         { "scroll", reinterpret_cast<PyCFunction>(CompositionDrawingSurface_Scroll), METH_VARARGS, nullptr },
-        { "scroll_rect", reinterpret_cast<PyCFunction>(CompositionDrawingSurface_ScrollRect), METH_VARARGS, nullptr },
-        { "scroll_rect_with_clip", reinterpret_cast<PyCFunction>(CompositionDrawingSurface_ScrollRectWithClip), METH_VARARGS, nullptr },
         { "scroll_with_clip", reinterpret_cast<PyCFunction>(CompositionDrawingSurface_ScrollWithClip), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CompositionDrawingSurface, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionDrawingSurface), METH_O | METH_STATIC, nullptr },
@@ -6560,18 +6524,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* CompositionEasingFunction_CreateStepEasingFunctionWithStepCount(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -6670,7 +6623,6 @@ namespace py::cpp::Windows::UI::Composition
         { "create_power_easing_function", reinterpret_cast<PyCFunction>(CompositionEasingFunction_CreatePowerEasingFunction), METH_VARARGS, nullptr },
         { "create_sine_easing_function", reinterpret_cast<PyCFunction>(CompositionEasingFunction_CreateSineEasingFunction), METH_VARARGS, nullptr },
         { "create_step_easing_function", reinterpret_cast<PyCFunction>(CompositionEasingFunction_CreateStepEasingFunction), METH_VARARGS, nullptr },
-        { "create_step_easing_function_with_step_count", reinterpret_cast<PyCFunction>(CompositionEasingFunction_CreateStepEasingFunctionWithStepCount), METH_VARARGS, nullptr },
         { }};
 
     static PyType_Slot type_slots_CompositionEasingFunction_Static[] = 
@@ -10145,18 +10097,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* CompositionNineGridBrush_SetInsetScalesWithValues(py::wrapper::Windows::UI::Composition::CompositionNineGridBrush* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 4)
+        else if (arg_count == 4)
         {
             try
             {
@@ -10234,18 +10175,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* CompositionNineGridBrush_SetInsetsWithValues(py::wrapper::Windows::UI::Composition::CompositionNineGridBrush* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 4)
+        else if (arg_count == 4)
         {
             try
             {
@@ -11003,9 +10933,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyMethodDef _methods_CompositionNineGridBrush[] = {
         { "set_inset_scales", reinterpret_cast<PyCFunction>(CompositionNineGridBrush_SetInsetScales), METH_VARARGS, nullptr },
-        { "set_inset_scales_with_values", reinterpret_cast<PyCFunction>(CompositionNineGridBrush_SetInsetScalesWithValues), METH_VARARGS, nullptr },
         { "set_insets", reinterpret_cast<PyCFunction>(CompositionNineGridBrush_SetInsets), METH_VARARGS, nullptr },
-        { "set_insets_with_values", reinterpret_cast<PyCFunction>(CompositionNineGridBrush_SetInsetsWithValues), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CompositionNineGridBrush, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CompositionNineGridBrush), METH_O | METH_STATIC, nullptr },
         { }};
@@ -11176,6 +11104,40 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
         }
+        else if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::UI::Composition::AnimationController>(args, 2);
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Windows::UI::Composition::CompositionObject>().StartAnimation(param0, param1, param2);
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -11253,51 +11215,6 @@ namespace py::cpp::Windows::UI::Composition
                 {
                     auto _gil = release_gil();
                     winrt::Windows::UI::Composition::CompositionObject::StartAnimationGroupWithIAnimationObject(param0, param1);
-                }
-
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* CompositionObject_StartAnimationWithController(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::UI::Composition::AnimationController>(args, 2);
-
-                {
-                    auto _gil = release_gil();
-                    self->obj.try_as<winrt::Windows::UI::Composition::CompositionObject>().StartAnimation(param0, param1, param2);
                 }
 
                 Py_RETURN_NONE;
@@ -11798,7 +11715,6 @@ namespace py::cpp::Windows::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionObject_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionObject_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionObject_StartAnimationGroup), METH_VARARGS, nullptr },
-        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionObject_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionObject_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionObject_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionObject_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -21409,18 +21325,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* Compositor_CreateColorBrushWithColor(py::wrapper::Windows::UI::Composition::Compositor* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -21491,18 +21396,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* Compositor_CreateColorGradientStopWithOffsetAndColor(py::wrapper::Windows::UI::Composition::Compositor* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -21819,18 +21713,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* Compositor_CreateEffectFactoryWithProperties(py::wrapper::Windows::UI::Composition::Compositor* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -21942,18 +21825,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* Compositor_CreateExpressionAnimationWithExpression(py::wrapper::Windows::UI::Composition::Compositor* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -22024,18 +21896,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* Compositor_CreateGeometricClipWithGeometry(py::wrapper::Windows::UI::Composition::Compositor* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -22186,18 +22047,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* Compositor_CreateInsetClipWithInsets(py::wrapper::Windows::UI::Composition::Compositor* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 4)
+        else if (arg_count == 4)
         {
             try
             {
@@ -22511,18 +22361,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* Compositor_CreatePathGeometryWithPath(py::wrapper::Windows::UI::Composition::Compositor* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -22913,18 +22752,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* Compositor_CreateRectangleClipWithSides(py::wrapper::Windows::UI::Composition::Compositor* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 4)
+        else if (arg_count == 4)
         {
             try
             {
@@ -22958,18 +22786,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* Compositor_CreateRectangleClipWithSidesAndRadius(py::wrapper::Windows::UI::Composition::Compositor* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 8)
+        else if (arg_count == 8)
         {
             try
             {
@@ -23087,18 +22904,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* Compositor_CreateRedirectVisualWithSourceVisual(py::wrapper::Windows::UI::Composition::Compositor* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -23491,18 +23297,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* Compositor_CreateSpriteShapeWithGeometry(py::wrapper::Windows::UI::Composition::Compositor* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -23613,18 +23408,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* Compositor_CreateStepEasingFunctionWithStepCount(py::wrapper::Windows::UI::Composition::Compositor* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -23695,18 +23479,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* Compositor_CreateSurfaceBrushWithSurface(py::wrapper::Windows::UI::Composition::Compositor* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -24393,9 +24166,7 @@ namespace py::cpp::Windows::UI::Composition
         { "create_bounce_vector2_animation", reinterpret_cast<PyCFunction>(Compositor_CreateBounceVector2Animation), METH_VARARGS, nullptr },
         { "create_bounce_vector3_animation", reinterpret_cast<PyCFunction>(Compositor_CreateBounceVector3Animation), METH_VARARGS, nullptr },
         { "create_color_brush", reinterpret_cast<PyCFunction>(Compositor_CreateColorBrush), METH_VARARGS, nullptr },
-        { "create_color_brush_with_color", reinterpret_cast<PyCFunction>(Compositor_CreateColorBrushWithColor), METH_VARARGS, nullptr },
         { "create_color_gradient_stop", reinterpret_cast<PyCFunction>(Compositor_CreateColorGradientStop), METH_VARARGS, nullptr },
-        { "create_color_gradient_stop_with_offset_and_color", reinterpret_cast<PyCFunction>(Compositor_CreateColorGradientStopWithOffsetAndColor), METH_VARARGS, nullptr },
         { "create_color_key_frame_animation", reinterpret_cast<PyCFunction>(Compositor_CreateColorKeyFrameAnimation), METH_VARARGS, nullptr },
         { "create_container_shape", reinterpret_cast<PyCFunction>(Compositor_CreateContainerShape), METH_VARARGS, nullptr },
         { "create_container_visual", reinterpret_cast<PyCFunction>(Compositor_CreateContainerVisual), METH_VARARGS, nullptr },
@@ -24403,16 +24174,12 @@ namespace py::cpp::Windows::UI::Composition
         { "create_distant_light", reinterpret_cast<PyCFunction>(Compositor_CreateDistantLight), METH_VARARGS, nullptr },
         { "create_drop_shadow", reinterpret_cast<PyCFunction>(Compositor_CreateDropShadow), METH_VARARGS, nullptr },
         { "create_effect_factory", reinterpret_cast<PyCFunction>(Compositor_CreateEffectFactory), METH_VARARGS, nullptr },
-        { "create_effect_factory_with_properties", reinterpret_cast<PyCFunction>(Compositor_CreateEffectFactoryWithProperties), METH_VARARGS, nullptr },
         { "create_ellipse_geometry", reinterpret_cast<PyCFunction>(Compositor_CreateEllipseGeometry), METH_VARARGS, nullptr },
         { "create_expression_animation", reinterpret_cast<PyCFunction>(Compositor_CreateExpressionAnimation), METH_VARARGS, nullptr },
-        { "create_expression_animation_with_expression", reinterpret_cast<PyCFunction>(Compositor_CreateExpressionAnimationWithExpression), METH_VARARGS, nullptr },
         { "create_geometric_clip", reinterpret_cast<PyCFunction>(Compositor_CreateGeometricClip), METH_VARARGS, nullptr },
-        { "create_geometric_clip_with_geometry", reinterpret_cast<PyCFunction>(Compositor_CreateGeometricClipWithGeometry), METH_VARARGS, nullptr },
         { "create_host_backdrop_brush", reinterpret_cast<PyCFunction>(Compositor_CreateHostBackdropBrush), METH_VARARGS, nullptr },
         { "create_implicit_animation_collection", reinterpret_cast<PyCFunction>(Compositor_CreateImplicitAnimationCollection), METH_VARARGS, nullptr },
         { "create_inset_clip", reinterpret_cast<PyCFunction>(Compositor_CreateInsetClip), METH_VARARGS, nullptr },
-        { "create_inset_clip_with_insets", reinterpret_cast<PyCFunction>(Compositor_CreateInsetClipWithInsets), METH_VARARGS, nullptr },
         { "create_layer_visual", reinterpret_cast<PyCFunction>(Compositor_CreateLayerVisual), METH_VARARGS, nullptr },
         { "create_line_geometry", reinterpret_cast<PyCFunction>(Compositor_CreateLineGeometry), METH_VARARGS, nullptr },
         { "create_linear_easing_function", reinterpret_cast<PyCFunction>(Compositor_CreateLinearEasingFunction), METH_VARARGS, nullptr },
@@ -24420,7 +24187,6 @@ namespace py::cpp::Windows::UI::Composition
         { "create_mask_brush", reinterpret_cast<PyCFunction>(Compositor_CreateMaskBrush), METH_VARARGS, nullptr },
         { "create_nine_grid_brush", reinterpret_cast<PyCFunction>(Compositor_CreateNineGridBrush), METH_VARARGS, nullptr },
         { "create_path_geometry", reinterpret_cast<PyCFunction>(Compositor_CreatePathGeometry), METH_VARARGS, nullptr },
-        { "create_path_geometry_with_path", reinterpret_cast<PyCFunction>(Compositor_CreatePathGeometryWithPath), METH_VARARGS, nullptr },
         { "create_path_key_frame_animation", reinterpret_cast<PyCFunction>(Compositor_CreatePathKeyFrameAnimation), METH_VARARGS, nullptr },
         { "create_point_light", reinterpret_cast<PyCFunction>(Compositor_CreatePointLight), METH_VARARGS, nullptr },
         { "create_projected_shadow", reinterpret_cast<PyCFunction>(Compositor_CreateProjectedShadow), METH_VARARGS, nullptr },
@@ -24430,11 +24196,8 @@ namespace py::cpp::Windows::UI::Composition
         { "create_quaternion_key_frame_animation", reinterpret_cast<PyCFunction>(Compositor_CreateQuaternionKeyFrameAnimation), METH_VARARGS, nullptr },
         { "create_radial_gradient_brush", reinterpret_cast<PyCFunction>(Compositor_CreateRadialGradientBrush), METH_VARARGS, nullptr },
         { "create_rectangle_clip", reinterpret_cast<PyCFunction>(Compositor_CreateRectangleClip), METH_VARARGS, nullptr },
-        { "create_rectangle_clip_with_sides", reinterpret_cast<PyCFunction>(Compositor_CreateRectangleClipWithSides), METH_VARARGS, nullptr },
-        { "create_rectangle_clip_with_sides_and_radius", reinterpret_cast<PyCFunction>(Compositor_CreateRectangleClipWithSidesAndRadius), METH_VARARGS, nullptr },
         { "create_rectangle_geometry", reinterpret_cast<PyCFunction>(Compositor_CreateRectangleGeometry), METH_VARARGS, nullptr },
         { "create_redirect_visual", reinterpret_cast<PyCFunction>(Compositor_CreateRedirectVisual), METH_VARARGS, nullptr },
-        { "create_redirect_visual_with_source_visual", reinterpret_cast<PyCFunction>(Compositor_CreateRedirectVisualWithSourceVisual), METH_VARARGS, nullptr },
         { "create_rounded_rectangle_geometry", reinterpret_cast<PyCFunction>(Compositor_CreateRoundedRectangleGeometry), METH_VARARGS, nullptr },
         { "create_scalar_key_frame_animation", reinterpret_cast<PyCFunction>(Compositor_CreateScalarKeyFrameAnimation), METH_VARARGS, nullptr },
         { "create_scoped_batch", reinterpret_cast<PyCFunction>(Compositor_CreateScopedBatch), METH_VARARGS, nullptr },
@@ -24444,12 +24207,9 @@ namespace py::cpp::Windows::UI::Composition
         { "create_spring_vector2_animation", reinterpret_cast<PyCFunction>(Compositor_CreateSpringVector2Animation), METH_VARARGS, nullptr },
         { "create_spring_vector3_animation", reinterpret_cast<PyCFunction>(Compositor_CreateSpringVector3Animation), METH_VARARGS, nullptr },
         { "create_sprite_shape", reinterpret_cast<PyCFunction>(Compositor_CreateSpriteShape), METH_VARARGS, nullptr },
-        { "create_sprite_shape_with_geometry", reinterpret_cast<PyCFunction>(Compositor_CreateSpriteShapeWithGeometry), METH_VARARGS, nullptr },
         { "create_sprite_visual", reinterpret_cast<PyCFunction>(Compositor_CreateSpriteVisual), METH_VARARGS, nullptr },
         { "create_step_easing_function", reinterpret_cast<PyCFunction>(Compositor_CreateStepEasingFunction), METH_VARARGS, nullptr },
-        { "create_step_easing_function_with_step_count", reinterpret_cast<PyCFunction>(Compositor_CreateStepEasingFunctionWithStepCount), METH_VARARGS, nullptr },
         { "create_surface_brush", reinterpret_cast<PyCFunction>(Compositor_CreateSurfaceBrush), METH_VARARGS, nullptr },
-        { "create_surface_brush_with_surface", reinterpret_cast<PyCFunction>(Compositor_CreateSurfaceBrushWithSurface), METH_VARARGS, nullptr },
         { "create_target_for_current_view", reinterpret_cast<PyCFunction>(Compositor_CreateTargetForCurrentView), METH_VARARGS, nullptr },
         { "create_vector2_key_frame_animation", reinterpret_cast<PyCFunction>(Compositor_CreateVector2KeyFrameAnimation), METH_VARARGS, nullptr },
         { "create_vector3_key_frame_animation", reinterpret_cast<PyCFunction>(Compositor_CreateVector3KeyFrameAnimation), METH_VARARGS, nullptr },
@@ -27789,18 +27549,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* KeyFrameAnimation_InsertExpressionKeyFrameWithEasingFunction(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -28380,7 +28129,6 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyMethodDef _methods_KeyFrameAnimation[] = {
         { "insert_expression_key_frame", reinterpret_cast<PyCFunction>(KeyFrameAnimation_InsertExpressionKeyFrame), METH_VARARGS, nullptr },
-        { "insert_expression_key_frame_with_easing_function", reinterpret_cast<PyCFunction>(KeyFrameAnimation_InsertExpressionKeyFrameWithEasingFunction), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_KeyFrameAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_KeyFrameAnimation), METH_O | METH_STATIC, nullptr },
         { }};
@@ -29045,18 +28793,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PathKeyFrameAnimation_InsertKeyFrameWithEasingFunction(py::wrapper::Windows::UI::Composition::PathKeyFrameAnimation* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -29123,7 +28860,6 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyMethodDef _methods_PathKeyFrameAnimation[] = {
         { "insert_key_frame", reinterpret_cast<PyCFunction>(PathKeyFrameAnimation_InsertKeyFrame), METH_VARARGS, nullptr },
-        { "insert_key_frame_with_easing_function", reinterpret_cast<PyCFunction>(PathKeyFrameAnimation_InsertKeyFrameWithEasingFunction), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PathKeyFrameAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PathKeyFrameAnimation), METH_O | METH_STATIC, nullptr },
         { }};
@@ -30017,18 +29753,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* QuaternionKeyFrameAnimation_InsertKeyFrameWithEasingFunction(py::wrapper::Windows::UI::Composition::QuaternionKeyFrameAnimation* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -30095,7 +29820,6 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyMethodDef _methods_QuaternionKeyFrameAnimation[] = {
         { "insert_key_frame", reinterpret_cast<PyCFunction>(QuaternionKeyFrameAnimation_InsertKeyFrame), METH_VARARGS, nullptr },
-        { "insert_key_frame_with_easing_function", reinterpret_cast<PyCFunction>(QuaternionKeyFrameAnimation_InsertKeyFrameWithEasingFunction), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_QuaternionKeyFrameAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_QuaternionKeyFrameAnimation), METH_O | METH_STATIC, nullptr },
         { }};
@@ -31021,18 +30745,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* ScalarKeyFrameAnimation_InsertKeyFrameWithEasingFunction(py::wrapper::Windows::UI::Composition::ScalarKeyFrameAnimation* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -31099,7 +30812,6 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyMethodDef _methods_ScalarKeyFrameAnimation[] = {
         { "insert_key_frame", reinterpret_cast<PyCFunction>(ScalarKeyFrameAnimation_InsertKeyFrame), METH_VARARGS, nullptr },
-        { "insert_key_frame_with_easing_function", reinterpret_cast<PyCFunction>(ScalarKeyFrameAnimation_InsertKeyFrameWithEasingFunction), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ScalarKeyFrameAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ScalarKeyFrameAnimation), METH_O | METH_STATIC, nullptr },
         { }};
@@ -34135,18 +33847,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* Vector2KeyFrameAnimation_InsertKeyFrameWithEasingFunction(py::wrapper::Windows::UI::Composition::Vector2KeyFrameAnimation* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -34213,7 +33914,6 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyMethodDef _methods_Vector2KeyFrameAnimation[] = {
         { "insert_key_frame", reinterpret_cast<PyCFunction>(Vector2KeyFrameAnimation_InsertKeyFrame), METH_VARARGS, nullptr },
-        { "insert_key_frame_with_easing_function", reinterpret_cast<PyCFunction>(Vector2KeyFrameAnimation_InsertKeyFrameWithEasingFunction), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Vector2KeyFrameAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Vector2KeyFrameAnimation), METH_O | METH_STATIC, nullptr },
         { }};
@@ -34583,18 +34283,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* Vector3KeyFrameAnimation_InsertKeyFrameWithEasingFunction(py::wrapper::Windows::UI::Composition::Vector3KeyFrameAnimation* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -34661,7 +34350,6 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyMethodDef _methods_Vector3KeyFrameAnimation[] = {
         { "insert_key_frame", reinterpret_cast<PyCFunction>(Vector3KeyFrameAnimation_InsertKeyFrame), METH_VARARGS, nullptr },
-        { "insert_key_frame_with_easing_function", reinterpret_cast<PyCFunction>(Vector3KeyFrameAnimation_InsertKeyFrameWithEasingFunction), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Vector3KeyFrameAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Vector3KeyFrameAnimation), METH_O | METH_STATIC, nullptr },
         { }};
@@ -35031,18 +34719,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* Vector4KeyFrameAnimation_InsertKeyFrameWithEasingFunction(py::wrapper::Windows::UI::Composition::Vector4KeyFrameAnimation* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -35109,7 +34786,6 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyMethodDef _methods_Vector4KeyFrameAnimation[] = {
         { "insert_key_frame", reinterpret_cast<PyCFunction>(Vector4KeyFrameAnimation_InsertKeyFrame), METH_VARARGS, nullptr },
-        { "insert_key_frame_with_easing_function", reinterpret_cast<PyCFunction>(Vector4KeyFrameAnimation_InsertKeyFrameWithEasingFunction), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Vector4KeyFrameAnimation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Vector4KeyFrameAnimation), METH_O | METH_STATIC, nullptr },
         { }};

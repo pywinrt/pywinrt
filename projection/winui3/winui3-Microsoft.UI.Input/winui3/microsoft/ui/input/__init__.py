@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winui3._winui3_microsoft_ui_input import (
     CrossSlideThresholds,
@@ -261,3 +262,5 @@ class VirtualKeyStates(enum.IntFlag):
     DOWN = 0x1
     LOCKED = 0x2
 
+winrt.runtime._internals.alias_static_method(FocusNavigationRequest, "create_with_hint_rect", "create")
+winrt.runtime._internals.alias_static_method(FocusNavigationRequest, "create_with_hint_rect_and_id", "create")

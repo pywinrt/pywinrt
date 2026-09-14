@@ -241,18 +241,7 @@ namespace py::cpp::Windows::Media::Capture
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* AdvancedPhotoCapture_CaptureWithContextAsync(py::wrapper::Windows::Media::Capture::AdvancedPhotoCapture* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -486,7 +475,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyMethodDef _methods_AdvancedPhotoCapture[] = {
         { "capture_async", reinterpret_cast<PyCFunction>(AdvancedPhotoCapture_CaptureAsync), METH_VARARGS, nullptr },
-        { "capture_with_context_async", reinterpret_cast<PyCFunction>(AdvancedPhotoCapture_CaptureWithContextAsync), METH_VARARGS, nullptr },
         { "finish_async", reinterpret_cast<PyCFunction>(AdvancedPhotoCapture_FinishAsync), METH_VARARGS, nullptr },
         { "add_all_photos_captured", reinterpret_cast<PyCFunction>(AdvancedPhotoCapture_add_AllPhotosCaptured), METH_O, nullptr },
         { "remove_all_photos_captured", reinterpret_cast<PyCFunction>(AdvancedPhotoCapture_remove_AllPhotosCaptured), METH_O, nullptr },
@@ -19771,18 +19759,39 @@ namespace py::cpp::Windows::Media::Capture
                 return nullptr;
             }
         }
-        else
+        else if (arg_count == 2)
         {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"CreateFrameReaderAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Media::Capture::Frames::MediaFrameSource>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.CreateFrameReaderAsync(param0, param1);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
         }
-    }
-
-    static PyObject* MediaCapture_CreateFrameReaderWithSubtypeAndSizeAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -19807,49 +19816,6 @@ namespace py::cpp::Windows::Media::Capture
                 {
                     auto _gil = release_gil();
                     return self->obj.CreateFrameReaderAsync(param0, param1, param2);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* MediaCapture_CreateFrameReaderWithSubtypeAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.MediaCapture", L"CreateFrameReaderAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Media::Capture::Frames::MediaFrameSource>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.CreateFrameReaderAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -20153,18 +20119,7 @@ namespace py::cpp::Windows::Media::Capture
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* MediaCapture_GetPreviewFrameCopyAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -20355,18 +20310,7 @@ namespace py::cpp::Windows::Media::Capture
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* MediaCapture_InitializeWithSettingsAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -20692,18 +20636,7 @@ namespace py::cpp::Windows::Media::Capture
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* MediaCapture_PrepareLowLagRecordToCustomSinkIdAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -21247,18 +21180,7 @@ namespace py::cpp::Windows::Media::Capture
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* MediaCapture_StartPreviewToCustomSinkIdAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -21334,18 +21256,7 @@ namespace py::cpp::Windows::Media::Capture
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* MediaCapture_StartRecordToCustomSinkIdAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -22282,25 +22193,20 @@ namespace py::cpp::Windows::Media::Capture
         { "clear_effects_async", reinterpret_cast<PyCFunction>(MediaCapture_ClearEffectsAsync), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(MediaCapture_Close), METH_VARARGS, nullptr },
         { "create_frame_reader_async", reinterpret_cast<PyCFunction>(MediaCapture_CreateFrameReaderAsync), METH_VARARGS, nullptr },
-        { "create_frame_reader_with_subtype_and_size_async", reinterpret_cast<PyCFunction>(MediaCapture_CreateFrameReaderWithSubtypeAndSizeAsync), METH_VARARGS, nullptr },
-        { "create_frame_reader_with_subtype_async", reinterpret_cast<PyCFunction>(MediaCapture_CreateFrameReaderWithSubtypeAsync), METH_VARARGS, nullptr },
         { "create_multi_source_frame_reader_async", reinterpret_cast<PyCFunction>(MediaCapture_CreateMultiSourceFrameReaderAsync), METH_VARARGS, nullptr },
         { "create_relative_panel_watcher", reinterpret_cast<PyCFunction>(MediaCapture_CreateRelativePanelWatcher), METH_VARARGS, nullptr },
         { "get_encoder_property", reinterpret_cast<PyCFunction>(MediaCapture_GetEncoderProperty), METH_VARARGS, nullptr },
         { "get_preview_frame_async", reinterpret_cast<PyCFunction>(MediaCapture_GetPreviewFrameAsync), METH_VARARGS, nullptr },
-        { "get_preview_frame_copy_async", reinterpret_cast<PyCFunction>(MediaCapture_GetPreviewFrameCopyAsync), METH_VARARGS, nullptr },
         { "get_preview_mirroring", reinterpret_cast<PyCFunction>(MediaCapture_GetPreviewMirroring), METH_VARARGS, nullptr },
         { "get_preview_rotation", reinterpret_cast<PyCFunction>(MediaCapture_GetPreviewRotation), METH_VARARGS, nullptr },
         { "get_record_rotation", reinterpret_cast<PyCFunction>(MediaCapture_GetRecordRotation), METH_VARARGS, nullptr },
         { "initialize_async", reinterpret_cast<PyCFunction>(MediaCapture_InitializeAsync), METH_VARARGS, nullptr },
-        { "initialize_with_settings_async", reinterpret_cast<PyCFunction>(MediaCapture_InitializeWithSettingsAsync), METH_VARARGS, nullptr },
         { "pause_record_async", reinterpret_cast<PyCFunction>(MediaCapture_PauseRecordAsync), METH_VARARGS, nullptr },
         { "pause_record_with_result_async", reinterpret_cast<PyCFunction>(MediaCapture_PauseRecordWithResultAsync), METH_VARARGS, nullptr },
         { "prepare_advanced_photo_capture_async", reinterpret_cast<PyCFunction>(MediaCapture_PrepareAdvancedPhotoCaptureAsync), METH_VARARGS, nullptr },
         { "prepare_low_lag_photo_capture_async", reinterpret_cast<PyCFunction>(MediaCapture_PrepareLowLagPhotoCaptureAsync), METH_VARARGS, nullptr },
         { "prepare_low_lag_photo_sequence_capture_async", reinterpret_cast<PyCFunction>(MediaCapture_PrepareLowLagPhotoSequenceCaptureAsync), METH_VARARGS, nullptr },
         { "prepare_low_lag_record_to_custom_sink_async", reinterpret_cast<PyCFunction>(MediaCapture_PrepareLowLagRecordToCustomSinkAsync), METH_VARARGS, nullptr },
-        { "prepare_low_lag_record_to_custom_sink_id_async", reinterpret_cast<PyCFunction>(MediaCapture_PrepareLowLagRecordToCustomSinkIdAsync), METH_VARARGS, nullptr },
         { "prepare_low_lag_record_to_storage_file_async", reinterpret_cast<PyCFunction>(MediaCapture_PrepareLowLagRecordToStorageFileAsync), METH_VARARGS, nullptr },
         { "prepare_low_lag_record_to_stream_async", reinterpret_cast<PyCFunction>(MediaCapture_PrepareLowLagRecordToStreamAsync), METH_VARARGS, nullptr },
         { "prepare_variable_photo_sequence_capture_async", reinterpret_cast<PyCFunction>(MediaCapture_PrepareVariablePhotoSequenceCaptureAsync), METH_VARARGS, nullptr },
@@ -22313,9 +22219,7 @@ namespace py::cpp::Windows::Media::Capture
         { "set_record_rotation", reinterpret_cast<PyCFunction>(MediaCapture_SetRecordRotation), METH_VARARGS, nullptr },
         { "start_preview_async", reinterpret_cast<PyCFunction>(MediaCapture_StartPreviewAsync), METH_VARARGS, nullptr },
         { "start_preview_to_custom_sink_async", reinterpret_cast<PyCFunction>(MediaCapture_StartPreviewToCustomSinkAsync), METH_VARARGS, nullptr },
-        { "start_preview_to_custom_sink_id_async", reinterpret_cast<PyCFunction>(MediaCapture_StartPreviewToCustomSinkIdAsync), METH_VARARGS, nullptr },
         { "start_record_to_custom_sink_async", reinterpret_cast<PyCFunction>(MediaCapture_StartRecordToCustomSinkAsync), METH_VARARGS, nullptr },
-        { "start_record_to_custom_sink_id_async", reinterpret_cast<PyCFunction>(MediaCapture_StartRecordToCustomSinkIdAsync), METH_VARARGS, nullptr },
         { "start_record_to_storage_file_async", reinterpret_cast<PyCFunction>(MediaCapture_StartRecordToStorageFileAsync), METH_VARARGS, nullptr },
         { "start_record_to_stream_async", reinterpret_cast<PyCFunction>(MediaCapture_StartRecordToStreamAsync), METH_VARARGS, nullptr },
         { "stop_preview_async", reinterpret_cast<PyCFunction>(MediaCapture_StopPreviewAsync), METH_VARARGS, nullptr },

@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -46,19 +47,36 @@ class SearchSuggestion(winrt.system.Object):
 @typing.final
 class SearchSuggestionManager(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    @typing.overload
     # System.Void Windows.ApplicationModel.Search.Core.SearchSuggestionManager::AddToHistory(System.String)
     def add_to_history(self, query_text: str, /) -> None: ...
+    @typing.overload
     # System.Void Windows.ApplicationModel.Search.Core.SearchSuggestionManager::AddToHistory(System.String,System.String)
+    def add_to_history(self, query_text: str, language: str, /) -> None: ...
+    # Deprecated alias of add_to_history() for pywinrt v3.x compatibility.
+    # System.Void Windows.ApplicationModel.Search.Core.SearchSuggestionManager::AddToHistory(System.String,System.String)
+    @deprecated("Use add_to_history() instead.")
     def add_to_history_with_language(self, query_text: str, language: str, /) -> None: ...
     # System.Void Windows.ApplicationModel.Search.Core.SearchSuggestionManager::ClearHistory()
     def clear_history(self) -> None: ...
     # System.Void Windows.ApplicationModel.Search.Core.SearchSuggestionManager::SetLocalContentSuggestionSettings(Windows.ApplicationModel.Search.LocalContentSuggestionSettings)
     def set_local_content_suggestion_settings(self, settings: windows_applicationmodel_search.LocalContentSuggestionSettings, /) -> None: ...
+    @typing.overload
     # System.Void Windows.ApplicationModel.Search.Core.SearchSuggestionManager::SetQuery(System.String)
     def set_query(self, query_text: str, /) -> None: ...
+    @typing.overload
     # System.Void Windows.ApplicationModel.Search.Core.SearchSuggestionManager::SetQuery(System.String,System.String)
-    def set_query_with_language(self, query_text: str, language: str, /) -> None: ...
+    def set_query(self, query_text: str, language: str, /) -> None: ...
+    @typing.overload
     # System.Void Windows.ApplicationModel.Search.Core.SearchSuggestionManager::SetQuery(System.String,System.String,Windows.ApplicationModel.Search.SearchQueryLinguisticDetails)
+    def set_query(self, query_text: str, language: str, linguistic_details: windows_applicationmodel_search.SearchQueryLinguisticDetails, /) -> None: ...
+    # Deprecated alias of set_query() for pywinrt v3.x compatibility.
+    # System.Void Windows.ApplicationModel.Search.Core.SearchSuggestionManager::SetQuery(System.String,System.String)
+    @deprecated("Use set_query() instead.")
+    def set_query_with_language(self, query_text: str, language: str, /) -> None: ...
+    # Deprecated alias of set_query() for pywinrt v3.x compatibility.
+    # System.Void Windows.ApplicationModel.Search.Core.SearchSuggestionManager::SetQuery(System.String,System.String,Windows.ApplicationModel.Search.SearchQueryLinguisticDetails)
+    @deprecated("Use set_query() instead.")
     def set_query_with_search_query_linguistic_details(self, query_text: str, language: str, linguistic_details: windows_applicationmodel_search.SearchQueryLinguisticDetails, /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.Search.Core.SearchSuggestionManager::add_RequestingFocusOnKeyboardInput(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.Search.Core.SearchSuggestionManager,Windows.ApplicationModel.Search.Core.RequestingFocusOnKeyboardInputEventArgs>)
     def add_requesting_focus_on_keyboard_input(self, handler: windows_foundation.TypedEventHandler[SearchSuggestionManager, RequestingFocusOnKeyboardInputEventArgs], /) -> windows_foundation.EventRegistrationToken: ...

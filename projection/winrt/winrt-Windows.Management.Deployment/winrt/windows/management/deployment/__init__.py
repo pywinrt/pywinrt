@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_management_deployment import (
     DeploymentProgress,
@@ -148,3 +149,43 @@ class StubPackageOption(enum.IntEnum):
     INSTALL_STUB = 2
     USE_PREFERENCE = 3
 
+winrt.runtime._internals.alias_method(PackageManager, "add_package_to_volume_and_optional_packages_async", "add_package_async")
+winrt.runtime._internals.alias_method(PackageManager, "add_package_to_volume_and_related_set_async", "add_package_async")
+winrt.runtime._internals.alias_method(PackageManager, "add_package_to_volume_async", "add_package_async")
+winrt.runtime._internals.alias_method(PackageManager, "find_package_by_package_full_name", "find_package")
+winrt.runtime._internals.alias_method(PackageManager, "find_package_by_user_security_id_package_full_name", "find_package_for_user")
+winrt.runtime._internals.alias_method(PackageManager, "find_package_volume_by_name", "find_package_volume")
+winrt.runtime._internals.alias_method(PackageManager, "find_packages_by_name_publisher", "find_packages")
+winrt.runtime._internals.alias_method(PackageManager, "find_packages_by_package_family_name", "find_packages")
+winrt.runtime._internals.alias_method(PackageManager, "find_packages_by_user_security_id", "find_packages_for_user")
+winrt.runtime._internals.alias_method(PackageManager, "find_packages_by_user_security_id_name_publisher", "find_packages_for_user")
+winrt.runtime._internals.alias_method(PackageManager, "find_packages_by_user_security_id_package_family_name", "find_packages_for_user")
+winrt.runtime._internals.alias_method(PackageManager, "find_packages_by_user_security_id_name_publisher_with_package_types", "find_packages_for_user_with_package_types")
+winrt.runtime._internals.alias_method(PackageManager, "find_packages_by_user_security_id_package_family_name_with_package_types", "find_packages_for_user_with_package_types")
+winrt.runtime._internals.alias_method(PackageManager, "find_packages_by_user_security_id_with_package_types", "find_packages_for_user_with_package_types")
+winrt.runtime._internals.alias_method(PackageManager, "find_packages_by_name_publisher_with_package_types", "find_packages_with_package_types")
+winrt.runtime._internals.alias_method(PackageManager, "find_packages_by_package_family_name_with_package_types", "find_packages_with_package_types")
+winrt.runtime._internals.alias_method(PackageManager, "provision_package_for_all_users_with_options_async", "provision_package_for_all_users_async")
+winrt.runtime._internals.alias_method(PackageManager, "register_package_with_app_data_volume_async", "register_package_async")
+winrt.runtime._internals.alias_method(PackageManager, "register_package_by_family_name_and_optional_packages_async", "register_package_by_family_name_async")
+winrt.runtime._internals.alias_method(PackageManager, "remove_package_with_options_async", "remove_package_async")
+winrt.runtime._internals.alias_method(PackageManager, "request_add_package_and_related_set_async", "request_add_package_async")
+winrt.runtime._internals.alias_method(PackageManager, "stage_package_to_volume_and_optional_packages_async", "stage_package_async")
+winrt.runtime._internals.alias_method(PackageManager, "stage_package_to_volume_and_related_set_async", "stage_package_async")
+winrt.runtime._internals.alias_method(PackageManager, "stage_package_to_volume_async", "stage_package_async")
+winrt.runtime._internals.alias_method(PackageManager, "stage_package_with_options_async", "stage_package_async")
+winrt.runtime._internals.alias_method(PackageManager, "stage_user_data_with_options_async", "stage_user_data_async")
+winrt.runtime._internals.alias_method(PackageManagerDebugSettings, "set_content_group_state_with_percentage_async", "set_content_group_state_async")
+winrt.runtime._internals.alias_method(PackageVolume, "find_package_by_package_full_name", "find_package")
+winrt.runtime._internals.alias_method(PackageVolume, "find_package_by_user_security_id_package_full_name", "find_package_for_user")
+winrt.runtime._internals.alias_method(PackageVolume, "find_packages_by_name_publisher", "find_packages")
+winrt.runtime._internals.alias_method(PackageVolume, "find_packages_by_package_family_name", "find_packages")
+winrt.runtime._internals.alias_method(PackageVolume, "find_packages_by_user_security_id", "find_packages_for_user")
+winrt.runtime._internals.alias_method(PackageVolume, "find_packages_by_user_security_id_name_publisher", "find_packages_for_user")
+winrt.runtime._internals.alias_method(PackageVolume, "find_packages_by_user_security_id_package_family_name", "find_packages_for_user")
+winrt.runtime._internals.alias_method(PackageVolume, "find_packages_by_user_security_id_name_publisher_with_package_types", "find_packages_for_user_with_package_types")
+winrt.runtime._internals.alias_method(PackageVolume, "find_packages_by_user_security_id_package_family_name_with_packages_types", "find_packages_for_user_with_package_types")
+winrt.runtime._internals.alias_method(PackageVolume, "find_packages_by_user_security_id_with_package_types", "find_packages_for_user_with_package_types")
+winrt.runtime._internals.alias_method(PackageVolume, "find_packages_by_name_publisher_with_packages_types", "find_packages_with_package_types")
+winrt.runtime._internals.alias_method(PackageVolume, "find_packages_by_package_family_name_with_package_types", "find_packages_with_package_types")
+winrt.runtime._internals.alias_method(SharedPackageContainerManager, "find_containers_with_options", "find_containers")

@@ -586,3 +586,4 @@ class UniformGridLayoutItemsStretch(enum.IntEnum):
     UNIFORM = 2
 
 winrt.runtime._internals.mixin_mutable_sequence(SwipeItems)
+winrt.runtime._internals.alias_method(VirtualizingLayoutContext, "get_or_create_element_at2", "get_or_create_element_at")

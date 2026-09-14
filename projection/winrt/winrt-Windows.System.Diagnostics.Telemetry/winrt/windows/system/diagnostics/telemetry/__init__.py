@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_system_diagnostics_telemetry import (
     PlatformTelemetryClient,
@@ -21,3 +22,4 @@ class PlatformTelemetryRegistrationStatus(enum.IntEnum):
     SETTINGS_OUT_OF_RANGE = 1
     UNKNOWN_FAILURE = 2
 
+winrt.runtime._internals.alias_static_method(PlatformTelemetryClient, "register_with_settings", "register")

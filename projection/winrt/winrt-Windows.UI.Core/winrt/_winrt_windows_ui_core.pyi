@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -249,9 +250,15 @@ class CoreDispatcher(winrt.system.Object, ICoreAcceleratorKeys):
     def run_async(self, priority: CoreDispatcherPriority, agile_callback: DispatchedHandler, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.UI.Core.CoreDispatcher::RunIdleAsync(Windows.UI.Core.IdleDispatchedHandler)
     def run_idle_async(self, agile_callback: IdleDispatchedHandler, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # System.Boolean Windows.UI.Core.CoreDispatcher::ShouldYield()
     def should_yield(self) -> bool: ...
+    @typing.overload
     # System.Boolean Windows.UI.Core.CoreDispatcher::ShouldYield(Windows.UI.Core.CoreDispatcherPriority)
+    def should_yield(self, priority: CoreDispatcherPriority, /) -> bool: ...
+    # Deprecated alias of should_yield() for pywinrt v3.x compatibility.
+    # System.Boolean Windows.UI.Core.CoreDispatcher::ShouldYield(Windows.UI.Core.CoreDispatcherPriority)
+    @deprecated("Use should_yield() instead.")
     def should_yield_to_priority(self, priority: CoreDispatcherPriority, /) -> bool: ...
     # System.Void Windows.UI.Core.CoreDispatcher::StopProcessEvents()
     def stop_process_events(self) -> None: ...
@@ -361,9 +368,15 @@ class CoreIndependentInputSourceController(winrt.system.Object, windows_foundati
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
     # System.Void Windows.UI.Core.CoreIndependentInputSourceController::Close()
     def close(self) -> None: ...
+    @typing.overload
     # System.Void Windows.UI.Core.CoreIndependentInputSourceController::SetControlledInput(Windows.UI.Core.CoreInputDeviceTypes)
     def set_controlled_input(self, input_types: CoreInputDeviceTypes, /) -> None: ...
+    @typing.overload
     # System.Void Windows.UI.Core.CoreIndependentInputSourceController::SetControlledInput(Windows.UI.Core.CoreInputDeviceTypes,Windows.UI.Core.CoreIndependentInputFilters,Windows.UI.Core.CoreIndependentInputFilters)
+    def set_controlled_input(self, input_types: CoreInputDeviceTypes, required: CoreIndependentInputFilters, excluded: CoreIndependentInputFilters, /) -> None: ...
+    # Deprecated alias of set_controlled_input() for pywinrt v3.x compatibility.
+    # System.Void Windows.UI.Core.CoreIndependentInputSourceController::SetControlledInput(Windows.UI.Core.CoreInputDeviceTypes,Windows.UI.Core.CoreIndependentInputFilters,Windows.UI.Core.CoreIndependentInputFilters)
+    @deprecated("Use set_controlled_input() instead.")
     def set_controlled_input_with_filters(self, input_types: CoreInputDeviceTypes, required: CoreIndependentInputFilters, excluded: CoreIndependentInputFilters, /) -> None: ...
     # System.Boolean Windows.UI.Core.CoreIndependentInputSourceController::get_IsTransparentForUncontrolledInput()
     @_property
@@ -744,10 +757,14 @@ class SystemNavigationManager(winrt.system.Object, metaclass=SystemNavigationMan
 
 @typing.final
 class TouchHitTestingEventArgs(winrt.system.Object, ICoreWindowEventArgs):
+    # Windows.UI.Core.CoreProximityEvaluation Windows.UI.Core.TouchHitTestingEventArgs::EvaluateProximity(Windows.Foundation.Rect)
+    def evaluate_proximity(self, control_bounding_box: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> CoreProximityEvaluation: ...
+    # Deprecated alias of evaluate_proximity() for pywinrt v3.x compatibility.
+    # Windows.UI.Core.CoreProximityEvaluation Windows.UI.Core.TouchHitTestingEventArgs::EvaluateProximity(Windows.Foundation.Rect)
+    @deprecated("Use evaluate_proximity() instead.")
+    def evaluate_proximity_to_rect(self, control_bounding_box: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> CoreProximityEvaluation: ...
     # Windows.UI.Core.CoreProximityEvaluation Windows.UI.Core.TouchHitTestingEventArgs::EvaluateProximity(Windows.Foundation.Point[])
     def evaluate_proximity_to_polygon(self, control_vertices: typing.Union[winrt.system.Array[windows_foundation.Point], winrt.system.ReadableBuffer], /) -> CoreProximityEvaluation: ...
-    # Windows.UI.Core.CoreProximityEvaluation Windows.UI.Core.TouchHitTestingEventArgs::EvaluateProximity(Windows.Foundation.Rect)
-    def evaluate_proximity_to_rect(self, control_bounding_box: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> CoreProximityEvaluation: ...
     # System.Boolean Windows.UI.Core.TouchHitTestingEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...

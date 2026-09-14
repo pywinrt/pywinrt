@@ -325,18 +325,7 @@ namespace py::cpp::Windows::Devices::SerialCommunication
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* SerialDevice_GetDeviceSelectorFromPortName(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -1608,7 +1597,6 @@ namespace py::cpp::Windows::Devices::SerialCommunication
     static PyMethodDef methods_SerialDevice_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(SerialDevice_FromIdAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(SerialDevice_GetDeviceSelector), METH_VARARGS, nullptr },
-        { "get_device_selector_from_port_name", reinterpret_cast<PyCFunction>(SerialDevice_GetDeviceSelectorFromPortName), METH_VARARGS, nullptr },
         { "get_device_selector_from_usb_vid_pid", reinterpret_cast<PyCFunction>(SerialDevice_GetDeviceSelectorFromUsbVidPid), METH_VARARGS, nullptr },
         { }};
 

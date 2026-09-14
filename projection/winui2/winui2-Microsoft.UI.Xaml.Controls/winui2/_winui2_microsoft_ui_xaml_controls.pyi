@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -5235,11 +5236,17 @@ class VirtualizingLayoutContext(LayoutContext, metaclass=VirtualizingLayoutConte
     def get_item_at(self, index: winrt.system.Int32, /) -> winrt.system.Object: ...
     # System.Object Microsoft.UI.Xaml.Controls.VirtualizingLayoutContext::GetItemAtCore(System.Int32)
     def _get_item_at_core(self, index: winrt.system.Int32, /) -> winrt.system.Object: ...
+    @typing.overload
     @typing.final
     # Windows.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.VirtualizingLayoutContext::GetOrCreateElementAt(System.Int32)
     def get_or_create_element_at(self, index: winrt.system.Int32, /) -> windows_ui_xaml.UIElement: ...
-    @typing.final
+    @typing.overload
     # Windows.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.VirtualizingLayoutContext::GetOrCreateElementAt(System.Int32,Microsoft.UI.Xaml.Controls.ElementRealizationOptions)
+    def get_or_create_element_at(self, index: winrt.system.Int32, options: ElementRealizationOptions, /) -> windows_ui_xaml.UIElement: ...
+    @typing.final
+    # Deprecated alias of get_or_create_element_at() for pywinrt v3.x compatibility.
+    # Windows.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.VirtualizingLayoutContext::GetOrCreateElementAt(System.Int32,Microsoft.UI.Xaml.Controls.ElementRealizationOptions)
+    @deprecated("Use get_or_create_element_at() instead.")
     def get_or_create_element_at2(self, index: winrt.system.Int32, options: ElementRealizationOptions, /) -> windows_ui_xaml.UIElement: ...
     # Windows.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.VirtualizingLayoutContext::GetOrCreateElementAtCore(System.Int32,Microsoft.UI.Xaml.Controls.ElementRealizationOptions)
     def _get_or_create_element_at_core(self, index: winrt.system.Int32, options: ElementRealizationOptions, /) -> windows_ui_xaml.UIElement: ...

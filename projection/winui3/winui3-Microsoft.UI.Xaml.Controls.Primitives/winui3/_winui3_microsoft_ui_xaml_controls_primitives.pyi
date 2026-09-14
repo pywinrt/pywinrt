@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -838,11 +839,17 @@ class FlyoutBase(microsoft_ui_xaml.DependencyObject, metaclass=FlyoutBase_Static
     def hide(self) -> None: ...
     # System.Void Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase::OnProcessKeyboardAccelerators(Microsoft.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs)
     def _on_process_keyboard_accelerators(self, args: microsoft_ui_xaml_input.ProcessKeyboardAcceleratorEventArgs, /) -> None: ...
+    @typing.overload
     @typing.final
     # System.Void Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase::ShowAt(Microsoft.UI.Xaml.FrameworkElement)
     def show_at(self, placement_target: microsoft_ui_xaml.FrameworkElement, /) -> None: ...
-    @typing.final
+    @typing.overload
     # System.Void Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase::ShowAt(Microsoft.UI.Xaml.DependencyObject,Microsoft.UI.Xaml.Controls.Primitives.FlyoutShowOptions)
+    def show_at(self, placement_target: microsoft_ui_xaml.DependencyObject, show_options: FlyoutShowOptions, /) -> None: ...
+    @typing.final
+    # Deprecated alias of show_at() for pywinrt v3.x compatibility.
+    # System.Void Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase::ShowAt(Microsoft.UI.Xaml.DependencyObject,Microsoft.UI.Xaml.Controls.Primitives.FlyoutShowOptions)
+    @deprecated("Use show_at() instead.")
     def show_at_with_options(self, placement_target: microsoft_ui_xaml.DependencyObject, show_options: FlyoutShowOptions, /) -> None: ...
     @typing.final
     # System.Void Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase::TryInvokeKeyboardAccelerator(Microsoft.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs)
@@ -2890,31 +2897,55 @@ class ScrollPresenter(microsoft_ui_xaml.FrameworkElement, microsoft_ui_xaml_cont
     def add_zoom_velocity(self, zoom_factor_velocity: winrt.system.Single, center_point: typing.Optional[windows_foundation_numerics.Vector2], inertia_decay_rate: typing.Optional[winrt.system.Single], /) -> winrt.system.Int32: ...
     # System.Void Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter::RegisterAnchorCandidate(Microsoft.UI.Xaml.UIElement)
     def register_anchor_candidate(self, element: microsoft_ui_xaml.UIElement, /) -> None: ...
+    @typing.overload
     @typing.final
     # System.Int32 Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter::ScrollBy(System.Double,System.Double)
     def scroll_by(self, horizontal_offset_delta: winrt.system.Double, vertical_offset_delta: winrt.system.Double, /) -> winrt.system.Int32: ...
-    @typing.final
+    @typing.overload
     # System.Int32 Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter::ScrollBy(System.Double,System.Double,Microsoft.UI.Xaml.Controls.ScrollingScrollOptions)
+    def scroll_by(self, horizontal_offset_delta: winrt.system.Double, vertical_offset_delta: winrt.system.Double, options: microsoft_ui_xaml_controls.ScrollingScrollOptions, /) -> winrt.system.Int32: ...
+    @typing.final
+    # Deprecated alias of scroll_by() for pywinrt v3.x compatibility.
+    # System.Int32 Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter::ScrollBy(System.Double,System.Double,Microsoft.UI.Xaml.Controls.ScrollingScrollOptions)
+    @deprecated("Use scroll_by() instead.")
     def scroll_by_with_options(self, horizontal_offset_delta: winrt.system.Double, vertical_offset_delta: winrt.system.Double, options: microsoft_ui_xaml_controls.ScrollingScrollOptions, /) -> winrt.system.Int32: ...
+    @typing.overload
     @typing.final
     # System.Int32 Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter::ScrollTo(System.Double,System.Double)
     def scroll_to(self, horizontal_offset: winrt.system.Double, vertical_offset: winrt.system.Double, /) -> winrt.system.Int32: ...
-    @typing.final
+    @typing.overload
     # System.Int32 Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter::ScrollTo(System.Double,System.Double,Microsoft.UI.Xaml.Controls.ScrollingScrollOptions)
+    def scroll_to(self, horizontal_offset: winrt.system.Double, vertical_offset: winrt.system.Double, options: microsoft_ui_xaml_controls.ScrollingScrollOptions, /) -> winrt.system.Int32: ...
+    @typing.final
+    # Deprecated alias of scroll_to() for pywinrt v3.x compatibility.
+    # System.Int32 Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter::ScrollTo(System.Double,System.Double,Microsoft.UI.Xaml.Controls.ScrollingScrollOptions)
+    @deprecated("Use scroll_to() instead.")
     def scroll_to_with_options(self, horizontal_offset: winrt.system.Double, vertical_offset: winrt.system.Double, options: microsoft_ui_xaml_controls.ScrollingScrollOptions, /) -> winrt.system.Int32: ...
     # System.Void Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter::UnregisterAnchorCandidate(Microsoft.UI.Xaml.UIElement)
     def unregister_anchor_candidate(self, element: microsoft_ui_xaml.UIElement, /) -> None: ...
+    @typing.overload
     @typing.final
     # System.Int32 Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter::ZoomBy(System.Single,Windows.Foundation.IReference`1<Windows.Foundation.Numerics.Vector2>)
     def zoom_by(self, zoom_factor_delta: winrt.system.Single, center_point: typing.Optional[windows_foundation_numerics.Vector2], /) -> winrt.system.Int32: ...
-    @typing.final
+    @typing.overload
     # System.Int32 Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter::ZoomBy(System.Single,Windows.Foundation.IReference`1<Windows.Foundation.Numerics.Vector2>,Microsoft.UI.Xaml.Controls.ScrollingZoomOptions)
+    def zoom_by(self, zoom_factor_delta: winrt.system.Single, center_point: typing.Optional[windows_foundation_numerics.Vector2], options: microsoft_ui_xaml_controls.ScrollingZoomOptions, /) -> winrt.system.Int32: ...
+    @typing.final
+    # Deprecated alias of zoom_by() for pywinrt v3.x compatibility.
+    # System.Int32 Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter::ZoomBy(System.Single,Windows.Foundation.IReference`1<Windows.Foundation.Numerics.Vector2>,Microsoft.UI.Xaml.Controls.ScrollingZoomOptions)
+    @deprecated("Use zoom_by() instead.")
     def zoom_by_with_options(self, zoom_factor_delta: winrt.system.Single, center_point: typing.Optional[windows_foundation_numerics.Vector2], options: microsoft_ui_xaml_controls.ScrollingZoomOptions, /) -> winrt.system.Int32: ...
+    @typing.overload
     @typing.final
     # System.Int32 Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter::ZoomTo(System.Single,Windows.Foundation.IReference`1<Windows.Foundation.Numerics.Vector2>)
     def zoom_to(self, zoom_factor: winrt.system.Single, center_point: typing.Optional[windows_foundation_numerics.Vector2], /) -> winrt.system.Int32: ...
-    @typing.final
+    @typing.overload
     # System.Int32 Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter::ZoomTo(System.Single,Windows.Foundation.IReference`1<Windows.Foundation.Numerics.Vector2>,Microsoft.UI.Xaml.Controls.ScrollingZoomOptions)
+    def zoom_to(self, zoom_factor: winrt.system.Single, center_point: typing.Optional[windows_foundation_numerics.Vector2], options: microsoft_ui_xaml_controls.ScrollingZoomOptions, /) -> winrt.system.Int32: ...
+    @typing.final
+    # Deprecated alias of zoom_to() for pywinrt v3.x compatibility.
+    # System.Int32 Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter::ZoomTo(System.Single,Windows.Foundation.IReference`1<Windows.Foundation.Numerics.Vector2>,Microsoft.UI.Xaml.Controls.ScrollingZoomOptions)
+    @deprecated("Use zoom_to() instead.")
     def zoom_to_with_options(self, zoom_factor: winrt.system.Single, center_point: typing.Optional[windows_foundation_numerics.Vector2], options: microsoft_ui_xaml_controls.ScrollingZoomOptions, /) -> winrt.system.Int32: ...
     @typing.final
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter::add_AnchorRequested(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.Primitives.ScrollPresenter,Microsoft.UI.Xaml.Controls.ScrollingAnchorRequestedEventArgs>)

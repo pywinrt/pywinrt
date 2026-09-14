@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -101,13 +102,33 @@ class AsymmetricKeyAlgorithmProvider(winrt.system.Object, metaclass=AsymmetricKe
     def create_key_pair_with_curve_name(self, curve_name: str, /) -> CryptographicKey: ...
     # Windows.Security.Cryptography.Core.CryptographicKey Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider::CreateKeyPairWithCurveParameters(System.Byte[])
     def create_key_pair_with_curve_parameters(self, parameters: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> CryptographicKey: ...
+    @typing.overload
     # Windows.Security.Cryptography.Core.CryptographicKey Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider::ImportKeyPair(Windows.Storage.Streams.IBuffer)
-    def import_default_private_key_blob(self, key_blob: winrt.system.Buffer, /) -> CryptographicKey: ...
-    # Windows.Security.Cryptography.Core.CryptographicKey Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider::ImportPublicKey(Windows.Storage.Streams.IBuffer)
-    def import_default_public_key_blob(self, key_blob: winrt.system.Buffer, /) -> CryptographicKey: ...
+    def import_key_pair(self, key_blob: winrt.system.Buffer, /) -> CryptographicKey: ...
+    @typing.overload
     # Windows.Security.Cryptography.Core.CryptographicKey Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider::ImportKeyPair(Windows.Storage.Streams.IBuffer,Windows.Security.Cryptography.Core.CryptographicPrivateKeyBlobType)
+    def import_key_pair(self, key_blob: winrt.system.Buffer, blob_type: CryptographicPrivateKeyBlobType, /) -> CryptographicKey: ...
+    # Deprecated alias of import_key_pair() for pywinrt v3.x compatibility.
+    # Windows.Security.Cryptography.Core.CryptographicKey Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider::ImportKeyPair(Windows.Storage.Streams.IBuffer)
+    @deprecated("Use import_key_pair() instead.")
+    def import_default_private_key_blob(self, key_blob: winrt.system.Buffer, /) -> CryptographicKey: ...
+    # Deprecated alias of import_key_pair() for pywinrt v3.x compatibility.
+    # Windows.Security.Cryptography.Core.CryptographicKey Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider::ImportKeyPair(Windows.Storage.Streams.IBuffer,Windows.Security.Cryptography.Core.CryptographicPrivateKeyBlobType)
+    @deprecated("Use import_key_pair() instead.")
     def import_key_pair_with_blob_type(self, key_blob: winrt.system.Buffer, blob_type: CryptographicPrivateKeyBlobType, /) -> CryptographicKey: ...
+    @typing.overload
+    # Windows.Security.Cryptography.Core.CryptographicKey Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider::ImportPublicKey(Windows.Storage.Streams.IBuffer)
+    def import_public_key(self, key_blob: winrt.system.Buffer, /) -> CryptographicKey: ...
+    @typing.overload
     # Windows.Security.Cryptography.Core.CryptographicKey Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider::ImportPublicKey(Windows.Storage.Streams.IBuffer,Windows.Security.Cryptography.Core.CryptographicPublicKeyBlobType)
+    def import_public_key(self, key_blob: winrt.system.Buffer, blob_type: CryptographicPublicKeyBlobType, /) -> CryptographicKey: ...
+    # Deprecated alias of import_public_key() for pywinrt v3.x compatibility.
+    # Windows.Security.Cryptography.Core.CryptographicKey Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider::ImportPublicKey(Windows.Storage.Streams.IBuffer)
+    @deprecated("Use import_public_key() instead.")
+    def import_default_public_key_blob(self, key_blob: winrt.system.Buffer, /) -> CryptographicKey: ...
+    # Deprecated alias of import_public_key() for pywinrt v3.x compatibility.
+    # Windows.Security.Cryptography.Core.CryptographicKey Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider::ImportPublicKey(Windows.Storage.Streams.IBuffer,Windows.Security.Cryptography.Core.CryptographicPublicKeyBlobType)
+    @deprecated("Use import_public_key() instead.")
     def import_public_key_with_blob_type(self, key_blob: winrt.system.Buffer, blob_type: CryptographicPublicKeyBlobType, /) -> CryptographicKey: ...
     # System.String Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider::get_AlgorithmName()
     @_property
@@ -153,13 +174,33 @@ class CryptographicHash(winrt.system.Object):
 
 @typing.final
 class CryptographicKey(winrt.system.Object):
+    @typing.overload
     # Windows.Storage.Streams.IBuffer Windows.Security.Cryptography.Core.CryptographicKey::Export()
-    def export_default_private_key_blob_type(self) -> winrt.system.Buffer: ...
-    # Windows.Storage.Streams.IBuffer Windows.Security.Cryptography.Core.CryptographicKey::ExportPublicKey()
-    def export_default_public_key_blob_type(self) -> winrt.system.Buffer: ...
+    def export(self) -> winrt.system.Buffer: ...
+    @typing.overload
     # Windows.Storage.Streams.IBuffer Windows.Security.Cryptography.Core.CryptographicKey::Export(Windows.Security.Cryptography.Core.CryptographicPrivateKeyBlobType)
+    def export(self, blob_type: CryptographicPrivateKeyBlobType, /) -> winrt.system.Buffer: ...
+    # Deprecated alias of export() for pywinrt v3.x compatibility.
+    # Windows.Storage.Streams.IBuffer Windows.Security.Cryptography.Core.CryptographicKey::Export()
+    @deprecated("Use export() instead.")
+    def export_default_private_key_blob_type(self) -> winrt.system.Buffer: ...
+    # Deprecated alias of export() for pywinrt v3.x compatibility.
+    # Windows.Storage.Streams.IBuffer Windows.Security.Cryptography.Core.CryptographicKey::Export(Windows.Security.Cryptography.Core.CryptographicPrivateKeyBlobType)
+    @deprecated("Use export() instead.")
     def export_private_key_with_blob_type(self, blob_type: CryptographicPrivateKeyBlobType, /) -> winrt.system.Buffer: ...
+    @typing.overload
+    # Windows.Storage.Streams.IBuffer Windows.Security.Cryptography.Core.CryptographicKey::ExportPublicKey()
+    def export_public_key(self) -> winrt.system.Buffer: ...
+    @typing.overload
     # Windows.Storage.Streams.IBuffer Windows.Security.Cryptography.Core.CryptographicKey::ExportPublicKey(Windows.Security.Cryptography.Core.CryptographicPublicKeyBlobType)
+    def export_public_key(self, blob_type: CryptographicPublicKeyBlobType, /) -> winrt.system.Buffer: ...
+    # Deprecated alias of export_public_key() for pywinrt v3.x compatibility.
+    # Windows.Storage.Streams.IBuffer Windows.Security.Cryptography.Core.CryptographicKey::ExportPublicKey()
+    @deprecated("Use export_public_key() instead.")
+    def export_default_public_key_blob_type(self) -> winrt.system.Buffer: ...
+    # Deprecated alias of export_public_key() for pywinrt v3.x compatibility.
+    # Windows.Storage.Streams.IBuffer Windows.Security.Cryptography.Core.CryptographicKey::ExportPublicKey(Windows.Security.Cryptography.Core.CryptographicPublicKeyBlobType)
+    @deprecated("Use export_public_key() instead.")
     def export_public_key_with_blob_type(self, blob_type: CryptographicPublicKeyBlobType, /) -> winrt.system.Buffer: ...
     # System.UInt32 Windows.Security.Cryptography.Core.CryptographicKey::get_KeySize()
     @_property

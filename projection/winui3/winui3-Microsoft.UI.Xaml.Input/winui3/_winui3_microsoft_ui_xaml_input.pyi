@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -47,6 +48,10 @@ class AccessKeyInvokedEventArgs(winrt.system.Object):
 @typing.final
 class AccessKeyManager_Static(winrt._winrt.IInspectable_Static):
     # System.Void Microsoft.UI.Xaml.Input.AccessKeyManager::EnterDisplayMode(Microsoft.UI.Xaml.XamlRoot)
+    def enter_display_mode(cls, xaml_root: microsoft_ui_xaml.XamlRoot, /) -> None: ...
+    # Deprecated alias of enter_display_mode() for pywinrt v3.x compatibility.
+    # System.Void Microsoft.UI.Xaml.Input.AccessKeyManager::EnterDisplayMode(Microsoft.UI.Xaml.XamlRoot)
+    @deprecated("Use enter_display_mode() instead.")
     def enter_display_mode_for_xaml_root(cls, xaml_root: microsoft_ui_xaml.XamlRoot, /) -> None: ...
     # System.Void Microsoft.UI.Xaml.Input.AccessKeyManager::ExitDisplayMode()
     def exit_display_mode(cls) -> None: ...
@@ -162,27 +167,57 @@ class FocusManager_Static(winrt._winrt.IInspectable_Static):
     def find_first_focusable_element(cls, search_scope: microsoft_ui_xaml.DependencyObject, /) -> microsoft_ui_xaml.DependencyObject: ...
     # Microsoft.UI.Xaml.DependencyObject Microsoft.UI.Xaml.Input.FocusManager::FindLastFocusableElement(Microsoft.UI.Xaml.DependencyObject)
     def find_last_focusable_element(cls, search_scope: microsoft_ui_xaml.DependencyObject, /) -> microsoft_ui_xaml.DependencyObject: ...
+    @typing.overload
     # Microsoft.UI.Xaml.DependencyObject Microsoft.UI.Xaml.Input.FocusManager::FindNextElement(Microsoft.UI.Xaml.Input.FocusNavigationDirection)
     def find_next_element(cls, focus_navigation_direction: FocusNavigationDirection, /) -> microsoft_ui_xaml.DependencyObject: ...
+    @typing.overload
     # Microsoft.UI.Xaml.DependencyObject Microsoft.UI.Xaml.Input.FocusManager::FindNextElement(Microsoft.UI.Xaml.Input.FocusNavigationDirection,Microsoft.UI.Xaml.Input.FindNextElementOptions)
+    def find_next_element(cls, focus_navigation_direction: FocusNavigationDirection, focus_navigation_options: FindNextElementOptions, /) -> microsoft_ui_xaml.DependencyObject: ...
+    # Deprecated alias of find_next_element() for pywinrt v3.x compatibility.
+    # Microsoft.UI.Xaml.DependencyObject Microsoft.UI.Xaml.Input.FocusManager::FindNextElement(Microsoft.UI.Xaml.Input.FocusNavigationDirection,Microsoft.UI.Xaml.Input.FindNextElementOptions)
+    @deprecated("Use find_next_element() instead.")
     def find_next_element_with_options(cls, focus_navigation_direction: FocusNavigationDirection, focus_navigation_options: FindNextElementOptions, /) -> microsoft_ui_xaml.DependencyObject: ...
+    @typing.overload
     # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Input.FocusManager::FindNextFocusableElement(Microsoft.UI.Xaml.Input.FocusNavigationDirection)
     def find_next_focusable_element(cls, focus_navigation_direction: FocusNavigationDirection, /) -> microsoft_ui_xaml.UIElement: ...
+    @typing.overload
     # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Input.FocusManager::FindNextFocusableElement(Microsoft.UI.Xaml.Input.FocusNavigationDirection,Windows.Foundation.Rect)
+    def find_next_focusable_element(cls, focus_navigation_direction: FocusNavigationDirection, hint_rect: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> microsoft_ui_xaml.UIElement: ...
+    # Deprecated alias of find_next_focusable_element() for pywinrt v3.x compatibility.
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Input.FocusManager::FindNextFocusableElement(Microsoft.UI.Xaml.Input.FocusNavigationDirection,Windows.Foundation.Rect)
+    @deprecated("Use find_next_focusable_element() instead.")
     def find_next_focusable_element_with_hint(cls, focus_navigation_direction: FocusNavigationDirection, hint_rect: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> microsoft_ui_xaml.UIElement: ...
+    @typing.overload
     # System.Object Microsoft.UI.Xaml.Input.FocusManager::GetFocusedElement()
     def get_focused_element(cls) -> winrt.system.Object: ...
+    @typing.overload
     # System.Object Microsoft.UI.Xaml.Input.FocusManager::GetFocusedElement(Microsoft.UI.Xaml.XamlRoot)
+    def get_focused_element(cls, xaml_root: microsoft_ui_xaml.XamlRoot, /) -> winrt.system.Object: ...
+    # Deprecated alias of get_focused_element() for pywinrt v3.x compatibility.
+    # System.Object Microsoft.UI.Xaml.Input.FocusManager::GetFocusedElement(Microsoft.UI.Xaml.XamlRoot)
+    @deprecated("Use get_focused_element() instead.")
     def get_focused_element_with_root(cls, xaml_root: microsoft_ui_xaml.XamlRoot, /) -> winrt.system.Object: ...
     # Windows.Foundation.IAsyncOperation`1<Microsoft.UI.Xaml.Input.FocusMovementResult> Microsoft.UI.Xaml.Input.FocusManager::TryFocusAsync(Microsoft.UI.Xaml.DependencyObject,Microsoft.UI.Xaml.FocusState)
     def try_focus_async(cls, element: microsoft_ui_xaml.DependencyObject, value: microsoft_ui_xaml.FocusState, /) -> windows_foundation.IAsyncOperation[FocusMovementResult]: ...
+    @typing.overload
     # System.Boolean Microsoft.UI.Xaml.Input.FocusManager::TryMoveFocus(Microsoft.UI.Xaml.Input.FocusNavigationDirection)
     def try_move_focus(cls, focus_navigation_direction: FocusNavigationDirection, /) -> bool: ...
+    @typing.overload
+    # System.Boolean Microsoft.UI.Xaml.Input.FocusManager::TryMoveFocus(Microsoft.UI.Xaml.Input.FocusNavigationDirection,Microsoft.UI.Xaml.Input.FindNextElementOptions)
+    def try_move_focus(cls, focus_navigation_direction: FocusNavigationDirection, focus_navigation_options: FindNextElementOptions, /) -> bool: ...
+    # Deprecated alias of try_move_focus() for pywinrt v3.x compatibility.
+    # System.Boolean Microsoft.UI.Xaml.Input.FocusManager::TryMoveFocus(Microsoft.UI.Xaml.Input.FocusNavigationDirection,Microsoft.UI.Xaml.Input.FindNextElementOptions)
+    @deprecated("Use try_move_focus() instead.")
+    def try_move_focus_with_options(cls, focus_navigation_direction: FocusNavigationDirection, focus_navigation_options: FindNextElementOptions, /) -> bool: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Microsoft.UI.Xaml.Input.FocusMovementResult> Microsoft.UI.Xaml.Input.FocusManager::TryMoveFocusAsync(Microsoft.UI.Xaml.Input.FocusNavigationDirection)
     def try_move_focus_async(cls, focus_navigation_direction: FocusNavigationDirection, /) -> windows_foundation.IAsyncOperation[FocusMovementResult]: ...
-    # System.Boolean Microsoft.UI.Xaml.Input.FocusManager::TryMoveFocus(Microsoft.UI.Xaml.Input.FocusNavigationDirection,Microsoft.UI.Xaml.Input.FindNextElementOptions)
-    def try_move_focus_with_options(cls, focus_navigation_direction: FocusNavigationDirection, focus_navigation_options: FindNextElementOptions, /) -> bool: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Microsoft.UI.Xaml.Input.FocusMovementResult> Microsoft.UI.Xaml.Input.FocusManager::TryMoveFocusAsync(Microsoft.UI.Xaml.Input.FocusNavigationDirection,Microsoft.UI.Xaml.Input.FindNextElementOptions)
+    def try_move_focus_async(cls, focus_navigation_direction: FocusNavigationDirection, focus_navigation_options: FindNextElementOptions, /) -> windows_foundation.IAsyncOperation[FocusMovementResult]: ...
+    # Deprecated alias of try_move_focus_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Microsoft.UI.Xaml.Input.FocusMovementResult> Microsoft.UI.Xaml.Input.FocusManager::TryMoveFocusAsync(Microsoft.UI.Xaml.Input.FocusNavigationDirection,Microsoft.UI.Xaml.Input.FindNextElementOptions)
+    @deprecated("Use try_move_focus_async() instead.")
     def try_move_focus_with_options_async(cls, focus_navigation_direction: FocusNavigationDirection, focus_navigation_options: FindNextElementOptions, /) -> windows_foundation.IAsyncOperation[FocusMovementResult]: ...
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Input.FocusManager::add_GettingFocus(Windows.Foundation.EventHandler`1<Microsoft.UI.Xaml.Input.GettingFocusEventArgs>)
     def add_getting_focus(cls, handler: windows_foundation.EventHandler[GettingFocusEventArgs], /) -> windows_foundation.EventRegistrationToken: ...

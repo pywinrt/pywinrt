@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_globalization_numberformatting import (
     CurrencyFormatter,
@@ -66,3 +67,4 @@ class RoundingAlgorithm(enum.IntEnum):
     ROUND_HALF_TO_EVEN = 9
     ROUND_HALF_TO_ODD = 10
 
+winrt.runtime._internals.alias_method(_INumberFormatter, "format_double", "format")

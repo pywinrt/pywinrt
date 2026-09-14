@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -44,12 +45,23 @@ class CurrentApp_Static(winrt._winrt.IInspectable_Static):
     def report_product_fulfillment(cls, product_id: str, /) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.ApplicationModel.Store.CurrentApp::RequestAppPurchaseAsync(System.Boolean)
     def request_app_purchase_async(cls, include_receipt: bool, /) -> windows_foundation.IAsyncOperation[str]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Store.PurchaseResults> Windows.ApplicationModel.Store.CurrentApp::RequestProductPurchaseAsync(System.String)
+    def request_product_purchase_async(cls, product_id: str, /) -> windows_foundation.IAsyncOperation[PurchaseResults]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.ApplicationModel.Store.CurrentApp::RequestProductPurchaseAsync(System.String,System.Boolean)
     # @deprecated("RequestProductPurchaseAsync(productId, includeReceipt) may be altered or unavailable for releases after Windows 8.1. Instead, use RequestProductPurchaseAsync(productId).")
     def request_product_purchase_async(cls, product_id: str, include_receipt: bool, /) -> windows_foundation.IAsyncOperation[str]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Store.PurchaseResults> Windows.ApplicationModel.Store.CurrentApp::RequestProductPurchaseAsync(System.String,System.String,Windows.ApplicationModel.Store.ProductPurchaseDisplayProperties)
+    def request_product_purchase_async(cls, product_id: str, offer_id: str, display_properties: ProductPurchaseDisplayProperties, /) -> windows_foundation.IAsyncOperation[PurchaseResults]: ...
+    # Deprecated alias of request_product_purchase_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Store.PurchaseResults> Windows.ApplicationModel.Store.CurrentApp::RequestProductPurchaseAsync(System.String,System.String,Windows.ApplicationModel.Store.ProductPurchaseDisplayProperties)
+    @deprecated("Use request_product_purchase_async() instead.")
     def request_product_purchase_with_display_properties_async(cls, product_id: str, offer_id: str, display_properties: ProductPurchaseDisplayProperties, /) -> windows_foundation.IAsyncOperation[PurchaseResults]: ...
+    # Deprecated alias of request_product_purchase_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Store.PurchaseResults> Windows.ApplicationModel.Store.CurrentApp::RequestProductPurchaseAsync(System.String)
+    @deprecated("Use request_product_purchase_async() instead.")
     def request_product_purchase_with_results_async(cls, product_id: str, /) -> windows_foundation.IAsyncOperation[PurchaseResults]: ...
     # System.Guid Windows.ApplicationModel.Store.CurrentApp::get_AppId()
     @_property
@@ -87,12 +99,23 @@ class CurrentAppSimulator_Static(winrt._winrt.IInspectable_Static):
     def report_consumable_fulfillment_async(cls, product_id: str, transaction_id: _uuid.UUID, /) -> windows_foundation.IAsyncOperation[FulfillmentResult]: ...
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.ApplicationModel.Store.CurrentAppSimulator::RequestAppPurchaseAsync(System.Boolean)
     def request_app_purchase_async(cls, include_receipt: bool, /) -> windows_foundation.IAsyncOperation[str]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Store.PurchaseResults> Windows.ApplicationModel.Store.CurrentAppSimulator::RequestProductPurchaseAsync(System.String)
+    def request_product_purchase_async(cls, product_id: str, /) -> windows_foundation.IAsyncOperation[PurchaseResults]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.ApplicationModel.Store.CurrentAppSimulator::RequestProductPurchaseAsync(System.String,System.Boolean)
     # @deprecated("RequestProductPurchaseAsync(productId, includeReceipt) may be altered or unavailable for releases after Windows 8.1. Instead, use RequestProductPurchaseAsync(productId).")
     def request_product_purchase_async(cls, product_id: str, include_receipt: bool, /) -> windows_foundation.IAsyncOperation[str]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Store.PurchaseResults> Windows.ApplicationModel.Store.CurrentAppSimulator::RequestProductPurchaseAsync(System.String,System.String,Windows.ApplicationModel.Store.ProductPurchaseDisplayProperties)
+    def request_product_purchase_async(cls, product_id: str, offer_id: str, display_properties: ProductPurchaseDisplayProperties, /) -> windows_foundation.IAsyncOperation[PurchaseResults]: ...
+    # Deprecated alias of request_product_purchase_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Store.PurchaseResults> Windows.ApplicationModel.Store.CurrentAppSimulator::RequestProductPurchaseAsync(System.String,System.String,Windows.ApplicationModel.Store.ProductPurchaseDisplayProperties)
+    @deprecated("Use request_product_purchase_async() instead.")
     def request_product_purchase_with_display_properties_async(cls, product_id: str, offer_id: str, display_properties: ProductPurchaseDisplayProperties, /) -> windows_foundation.IAsyncOperation[PurchaseResults]: ...
+    # Deprecated alias of request_product_purchase_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Store.PurchaseResults> Windows.ApplicationModel.Store.CurrentAppSimulator::RequestProductPurchaseAsync(System.String)
+    @deprecated("Use request_product_purchase_async() instead.")
     def request_product_purchase_with_results_async(cls, product_id: str, /) -> windows_foundation.IAsyncOperation[PurchaseResults]: ...
     # System.Guid Windows.ApplicationModel.Store.CurrentAppSimulator::get_AppId()
     @_property

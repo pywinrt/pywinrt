@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_management import (
     MdmAlert,
@@ -40,3 +41,4 @@ class MdmSessionState(enum.IntEnum):
     RETRYING = 5
     COMPLETED = 6
 
+winrt.runtime._internals.alias_method(MdmSession, "start_with_alerts_async", "start_async")

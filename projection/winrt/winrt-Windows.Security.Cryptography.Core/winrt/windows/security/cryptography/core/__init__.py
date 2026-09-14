@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_security_cryptography_core import (
     AsymmetricAlgorithmNames,
@@ -71,3 +72,11 @@ class CryptographicPublicKeyBlobType(enum.IntEnum):
     CAPI1_PUBLIC_KEY = 3
     B_CRYPT_ECC_FULL_PUBLIC_KEY = 4
 
+winrt.runtime._internals.alias_method(AsymmetricKeyAlgorithmProvider, "import_default_private_key_blob", "import_key_pair")
+winrt.runtime._internals.alias_method(AsymmetricKeyAlgorithmProvider, "import_key_pair_with_blob_type", "import_key_pair")
+winrt.runtime._internals.alias_method(AsymmetricKeyAlgorithmProvider, "import_default_public_key_blob", "import_public_key")
+winrt.runtime._internals.alias_method(AsymmetricKeyAlgorithmProvider, "import_public_key_with_blob_type", "import_public_key")
+winrt.runtime._internals.alias_method(CryptographicKey, "export_default_private_key_blob_type", "export")
+winrt.runtime._internals.alias_method(CryptographicKey, "export_private_key_with_blob_type", "export")
+winrt.runtime._internals.alias_method(CryptographicKey, "export_default_public_key_blob_type", "export_public_key")
+winrt.runtime._internals.alias_method(CryptographicKey, "export_public_key_with_blob_type", "export_public_key")

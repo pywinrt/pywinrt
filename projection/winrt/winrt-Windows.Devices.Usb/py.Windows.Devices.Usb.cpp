@@ -2005,7 +2005,70 @@ namespace py::cpp::Windows::Devices::Usb
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
-        if (arg_count == 3)
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbDevice", L"GetDeviceSelector", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::guid>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Usb::UsbDevice::GetDeviceSelector(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbDevice", L"GetDeviceSelector", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<uint32_t>(args, 0);
+                auto param1 = py::convert_to<uint32_t>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Usb::UsbDevice::GetDeviceSelector(param0, param1);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 3)
         {
             try
             {
@@ -2045,7 +2108,7 @@ namespace py::cpp::Windows::Devices::Usb
         }
     }
 
-    static PyObject* UsbDevice_GetDeviceSelectorGuidOnly(PyObject* /*unused*/, PyObject* args) noexcept
+    static PyObject* UsbDevice_SendControlInTransferAsync(py::wrapper::Windows::Devices::Usb::UsbDevice* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -2057,7 +2120,7 @@ namespace py::cpp::Windows::Devices::Usb
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbDevice", L"GetDeviceSelector", 1);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbDevice", L"SendControlInTransferAsync", 1);
                 }
 
                 if (!is_overload_present.value())
@@ -2066,12 +2129,12 @@ namespace py::cpp::Windows::Devices::Usb
                     return nullptr;
                 }
 
-                auto param0 = py::convert_to<winrt::guid>(args, 0);
+                auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbSetupPacket>(args, 0);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return winrt::Windows::Devices::Usb::UsbDevice::GetDeviceSelector(param0);
+                    return self->obj.SendControlInTransferAsync(param0);
                 }());
             }
             catch (...)
@@ -2080,61 +2143,7 @@ namespace py::cpp::Windows::Devices::Usb
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* UsbDevice_GetDeviceSelectorVidPidOnly(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbDevice", L"GetDeviceSelector", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<uint32_t>(args, 0);
-                auto param1 = py::convert_to<uint32_t>(args, 1);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return winrt::Windows::Devices::Usb::UsbDevice::GetDeviceSelector(param0, param1);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* UsbDevice_SendControlInTransferAsync(py::wrapper::Windows::Devices::Usb::UsbDevice* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -2173,92 +2182,7 @@ namespace py::cpp::Windows::Devices::Usb
         }
     }
 
-    static PyObject* UsbDevice_SendControlInTransferAsyncNoBuffer(py::wrapper::Windows::Devices::Usb::UsbDevice* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbDevice", L"SendControlInTransferAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbSetupPacket>(args, 0);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.SendControlInTransferAsync(param0);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
     static PyObject* UsbDevice_SendControlOutTransferAsync(py::wrapper::Windows::Devices::Usb::UsbDevice* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbDevice", L"SendControlOutTransferAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbSetupPacket>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.SendControlOutTransferAsync(param0, param1);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* UsbDevice_SendControlOutTransferAsyncNoBuffer(py::wrapper::Windows::Devices::Usb::UsbDevice* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -2285,6 +2209,38 @@ namespace py::cpp::Windows::Devices::Usb
                 {
                     auto _gil = release_gil();
                     return self->obj.SendControlOutTransferAsync(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Usb.UsbDevice", L"SendControlOutTransferAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Devices::Usb::UsbSetupPacket>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.SendControlOutTransferAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -2440,9 +2396,7 @@ namespace py::cpp::Windows::Devices::Usb
     static PyMethodDef _methods_UsbDevice[] = {
         { "close", reinterpret_cast<PyCFunction>(UsbDevice_Close), METH_VARARGS, nullptr },
         { "send_control_in_transfer_async", reinterpret_cast<PyCFunction>(UsbDevice_SendControlInTransferAsync), METH_VARARGS, nullptr },
-        { "send_control_in_transfer_async_no_buffer", reinterpret_cast<PyCFunction>(UsbDevice_SendControlInTransferAsyncNoBuffer), METH_VARARGS, nullptr },
         { "send_control_out_transfer_async", reinterpret_cast<PyCFunction>(UsbDevice_SendControlOutTransferAsync), METH_VARARGS, nullptr },
-        { "send_control_out_transfer_async_no_buffer", reinterpret_cast<PyCFunction>(UsbDevice_SendControlOutTransferAsyncNoBuffer), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UsbDevice, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_UsbDevice), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_UsbDevice), METH_NOARGS, nullptr },
@@ -2476,8 +2430,6 @@ namespace py::cpp::Windows::Devices::Usb
         { "from_id_async", reinterpret_cast<PyCFunction>(UsbDevice_FromIdAsync), METH_VARARGS, nullptr },
         { "get_device_class_selector", reinterpret_cast<PyCFunction>(UsbDevice_GetDeviceClassSelector), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(UsbDevice_GetDeviceSelector), METH_VARARGS, nullptr },
-        { "get_device_selector_guid_only", reinterpret_cast<PyCFunction>(UsbDevice_GetDeviceSelectorGuidOnly), METH_VARARGS, nullptr },
-        { "get_device_selector_vid_pid_only", reinterpret_cast<PyCFunction>(UsbDevice_GetDeviceSelectorVidPidOnly), METH_VARARGS, nullptr },
         { }};
 
     static PyType_Slot type_slots_UsbDevice_Static[] = 

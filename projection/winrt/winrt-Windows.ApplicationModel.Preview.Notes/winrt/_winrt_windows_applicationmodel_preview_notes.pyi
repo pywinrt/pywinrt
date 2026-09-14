@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -51,13 +52,25 @@ class NotesWindowManagerPreview(winrt.system.Object, metaclass=NotesWindowManage
     def set_thumbnail_image_for_task_switcher_async(self, bitmap: windows_graphics_imaging.SoftwareBitmap, /) -> windows_foundation.IAsyncAction: ...
     # System.Void Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview::ShowNote(System.Int32)
     def show_note(self, note_view_id: winrt.system.Int32, /) -> None: ...
+    @typing.overload
     # System.Void Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview::ShowNoteRelativeTo(System.Int32,System.Int32)
     def show_note_relative_to(self, note_view_id: winrt.system.Int32, anchor_note_view_id: winrt.system.Int32, /) -> None: ...
+    @typing.overload
     # System.Void Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview::ShowNoteRelativeTo(System.Int32,System.Int32,Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreviewShowNoteOptions)
+    def show_note_relative_to(self, note_view_id: winrt.system.Int32, anchor_note_view_id: winrt.system.Int32, options: NotesWindowManagerPreviewShowNoteOptions, /) -> None: ...
+    # Deprecated alias of show_note_relative_to() for pywinrt v3.x compatibility.
+    # System.Void Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview::ShowNoteRelativeTo(System.Int32,System.Int32,Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreviewShowNoteOptions)
+    @deprecated("Use show_note_relative_to() instead.")
     def show_note_relative_to_with_options(self, note_view_id: winrt.system.Int32, anchor_note_view_id: winrt.system.Int32, options: NotesWindowManagerPreviewShowNoteOptions, /) -> None: ...
+    @typing.overload
     # System.Void Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview::ShowNoteWithPlacement(System.Int32,Windows.Storage.Streams.IBuffer)
     def show_note_with_placement(self, note_view_id: winrt.system.Int32, data: winrt.system.Buffer, /) -> None: ...
+    @typing.overload
     # System.Void Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview::ShowNoteWithPlacement(System.Int32,Windows.Storage.Streams.IBuffer,Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreviewShowNoteOptions)
+    def show_note_with_placement(self, note_view_id: winrt.system.Int32, data: winrt.system.Buffer, options: NotesWindowManagerPreviewShowNoteOptions, /) -> None: ...
+    # Deprecated alias of show_note_with_placement() for pywinrt v3.x compatibility.
+    # System.Void Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview::ShowNoteWithPlacement(System.Int32,Windows.Storage.Streams.IBuffer,Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreviewShowNoteOptions)
+    @deprecated("Use show_note_with_placement() instead.")
     def show_note_with_placement_with_options(self, note_view_id: winrt.system.Int32, data: winrt.system.Buffer, options: NotesWindowManagerPreviewShowNoteOptions, /) -> None: ...
     # System.Boolean Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview::TrySetNoteSize(System.Int32,Windows.Foundation.Size)
     def try_set_note_size(self, note_view_id: winrt.system.Int32, size: typing.Union[windows_foundation.Size, typing.Tuple[winrt.system.Single, winrt.system.Single]], /) -> bool: ...

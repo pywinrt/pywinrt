@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_applicationmodel_appointments import (
     Appointment,
@@ -171,3 +172,25 @@ class RecurrenceType(enum.IntEnum):
     INSTANCE = 1
     EXCEPTION_INSTANCE = 2
 
+winrt.runtime._internals.alias_method(AppointmentCalendar, "find_all_instances_async_with_options", "find_all_instances_async")
+winrt.runtime._internals.alias_method(AppointmentCalendar, "find_appointments_async_with_options", "find_appointments_async")
+winrt.runtime._internals.alias_method(AppointmentCalendar, "find_unexpanded_appointments_async_with_options", "find_unexpanded_appointments_async")
+winrt.runtime._internals.alias_static_method(AppointmentManager, "show_add_appointment_with_placement_async", "show_add_appointment_async")
+winrt.runtime._internals.alias_static_method(AppointmentManager, "show_appointment_details_with_date_async", "show_appointment_details_async")
+winrt.runtime._internals.alias_static_method(AppointmentManager, "show_remove_appointment_with_placement_and_date_async", "show_remove_appointment_async")
+winrt.runtime._internals.alias_static_method(AppointmentManager, "show_remove_appointment_with_placement_async", "show_remove_appointment_async")
+winrt.runtime._internals.alias_static_method(AppointmentManager, "show_replace_appointment_with_placement_and_date_async", "show_replace_appointment_async")
+winrt.runtime._internals.alias_static_method(AppointmentManager, "show_replace_appointment_with_placement_async", "show_replace_appointment_async")
+winrt.runtime._internals.alias_method(AppointmentManagerForUser, "show_add_appointment_with_placement_async", "show_add_appointment_async")
+winrt.runtime._internals.alias_method(AppointmentManagerForUser, "show_appointment_details_with_date_async", "show_appointment_details_async")
+winrt.runtime._internals.alias_method(AppointmentManagerForUser, "show_remove_appointment_with_placement_and_date_async", "show_remove_appointment_async")
+winrt.runtime._internals.alias_method(AppointmentManagerForUser, "show_remove_appointment_with_placement_async", "show_remove_appointment_async")
+winrt.runtime._internals.alias_method(AppointmentManagerForUser, "show_replace_appointment_with_placement_and_date_async", "show_replace_appointment_async")
+winrt.runtime._internals.alias_method(AppointmentManagerForUser, "show_replace_appointment_with_placement_async", "show_replace_appointment_async")
+winrt.runtime._internals.alias_method(AppointmentStore, "create_appointment_calendar_in_account_async", "create_appointment_calendar_async")
+winrt.runtime._internals.alias_method(AppointmentStore, "find_appointment_calendars_async_with_options", "find_appointment_calendars_async")
+winrt.runtime._internals.alias_method(AppointmentStore, "find_appointments_async_with_options", "find_appointments_async")
+winrt.runtime._internals.alias_method(AppointmentStore, "find_conflict_async_with_instance_start", "find_conflict_async")
+winrt.runtime._internals.alias_method(AppointmentStore, "show_appointment_details_with_date_async", "show_appointment_details_async")
+winrt.runtime._internals.alias_method(AppointmentStore, "show_remove_appointment_with_placement_and_date_async", "show_remove_appointment_async")
+winrt.runtime._internals.alias_method(AppointmentStore, "show_replace_appointment_with_placement_and_date_async", "show_replace_appointment_async")

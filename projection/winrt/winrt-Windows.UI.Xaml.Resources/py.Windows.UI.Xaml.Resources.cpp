@@ -166,7 +166,7 @@ namespace py::cpp::Windows::UI::Xaml::Resources
         Py_DECREF(tp);
     }
 
-    static PyObject* CustomXamlResourceLoader_GetResource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* CustomXamlResourceLoader_GetResource_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -305,7 +305,7 @@ namespace py::cpp::Windows::UI::Xaml::Resources
     }
 
     static PyMethodDef _methods_CustomXamlResourceLoader[] = {
-        { "_get_resource", reinterpret_cast<PyCFunction>(CustomXamlResourceLoader_GetResource), METH_VARARGS, nullptr },
+        { "_get_resource", reinterpret_cast<PyCFunction>(CustomXamlResourceLoader_GetResource_protected), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CustomXamlResourceLoader, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CustomXamlResourceLoader), METH_O | METH_STATIC, nullptr },
         { }};

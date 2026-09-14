@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -16,9 +17,15 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class PalmRejectionDelayZonePreview_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.UI.Input.Inking.Preview.PalmRejectionDelayZonePreview Windows.UI.Input.Inking.Preview.PalmRejectionDelayZonePreview::CreateForVisual(Windows.UI.Composition.Visual,Windows.Foundation.Rect)
     def create_for_visual(cls, input_panel_visual: windows_ui_composition.Visual, input_panel_rect: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> PalmRejectionDelayZonePreview: ...
+    @typing.overload
     # Windows.UI.Input.Inking.Preview.PalmRejectionDelayZonePreview Windows.UI.Input.Inking.Preview.PalmRejectionDelayZonePreview::CreateForVisual(Windows.UI.Composition.Visual,Windows.Foundation.Rect,Windows.UI.Composition.Visual,Windows.Foundation.Rect)
+    def create_for_visual(cls, input_panel_visual: windows_ui_composition.Visual, input_panel_rect: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], viewport_visual: windows_ui_composition.Visual, viewport_rect: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> PalmRejectionDelayZonePreview: ...
+    # Deprecated alias of create_for_visual() for pywinrt v3.x compatibility.
+    # Windows.UI.Input.Inking.Preview.PalmRejectionDelayZonePreview Windows.UI.Input.Inking.Preview.PalmRejectionDelayZonePreview::CreateForVisual(Windows.UI.Composition.Visual,Windows.Foundation.Rect,Windows.UI.Composition.Visual,Windows.Foundation.Rect)
+    @deprecated("Use create_for_visual() instead.")
     def create_for_visual_with_viewport_clip(cls, input_panel_visual: windows_ui_composition.Visual, input_panel_rect: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], viewport_visual: windows_ui_composition.Visual, viewport_rect: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> PalmRejectionDelayZonePreview: ...
 
 @typing.final

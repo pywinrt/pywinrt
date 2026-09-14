@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_media_editing import (
     BackgroundAudioTrack,
@@ -31,3 +32,6 @@ class VideoFramePrecision(enum.IntEnum):
     NEAREST_FRAME = 0
     NEAREST_KEY_FRAME = 1
 
+winrt.runtime._internals.alias_method(MediaComposition, "generate_media_stream_source_with_profile", "generate_media_stream_source")
+winrt.runtime._internals.alias_method(MediaComposition, "render_to_file_with_profile_async", "render_to_file_async")
+winrt.runtime._internals.alias_method(MediaComposition, "render_to_file_with_trimming_preference_async", "render_to_file_async")

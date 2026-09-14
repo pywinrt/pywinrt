@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -47,9 +48,15 @@ class GameSaveBlobInfoGetResult(winrt.system.Object):
 
 @typing.final
 class GameSaveBlobInfoQuery(winrt.system.Object):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoGetResult> Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoQuery::GetBlobInfoAsync()
     def get_blob_info_async(self) -> windows_foundation.IAsyncOperation[GameSaveBlobInfoGetResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoGetResult> Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoQuery::GetBlobInfoAsync(System.UInt32,System.UInt32)
+    def get_blob_info_async(self, start_index: winrt.system.UInt32, max_number_of_items: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[GameSaveBlobInfoGetResult]: ...
+    # Deprecated alias of get_blob_info_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoGetResult> Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoQuery::GetBlobInfoAsync(System.UInt32,System.UInt32)
+    @deprecated("Use get_blob_info_async() instead.")
     def get_blob_info_with_index_and_max_async(self, start_index: winrt.system.UInt32, max_number_of_items: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[GameSaveBlobInfoGetResult]: ...
     # Windows.Foundation.IAsyncOperation`1<System.UInt32> Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoQuery::GetItemCountAsync()
     def get_item_count_async(self) -> windows_foundation.IAsyncOperation[winrt.system.UInt32]: ...
@@ -102,9 +109,15 @@ class GameSaveContainerInfoGetResult(winrt.system.Object):
 
 @typing.final
 class GameSaveContainerInfoQuery(winrt.system.Object):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoGetResult> Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoQuery::GetContainerInfoAsync()
     def get_container_info_async(self) -> windows_foundation.IAsyncOperation[GameSaveContainerInfoGetResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoGetResult> Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoQuery::GetContainerInfoAsync(System.UInt32,System.UInt32)
+    def get_container_info_async(self, start_index: winrt.system.UInt32, max_number_of_items: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[GameSaveContainerInfoGetResult]: ...
+    # Deprecated alias of get_container_info_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoGetResult> Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoQuery::GetContainerInfoAsync(System.UInt32,System.UInt32)
+    @deprecated("Use get_container_info_async() instead.")
     def get_container_info_with_index_and_max_async(self, start_index: winrt.system.UInt32, max_number_of_items: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[GameSaveContainerInfoGetResult]: ...
     # Windows.Foundation.IAsyncOperation`1<System.UInt32> Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoQuery::GetItemCountAsync()
     def get_item_count_async(self) -> windows_foundation.IAsyncOperation[winrt.system.UInt32]: ...
@@ -126,9 +139,15 @@ class GameSaveProvider_Static(winrt._winrt.IInspectable_Static):
 class GameSaveProvider(winrt.system.Object, metaclass=GameSaveProvider_Static):
     # Windows.Gaming.XboxLive.Storage.GameSaveContainer Windows.Gaming.XboxLive.Storage.GameSaveProvider::CreateContainer(System.String)
     def create_container(self, name: str, /) -> GameSaveContainer: ...
+    @typing.overload
     # Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoQuery Windows.Gaming.XboxLive.Storage.GameSaveProvider::CreateContainerInfoQuery()
     def create_container_info_query(self) -> GameSaveContainerInfoQuery: ...
+    @typing.overload
     # Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoQuery Windows.Gaming.XboxLive.Storage.GameSaveProvider::CreateContainerInfoQuery(System.String)
+    def create_container_info_query(self, container_name_prefix: str, /) -> GameSaveContainerInfoQuery: ...
+    # Deprecated alias of create_container_info_query() for pywinrt v3.x compatibility.
+    # Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoQuery Windows.Gaming.XboxLive.Storage.GameSaveProvider::CreateContainerInfoQuery(System.String)
+    @deprecated("Use create_container_info_query() instead.")
     def create_container_info_query_with_name(self, container_name_prefix: str, /) -> GameSaveContainerInfoQuery: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Gaming.XboxLive.Storage.GameSaveOperationResult> Windows.Gaming.XboxLive.Storage.GameSaveProvider::DeleteContainerAsync(System.String)
     def delete_container_async(self, name: str, /) -> windows_foundation.IAsyncOperation[GameSaveOperationResult]: ...

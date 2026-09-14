@@ -73,7 +73,7 @@ static class SeqWriterExtensions
 
     public static void WriteSeqItemBody(this IndentedTextWriter w, ProjectedType type)
     {
-        var self = type.GetMethodInvokeContext(type.Methods.Single(m => m.Name == "GetAt"));
+        var self = type.GetMethodInvokeContext(type.GetMethod("GetAt", 1));
 
         w.WriteTryCatch(() =>
         {
@@ -91,7 +91,7 @@ static class SeqWriterExtensions
 
     public static void WriteSeqSubscriptBody(this IndentedTextWriter w, ProjectedType type)
     {
-        var method = type.Methods.First(m => m.Name == "GetAt");
+        var method = type.GetMethod("GetAt", 1);
         var collectionType = method.Method.ReturnType.ToCppTypeName(method.GenericArgMap);
 
         var seqItemInvoke = type.IsGeneric
@@ -180,7 +180,7 @@ static class SeqWriterExtensions
 
     private static void WriteSeqAssignBody(this IndentedTextWriter w, ProjectedType type)
     {
-        var method = type.Methods.First(m => m.Name == "SetAt");
+        var method = type.GetMethod("SetAt", 2);
         var collectionType = method
             .Method.Parameters[1]
             .ParameterType.ToCppTypeName(method.GenericArgMap);
@@ -221,7 +221,7 @@ static class SeqWriterExtensions
         IReadOnlyDictionary<string, string> packageMap
     )
     {
-        var method = type.Methods.Single(m => m.Name == "GetAt");
+        var method = type.GetMethod("GetAt", 1);
         var nullabilityInfo = nullabilityMap.GetValueOrDefault(
             method.Signature,
             new MethodNullabilityInfo(method.Method)
@@ -251,7 +251,7 @@ static class SeqWriterExtensions
         IReadOnlyDictionary<string, string> packageMap
     )
     {
-        var setMethod = type.Methods.Single(m => m.Name == "SetAt");
+        var setMethod = type.GetMethod("SetAt", 2);
         var setNullabilityInfo = nullabilityMap.GetValueOrDefault(
             setMethod.Signature,
             new MethodNullabilityInfo(setMethod.Method)

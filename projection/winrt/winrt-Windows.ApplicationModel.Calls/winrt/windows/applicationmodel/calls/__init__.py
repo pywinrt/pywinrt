@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_applicationmodel_calls import (
     AcceptedVoipPhoneCallOptions,
@@ -276,3 +277,8 @@ class VoipPhoneCallState(enum.IntEnum):
     INCOMING = 3
     OUTGOING = 4
 
+winrt.runtime._internals.alias_method(PhoneCallHistoryStore, "get_entry_reader_with_options", "get_entry_reader")
+winrt.runtime._internals.alias_static_method(PhoneLineTransportDevice, "get_device_selector_for_phone_line_transport", "get_device_selector")
+winrt.runtime._internals.alias_method(VoipCallCoordinator, "request_new_incoming_call_with_contact_remote_id", "request_new_incoming_call")
+winrt.runtime._internals.alias_method(VoipCallCoordinator, "reserve_one_process_call_resources_async", "reserve_call_resources_async")
+winrt.runtime._internals.alias_method(VoipPhoneCall, "notify_call_active_on_devices", "notify_call_active")

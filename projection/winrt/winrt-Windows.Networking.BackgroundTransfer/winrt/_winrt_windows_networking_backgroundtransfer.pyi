@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -71,10 +72,17 @@ class BackgroundUploadProgress:
 
 @typing.final
 class BackgroundDownloader_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Networking.BackgroundTransfer.DownloadOperation>> Windows.Networking.BackgroundTransfer.BackgroundDownloader::GetCurrentDownloadsAsync()
     def get_current_downloads_async(cls) -> windows_foundation.IAsyncOperation[typing.Sequence[DownloadOperation]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Networking.BackgroundTransfer.DownloadOperation>> Windows.Networking.BackgroundTransfer.BackgroundDownloader::GetCurrentDownloadsAsync(System.String)
     # @deprecated("GetCurrentDownloadsAsync(group) may be altered or unavailable for releases after Windows 8.1. Instead, use GetCurrentDownloadsForTransferGroupAsync.")
+    def get_current_downloads_async(cls, group: str, /) -> windows_foundation.IAsyncOperation[typing.Sequence[DownloadOperation]]: ...
+    # Deprecated alias of get_current_downloads_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Networking.BackgroundTransfer.DownloadOperation>> Windows.Networking.BackgroundTransfer.BackgroundDownloader::GetCurrentDownloadsAsync(System.String)
+    # @deprecated("GetCurrentDownloadsAsync(group) may be altered or unavailable for releases after Windows 8.1. Instead, use GetCurrentDownloadsForTransferGroupAsync.")
+    @deprecated("Use get_current_downloads_async() instead.")
     def get_current_downloads_for_group_async(cls, group: str, /) -> windows_foundation.IAsyncOperation[typing.Sequence[DownloadOperation]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Networking.BackgroundTransfer.DownloadOperation>> Windows.Networking.BackgroundTransfer.BackgroundDownloader::GetCurrentDownloadsForTransferGroupAsync(Windows.Networking.BackgroundTransfer.BackgroundTransferGroup)
     def get_current_downloads_for_transfer_group_async(cls, group: BackgroundTransferGroup, /) -> windows_foundation.IAsyncOperation[typing.Sequence[DownloadOperation]]: ...
@@ -88,12 +96,18 @@ class BackgroundDownloader(winrt.system.Object, IBackgroundTransferBase, metacla
     def __new__(cls: typing.Type[Self], completion_group: BackgroundTransferCompletionGroup) -> Self: ...
     @typing.overload
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    @typing.overload
     # Windows.Networking.BackgroundTransfer.DownloadOperation Windows.Networking.BackgroundTransfer.BackgroundDownloader::CreateDownload(Windows.Foundation.Uri,Windows.Storage.IStorageFile)
     def create_download(self, uri: windows_foundation.Uri, result_file: windows_storage.IStorageFile, /) -> DownloadOperation: ...
+    @typing.overload
+    # Windows.Networking.BackgroundTransfer.DownloadOperation Windows.Networking.BackgroundTransfer.BackgroundDownloader::CreateDownload(Windows.Foundation.Uri,Windows.Storage.IStorageFile,Windows.Storage.IStorageFile)
+    def create_download(self, uri: windows_foundation.Uri, result_file: windows_storage.IStorageFile, request_body_file: windows_storage.IStorageFile, /) -> DownloadOperation: ...
+    # Deprecated alias of create_download() for pywinrt v3.x compatibility.
+    # Windows.Networking.BackgroundTransfer.DownloadOperation Windows.Networking.BackgroundTransfer.BackgroundDownloader::CreateDownload(Windows.Foundation.Uri,Windows.Storage.IStorageFile,Windows.Storage.IStorageFile)
+    @deprecated("Use create_download() instead.")
+    def create_download_from_file(self, uri: windows_foundation.Uri, result_file: windows_storage.IStorageFile, request_body_file: windows_storage.IStorageFile, /) -> DownloadOperation: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.BackgroundTransfer.DownloadOperation> Windows.Networking.BackgroundTransfer.BackgroundDownloader::CreateDownloadAsync(Windows.Foundation.Uri,Windows.Storage.IStorageFile,Windows.Storage.Streams.IInputStream)
     def create_download_async(self, uri: windows_foundation.Uri, result_file: windows_storage.IStorageFile, request_body_stream: windows_storage_streams.IInputStream, /) -> windows_foundation.IAsyncOperation[DownloadOperation]: ...
-    # Windows.Networking.BackgroundTransfer.DownloadOperation Windows.Networking.BackgroundTransfer.BackgroundDownloader::CreateDownload(Windows.Foundation.Uri,Windows.Storage.IStorageFile,Windows.Storage.IStorageFile)
-    def create_download_from_file(self, uri: windows_foundation.Uri, result_file: windows_storage.IStorageFile, request_body_file: windows_storage.IStorageFile, /) -> DownloadOperation: ...
     # System.Void Windows.Networking.BackgroundTransfer.BackgroundDownloader::SetRequestHeader(System.String,System.String)
     def set_request_header(self, header_name: str, header_value: str, /) -> None: ...
     # Windows.UI.Notifications.ToastNotification Windows.Networking.BackgroundTransfer.BackgroundDownloader::get_FailureToastNotification()
@@ -235,10 +249,17 @@ class BackgroundTransferRangesDownloadedEventArgs(winrt.system.Object):
 
 @typing.final
 class BackgroundUploader_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Networking.BackgroundTransfer.UploadOperation>> Windows.Networking.BackgroundTransfer.BackgroundUploader::GetCurrentUploadsAsync()
     def get_current_uploads_async(cls) -> windows_foundation.IAsyncOperation[typing.Sequence[UploadOperation]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Networking.BackgroundTransfer.UploadOperation>> Windows.Networking.BackgroundTransfer.BackgroundUploader::GetCurrentUploadsAsync(System.String)
     # @deprecated("GetCurrentUploadsAsync(group) may be altered or unavailable for releases after Windows 8.1. Instead, use GetCurrentUploadsForTransferGroupAsync.")
+    def get_current_uploads_async(cls, group: str, /) -> windows_foundation.IAsyncOperation[typing.Sequence[UploadOperation]]: ...
+    # Deprecated alias of get_current_uploads_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Networking.BackgroundTransfer.UploadOperation>> Windows.Networking.BackgroundTransfer.BackgroundUploader::GetCurrentUploadsAsync(System.String)
+    # @deprecated("GetCurrentUploadsAsync(group) may be altered or unavailable for releases after Windows 8.1. Instead, use GetCurrentUploadsForTransferGroupAsync.")
+    @deprecated("Use get_current_uploads_async() instead.")
     def get_current_uploads_for_group_async(cls, group: str, /) -> windows_foundation.IAsyncOperation[typing.Sequence[UploadOperation]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Networking.BackgroundTransfer.UploadOperation>> Windows.Networking.BackgroundTransfer.BackgroundUploader::GetCurrentUploadsForTransferGroupAsync(Windows.Networking.BackgroundTransfer.BackgroundTransferGroup)
     def get_current_uploads_for_transfer_group_async(cls, group: BackgroundTransferGroup, /) -> windows_foundation.IAsyncOperation[typing.Sequence[UploadOperation]]: ...
@@ -254,14 +275,29 @@ class BackgroundUploader(winrt.system.Object, IBackgroundTransferBase, metaclass
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # Windows.Networking.BackgroundTransfer.UploadOperation Windows.Networking.BackgroundTransfer.BackgroundUploader::CreateUpload(Windows.Foundation.Uri,Windows.Storage.IStorageFile)
     def create_upload(self, uri: windows_foundation.Uri, source_file: windows_storage.IStorageFile, /) -> UploadOperation: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Networking.BackgroundTransfer.UploadOperation> Windows.Networking.BackgroundTransfer.BackgroundUploader::CreateUploadAsync(Windows.Foundation.Uri,Windows.Foundation.Collections.IIterable`1<Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart>)
+    def create_upload_async(self, uri: windows_foundation.Uri, parts: typing.Iterable[BackgroundTransferContentPart], /) -> windows_foundation.IAsyncOperation[UploadOperation]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Networking.BackgroundTransfer.UploadOperation> Windows.Networking.BackgroundTransfer.BackgroundUploader::CreateUploadAsync(Windows.Foundation.Uri,Windows.Foundation.Collections.IIterable`1<Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart>,System.String)
+    def create_upload_async(self, uri: windows_foundation.Uri, parts: typing.Iterable[BackgroundTransferContentPart], sub_type: str, /) -> windows_foundation.IAsyncOperation[UploadOperation]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Networking.BackgroundTransfer.UploadOperation> Windows.Networking.BackgroundTransfer.BackgroundUploader::CreateUploadAsync(Windows.Foundation.Uri,Windows.Foundation.Collections.IIterable`1<Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart>,System.String,System.String)
+    def create_upload_async(self, uri: windows_foundation.Uri, parts: typing.Iterable[BackgroundTransferContentPart], sub_type: str, boundary: str, /) -> windows_foundation.IAsyncOperation[UploadOperation]: ...
+    # Deprecated alias of create_upload_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Networking.BackgroundTransfer.UploadOperation> Windows.Networking.BackgroundTransfer.BackgroundUploader::CreateUploadAsync(Windows.Foundation.Uri,Windows.Foundation.Collections.IIterable`1<Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart>)
+    @deprecated("Use create_upload_async() instead.")
+    def create_upload_with_form_data_and_auto_boundary_async(self, uri: windows_foundation.Uri, parts: typing.Iterable[BackgroundTransferContentPart], /) -> windows_foundation.IAsyncOperation[UploadOperation]: ...
+    # Deprecated alias of create_upload_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Networking.BackgroundTransfer.UploadOperation> Windows.Networking.BackgroundTransfer.BackgroundUploader::CreateUploadAsync(Windows.Foundation.Uri,Windows.Foundation.Collections.IIterable`1<Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart>,System.String,System.String)
+    @deprecated("Use create_upload_async() instead.")
+    def create_upload_with_sub_type_and_boundary_async(self, uri: windows_foundation.Uri, parts: typing.Iterable[BackgroundTransferContentPart], sub_type: str, boundary: str, /) -> windows_foundation.IAsyncOperation[UploadOperation]: ...
+    # Deprecated alias of create_upload_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Networking.BackgroundTransfer.UploadOperation> Windows.Networking.BackgroundTransfer.BackgroundUploader::CreateUploadAsync(Windows.Foundation.Uri,Windows.Foundation.Collections.IIterable`1<Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart>,System.String)
+    @deprecated("Use create_upload_async() instead.")
+    def create_upload_with_sub_type_async(self, uri: windows_foundation.Uri, parts: typing.Iterable[BackgroundTransferContentPart], sub_type: str, /) -> windows_foundation.IAsyncOperation[UploadOperation]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.BackgroundTransfer.UploadOperation> Windows.Networking.BackgroundTransfer.BackgroundUploader::CreateUploadFromStreamAsync(Windows.Foundation.Uri,Windows.Storage.Streams.IInputStream)
     def create_upload_from_stream_async(self, uri: windows_foundation.Uri, source_stream: windows_storage_streams.IInputStream, /) -> windows_foundation.IAsyncOperation[UploadOperation]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Networking.BackgroundTransfer.UploadOperation> Windows.Networking.BackgroundTransfer.BackgroundUploader::CreateUploadAsync(Windows.Foundation.Uri,Windows.Foundation.Collections.IIterable`1<Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart>)
-    def create_upload_with_form_data_and_auto_boundary_async(self, uri: windows_foundation.Uri, parts: typing.Iterable[BackgroundTransferContentPart], /) -> windows_foundation.IAsyncOperation[UploadOperation]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Networking.BackgroundTransfer.UploadOperation> Windows.Networking.BackgroundTransfer.BackgroundUploader::CreateUploadAsync(Windows.Foundation.Uri,Windows.Foundation.Collections.IIterable`1<Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart>,System.String,System.String)
-    def create_upload_with_sub_type_and_boundary_async(self, uri: windows_foundation.Uri, parts: typing.Iterable[BackgroundTransferContentPart], sub_type: str, boundary: str, /) -> windows_foundation.IAsyncOperation[UploadOperation]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Networking.BackgroundTransfer.UploadOperation> Windows.Networking.BackgroundTransfer.BackgroundUploader::CreateUploadAsync(Windows.Foundation.Uri,Windows.Foundation.Collections.IIterable`1<Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart>,System.String)
-    def create_upload_with_sub_type_async(self, uri: windows_foundation.Uri, parts: typing.Iterable[BackgroundTransferContentPart], sub_type: str, /) -> windows_foundation.IAsyncOperation[UploadOperation]: ...
     # System.Void Windows.Networking.BackgroundTransfer.BackgroundUploader::SetRequestHeader(System.String,System.String)
     def set_request_header(self, header_name: str, header_value: str, /) -> None: ...
     # Windows.Security.Credentials.PasswordCredential Windows.Networking.BackgroundTransfer.BackgroundUploader::get_ServerCredential()

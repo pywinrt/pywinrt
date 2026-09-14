@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_applicationmodel_email import (
     EmailAttachment,
@@ -304,3 +305,14 @@ class EmailStoreAccessType(enum.IntEnum):
     APP_MAILBOXES_READ_WRITE = 0
     ALL_MAILBOXES_LIMITED_READ_WRITE = 1
 
+winrt.runtime._internals.alias_method(EmailConversation, "find_messages_with_count_async", "find_messages_async")
+winrt.runtime._internals.alias_method(EmailFolder, "get_conversation_reader_with_options", "get_conversation_reader")
+winrt.runtime._internals.alias_method(EmailFolder, "get_message_reader_with_options", "get_message_reader")
+winrt.runtime._internals.alias_method(EmailFolder, "try_move_with_new_name_async", "try_move_async")
+winrt.runtime._internals.alias_method(EmailMailbox, "get_conversation_reader_with_options", "get_conversation_reader")
+winrt.runtime._internals.alias_method(EmailMailbox, "get_message_reader_with_options", "get_message_reader")
+winrt.runtime._internals.alias_method(EmailMailbox, "smart_send_message_async", "send_message_async")
+winrt.runtime._internals.alias_method(EmailMailbox, "try_move_folder_with_new_name_async", "try_move_folder_async")
+winrt.runtime._internals.alias_method(EmailStore, "create_mailbox_in_account_async", "create_mailbox_async")
+winrt.runtime._internals.alias_method(EmailStore, "get_conversation_reader_with_options", "get_conversation_reader")
+winrt.runtime._internals.alias_method(EmailStore, "get_message_reader_with_options", "get_message_reader")

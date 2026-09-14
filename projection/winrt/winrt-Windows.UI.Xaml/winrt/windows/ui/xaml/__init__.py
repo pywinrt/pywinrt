@@ -489,6 +489,15 @@ winrt.runtime._internals.mixin_mutable_sequence(SetterBaseCollection)
 winrt.runtime._internals.mixin_mutable_sequence(TriggerActionCollection)
 winrt.runtime._internals.mixin_mutable_sequence(TriggerCollection)
 winrt.runtime._internals.mixin_mutable_sequence(UIElementWeakCollection)
+winrt.runtime._internals.alias_static_method(Application, "load_component_with_resource_location", "load_component")
+winrt.runtime._internals.alias_method(DragUI, "set_content_from_bitmap_image_with_anchor_point", "set_content_from_bitmap_image")
+winrt.runtime._internals.alias_method(DragUI, "set_content_from_software_bitmap_with_anchor_point", "set_content_from_software_bitmap")
+winrt.runtime._internals.alias_method(DragUIOverride, "set_content_from_bitmap_image_with_anchor_point", "set_content_from_bitmap_image")
+winrt.runtime._internals.alias_method(DragUIOverride, "set_content_from_software_bitmap_with_anchor_point", "set_content_from_software_bitmap")
+winrt.runtime._internals.alias_static_method(PropertyMetadata, "create_with_default_value", "create")
+winrt.runtime._internals.alias_static_method(PropertyMetadata, "create_with_default_value_and_callback", "create")
+winrt.runtime._internals.alias_static_method(RectHelper, "union_with_point", "union")
+winrt.runtime._internals.alias_method(UIElement, "start_bring_into_view_with_options", "start_bring_into_view")
 ApplicationInitializationCallback = typing.Callable[[ApplicationInitializationCallbackParams], None]
 BindingFailedEventHandler = typing.Callable[[winrt.system.Object, BindingFailedEventArgs], None]
 CreateDefaultValueCallback = typing.Callable[[], winrt.system.Object]

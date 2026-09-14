@@ -177,6 +177,16 @@ static class FileWriters
             w.WriteLine("from abc import abstractmethod");
         }
 
+        if (
+            members
+                .Classes.Concat(members.Interfaces)
+                .Where(t => t.CircularDependencyDepth == dependencyDepth)
+                .Any(t => t.MethodGroups.Any(g => g.Aliases.Count != 0))
+        )
+        {
+            w.WriteLine("from typing_extensions import deprecated");
+        }
+
         w.WriteBlankLine();
         w.WriteLine("import winrt._winrt");
         w.WriteLine("import winrt.system");
@@ -332,7 +342,12 @@ static class FileWriters
             .Concat(members.Classes)
             .Concat(members.Interfaces);
 
-        if (componentDlls || allExtensionTypes.Any(t => t.IsPySequence || t.IsPyMapping))
+        if (
+            componentDlls
+            || allExtensionTypes.Any(t =>
+                t.IsPySequence || t.IsPyMapping || t.MethodGroups.Any(g => g.Aliases.Count != 0)
+            )
+        )
         {
             w.WriteLine("import winrt.runtime._internals");
         }
@@ -505,6 +520,23 @@ static class FileWriters
             else if (type.IsPySequence)
             {
                 w.WriteLine($"winrt.runtime._internals.mixin_sequence({type.PyWrapperTypeName})");
+            }
+        }
+
+        // Methods that were renamed in pywinrt v3.0 are still callable by the
+        // name they had then, with a deprecation warning.
+        foreach (var type in allExtensionTypes)
+        {
+            foreach (var group in type.MethodGroups)
+            {
+                foreach (var alias in group.Aliases)
+                {
+                    var function = group.IsStatic ? "alias_static_method" : "alias_method";
+
+                    w.WriteLine(
+                        $"winrt.runtime._internals.{function}({type.PyWrapperTypeName}, \"{alias.PyName}\", \"{group.PyName}\")"
+                    );
+                }
             }
         }
 

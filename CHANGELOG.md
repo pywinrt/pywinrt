@@ -5,7 +5,29 @@
 ## [Unreleased]
 
 ### Changed
+- Overloaded methods are called by the number of arguments again instead of
+  using a separate name for each overload. The
+  `[Windows.Foundation.Metadata.Overload]` attribute is now only used for
+  overloads that take the same number of arguments as another overload and for
+  overridable methods.
+- Python classes that implement a WinRT interface now implement all overloads of
+  a method with a single method. The old names are still called if they are
+  defined, so this only shows up as a type checker error.
+- BREAKING: `TileUpdateManagerForUser.create_tile_updater_for_application()` is
+  now `create_tile_updater_for_application_for_user()`. The old name is the
+  overload that takes an application id, so it could not be kept as an alias.
 - Greatly improved the speed of the `PyWinRT` code generation tool.
+
+### Deprecated
+- The method names that v3.x generated from the
+  `[Windows.Foundation.Metadata.Overload]` attribute are still available as
+  aliases, but calling one raises a `DeprecationWarning`. They will be removed
+  in a future release.
+
+### Fixed
+- Fixed `@typing.overload` missing from the type hints of overloaded methods.
+- Fixed methods being silently dropped when two overloads could not be told
+  apart.
 
 ## [v3.2.1] - 2025-06-06
 

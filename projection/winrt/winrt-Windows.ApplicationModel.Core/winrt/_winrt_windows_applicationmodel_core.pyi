@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -39,11 +40,22 @@ class AppListEntry(winrt.system.Object):
 
 @typing.final
 class CoreApplication_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
+    # Windows.ApplicationModel.Core.CoreApplicationView Windows.ApplicationModel.Core.CoreApplication::CreateNewView()
+    def create_new_view(cls) -> CoreApplicationView: ...
+    @typing.overload
+    # Windows.ApplicationModel.Core.CoreApplicationView Windows.ApplicationModel.Core.CoreApplication::CreateNewView(Windows.ApplicationModel.Core.IFrameworkViewSource)
+    def create_new_view(cls, view_source: IFrameworkViewSource, /) -> CoreApplicationView: ...
+    @typing.overload
     # Windows.ApplicationModel.Core.CoreApplicationView Windows.ApplicationModel.Core.CoreApplication::CreateNewView(System.String,System.String)
     def create_new_view(cls, runtime_type: str, entry_point: str, /) -> CoreApplicationView: ...
+    # Deprecated alias of create_new_view() for pywinrt v3.x compatibility.
     # Windows.ApplicationModel.Core.CoreApplicationView Windows.ApplicationModel.Core.CoreApplication::CreateNewView()
+    @deprecated("Use create_new_view() instead.")
     def create_new_view_from_main_view(cls) -> CoreApplicationView: ...
+    # Deprecated alias of create_new_view() for pywinrt v3.x compatibility.
     # Windows.ApplicationModel.Core.CoreApplicationView Windows.ApplicationModel.Core.CoreApplication::CreateNewView(Windows.ApplicationModel.Core.IFrameworkViewSource)
+    @deprecated("Use create_new_view() instead.")
     def create_new_view_with_view_source(cls, view_source: IFrameworkViewSource, /) -> CoreApplicationView: ...
     # System.Void Windows.ApplicationModel.Core.CoreApplication::DecrementApplicationUseCount()
     def decrement_application_use_count(cls) -> None: ...

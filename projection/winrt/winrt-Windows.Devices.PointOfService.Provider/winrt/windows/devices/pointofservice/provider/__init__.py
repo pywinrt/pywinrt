@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_devices_pointofservice_provider import (
     BarcodeScannerDisableScannerRequest,
@@ -58,3 +59,22 @@ class BarcodeScannerTriggerState(enum.IntEnum):
     RELEASED = 0
     PRESSED = 1
 
+winrt.runtime._internals.alias_method(BarcodeScannerDisableScannerRequest, "report_failed_with_failed_reason_and_description_async", "report_failed_async")
+winrt.runtime._internals.alias_method(BarcodeScannerDisableScannerRequest, "report_failed_with_failed_reason_async", "report_failed_async")
+winrt.runtime._internals.alias_method(BarcodeScannerEnableScannerRequest, "report_failed_with_failed_reason_and_description_async", "report_failed_async")
+winrt.runtime._internals.alias_method(BarcodeScannerEnableScannerRequest, "report_failed_with_failed_reason_async", "report_failed_async")
+winrt.runtime._internals.alias_method(BarcodeScannerGetSymbologyAttributesRequest, "report_failed_with_failed_reason_and_description_async", "report_failed_async")
+winrt.runtime._internals.alias_method(BarcodeScannerGetSymbologyAttributesRequest, "report_failed_with_failed_reason_async", "report_failed_async")
+winrt.runtime._internals.alias_method(BarcodeScannerHideVideoPreviewRequest, "report_failed_with_failed_reason_and_description_async", "report_failed_async")
+winrt.runtime._internals.alias_method(BarcodeScannerHideVideoPreviewRequest, "report_failed_with_failed_reason_async", "report_failed_async")
+winrt.runtime._internals.alias_method(BarcodeScannerProviderConnection, "create_frame_reader_with_format_and_size_async", "create_frame_reader_async")
+winrt.runtime._internals.alias_method(BarcodeScannerProviderConnection, "create_frame_reader_with_format_async", "create_frame_reader_async")
+winrt.runtime._internals.alias_method(BarcodeScannerProviderConnection, "report_error_async_with_scan_report", "report_error_async")
+winrt.runtime._internals.alias_method(BarcodeScannerSetActiveSymbologiesRequest, "report_failed_with_failed_reason_and_description_async", "report_failed_async")
+winrt.runtime._internals.alias_method(BarcodeScannerSetActiveSymbologiesRequest, "report_failed_with_failed_reason_async", "report_failed_async")
+winrt.runtime._internals.alias_method(BarcodeScannerSetSymbologyAttributesRequest, "report_failed_with_failed_reason_and_description_async", "report_failed_async")
+winrt.runtime._internals.alias_method(BarcodeScannerSetSymbologyAttributesRequest, "report_failed_with_failed_reason_async", "report_failed_async")
+winrt.runtime._internals.alias_method(BarcodeScannerStartSoftwareTriggerRequest, "report_failed_with_failed_reason_and_description_async", "report_failed_async")
+winrt.runtime._internals.alias_method(BarcodeScannerStartSoftwareTriggerRequest, "report_failed_with_failed_reason_async", "report_failed_async")
+winrt.runtime._internals.alias_method(BarcodeScannerStopSoftwareTriggerRequest, "report_failed_with_failed_reason_and_description_async", "report_failed_async")
+winrt.runtime._internals.alias_method(BarcodeScannerStopSoftwareTriggerRequest, "report_failed_with_failed_reason_async", "report_failed_async")

@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -131,29 +132,65 @@ class JsonObject(winrt.system.Object, windows_foundation.IStringable, IJsonValue
     def get_array(self) -> JsonArray: ...
     # System.Boolean Windows.Data.Json.JsonObject::GetBoolean()
     def get_boolean(self) -> bool: ...
+    @typing.overload
     # Windows.Data.Json.JsonArray Windows.Data.Json.JsonObject::GetNamedArray(System.String)
     def get_named_array(self, name: str, /) -> JsonArray: ...
+    @typing.overload
     # Windows.Data.Json.JsonArray Windows.Data.Json.JsonObject::GetNamedArray(System.String,Windows.Data.Json.JsonArray)
+    def get_named_array(self, name: str, default_value: JsonArray, /) -> JsonArray: ...
+    # Deprecated alias of get_named_array() for pywinrt v3.x compatibility.
+    # Windows.Data.Json.JsonArray Windows.Data.Json.JsonObject::GetNamedArray(System.String,Windows.Data.Json.JsonArray)
+    @deprecated("Use get_named_array() instead.")
     def get_named_array_or_default(self, name: str, default_value: JsonArray, /) -> JsonArray: ...
+    @typing.overload
     # System.Boolean Windows.Data.Json.JsonObject::GetNamedBoolean(System.String)
     def get_named_boolean(self, name: str, /) -> bool: ...
+    @typing.overload
     # System.Boolean Windows.Data.Json.JsonObject::GetNamedBoolean(System.String,System.Boolean)
+    def get_named_boolean(self, name: str, default_value: bool, /) -> bool: ...
+    # Deprecated alias of get_named_boolean() for pywinrt v3.x compatibility.
+    # System.Boolean Windows.Data.Json.JsonObject::GetNamedBoolean(System.String,System.Boolean)
+    @deprecated("Use get_named_boolean() instead.")
     def get_named_boolean_or_default(self, name: str, default_value: bool, /) -> bool: ...
+    @typing.overload
     # System.Double Windows.Data.Json.JsonObject::GetNamedNumber(System.String)
     def get_named_number(self, name: str, /) -> winrt.system.Double: ...
+    @typing.overload
     # System.Double Windows.Data.Json.JsonObject::GetNamedNumber(System.String,System.Double)
+    def get_named_number(self, name: str, default_value: winrt.system.Double, /) -> winrt.system.Double: ...
+    # Deprecated alias of get_named_number() for pywinrt v3.x compatibility.
+    # System.Double Windows.Data.Json.JsonObject::GetNamedNumber(System.String,System.Double)
+    @deprecated("Use get_named_number() instead.")
     def get_named_number_or_default(self, name: str, default_value: winrt.system.Double, /) -> winrt.system.Double: ...
+    @typing.overload
     # Windows.Data.Json.JsonObject Windows.Data.Json.JsonObject::GetNamedObject(System.String)
     def get_named_object(self, name: str, /) -> JsonObject: ...
+    @typing.overload
     # Windows.Data.Json.JsonObject Windows.Data.Json.JsonObject::GetNamedObject(System.String,Windows.Data.Json.JsonObject)
+    def get_named_object(self, name: str, default_value: JsonObject, /) -> JsonObject: ...
+    # Deprecated alias of get_named_object() for pywinrt v3.x compatibility.
+    # Windows.Data.Json.JsonObject Windows.Data.Json.JsonObject::GetNamedObject(System.String,Windows.Data.Json.JsonObject)
+    @deprecated("Use get_named_object() instead.")
     def get_named_object_or_default(self, name: str, default_value: JsonObject, /) -> JsonObject: ...
+    @typing.overload
     # System.String Windows.Data.Json.JsonObject::GetNamedString(System.String)
     def get_named_string(self, name: str, /) -> str: ...
+    @typing.overload
     # System.String Windows.Data.Json.JsonObject::GetNamedString(System.String,System.String)
+    def get_named_string(self, name: str, default_value: str, /) -> str: ...
+    # Deprecated alias of get_named_string() for pywinrt v3.x compatibility.
+    # System.String Windows.Data.Json.JsonObject::GetNamedString(System.String,System.String)
+    @deprecated("Use get_named_string() instead.")
     def get_named_string_or_default(self, name: str, default_value: str, /) -> str: ...
+    @typing.overload
     # Windows.Data.Json.JsonValue Windows.Data.Json.JsonObject::GetNamedValue(System.String)
     def get_named_value(self, name: str, /) -> JsonValue: ...
+    @typing.overload
     # Windows.Data.Json.JsonValue Windows.Data.Json.JsonObject::GetNamedValue(System.String,Windows.Data.Json.JsonValue)
+    def get_named_value(self, name: str, default_value: JsonValue, /) -> JsonValue: ...
+    # Deprecated alias of get_named_value() for pywinrt v3.x compatibility.
+    # Windows.Data.Json.JsonValue Windows.Data.Json.JsonObject::GetNamedValue(System.String,Windows.Data.Json.JsonValue)
+    @deprecated("Use get_named_value() instead.")
     def get_named_value_or_default(self, name: str, default_value: JsonValue, /) -> JsonValue: ...
     # System.Double Windows.Data.Json.JsonObject::GetNumber()
     def get_number(self) -> winrt.system.Double: ...

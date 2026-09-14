@@ -1398,6 +1398,71 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
         }
+        else if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"TryUpdatePosition", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerClampingOption>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryUpdatePosition(param0, param1);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"TryUpdatePosition", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerClampingOption>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerPositionUpdateOption>(args, 2);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.TryUpdatePosition(param0, param1, param2);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -1440,18 +1505,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* InteractionTracker_TryUpdatePositionByWithOption(py::wrapper::Microsoft::UI::Composition::Interactions::InteractionTracker* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -1559,82 +1613,6 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 {
                     auto _gil = release_gil();
                     return self->obj.TryUpdatePositionWithAnimation(param0);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* InteractionTracker_TryUpdatePositionWithOption(py::wrapper::Microsoft::UI::Composition::Interactions::InteractionTracker* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"TryUpdatePosition", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerClampingOption>(args, 1);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.TryUpdatePosition(param0, param1);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Interactions.InteractionTracker", L"TryUpdatePosition", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerClampingOption>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerPositionUpdateOption>(args, 2);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.TryUpdatePosition(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -2528,10 +2506,8 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
         { "configure_vector2_position_inertia_modifiers", reinterpret_cast<PyCFunction>(InteractionTracker_ConfigureVector2PositionInertiaModifiers), METH_VARARGS, nullptr },
         { "try_update_position", reinterpret_cast<PyCFunction>(InteractionTracker_TryUpdatePosition), METH_VARARGS, nullptr },
         { "try_update_position_by", reinterpret_cast<PyCFunction>(InteractionTracker_TryUpdatePositionBy), METH_VARARGS, nullptr },
-        { "try_update_position_by_with_option", reinterpret_cast<PyCFunction>(InteractionTracker_TryUpdatePositionByWithOption), METH_VARARGS, nullptr },
         { "try_update_position_with_additional_velocity", reinterpret_cast<PyCFunction>(InteractionTracker_TryUpdatePositionWithAdditionalVelocity), METH_VARARGS, nullptr },
         { "try_update_position_with_animation", reinterpret_cast<PyCFunction>(InteractionTracker_TryUpdatePositionWithAnimation), METH_VARARGS, nullptr },
-        { "try_update_position_with_option", reinterpret_cast<PyCFunction>(InteractionTracker_TryUpdatePositionWithOption), METH_VARARGS, nullptr },
         { "try_update_scale", reinterpret_cast<PyCFunction>(InteractionTracker_TryUpdateScale), METH_VARARGS, nullptr },
         { "try_update_scale_with_additional_velocity", reinterpret_cast<PyCFunction>(InteractionTracker_TryUpdateScaleWithAdditionalVelocity), METH_VARARGS, nullptr },
         { "try_update_scale_with_animation", reinterpret_cast<PyCFunction>(InteractionTracker_TryUpdateScaleWithAnimation), METH_VARARGS, nullptr },

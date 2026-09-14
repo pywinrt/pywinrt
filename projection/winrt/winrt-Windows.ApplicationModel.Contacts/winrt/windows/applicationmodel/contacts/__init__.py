@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_applicationmodel_contacts import (
     AggregateContactManager,
@@ -296,3 +297,32 @@ class PinnedContactSurface(enum.IntEnum):
     START_MENU = 0
     TASKBAR = 1
 
+winrt.runtime._internals.alias_method(ContactAnnotationStore, "create_annotation_list_in_account_async", "create_annotation_list_async")
+winrt.runtime._internals.alias_method(ContactFieldFactory, "create_field_category", "create_field")
+winrt.runtime._internals.alias_method(ContactFieldFactory, "create_field_custom", "create_field")
+winrt.runtime._internals.alias_method(ContactFieldFactory, "create_field_default", "create_field")
+winrt.runtime._internals.alias_method(ContactFieldFactory, "create_instant_message_all", "create_instant_message")
+winrt.runtime._internals.alias_method(ContactFieldFactory, "create_instant_message_category", "create_instant_message")
+winrt.runtime._internals.alias_method(ContactFieldFactory, "create_instant_message_default", "create_instant_message")
+winrt.runtime._internals.alias_method(ContactFieldFactory, "create_location_all", "create_location")
+winrt.runtime._internals.alias_method(ContactFieldFactory, "create_location_category", "create_location")
+winrt.runtime._internals.alias_method(ContactFieldFactory, "create_location_default", "create_location")
+winrt.runtime._internals.alias_method(ContactList, "get_contact_reader_with_options", "get_contact_reader")
+winrt.runtime._internals.alias_static_method(ContactManager, "convert_contact_to_v_card_async_with_max_bytes", "convert_contact_to_v_card_async")
+winrt.runtime._internals.alias_static_method(ContactManager, "request_store_async_with_access_type", "request_store_async")
+winrt.runtime._internals.alias_static_method(ContactManager, "show_contact_card_with_options", "show_contact_card")
+winrt.runtime._internals.alias_static_method(ContactManager, "show_contact_card_with_placement", "show_contact_card")
+winrt.runtime._internals.alias_static_method(ContactManager, "show_delay_loaded_contact_card_with_options", "show_delay_loaded_contact_card")
+winrt.runtime._internals.alias_method(ContactManagerForUser, "convert_contact_to_v_card_async_with_max_bytes", "convert_contact_to_v_card_async")
+winrt.runtime._internals.alias_method(ContactStore, "create_contact_list_in_account_async", "create_contact_list_async")
+winrt.runtime._internals.alias_method(ContactStore, "find_contacts_with_search_text_async", "find_contacts_async")
+winrt.runtime._internals.alias_method(ContactStore, "get_contact_reader_with_options", "get_contact_reader")
+winrt.runtime._internals.alias_method(_IContactFieldFactory, "create_field_category", "create_field")
+winrt.runtime._internals.alias_method(_IContactFieldFactory, "create_field_custom", "create_field")
+winrt.runtime._internals.alias_method(_IContactFieldFactory, "create_field_default", "create_field")
+winrt.runtime._internals.alias_method(_IContactInstantMessageFieldFactory, "create_instant_message_all", "create_instant_message")
+winrt.runtime._internals.alias_method(_IContactInstantMessageFieldFactory, "create_instant_message_category", "create_instant_message")
+winrt.runtime._internals.alias_method(_IContactInstantMessageFieldFactory, "create_instant_message_default", "create_instant_message")
+winrt.runtime._internals.alias_method(_IContactLocationFieldFactory, "create_location_all", "create_location")
+winrt.runtime._internals.alias_method(_IContactLocationFieldFactory, "create_location_category", "create_location")
+winrt.runtime._internals.alias_method(_IContactLocationFieldFactory, "create_location_default", "create_location")

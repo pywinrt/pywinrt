@@ -968,18 +968,39 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 return nullptr;
             }
         }
-        else
+        else if (arg_count == 2)
         {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.FileProtectionManager", L"LoadFileFromContainerAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::FileProtectionManager::LoadFileFromContainerAsync(param0, param1);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
         }
-    }
-
-    static PyObject* FileProtectionManager_LoadFileFromContainerWithTargetAndNameCollisionOptionAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -1004,49 +1025,6 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 {
                     auto _gil = release_gil();
                     return winrt::Windows::Security::EnterpriseData::FileProtectionManager::LoadFileFromContainerAsync(param0, param1, param2);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* FileProtectionManager_LoadFileFromContainerWithTargetAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.FileProtectionManager", L"LoadFileFromContainerAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 1);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return winrt::Windows::Security::EnterpriseData::FileProtectionManager::LoadFileFromContainerAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -1140,18 +1118,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* FileProtectionManager_SaveFileAsContainerWithSharingAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -1225,18 +1192,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* FileProtectionManager_UnprotectWithOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -1303,13 +1259,9 @@ namespace py::cpp::Windows::Security::EnterpriseData
         { "get_protection_info_async", reinterpret_cast<PyCFunction>(FileProtectionManager_GetProtectionInfoAsync), METH_VARARGS, nullptr },
         { "is_container_async", reinterpret_cast<PyCFunction>(FileProtectionManager_IsContainerAsync), METH_VARARGS, nullptr },
         { "load_file_from_container_async", reinterpret_cast<PyCFunction>(FileProtectionManager_LoadFileFromContainerAsync), METH_VARARGS, nullptr },
-        { "load_file_from_container_with_target_and_name_collision_option_async", reinterpret_cast<PyCFunction>(FileProtectionManager_LoadFileFromContainerWithTargetAndNameCollisionOptionAsync), METH_VARARGS, nullptr },
-        { "load_file_from_container_with_target_async", reinterpret_cast<PyCFunction>(FileProtectionManager_LoadFileFromContainerWithTargetAsync), METH_VARARGS, nullptr },
         { "protect_async", reinterpret_cast<PyCFunction>(FileProtectionManager_ProtectAsync), METH_VARARGS, nullptr },
         { "save_file_as_container_async", reinterpret_cast<PyCFunction>(FileProtectionManager_SaveFileAsContainerAsync), METH_VARARGS, nullptr },
-        { "save_file_as_container_with_sharing_async", reinterpret_cast<PyCFunction>(FileProtectionManager_SaveFileAsContainerWithSharingAsync), METH_VARARGS, nullptr },
         { "unprotect_async", reinterpret_cast<PyCFunction>(FileProtectionManager_UnprotectAsync), METH_VARARGS, nullptr },
-        { "unprotect_with_options_async", reinterpret_cast<PyCFunction>(FileProtectionManager_UnprotectWithOptionsAsync), METH_VARARGS, nullptr },
         { }};
 
     static PyType_Slot type_slots_FileProtectionManager_Static[] = 
@@ -3585,6 +3537,108 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 return nullptr;
             }
         }
+        else if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"RequestAccessAsync", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo>(args, 2);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RequestAccessAsync(param0, param1, param2);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"RequestAccessAsync", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo>(args, 2);
+                auto param3 = py::convert_to<winrt::hstring>(args, 3);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RequestAccessAsync(param0, param1, param2, param3);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 5)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"RequestAccessAsync", 5);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo>(args, 2);
+                auto param3 = py::convert_to<winrt::hstring>(args, 3);
+                auto param4 = py::convert_to<winrt::Windows::Security::EnterpriseData::ProtectionPolicyRequestAccessBehavior>(args, 4);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RequestAccessAsync(param0, param1, param2, param3, param4);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -3628,18 +3682,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* ProtectionPolicyManager_RequestAccessForAppWithAuditingInfoAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -3672,18 +3715,41 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 return nullptr;
             }
         }
-        else
+        else if (arg_count == 4)
         {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"RequestAccessForAppAsync", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo>(args, 2);
+                auto param3 = py::convert_to<winrt::hstring>(args, 3);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RequestAccessForAppAsync(param0, param1, param2, param3);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
         }
-    }
-
-    static PyObject* ProtectionPolicyManager_RequestAccessForAppWithBehaviorAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 5)
+        else if (arg_count == 5)
         {
             try
             {
@@ -3710,51 +3776,6 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 {
                     auto _gil = release_gil();
                     return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RequestAccessForAppAsync(param0, param1, param2, param3, param4);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* ProtectionPolicyManager_RequestAccessForAppWithMessageAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"RequestAccessForAppAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo>(args, 2);
-                auto param3 = py::convert_to<winrt::hstring>(args, 3);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RequestAccessForAppAsync(param0, param1, param2, param3);
                 }());
             }
             catch (...)
@@ -3807,18 +3828,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* ProtectionPolicyManager_RequestAccessToFilesForAppWithMessageAndBehaviorAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 5)
+        else if (arg_count == 5)
         {
             try
             {
@@ -3897,18 +3907,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* ProtectionPolicyManager_RequestAccessToFilesForProcessWithMessageAndBehaviorAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 5)
+        else if (arg_count == 5)
         {
             try
             {
@@ -3935,141 +3934,6 @@ namespace py::cpp::Windows::Security::EnterpriseData
                 {
                     auto _gil = release_gil();
                     return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RequestAccessToFilesForProcessAsync(param0, param1, param2, param3, param4);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* ProtectionPolicyManager_RequestAccessWithAuditingInfoAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"RequestAccessAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo>(args, 2);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RequestAccessAsync(param0, param1, param2);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* ProtectionPolicyManager_RequestAccessWithBehaviorAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 5)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"RequestAccessAsync", 5);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(5);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo>(args, 2);
-                auto param3 = py::convert_to<winrt::hstring>(args, 3);
-                auto param4 = py::convert_to<winrt::Windows::Security::EnterpriseData::ProtectionPolicyRequestAccessBehavior>(args, 4);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RequestAccessAsync(param0, param1, param2, param3, param4);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* ProtectionPolicyManager_RequestAccessWithMessageAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"RequestAccessAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo>(args, 2);
-                auto param3 = py::convert_to<winrt::hstring>(args, 3);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RequestAccessAsync(param0, param1, param2, param3);
                 }());
             }
             catch (...)
@@ -4700,16 +4564,8 @@ namespace py::cpp::Windows::Security::EnterpriseData
         { "log_audit_event", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_LogAuditEvent), METH_VARARGS, nullptr },
         { "request_access_async", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_RequestAccessAsync), METH_VARARGS, nullptr },
         { "request_access_for_app_async", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_RequestAccessForAppAsync), METH_VARARGS, nullptr },
-        { "request_access_for_app_with_auditing_info_async", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_RequestAccessForAppWithAuditingInfoAsync), METH_VARARGS, nullptr },
-        { "request_access_for_app_with_behavior_async", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_RequestAccessForAppWithBehaviorAsync), METH_VARARGS, nullptr },
-        { "request_access_for_app_with_message_async", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_RequestAccessForAppWithMessageAsync), METH_VARARGS, nullptr },
         { "request_access_to_files_for_app_async", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_RequestAccessToFilesForAppAsync), METH_VARARGS, nullptr },
-        { "request_access_to_files_for_app_with_message_and_behavior_async", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_RequestAccessToFilesForAppWithMessageAndBehaviorAsync), METH_VARARGS, nullptr },
         { "request_access_to_files_for_process_async", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_RequestAccessToFilesForProcessAsync), METH_VARARGS, nullptr },
-        { "request_access_to_files_for_process_with_message_and_behavior_async", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_RequestAccessToFilesForProcessWithMessageAndBehaviorAsync), METH_VARARGS, nullptr },
-        { "request_access_with_auditing_info_async", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_RequestAccessWithAuditingInfoAsync), METH_VARARGS, nullptr },
-        { "request_access_with_behavior_async", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_RequestAccessWithBehaviorAsync), METH_VARARGS, nullptr },
-        { "request_access_with_message_async", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_RequestAccessWithMessageAsync), METH_VARARGS, nullptr },
         { "revoke_content", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_RevokeContent), METH_VARARGS, nullptr },
         { "try_apply_process_ui_policy", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_TryApplyProcessUIPolicy), METH_VARARGS, nullptr },
         { "add_policy_changed", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_add_PolicyChanged), METH_O, nullptr },

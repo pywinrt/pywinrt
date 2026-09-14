@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -123,9 +124,15 @@ class GuidanceNavigator(winrt.system.Object, metaclass=GuidanceNavigator_Static)
     def start_tracking(self) -> None: ...
     # System.Void Windows.Services.Maps.Guidance.GuidanceNavigator::Stop()
     def stop(self) -> None: ...
+    @typing.overload
     # System.Void Windows.Services.Maps.Guidance.GuidanceNavigator::UpdateUserLocation(Windows.Devices.Geolocation.Geocoordinate)
     def update_user_location(self, user_location: windows_devices_geolocation.Geocoordinate, /) -> None: ...
+    @typing.overload
     # System.Void Windows.Services.Maps.Guidance.GuidanceNavigator::UpdateUserLocation(Windows.Devices.Geolocation.Geocoordinate,Windows.Devices.Geolocation.BasicGeoposition)
+    def update_user_location(self, user_location: windows_devices_geolocation.Geocoordinate, position_override: typing.Union[windows_devices_geolocation.BasicGeoposition, typing.Tuple[winrt.system.Double, winrt.system.Double, winrt.system.Double]], /) -> None: ...
+    # Deprecated alias of update_user_location() for pywinrt v3.x compatibility.
+    # System.Void Windows.Services.Maps.Guidance.GuidanceNavigator::UpdateUserLocation(Windows.Devices.Geolocation.Geocoordinate,Windows.Devices.Geolocation.BasicGeoposition)
+    @deprecated("Use update_user_location() instead.")
     def update_user_location_with_position_override(self, user_location: windows_devices_geolocation.Geocoordinate, position_override: typing.Union[windows_devices_geolocation.BasicGeoposition, typing.Tuple[winrt.system.Double, winrt.system.Double, winrt.system.Double]], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Services.Maps.Guidance.GuidanceNavigator::add_DestinationReached(Windows.Foundation.TypedEventHandler`2<Windows.Services.Maps.Guidance.GuidanceNavigator,System.Object>)
     def add_destination_reached(self, handler: windows_foundation.TypedEventHandler[GuidanceNavigator, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...

@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_devices_wifidirect_services import (
     WiFiDirectService,
@@ -75,3 +76,6 @@ class WiFiDirectServiceStatus(enum.IntEnum):
     BUSY = 1
     CUSTOM = 2
 
+winrt.runtime._internals.alias_method(WiFiDirectService, "connect_async_with_pin", "connect_async")
+winrt.runtime._internals.alias_static_method(WiFiDirectService, "get_selector_with_filter", "get_selector")
+winrt.runtime._internals.alias_method(WiFiDirectServiceAdvertiser, "connect_async_with_pin", "connect_async")

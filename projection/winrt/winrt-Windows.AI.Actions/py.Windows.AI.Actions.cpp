@@ -804,18 +804,7 @@ namespace py::cpp::Windows::AI::Actions
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* ActionEntityFactory_CreateTextEntityWithTextFormat(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -911,7 +900,6 @@ namespace py::cpp::Windows::AI::Actions
         { "create_streaming_text_action_entity_writer", reinterpret_cast<PyCFunction>(ActionEntityFactory_CreateStreamingTextActionEntityWriter), METH_VARARGS, nullptr },
         { "create_table_entity", reinterpret_cast<PyCFunction>(ActionEntityFactory_CreateTableEntity), METH_VARARGS, nullptr },
         { "create_text_entity", reinterpret_cast<PyCFunction>(ActionEntityFactory_CreateTextEntity), METH_VARARGS, nullptr },
-        { "create_text_entity_with_text_format", reinterpret_cast<PyCFunction>(ActionEntityFactory_CreateTextEntityWithTextFormat), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ActionEntityFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ActionEntityFactory), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ActionEntityFactory), METH_NOARGS, nullptr },

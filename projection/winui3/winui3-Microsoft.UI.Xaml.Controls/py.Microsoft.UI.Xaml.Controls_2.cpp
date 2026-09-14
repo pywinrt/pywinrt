@@ -2355,7 +2355,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* ComboBox_OnDropDownClosed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* ComboBox_OnDropDownClosed_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -2398,7 +2398,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ComboBox_OnDropDownOpened(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* ComboBox_OnDropDownOpened_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -4068,8 +4068,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     }
 
     static PyMethodDef _methods_ComboBox[] = {
-        { "_on_drop_down_closed", reinterpret_cast<PyCFunction>(ComboBox_OnDropDownClosed), METH_VARARGS, nullptr },
-        { "_on_drop_down_opened", reinterpret_cast<PyCFunction>(ComboBox_OnDropDownOpened), METH_VARARGS, nullptr },
+        { "_on_drop_down_closed", reinterpret_cast<PyCFunction>(ComboBox_OnDropDownClosed_protected), METH_VARARGS, nullptr },
+        { "_on_drop_down_opened", reinterpret_cast<PyCFunction>(ComboBox_OnDropDownOpened_protected), METH_VARARGS, nullptr },
         { "add_drop_down_closed", reinterpret_cast<PyCFunction>(ComboBox_add_DropDownClosed), METH_O, nullptr },
         { "remove_drop_down_closed", reinterpret_cast<PyCFunction>(ComboBox_remove_DropDownClosed), METH_O, nullptr },
         { "add_drop_down_opened", reinterpret_cast<PyCFunction>(ComboBox_add_DropDownOpened), METH_O, nullptr },
@@ -9834,18 +9834,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* ListViewBase_ScrollIntoViewWithAlignment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -12708,7 +12697,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         { "make_visible", reinterpret_cast<PyCFunction>(ListViewBase_MakeVisible), METH_VARARGS, nullptr },
         { "prepare_connected_animation", reinterpret_cast<PyCFunction>(ListViewBase_PrepareConnectedAnimation), METH_VARARGS, nullptr },
         { "scroll_into_view", reinterpret_cast<PyCFunction>(ListViewBase_ScrollIntoView), METH_VARARGS, nullptr },
-        { "scroll_into_view_with_alignment", reinterpret_cast<PyCFunction>(ListViewBase_ScrollIntoViewWithAlignment), METH_VARARGS, nullptr },
         { "select_all", reinterpret_cast<PyCFunction>(ListViewBase_SelectAll), METH_VARARGS, nullptr },
         { "select_range", reinterpret_cast<PyCFunction>(ListViewBase_SelectRange), METH_VARARGS, nullptr },
         { "set_desired_container_update_duration", reinterpret_cast<PyCFunction>(ListViewBase_SetDesiredContainerUpdateDuration), METH_VARARGS, nullptr },
@@ -18911,7 +18899,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         }
     }
 
-    static PyObject* VirtualizingStackPanel_OnCleanUpVirtualizedItem(py::wrapper::Microsoft::UI::Xaml::Controls::VirtualizingStackPanel* self, PyObject* args) noexcept
+    static PyObject* VirtualizingStackPanel_OnCleanUpVirtualizedItem_protected(py::wrapper::Microsoft::UI::Xaml::Controls::VirtualizingStackPanel* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -19346,7 +19334,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     }
 
     static PyMethodDef _methods_VirtualizingStackPanel[] = {
-        { "_on_clean_up_virtualized_item", reinterpret_cast<PyCFunction>(VirtualizingStackPanel_OnCleanUpVirtualizedItem), METH_VARARGS, nullptr },
+        { "_on_clean_up_virtualized_item", reinterpret_cast<PyCFunction>(VirtualizingStackPanel_OnCleanUpVirtualizedItem_protected), METH_VARARGS, nullptr },
         { "add_clean_up_virtualized_item_event", reinterpret_cast<PyCFunction>(VirtualizingStackPanel_add_CleanUpVirtualizedItemEvent), METH_O, nullptr },
         { "remove_clean_up_virtualized_item_event", reinterpret_cast<PyCFunction>(VirtualizingStackPanel_remove_CleanUpVirtualizedItemEvent), METH_O, nullptr },
         { "_assign_array_", _assign_array_VirtualizingStackPanel, METH_O | METH_STATIC, nullptr },

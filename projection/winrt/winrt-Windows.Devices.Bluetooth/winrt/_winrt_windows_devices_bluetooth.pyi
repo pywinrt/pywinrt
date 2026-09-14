@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -124,14 +125,26 @@ class BluetoothDevice(winrt.system.Object, windows_foundation.IClosable, metacla
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
     # System.Void Windows.Devices.Bluetooth.BluetoothDevice::Close()
     def close(self) -> None: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceServicesResult> Windows.Devices.Bluetooth.BluetoothDevice::GetRfcommServicesAsync()
     def get_rfcomm_services_async(self) -> windows_foundation.IAsyncOperation[windows_devices_bluetooth_rfcomm.RfcommDeviceServicesResult]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceServicesResult> Windows.Devices.Bluetooth.BluetoothDevice::GetRfcommServicesAsync(Windows.Devices.Bluetooth.BluetoothCacheMode)
+    def get_rfcomm_services_async(self, cache_mode: BluetoothCacheMode, /) -> windows_foundation.IAsyncOperation[windows_devices_bluetooth_rfcomm.RfcommDeviceServicesResult]: ...
+    # Deprecated alias of get_rfcomm_services_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceServicesResult> Windows.Devices.Bluetooth.BluetoothDevice::GetRfcommServicesAsync(Windows.Devices.Bluetooth.BluetoothCacheMode)
+    @deprecated("Use get_rfcomm_services_async() instead.")
+    def get_rfcomm_services_with_cache_mode_async(self, cache_mode: BluetoothCacheMode, /) -> windows_foundation.IAsyncOperation[windows_devices_bluetooth_rfcomm.RfcommDeviceServicesResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceServicesResult> Windows.Devices.Bluetooth.BluetoothDevice::GetRfcommServicesForIdAsync(Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId)
     def get_rfcomm_services_for_id_async(self, service_id: windows_devices_bluetooth_rfcomm.RfcommServiceId, /) -> windows_foundation.IAsyncOperation[windows_devices_bluetooth_rfcomm.RfcommDeviceServicesResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceServicesResult> Windows.Devices.Bluetooth.BluetoothDevice::GetRfcommServicesForIdAsync(Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId,Windows.Devices.Bluetooth.BluetoothCacheMode)
+    def get_rfcomm_services_for_id_async(self, service_id: windows_devices_bluetooth_rfcomm.RfcommServiceId, cache_mode: BluetoothCacheMode, /) -> windows_foundation.IAsyncOperation[windows_devices_bluetooth_rfcomm.RfcommDeviceServicesResult]: ...
+    # Deprecated alias of get_rfcomm_services_for_id_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceServicesResult> Windows.Devices.Bluetooth.BluetoothDevice::GetRfcommServicesForIdAsync(Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId,Windows.Devices.Bluetooth.BluetoothCacheMode)
+    @deprecated("Use get_rfcomm_services_for_id_async() instead.")
     def get_rfcomm_services_for_id_with_cache_mode_async(self, service_id: windows_devices_bluetooth_rfcomm.RfcommServiceId, cache_mode: BluetoothCacheMode, /) -> windows_foundation.IAsyncOperation[windows_devices_bluetooth_rfcomm.RfcommDeviceServicesResult]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceServicesResult> Windows.Devices.Bluetooth.BluetoothDevice::GetRfcommServicesAsync(Windows.Devices.Bluetooth.BluetoothCacheMode)
-    def get_rfcomm_services_with_cache_mode_async(self, cache_mode: BluetoothCacheMode, /) -> windows_foundation.IAsyncOperation[windows_devices_bluetooth_rfcomm.RfcommDeviceServicesResult]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Enumeration.DeviceAccessStatus> Windows.Devices.Bluetooth.BluetoothDevice::RequestAccessAsync()
     def request_access_async(self) -> windows_foundation.IAsyncOperation[windows_devices_enumeration.DeviceAccessStatus]: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Bluetooth.BluetoothDevice::add_ConnectionStatusChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Bluetooth.BluetoothDevice,System.Object>)
@@ -418,9 +431,15 @@ class BluetoothLEConnectionPhyInfo(winrt.system.Object):
 
 @typing.final
 class BluetoothLEDevice_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.BluetoothLEDevice> Windows.Devices.Bluetooth.BluetoothLEDevice::FromBluetoothAddressAsync(System.UInt64)
     def from_bluetooth_address_async(cls, bluetooth_address: winrt.system.UInt64, /) -> windows_foundation.IAsyncOperation[typing.Optional[BluetoothLEDevice]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.BluetoothLEDevice> Windows.Devices.Bluetooth.BluetoothLEDevice::FromBluetoothAddressAsync(System.UInt64,Windows.Devices.Bluetooth.BluetoothAddressType)
+    def from_bluetooth_address_async(cls, bluetooth_address: winrt.system.UInt64, bluetooth_address_type: BluetoothAddressType, /) -> windows_foundation.IAsyncOperation[typing.Optional[BluetoothLEDevice]]: ...
+    # Deprecated alias of from_bluetooth_address_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.BluetoothLEDevice> Windows.Devices.Bluetooth.BluetoothLEDevice::FromBluetoothAddressAsync(System.UInt64,Windows.Devices.Bluetooth.BluetoothAddressType)
+    @deprecated("Use from_bluetooth_address_async() instead.")
     def from_bluetooth_address_with_bluetooth_address_type_async(cls, bluetooth_address: winrt.system.UInt64, bluetooth_address_type: BluetoothAddressType, /) -> windows_foundation.IAsyncOperation[typing.Optional[BluetoothLEDevice]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.BluetoothLEDevice> Windows.Devices.Bluetooth.BluetoothLEDevice::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[BluetoothLEDevice]: ...
@@ -428,9 +447,15 @@ class BluetoothLEDevice_Static(winrt._winrt.IInspectable_Static):
     def get_device_selector(cls) -> str: ...
     # System.String Windows.Devices.Bluetooth.BluetoothLEDevice::GetDeviceSelectorFromAppearance(Windows.Devices.Bluetooth.BluetoothLEAppearance)
     def get_device_selector_from_appearance(cls, appearance: BluetoothLEAppearance, /) -> str: ...
+    @typing.overload
     # System.String Windows.Devices.Bluetooth.BluetoothLEDevice::GetDeviceSelectorFromBluetoothAddress(System.UInt64)
     def get_device_selector_from_bluetooth_address(cls, bluetooth_address: winrt.system.UInt64, /) -> str: ...
+    @typing.overload
     # System.String Windows.Devices.Bluetooth.BluetoothLEDevice::GetDeviceSelectorFromBluetoothAddress(System.UInt64,Windows.Devices.Bluetooth.BluetoothAddressType)
+    def get_device_selector_from_bluetooth_address(cls, bluetooth_address: winrt.system.UInt64, bluetooth_address_type: BluetoothAddressType, /) -> str: ...
+    # Deprecated alias of get_device_selector_from_bluetooth_address() for pywinrt v3.x compatibility.
+    # System.String Windows.Devices.Bluetooth.BluetoothLEDevice::GetDeviceSelectorFromBluetoothAddress(System.UInt64,Windows.Devices.Bluetooth.BluetoothAddressType)
+    @deprecated("Use get_device_selector_from_bluetooth_address() instead.")
     def get_device_selector_from_bluetooth_address_with_bluetooth_address_type(cls, bluetooth_address: winrt.system.UInt64, bluetooth_address_type: BluetoothAddressType, /) -> str: ...
     # System.String Windows.Devices.Bluetooth.BluetoothLEDevice::GetDeviceSelectorFromConnectionStatus(Windows.Devices.Bluetooth.BluetoothConnectionStatus)
     def get_device_selector_from_connection_status(cls, connection_status: BluetoothConnectionStatus, /) -> str: ...
@@ -452,14 +477,26 @@ class BluetoothLEDevice(winrt.system.Object, windows_foundation.IClosable, metac
     # Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService Windows.Devices.Bluetooth.BluetoothLEDevice::GetGattService(System.Guid)
     # @deprecated("Use GetGattServicesForUuidAsync instead of GetGattService.  For more information, see MSDN.")
     def get_gatt_service(self, service_uuid: _uuid.UUID, /) -> windows_devices_bluetooth_genericattributeprofile.GattDeviceService: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult> Windows.Devices.Bluetooth.BluetoothLEDevice::GetGattServicesAsync()
     def get_gatt_services_async(self) -> windows_foundation.IAsyncOperation[windows_devices_bluetooth_genericattributeprofile.GattDeviceServicesResult]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult> Windows.Devices.Bluetooth.BluetoothLEDevice::GetGattServicesAsync(Windows.Devices.Bluetooth.BluetoothCacheMode)
+    def get_gatt_services_async(self, cache_mode: BluetoothCacheMode, /) -> windows_foundation.IAsyncOperation[windows_devices_bluetooth_genericattributeprofile.GattDeviceServicesResult]: ...
+    # Deprecated alias of get_gatt_services_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult> Windows.Devices.Bluetooth.BluetoothLEDevice::GetGattServicesAsync(Windows.Devices.Bluetooth.BluetoothCacheMode)
+    @deprecated("Use get_gatt_services_async() instead.")
+    def get_gatt_services_with_cache_mode_async(self, cache_mode: BluetoothCacheMode, /) -> windows_foundation.IAsyncOperation[windows_devices_bluetooth_genericattributeprofile.GattDeviceServicesResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult> Windows.Devices.Bluetooth.BluetoothLEDevice::GetGattServicesForUuidAsync(System.Guid)
     def get_gatt_services_for_uuid_async(self, service_uuid: _uuid.UUID, /) -> windows_foundation.IAsyncOperation[windows_devices_bluetooth_genericattributeprofile.GattDeviceServicesResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult> Windows.Devices.Bluetooth.BluetoothLEDevice::GetGattServicesForUuidAsync(System.Guid,Windows.Devices.Bluetooth.BluetoothCacheMode)
+    def get_gatt_services_for_uuid_async(self, service_uuid: _uuid.UUID, cache_mode: BluetoothCacheMode, /) -> windows_foundation.IAsyncOperation[windows_devices_bluetooth_genericattributeprofile.GattDeviceServicesResult]: ...
+    # Deprecated alias of get_gatt_services_for_uuid_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult> Windows.Devices.Bluetooth.BluetoothLEDevice::GetGattServicesForUuidAsync(System.Guid,Windows.Devices.Bluetooth.BluetoothCacheMode)
+    @deprecated("Use get_gatt_services_for_uuid_async() instead.")
     def get_gatt_services_for_uuid_with_cache_mode_async(self, service_uuid: _uuid.UUID, cache_mode: BluetoothCacheMode, /) -> windows_foundation.IAsyncOperation[windows_devices_bluetooth_genericattributeprofile.GattDeviceServicesResult]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult> Windows.Devices.Bluetooth.BluetoothLEDevice::GetGattServicesAsync(Windows.Devices.Bluetooth.BluetoothCacheMode)
-    def get_gatt_services_with_cache_mode_async(self, cache_mode: BluetoothCacheMode, /) -> windows_foundation.IAsyncOperation[windows_devices_bluetooth_genericattributeprofile.GattDeviceServicesResult]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Enumeration.DeviceAccessStatus> Windows.Devices.Bluetooth.BluetoothLEDevice::RequestAccessAsync()
     def request_access_async(self) -> windows_foundation.IAsyncOperation[windows_devices_enumeration.DeviceAccessStatus]: ...
     # Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParametersRequest Windows.Devices.Bluetooth.BluetoothLEDevice::RequestPreferredConnectionParameters(Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParameters)

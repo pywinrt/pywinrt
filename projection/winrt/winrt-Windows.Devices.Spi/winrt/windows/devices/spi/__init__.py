@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_devices_spi import (
     SpiBusInfo,
@@ -32,3 +33,5 @@ class SpiSharingMode(enum.IntEnum):
     EXCLUSIVE = 0
     SHARED = 1
 
+winrt.runtime._internals.alias_static_method(SpiDevice, "get_device_selector_from_friendly_name", "get_device_selector")
+winrt.runtime._internals.alias_method(_ISpiDeviceStatics, "get_device_selector_from_friendly_name", "get_device_selector")

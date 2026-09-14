@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_ui_composition_interactions import (
     CompositionConditionalValue,
@@ -97,3 +98,5 @@ class VisualInteractionSourceRedirectionMode(enum.IntEnum):
     POINTER_WHEEL_ONLY = 2
     CAPABLE_TOUCHPAD_AND_POINTER_WHEEL = 3
 
+winrt.runtime._internals.alias_method(InteractionTracker, "try_update_position_with_option", "try_update_position")
+winrt.runtime._internals.alias_method(InteractionTracker, "try_update_position_by_with_option", "try_update_position_by")

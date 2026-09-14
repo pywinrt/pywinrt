@@ -98,18 +98,7 @@ namespace py::cpp::Windows::Data::Pdf
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PdfDocument_LoadFromFileWithPasswordAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -183,18 +172,7 @@ namespace py::cpp::Windows::Data::Pdf
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PdfDocument_LoadFromStreamWithPasswordAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -347,9 +325,7 @@ namespace py::cpp::Windows::Data::Pdf
 
     static PyMethodDef methods_PdfDocument_Static[] = {
         { "load_from_file_async", reinterpret_cast<PyCFunction>(PdfDocument_LoadFromFileAsync), METH_VARARGS, nullptr },
-        { "load_from_file_with_password_async", reinterpret_cast<PyCFunction>(PdfDocument_LoadFromFileWithPasswordAsync), METH_VARARGS, nullptr },
         { "load_from_stream_async", reinterpret_cast<PyCFunction>(PdfDocument_LoadFromStreamAsync), METH_VARARGS, nullptr },
-        { "load_from_stream_with_password_async", reinterpret_cast<PyCFunction>(PdfDocument_LoadFromStreamWithPasswordAsync), METH_VARARGS, nullptr },
         { }};
 
     static PyType_Slot type_slots_PdfDocument_Static[] = 
@@ -500,18 +476,7 @@ namespace py::cpp::Windows::Data::Pdf
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PdfPage_RenderWithOptionsToStreamAsync(py::wrapper::Windows::Data::Pdf::PdfPage* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -751,7 +716,6 @@ namespace py::cpp::Windows::Data::Pdf
         { "close", reinterpret_cast<PyCFunction>(PdfPage_Close), METH_VARARGS, nullptr },
         { "prepare_page_async", reinterpret_cast<PyCFunction>(PdfPage_PreparePageAsync), METH_VARARGS, nullptr },
         { "render_to_stream_async", reinterpret_cast<PyCFunction>(PdfPage_RenderToStreamAsync), METH_VARARGS, nullptr },
-        { "render_with_options_to_stream_async", reinterpret_cast<PyCFunction>(PdfPage_RenderWithOptionsToStreamAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PdfPage, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PdfPage), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_PdfPage), METH_NOARGS, nullptr },

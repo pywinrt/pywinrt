@@ -92,9 +92,10 @@ class ProjectedType
 
         var factories = GetFactories(type);
         Constructors = EnumerateConstructors(type).ToArray();
-        Methods = EnumerateMethods(type).ToList();
         Properties = EnumerateProperties(type).ToArray();
         Events = EnumerateEvents(type).ToArray();
+        MethodGroups = EnumerateMethodGroups(type, Properties, Events, GetReservedPyNames());
+        Methods = MethodGroups.SelectMany(g => g.Overloads).ToList();
 
         HasComposableFactory = factories.Values.Any(f =>
             f.IsComposable && f.Type?.Methods.Count > 0
@@ -299,7 +300,19 @@ class ProjectedType
     /// <summary>
     /// Gets the methods of the type.
     /// </summary>
+    /// <remarks>
+    /// This is the flattened list of all overloads of all method groups.
+    /// </remarks>
     public IReadOnlyCollection<ProjectedMethod> Methods { get; }
+
+    /// <summary>
+    /// Gets the methods of the type, grouped by projected name.
+    /// </summary>
+    /// <remarks>
+    /// Each group is projected as a single Python method that dispatches to
+    /// one of the overloads based on the number of arguments.
+    /// </remarks>
+    public IReadOnlyList<ProjectedMethodGroup> MethodGroups { get; }
 
     /// <summary>
     /// Gets the properties of the type.
@@ -370,6 +383,32 @@ class ProjectedType
         return "self->obj.";
     }
 
+    /// <summary>
+    /// Gets the projected method with the given WinRT name and number of
+    /// Python arguments.
+    /// </summary>
+    /// <remarks>
+    /// This is for the well-known methods of well-known interfaces. A type can
+    /// have other overloads of the same method, so the number of arguments is
+    /// needed to select the right one.
+    /// </remarks>
+    public ProjectedMethod GetMethod(string baseName, int pyInParamCount)
+    {
+        var methods = Methods
+            .Where(m => m.BaseName == baseName && m.PyInParamCount == pyInParamCount)
+            .ToList();
+
+        if (methods.Count != 1)
+        {
+            throw new InvalidOperationException(
+                $"expected exactly one {baseName} method with {pyInParamCount} arguments "
+                    + $"on {Type.FullName}, found {string.Join(", ", methods.Select(m => m.Signature))}"
+            );
+        }
+
+        return methods[0];
+    }
+
     public string GetMethodSelfParam(bool isUnused) =>
         isUnused ? "PyObject* /*unused*/" : $"{CppPyWrapperType}* self";
 
@@ -425,12 +464,148 @@ class ProjectedType
         return factories;
     }
 
-    private static IEnumerable<ProjectedMethod> EnumerateMethods(TypeDefinition type)
+    /// <summary>
+    /// Gets Python attribute names that are added to the type outside of the
+    /// method groups and therefore must not be used by a deprecated alias.
+    /// </summary>
+    private IEnumerable<string> GetReservedPyNames()
     {
-        var collectedMethods = new SortedDictionary<
-            string,
+        if (IsPySequence)
+        {
+            yield return "index";
+            yield return "count";
+        }
+
+        if (IsPyMutableSequence)
+        {
+            yield return "insert";
+            yield return "append";
+            yield return "clear";
+            yield return "extend";
+            yield return "reverse";
+            yield return "pop";
+            yield return "remove";
+        }
+
+        if (IsPyMapping)
+        {
+            yield return "keys";
+            yield return "items";
+            yield return "values";
+            yield return "get";
+        }
+
+        if (IsPyMutableMapping)
+        {
+            yield return "clear";
+            yield return "pop";
+            yield return "popitem";
+            yield return "setdefault";
+            yield return "update";
+        }
+
+        if (IsPyAwaitable)
+        {
+            yield return "get";
+            yield return "wait";
+        }
+    }
+
+    private readonly record struct MethodGroupKey(bool IsStatic, bool IsPublic, string Name);
+
+    private sealed class MethodGroupKeyComparer : IComparer<MethodGroupKey>
+    {
+        public static readonly MethodGroupKeyComparer Instance = new();
+
+        public int Compare(MethodGroupKey x, MethodGroupKey y)
+        {
+            var result = string.CompareOrdinal(x.Name, y.Name);
+
+            if (result != 0)
+            {
+                return result;
+            }
+
+            result = x.IsStatic.CompareTo(y.IsStatic);
+
+            if (result != 0)
+            {
+                return result;
+            }
+
+            return x.IsPublic.CompareTo(y.IsPublic);
+        }
+    }
+
+    /// <summary>
+    /// Tests if two projected methods are the same WinRT method reached by way
+    /// of different types.
+    /// </summary>
+    private static bool IsSameMethod(ProjectedMethod x, ProjectedMethod y) =>
+        x.Method == y.Method
+        // two methods that need separate Python names always have separate
+        // Overload attribute names
+        || (x.OverloadName is not null && x.OverloadName == y.OverloadName)
+        || IsOverrideOf(x.Method, y.Method)
+        || IsOverrideOf(y.Method, x.Method);
+
+    /// <summary>
+    /// Tests if the only name a method can be projected as is the one it
+    /// currently has, i.e. it has no Overload attribute to fall back on.
+    /// </summary>
+    private static bool CanOnlyUseThisName(ProjectedMethod method) =>
+        method.OverloadName is null || method.OverloadName == method.Name;
+
+    /// <summary>
+    /// Tests if two methods take the same parameters and have the same return
+    /// type, i.e. calling one is the same as calling the other.
+    /// </summary>
+    private static bool HasSameSignature(ProjectedMethod x, ProjectedMethod y) =>
+        x.Method.ReturnType.FullName == y.Method.ReturnType.FullName
+        && x.Method.Parameters.Select(p => p.ParameterType.FullName)
+            .SequenceEqual(y.Method.Parameters.Select(p => p.ParameterType.FullName));
+
+    private static bool IsOverrideOf(MethodDefinition method, MethodDefinition other) =>
+        method.Overrides.Any(o =>
+            o.Name == other.Name
+            && o.Parameters.Count == other.Parameters.Count
+            && (
+                o.DeclaringType is GenericInstanceType generic
+                    ? generic.ElementType
+                    : o.DeclaringType
+            ).FullName == other.DeclaringType.FullName
+        );
+
+    private static IReadOnlyList<ProjectedMethodGroup> EnumerateMethodGroups(
+        TypeDefinition type,
+        IEnumerable<ProjectedProperty> properties,
+        IEnumerable<ProjectedEvent> events,
+        IEnumerable<string> reservedPyNames
+    )
+    {
+        var collected = new SortedDictionary<
+            MethodGroupKey,
             SortedDictionary<int, List<ProjectedMethod>>
-        >(StringComparer.Ordinal);
+        >(MethodGroupKeyComparer.Instance);
+
+        void collect(ProjectedMethod projected)
+        {
+            var key = new MethodGroupKey(projected.IsStatic, projected.IsPublic, projected.Name);
+
+            if (!collected.TryGetValue(key, out var buckets))
+            {
+                buckets = [];
+                collected[key] = buckets;
+            }
+
+            if (!buckets.TryGetValue(projected.PyInParamCount, out var candidates))
+            {
+                candidates = [];
+                buckets[projected.PyInParamCount] = candidates;
+            }
+
+            candidates.Add(projected);
+        }
 
         void add(
             IEnumerable<MethodDefinition> methods,
@@ -442,19 +617,20 @@ class ProjectedType
             {
                 var projected = new ProjectedMethod(method, inheritance, map);
 
-                if (!collectedMethods.TryGetValue(projected.Name, out var dict))
+                // Overridable methods are called from WinRT into Python, where
+                // methods can't be overloaded, so each overload has to keep a
+                // name of its own instead of being called by argument count.
+                if (projected.IsOverridable && projected.OverloadName is not null)
                 {
-                    dict = [];
-                    collectedMethods[projected.Name] = dict;
+                    projected = new ProjectedMethod(
+                        method,
+                        inheritance,
+                        map,
+                        projected.OverloadName
+                    );
                 }
 
-                if (!dict.TryGetValue(method.Parameters.Count, out var list))
-                {
-                    list = [];
-                    dict[method.Parameters.Count] = list;
-                }
-
-                list.Add(projected);
+                collect(projected);
             }
         }
 
@@ -498,27 +674,206 @@ class ProjectedType
 
         addInterfaces(type);
 
-        foreach (var (name, methods) in collectedMethods)
-        {
-            foreach (var (argCount, overloads) in methods)
-            {
-                // if there are multiple overloads with the same number of
-                // arguments, we need to use the default overload
-                // https://devblogs.microsoft.com/oldnewthing/20210528-00/?p=105259
-                var defaultOverload = overloads.FirstOrDefault(m => m.IsDefaultOverload);
+        // WinRT overloads methods by the number of arguments, so there can be
+        // only one method per name and argument count. An overload that loses
+        // out is projected using the name from its Overload attribute instead,
+        // since that is the only way it can be called.
 
-                if (defaultOverload is not null)
+        var resolved = new SortedDictionary<MethodGroupKey, SortedDictionary<int, ProjectedMethod>>(
+            MethodGroupKeyComparer.Instance
+        );
+        var unreachable = new List<(ProjectedMethod Method, ProjectedMethod Winner)>();
+
+        while (collected.Count > 0)
+        {
+            var pending = collected;
+            collected = new(MethodGroupKeyComparer.Instance);
+
+            foreach (var (key, buckets) in pending)
+            {
+                if (!resolved.TryGetValue(key, out var methods))
                 {
-                    yield return defaultOverload;
+                    methods = [];
+                    resolved[key] = methods;
+                }
+
+                foreach (var (argCount, candidates) in buckets)
+                {
+                    var contenders = new List<ProjectedMethod>();
+
+                    // a method that was resolved in an earlier pass can be
+                    // displaced by a method that has no other name
+                    if (methods.TryGetValue(argCount, out var previous))
+                    {
+                        contenders.Add(previous);
+                    }
+
+                    contenders.AddRange(candidates);
+
+                    // a method that has no name of its own can only be called
+                    // by this name, so it wins over methods that can also be
+                    // projected using the name from their Overload attribute
+                    var stuck = contenders.Where(CanOnlyUseThisName).ToList();
+                    var pool = stuck.Count > 0 ? stuck : contenders;
+
+                    // if there are multiple overloads with the same number
+                    // of arguments, we need to use the default overload
+                    // https://devblogs.microsoft.com/oldnewthing/20210528-00/?p=105259
+                    var winner =
+                        pool.FirstOrDefault(m => m.IsDefaultOverload)
+                        // if there was no default, use the one that is
+                        // closest to the type being projected
+                        ?? pool.OrderBy(m => m.Inheritance.Count).First();
+
+                    methods[argCount] = winner;
+
+                    foreach (var candidate in contenders)
+                    {
+                        if (candidate == winner || IsSameMethod(candidate, winner))
+                        {
+                            continue;
+                        }
+
+                        if (!CanOnlyUseThisName(candidate))
+                        {
+                            collect(
+                                new ProjectedMethod(
+                                    candidate.Method,
+                                    candidate.Inheritance,
+                                    candidate.GenericArgMap,
+                                    candidate.OverloadName
+                                )
+                            );
+
+                            continue;
+                        }
+
+                        unreachable.Add((candidate, winner));
+                    }
+                }
+            }
+        }
+
+        // A method that lost out to another method with the same signature is
+        // not worth reporting since the same API is still available, e.g. when
+        // a newer version of an interface repeats a method of an older one.
+
+        foreach (var (method, winner) in unreachable)
+        {
+            var key = new MethodGroupKey(method.IsStatic, method.IsPublic, method.Name);
+
+            if (
+                resolved.TryGetValue(key, out var methods)
+                && methods.TryGetValue(method.PyInParamCount, out var other)
+                && HasSameSignature(method, other)
+            )
+            {
+                continue;
+            }
+
+            Console.Error.WriteLine(
+                $"warning: {type.FullName}: {method.Signature} is not callable "
+                    + $"because it is shadowed by {winner.Signature}"
+            );
+        }
+
+        // Methods that were renamed when the Overload attribute started being
+        // used for method names in pywinrt v3.0 get a deprecated alias so that
+        // code written for that version keeps working. A real attribute of the
+        // type always wins over an alias.
+        //
+        // NB: This is transitional. When the aliases have been deprecated long
+        // enough to be removed, delete everything that goes with them: the code
+        // below and the Aliases of ProjectedMethodGroup, the alias_method() and
+        // alias_static_method() calls in the generated __init__.py, the
+        // @deprecated defs in the generated type stubs, the LegacyPyName of
+        // ProjectedMethod and the lookup of the old name in
+        // WriteGetPythonMethod(), and the helpers in winrt.runtime._internals.
+        // The warning about an old name that can't be kept goes away with them.
+
+        var reserved = new Dictionary<bool, HashSet<string>>
+        {
+            [false] = new(StringComparer.Ordinal),
+            [true] = new(StringComparer.Ordinal),
+        };
+
+        foreach (var name in reservedPyNames)
+        {
+            reserved[false].Add(name);
+        }
+
+        foreach (var property in properties)
+        {
+            reserved[property.IsStatic]
+                .Add(property.Name.ToPythonIdentifier(isTypeMethod: property.IsStatic));
+        }
+
+        foreach (var @event in events)
+        {
+            reserved[@event.IsStatic].Add(@event.AddMethod.PyName);
+            reserved[@event.IsStatic].Add(@event.RemoveMethod.PyName);
+        }
+
+        var byPyName = new Dictionary<(bool IsStatic, string PyName), List<ProjectedMethod>>();
+
+        foreach (var (key, methods) in resolved)
+        {
+            var pyName = methods.Values.First().PyName;
+
+            reserved[key.IsStatic].Add(pyName);
+
+            if (!byPyName.TryGetValue((key.IsStatic, pyName), out var list))
+            {
+                list = [];
+                byPyName[(key.IsStatic, pyName)] = list;
+            }
+
+            list.AddRange(methods.Values);
+        }
+
+        var groups = new List<ProjectedMethodGroup>(resolved.Count);
+
+        foreach (var (key, methods) in resolved)
+        {
+            var overloads = methods.Values.ToList();
+            var pyName = overloads[0].PyName;
+            var aliases = new List<MethodAlias>();
+
+            // more than one overload can have had the same old name, in which
+            // case the alias is overloaded as well
+            foreach (
+                var legacy in overloads
+                    .Where(m => m.LegacyPyName != pyName)
+                    .GroupBy(m => m.LegacyPyName)
+            )
+            {
+                if (!reserved[key.IsStatic].Add(legacy.Key))
+                {
+                    // if the old name is a method that does the same thing,
+                    // e.g. the same method of a newer version of an interface,
+                    // then code that used the old name still works
+                    var existing = byPyName.GetValueOrDefault((key.IsStatic, legacy.Key), []);
+
+                    if (!legacy.All(m => existing.Any(e => HasSameSignature(m, e))))
+                    {
+                        Console.Error.WriteLine(
+                            $"warning: {type.FullName}: {legacy.First().Signature} can no longer "
+                                + $"be called as {legacy.Key}(), use {pyName}() instead"
+                        );
+                    }
+
                     continue;
                 }
 
-                // if there was no default, just use the first (and
-                // hopefully only) overload
-
-                yield return overloads.OrderBy(o => o.Inheritance.Count).First();
+                aliases.Add(new MethodAlias(legacy.Key, [.. legacy]));
             }
+
+            aliases.Sort((x, y) => string.CompareOrdinal(x.PyName, y.PyName));
+
+            groups.Add(new ProjectedMethodGroup(overloads, aliases));
         }
+
+        return groups;
     }
 
     private static IEnumerable<ProjectedProperty> EnumerateProperties(TypeDefinition type)

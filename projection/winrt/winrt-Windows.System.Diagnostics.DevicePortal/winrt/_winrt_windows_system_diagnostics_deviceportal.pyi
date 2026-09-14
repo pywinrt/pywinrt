@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -26,15 +27,32 @@ class DevicePortalConnection_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class DevicePortalConnection(winrt.system.Object, metaclass=DevicePortalConnection_Static):
+    @typing.overload
     # Windows.Networking.Sockets.ServerMessageWebSocket Windows.System.Diagnostics.DevicePortal.DevicePortalConnection::GetServerMessageWebSocketForRequest(Windows.Web.Http.HttpRequestMessage)
     def get_server_message_web_socket_for_request(self, request: windows_web_http.HttpRequestMessage, /) -> windows_networking_sockets.ServerMessageWebSocket: ...
+    @typing.overload
     # Windows.Networking.Sockets.ServerMessageWebSocket Windows.System.Diagnostics.DevicePortal.DevicePortalConnection::GetServerMessageWebSocketForRequest(Windows.Web.Http.HttpRequestMessage,Windows.Networking.Sockets.SocketMessageType,System.String)
-    def get_server_message_web_socket_for_request2(self, request: windows_web_http.HttpRequestMessage, message_type: windows_networking_sockets.SocketMessageType, protocol: str, /) -> windows_networking_sockets.ServerMessageWebSocket: ...
+    def get_server_message_web_socket_for_request(self, request: windows_web_http.HttpRequestMessage, message_type: windows_networking_sockets.SocketMessageType, protocol: str, /) -> windows_networking_sockets.ServerMessageWebSocket: ...
+    @typing.overload
     # Windows.Networking.Sockets.ServerMessageWebSocket Windows.System.Diagnostics.DevicePortal.DevicePortalConnection::GetServerMessageWebSocketForRequest(Windows.Web.Http.HttpRequestMessage,Windows.Networking.Sockets.SocketMessageType,System.String,System.UInt32,System.UInt32,Windows.Networking.Sockets.MessageWebSocketReceiveMode)
+    def get_server_message_web_socket_for_request(self, request: windows_web_http.HttpRequestMessage, message_type: windows_networking_sockets.SocketMessageType, protocol: str, outbound_buffer_size_in_bytes: winrt.system.UInt32, max_message_size: winrt.system.UInt32, receive_mode: windows_networking_sockets.MessageWebSocketReceiveMode, /) -> windows_networking_sockets.ServerMessageWebSocket: ...
+    # Deprecated alias of get_server_message_web_socket_for_request() for pywinrt v3.x compatibility.
+    # Windows.Networking.Sockets.ServerMessageWebSocket Windows.System.Diagnostics.DevicePortal.DevicePortalConnection::GetServerMessageWebSocketForRequest(Windows.Web.Http.HttpRequestMessage,Windows.Networking.Sockets.SocketMessageType,System.String)
+    @deprecated("Use get_server_message_web_socket_for_request() instead.")
+    def get_server_message_web_socket_for_request2(self, request: windows_web_http.HttpRequestMessage, message_type: windows_networking_sockets.SocketMessageType, protocol: str, /) -> windows_networking_sockets.ServerMessageWebSocket: ...
+    # Deprecated alias of get_server_message_web_socket_for_request() for pywinrt v3.x compatibility.
+    # Windows.Networking.Sockets.ServerMessageWebSocket Windows.System.Diagnostics.DevicePortal.DevicePortalConnection::GetServerMessageWebSocketForRequest(Windows.Web.Http.HttpRequestMessage,Windows.Networking.Sockets.SocketMessageType,System.String,System.UInt32,System.UInt32,Windows.Networking.Sockets.MessageWebSocketReceiveMode)
+    @deprecated("Use get_server_message_web_socket_for_request() instead.")
     def get_server_message_web_socket_for_request3(self, request: windows_web_http.HttpRequestMessage, message_type: windows_networking_sockets.SocketMessageType, protocol: str, outbound_buffer_size_in_bytes: winrt.system.UInt32, max_message_size: winrt.system.UInt32, receive_mode: windows_networking_sockets.MessageWebSocketReceiveMode, /) -> windows_networking_sockets.ServerMessageWebSocket: ...
+    @typing.overload
     # Windows.Networking.Sockets.ServerStreamWebSocket Windows.System.Diagnostics.DevicePortal.DevicePortalConnection::GetServerStreamWebSocketForRequest(Windows.Web.Http.HttpRequestMessage)
     def get_server_stream_web_socket_for_request(self, request: windows_web_http.HttpRequestMessage, /) -> windows_networking_sockets.ServerStreamWebSocket: ...
+    @typing.overload
     # Windows.Networking.Sockets.ServerStreamWebSocket Windows.System.Diagnostics.DevicePortal.DevicePortalConnection::GetServerStreamWebSocketForRequest(Windows.Web.Http.HttpRequestMessage,System.String,System.UInt32,System.Boolean)
+    def get_server_stream_web_socket_for_request(self, request: windows_web_http.HttpRequestMessage, protocol: str, outbound_buffer_size_in_bytes: winrt.system.UInt32, no_delay: bool, /) -> windows_networking_sockets.ServerStreamWebSocket: ...
+    # Deprecated alias of get_server_stream_web_socket_for_request() for pywinrt v3.x compatibility.
+    # Windows.Networking.Sockets.ServerStreamWebSocket Windows.System.Diagnostics.DevicePortal.DevicePortalConnection::GetServerStreamWebSocketForRequest(Windows.Web.Http.HttpRequestMessage,System.String,System.UInt32,System.Boolean)
+    @deprecated("Use get_server_stream_web_socket_for_request() instead.")
     def get_server_stream_web_socket_for_request2(self, request: windows_web_http.HttpRequestMessage, protocol: str, outbound_buffer_size_in_bytes: winrt.system.UInt32, no_delay: bool, /) -> windows_networking_sockets.ServerStreamWebSocket: ...
     # Windows.Foundation.EventRegistrationToken Windows.System.Diagnostics.DevicePortal.DevicePortalConnection::add_Closed(Windows.Foundation.TypedEventHandler`2<Windows.System.Diagnostics.DevicePortal.DevicePortalConnection,Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionClosedEventArgs>)
     def add_closed(self, handler: windows_foundation.TypedEventHandler[DevicePortalConnection, DevicePortalConnectionClosedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...

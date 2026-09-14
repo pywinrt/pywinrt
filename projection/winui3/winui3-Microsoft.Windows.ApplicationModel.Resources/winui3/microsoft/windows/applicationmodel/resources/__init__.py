@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winui3._winui3_microsoft_windows_applicationmodel_resources import (
     KnownResourceQualifierName,
@@ -36,3 +37,6 @@ class ResourceCandidateKind(enum.IntEnum):
     FILE_PATH = 2
     EMBEDDED_DATA = 3
 
+winrt.runtime._internals.alias_method(ResourceMap, "get_value_with_context", "get_value")
+winrt.runtime._internals.alias_method(ResourceMap, "get_value_by_index_with_context", "get_value_by_index")
+winrt.runtime._internals.alias_method(ResourceMap, "try_get_value_with_context", "try_get_value")

@@ -610,7 +610,7 @@ namespace py::cpp::Windows::UI::Popups
         }
     }
 
-    static PyObject* PopupMenu_ShowAsyncWithRect(py::wrapper::Windows::UI::Popups::PopupMenu* self, PyObject* args) noexcept
+    static PyObject* PopupMenu_ShowForSelectionAsync(py::wrapper::Windows::UI::Popups::PopupMenu* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -645,18 +645,7 @@ namespace py::cpp::Windows::UI::Popups
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PopupMenu_ShowAsyncWithRectAndPlacement(py::wrapper::Windows::UI::Popups::PopupMenu* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -751,8 +740,7 @@ namespace py::cpp::Windows::UI::Popups
 
     static PyMethodDef _methods_PopupMenu[] = {
         { "show_async", reinterpret_cast<PyCFunction>(PopupMenu_ShowAsync), METH_VARARGS, nullptr },
-        { "show_async_with_rect", reinterpret_cast<PyCFunction>(PopupMenu_ShowAsyncWithRect), METH_VARARGS, nullptr },
-        { "show_async_with_rect_and_placement", reinterpret_cast<PyCFunction>(PopupMenu_ShowAsyncWithRectAndPlacement), METH_VARARGS, nullptr },
+        { "show_for_selection_async", reinterpret_cast<PyCFunction>(PopupMenu_ShowForSelectionAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PopupMenu, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PopupMenu), METH_O | METH_STATIC, nullptr },
         { }};

@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -39,9 +40,15 @@ class SpeechContinuousRecognitionSession(winrt.system.Object):
     def pause_async(self) -> windows_foundation.IAsyncAction: ...
     # System.Void Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession::Resume()
     def resume(self) -> None: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession::StartAsync()
     def start_async(self) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession::StartAsync(Windows.Media.SpeechRecognition.SpeechContinuousRecognitionMode)
+    def start_async(self, mode: SpeechContinuousRecognitionMode, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of start_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession::StartAsync(Windows.Media.SpeechRecognition.SpeechContinuousRecognitionMode)
+    @deprecated("Use start_async() instead.")
     def start_with_mode_async(self, mode: SpeechContinuousRecognitionMode, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession::StopAsync()
     def stop_async(self) -> windows_foundation.IAsyncAction: ...

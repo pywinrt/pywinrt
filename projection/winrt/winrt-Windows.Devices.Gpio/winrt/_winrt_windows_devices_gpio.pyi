@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -119,9 +120,15 @@ class GpioController_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class GpioController(winrt.system.Object, metaclass=GpioController_Static):
+    @typing.overload
     # Windows.Devices.Gpio.GpioPin Windows.Devices.Gpio.GpioController::OpenPin(System.Int32)
     def open_pin(self, pin_number: winrt.system.Int32, /) -> GpioPin: ...
+    @typing.overload
     # Windows.Devices.Gpio.GpioPin Windows.Devices.Gpio.GpioController::OpenPin(System.Int32,Windows.Devices.Gpio.GpioSharingMode)
+    def open_pin(self, pin_number: winrt.system.Int32, sharing_mode: GpioSharingMode, /) -> GpioPin: ...
+    # Deprecated alias of open_pin() for pywinrt v3.x compatibility.
+    # Windows.Devices.Gpio.GpioPin Windows.Devices.Gpio.GpioController::OpenPin(System.Int32,Windows.Devices.Gpio.GpioSharingMode)
+    @deprecated("Use open_pin() instead.")
     def open_pin_with_sharing_mode(self, pin_number: winrt.system.Int32, sharing_mode: GpioSharingMode, /) -> GpioPin: ...
     # System.Boolean Windows.Devices.Gpio.GpioController::TryOpenPin(System.Int32,Windows.Devices.Gpio.GpioSharingMode,Windows.Devices.Gpio.GpioPin&,Windows.Devices.Gpio.GpioOpenStatus&)
     def try_open_pin(self, pin_number: winrt.system.Int32, sharing_mode: GpioSharingMode, /) -> typing.Tuple[bool, GpioPin, GpioOpenStatus]: ...

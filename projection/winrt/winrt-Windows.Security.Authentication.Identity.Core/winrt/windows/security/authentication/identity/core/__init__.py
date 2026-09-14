@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_security_authentication_identity_core import (
     MicrosoftAccountMultiFactorAuthenticationManager,
@@ -60,3 +61,5 @@ class MicrosoftAccountMultiFactorSessionAuthenticationStatus(enum.IntEnum):
     AUTHENTICATED = 0
     UNAUTHENTICATED = 1
 
+winrt.runtime._internals.alias_method(MicrosoftAccountMultiFactorAuthenticationManager, "approve_session_using_auth_session_info_async", "approve_session_async")
+winrt.runtime._internals.alias_method(MicrosoftAccountMultiFactorAuthenticationManager, "deny_session_using_auth_session_info_async", "deny_session_async")

@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -45,13 +46,25 @@ class ProfileUsage:
 class ESim(winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.NetworkOperators.ESimOperationResult> Windows.Networking.NetworkOperators.ESim::DeleteProfileAsync(System.String)
     def delete_profile_async(self, profile_id: str, /) -> windows_foundation.IAsyncOperation[ESimOperationResult]: ...
+    @typing.overload
     # Windows.Networking.NetworkOperators.ESimDiscoverResult Windows.Networking.NetworkOperators.ESim::Discover()
     def discover(self) -> ESimDiscoverResult: ...
+    @typing.overload
+    # Windows.Networking.NetworkOperators.ESimDiscoverResult Windows.Networking.NetworkOperators.ESim::Discover(System.String,System.String)
+    def discover(self, server_address: str, matching_id: str, /) -> ESimDiscoverResult: ...
+    # Deprecated alias of discover() for pywinrt v3.x compatibility.
+    # Windows.Networking.NetworkOperators.ESimDiscoverResult Windows.Networking.NetworkOperators.ESim::Discover(System.String,System.String)
+    @deprecated("Use discover() instead.")
+    def discover_with_server_address_and_matching_id(self, server_address: str, matching_id: str, /) -> ESimDiscoverResult: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.NetworkOperators.ESimDiscoverResult> Windows.Networking.NetworkOperators.ESim::DiscoverAsync()
     def discover_async(self) -> windows_foundation.IAsyncOperation[ESimDiscoverResult]: ...
-    # Windows.Networking.NetworkOperators.ESimDiscoverResult Windows.Networking.NetworkOperators.ESim::Discover(System.String,System.String)
-    def discover_with_server_address_and_matching_id(self, server_address: str, matching_id: str, /) -> ESimDiscoverResult: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.NetworkOperators.ESimDiscoverResult> Windows.Networking.NetworkOperators.ESim::DiscoverAsync(System.String,System.String)
+    def discover_async(self, server_address: str, matching_id: str, /) -> windows_foundation.IAsyncOperation[ESimDiscoverResult]: ...
+    # Deprecated alias of discover_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Networking.NetworkOperators.ESimDiscoverResult> Windows.Networking.NetworkOperators.ESim::DiscoverAsync(System.String,System.String)
+    @deprecated("Use discover_async() instead.")
     def discover_with_server_address_and_matching_id_async(self, server_address: str, matching_id: str, /) -> windows_foundation.IAsyncOperation[ESimDiscoverResult]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.NetworkOperators.ESimDownloadProfileMetadataResult> Windows.Networking.NetworkOperators.ESim::DownloadProfileMetadataAsync(System.String)
     def download_profile_metadata_async(self, activation_code: str, /) -> windows_foundation.IAsyncOperation[ESimDownloadProfileMetadataResult]: ...
@@ -187,9 +200,15 @@ class ESimProfile(winrt.system.Object):
 
 @typing.final
 class ESimProfileMetadata(winrt.system.Object):
+    @typing.overload
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Networking.NetworkOperators.ESimOperationResult,Windows.Networking.NetworkOperators.ESimProfileInstallProgress> Windows.Networking.NetworkOperators.ESimProfileMetadata::ConfirmInstallAsync()
     def confirm_install_async(self) -> windows_foundation.IAsyncOperationWithProgress[ESimOperationResult, ESimProfileInstallProgress]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Networking.NetworkOperators.ESimOperationResult,Windows.Networking.NetworkOperators.ESimProfileInstallProgress> Windows.Networking.NetworkOperators.ESimProfileMetadata::ConfirmInstallAsync(System.String)
+    def confirm_install_async(self, confirmation_code: str, /) -> windows_foundation.IAsyncOperationWithProgress[ESimOperationResult, ESimProfileInstallProgress]: ...
+    # Deprecated alias of confirm_install_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Networking.NetworkOperators.ESimOperationResult,Windows.Networking.NetworkOperators.ESimProfileInstallProgress> Windows.Networking.NetworkOperators.ESimProfileMetadata::ConfirmInstallAsync(System.String)
+    @deprecated("Use confirm_install_async() instead.")
     def confirm_install_with_confirmation_code_async(self, confirmation_code: str, /) -> windows_foundation.IAsyncOperationWithProgress[ESimOperationResult, ESimProfileInstallProgress]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.NetworkOperators.ESimOperationResult> Windows.Networking.NetworkOperators.ESimProfileMetadata::DenyInstallAsync()
     def deny_install_async(self) -> windows_foundation.IAsyncOperation[ESimOperationResult]: ...
@@ -883,19 +902,39 @@ class MobileBroadbandModem(winrt.system.Object, metaclass=MobileBroadbandModem_S
     def get_current_configuration_async(self) -> windows_foundation.IAsyncOperation[MobileBroadbandModemConfiguration]: ...
     # Windows.Networking.NetworkOperators.MobileBroadbandDeviceService Windows.Networking.NetworkOperators.MobileBroadbandModem::GetDeviceService(System.Guid)
     def get_device_service(self, device_service_id: _uuid.UUID, /) -> MobileBroadbandDeviceService: ...
+    # System.Boolean Windows.Networking.NetworkOperators.MobileBroadbandModem::GetIsPassthroughEnabled(System.Int32)
+    def get_is_passthrough_enabled(self, slotindex: winrt.system.Int32, /) -> bool: ...
+    # Deprecated alias of get_is_passthrough_enabled() for pywinrt v3.x compatibility.
+    # System.Boolean Windows.Networking.NetworkOperators.MobileBroadbandModem::GetIsPassthroughEnabled(System.Int32)
+    @deprecated("Use get_is_passthrough_enabled() instead.")
+    def get_is_passthrough_enabled_with_slot_index(self, slotindex: winrt.system.Int32, /) -> bool: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Networking.NetworkOperators.MobileBroadbandModem::GetIsPassthroughEnabledAsync()
     def get_is_passthrough_enabled_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
-    # System.Boolean Windows.Networking.NetworkOperators.MobileBroadbandModem::GetIsPassthroughEnabled(System.Int32)
-    def get_is_passthrough_enabled_with_slot_index(self, slotindex: winrt.system.Int32, /) -> bool: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Networking.NetworkOperators.MobileBroadbandModem::GetIsPassthroughEnabledAsync(System.Int32)
+    def get_is_passthrough_enabled_async(self, slotindex: winrt.system.Int32, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Deprecated alias of get_is_passthrough_enabled_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Networking.NetworkOperators.MobileBroadbandModem::GetIsPassthroughEnabledAsync(System.Int32)
+    @deprecated("Use get_is_passthrough_enabled_async() instead.")
     def get_is_passthrough_enabled_with_slot_index_async(self, slotindex: winrt.system.Int32, /) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.IAsyncAction Windows.Networking.NetworkOperators.MobileBroadbandModem::ResetAsync()
     def reset_async(self) -> windows_foundation.IAsyncAction: ...
+    # Windows.Networking.NetworkOperators.MobileBroadbandModemStatus Windows.Networking.NetworkOperators.MobileBroadbandModem::SetIsPassthroughEnabled(System.Boolean,System.Int32)
+    def set_is_passthrough_enabled(self, value: bool, slotindex: winrt.system.Int32, /) -> MobileBroadbandModemStatus: ...
+    # Deprecated alias of set_is_passthrough_enabled() for pywinrt v3.x compatibility.
+    # Windows.Networking.NetworkOperators.MobileBroadbandModemStatus Windows.Networking.NetworkOperators.MobileBroadbandModem::SetIsPassthroughEnabled(System.Boolean,System.Int32)
+    @deprecated("Use set_is_passthrough_enabled() instead.")
+    def set_is_passthrough_enabled_with_slot_index(self, value: bool, slotindex: winrt.system.Int32, /) -> MobileBroadbandModemStatus: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.NetworkOperators.MobileBroadbandModemStatus> Windows.Networking.NetworkOperators.MobileBroadbandModem::SetIsPassthroughEnabledAsync(System.Boolean)
     def set_is_passthrough_enabled_async(self, value: bool, /) -> windows_foundation.IAsyncOperation[MobileBroadbandModemStatus]: ...
-    # Windows.Networking.NetworkOperators.MobileBroadbandModemStatus Windows.Networking.NetworkOperators.MobileBroadbandModem::SetIsPassthroughEnabled(System.Boolean,System.Int32)
-    def set_is_passthrough_enabled_with_slot_index(self, value: bool, slotindex: winrt.system.Int32, /) -> MobileBroadbandModemStatus: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.NetworkOperators.MobileBroadbandModemStatus> Windows.Networking.NetworkOperators.MobileBroadbandModem::SetIsPassthroughEnabledAsync(System.Boolean,System.Int32)
+    def set_is_passthrough_enabled_async(self, value: bool, slotindex: winrt.system.Int32, /) -> windows_foundation.IAsyncOperation[MobileBroadbandModemStatus]: ...
+    # Deprecated alias of set_is_passthrough_enabled_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Networking.NetworkOperators.MobileBroadbandModemStatus> Windows.Networking.NetworkOperators.MobileBroadbandModem::SetIsPassthroughEnabledAsync(System.Boolean,System.Int32)
+    @deprecated("Use set_is_passthrough_enabled_async() instead.")
     def set_is_passthrough_enabled_with_slot_index_async(self, value: bool, slotindex: winrt.system.Int32, /) -> windows_foundation.IAsyncOperation[MobileBroadbandModemStatus]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.NetworkOperators.MobileBroadbandPco> Windows.Networking.NetworkOperators.MobileBroadbandModem::TryGetPcoAsync()
     def try_get_pco_async(self) -> windows_foundation.IAsyncOperation[typing.Optional[MobileBroadbandPco]]: ...
@@ -1330,9 +1369,15 @@ class NetworkOperatorTetheringClient(winrt.system.Object):
 
 @typing.final
 class NetworkOperatorTetheringManager_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager::CreateFromConnectionProfile(Windows.Networking.Connectivity.ConnectionProfile)
     def create_from_connection_profile(cls, profile: windows_networking_connectivity.ConnectionProfile, /) -> NetworkOperatorTetheringManager: ...
+    @typing.overload
     # Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager::CreateFromConnectionProfile(Windows.Networking.Connectivity.ConnectionProfile,Windows.Networking.Connectivity.NetworkAdapter)
+    def create_from_connection_profile(cls, profile: windows_networking_connectivity.ConnectionProfile, adapter: windows_networking_connectivity.NetworkAdapter, /) -> NetworkOperatorTetheringManager: ...
+    # Deprecated alias of create_from_connection_profile() for pywinrt v3.x compatibility.
+    # Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager::CreateFromConnectionProfile(Windows.Networking.Connectivity.ConnectionProfile,Windows.Networking.Connectivity.NetworkAdapter)
+    @deprecated("Use create_from_connection_profile() instead.")
     def create_from_connection_profile_with_target_adapter(cls, profile: windows_networking_connectivity.ConnectionProfile, adapter: windows_networking_connectivity.NetworkAdapter, /) -> NetworkOperatorTetheringManager: ...
     # Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager::CreateFromNetworkAccountId(System.String)
     def create_from_network_account_id(cls, network_account_id: str, /) -> NetworkOperatorTetheringManager: ...

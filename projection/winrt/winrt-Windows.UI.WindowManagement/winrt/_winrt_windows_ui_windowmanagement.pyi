@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -334,9 +335,15 @@ class WindowServices(winrt.system.Object, metaclass=WindowServices_Static):
 
 @typing.final
 class WindowingEnvironment_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Foundation.Collections.IVectorView`1<Windows.UI.WindowManagement.WindowingEnvironment> Windows.UI.WindowManagement.WindowingEnvironment::FindAll()
     def find_all(cls) -> typing.Sequence[WindowingEnvironment]: ...
+    @typing.overload
     # Windows.Foundation.Collections.IVectorView`1<Windows.UI.WindowManagement.WindowingEnvironment> Windows.UI.WindowManagement.WindowingEnvironment::FindAll(Windows.UI.WindowManagement.WindowingEnvironmentKind)
+    def find_all(cls, kind: WindowingEnvironmentKind, /) -> typing.Sequence[WindowingEnvironment]: ...
+    # Deprecated alias of find_all() for pywinrt v3.x compatibility.
+    # Windows.Foundation.Collections.IVectorView`1<Windows.UI.WindowManagement.WindowingEnvironment> Windows.UI.WindowManagement.WindowingEnvironment::FindAll(Windows.UI.WindowManagement.WindowingEnvironmentKind)
+    @deprecated("Use find_all() instead.")
     def find_all_with_kind(cls, kind: WindowingEnvironmentKind, /) -> typing.Sequence[WindowingEnvironment]: ...
 
 @typing.final

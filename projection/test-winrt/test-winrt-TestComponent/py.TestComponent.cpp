@@ -984,65 +984,7 @@ namespace py::cpp::TestComponent
         Py_DECREF(tp);
     }
 
-    static PyObject* OverloadClass_Overload(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 0)
-        {
-            try
-            {
-                {
-                    auto _gil = release_gil();
-                    self->obj.try_as<winrt::TestComponent::OverloadClass>().Overload();
-                }
-
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* OverloadClass_OverloadWithOne(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
-        {
-            try
-            {
-                auto param0 = py::convert_to<int32_t>(args, 0);
-
-                {
-                    auto _gil = release_gil();
-                    py::get_inner_or_self(self->obj).try_as<winrt::TestComponent::IOverloadClassOverrides>().Overload(param0);
-                }
-
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* OverloadClass_OverloadWithThree(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* OverloadClass_Overload_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -1074,7 +1016,65 @@ namespace py::cpp::TestComponent
         }
     }
 
-    static PyObject* OverloadClass_OverloadWithTwo(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* OverloadClass_Overload(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::TestComponent::OverloadClass>().Overload();
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* OverloadClass_OverloadWithOne_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                auto param0 = py::convert_to<int32_t>(args, 0);
+
+                {
+                    auto _gil = release_gil();
+                    py::get_inner_or_self(self->obj).try_as<winrt::TestComponent::IOverloadClassOverrides>().Overload(param0);
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* OverloadClass_OverloadWithTwo_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -1130,10 +1130,10 @@ namespace py::cpp::TestComponent
     }
 
     static PyMethodDef _methods_OverloadClass[] = {
+        { "_overload", reinterpret_cast<PyCFunction>(OverloadClass_Overload_protected), METH_VARARGS, nullptr },
         { "overload", reinterpret_cast<PyCFunction>(OverloadClass_Overload), METH_VARARGS, nullptr },
-        { "_overload_with_one", reinterpret_cast<PyCFunction>(OverloadClass_OverloadWithOne), METH_VARARGS, nullptr },
-        { "_overload_with_three", reinterpret_cast<PyCFunction>(OverloadClass_OverloadWithThree), METH_VARARGS, nullptr },
-        { "_overload_with_two", reinterpret_cast<PyCFunction>(OverloadClass_OverloadWithTwo), METH_VARARGS, nullptr },
+        { "_overload_with_one", reinterpret_cast<PyCFunction>(OverloadClass_OverloadWithOne_protected), METH_VARARGS, nullptr },
+        { "_overload_with_two", reinterpret_cast<PyCFunction>(OverloadClass_OverloadWithTwo_protected), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_OverloadClass, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_OverloadClass), METH_O | METH_STATIC, nullptr },
         { }};
@@ -1362,7 +1362,7 @@ namespace py::cpp::TestComponent
         }
     }
 
-    static PyObject* Override_OnOverridable(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Override_OnOverridable_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -1390,7 +1390,7 @@ namespace py::cpp::TestComponent
         }
     }
 
-    static PyObject* Override_OnProtected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Override_OnProtected_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -1523,8 +1523,8 @@ namespace py::cpp::TestComponent
     static PyMethodDef _methods_Override[] = {
         { "call_overridable", reinterpret_cast<PyCFunction>(Override_CallOverridable), METH_VARARGS, nullptr },
         { "call_protected", reinterpret_cast<PyCFunction>(Override_CallProtected), METH_VARARGS, nullptr },
-        { "_on_overridable", reinterpret_cast<PyCFunction>(Override_OnOverridable), METH_VARARGS, nullptr },
-        { "_on_protected", reinterpret_cast<PyCFunction>(Override_OnProtected), METH_VARARGS, nullptr },
+        { "_on_overridable", reinterpret_cast<PyCFunction>(Override_OnOverridable_protected), METH_VARARGS, nullptr },
+        { "_on_protected", reinterpret_cast<PyCFunction>(Override_OnProtected_protected), METH_VARARGS, nullptr },
         { "add_overridable_called", reinterpret_cast<PyCFunction>(Override_add_OverridableCalled), METH_O, nullptr },
         { "remove_overridable_called", reinterpret_cast<PyCFunction>(Override_remove_OverridableCalled), METH_O, nullptr },
         { "add_protected_called", reinterpret_cast<PyCFunction>(Override_add_ProtectedCalled), METH_O, nullptr },

@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -74,31 +75,61 @@ class StorageApplicationPermissions(winrt.system.Object, metaclass=StorageApplic
 
 @typing.final
 class StorageItemAccessList(winrt.system.Object, IStorageItemAccessList):
+    @typing.overload
+    # System.String Windows.Storage.AccessCache.StorageItemAccessList::Add(Windows.Storage.IStorageItem)
+    def add(self, file: windows_storage.IStorageItem, /) -> str: ...
+    @typing.overload
     # System.String Windows.Storage.AccessCache.StorageItemAccessList::Add(Windows.Storage.IStorageItem,System.String)
     def add(self, file: windows_storage.IStorageItem, metadata: str, /) -> str: ...
+    # Deprecated alias of add() for pywinrt v3.x compatibility.
+    # System.String Windows.Storage.AccessCache.StorageItemAccessList::Add(Windows.Storage.IStorageItem)
+    @deprecated("Use add() instead.")
+    def add_overload_default_metadata(self, file: windows_storage.IStorageItem, /) -> str: ...
+    @typing.overload
+    # System.Void Windows.Storage.AccessCache.StorageItemAccessList::AddOrReplace(System.String,Windows.Storage.IStorageItem)
+    def add_or_replace(self, token: str, file: windows_storage.IStorageItem, /) -> None: ...
+    @typing.overload
     # System.Void Windows.Storage.AccessCache.StorageItemAccessList::AddOrReplace(System.String,Windows.Storage.IStorageItem,System.String)
     def add_or_replace(self, token: str, file: windows_storage.IStorageItem, metadata: str, /) -> None: ...
+    # Deprecated alias of add_or_replace() for pywinrt v3.x compatibility.
     # System.Void Windows.Storage.AccessCache.StorageItemAccessList::AddOrReplace(System.String,Windows.Storage.IStorageItem)
+    @deprecated("Use add_or_replace() instead.")
     def add_or_replace_overload_default_metadata(self, token: str, file: windows_storage.IStorageItem, /) -> None: ...
-    # System.String Windows.Storage.AccessCache.StorageItemAccessList::Add(Windows.Storage.IStorageItem)
-    def add_overload_default_metadata(self, file: windows_storage.IStorageItem, /) -> str: ...
     # System.Boolean Windows.Storage.AccessCache.StorageItemAccessList::CheckAccess(Windows.Storage.IStorageItem)
     def check_access(self, file: windows_storage.IStorageItem, /) -> bool: ...
     # System.Void Windows.Storage.AccessCache.StorageItemAccessList::Clear()
     def clear(self) -> None: ...
     # System.Boolean Windows.Storage.AccessCache.StorageItemAccessList::ContainsItem(System.String)
     def contains_item(self, token: str, /) -> bool: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.AccessCache.StorageItemAccessList::GetFileAsync(System.String)
     def get_file_async(self, token: str, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageFile]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.AccessCache.StorageItemAccessList::GetFileAsync(System.String,Windows.Storage.AccessCache.AccessCacheOptions)
+    def get_file_async(self, token: str, options: AccessCacheOptions, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageFile]: ...
+    # Deprecated alias of get_file_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.AccessCache.StorageItemAccessList::GetFileAsync(System.String,Windows.Storage.AccessCache.AccessCacheOptions)
+    @deprecated("Use get_file_async() instead.")
     def get_file_with_options_async(self, token: str, options: AccessCacheOptions, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageFile]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.AccessCache.StorageItemAccessList::GetFolderAsync(System.String)
     def get_folder_async(self, token: str, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageFolder]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.AccessCache.StorageItemAccessList::GetFolderAsync(System.String,Windows.Storage.AccessCache.AccessCacheOptions)
+    def get_folder_async(self, token: str, options: AccessCacheOptions, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageFolder]: ...
+    # Deprecated alias of get_folder_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.AccessCache.StorageItemAccessList::GetFolderAsync(System.String,Windows.Storage.AccessCache.AccessCacheOptions)
+    @deprecated("Use get_folder_async() instead.")
     def get_folder_with_options_async(self, token: str, options: AccessCacheOptions, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageFolder]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.IStorageItem> Windows.Storage.AccessCache.StorageItemAccessList::GetItemAsync(System.String)
     def get_item_async(self, token: str, /) -> windows_foundation.IAsyncOperation[windows_storage.IStorageItem]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.IStorageItem> Windows.Storage.AccessCache.StorageItemAccessList::GetItemAsync(System.String,Windows.Storage.AccessCache.AccessCacheOptions)
+    def get_item_async(self, token: str, options: AccessCacheOptions, /) -> windows_foundation.IAsyncOperation[windows_storage.IStorageItem]: ...
+    # Deprecated alias of get_item_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.IStorageItem> Windows.Storage.AccessCache.StorageItemAccessList::GetItemAsync(System.String,Windows.Storage.AccessCache.AccessCacheOptions)
+    @deprecated("Use get_item_async() instead.")
     def get_item_with_options_async(self, token: str, options: AccessCacheOptions, /) -> windows_foundation.IAsyncOperation[windows_storage.IStorageItem]: ...
     # System.Void Windows.Storage.AccessCache.StorageItemAccessList::Remove(System.String)
     def remove(self, token: str, /) -> None: ...
@@ -111,35 +142,75 @@ class StorageItemAccessList(winrt.system.Object, IStorageItemAccessList):
 
 @typing.final
 class StorageItemMostRecentlyUsedList(winrt.system.Object, IStorageItemAccessList):
+    @typing.overload
+    # System.String Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList::Add(Windows.Storage.IStorageItem)
+    def add(self, file: windows_storage.IStorageItem, /) -> str: ...
+    @typing.overload
     # System.String Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList::Add(Windows.Storage.IStorageItem,System.String)
     def add(self, file: windows_storage.IStorageItem, metadata: str, /) -> str: ...
+    @typing.overload
+    # System.String Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList::Add(Windows.Storage.IStorageItem,System.String,Windows.Storage.AccessCache.RecentStorageItemVisibility)
+    def add(self, file: windows_storage.IStorageItem, metadata: str, visibility: RecentStorageItemVisibility, /) -> str: ...
+    # Deprecated alias of add() for pywinrt v3.x compatibility.
+    # System.String Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList::Add(Windows.Storage.IStorageItem)
+    @deprecated("Use add() instead.")
+    def add_overload_default_metadata(self, file: windows_storage.IStorageItem, /) -> str: ...
+    # Deprecated alias of add() for pywinrt v3.x compatibility.
+    # System.String Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList::Add(Windows.Storage.IStorageItem,System.String,Windows.Storage.AccessCache.RecentStorageItemVisibility)
+    @deprecated("Use add() instead.")
+    def add_with_metadata_and_visibility(self, file: windows_storage.IStorageItem, metadata: str, visibility: RecentStorageItemVisibility, /) -> str: ...
+    @typing.overload
+    # System.Void Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList::AddOrReplace(System.String,Windows.Storage.IStorageItem)
+    def add_or_replace(self, token: str, file: windows_storage.IStorageItem, /) -> None: ...
+    @typing.overload
     # System.Void Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList::AddOrReplace(System.String,Windows.Storage.IStorageItem,System.String)
     def add_or_replace(self, token: str, file: windows_storage.IStorageItem, metadata: str, /) -> None: ...
-    # System.Void Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList::AddOrReplace(System.String,Windows.Storage.IStorageItem)
-    def add_or_replace_overload_default_metadata(self, token: str, file: windows_storage.IStorageItem, /) -> None: ...
+    @typing.overload
     # System.Void Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList::AddOrReplace(System.String,Windows.Storage.IStorageItem,System.String,Windows.Storage.AccessCache.RecentStorageItemVisibility)
+    def add_or_replace(self, token: str, file: windows_storage.IStorageItem, metadata: str, visibility: RecentStorageItemVisibility, /) -> None: ...
+    # Deprecated alias of add_or_replace() for pywinrt v3.x compatibility.
+    # System.Void Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList::AddOrReplace(System.String,Windows.Storage.IStorageItem)
+    @deprecated("Use add_or_replace() instead.")
+    def add_or_replace_overload_default_metadata(self, token: str, file: windows_storage.IStorageItem, /) -> None: ...
+    # Deprecated alias of add_or_replace() for pywinrt v3.x compatibility.
+    # System.Void Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList::AddOrReplace(System.String,Windows.Storage.IStorageItem,System.String,Windows.Storage.AccessCache.RecentStorageItemVisibility)
+    @deprecated("Use add_or_replace() instead.")
     def add_or_replace_with_metadata_and_visibility(self, token: str, file: windows_storage.IStorageItem, metadata: str, visibility: RecentStorageItemVisibility, /) -> None: ...
-    # System.String Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList::Add(Windows.Storage.IStorageItem)
-    def add_overload_default_metadata(self, file: windows_storage.IStorageItem, /) -> str: ...
-    # System.String Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList::Add(Windows.Storage.IStorageItem,System.String,Windows.Storage.AccessCache.RecentStorageItemVisibility)
-    def add_with_metadata_and_visibility(self, file: windows_storage.IStorageItem, metadata: str, visibility: RecentStorageItemVisibility, /) -> str: ...
     # System.Boolean Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList::CheckAccess(Windows.Storage.IStorageItem)
     def check_access(self, file: windows_storage.IStorageItem, /) -> bool: ...
     # System.Void Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList::Clear()
     def clear(self) -> None: ...
     # System.Boolean Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList::ContainsItem(System.String)
     def contains_item(self, token: str, /) -> bool: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList::GetFileAsync(System.String)
     def get_file_async(self, token: str, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageFile]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList::GetFileAsync(System.String,Windows.Storage.AccessCache.AccessCacheOptions)
+    def get_file_async(self, token: str, options: AccessCacheOptions, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageFile]: ...
+    # Deprecated alias of get_file_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList::GetFileAsync(System.String,Windows.Storage.AccessCache.AccessCacheOptions)
+    @deprecated("Use get_file_async() instead.")
     def get_file_with_options_async(self, token: str, options: AccessCacheOptions, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageFile]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList::GetFolderAsync(System.String)
     def get_folder_async(self, token: str, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageFolder]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList::GetFolderAsync(System.String,Windows.Storage.AccessCache.AccessCacheOptions)
+    def get_folder_async(self, token: str, options: AccessCacheOptions, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageFolder]: ...
+    # Deprecated alias of get_folder_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList::GetFolderAsync(System.String,Windows.Storage.AccessCache.AccessCacheOptions)
+    @deprecated("Use get_folder_async() instead.")
     def get_folder_with_options_async(self, token: str, options: AccessCacheOptions, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageFolder]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.IStorageItem> Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList::GetItemAsync(System.String)
     def get_item_async(self, token: str, /) -> windows_foundation.IAsyncOperation[windows_storage.IStorageItem]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.IStorageItem> Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList::GetItemAsync(System.String,Windows.Storage.AccessCache.AccessCacheOptions)
+    def get_item_async(self, token: str, options: AccessCacheOptions, /) -> windows_foundation.IAsyncOperation[windows_storage.IStorageItem]: ...
+    # Deprecated alias of get_item_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.IStorageItem> Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList::GetItemAsync(System.String,Windows.Storage.AccessCache.AccessCacheOptions)
+    @deprecated("Use get_item_async() instead.")
     def get_item_with_options_async(self, token: str, options: AccessCacheOptions, /) -> windows_foundation.IAsyncOperation[windows_storage.IStorageItem]: ...
     # System.Void Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList::Remove(System.String)
     def remove(self, token: str, /) -> None: ...
@@ -158,18 +229,30 @@ class StorageItemMostRecentlyUsedList(winrt.system.Object, IStorageItemAccessLis
 class _IStorageItemAccessList: ...
 
 class IStorageItemAccessList(winrt._winrt.IInspectable):
+    @typing.overload
+    # System.String Windows.Storage.AccessCache.IStorageItemAccessList::Add(Windows.Storage.IStorageItem)
+    @abstractmethod
+    def add(self, file: windows_storage.IStorageItem, /) -> str: ...
+    @typing.overload
     # System.String Windows.Storage.AccessCache.IStorageItemAccessList::Add(Windows.Storage.IStorageItem,System.String)
     @abstractmethod
     def add(self, file: windows_storage.IStorageItem, metadata: str, /) -> str: ...
+    # Deprecated alias of add() for pywinrt v3.x compatibility.
+    # System.String Windows.Storage.AccessCache.IStorageItemAccessList::Add(Windows.Storage.IStorageItem)
+    @deprecated("Use add() instead.")
+    def add_overload_default_metadata(self, file: windows_storage.IStorageItem, /) -> str: ...
+    @typing.overload
+    # System.Void Windows.Storage.AccessCache.IStorageItemAccessList::AddOrReplace(System.String,Windows.Storage.IStorageItem)
+    @abstractmethod
+    def add_or_replace(self, token: str, file: windows_storage.IStorageItem, /) -> None: ...
+    @typing.overload
     # System.Void Windows.Storage.AccessCache.IStorageItemAccessList::AddOrReplace(System.String,Windows.Storage.IStorageItem,System.String)
     @abstractmethod
     def add_or_replace(self, token: str, file: windows_storage.IStorageItem, metadata: str, /) -> None: ...
+    # Deprecated alias of add_or_replace() for pywinrt v3.x compatibility.
     # System.Void Windows.Storage.AccessCache.IStorageItemAccessList::AddOrReplace(System.String,Windows.Storage.IStorageItem)
-    @abstractmethod
+    @deprecated("Use add_or_replace() instead.")
     def add_or_replace_overload_default_metadata(self, token: str, file: windows_storage.IStorageItem, /) -> None: ...
-    # System.String Windows.Storage.AccessCache.IStorageItemAccessList::Add(Windows.Storage.IStorageItem)
-    @abstractmethod
-    def add_overload_default_metadata(self, file: windows_storage.IStorageItem, /) -> str: ...
     # System.Boolean Windows.Storage.AccessCache.IStorageItemAccessList::CheckAccess(Windows.Storage.IStorageItem)
     @abstractmethod
     def check_access(self, file: windows_storage.IStorageItem, /) -> bool: ...
@@ -179,23 +262,41 @@ class IStorageItemAccessList(winrt._winrt.IInspectable):
     # System.Boolean Windows.Storage.AccessCache.IStorageItemAccessList::ContainsItem(System.String)
     @abstractmethod
     def contains_item(self, token: str, /) -> bool: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.AccessCache.IStorageItemAccessList::GetFileAsync(System.String)
     @abstractmethod
     def get_file_async(self, token: str, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageFile]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.AccessCache.IStorageItemAccessList::GetFileAsync(System.String,Windows.Storage.AccessCache.AccessCacheOptions)
     @abstractmethod
+    def get_file_async(self, token: str, options: AccessCacheOptions, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageFile]: ...
+    # Deprecated alias of get_file_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.AccessCache.IStorageItemAccessList::GetFileAsync(System.String,Windows.Storage.AccessCache.AccessCacheOptions)
+    @deprecated("Use get_file_async() instead.")
     def get_file_with_options_async(self, token: str, options: AccessCacheOptions, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageFile]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.AccessCache.IStorageItemAccessList::GetFolderAsync(System.String)
     @abstractmethod
     def get_folder_async(self, token: str, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageFolder]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.AccessCache.IStorageItemAccessList::GetFolderAsync(System.String,Windows.Storage.AccessCache.AccessCacheOptions)
     @abstractmethod
+    def get_folder_async(self, token: str, options: AccessCacheOptions, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageFolder]: ...
+    # Deprecated alias of get_folder_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.AccessCache.IStorageItemAccessList::GetFolderAsync(System.String,Windows.Storage.AccessCache.AccessCacheOptions)
+    @deprecated("Use get_folder_async() instead.")
     def get_folder_with_options_async(self, token: str, options: AccessCacheOptions, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageFolder]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.IStorageItem> Windows.Storage.AccessCache.IStorageItemAccessList::GetItemAsync(System.String)
     @abstractmethod
     def get_item_async(self, token: str, /) -> windows_foundation.IAsyncOperation[windows_storage.IStorageItem]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.IStorageItem> Windows.Storage.AccessCache.IStorageItemAccessList::GetItemAsync(System.String,Windows.Storage.AccessCache.AccessCacheOptions)
     @abstractmethod
+    def get_item_async(self, token: str, options: AccessCacheOptions, /) -> windows_foundation.IAsyncOperation[windows_storage.IStorageItem]: ...
+    # Deprecated alias of get_item_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.IStorageItem> Windows.Storage.AccessCache.IStorageItemAccessList::GetItemAsync(System.String,Windows.Storage.AccessCache.AccessCacheOptions)
+    @deprecated("Use get_item_async() instead.")
     def get_item_with_options_async(self, token: str, options: AccessCacheOptions, /) -> windows_foundation.IAsyncOperation[windows_storage.IStorageItem]: ...
     # System.Void Windows.Storage.AccessCache.IStorageItemAccessList::Remove(System.String)
     @abstractmethod

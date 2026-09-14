@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -183,10 +184,16 @@ class StorePreviewSkuInfo(winrt.system.Object):
 
 @typing.final
 class WebAuthenticationCoreManagerHelper_Static(winrt._winrt.IInspectable_Static):
-    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> Windows.ApplicationModel.Store.Preview.WebAuthenticationCoreManagerHelper::RequestTokenWithUIElementHostingAsync(Windows.Security.Authentication.Web.Core.WebTokenRequest,Windows.Security.Credentials.WebAccount,Windows.UI.Xaml.UIElement)
-    def request_token_with_ui_element_hosting_and_web_account_async(cls, request: windows_security_authentication_web_core.WebTokenRequest, web_account: windows_security_credentials.WebAccount, ui_element: windows_ui_xaml.UIElement, /) -> windows_foundation.IAsyncOperation[windows_security_authentication_web_core.WebTokenRequestResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> Windows.ApplicationModel.Store.Preview.WebAuthenticationCoreManagerHelper::RequestTokenWithUIElementHostingAsync(Windows.Security.Authentication.Web.Core.WebTokenRequest,Windows.UI.Xaml.UIElement)
     def request_token_with_ui_element_hosting_async(cls, request: windows_security_authentication_web_core.WebTokenRequest, ui_element: windows_ui_xaml.UIElement, /) -> windows_foundation.IAsyncOperation[windows_security_authentication_web_core.WebTokenRequestResult]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> Windows.ApplicationModel.Store.Preview.WebAuthenticationCoreManagerHelper::RequestTokenWithUIElementHostingAsync(Windows.Security.Authentication.Web.Core.WebTokenRequest,Windows.Security.Credentials.WebAccount,Windows.UI.Xaml.UIElement)
+    def request_token_with_ui_element_hosting_async(cls, request: windows_security_authentication_web_core.WebTokenRequest, web_account: windows_security_credentials.WebAccount, ui_element: windows_ui_xaml.UIElement, /) -> windows_foundation.IAsyncOperation[windows_security_authentication_web_core.WebTokenRequestResult]: ...
+    # Deprecated alias of request_token_with_ui_element_hosting_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> Windows.ApplicationModel.Store.Preview.WebAuthenticationCoreManagerHelper::RequestTokenWithUIElementHostingAsync(Windows.Security.Authentication.Web.Core.WebTokenRequest,Windows.Security.Credentials.WebAccount,Windows.UI.Xaml.UIElement)
+    @deprecated("Use request_token_with_ui_element_hosting_async() instead.")
+    def request_token_with_ui_element_hosting_and_web_account_async(cls, request: windows_security_authentication_web_core.WebTokenRequest, web_account: windows_security_credentials.WebAccount, ui_element: windows_ui_xaml.UIElement, /) -> windows_foundation.IAsyncOperation[windows_security_authentication_web_core.WebTokenRequestResult]: ...
 
 @typing.final
 class WebAuthenticationCoreManagerHelper(winrt.system.Object, metaclass=WebAuthenticationCoreManagerHelper_Static):

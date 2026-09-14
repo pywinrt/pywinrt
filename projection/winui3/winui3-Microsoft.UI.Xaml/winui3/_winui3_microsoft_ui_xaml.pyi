@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -118,9 +119,15 @@ class AdaptiveTrigger(StateTriggerBase, metaclass=AdaptiveTrigger_Static):
     def min_window_height(self, value: winrt.system.Double) -> None: ...
 
 class Application_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # System.Void Microsoft.UI.Xaml.Application::LoadComponent(System.Object,Windows.Foundation.Uri)
     def load_component(cls, component: winrt.system.Object, resource_locator: windows_foundation.Uri, /) -> None: ...
+    @typing.overload
     # System.Void Microsoft.UI.Xaml.Application::LoadComponent(System.Object,Windows.Foundation.Uri,Microsoft.UI.Xaml.Controls.Primitives.ComponentResourceLocation)
+    def load_component(cls, component: winrt.system.Object, resource_locator: windows_foundation.Uri, component_resource_location: microsoft_ui_xaml_controls_primitives.ComponentResourceLocation, /) -> None: ...
+    # Deprecated alias of load_component() for pywinrt v3.x compatibility.
+    # System.Void Microsoft.UI.Xaml.Application::LoadComponent(System.Object,Windows.Foundation.Uri,Microsoft.UI.Xaml.Controls.Primitives.ComponentResourceLocation)
+    @deprecated("Use load_component() instead.")
     def load_component_with_resource_location(cls, component: winrt.system.Object, resource_locator: windows_foundation.Uri, component_resource_location: microsoft_ui_xaml_controls_primitives.ComponentResourceLocation, /) -> None: ...
     # System.Void Microsoft.UI.Xaml.Application::Start(Microsoft.UI.Xaml.ApplicationInitializationCallback)
     def start(cls, callback: ApplicationInitializationCallback, /) -> None: ...
@@ -816,28 +823,52 @@ class DragStartingEventArgs(RoutedEventArgs):
 
 @typing.final
 class DragUI(winrt.system.Object):
+    @typing.overload
     # System.Void Microsoft.UI.Xaml.DragUI::SetContentFromBitmapImage(Microsoft.UI.Xaml.Media.Imaging.BitmapImage)
     def set_content_from_bitmap_image(self, bitmap_image: microsoft_ui_xaml_media_imaging.BitmapImage, /) -> None: ...
+    @typing.overload
     # System.Void Microsoft.UI.Xaml.DragUI::SetContentFromBitmapImage(Microsoft.UI.Xaml.Media.Imaging.BitmapImage,Windows.Foundation.Point)
+    def set_content_from_bitmap_image(self, bitmap_image: microsoft_ui_xaml_media_imaging.BitmapImage, anchor_point: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], /) -> None: ...
+    # Deprecated alias of set_content_from_bitmap_image() for pywinrt v3.x compatibility.
+    # System.Void Microsoft.UI.Xaml.DragUI::SetContentFromBitmapImage(Microsoft.UI.Xaml.Media.Imaging.BitmapImage,Windows.Foundation.Point)
+    @deprecated("Use set_content_from_bitmap_image() instead.")
     def set_content_from_bitmap_image_with_anchor_point(self, bitmap_image: microsoft_ui_xaml_media_imaging.BitmapImage, anchor_point: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], /) -> None: ...
     # System.Void Microsoft.UI.Xaml.DragUI::SetContentFromDataPackage()
     def set_content_from_data_package(self) -> None: ...
+    @typing.overload
     # System.Void Microsoft.UI.Xaml.DragUI::SetContentFromSoftwareBitmap(Windows.Graphics.Imaging.SoftwareBitmap)
     def set_content_from_software_bitmap(self, software_bitmap: windows_graphics_imaging.SoftwareBitmap, /) -> None: ...
+    @typing.overload
     # System.Void Microsoft.UI.Xaml.DragUI::SetContentFromSoftwareBitmap(Windows.Graphics.Imaging.SoftwareBitmap,Windows.Foundation.Point)
+    def set_content_from_software_bitmap(self, software_bitmap: windows_graphics_imaging.SoftwareBitmap, anchor_point: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], /) -> None: ...
+    # Deprecated alias of set_content_from_software_bitmap() for pywinrt v3.x compatibility.
+    # System.Void Microsoft.UI.Xaml.DragUI::SetContentFromSoftwareBitmap(Windows.Graphics.Imaging.SoftwareBitmap,Windows.Foundation.Point)
+    @deprecated("Use set_content_from_software_bitmap() instead.")
     def set_content_from_software_bitmap_with_anchor_point(self, software_bitmap: windows_graphics_imaging.SoftwareBitmap, anchor_point: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], /) -> None: ...
 
 @typing.final
 class DragUIOverride(winrt.system.Object):
     # System.Void Microsoft.UI.Xaml.DragUIOverride::Clear()
     def clear(self) -> None: ...
+    @typing.overload
     # System.Void Microsoft.UI.Xaml.DragUIOverride::SetContentFromBitmapImage(Microsoft.UI.Xaml.Media.Imaging.BitmapImage)
     def set_content_from_bitmap_image(self, bitmap_image: microsoft_ui_xaml_media_imaging.BitmapImage, /) -> None: ...
+    @typing.overload
     # System.Void Microsoft.UI.Xaml.DragUIOverride::SetContentFromBitmapImage(Microsoft.UI.Xaml.Media.Imaging.BitmapImage,Windows.Foundation.Point)
+    def set_content_from_bitmap_image(self, bitmap_image: microsoft_ui_xaml_media_imaging.BitmapImage, anchor_point: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], /) -> None: ...
+    # Deprecated alias of set_content_from_bitmap_image() for pywinrt v3.x compatibility.
+    # System.Void Microsoft.UI.Xaml.DragUIOverride::SetContentFromBitmapImage(Microsoft.UI.Xaml.Media.Imaging.BitmapImage,Windows.Foundation.Point)
+    @deprecated("Use set_content_from_bitmap_image() instead.")
     def set_content_from_bitmap_image_with_anchor_point(self, bitmap_image: microsoft_ui_xaml_media_imaging.BitmapImage, anchor_point: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], /) -> None: ...
+    @typing.overload
     # System.Void Microsoft.UI.Xaml.DragUIOverride::SetContentFromSoftwareBitmap(Windows.Graphics.Imaging.SoftwareBitmap)
     def set_content_from_software_bitmap(self, software_bitmap: windows_graphics_imaging.SoftwareBitmap, /) -> None: ...
+    @typing.overload
     # System.Void Microsoft.UI.Xaml.DragUIOverride::SetContentFromSoftwareBitmap(Windows.Graphics.Imaging.SoftwareBitmap,Windows.Foundation.Point)
+    def set_content_from_software_bitmap(self, software_bitmap: windows_graphics_imaging.SoftwareBitmap, anchor_point: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], /) -> None: ...
+    # Deprecated alias of set_content_from_software_bitmap() for pywinrt v3.x compatibility.
+    # System.Void Microsoft.UI.Xaml.DragUIOverride::SetContentFromSoftwareBitmap(Windows.Graphics.Imaging.SoftwareBitmap,Windows.Foundation.Point)
+    @deprecated("Use set_content_from_software_bitmap() instead.")
     def set_content_from_software_bitmap_with_anchor_point(self, software_bitmap: windows_graphics_imaging.SoftwareBitmap, anchor_point: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], /) -> None: ...
     # System.Boolean Microsoft.UI.Xaml.DragUIOverride::get_IsGlyphVisible()
     @_property
@@ -1446,9 +1477,19 @@ class PointHelper(winrt.system.Object, metaclass=PointHelper_Static):
     pass
 
 class PropertyMetadata_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Microsoft.UI.Xaml.PropertyMetadata Microsoft.UI.Xaml.PropertyMetadata::Create(System.Object)
-    def create_with_default_value(cls, default_value: winrt.system.Object, /) -> PropertyMetadata: ...
+    def create(cls, default_value: winrt.system.Object, /) -> PropertyMetadata: ...
+    @typing.overload
     # Microsoft.UI.Xaml.PropertyMetadata Microsoft.UI.Xaml.PropertyMetadata::Create(System.Object,Microsoft.UI.Xaml.PropertyChangedCallback)
+    def create(cls, default_value: winrt.system.Object, property_changed_callback: PropertyChangedCallback, /) -> PropertyMetadata: ...
+    # Deprecated alias of create() for pywinrt v3.x compatibility.
+    # Microsoft.UI.Xaml.PropertyMetadata Microsoft.UI.Xaml.PropertyMetadata::Create(System.Object)
+    @deprecated("Use create() instead.")
+    def create_with_default_value(cls, default_value: winrt.system.Object, /) -> PropertyMetadata: ...
+    # Deprecated alias of create() for pywinrt v3.x compatibility.
+    # Microsoft.UI.Xaml.PropertyMetadata Microsoft.UI.Xaml.PropertyMetadata::Create(System.Object,Microsoft.UI.Xaml.PropertyChangedCallback)
+    @deprecated("Use create() instead.")
     def create_with_default_value_and_callback(cls, default_value: winrt.system.Object, property_changed_callback: PropertyChangedCallback, /) -> PropertyMetadata: ...
     # Microsoft.UI.Xaml.PropertyMetadata Microsoft.UI.Xaml.PropertyMetadata::Create(Microsoft.UI.Xaml.CreateDefaultValueCallback)
     def create_with_factory(cls, create_default_value_callback: CreateDefaultValueCallback, /) -> PropertyMetadata: ...
@@ -1501,6 +1542,10 @@ class RectHelper_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.Rect Microsoft.UI.Xaml.RectHelper::Intersect(Windows.Foundation.Rect,Windows.Foundation.Rect)
     def intersect(cls, target: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], rect: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> windows_foundation.Rect: ...
     # Windows.Foundation.Rect Microsoft.UI.Xaml.RectHelper::Union(Windows.Foundation.Rect,Windows.Foundation.Point)
+    def union(cls, target: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], point: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], /) -> windows_foundation.Rect: ...
+    # Deprecated alias of union() for pywinrt v3.x compatibility.
+    # Windows.Foundation.Rect Microsoft.UI.Xaml.RectHelper::Union(Windows.Foundation.Rect,Windows.Foundation.Point)
+    @deprecated("Use union() instead.")
     def union_with_point(cls, target: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], point: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], /) -> windows_foundation.Rect: ...
     # Windows.Foundation.Rect Microsoft.UI.Xaml.RectHelper::Union(Windows.Foundation.Rect,Windows.Foundation.Rect)
     def union_with_rect(cls, target: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], rect: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> windows_foundation.Rect: ...
@@ -2265,11 +2310,17 @@ class UIElement(DependencyObject, microsoft_ui_composition.IVisualElement2, micr
     @typing.final
     # System.Void Microsoft.UI.Xaml.UIElement::StartAnimation(Microsoft.UI.Composition.ICompositionAnimationBase)
     def start_animation(self, animation: microsoft_ui_composition.ICompositionAnimationBase, /) -> None: ...
+    @typing.overload
     @typing.final
     # System.Void Microsoft.UI.Xaml.UIElement::StartBringIntoView()
     def start_bring_into_view(self) -> None: ...
-    @typing.final
+    @typing.overload
     # System.Void Microsoft.UI.Xaml.UIElement::StartBringIntoView(Microsoft.UI.Xaml.BringIntoViewOptions)
+    def start_bring_into_view(self, options: BringIntoViewOptions, /) -> None: ...
+    @typing.final
+    # Deprecated alias of start_bring_into_view() for pywinrt v3.x compatibility.
+    # System.Void Microsoft.UI.Xaml.UIElement::StartBringIntoView(Microsoft.UI.Xaml.BringIntoViewOptions)
+    @deprecated("Use start_bring_into_view() instead.")
     def start_bring_into_view_with_options(self, options: BringIntoViewOptions, /) -> None: ...
     @typing.final
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.DataTransfer.DataPackageOperation> Microsoft.UI.Xaml.UIElement::StartDragAsync(Microsoft.UI.Input.PointerPoint)

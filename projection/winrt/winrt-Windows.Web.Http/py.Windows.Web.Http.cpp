@@ -700,6 +700,38 @@ namespace py::cpp::Windows::Web::Http
                 return nullptr;
             }
         }
+        else if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.HttpClient", L"GetAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Web::Http::HttpCompletionOption>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetAsync(param0, param1);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -818,49 +850,6 @@ namespace py::cpp::Windows::Web::Http
                 {
                     auto _gil = release_gil();
                     return self->obj.GetStringAsync(param0);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* HttpClient_GetWithOptionAsync(py::wrapper::Windows::Web::Http::HttpClient* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.HttpClient", L"GetAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Web::Http::HttpCompletionOption>(args, 1);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.GetAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -997,18 +986,7 @@ namespace py::cpp::Windows::Web::Http
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* HttpClient_SendRequestWithOptionAsync(py::wrapper::Windows::Web::Http::HttpClient* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -1164,18 +1142,7 @@ namespace py::cpp::Windows::Web::Http
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* HttpClient_TryGetAsync2(py::wrapper::Windows::Web::Http::HttpClient* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -1461,18 +1428,7 @@ namespace py::cpp::Windows::Web::Http
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* HttpClient_TrySendRequestAsync2(py::wrapper::Windows::Web::Http::HttpClient* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -1681,22 +1637,18 @@ namespace py::cpp::Windows::Web::Http
         { "get_buffer_async", reinterpret_cast<PyCFunction>(HttpClient_GetBufferAsync), METH_VARARGS, nullptr },
         { "get_input_stream_async", reinterpret_cast<PyCFunction>(HttpClient_GetInputStreamAsync), METH_VARARGS, nullptr },
         { "get_string_async", reinterpret_cast<PyCFunction>(HttpClient_GetStringAsync), METH_VARARGS, nullptr },
-        { "get_with_option_async", reinterpret_cast<PyCFunction>(HttpClient_GetWithOptionAsync), METH_VARARGS, nullptr },
         { "post_async", reinterpret_cast<PyCFunction>(HttpClient_PostAsync), METH_VARARGS, nullptr },
         { "put_async", reinterpret_cast<PyCFunction>(HttpClient_PutAsync), METH_VARARGS, nullptr },
         { "send_request_async", reinterpret_cast<PyCFunction>(HttpClient_SendRequestAsync), METH_VARARGS, nullptr },
-        { "send_request_with_option_async", reinterpret_cast<PyCFunction>(HttpClient_SendRequestWithOptionAsync), METH_VARARGS, nullptr },
         { "to_string", reinterpret_cast<PyCFunction>(HttpClient_ToString), METH_VARARGS, nullptr },
         { "try_delete_async", reinterpret_cast<PyCFunction>(HttpClient_TryDeleteAsync), METH_VARARGS, nullptr },
         { "try_get_async", reinterpret_cast<PyCFunction>(HttpClient_TryGetAsync), METH_VARARGS, nullptr },
-        { "try_get_async2", reinterpret_cast<PyCFunction>(HttpClient_TryGetAsync2), METH_VARARGS, nullptr },
         { "try_get_buffer_async", reinterpret_cast<PyCFunction>(HttpClient_TryGetBufferAsync), METH_VARARGS, nullptr },
         { "try_get_input_stream_async", reinterpret_cast<PyCFunction>(HttpClient_TryGetInputStreamAsync), METH_VARARGS, nullptr },
         { "try_get_string_async", reinterpret_cast<PyCFunction>(HttpClient_TryGetStringAsync), METH_VARARGS, nullptr },
         { "try_post_async", reinterpret_cast<PyCFunction>(HttpClient_TryPostAsync), METH_VARARGS, nullptr },
         { "try_put_async", reinterpret_cast<PyCFunction>(HttpClient_TryPutAsync), METH_VARARGS, nullptr },
         { "try_send_request_async", reinterpret_cast<PyCFunction>(HttpClient_TrySendRequestAsync), METH_VARARGS, nullptr },
-        { "try_send_request_async2", reinterpret_cast<PyCFunction>(HttpClient_TrySendRequestAsync2), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpClient, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpClient), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_HttpClient), METH_NOARGS, nullptr },
@@ -2781,18 +2733,7 @@ namespace py::cpp::Windows::Web::Http
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* HttpCookieManager_SetCookieWithThirdParty(py::wrapper::Windows::Web::Http::HttpCookieManager* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -2859,7 +2800,6 @@ namespace py::cpp::Windows::Web::Http
         { "delete_cookie", reinterpret_cast<PyCFunction>(HttpCookieManager_DeleteCookie), METH_VARARGS, nullptr },
         { "get_cookies", reinterpret_cast<PyCFunction>(HttpCookieManager_GetCookies), METH_VARARGS, nullptr },
         { "set_cookie", reinterpret_cast<PyCFunction>(HttpCookieManager_SetCookie), METH_VARARGS, nullptr },
-        { "set_cookie_with_third_party", reinterpret_cast<PyCFunction>(HttpCookieManager_SetCookieWithThirdParty), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HttpCookieManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HttpCookieManager), METH_O | METH_STATIC, nullptr },
         { }};
@@ -5564,18 +5504,7 @@ namespace py::cpp::Windows::Web::Http
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* HttpMultipartFormDataContent_AddWithName(py::wrapper::Windows::Web::Http::HttpMultipartFormDataContent* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -5608,18 +5537,7 @@ namespace py::cpp::Windows::Web::Http
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* HttpMultipartFormDataContent_AddWithNameAndFileName(py::wrapper::Windows::Web::Http::HttpMultipartFormDataContent* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -6151,8 +6069,6 @@ namespace py::cpp::Windows::Web::Http
 
     static PyMethodDef _methods_HttpMultipartFormDataContent[] = {
         { "add", reinterpret_cast<PyCFunction>(HttpMultipartFormDataContent_Add), METH_VARARGS, nullptr },
-        { "add_with_name", reinterpret_cast<PyCFunction>(HttpMultipartFormDataContent_AddWithName), METH_VARARGS, nullptr },
-        { "add_with_name_and_file_name", reinterpret_cast<PyCFunction>(HttpMultipartFormDataContent_AddWithNameAndFileName), METH_VARARGS, nullptr },
         { "buffer_all_async", reinterpret_cast<PyCFunction>(HttpMultipartFormDataContent_BufferAllAsync), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(HttpMultipartFormDataContent_Close), METH_VARARGS, nullptr },
         { "first", reinterpret_cast<PyCFunction>(HttpMultipartFormDataContent_First), METH_VARARGS, nullptr },

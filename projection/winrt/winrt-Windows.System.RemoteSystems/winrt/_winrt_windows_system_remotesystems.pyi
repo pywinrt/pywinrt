@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -42,13 +43,25 @@ class KnownRemoteSystemCapabilities(winrt.system.Object, metaclass=KnownRemoteSy
 
 @typing.final
 class RemoteSystem_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.System.RemoteSystems.RemoteSystemWatcher Windows.System.RemoteSystems.RemoteSystem::CreateWatcher()
     def create_watcher(cls) -> RemoteSystemWatcher: ...
+    @typing.overload
+    # Windows.System.RemoteSystems.RemoteSystemWatcher Windows.System.RemoteSystems.RemoteSystem::CreateWatcher(Windows.Foundation.Collections.IIterable`1<Windows.System.RemoteSystems.IRemoteSystemFilter>)
+    def create_watcher(cls, filters: typing.Iterable[IRemoteSystemFilter], /) -> RemoteSystemWatcher: ...
+    # Deprecated alias of create_watcher() for pywinrt v3.x compatibility.
+    # Windows.System.RemoteSystems.RemoteSystemWatcher Windows.System.RemoteSystems.RemoteSystem::CreateWatcher(Windows.Foundation.Collections.IIterable`1<Windows.System.RemoteSystems.IRemoteSystemFilter>)
+    @deprecated("Use create_watcher() instead.")
+    def create_watcher_with_filters(cls, filters: typing.Iterable[IRemoteSystemFilter], /) -> RemoteSystemWatcher: ...
+    @typing.overload
     # Windows.System.RemoteSystems.RemoteSystemWatcher Windows.System.RemoteSystems.RemoteSystem::CreateWatcherForUser(Windows.System.User)
     def create_watcher_for_user(cls, user: windows_system.User, /) -> RemoteSystemWatcher: ...
-    # Windows.System.RemoteSystems.RemoteSystemWatcher Windows.System.RemoteSystems.RemoteSystem::CreateWatcher(Windows.Foundation.Collections.IIterable`1<Windows.System.RemoteSystems.IRemoteSystemFilter>)
-    def create_watcher_with_filters(cls, filters: typing.Iterable[IRemoteSystemFilter], /) -> RemoteSystemWatcher: ...
+    @typing.overload
     # Windows.System.RemoteSystems.RemoteSystemWatcher Windows.System.RemoteSystems.RemoteSystem::CreateWatcherForUser(Windows.System.User,Windows.Foundation.Collections.IIterable`1<Windows.System.RemoteSystems.IRemoteSystemFilter>)
+    def create_watcher_for_user(cls, user: windows_system.User, filters: typing.Iterable[IRemoteSystemFilter], /) -> RemoteSystemWatcher: ...
+    # Deprecated alias of create_watcher_for_user() for pywinrt v3.x compatibility.
+    # Windows.System.RemoteSystems.RemoteSystemWatcher Windows.System.RemoteSystems.RemoteSystem::CreateWatcherForUser(Windows.System.User,Windows.Foundation.Collections.IIterable`1<Windows.System.RemoteSystems.IRemoteSystemFilter>)
+    @deprecated("Use create_watcher_for_user() instead.")
     def create_watcher_with_filters_for_user(cls, user: windows_system.User, filters: typing.Iterable[IRemoteSystemFilter], /) -> RemoteSystemWatcher: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.System.RemoteSystems.RemoteSystem> Windows.System.RemoteSystems.RemoteSystem::FindByHostNameAsync(Windows.Networking.HostName)
     def find_by_host_name_async(cls, host_name: windows_networking.HostName, /) -> windows_foundation.IAsyncOperation[RemoteSystem]: ...

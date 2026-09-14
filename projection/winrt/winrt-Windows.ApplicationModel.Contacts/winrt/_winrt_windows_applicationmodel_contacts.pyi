@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -326,9 +327,15 @@ class ContactAnnotationList(winrt.system.Object):
 
 @typing.final
 class ContactAnnotationStore(winrt.system.Object):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Contacts.ContactAnnotationList> Windows.ApplicationModel.Contacts.ContactAnnotationStore::CreateAnnotationListAsync()
     def create_annotation_list_async(self) -> windows_foundation.IAsyncOperation[ContactAnnotationList]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Contacts.ContactAnnotationList> Windows.ApplicationModel.Contacts.ContactAnnotationStore::CreateAnnotationListAsync(System.String)
+    def create_annotation_list_async(self, user_data_account_id: str, /) -> windows_foundation.IAsyncOperation[ContactAnnotationList]: ...
+    # Deprecated alias of create_annotation_list_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Contacts.ContactAnnotationList> Windows.ApplicationModel.Contacts.ContactAnnotationStore::CreateAnnotationListAsync(System.String)
+    @deprecated("Use create_annotation_list_async() instead.")
     def create_annotation_list_in_account_async(self, user_data_account_id: str, /) -> windows_foundation.IAsyncOperation[ContactAnnotationList]: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Contacts.ContactAnnotationStore::DisableAnnotationAsync(Windows.ApplicationModel.Contacts.ContactAnnotation)
     def disable_annotation_async(self, annotation: ContactAnnotation, /) -> windows_foundation.IAsyncAction: ...
@@ -518,23 +525,68 @@ class ContactField(winrt.system.Object, IContactField):
 @typing.final
 class ContactFieldFactory(winrt.system.Object, IContactInstantMessageFieldFactory, IContactLocationFieldFactory, IContactFieldFactory):
     def __new__(cls: typing.Type[Self]) -> Self: ...
-    # Windows.ApplicationModel.Contacts.ContactField Windows.ApplicationModel.Contacts.ContactFieldFactory::CreateField(System.String,Windows.ApplicationModel.Contacts.ContactFieldType,Windows.ApplicationModel.Contacts.ContactFieldCategory)
-    def create_field_category(self, value: str, type: ContactFieldType, category: ContactFieldCategory, /) -> ContactField: ...
-    # Windows.ApplicationModel.Contacts.ContactField Windows.ApplicationModel.Contacts.ContactFieldFactory::CreateField(System.String,System.String,Windows.ApplicationModel.Contacts.ContactFieldType,Windows.ApplicationModel.Contacts.ContactFieldCategory)
-    def create_field_custom(self, name: str, value: str, type: ContactFieldType, category: ContactFieldCategory, /) -> ContactField: ...
+    @typing.overload
     # Windows.ApplicationModel.Contacts.ContactField Windows.ApplicationModel.Contacts.ContactFieldFactory::CreateField(System.String,Windows.ApplicationModel.Contacts.ContactFieldType)
+    def create_field(self, value: str, type: ContactFieldType, /) -> ContactField: ...
+    @typing.overload
+    # Windows.ApplicationModel.Contacts.ContactField Windows.ApplicationModel.Contacts.ContactFieldFactory::CreateField(System.String,Windows.ApplicationModel.Contacts.ContactFieldType,Windows.ApplicationModel.Contacts.ContactFieldCategory)
+    def create_field(self, value: str, type: ContactFieldType, category: ContactFieldCategory, /) -> ContactField: ...
+    @typing.overload
+    # Windows.ApplicationModel.Contacts.ContactField Windows.ApplicationModel.Contacts.ContactFieldFactory::CreateField(System.String,System.String,Windows.ApplicationModel.Contacts.ContactFieldType,Windows.ApplicationModel.Contacts.ContactFieldCategory)
+    def create_field(self, name: str, value: str, type: ContactFieldType, category: ContactFieldCategory, /) -> ContactField: ...
+    # Deprecated alias of create_field() for pywinrt v3.x compatibility.
+    # Windows.ApplicationModel.Contacts.ContactField Windows.ApplicationModel.Contacts.ContactFieldFactory::CreateField(System.String,Windows.ApplicationModel.Contacts.ContactFieldType,Windows.ApplicationModel.Contacts.ContactFieldCategory)
+    @deprecated("Use create_field() instead.")
+    def create_field_category(self, value: str, type: ContactFieldType, category: ContactFieldCategory, /) -> ContactField: ...
+    # Deprecated alias of create_field() for pywinrt v3.x compatibility.
+    # Windows.ApplicationModel.Contacts.ContactField Windows.ApplicationModel.Contacts.ContactFieldFactory::CreateField(System.String,System.String,Windows.ApplicationModel.Contacts.ContactFieldType,Windows.ApplicationModel.Contacts.ContactFieldCategory)
+    @deprecated("Use create_field() instead.")
+    def create_field_custom(self, name: str, value: str, type: ContactFieldType, category: ContactFieldCategory, /) -> ContactField: ...
+    # Deprecated alias of create_field() for pywinrt v3.x compatibility.
+    # Windows.ApplicationModel.Contacts.ContactField Windows.ApplicationModel.Contacts.ContactFieldFactory::CreateField(System.String,Windows.ApplicationModel.Contacts.ContactFieldType)
+    @deprecated("Use create_field() instead.")
     def create_field_default(self, value: str, type: ContactFieldType, /) -> ContactField: ...
-    # Windows.ApplicationModel.Contacts.ContactInstantMessageField Windows.ApplicationModel.Contacts.ContactFieldFactory::CreateInstantMessage(System.String,Windows.ApplicationModel.Contacts.ContactFieldCategory,System.String,System.String,Windows.Foundation.Uri)
-    def create_instant_message_all(self, user_name: str, category: ContactFieldCategory, service: str, display_text: str, verb: windows_foundation.Uri, /) -> ContactInstantMessageField: ...
-    # Windows.ApplicationModel.Contacts.ContactInstantMessageField Windows.ApplicationModel.Contacts.ContactFieldFactory::CreateInstantMessage(System.String,Windows.ApplicationModel.Contacts.ContactFieldCategory)
-    def create_instant_message_category(self, user_name: str, category: ContactFieldCategory, /) -> ContactInstantMessageField: ...
+    @typing.overload
     # Windows.ApplicationModel.Contacts.ContactInstantMessageField Windows.ApplicationModel.Contacts.ContactFieldFactory::CreateInstantMessage(System.String)
+    def create_instant_message(self, user_name: str, /) -> ContactInstantMessageField: ...
+    @typing.overload
+    # Windows.ApplicationModel.Contacts.ContactInstantMessageField Windows.ApplicationModel.Contacts.ContactFieldFactory::CreateInstantMessage(System.String,Windows.ApplicationModel.Contacts.ContactFieldCategory)
+    def create_instant_message(self, user_name: str, category: ContactFieldCategory, /) -> ContactInstantMessageField: ...
+    @typing.overload
+    # Windows.ApplicationModel.Contacts.ContactInstantMessageField Windows.ApplicationModel.Contacts.ContactFieldFactory::CreateInstantMessage(System.String,Windows.ApplicationModel.Contacts.ContactFieldCategory,System.String,System.String,Windows.Foundation.Uri)
+    def create_instant_message(self, user_name: str, category: ContactFieldCategory, service: str, display_text: str, verb: windows_foundation.Uri, /) -> ContactInstantMessageField: ...
+    # Deprecated alias of create_instant_message() for pywinrt v3.x compatibility.
+    # Windows.ApplicationModel.Contacts.ContactInstantMessageField Windows.ApplicationModel.Contacts.ContactFieldFactory::CreateInstantMessage(System.String,Windows.ApplicationModel.Contacts.ContactFieldCategory,System.String,System.String,Windows.Foundation.Uri)
+    @deprecated("Use create_instant_message() instead.")
+    def create_instant_message_all(self, user_name: str, category: ContactFieldCategory, service: str, display_text: str, verb: windows_foundation.Uri, /) -> ContactInstantMessageField: ...
+    # Deprecated alias of create_instant_message() for pywinrt v3.x compatibility.
+    # Windows.ApplicationModel.Contacts.ContactInstantMessageField Windows.ApplicationModel.Contacts.ContactFieldFactory::CreateInstantMessage(System.String,Windows.ApplicationModel.Contacts.ContactFieldCategory)
+    @deprecated("Use create_instant_message() instead.")
+    def create_instant_message_category(self, user_name: str, category: ContactFieldCategory, /) -> ContactInstantMessageField: ...
+    # Deprecated alias of create_instant_message() for pywinrt v3.x compatibility.
+    # Windows.ApplicationModel.Contacts.ContactInstantMessageField Windows.ApplicationModel.Contacts.ContactFieldFactory::CreateInstantMessage(System.String)
+    @deprecated("Use create_instant_message() instead.")
     def create_instant_message_default(self, user_name: str, /) -> ContactInstantMessageField: ...
-    # Windows.ApplicationModel.Contacts.ContactLocationField Windows.ApplicationModel.Contacts.ContactFieldFactory::CreateLocation(System.String,Windows.ApplicationModel.Contacts.ContactFieldCategory,System.String,System.String,System.String,System.String,System.String)
-    def create_location_all(self, unstructured_address: str, category: ContactFieldCategory, street: str, city: str, region: str, country: str, postal_code: str, /) -> ContactLocationField: ...
-    # Windows.ApplicationModel.Contacts.ContactLocationField Windows.ApplicationModel.Contacts.ContactFieldFactory::CreateLocation(System.String,Windows.ApplicationModel.Contacts.ContactFieldCategory)
-    def create_location_category(self, unstructured_address: str, category: ContactFieldCategory, /) -> ContactLocationField: ...
+    @typing.overload
     # Windows.ApplicationModel.Contacts.ContactLocationField Windows.ApplicationModel.Contacts.ContactFieldFactory::CreateLocation(System.String)
+    def create_location(self, unstructured_address: str, /) -> ContactLocationField: ...
+    @typing.overload
+    # Windows.ApplicationModel.Contacts.ContactLocationField Windows.ApplicationModel.Contacts.ContactFieldFactory::CreateLocation(System.String,Windows.ApplicationModel.Contacts.ContactFieldCategory)
+    def create_location(self, unstructured_address: str, category: ContactFieldCategory, /) -> ContactLocationField: ...
+    @typing.overload
+    # Windows.ApplicationModel.Contacts.ContactLocationField Windows.ApplicationModel.Contacts.ContactFieldFactory::CreateLocation(System.String,Windows.ApplicationModel.Contacts.ContactFieldCategory,System.String,System.String,System.String,System.String,System.String)
+    def create_location(self, unstructured_address: str, category: ContactFieldCategory, street: str, city: str, region: str, country: str, postal_code: str, /) -> ContactLocationField: ...
+    # Deprecated alias of create_location() for pywinrt v3.x compatibility.
+    # Windows.ApplicationModel.Contacts.ContactLocationField Windows.ApplicationModel.Contacts.ContactFieldFactory::CreateLocation(System.String,Windows.ApplicationModel.Contacts.ContactFieldCategory,System.String,System.String,System.String,System.String,System.String)
+    @deprecated("Use create_location() instead.")
+    def create_location_all(self, unstructured_address: str, category: ContactFieldCategory, street: str, city: str, region: str, country: str, postal_code: str, /) -> ContactLocationField: ...
+    # Deprecated alias of create_location() for pywinrt v3.x compatibility.
+    # Windows.ApplicationModel.Contacts.ContactLocationField Windows.ApplicationModel.Contacts.ContactFieldFactory::CreateLocation(System.String,Windows.ApplicationModel.Contacts.ContactFieldCategory)
+    @deprecated("Use create_location() instead.")
+    def create_location_category(self, unstructured_address: str, category: ContactFieldCategory, /) -> ContactLocationField: ...
+    # Deprecated alias of create_location() for pywinrt v3.x compatibility.
+    # Windows.ApplicationModel.Contacts.ContactLocationField Windows.ApplicationModel.Contacts.ContactFieldFactory::CreateLocation(System.String)
+    @deprecated("Use create_location() instead.")
     def create_location_default(self, unstructured_address: str, /) -> ContactLocationField: ...
 
 @typing.final
@@ -685,9 +737,15 @@ class ContactList(winrt.system.Object):
     def get_contact_async(self, contact_id: str, /) -> windows_foundation.IAsyncOperation[Contact]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Contacts.Contact> Windows.ApplicationModel.Contacts.ContactList::GetContactFromRemoteIdAsync(System.String)
     def get_contact_from_remote_id_async(self, remote_id: str, /) -> windows_foundation.IAsyncOperation[Contact]: ...
+    @typing.overload
     # Windows.ApplicationModel.Contacts.ContactReader Windows.ApplicationModel.Contacts.ContactList::GetContactReader()
     def get_contact_reader(self) -> ContactReader: ...
+    @typing.overload
     # Windows.ApplicationModel.Contacts.ContactReader Windows.ApplicationModel.Contacts.ContactList::GetContactReader(Windows.ApplicationModel.Contacts.ContactQueryOptions)
+    def get_contact_reader(self, options: ContactQueryOptions, /) -> ContactReader: ...
+    # Deprecated alias of get_contact_reader() for pywinrt v3.x compatibility.
+    # Windows.ApplicationModel.Contacts.ContactReader Windows.ApplicationModel.Contacts.ContactList::GetContactReader(Windows.ApplicationModel.Contacts.ContactQueryOptions)
+    @deprecated("Use get_contact_reader() instead.")
     def get_contact_reader_with_options(self, options: ContactQueryOptions, /) -> ContactReader: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Contacts.Contact> Windows.ApplicationModel.Contacts.ContactList::GetMeContactAsync()
     def get_me_contact_async(self) -> windows_foundation.IAsyncOperation[Contact]: ...
@@ -999,9 +1057,15 @@ class ContactLocationField(winrt.system.Object, IContactField):
 
 @typing.final
 class ContactManager_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.RandomAccessStreamReference> Windows.ApplicationModel.Contacts.ContactManager::ConvertContactToVCardAsync(Windows.ApplicationModel.Contacts.Contact)
     def convert_contact_to_v_card_async(cls, contact: Contact, /) -> windows_foundation.IAsyncOperation[windows_storage_streams.RandomAccessStreamReference]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.RandomAccessStreamReference> Windows.ApplicationModel.Contacts.ContactManager::ConvertContactToVCardAsync(Windows.ApplicationModel.Contacts.Contact,System.UInt32)
+    def convert_contact_to_v_card_async(cls, contact: Contact, max_bytes: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[windows_storage_streams.RandomAccessStreamReference]: ...
+    # Deprecated alias of convert_contact_to_v_card_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.RandomAccessStreamReference> Windows.ApplicationModel.Contacts.ContactManager::ConvertContactToVCardAsync(Windows.ApplicationModel.Contacts.Contact,System.UInt32)
+    @deprecated("Use convert_contact_to_v_card_async() instead.")
     def convert_contact_to_v_card_async_with_max_bytes(cls, contact: Contact, max_bytes: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[windows_storage_streams.RandomAccessStreamReference]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Contacts.Contact> Windows.ApplicationModel.Contacts.ContactManager::ConvertVCardToContactAsync(Windows.Storage.Streams.IRandomAccessStreamReference)
     def convert_v_card_to_contact_async(cls, v_card: windows_storage_streams.IRandomAccessStreamReference, /) -> windows_foundation.IAsyncOperation[Contact]: ...
@@ -1015,19 +1079,42 @@ class ContactManager_Static(winrt._winrt.IInspectable_Static):
     def is_show_full_contact_card_supported_async(cls) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Contacts.ContactAnnotationStore> Windows.ApplicationModel.Contacts.ContactManager::RequestAnnotationStoreAsync(Windows.ApplicationModel.Contacts.ContactAnnotationStoreAccessType)
     def request_annotation_store_async(cls, access_type: ContactAnnotationStoreAccessType, /) -> windows_foundation.IAsyncOperation[ContactAnnotationStore]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Contacts.ContactStore> Windows.ApplicationModel.Contacts.ContactManager::RequestStoreAsync()
     def request_store_async(cls) -> windows_foundation.IAsyncOperation[ContactStore]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Contacts.ContactStore> Windows.ApplicationModel.Contacts.ContactManager::RequestStoreAsync(Windows.ApplicationModel.Contacts.ContactStoreAccessType)
+    def request_store_async(cls, access_type: ContactStoreAccessType, /) -> windows_foundation.IAsyncOperation[ContactStore]: ...
+    # Deprecated alias of request_store_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Contacts.ContactStore> Windows.ApplicationModel.Contacts.ContactManager::RequestStoreAsync(Windows.ApplicationModel.Contacts.ContactStoreAccessType)
+    @deprecated("Use request_store_async() instead.")
     def request_store_async_with_access_type(cls, access_type: ContactStoreAccessType, /) -> windows_foundation.IAsyncOperation[ContactStore]: ...
+    @typing.overload
     # System.Void Windows.ApplicationModel.Contacts.ContactManager::ShowContactCard(Windows.ApplicationModel.Contacts.Contact,Windows.Foundation.Rect)
     def show_contact_card(cls, contact: Contact, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> None: ...
-    # System.Void Windows.ApplicationModel.Contacts.ContactManager::ShowContactCard(Windows.ApplicationModel.Contacts.Contact,Windows.Foundation.Rect,Windows.UI.Popups.Placement,Windows.ApplicationModel.Contacts.ContactCardOptions)
-    def show_contact_card_with_options(cls, contact: Contact, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], preferred_placement: windows_ui_popups.Placement, contact_card_options: ContactCardOptions, /) -> None: ...
+    @typing.overload
     # System.Void Windows.ApplicationModel.Contacts.ContactManager::ShowContactCard(Windows.ApplicationModel.Contacts.Contact,Windows.Foundation.Rect,Windows.UI.Popups.Placement)
+    def show_contact_card(cls, contact: Contact, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], preferred_placement: windows_ui_popups.Placement, /) -> None: ...
+    @typing.overload
+    # System.Void Windows.ApplicationModel.Contacts.ContactManager::ShowContactCard(Windows.ApplicationModel.Contacts.Contact,Windows.Foundation.Rect,Windows.UI.Popups.Placement,Windows.ApplicationModel.Contacts.ContactCardOptions)
+    def show_contact_card(cls, contact: Contact, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], preferred_placement: windows_ui_popups.Placement, contact_card_options: ContactCardOptions, /) -> None: ...
+    # Deprecated alias of show_contact_card() for pywinrt v3.x compatibility.
+    # System.Void Windows.ApplicationModel.Contacts.ContactManager::ShowContactCard(Windows.ApplicationModel.Contacts.Contact,Windows.Foundation.Rect,Windows.UI.Popups.Placement,Windows.ApplicationModel.Contacts.ContactCardOptions)
+    @deprecated("Use show_contact_card() instead.")
+    def show_contact_card_with_options(cls, contact: Contact, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], preferred_placement: windows_ui_popups.Placement, contact_card_options: ContactCardOptions, /) -> None: ...
+    # Deprecated alias of show_contact_card() for pywinrt v3.x compatibility.
+    # System.Void Windows.ApplicationModel.Contacts.ContactManager::ShowContactCard(Windows.ApplicationModel.Contacts.Contact,Windows.Foundation.Rect,Windows.UI.Popups.Placement)
+    @deprecated("Use show_contact_card() instead.")
     def show_contact_card_with_placement(cls, contact: Contact, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], preferred_placement: windows_ui_popups.Placement, /) -> None: ...
+    @typing.overload
     # Windows.ApplicationModel.Contacts.ContactCardDelayedDataLoader Windows.ApplicationModel.Contacts.ContactManager::ShowDelayLoadedContactCard(Windows.ApplicationModel.Contacts.Contact,Windows.Foundation.Rect,Windows.UI.Popups.Placement)
     def show_delay_loaded_contact_card(cls, contact: Contact, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], preferred_placement: windows_ui_popups.Placement, /) -> ContactCardDelayedDataLoader: ...
+    @typing.overload
     # Windows.ApplicationModel.Contacts.ContactCardDelayedDataLoader Windows.ApplicationModel.Contacts.ContactManager::ShowDelayLoadedContactCard(Windows.ApplicationModel.Contacts.Contact,Windows.Foundation.Rect,Windows.UI.Popups.Placement,Windows.ApplicationModel.Contacts.ContactCardOptions)
+    def show_delay_loaded_contact_card(cls, contact: Contact, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], preferred_placement: windows_ui_popups.Placement, contact_card_options: ContactCardOptions, /) -> ContactCardDelayedDataLoader: ...
+    # Deprecated alias of show_delay_loaded_contact_card() for pywinrt v3.x compatibility.
+    # Windows.ApplicationModel.Contacts.ContactCardDelayedDataLoader Windows.ApplicationModel.Contacts.ContactManager::ShowDelayLoadedContactCard(Windows.ApplicationModel.Contacts.Contact,Windows.Foundation.Rect,Windows.UI.Popups.Placement,Windows.ApplicationModel.Contacts.ContactCardOptions)
+    @deprecated("Use show_delay_loaded_contact_card() instead.")
     def show_delay_loaded_contact_card_with_options(cls, contact: Contact, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], preferred_placement: windows_ui_popups.Placement, contact_card_options: ContactCardOptions, /) -> ContactCardDelayedDataLoader: ...
     # System.Void Windows.ApplicationModel.Contacts.ContactManager::ShowFullContactCard(Windows.ApplicationModel.Contacts.Contact,Windows.ApplicationModel.Contacts.FullContactCardOptions)
     def show_full_contact_card(cls, contact: Contact, full_contact_card_options: FullContactCardOptions, /) -> None: ...
@@ -1056,9 +1143,15 @@ class ContactManager(winrt.system.Object, metaclass=ContactManager_Static):
 
 @typing.final
 class ContactManagerForUser(winrt.system.Object):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.RandomAccessStreamReference> Windows.ApplicationModel.Contacts.ContactManagerForUser::ConvertContactToVCardAsync(Windows.ApplicationModel.Contacts.Contact)
     def convert_contact_to_v_card_async(self, contact: Contact, /) -> windows_foundation.IAsyncOperation[windows_storage_streams.RandomAccessStreamReference]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.RandomAccessStreamReference> Windows.ApplicationModel.Contacts.ContactManagerForUser::ConvertContactToVCardAsync(Windows.ApplicationModel.Contacts.Contact,System.UInt32)
+    def convert_contact_to_v_card_async(self, contact: Contact, max_bytes: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[windows_storage_streams.RandomAccessStreamReference]: ...
+    # Deprecated alias of convert_contact_to_v_card_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.RandomAccessStreamReference> Windows.ApplicationModel.Contacts.ContactManagerForUser::ConvertContactToVCardAsync(Windows.ApplicationModel.Contacts.Contact,System.UInt32)
+    @deprecated("Use convert_contact_to_v_card_async() instead.")
     def convert_contact_to_v_card_async_with_max_bytes(self, contact: Contact, max_bytes: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[windows_storage_streams.RandomAccessStreamReference]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Contacts.Contact> Windows.ApplicationModel.Contacts.ContactManagerForUser::ConvertVCardToContactAsync(Windows.Storage.Streams.IRandomAccessStreamReference)
     def convert_v_card_to_contact_async(self, v_card: windows_storage_streams.IRandomAccessStreamReference, /) -> windows_foundation.IAsyncOperation[Contact]: ...
@@ -1279,15 +1372,27 @@ class ContactSignificantOther(winrt.system.Object):
 
 @typing.final
 class ContactStore(winrt.system.Object):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Contacts.ContactList> Windows.ApplicationModel.Contacts.ContactStore::CreateContactListAsync(System.String)
     def create_contact_list_async(self, display_name: str, /) -> windows_foundation.IAsyncOperation[ContactList]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Contacts.ContactList> Windows.ApplicationModel.Contacts.ContactStore::CreateContactListAsync(System.String,System.String)
+    def create_contact_list_async(self, display_name: str, user_data_account_id: str, /) -> windows_foundation.IAsyncOperation[ContactList]: ...
+    # Deprecated alias of create_contact_list_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Contacts.ContactList> Windows.ApplicationModel.Contacts.ContactStore::CreateContactListAsync(System.String,System.String)
+    @deprecated("Use create_contact_list_async() instead.")
     def create_contact_list_in_account_async(self, display_name: str, user_data_account_id: str, /) -> windows_foundation.IAsyncOperation[ContactList]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Contacts.ContactList>> Windows.ApplicationModel.Contacts.ContactStore::FindContactListsAsync()
     def find_contact_lists_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[ContactList]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Contacts.Contact>> Windows.ApplicationModel.Contacts.ContactStore::FindContactsAsync()
     def find_contacts_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[Contact]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Contacts.Contact>> Windows.ApplicationModel.Contacts.ContactStore::FindContactsAsync(System.String)
+    def find_contacts_async(self, search_text: str, /) -> windows_foundation.IAsyncOperation[typing.Sequence[Contact]]: ...
+    # Deprecated alias of find_contacts_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Contacts.Contact>> Windows.ApplicationModel.Contacts.ContactStore::FindContactsAsync(System.String)
+    @deprecated("Use find_contacts_async() instead.")
     def find_contacts_with_search_text_async(self, search_text: str, /) -> windows_foundation.IAsyncOperation[typing.Sequence[Contact]]: ...
     # Windows.ApplicationModel.Contacts.ContactChangeTracker Windows.ApplicationModel.Contacts.ContactStore::GetChangeTracker(System.String)
     def get_change_tracker(self, identity: str, /) -> ContactChangeTracker: ...
@@ -1295,9 +1400,15 @@ class ContactStore(winrt.system.Object):
     def get_contact_async(self, contact_id: str, /) -> windows_foundation.IAsyncOperation[Contact]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Contacts.ContactList> Windows.ApplicationModel.Contacts.ContactStore::GetContactListAsync(System.String)
     def get_contact_list_async(self, contact_list_id: str, /) -> windows_foundation.IAsyncOperation[ContactList]: ...
+    @typing.overload
     # Windows.ApplicationModel.Contacts.ContactReader Windows.ApplicationModel.Contacts.ContactStore::GetContactReader()
     def get_contact_reader(self) -> ContactReader: ...
+    @typing.overload
     # Windows.ApplicationModel.Contacts.ContactReader Windows.ApplicationModel.Contacts.ContactStore::GetContactReader(Windows.ApplicationModel.Contacts.ContactQueryOptions)
+    def get_contact_reader(self, options: ContactQueryOptions, /) -> ContactReader: ...
+    # Deprecated alias of get_contact_reader() for pywinrt v3.x compatibility.
+    # Windows.ApplicationModel.Contacts.ContactReader Windows.ApplicationModel.Contacts.ContactStore::GetContactReader(Windows.ApplicationModel.Contacts.ContactQueryOptions)
+    @deprecated("Use get_contact_reader() instead.")
     def get_contact_reader_with_options(self, options: ContactQueryOptions, /) -> ContactReader: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Contacts.Contact> Windows.ApplicationModel.Contacts.ContactStore::GetMeContactAsync()
     def get_me_contact_async(self) -> windows_foundation.IAsyncOperation[Contact]: ...
@@ -1433,41 +1544,86 @@ class IContactField(winrt._winrt.IInspectable):
 class _IContactFieldFactory: ...
 
 class IContactFieldFactory(winrt._winrt.IInspectable):
-    # Windows.ApplicationModel.Contacts.ContactField Windows.ApplicationModel.Contacts.IContactFieldFactory::CreateField(System.String,Windows.ApplicationModel.Contacts.ContactFieldType,Windows.ApplicationModel.Contacts.ContactFieldCategory)
-    @abstractmethod
-    def create_field_category(self, value: str, type: ContactFieldType, category: ContactFieldCategory, /) -> ContactField: ...
-    # Windows.ApplicationModel.Contacts.ContactField Windows.ApplicationModel.Contacts.IContactFieldFactory::CreateField(System.String,System.String,Windows.ApplicationModel.Contacts.ContactFieldType,Windows.ApplicationModel.Contacts.ContactFieldCategory)
-    @abstractmethod
-    def create_field_custom(self, name: str, value: str, type: ContactFieldType, category: ContactFieldCategory, /) -> ContactField: ...
+    @typing.overload
     # Windows.ApplicationModel.Contacts.ContactField Windows.ApplicationModel.Contacts.IContactFieldFactory::CreateField(System.String,Windows.ApplicationModel.Contacts.ContactFieldType)
     @abstractmethod
+    def create_field(self, value: str, type: ContactFieldType, /) -> ContactField: ...
+    @typing.overload
+    # Windows.ApplicationModel.Contacts.ContactField Windows.ApplicationModel.Contacts.IContactFieldFactory::CreateField(System.String,Windows.ApplicationModel.Contacts.ContactFieldType,Windows.ApplicationModel.Contacts.ContactFieldCategory)
+    @abstractmethod
+    def create_field(self, value: str, type: ContactFieldType, category: ContactFieldCategory, /) -> ContactField: ...
+    @typing.overload
+    # Windows.ApplicationModel.Contacts.ContactField Windows.ApplicationModel.Contacts.IContactFieldFactory::CreateField(System.String,System.String,Windows.ApplicationModel.Contacts.ContactFieldType,Windows.ApplicationModel.Contacts.ContactFieldCategory)
+    @abstractmethod
+    def create_field(self, name: str, value: str, type: ContactFieldType, category: ContactFieldCategory, /) -> ContactField: ...
+    # Deprecated alias of create_field() for pywinrt v3.x compatibility.
+    # Windows.ApplicationModel.Contacts.ContactField Windows.ApplicationModel.Contacts.IContactFieldFactory::CreateField(System.String,Windows.ApplicationModel.Contacts.ContactFieldType,Windows.ApplicationModel.Contacts.ContactFieldCategory)
+    @deprecated("Use create_field() instead.")
+    def create_field_category(self, value: str, type: ContactFieldType, category: ContactFieldCategory, /) -> ContactField: ...
+    # Deprecated alias of create_field() for pywinrt v3.x compatibility.
+    # Windows.ApplicationModel.Contacts.ContactField Windows.ApplicationModel.Contacts.IContactFieldFactory::CreateField(System.String,System.String,Windows.ApplicationModel.Contacts.ContactFieldType,Windows.ApplicationModel.Contacts.ContactFieldCategory)
+    @deprecated("Use create_field() instead.")
+    def create_field_custom(self, name: str, value: str, type: ContactFieldType, category: ContactFieldCategory, /) -> ContactField: ...
+    # Deprecated alias of create_field() for pywinrt v3.x compatibility.
+    # Windows.ApplicationModel.Contacts.ContactField Windows.ApplicationModel.Contacts.IContactFieldFactory::CreateField(System.String,Windows.ApplicationModel.Contacts.ContactFieldType)
+    @deprecated("Use create_field() instead.")
     def create_field_default(self, value: str, type: ContactFieldType, /) -> ContactField: ...
 
 @typing.final
 class _IContactInstantMessageFieldFactory: ...
 
 class IContactInstantMessageFieldFactory(winrt._winrt.IInspectable):
-    # Windows.ApplicationModel.Contacts.ContactInstantMessageField Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory::CreateInstantMessage(System.String,Windows.ApplicationModel.Contacts.ContactFieldCategory,System.String,System.String,Windows.Foundation.Uri)
-    @abstractmethod
-    def create_instant_message_all(self, user_name: str, category: ContactFieldCategory, service: str, display_text: str, verb: windows_foundation.Uri, /) -> ContactInstantMessageField: ...
-    # Windows.ApplicationModel.Contacts.ContactInstantMessageField Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory::CreateInstantMessage(System.String,Windows.ApplicationModel.Contacts.ContactFieldCategory)
-    @abstractmethod
-    def create_instant_message_category(self, user_name: str, category: ContactFieldCategory, /) -> ContactInstantMessageField: ...
+    @typing.overload
     # Windows.ApplicationModel.Contacts.ContactInstantMessageField Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory::CreateInstantMessage(System.String)
     @abstractmethod
+    def create_instant_message(self, user_name: str, /) -> ContactInstantMessageField: ...
+    @typing.overload
+    # Windows.ApplicationModel.Contacts.ContactInstantMessageField Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory::CreateInstantMessage(System.String,Windows.ApplicationModel.Contacts.ContactFieldCategory)
+    @abstractmethod
+    def create_instant_message(self, user_name: str, category: ContactFieldCategory, /) -> ContactInstantMessageField: ...
+    @typing.overload
+    # Windows.ApplicationModel.Contacts.ContactInstantMessageField Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory::CreateInstantMessage(System.String,Windows.ApplicationModel.Contacts.ContactFieldCategory,System.String,System.String,Windows.Foundation.Uri)
+    @abstractmethod
+    def create_instant_message(self, user_name: str, category: ContactFieldCategory, service: str, display_text: str, verb: windows_foundation.Uri, /) -> ContactInstantMessageField: ...
+    # Deprecated alias of create_instant_message() for pywinrt v3.x compatibility.
+    # Windows.ApplicationModel.Contacts.ContactInstantMessageField Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory::CreateInstantMessage(System.String,Windows.ApplicationModel.Contacts.ContactFieldCategory,System.String,System.String,Windows.Foundation.Uri)
+    @deprecated("Use create_instant_message() instead.")
+    def create_instant_message_all(self, user_name: str, category: ContactFieldCategory, service: str, display_text: str, verb: windows_foundation.Uri, /) -> ContactInstantMessageField: ...
+    # Deprecated alias of create_instant_message() for pywinrt v3.x compatibility.
+    # Windows.ApplicationModel.Contacts.ContactInstantMessageField Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory::CreateInstantMessage(System.String,Windows.ApplicationModel.Contacts.ContactFieldCategory)
+    @deprecated("Use create_instant_message() instead.")
+    def create_instant_message_category(self, user_name: str, category: ContactFieldCategory, /) -> ContactInstantMessageField: ...
+    # Deprecated alias of create_instant_message() for pywinrt v3.x compatibility.
+    # Windows.ApplicationModel.Contacts.ContactInstantMessageField Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory::CreateInstantMessage(System.String)
+    @deprecated("Use create_instant_message() instead.")
     def create_instant_message_default(self, user_name: str, /) -> ContactInstantMessageField: ...
 
 @typing.final
 class _IContactLocationFieldFactory: ...
 
 class IContactLocationFieldFactory(winrt._winrt.IInspectable):
-    # Windows.ApplicationModel.Contacts.ContactLocationField Windows.ApplicationModel.Contacts.IContactLocationFieldFactory::CreateLocation(System.String,Windows.ApplicationModel.Contacts.ContactFieldCategory,System.String,System.String,System.String,System.String,System.String)
-    @abstractmethod
-    def create_location_all(self, unstructured_address: str, category: ContactFieldCategory, street: str, city: str, region: str, country: str, postal_code: str, /) -> ContactLocationField: ...
-    # Windows.ApplicationModel.Contacts.ContactLocationField Windows.ApplicationModel.Contacts.IContactLocationFieldFactory::CreateLocation(System.String,Windows.ApplicationModel.Contacts.ContactFieldCategory)
-    @abstractmethod
-    def create_location_category(self, unstructured_address: str, category: ContactFieldCategory, /) -> ContactLocationField: ...
+    @typing.overload
     # Windows.ApplicationModel.Contacts.ContactLocationField Windows.ApplicationModel.Contacts.IContactLocationFieldFactory::CreateLocation(System.String)
     @abstractmethod
+    def create_location(self, unstructured_address: str, /) -> ContactLocationField: ...
+    @typing.overload
+    # Windows.ApplicationModel.Contacts.ContactLocationField Windows.ApplicationModel.Contacts.IContactLocationFieldFactory::CreateLocation(System.String,Windows.ApplicationModel.Contacts.ContactFieldCategory)
+    @abstractmethod
+    def create_location(self, unstructured_address: str, category: ContactFieldCategory, /) -> ContactLocationField: ...
+    @typing.overload
+    # Windows.ApplicationModel.Contacts.ContactLocationField Windows.ApplicationModel.Contacts.IContactLocationFieldFactory::CreateLocation(System.String,Windows.ApplicationModel.Contacts.ContactFieldCategory,System.String,System.String,System.String,System.String,System.String)
+    @abstractmethod
+    def create_location(self, unstructured_address: str, category: ContactFieldCategory, street: str, city: str, region: str, country: str, postal_code: str, /) -> ContactLocationField: ...
+    # Deprecated alias of create_location() for pywinrt v3.x compatibility.
+    # Windows.ApplicationModel.Contacts.ContactLocationField Windows.ApplicationModel.Contacts.IContactLocationFieldFactory::CreateLocation(System.String,Windows.ApplicationModel.Contacts.ContactFieldCategory,System.String,System.String,System.String,System.String,System.String)
+    @deprecated("Use create_location() instead.")
+    def create_location_all(self, unstructured_address: str, category: ContactFieldCategory, street: str, city: str, region: str, country: str, postal_code: str, /) -> ContactLocationField: ...
+    # Deprecated alias of create_location() for pywinrt v3.x compatibility.
+    # Windows.ApplicationModel.Contacts.ContactLocationField Windows.ApplicationModel.Contacts.IContactLocationFieldFactory::CreateLocation(System.String,Windows.ApplicationModel.Contacts.ContactFieldCategory)
+    @deprecated("Use create_location() instead.")
+    def create_location_category(self, unstructured_address: str, category: ContactFieldCategory, /) -> ContactLocationField: ...
+    # Deprecated alias of create_location() for pywinrt v3.x compatibility.
+    # Windows.ApplicationModel.Contacts.ContactLocationField Windows.ApplicationModel.Contacts.IContactLocationFieldFactory::CreateLocation(System.String)
+    @deprecated("Use create_location() instead.")
     def create_location_default(self, unstructured_address: str, /) -> ContactLocationField: ...
 

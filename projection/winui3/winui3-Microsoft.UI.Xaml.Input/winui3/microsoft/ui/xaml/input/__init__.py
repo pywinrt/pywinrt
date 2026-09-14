@@ -4,6 +4,7 @@ import enum
 import typing
 import uuid as _uuid
 
+import winrt.runtime._internals
 import winrt.system
 from winui3._winui3_microsoft_ui_xaml_input import (
     AccessKeyDisplayDismissedEventArgs,
@@ -253,6 +254,12 @@ class XYFocusNavigationStrategyOverride(enum.IntEnum):
     NAVIGATION_DIRECTION_DISTANCE = 3
     RECTILINEAR_DISTANCE = 4
 
+winrt.runtime._internals.alias_static_method(AccessKeyManager, "enter_display_mode_for_xaml_root", "enter_display_mode")
+winrt.runtime._internals.alias_static_method(FocusManager, "find_next_element_with_options", "find_next_element")
+winrt.runtime._internals.alias_static_method(FocusManager, "find_next_focusable_element_with_hint", "find_next_focusable_element")
+winrt.runtime._internals.alias_static_method(FocusManager, "get_focused_element_with_root", "get_focused_element")
+winrt.runtime._internals.alias_static_method(FocusManager, "try_move_focus_with_options", "try_move_focus")
+winrt.runtime._internals.alias_static_method(FocusManager, "try_move_focus_with_options_async", "try_move_focus_async")
 DoubleTappedEventHandler = typing.Callable[[winrt.system.Object, DoubleTappedRoutedEventArgs], None]
 HoldingEventHandler = typing.Callable[[winrt.system.Object, HoldingRoutedEventArgs], None]
 KeyEventHandler = typing.Callable[[winrt.system.Object, KeyRoutedEventArgs], None]

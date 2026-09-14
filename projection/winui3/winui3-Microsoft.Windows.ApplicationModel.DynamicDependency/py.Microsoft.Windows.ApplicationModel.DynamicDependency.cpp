@@ -644,18 +644,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PackageDependency_Add2(py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependency* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -729,18 +718,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PackageDependency_Create2(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -1065,7 +1043,6 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     static PyMethodDef _methods_PackageDependency[] = {
         { "add", reinterpret_cast<PyCFunction>(PackageDependency_Add), METH_VARARGS, nullptr },
-        { "add2", reinterpret_cast<PyCFunction>(PackageDependency_Add2), METH_VARARGS, nullptr },
         { "delete", reinterpret_cast<PyCFunction>(PackageDependency_Delete), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PackageDependency, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PackageDependency), METH_O | METH_STATIC, nullptr },
@@ -1096,7 +1073,6 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     static PyMethodDef methods_PackageDependency_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(PackageDependency_Create), METH_VARARGS, nullptr },
-        { "create2", reinterpret_cast<PyCFunction>(PackageDependency_Create2), METH_VARARGS, nullptr },
         { "create_for_system", reinterpret_cast<PyCFunction>(PackageDependency_CreateForSystem), METH_VARARGS, nullptr },
         { "get_from_id", reinterpret_cast<PyCFunction>(PackageDependency_GetFromId), METH_VARARGS, nullptr },
         { "get_from_id_for_system", reinterpret_cast<PyCFunction>(PackageDependency_GetFromIdForSystem), METH_VARARGS, nullptr },

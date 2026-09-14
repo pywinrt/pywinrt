@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_ui_startscreen import (
     JumpList,
@@ -66,3 +67,10 @@ class TileSize(enum.IntEnum):
     SQUARE71X71 = 6
     SQUARE44X44 = 7
 
+winrt.runtime._internals.alias_static_method(SecondaryTile, "find_all_for_application_async", "find_all_async")
+winrt.runtime._internals.alias_method(SecondaryTile, "request_create_async_with_point", "request_create_async")
+winrt.runtime._internals.alias_method(SecondaryTile, "request_create_async_with_rect", "request_create_for_selection_async")
+winrt.runtime._internals.alias_method(SecondaryTile, "request_create_async_with_rect_and_placement", "request_create_for_selection_async")
+winrt.runtime._internals.alias_method(SecondaryTile, "request_delete_async_with_point", "request_delete_async")
+winrt.runtime._internals.alias_method(SecondaryTile, "request_delete_async_with_rect", "request_delete_for_selection_async")
+winrt.runtime._internals.alias_method(SecondaryTile, "request_delete_async_with_rect_and_placement", "request_delete_for_selection_async")

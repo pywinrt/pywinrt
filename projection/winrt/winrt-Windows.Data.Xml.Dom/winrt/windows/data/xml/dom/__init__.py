@@ -75,3 +75,7 @@ class NodeType(enum.IntEnum):
 
 winrt.runtime._internals.mixin_sequence(XmlNamedNodeMap)
 winrt.runtime._internals.mixin_sequence(XmlNodeList)
+winrt.runtime._internals.alias_static_method(XmlDocument, "load_from_file_with_settings_async", "load_from_file_async")
+winrt.runtime._internals.alias_static_method(XmlDocument, "load_from_uri_with_settings_async", "load_from_uri_async")
+winrt.runtime._internals.alias_method(XmlDocument, "load_xml_with_settings", "load_xml")
+winrt.runtime._internals.alias_method(XmlDocument, "load_xml_from_buffer_with_settings", "load_xml_from_buffer")

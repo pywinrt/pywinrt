@@ -1420,6 +1420,37 @@ namespace py::cpp::Windows::Devices::Bluetooth
                 return nullptr;
             }
         }
+        else if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"GetRfcommServicesAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetRfcommServicesAsync(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -1462,18 +1493,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* BluetoothDevice_GetRfcommServicesForIdWithCacheModeAsync(py::wrapper::Windows::Devices::Bluetooth::BluetoothDevice* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -1497,48 +1517,6 @@ namespace py::cpp::Windows::Devices::Bluetooth
                 {
                     auto _gil = release_gil();
                     return self->obj.GetRfcommServicesForIdAsync(param0, param1);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* BluetoothDevice_GetRfcommServicesWithCacheModeAsync(py::wrapper::Windows::Devices::Bluetooth::BluetoothDevice* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"GetRfcommServicesAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 0);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.GetRfcommServicesAsync(param0);
                 }());
             }
             catch (...)
@@ -2200,8 +2178,6 @@ namespace py::cpp::Windows::Devices::Bluetooth
         { "close", reinterpret_cast<PyCFunction>(BluetoothDevice_Close), METH_VARARGS, nullptr },
         { "get_rfcomm_services_async", reinterpret_cast<PyCFunction>(BluetoothDevice_GetRfcommServicesAsync), METH_VARARGS, nullptr },
         { "get_rfcomm_services_for_id_async", reinterpret_cast<PyCFunction>(BluetoothDevice_GetRfcommServicesForIdAsync), METH_VARARGS, nullptr },
-        { "get_rfcomm_services_for_id_with_cache_mode_async", reinterpret_cast<PyCFunction>(BluetoothDevice_GetRfcommServicesForIdWithCacheModeAsync), METH_VARARGS, nullptr },
-        { "get_rfcomm_services_with_cache_mode_async", reinterpret_cast<PyCFunction>(BluetoothDevice_GetRfcommServicesWithCacheModeAsync), METH_VARARGS, nullptr },
         { "request_access_async", reinterpret_cast<PyCFunction>(BluetoothDevice_RequestAccessAsync), METH_VARARGS, nullptr },
         { "add_connection_status_changed", reinterpret_cast<PyCFunction>(BluetoothDevice_add_ConnectionStatusChanged), METH_O, nullptr },
         { "remove_connection_status_changed", reinterpret_cast<PyCFunction>(BluetoothDevice_remove_ConnectionStatusChanged), METH_O, nullptr },
@@ -4936,18 +4912,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* BluetoothLEDevice_FromBluetoothAddressWithBluetoothAddressTypeAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -5225,18 +5190,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* BluetoothLEDevice_GetDeviceSelectorFromBluetoothAddressWithBluetoothAddressType(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -5476,6 +5430,37 @@ namespace py::cpp::Windows::Devices::Bluetooth
                 return nullptr;
             }
         }
+        else if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"GetGattServicesAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetGattServicesAsync(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -5518,18 +5503,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* BluetoothLEDevice_GetGattServicesForUuidWithCacheModeAsync(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -5553,48 +5527,6 @@ namespace py::cpp::Windows::Devices::Bluetooth
                 {
                     auto _gil = release_gil();
                     return self->obj.GetGattServicesForUuidAsync(param0, param1);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* BluetoothLEDevice_GetGattServicesWithCacheModeAsync(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"GetGattServicesAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 0);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.GetGattServicesAsync(param0);
                 }());
             }
             catch (...)
@@ -6401,8 +6333,6 @@ namespace py::cpp::Windows::Devices::Bluetooth
         { "get_gatt_service", reinterpret_cast<PyCFunction>(BluetoothLEDevice_GetGattService), METH_VARARGS, nullptr },
         { "get_gatt_services_async", reinterpret_cast<PyCFunction>(BluetoothLEDevice_GetGattServicesAsync), METH_VARARGS, nullptr },
         { "get_gatt_services_for_uuid_async", reinterpret_cast<PyCFunction>(BluetoothLEDevice_GetGattServicesForUuidAsync), METH_VARARGS, nullptr },
-        { "get_gatt_services_for_uuid_with_cache_mode_async", reinterpret_cast<PyCFunction>(BluetoothLEDevice_GetGattServicesForUuidWithCacheModeAsync), METH_VARARGS, nullptr },
-        { "get_gatt_services_with_cache_mode_async", reinterpret_cast<PyCFunction>(BluetoothLEDevice_GetGattServicesWithCacheModeAsync), METH_VARARGS, nullptr },
         { "request_access_async", reinterpret_cast<PyCFunction>(BluetoothLEDevice_RequestAccessAsync), METH_VARARGS, nullptr },
         { "request_preferred_connection_parameters", reinterpret_cast<PyCFunction>(BluetoothLEDevice_RequestPreferredConnectionParameters), METH_VARARGS, nullptr },
         { "add_connection_status_changed", reinterpret_cast<PyCFunction>(BluetoothLEDevice_add_ConnectionStatusChanged), METH_O, nullptr },
@@ -6454,12 +6384,10 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyMethodDef methods_BluetoothLEDevice_Static[] = {
         { "from_bluetooth_address_async", reinterpret_cast<PyCFunction>(BluetoothLEDevice_FromBluetoothAddressAsync), METH_VARARGS, nullptr },
-        { "from_bluetooth_address_with_bluetooth_address_type_async", reinterpret_cast<PyCFunction>(BluetoothLEDevice_FromBluetoothAddressWithBluetoothAddressTypeAsync), METH_VARARGS, nullptr },
         { "from_id_async", reinterpret_cast<PyCFunction>(BluetoothLEDevice_FromIdAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(BluetoothLEDevice_GetDeviceSelector), METH_VARARGS, nullptr },
         { "get_device_selector_from_appearance", reinterpret_cast<PyCFunction>(BluetoothLEDevice_GetDeviceSelectorFromAppearance), METH_VARARGS, nullptr },
         { "get_device_selector_from_bluetooth_address", reinterpret_cast<PyCFunction>(BluetoothLEDevice_GetDeviceSelectorFromBluetoothAddress), METH_VARARGS, nullptr },
-        { "get_device_selector_from_bluetooth_address_with_bluetooth_address_type", reinterpret_cast<PyCFunction>(BluetoothLEDevice_GetDeviceSelectorFromBluetoothAddressWithBluetoothAddressType), METH_VARARGS, nullptr },
         { "get_device_selector_from_connection_status", reinterpret_cast<PyCFunction>(BluetoothLEDevice_GetDeviceSelectorFromConnectionStatus), METH_VARARGS, nullptr },
         { "get_device_selector_from_device_name", reinterpret_cast<PyCFunction>(BluetoothLEDevice_GetDeviceSelectorFromDeviceName), METH_VARARGS, nullptr },
         { "get_device_selector_from_pairing_state", reinterpret_cast<PyCFunction>(BluetoothLEDevice_GetDeviceSelectorFromPairingState), METH_VARARGS, nullptr },

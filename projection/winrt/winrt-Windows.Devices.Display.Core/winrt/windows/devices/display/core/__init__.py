@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_devices_display_core import (
     DisplayPresentationRate,
@@ -201,3 +202,4 @@ class DisplayWireFormatPixelEncoding(enum.IntEnum):
     YCC420 = 3
     INTENSITY = 4
 
+winrt.runtime._internals.alias_method(DisplayState, "connect_target_to_view", "connect_target")

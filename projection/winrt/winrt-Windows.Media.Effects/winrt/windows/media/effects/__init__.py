@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_media_effects import (
     AcousticEchoCancellationConfiguration,
@@ -94,3 +95,5 @@ class MediaMemoryTypes(enum.IntEnum):
     CPU = 1
     GPU_AND_CPU = 2
 
+winrt.runtime._internals.alias_static_method(AudioEffectsManager, "create_audio_capture_effects_manager_with_mode", "create_audio_capture_effects_manager")
+winrt.runtime._internals.alias_static_method(AudioEffectsManager, "create_audio_render_effects_manager_with_mode", "create_audio_render_effects_manager")

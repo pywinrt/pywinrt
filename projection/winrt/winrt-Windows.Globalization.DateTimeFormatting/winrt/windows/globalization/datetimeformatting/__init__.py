@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_globalization_datetimeformatting import (
     DateTimeFormatter,
@@ -53,3 +54,4 @@ class YearFormat(enum.IntEnum):
     ABBREVIATED = 2
     FULL = 3
 
+winrt.runtime._internals.alias_method(DateTimeFormatter, "format_using_time_zone", "format")

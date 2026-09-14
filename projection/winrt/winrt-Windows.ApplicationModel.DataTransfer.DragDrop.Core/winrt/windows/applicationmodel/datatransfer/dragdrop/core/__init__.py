@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_applicationmodel_datatransfer_dragdrop_core import (
     CoreDragDropManager,
@@ -27,3 +28,5 @@ class CoreDragUIContentMode(enum.IntFlag):
     AUTO = 0x0
     DEFERRED = 0x1
 
+winrt.runtime._internals.alias_method(CoreDragOperation, "set_drag_ui_content_from_software_bitmap_with_anchor_point", "set_drag_ui_content_from_software_bitmap")
+winrt.runtime._internals.alias_method(CoreDragUIOverride, "set_content_from_software_bitmap_with_anchor_point", "set_content_from_software_bitmap")

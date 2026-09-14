@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -1256,9 +1257,15 @@ class WebUIUserDataAccountProviderActivatedEventArgs(winrt.system.Object, IActiv
 
 @typing.final
 class WebUIView_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.UI.WebUI.WebUIView> Windows.UI.WebUI.WebUIView::CreateAsync()
     def create_async(cls) -> windows_foundation.IAsyncOperation[WebUIView]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.UI.WebUI.WebUIView> Windows.UI.WebUI.WebUIView::CreateAsync(Windows.Foundation.Uri)
+    def create_async(cls, uri: windows_foundation.Uri, /) -> windows_foundation.IAsyncOperation[WebUIView]: ...
+    # Deprecated alias of create_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.UI.WebUI.WebUIView> Windows.UI.WebUI.WebUIView::CreateAsync(Windows.Foundation.Uri)
+    @deprecated("Use create_async() instead.")
     def create_with_uri_async(cls, uri: windows_foundation.Uri, /) -> windows_foundation.IAsyncOperation[WebUIView]: ...
 
 @typing.final

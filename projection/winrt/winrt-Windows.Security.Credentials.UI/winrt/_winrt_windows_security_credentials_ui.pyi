@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -18,11 +19,26 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class CredentialPicker_Static(winrt._winrt.IInspectable_Static):
-    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.UI.CredentialPickerResults> Windows.Security.Credentials.UI.CredentialPicker::PickAsync(System.String,System.String,System.String)
-    def pick_with_caption_async(cls, target_name: str, message: str, caption: str, /) -> windows_foundation.IAsyncOperation[CredentialPickerResults]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.UI.CredentialPickerResults> Windows.Security.Credentials.UI.CredentialPicker::PickAsync(System.String,System.String)
-    def pick_with_message_async(cls, target_name: str, message: str, /) -> windows_foundation.IAsyncOperation[CredentialPickerResults]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.UI.CredentialPickerResults> Windows.Security.Credentials.UI.CredentialPicker::PickAsync(Windows.Security.Credentials.UI.CredentialPickerOptions)
+    def pick_async(cls, options: CredentialPickerOptions, /) -> windows_foundation.IAsyncOperation[CredentialPickerResults]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.UI.CredentialPickerResults> Windows.Security.Credentials.UI.CredentialPicker::PickAsync(System.String,System.String)
+    def pick_async(cls, target_name: str, message: str, /) -> windows_foundation.IAsyncOperation[CredentialPickerResults]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.UI.CredentialPickerResults> Windows.Security.Credentials.UI.CredentialPicker::PickAsync(System.String,System.String,System.String)
+    def pick_async(cls, target_name: str, message: str, caption: str, /) -> windows_foundation.IAsyncOperation[CredentialPickerResults]: ...
+    # Deprecated alias of pick_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.UI.CredentialPickerResults> Windows.Security.Credentials.UI.CredentialPicker::PickAsync(System.String,System.String,System.String)
+    @deprecated("Use pick_async() instead.")
+    def pick_with_caption_async(cls, target_name: str, message: str, caption: str, /) -> windows_foundation.IAsyncOperation[CredentialPickerResults]: ...
+    # Deprecated alias of pick_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.UI.CredentialPickerResults> Windows.Security.Credentials.UI.CredentialPicker::PickAsync(System.String,System.String)
+    @deprecated("Use pick_async() instead.")
+    def pick_with_message_async(cls, target_name: str, message: str, /) -> windows_foundation.IAsyncOperation[CredentialPickerResults]: ...
+    # Deprecated alias of pick_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.UI.CredentialPickerResults> Windows.Security.Credentials.UI.CredentialPicker::PickAsync(Windows.Security.Credentials.UI.CredentialPickerOptions)
+    @deprecated("Use pick_async() instead.")
     def pick_with_options_async(cls, options: CredentialPickerOptions, /) -> windows_foundation.IAsyncOperation[CredentialPickerResults]: ...
 
 @typing.final

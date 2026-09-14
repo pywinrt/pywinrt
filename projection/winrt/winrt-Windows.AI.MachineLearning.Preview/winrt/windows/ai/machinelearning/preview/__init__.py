@@ -70,3 +70,4 @@ class LearningModelFeatureKindPreview(enum.IntEnum):
     IMAGE = 4
 
 winrt.runtime._internals.mixin_mapping(LearningModelBindingPreview)
+winrt.runtime._internals.alias_method(LearningModelBindingPreview, "bind_with_properties", "bind")

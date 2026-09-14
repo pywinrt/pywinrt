@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_graphics_display_core import (
     HdmiDisplayHdr2086Metadata,
@@ -36,3 +37,5 @@ class HdmiDisplayPixelEncoding(enum.IntEnum):
     YCC422 = 2
     YCC420 = 3
 
+winrt.runtime._internals.alias_method(HdmiDisplayInformation, "request_set_current_display_mode_with_hdr_and_metadata_async", "request_set_current_display_mode_async")
+winrt.runtime._internals.alias_method(HdmiDisplayInformation, "request_set_current_display_mode_with_hdr_async", "request_set_current_display_mode_async")

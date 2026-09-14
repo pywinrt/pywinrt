@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_services_maps import (
     EnhancedWaypoint,
@@ -185,3 +186,16 @@ class WaypointKind(enum.IntEnum):
     STOP = 0
     VIA = 1
 
+winrt.runtime._internals.alias_static_method(MapLocationFinder, "find_locations_with_max_count_async", "find_locations_async")
+winrt.runtime._internals.alias_static_method(MapLocationFinder, "find_locations_at_with_accuracy_async", "find_locations_at_async")
+winrt.runtime._internals.alias_static_method(MapRouteFinder, "get_driving_route_with_optimization_and_restrictions_async", "get_driving_route_async")
+winrt.runtime._internals.alias_static_method(MapRouteFinder, "get_driving_route_with_optimization_restrictions_and_heading_async", "get_driving_route_async")
+winrt.runtime._internals.alias_static_method(MapRouteFinder, "get_driving_route_with_options_async", "get_driving_route_async")
+winrt.runtime._internals.alias_static_method(MapRouteFinder, "get_driving_route_from_enhanced_waypoints_with_options_async", "get_driving_route_from_enhanced_waypoints_async")
+winrt.runtime._internals.alias_static_method(MapRouteFinder, "get_driving_route_from_waypoints_and_optimization_async", "get_driving_route_from_waypoints_async")
+winrt.runtime._internals.alias_static_method(MapRouteFinder, "get_driving_route_from_waypoints_optimization_and_restrictions_async", "get_driving_route_from_waypoints_async")
+winrt.runtime._internals.alias_static_method(MapRouteFinder, "get_driving_route_from_waypoints_optimization_restrictions_and_heading_async", "get_driving_route_from_waypoints_async")
+winrt.runtime._internals.alias_static_method(PlaceInfo, "create_with_geopoint_and_options", "create")
+winrt.runtime._internals.alias_static_method(PlaceInfo, "create_from_address_with_name", "create_from_address")
+winrt.runtime._internals.alias_static_method(PlaceInfo, "create_from_identifier_with_options", "create_from_identifier")
+winrt.runtime._internals.alias_method(PlaceInfo, "show_with_preferred_placement", "show")

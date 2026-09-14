@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -224,31 +225,67 @@ class MediaControl(winrt.system.Object, metaclass=MediaControl_Static):
 @typing.final
 class MediaExtensionManager(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    @typing.overload
     # System.Void Windows.Media.MediaExtensionManager::RegisterAudioDecoder(System.String,System.Guid,System.Guid)
     def register_audio_decoder(self, activatable_class_id: str, input_subtype: _uuid.UUID, output_subtype: _uuid.UUID, /) -> None: ...
+    @typing.overload
     # System.Void Windows.Media.MediaExtensionManager::RegisterAudioDecoder(System.String,System.Guid,System.Guid,Windows.Foundation.Collections.IPropertySet)
+    def register_audio_decoder(self, activatable_class_id: str, input_subtype: _uuid.UUID, output_subtype: _uuid.UUID, configuration: windows_foundation_collections.IPropertySet, /) -> None: ...
+    # Deprecated alias of register_audio_decoder() for pywinrt v3.x compatibility.
+    # System.Void Windows.Media.MediaExtensionManager::RegisterAudioDecoder(System.String,System.Guid,System.Guid,Windows.Foundation.Collections.IPropertySet)
+    @deprecated("Use register_audio_decoder() instead.")
     def register_audio_decoder_with_settings(self, activatable_class_id: str, input_subtype: _uuid.UUID, output_subtype: _uuid.UUID, configuration: windows_foundation_collections.IPropertySet, /) -> None: ...
+    @typing.overload
     # System.Void Windows.Media.MediaExtensionManager::RegisterAudioEncoder(System.String,System.Guid,System.Guid)
     def register_audio_encoder(self, activatable_class_id: str, input_subtype: _uuid.UUID, output_subtype: _uuid.UUID, /) -> None: ...
+    @typing.overload
     # System.Void Windows.Media.MediaExtensionManager::RegisterAudioEncoder(System.String,System.Guid,System.Guid,Windows.Foundation.Collections.IPropertySet)
+    def register_audio_encoder(self, activatable_class_id: str, input_subtype: _uuid.UUID, output_subtype: _uuid.UUID, configuration: windows_foundation_collections.IPropertySet, /) -> None: ...
+    # Deprecated alias of register_audio_encoder() for pywinrt v3.x compatibility.
+    # System.Void Windows.Media.MediaExtensionManager::RegisterAudioEncoder(System.String,System.Guid,System.Guid,Windows.Foundation.Collections.IPropertySet)
+    @deprecated("Use register_audio_encoder() instead.")
     def register_audio_encoder_with_settings(self, activatable_class_id: str, input_subtype: _uuid.UUID, output_subtype: _uuid.UUID, configuration: windows_foundation_collections.IPropertySet, /) -> None: ...
+    @typing.overload
     # System.Void Windows.Media.MediaExtensionManager::RegisterByteStreamHandler(System.String,System.String,System.String)
     def register_byte_stream_handler(self, activatable_class_id: str, file_extension: str, mime_type: str, /) -> None: ...
+    @typing.overload
     # System.Void Windows.Media.MediaExtensionManager::RegisterByteStreamHandler(System.String,System.String,System.String,Windows.Foundation.Collections.IPropertySet)
+    def register_byte_stream_handler(self, activatable_class_id: str, file_extension: str, mime_type: str, configuration: windows_foundation_collections.IPropertySet, /) -> None: ...
+    # Deprecated alias of register_byte_stream_handler() for pywinrt v3.x compatibility.
+    # System.Void Windows.Media.MediaExtensionManager::RegisterByteStreamHandler(System.String,System.String,System.String,Windows.Foundation.Collections.IPropertySet)
+    @deprecated("Use register_byte_stream_handler() instead.")
     def register_byte_stream_handler_with_settings(self, activatable_class_id: str, file_extension: str, mime_type: str, configuration: windows_foundation_collections.IPropertySet, /) -> None: ...
     # System.Void Windows.Media.MediaExtensionManager::RegisterMediaExtensionForAppService(Windows.Media.IMediaExtension,Windows.ApplicationModel.AppService.AppServiceConnection)
     def register_media_extension_for_app_service(self, extension: IMediaExtension, connection: windows_applicationmodel_appservice.AppServiceConnection, /) -> None: ...
+    @typing.overload
     # System.Void Windows.Media.MediaExtensionManager::RegisterSchemeHandler(System.String,System.String)
     def register_scheme_handler(self, activatable_class_id: str, scheme: str, /) -> None: ...
+    @typing.overload
     # System.Void Windows.Media.MediaExtensionManager::RegisterSchemeHandler(System.String,System.String,Windows.Foundation.Collections.IPropertySet)
+    def register_scheme_handler(self, activatable_class_id: str, scheme: str, configuration: windows_foundation_collections.IPropertySet, /) -> None: ...
+    # Deprecated alias of register_scheme_handler() for pywinrt v3.x compatibility.
+    # System.Void Windows.Media.MediaExtensionManager::RegisterSchemeHandler(System.String,System.String,Windows.Foundation.Collections.IPropertySet)
+    @deprecated("Use register_scheme_handler() instead.")
     def register_scheme_handler_with_settings(self, activatable_class_id: str, scheme: str, configuration: windows_foundation_collections.IPropertySet, /) -> None: ...
+    @typing.overload
     # System.Void Windows.Media.MediaExtensionManager::RegisterVideoDecoder(System.String,System.Guid,System.Guid)
     def register_video_decoder(self, activatable_class_id: str, input_subtype: _uuid.UUID, output_subtype: _uuid.UUID, /) -> None: ...
+    @typing.overload
     # System.Void Windows.Media.MediaExtensionManager::RegisterVideoDecoder(System.String,System.Guid,System.Guid,Windows.Foundation.Collections.IPropertySet)
+    def register_video_decoder(self, activatable_class_id: str, input_subtype: _uuid.UUID, output_subtype: _uuid.UUID, configuration: windows_foundation_collections.IPropertySet, /) -> None: ...
+    # Deprecated alias of register_video_decoder() for pywinrt v3.x compatibility.
+    # System.Void Windows.Media.MediaExtensionManager::RegisterVideoDecoder(System.String,System.Guid,System.Guid,Windows.Foundation.Collections.IPropertySet)
+    @deprecated("Use register_video_decoder() instead.")
     def register_video_decoder_with_settings(self, activatable_class_id: str, input_subtype: _uuid.UUID, output_subtype: _uuid.UUID, configuration: windows_foundation_collections.IPropertySet, /) -> None: ...
+    @typing.overload
     # System.Void Windows.Media.MediaExtensionManager::RegisterVideoEncoder(System.String,System.Guid,System.Guid)
     def register_video_encoder(self, activatable_class_id: str, input_subtype: _uuid.UUID, output_subtype: _uuid.UUID, /) -> None: ...
+    @typing.overload
     # System.Void Windows.Media.MediaExtensionManager::RegisterVideoEncoder(System.String,System.Guid,System.Guid,Windows.Foundation.Collections.IPropertySet)
+    def register_video_encoder(self, activatable_class_id: str, input_subtype: _uuid.UUID, output_subtype: _uuid.UUID, configuration: windows_foundation_collections.IPropertySet, /) -> None: ...
+    # Deprecated alias of register_video_encoder() for pywinrt v3.x compatibility.
+    # System.Void Windows.Media.MediaExtensionManager::RegisterVideoEncoder(System.String,System.Guid,System.Guid,Windows.Foundation.Collections.IPropertySet)
+    @deprecated("Use register_video_encoder() instead.")
     def register_video_encoder_with_settings(self, activatable_class_id: str, input_subtype: _uuid.UUID, output_subtype: _uuid.UUID, configuration: windows_foundation_collections.IPropertySet, /) -> None: ...
 
 @typing.final
@@ -628,9 +665,15 @@ class VideoEffects(winrt.system.Object, metaclass=VideoEffects_Static):
 
 @typing.final
 class VideoFrame_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Media.VideoFrame Windows.Media.VideoFrame::CreateAsDirect3D11SurfaceBacked(Windows.Graphics.DirectX.DirectXPixelFormat,System.Int32,System.Int32)
     def create_as_direct3d11_surface_backed(cls, format: windows_graphics_directx.DirectXPixelFormat, width: winrt.system.Int32, height: winrt.system.Int32, /) -> VideoFrame: ...
+    @typing.overload
     # Windows.Media.VideoFrame Windows.Media.VideoFrame::CreateAsDirect3D11SurfaceBacked(Windows.Graphics.DirectX.DirectXPixelFormat,System.Int32,System.Int32,Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice)
+    def create_as_direct3d11_surface_backed(cls, format: windows_graphics_directx.DirectXPixelFormat, width: winrt.system.Int32, height: winrt.system.Int32, device: windows_graphics_directx_direct3d11.IDirect3DDevice, /) -> VideoFrame: ...
+    # Deprecated alias of create_as_direct3d11_surface_backed() for pywinrt v3.x compatibility.
+    # Windows.Media.VideoFrame Windows.Media.VideoFrame::CreateAsDirect3D11SurfaceBacked(Windows.Graphics.DirectX.DirectXPixelFormat,System.Int32,System.Int32,Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice)
+    @deprecated("Use create_as_direct3d11_surface_backed() instead.")
     def create_as_direct3d11_surface_backed_with_device(cls, format: windows_graphics_directx.DirectXPixelFormat, width: winrt.system.Int32, height: winrt.system.Int32, device: windows_graphics_directx_direct3d11.IDirect3DDevice, /) -> VideoFrame: ...
     # Windows.Media.VideoFrame Windows.Media.VideoFrame::CreateWithDirect3D11Surface(Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface)
     def create_with_direct3d11_surface(cls, surface: windows_graphics_directx_direct3d11.IDirect3DSurface, /) -> VideoFrame: ...
@@ -647,9 +690,15 @@ class VideoFrame(winrt.system.Object, IMediaFrame, windows_foundation.IClosable,
     def __new__(cls: typing.Type[Self], format: windows_graphics_imaging.BitmapPixelFormat, width: winrt.system.Int32, height: winrt.system.Int32, alpha: windows_graphics_imaging.BitmapAlphaMode) -> Self: ...
     # System.Void Windows.Media.VideoFrame::Close()
     def close(self) -> None: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Media.VideoFrame::CopyToAsync(Windows.Media.VideoFrame)
     def copy_to_async(self, frame: VideoFrame, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Media.VideoFrame::CopyToAsync(Windows.Media.VideoFrame,Windows.Foundation.IReference`1<Windows.Graphics.Imaging.BitmapBounds>,Windows.Foundation.IReference`1<Windows.Graphics.Imaging.BitmapBounds>)
+    def copy_to_async(self, frame: VideoFrame, source_bounds: typing.Optional[windows_graphics_imaging.BitmapBounds], destination_bounds: typing.Optional[windows_graphics_imaging.BitmapBounds], /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of copy_to_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Media.VideoFrame::CopyToAsync(Windows.Media.VideoFrame,Windows.Foundation.IReference`1<Windows.Graphics.Imaging.BitmapBounds>,Windows.Foundation.IReference`1<Windows.Graphics.Imaging.BitmapBounds>)
+    @deprecated("Use copy_to_async() instead.")
     def copy_to_with_bounds_async(self, frame: VideoFrame, source_bounds: typing.Optional[windows_graphics_imaging.BitmapBounds], destination_bounds: typing.Optional[windows_graphics_imaging.BitmapBounds], /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IReference`1<Windows.Foundation.TimeSpan> Windows.Media.VideoFrame::get_SystemRelativeTime()
     @_property

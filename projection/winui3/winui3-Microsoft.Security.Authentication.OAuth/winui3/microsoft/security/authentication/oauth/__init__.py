@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winui3._winui3_microsoft_security_authentication_oauth import (
     AuthFailure,
@@ -41,3 +42,5 @@ class TokenFailureKind(enum.IntEnum):
     HTTP_FAILURE = 1
     INVALID_RESPONSE = 2
 
+winrt.runtime._internals.alias_static_method(AuthRequestParams, "create_for_authorization_code_request2", "create_for_authorization_code_request")
+winrt.runtime._internals.alias_static_method(OAuth2Manager, "request_token_async2", "request_token_async")

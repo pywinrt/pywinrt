@@ -1290,18 +1290,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* UserDataTaskList_GetTaskReaderWithOptions(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskList* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -1847,7 +1836,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
         { "delete_task_async", reinterpret_cast<PyCFunction>(UserDataTaskList_DeleteTaskAsync), METH_VARARGS, nullptr },
         { "get_task_async", reinterpret_cast<PyCFunction>(UserDataTaskList_GetTaskAsync), METH_VARARGS, nullptr },
         { "get_task_reader", reinterpret_cast<PyCFunction>(UserDataTaskList_GetTaskReader), METH_VARARGS, nullptr },
-        { "get_task_reader_with_options", reinterpret_cast<PyCFunction>(UserDataTaskList_GetTaskReaderWithOptions), METH_VARARGS, nullptr },
         { "register_sync_manager_async", reinterpret_cast<PyCFunction>(UserDataTaskList_RegisterSyncManagerAsync), METH_VARARGS, nullptr },
         { "save_async", reinterpret_cast<PyCFunction>(UserDataTaskList_SaveAsync), METH_VARARGS, nullptr },
         { "save_task_async", reinterpret_cast<PyCFunction>(UserDataTaskList_SaveTaskAsync), METH_VARARGS, nullptr },
@@ -4129,18 +4117,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* UserDataTaskStore_CreateListInAccountAsync(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskStore* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -4287,7 +4264,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyMethodDef _methods_UserDataTaskStore[] = {
         { "create_list_async", reinterpret_cast<PyCFunction>(UserDataTaskStore_CreateListAsync), METH_VARARGS, nullptr },
-        { "create_list_in_account_async", reinterpret_cast<PyCFunction>(UserDataTaskStore_CreateListInAccountAsync), METH_VARARGS, nullptr },
         { "find_lists_async", reinterpret_cast<PyCFunction>(UserDataTaskStore_FindListsAsync), METH_VARARGS, nullptr },
         { "get_list_async", reinterpret_cast<PyCFunction>(UserDataTaskStore_GetListAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_UserDataTaskStore, METH_O | METH_STATIC, nullptr },

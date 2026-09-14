@@ -6775,7 +6775,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* ElementFactory_GetElementCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* ElementFactory_GetElementCore_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -6817,7 +6817,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         }
     }
 
-    static PyObject* ElementFactory_RecycleElementCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* ElementFactory_RecycleElementCore_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -6885,8 +6885,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     }
 
     static PyMethodDef _methods_ElementFactory[] = {
-        { "_get_element_core", reinterpret_cast<PyCFunction>(ElementFactory_GetElementCore), METH_VARARGS, nullptr },
-        { "_recycle_element_core", reinterpret_cast<PyCFunction>(ElementFactory_RecycleElementCore), METH_VARARGS, nullptr },
+        { "_get_element_core", reinterpret_cast<PyCFunction>(ElementFactory_GetElementCore_protected), METH_VARARGS, nullptr },
+        { "_recycle_element_core", reinterpret_cast<PyCFunction>(ElementFactory_RecycleElementCore_protected), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ElementFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ElementFactory), METH_O | METH_STATIC, nullptr },
         { }};
@@ -15662,7 +15662,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Layout_InvalidateArrange(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Layout_InvalidateArrange_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -15703,7 +15703,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         }
     }
 
-    static PyObject* Layout_InvalidateMeasure(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* Layout_InvalidateMeasure_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -15987,8 +15987,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     static PyMethodDef _methods_Layout[] = {
         { "arrange", reinterpret_cast<PyCFunction>(Layout_Arrange), METH_VARARGS, nullptr },
         { "initialize_for_context", reinterpret_cast<PyCFunction>(Layout_InitializeForContext), METH_VARARGS, nullptr },
-        { "_invalidate_arrange", reinterpret_cast<PyCFunction>(Layout_InvalidateArrange), METH_VARARGS, nullptr },
-        { "_invalidate_measure", reinterpret_cast<PyCFunction>(Layout_InvalidateMeasure), METH_VARARGS, nullptr },
+        { "_invalidate_arrange", reinterpret_cast<PyCFunction>(Layout_InvalidateArrange_protected), METH_VARARGS, nullptr },
+        { "_invalidate_measure", reinterpret_cast<PyCFunction>(Layout_InvalidateMeasure_protected), METH_VARARGS, nullptr },
         { "measure", reinterpret_cast<PyCFunction>(Layout_Measure), METH_VARARGS, nullptr },
         { "uninitialize_for_context", reinterpret_cast<PyCFunction>(Layout_UninitializeForContext), METH_VARARGS, nullptr },
         { "add_arrange_invalidated", reinterpret_cast<PyCFunction>(Layout_add_ArrangeInvalidated), METH_O, nullptr },
@@ -25002,7 +25002,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* NonVirtualizingLayout_ArrangeOverride(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* NonVirtualizingLayout_ArrangeOverride_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -25045,7 +25045,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         }
     }
 
-    static PyObject* NonVirtualizingLayout_InitializeForContextCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* NonVirtualizingLayout_InitializeForContextCore_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -25088,7 +25088,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         }
     }
 
-    static PyObject* NonVirtualizingLayout_MeasureOverride(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* NonVirtualizingLayout_MeasureOverride_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -25131,7 +25131,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         }
     }
 
-    static PyObject* NonVirtualizingLayout_UninitializeForContextCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* NonVirtualizingLayout_UninitializeForContextCore_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -25199,10 +25199,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     }
 
     static PyMethodDef _methods_NonVirtualizingLayout[] = {
-        { "_arrange_override", reinterpret_cast<PyCFunction>(NonVirtualizingLayout_ArrangeOverride), METH_VARARGS, nullptr },
-        { "_initialize_for_context_core", reinterpret_cast<PyCFunction>(NonVirtualizingLayout_InitializeForContextCore), METH_VARARGS, nullptr },
-        { "_measure_override", reinterpret_cast<PyCFunction>(NonVirtualizingLayout_MeasureOverride), METH_VARARGS, nullptr },
-        { "_uninitialize_for_context_core", reinterpret_cast<PyCFunction>(NonVirtualizingLayout_UninitializeForContextCore), METH_VARARGS, nullptr },
+        { "_arrange_override", reinterpret_cast<PyCFunction>(NonVirtualizingLayout_ArrangeOverride_protected), METH_VARARGS, nullptr },
+        { "_initialize_for_context_core", reinterpret_cast<PyCFunction>(NonVirtualizingLayout_InitializeForContextCore_protected), METH_VARARGS, nullptr },
+        { "_measure_override", reinterpret_cast<PyCFunction>(NonVirtualizingLayout_MeasureOverride_protected), METH_VARARGS, nullptr },
+        { "_uninitialize_for_context_core", reinterpret_cast<PyCFunction>(NonVirtualizingLayout_UninitializeForContextCore_protected), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_NonVirtualizingLayout, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NonVirtualizingLayout), METH_O | METH_STATIC, nullptr },
         { }};
@@ -59754,7 +59754,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         Py_DECREF(tp);
     }
 
-    static PyObject* VirtualizingLayout_ArrangeOverride(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* VirtualizingLayout_ArrangeOverride_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -59797,7 +59797,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         }
     }
 
-    static PyObject* VirtualizingLayout_InitializeForContextCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* VirtualizingLayout_InitializeForContextCore_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -59840,7 +59840,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         }
     }
 
-    static PyObject* VirtualizingLayout_MeasureOverride(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* VirtualizingLayout_MeasureOverride_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -59883,7 +59883,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         }
     }
 
-    static PyObject* VirtualizingLayout_OnItemsChangedCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* VirtualizingLayout_OnItemsChangedCore_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -59928,7 +59928,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         }
     }
 
-    static PyObject* VirtualizingLayout_UninitializeForContextCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* VirtualizingLayout_UninitializeForContextCore_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -59996,11 +59996,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
     }
 
     static PyMethodDef _methods_VirtualizingLayout[] = {
-        { "_arrange_override", reinterpret_cast<PyCFunction>(VirtualizingLayout_ArrangeOverride), METH_VARARGS, nullptr },
-        { "_initialize_for_context_core", reinterpret_cast<PyCFunction>(VirtualizingLayout_InitializeForContextCore), METH_VARARGS, nullptr },
-        { "_measure_override", reinterpret_cast<PyCFunction>(VirtualizingLayout_MeasureOverride), METH_VARARGS, nullptr },
-        { "_on_items_changed_core", reinterpret_cast<PyCFunction>(VirtualizingLayout_OnItemsChangedCore), METH_VARARGS, nullptr },
-        { "_uninitialize_for_context_core", reinterpret_cast<PyCFunction>(VirtualizingLayout_UninitializeForContextCore), METH_VARARGS, nullptr },
+        { "_arrange_override", reinterpret_cast<PyCFunction>(VirtualizingLayout_ArrangeOverride_protected), METH_VARARGS, nullptr },
+        { "_initialize_for_context_core", reinterpret_cast<PyCFunction>(VirtualizingLayout_InitializeForContextCore_protected), METH_VARARGS, nullptr },
+        { "_measure_override", reinterpret_cast<PyCFunction>(VirtualizingLayout_MeasureOverride_protected), METH_VARARGS, nullptr },
+        { "_on_items_changed_core", reinterpret_cast<PyCFunction>(VirtualizingLayout_OnItemsChangedCore_protected), METH_VARARGS, nullptr },
+        { "_uninitialize_for_context_core", reinterpret_cast<PyCFunction>(VirtualizingLayout_UninitializeForContextCore_protected), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_VirtualizingLayout, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VirtualizingLayout), METH_O | METH_STATIC, nullptr },
         { }};
@@ -60357,7 +60357,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         }
     }
 
-    static PyObject* VirtualizingLayoutContext_GetItemAtCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* VirtualizingLayoutContext_GetItemAtCore_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -60434,18 +60434,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* VirtualizingLayoutContext_GetOrCreateElementAt2(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -60484,7 +60473,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         }
     }
 
-    static PyObject* VirtualizingLayoutContext_GetOrCreateElementAtCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* VirtualizingLayoutContext_GetOrCreateElementAtCore_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -60527,7 +60516,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         }
     }
 
-    static PyObject* VirtualizingLayoutContext_ItemCountCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* VirtualizingLayoutContext_ItemCountCore_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -60567,7 +60556,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         }
     }
 
-    static PyObject* VirtualizingLayoutContext_RealizationRectCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* VirtualizingLayoutContext_RealizationRectCore_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -60650,7 +60639,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         }
     }
 
-    static PyObject* VirtualizingLayoutContext_RecycleElementCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* VirtualizingLayoutContext_RecycleElementCore_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -60878,14 +60867,13 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     static PyMethodDef _methods_VirtualizingLayoutContext[] = {
         { "get_item_at", reinterpret_cast<PyCFunction>(VirtualizingLayoutContext_GetItemAt), METH_VARARGS, nullptr },
-        { "_get_item_at_core", reinterpret_cast<PyCFunction>(VirtualizingLayoutContext_GetItemAtCore), METH_VARARGS, nullptr },
+        { "_get_item_at_core", reinterpret_cast<PyCFunction>(VirtualizingLayoutContext_GetItemAtCore_protected), METH_VARARGS, nullptr },
         { "get_or_create_element_at", reinterpret_cast<PyCFunction>(VirtualizingLayoutContext_GetOrCreateElementAt), METH_VARARGS, nullptr },
-        { "get_or_create_element_at2", reinterpret_cast<PyCFunction>(VirtualizingLayoutContext_GetOrCreateElementAt2), METH_VARARGS, nullptr },
-        { "_get_or_create_element_at_core", reinterpret_cast<PyCFunction>(VirtualizingLayoutContext_GetOrCreateElementAtCore), METH_VARARGS, nullptr },
-        { "_item_count_core", reinterpret_cast<PyCFunction>(VirtualizingLayoutContext_ItemCountCore), METH_VARARGS, nullptr },
-        { "_realization_rect_core", reinterpret_cast<PyCFunction>(VirtualizingLayoutContext_RealizationRectCore), METH_VARARGS, nullptr },
+        { "_get_or_create_element_at_core", reinterpret_cast<PyCFunction>(VirtualizingLayoutContext_GetOrCreateElementAtCore_protected), METH_VARARGS, nullptr },
+        { "_item_count_core", reinterpret_cast<PyCFunction>(VirtualizingLayoutContext_ItemCountCore_protected), METH_VARARGS, nullptr },
+        { "_realization_rect_core", reinterpret_cast<PyCFunction>(VirtualizingLayoutContext_RealizationRectCore_protected), METH_VARARGS, nullptr },
         { "recycle_element", reinterpret_cast<PyCFunction>(VirtualizingLayoutContext_RecycleElement), METH_VARARGS, nullptr },
-        { "_recycle_element_core", reinterpret_cast<PyCFunction>(VirtualizingLayoutContext_RecycleElementCore), METH_VARARGS, nullptr },
+        { "_recycle_element_core", reinterpret_cast<PyCFunction>(VirtualizingLayoutContext_RecycleElementCore_protected), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_VirtualizingLayoutContext, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VirtualizingLayoutContext), METH_O | METH_STATIC, nullptr },
         { }};

@@ -144,3 +144,10 @@ class HttpVersion(enum.IntEnum):
     HTTP20 = 3
 
 winrt.runtime._internals.mixin_sequence(HttpCookieCollection)
+winrt.runtime._internals.alias_method(HttpClient, "get_with_option_async", "get_async")
+winrt.runtime._internals.alias_method(HttpClient, "send_request_with_option_async", "send_request_async")
+winrt.runtime._internals.alias_method(HttpClient, "try_get_async2", "try_get_async")
+winrt.runtime._internals.alias_method(HttpClient, "try_send_request_async2", "try_send_request_async")
+winrt.runtime._internals.alias_method(HttpCookieManager, "set_cookie_with_third_party", "set_cookie")
+winrt.runtime._internals.alias_method(HttpMultipartFormDataContent, "add_with_name", "add")
+winrt.runtime._internals.alias_method(HttpMultipartFormDataContent, "add_with_name_and_file_name", "add")

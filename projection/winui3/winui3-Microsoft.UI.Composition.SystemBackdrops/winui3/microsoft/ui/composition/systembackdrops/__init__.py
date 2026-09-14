@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winui3._winui3_microsoft_ui_composition_systembackdrops import (
     DesktopAcrylicController,
@@ -44,3 +45,7 @@ class SystemBackdropTheme(enum.IntEnum):
     LIGHT = 1
     DARK = 2
 
+winrt.runtime._internals.alias_method(DesktopAcrylicController, "set_target_with_window_id", "set_target")
+winrt.runtime._internals.alias_method(MicaController, "set_target_with_window_id", "set_target")
+winrt.runtime._internals.alias_method(_ISystemBackdropController, "set_target_with_window_id", "set_target")
+winrt.runtime._internals.alias_method(_ISystemBackdropControllerWithTargets, "set_target_with_window_id", "set_target")

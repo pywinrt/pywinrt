@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -87,9 +88,15 @@ class BitmapCodecInformation(winrt.system.Object):
 
 @typing.final
 class BitmapDecoder_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.BitmapDecoder> Windows.Graphics.Imaging.BitmapDecoder::CreateAsync(Windows.Storage.Streams.IRandomAccessStream)
     def create_async(cls, stream: windows_storage_streams.IRandomAccessStream, /) -> windows_foundation.IAsyncOperation[BitmapDecoder]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.BitmapDecoder> Windows.Graphics.Imaging.BitmapDecoder::CreateAsync(System.Guid,Windows.Storage.Streams.IRandomAccessStream)
+    def create_async(cls, decoder_id: _uuid.UUID, stream: windows_storage_streams.IRandomAccessStream, /) -> windows_foundation.IAsyncOperation[BitmapDecoder]: ...
+    # Deprecated alias of create_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.BitmapDecoder> Windows.Graphics.Imaging.BitmapDecoder::CreateAsync(System.Guid,Windows.Storage.Streams.IRandomAccessStream)
+    @deprecated("Use create_async() instead.")
     def create_with_id_async(cls, decoder_id: _uuid.UUID, stream: windows_storage_streams.IRandomAccessStream, /) -> windows_foundation.IAsyncOperation[BitmapDecoder]: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Graphics.Imaging.BitmapCodecInformation> Windows.Graphics.Imaging.BitmapDecoder::GetDecoderInformationEnumerator()
     def get_decoder_information_enumerator(cls) -> typing.Sequence[BitmapCodecInformation]: ...
@@ -125,17 +132,34 @@ class BitmapDecoder_Static(winrt._winrt.IInspectable_Static):
 class BitmapDecoder(winrt.system.Object, IBitmapFrameWithSoftwareBitmap, IBitmapFrame, metaclass=BitmapDecoder_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.BitmapFrame> Windows.Graphics.Imaging.BitmapDecoder::GetFrameAsync(System.UInt32)
     def get_frame_async(self, frame_index: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[BitmapFrame]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.PixelDataProvider> Windows.Graphics.Imaging.BitmapDecoder::GetPixelDataAsync()
     def get_pixel_data_async(self) -> windows_foundation.IAsyncOperation[PixelDataProvider]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.PixelDataProvider> Windows.Graphics.Imaging.BitmapDecoder::GetPixelDataAsync(Windows.Graphics.Imaging.BitmapPixelFormat,Windows.Graphics.Imaging.BitmapAlphaMode,Windows.Graphics.Imaging.BitmapTransform,Windows.Graphics.Imaging.ExifOrientationMode,Windows.Graphics.Imaging.ColorManagementMode)
+    def get_pixel_data_async(self, pixel_format: BitmapPixelFormat, alpha_mode: BitmapAlphaMode, transform: BitmapTransform, exif_orientation_mode: ExifOrientationMode, color_management_mode: ColorManagementMode, /) -> windows_foundation.IAsyncOperation[PixelDataProvider]: ...
+    # Deprecated alias of get_pixel_data_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.PixelDataProvider> Windows.Graphics.Imaging.BitmapDecoder::GetPixelDataAsync(Windows.Graphics.Imaging.BitmapPixelFormat,Windows.Graphics.Imaging.BitmapAlphaMode,Windows.Graphics.Imaging.BitmapTransform,Windows.Graphics.Imaging.ExifOrientationMode,Windows.Graphics.Imaging.ColorManagementMode)
+    @deprecated("Use get_pixel_data_async() instead.")
     def get_pixel_data_transformed_async(self, pixel_format: BitmapPixelFormat, alpha_mode: BitmapAlphaMode, transform: BitmapTransform, exif_orientation_mode: ExifOrientationMode, color_management_mode: ColorManagementMode, /) -> windows_foundation.IAsyncOperation[PixelDataProvider]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.ImageStream> Windows.Graphics.Imaging.BitmapDecoder::GetPreviewAsync()
     def get_preview_async(self) -> windows_foundation.IAsyncOperation[ImageStream]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.SoftwareBitmap> Windows.Graphics.Imaging.BitmapDecoder::GetSoftwareBitmapAsync()
     def get_software_bitmap_async(self) -> windows_foundation.IAsyncOperation[SoftwareBitmap]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.SoftwareBitmap> Windows.Graphics.Imaging.BitmapDecoder::GetSoftwareBitmapAsync(Windows.Graphics.Imaging.BitmapPixelFormat,Windows.Graphics.Imaging.BitmapAlphaMode)
-    def get_software_bitmap_converted_async(self, pixel_format: BitmapPixelFormat, alpha_mode: BitmapAlphaMode, /) -> windows_foundation.IAsyncOperation[SoftwareBitmap]: ...
+    def get_software_bitmap_async(self, pixel_format: BitmapPixelFormat, alpha_mode: BitmapAlphaMode, /) -> windows_foundation.IAsyncOperation[SoftwareBitmap]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.SoftwareBitmap> Windows.Graphics.Imaging.BitmapDecoder::GetSoftwareBitmapAsync(Windows.Graphics.Imaging.BitmapPixelFormat,Windows.Graphics.Imaging.BitmapAlphaMode,Windows.Graphics.Imaging.BitmapTransform,Windows.Graphics.Imaging.ExifOrientationMode,Windows.Graphics.Imaging.ColorManagementMode)
+    def get_software_bitmap_async(self, pixel_format: BitmapPixelFormat, alpha_mode: BitmapAlphaMode, transform: BitmapTransform, exif_orientation_mode: ExifOrientationMode, color_management_mode: ColorManagementMode, /) -> windows_foundation.IAsyncOperation[SoftwareBitmap]: ...
+    # Deprecated alias of get_software_bitmap_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.SoftwareBitmap> Windows.Graphics.Imaging.BitmapDecoder::GetSoftwareBitmapAsync(Windows.Graphics.Imaging.BitmapPixelFormat,Windows.Graphics.Imaging.BitmapAlphaMode)
+    @deprecated("Use get_software_bitmap_async() instead.")
+    def get_software_bitmap_converted_async(self, pixel_format: BitmapPixelFormat, alpha_mode: BitmapAlphaMode, /) -> windows_foundation.IAsyncOperation[SoftwareBitmap]: ...
+    # Deprecated alias of get_software_bitmap_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.SoftwareBitmap> Windows.Graphics.Imaging.BitmapDecoder::GetSoftwareBitmapAsync(Windows.Graphics.Imaging.BitmapPixelFormat,Windows.Graphics.Imaging.BitmapAlphaMode,Windows.Graphics.Imaging.BitmapTransform,Windows.Graphics.Imaging.ExifOrientationMode,Windows.Graphics.Imaging.ColorManagementMode)
+    @deprecated("Use get_software_bitmap_async() instead.")
     def get_software_bitmap_transformed_async(self, pixel_format: BitmapPixelFormat, alpha_mode: BitmapAlphaMode, transform: BitmapTransform, exif_orientation_mode: ExifOrientationMode, color_management_mode: ColorManagementMode, /) -> windows_foundation.IAsyncOperation[SoftwareBitmap]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.ImageStream> Windows.Graphics.Imaging.BitmapDecoder::GetThumbnailAsync()
     def get_thumbnail_async(self) -> windows_foundation.IAsyncOperation[ImageStream]: ...
@@ -178,14 +202,20 @@ class BitmapDecoder(winrt.system.Object, IBitmapFrameWithSoftwareBitmap, IBitmap
 
 @typing.final
 class BitmapEncoder_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.BitmapEncoder> Windows.Graphics.Imaging.BitmapEncoder::CreateAsync(System.Guid,Windows.Storage.Streams.IRandomAccessStream)
     def create_async(cls, encoder_id: _uuid.UUID, stream: windows_storage_streams.IRandomAccessStream, /) -> windows_foundation.IAsyncOperation[BitmapEncoder]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.BitmapEncoder> Windows.Graphics.Imaging.BitmapEncoder::CreateAsync(System.Guid,Windows.Storage.Streams.IRandomAccessStream,Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,Windows.Graphics.Imaging.BitmapTypedValue>>)
+    def create_async(cls, encoder_id: _uuid.UUID, stream: windows_storage_streams.IRandomAccessStream, encoding_options: typing.Union[typing.Mapping[str, BitmapTypedValue], typing.Iterable[windows_foundation_collections.IKeyValuePair[str, BitmapTypedValue]]], /) -> windows_foundation.IAsyncOperation[BitmapEncoder]: ...
+    # Deprecated alias of create_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.BitmapEncoder> Windows.Graphics.Imaging.BitmapEncoder::CreateAsync(System.Guid,Windows.Storage.Streams.IRandomAccessStream,Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,Windows.Graphics.Imaging.BitmapTypedValue>>)
+    @deprecated("Use create_async() instead.")
+    def create_with_encoding_options_async(cls, encoder_id: _uuid.UUID, stream: windows_storage_streams.IRandomAccessStream, encoding_options: typing.Union[typing.Mapping[str, BitmapTypedValue], typing.Iterable[windows_foundation_collections.IKeyValuePair[str, BitmapTypedValue]]], /) -> windows_foundation.IAsyncOperation[BitmapEncoder]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.BitmapEncoder> Windows.Graphics.Imaging.BitmapEncoder::CreateForInPlacePropertyEncodingAsync(Windows.Graphics.Imaging.BitmapDecoder)
     def create_for_in_place_property_encoding_async(cls, bitmap_decoder: BitmapDecoder, /) -> windows_foundation.IAsyncOperation[BitmapEncoder]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.BitmapEncoder> Windows.Graphics.Imaging.BitmapEncoder::CreateForTranscodingAsync(Windows.Storage.Streams.IRandomAccessStream,Windows.Graphics.Imaging.BitmapDecoder)
     def create_for_transcoding_async(cls, stream: windows_storage_streams.IRandomAccessStream, bitmap_decoder: BitmapDecoder, /) -> windows_foundation.IAsyncOperation[BitmapEncoder]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.BitmapEncoder> Windows.Graphics.Imaging.BitmapEncoder::CreateAsync(System.Guid,Windows.Storage.Streams.IRandomAccessStream,Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,Windows.Graphics.Imaging.BitmapTypedValue>>)
-    def create_with_encoding_options_async(cls, encoder_id: _uuid.UUID, stream: windows_storage_streams.IRandomAccessStream, encoding_options: typing.Union[typing.Mapping[str, BitmapTypedValue], typing.Iterable[windows_foundation_collections.IKeyValuePair[str, BitmapTypedValue]]], /) -> windows_foundation.IAsyncOperation[BitmapEncoder]: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Graphics.Imaging.BitmapCodecInformation> Windows.Graphics.Imaging.BitmapEncoder::GetEncoderInformationEnumerator()
     def get_encoder_information_enumerator(cls) -> typing.Sequence[BitmapCodecInformation]: ...
     # System.Guid Windows.Graphics.Imaging.BitmapEncoder::get_BmpEncoderId()
@@ -214,9 +244,15 @@ class BitmapEncoder_Static(winrt._winrt.IInspectable_Static):
 class BitmapEncoder(winrt.system.Object, metaclass=BitmapEncoder_Static):
     # Windows.Foundation.IAsyncAction Windows.Graphics.Imaging.BitmapEncoder::FlushAsync()
     def flush_async(self) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Graphics.Imaging.BitmapEncoder::GoToNextFrameAsync()
     def go_to_next_frame_async(self) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Graphics.Imaging.BitmapEncoder::GoToNextFrameAsync(Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,Windows.Graphics.Imaging.BitmapTypedValue>>)
+    def go_to_next_frame_async(self, encoding_options: typing.Union[typing.Mapping[str, BitmapTypedValue], typing.Iterable[windows_foundation_collections.IKeyValuePair[str, BitmapTypedValue]]], /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of go_to_next_frame_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Graphics.Imaging.BitmapEncoder::GoToNextFrameAsync(Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,Windows.Graphics.Imaging.BitmapTypedValue>>)
+    @deprecated("Use go_to_next_frame_async() instead.")
     def go_to_next_frame_with_encoding_options_async(self, encoding_options: typing.Union[typing.Mapping[str, BitmapTypedValue], typing.Iterable[windows_foundation_collections.IKeyValuePair[str, BitmapTypedValue]]], /) -> windows_foundation.IAsyncAction: ...
     # System.Void Windows.Graphics.Imaging.BitmapEncoder::SetPixelData(Windows.Graphics.Imaging.BitmapPixelFormat,Windows.Graphics.Imaging.BitmapAlphaMode,System.UInt32,System.UInt32,System.Double,System.Double,System.Byte[])
     def set_pixel_data(self, pixel_format: BitmapPixelFormat, alpha_mode: BitmapAlphaMode, width: winrt.system.UInt32, height: winrt.system.UInt32, dpi_x: winrt.system.Double, dpi_y: winrt.system.Double, pixels: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> None: ...
@@ -255,15 +291,32 @@ class BitmapEncoder(winrt.system.Object, metaclass=BitmapEncoder_Static):
 
 @typing.final
 class BitmapFrame(winrt.system.Object, IBitmapFrameWithSoftwareBitmap, IBitmapFrame):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.PixelDataProvider> Windows.Graphics.Imaging.BitmapFrame::GetPixelDataAsync()
     def get_pixel_data_async(self) -> windows_foundation.IAsyncOperation[PixelDataProvider]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.PixelDataProvider> Windows.Graphics.Imaging.BitmapFrame::GetPixelDataAsync(Windows.Graphics.Imaging.BitmapPixelFormat,Windows.Graphics.Imaging.BitmapAlphaMode,Windows.Graphics.Imaging.BitmapTransform,Windows.Graphics.Imaging.ExifOrientationMode,Windows.Graphics.Imaging.ColorManagementMode)
+    def get_pixel_data_async(self, pixel_format: BitmapPixelFormat, alpha_mode: BitmapAlphaMode, transform: BitmapTransform, exif_orientation_mode: ExifOrientationMode, color_management_mode: ColorManagementMode, /) -> windows_foundation.IAsyncOperation[PixelDataProvider]: ...
+    # Deprecated alias of get_pixel_data_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.PixelDataProvider> Windows.Graphics.Imaging.BitmapFrame::GetPixelDataAsync(Windows.Graphics.Imaging.BitmapPixelFormat,Windows.Graphics.Imaging.BitmapAlphaMode,Windows.Graphics.Imaging.BitmapTransform,Windows.Graphics.Imaging.ExifOrientationMode,Windows.Graphics.Imaging.ColorManagementMode)
+    @deprecated("Use get_pixel_data_async() instead.")
     def get_pixel_data_transformed_async(self, pixel_format: BitmapPixelFormat, alpha_mode: BitmapAlphaMode, transform: BitmapTransform, exif_orientation_mode: ExifOrientationMode, color_management_mode: ColorManagementMode, /) -> windows_foundation.IAsyncOperation[PixelDataProvider]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.SoftwareBitmap> Windows.Graphics.Imaging.BitmapFrame::GetSoftwareBitmapAsync()
     def get_software_bitmap_async(self) -> windows_foundation.IAsyncOperation[SoftwareBitmap]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.SoftwareBitmap> Windows.Graphics.Imaging.BitmapFrame::GetSoftwareBitmapAsync(Windows.Graphics.Imaging.BitmapPixelFormat,Windows.Graphics.Imaging.BitmapAlphaMode)
-    def get_software_bitmap_converted_async(self, pixel_format: BitmapPixelFormat, alpha_mode: BitmapAlphaMode, /) -> windows_foundation.IAsyncOperation[SoftwareBitmap]: ...
+    def get_software_bitmap_async(self, pixel_format: BitmapPixelFormat, alpha_mode: BitmapAlphaMode, /) -> windows_foundation.IAsyncOperation[SoftwareBitmap]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.SoftwareBitmap> Windows.Graphics.Imaging.BitmapFrame::GetSoftwareBitmapAsync(Windows.Graphics.Imaging.BitmapPixelFormat,Windows.Graphics.Imaging.BitmapAlphaMode,Windows.Graphics.Imaging.BitmapTransform,Windows.Graphics.Imaging.ExifOrientationMode,Windows.Graphics.Imaging.ColorManagementMode)
+    def get_software_bitmap_async(self, pixel_format: BitmapPixelFormat, alpha_mode: BitmapAlphaMode, transform: BitmapTransform, exif_orientation_mode: ExifOrientationMode, color_management_mode: ColorManagementMode, /) -> windows_foundation.IAsyncOperation[SoftwareBitmap]: ...
+    # Deprecated alias of get_software_bitmap_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.SoftwareBitmap> Windows.Graphics.Imaging.BitmapFrame::GetSoftwareBitmapAsync(Windows.Graphics.Imaging.BitmapPixelFormat,Windows.Graphics.Imaging.BitmapAlphaMode)
+    @deprecated("Use get_software_bitmap_async() instead.")
+    def get_software_bitmap_converted_async(self, pixel_format: BitmapPixelFormat, alpha_mode: BitmapAlphaMode, /) -> windows_foundation.IAsyncOperation[SoftwareBitmap]: ...
+    # Deprecated alias of get_software_bitmap_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.SoftwareBitmap> Windows.Graphics.Imaging.BitmapFrame::GetSoftwareBitmapAsync(Windows.Graphics.Imaging.BitmapPixelFormat,Windows.Graphics.Imaging.BitmapAlphaMode,Windows.Graphics.Imaging.BitmapTransform,Windows.Graphics.Imaging.ExifOrientationMode,Windows.Graphics.Imaging.ColorManagementMode)
+    @deprecated("Use get_software_bitmap_async() instead.")
     def get_software_bitmap_transformed_async(self, pixel_format: BitmapPixelFormat, alpha_mode: BitmapAlphaMode, transform: BitmapTransform, exif_orientation_mode: ExifOrientationMode, color_management_mode: ColorManagementMode, /) -> windows_foundation.IAsyncOperation[SoftwareBitmap]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.ImageStream> Windows.Graphics.Imaging.BitmapFrame::GetThumbnailAsync()
     def get_thumbnail_async(self) -> windows_foundation.IAsyncOperation[ImageStream]: ...
@@ -430,19 +483,37 @@ class PixelDataProvider(winrt.system.Object):
 
 @typing.final
 class SoftwareBitmap_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Graphics.Imaging.SoftwareBitmap Windows.Graphics.Imaging.SoftwareBitmap::Convert(Windows.Graphics.Imaging.SoftwareBitmap,Windows.Graphics.Imaging.BitmapPixelFormat)
     def convert(cls, source: SoftwareBitmap, format: BitmapPixelFormat, /) -> SoftwareBitmap: ...
+    @typing.overload
     # Windows.Graphics.Imaging.SoftwareBitmap Windows.Graphics.Imaging.SoftwareBitmap::Convert(Windows.Graphics.Imaging.SoftwareBitmap,Windows.Graphics.Imaging.BitmapPixelFormat,Windows.Graphics.Imaging.BitmapAlphaMode)
+    def convert(cls, source: SoftwareBitmap, format: BitmapPixelFormat, alpha: BitmapAlphaMode, /) -> SoftwareBitmap: ...
+    # Deprecated alias of convert() for pywinrt v3.x compatibility.
+    # Windows.Graphics.Imaging.SoftwareBitmap Windows.Graphics.Imaging.SoftwareBitmap::Convert(Windows.Graphics.Imaging.SoftwareBitmap,Windows.Graphics.Imaging.BitmapPixelFormat,Windows.Graphics.Imaging.BitmapAlphaMode)
+    @deprecated("Use convert() instead.")
     def convert_with_alpha(cls, source: SoftwareBitmap, format: BitmapPixelFormat, alpha: BitmapAlphaMode, /) -> SoftwareBitmap: ...
     # Windows.Graphics.Imaging.SoftwareBitmap Windows.Graphics.Imaging.SoftwareBitmap::Copy(Windows.Graphics.Imaging.SoftwareBitmap)
     def copy(cls, source: SoftwareBitmap, /) -> SoftwareBitmap: ...
+    @typing.overload
     # Windows.Graphics.Imaging.SoftwareBitmap Windows.Graphics.Imaging.SoftwareBitmap::CreateCopyFromBuffer(Windows.Storage.Streams.IBuffer,Windows.Graphics.Imaging.BitmapPixelFormat,System.Int32,System.Int32)
     def create_copy_from_buffer(cls, source: winrt.system.Buffer, format: BitmapPixelFormat, width: winrt.system.Int32, height: winrt.system.Int32, /) -> SoftwareBitmap: ...
+    @typing.overload
+    # Windows.Graphics.Imaging.SoftwareBitmap Windows.Graphics.Imaging.SoftwareBitmap::CreateCopyFromBuffer(Windows.Storage.Streams.IBuffer,Windows.Graphics.Imaging.BitmapPixelFormat,System.Int32,System.Int32,Windows.Graphics.Imaging.BitmapAlphaMode)
+    def create_copy_from_buffer(cls, source: winrt.system.Buffer, format: BitmapPixelFormat, width: winrt.system.Int32, height: winrt.system.Int32, alpha: BitmapAlphaMode, /) -> SoftwareBitmap: ...
+    # Deprecated alias of create_copy_from_buffer() for pywinrt v3.x compatibility.
+    # Windows.Graphics.Imaging.SoftwareBitmap Windows.Graphics.Imaging.SoftwareBitmap::CreateCopyFromBuffer(Windows.Storage.Streams.IBuffer,Windows.Graphics.Imaging.BitmapPixelFormat,System.Int32,System.Int32,Windows.Graphics.Imaging.BitmapAlphaMode)
+    @deprecated("Use create_copy_from_buffer() instead.")
+    def create_copy_with_alpha_from_buffer(cls, source: winrt.system.Buffer, format: BitmapPixelFormat, width: winrt.system.Int32, height: winrt.system.Int32, alpha: BitmapAlphaMode, /) -> SoftwareBitmap: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.SoftwareBitmap> Windows.Graphics.Imaging.SoftwareBitmap::CreateCopyFromSurfaceAsync(Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface)
     def create_copy_from_surface_async(cls, surface: windows_graphics_directx_direct3d11.IDirect3DSurface, /) -> windows_foundation.IAsyncOperation[SoftwareBitmap]: ...
-    # Windows.Graphics.Imaging.SoftwareBitmap Windows.Graphics.Imaging.SoftwareBitmap::CreateCopyFromBuffer(Windows.Storage.Streams.IBuffer,Windows.Graphics.Imaging.BitmapPixelFormat,System.Int32,System.Int32,Windows.Graphics.Imaging.BitmapAlphaMode)
-    def create_copy_with_alpha_from_buffer(cls, source: winrt.system.Buffer, format: BitmapPixelFormat, width: winrt.system.Int32, height: winrt.system.Int32, alpha: BitmapAlphaMode, /) -> SoftwareBitmap: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.SoftwareBitmap> Windows.Graphics.Imaging.SoftwareBitmap::CreateCopyFromSurfaceAsync(Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface,Windows.Graphics.Imaging.BitmapAlphaMode)
+    def create_copy_from_surface_async(cls, surface: windows_graphics_directx_direct3d11.IDirect3DSurface, alpha: BitmapAlphaMode, /) -> windows_foundation.IAsyncOperation[SoftwareBitmap]: ...
+    # Deprecated alias of create_copy_from_surface_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.SoftwareBitmap> Windows.Graphics.Imaging.SoftwareBitmap::CreateCopyFromSurfaceAsync(Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface,Windows.Graphics.Imaging.BitmapAlphaMode)
+    @deprecated("Use create_copy_from_surface_async() instead.")
     def create_copy_with_alpha_from_surface_async(cls, surface: windows_graphics_directx_direct3d11.IDirect3DSurface, alpha: BitmapAlphaMode, /) -> windows_foundation.IAsyncOperation[SoftwareBitmap]: ...
 
 @typing.final
@@ -497,11 +568,17 @@ class SoftwareBitmap(winrt.system.Object, windows_foundation.IClosable, metaclas
 class _IBitmapFrame: ...
 
 class IBitmapFrame(winrt._winrt.IInspectable):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.PixelDataProvider> Windows.Graphics.Imaging.IBitmapFrame::GetPixelDataAsync()
     @abstractmethod
     def get_pixel_data_async(self) -> windows_foundation.IAsyncOperation[PixelDataProvider]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.PixelDataProvider> Windows.Graphics.Imaging.IBitmapFrame::GetPixelDataAsync(Windows.Graphics.Imaging.BitmapPixelFormat,Windows.Graphics.Imaging.BitmapAlphaMode,Windows.Graphics.Imaging.BitmapTransform,Windows.Graphics.Imaging.ExifOrientationMode,Windows.Graphics.Imaging.ColorManagementMode)
     @abstractmethod
+    def get_pixel_data_async(self, pixel_format: BitmapPixelFormat, alpha_mode: BitmapAlphaMode, transform: BitmapTransform, exif_orientation_mode: ExifOrientationMode, color_management_mode: ColorManagementMode, /) -> windows_foundation.IAsyncOperation[PixelDataProvider]: ...
+    # Deprecated alias of get_pixel_data_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.PixelDataProvider> Windows.Graphics.Imaging.IBitmapFrame::GetPixelDataAsync(Windows.Graphics.Imaging.BitmapPixelFormat,Windows.Graphics.Imaging.BitmapAlphaMode,Windows.Graphics.Imaging.BitmapTransform,Windows.Graphics.Imaging.ExifOrientationMode,Windows.Graphics.Imaging.ColorManagementMode)
+    @deprecated("Use get_pixel_data_async() instead.")
     def get_pixel_data_transformed_async(self, pixel_format: BitmapPixelFormat, alpha_mode: BitmapAlphaMode, transform: BitmapTransform, exif_orientation_mode: ExifOrientationMode, color_management_mode: ColorManagementMode, /) -> windows_foundation.IAsyncOperation[PixelDataProvider]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.ImageStream> Windows.Graphics.Imaging.IBitmapFrame::GetThumbnailAsync()
     @abstractmethod
@@ -547,14 +624,25 @@ class IBitmapFrame(winrt._winrt.IInspectable):
 class _IBitmapFrameWithSoftwareBitmap: ...
 
 class IBitmapFrameWithSoftwareBitmap(IBitmapFrame, winrt._winrt.IInspectable):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.SoftwareBitmap> Windows.Graphics.Imaging.IBitmapFrameWithSoftwareBitmap::GetSoftwareBitmapAsync()
     @abstractmethod
     def get_software_bitmap_async(self) -> windows_foundation.IAsyncOperation[SoftwareBitmap]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.SoftwareBitmap> Windows.Graphics.Imaging.IBitmapFrameWithSoftwareBitmap::GetSoftwareBitmapAsync(Windows.Graphics.Imaging.BitmapPixelFormat,Windows.Graphics.Imaging.BitmapAlphaMode)
     @abstractmethod
-    def get_software_bitmap_converted_async(self, pixel_format: BitmapPixelFormat, alpha_mode: BitmapAlphaMode, /) -> windows_foundation.IAsyncOperation[SoftwareBitmap]: ...
+    def get_software_bitmap_async(self, pixel_format: BitmapPixelFormat, alpha_mode: BitmapAlphaMode, /) -> windows_foundation.IAsyncOperation[SoftwareBitmap]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.SoftwareBitmap> Windows.Graphics.Imaging.IBitmapFrameWithSoftwareBitmap::GetSoftwareBitmapAsync(Windows.Graphics.Imaging.BitmapPixelFormat,Windows.Graphics.Imaging.BitmapAlphaMode,Windows.Graphics.Imaging.BitmapTransform,Windows.Graphics.Imaging.ExifOrientationMode,Windows.Graphics.Imaging.ColorManagementMode)
     @abstractmethod
+    def get_software_bitmap_async(self, pixel_format: BitmapPixelFormat, alpha_mode: BitmapAlphaMode, transform: BitmapTransform, exif_orientation_mode: ExifOrientationMode, color_management_mode: ColorManagementMode, /) -> windows_foundation.IAsyncOperation[SoftwareBitmap]: ...
+    # Deprecated alias of get_software_bitmap_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.SoftwareBitmap> Windows.Graphics.Imaging.IBitmapFrameWithSoftwareBitmap::GetSoftwareBitmapAsync(Windows.Graphics.Imaging.BitmapPixelFormat,Windows.Graphics.Imaging.BitmapAlphaMode)
+    @deprecated("Use get_software_bitmap_async() instead.")
+    def get_software_bitmap_converted_async(self, pixel_format: BitmapPixelFormat, alpha_mode: BitmapAlphaMode, /) -> windows_foundation.IAsyncOperation[SoftwareBitmap]: ...
+    # Deprecated alias of get_software_bitmap_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.SoftwareBitmap> Windows.Graphics.Imaging.IBitmapFrameWithSoftwareBitmap::GetSoftwareBitmapAsync(Windows.Graphics.Imaging.BitmapPixelFormat,Windows.Graphics.Imaging.BitmapAlphaMode,Windows.Graphics.Imaging.BitmapTransform,Windows.Graphics.Imaging.ExifOrientationMode,Windows.Graphics.Imaging.ColorManagementMode)
+    @deprecated("Use get_software_bitmap_async() instead.")
     def get_software_bitmap_transformed_async(self, pixel_format: BitmapPixelFormat, alpha_mode: BitmapAlphaMode, transform: BitmapTransform, exif_orientation_mode: ExifOrientationMode, color_management_mode: ColorManagementMode, /) -> windows_foundation.IAsyncOperation[SoftwareBitmap]: ...
 
 @typing.final

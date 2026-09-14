@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -82,11 +83,22 @@ class SpatialRay:
 
 @typing.final
 class SpatialAnchor_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.Perception.Spatial.SpatialAnchor Windows.Perception.Spatial.SpatialAnchor::TryCreateRelativeTo(Windows.Perception.Spatial.SpatialCoordinateSystem)
     def try_create_relative_to(cls, coordinate_system: SpatialCoordinateSystem, /) -> typing.Optional[SpatialAnchor]: ...
-    # Windows.Perception.Spatial.SpatialAnchor Windows.Perception.Spatial.SpatialAnchor::TryCreateRelativeTo(Windows.Perception.Spatial.SpatialCoordinateSystem,Windows.Foundation.Numerics.Vector3,Windows.Foundation.Numerics.Quaternion)
-    def try_create_with_position_and_orientation_relative_to(cls, coordinate_system: SpatialCoordinateSystem, position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], orientation: typing.Union[windows_foundation_numerics.Quaternion, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> typing.Optional[SpatialAnchor]: ...
+    @typing.overload
     # Windows.Perception.Spatial.SpatialAnchor Windows.Perception.Spatial.SpatialAnchor::TryCreateRelativeTo(Windows.Perception.Spatial.SpatialCoordinateSystem,Windows.Foundation.Numerics.Vector3)
+    def try_create_relative_to(cls, coordinate_system: SpatialCoordinateSystem, position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> typing.Optional[SpatialAnchor]: ...
+    @typing.overload
+    # Windows.Perception.Spatial.SpatialAnchor Windows.Perception.Spatial.SpatialAnchor::TryCreateRelativeTo(Windows.Perception.Spatial.SpatialCoordinateSystem,Windows.Foundation.Numerics.Vector3,Windows.Foundation.Numerics.Quaternion)
+    def try_create_relative_to(cls, coordinate_system: SpatialCoordinateSystem, position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], orientation: typing.Union[windows_foundation_numerics.Quaternion, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> typing.Optional[SpatialAnchor]: ...
+    # Deprecated alias of try_create_relative_to() for pywinrt v3.x compatibility.
+    # Windows.Perception.Spatial.SpatialAnchor Windows.Perception.Spatial.SpatialAnchor::TryCreateRelativeTo(Windows.Perception.Spatial.SpatialCoordinateSystem,Windows.Foundation.Numerics.Vector3,Windows.Foundation.Numerics.Quaternion)
+    @deprecated("Use try_create_relative_to() instead.")
+    def try_create_with_position_and_orientation_relative_to(cls, coordinate_system: SpatialCoordinateSystem, position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], orientation: typing.Union[windows_foundation_numerics.Quaternion, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> typing.Optional[SpatialAnchor]: ...
+    # Deprecated alias of try_create_relative_to() for pywinrt v3.x compatibility.
+    # Windows.Perception.Spatial.SpatialAnchor Windows.Perception.Spatial.SpatialAnchor::TryCreateRelativeTo(Windows.Perception.Spatial.SpatialCoordinateSystem,Windows.Foundation.Numerics.Vector3)
+    @deprecated("Use try_create_relative_to() instead.")
     def try_create_with_position_relative_to(cls, coordinate_system: SpatialCoordinateSystem, position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> typing.Optional[SpatialAnchor]: ...
 
 @typing.final
@@ -224,6 +236,10 @@ class SpatialEntityRemovedEventArgs(winrt.system.Object):
 @typing.final
 class SpatialEntityStore_Static(winrt._winrt.IInspectable_Static):
     # Windows.Perception.Spatial.SpatialEntityStore Windows.Perception.Spatial.SpatialEntityStore::TryGet(Windows.System.RemoteSystems.RemoteSystemSession)
+    def try_get(cls, session: windows_system_remotesystems.RemoteSystemSession, /) -> typing.Optional[SpatialEntityStore]: ...
+    # Deprecated alias of try_get() for pywinrt v3.x compatibility.
+    # Windows.Perception.Spatial.SpatialEntityStore Windows.Perception.Spatial.SpatialEntityStore::TryGet(Windows.System.RemoteSystems.RemoteSystemSession)
+    @deprecated("Use try_get() instead.")
     def try_get_for_remote_system_session(cls, session: windows_system_remotesystems.RemoteSystemSession, /) -> typing.Optional[SpatialEntityStore]: ...
     # System.Boolean Windows.Perception.Spatial.SpatialEntityStore::get_IsSupported()
     @_property
@@ -304,21 +320,53 @@ class SpatialLocator_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class SpatialLocator(winrt.system.Object, metaclass=SpatialLocator_Static):
+    @typing.overload
     # Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference Windows.Perception.Spatial.SpatialLocator::CreateAttachedFrameOfReferenceAtCurrentHeading()
     def create_attached_frame_of_reference_at_current_heading(self) -> SpatialLocatorAttachedFrameOfReference: ...
+    @typing.overload
     # Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference Windows.Perception.Spatial.SpatialLocator::CreateAttachedFrameOfReferenceAtCurrentHeading(Windows.Foundation.Numerics.Vector3)
-    def create_attached_frame_of_reference_at_current_heading_with_position(self, relative_position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> SpatialLocatorAttachedFrameOfReference: ...
+    def create_attached_frame_of_reference_at_current_heading(self, relative_position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> SpatialLocatorAttachedFrameOfReference: ...
+    @typing.overload
     # Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference Windows.Perception.Spatial.SpatialLocator::CreateAttachedFrameOfReferenceAtCurrentHeading(Windows.Foundation.Numerics.Vector3,Windows.Foundation.Numerics.Quaternion)
-    def create_attached_frame_of_reference_at_current_heading_with_position_and_orientation(self, relative_position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], relative_orientation: typing.Union[windows_foundation_numerics.Quaternion, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> SpatialLocatorAttachedFrameOfReference: ...
+    def create_attached_frame_of_reference_at_current_heading(self, relative_position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], relative_orientation: typing.Union[windows_foundation_numerics.Quaternion, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> SpatialLocatorAttachedFrameOfReference: ...
+    @typing.overload
     # Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference Windows.Perception.Spatial.SpatialLocator::CreateAttachedFrameOfReferenceAtCurrentHeading(Windows.Foundation.Numerics.Vector3,Windows.Foundation.Numerics.Quaternion,System.Double)
+    def create_attached_frame_of_reference_at_current_heading(self, relative_position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], relative_orientation: typing.Union[windows_foundation_numerics.Quaternion, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], relative_heading_in_radians: winrt.system.Double, /) -> SpatialLocatorAttachedFrameOfReference: ...
+    # Deprecated alias of create_attached_frame_of_reference_at_current_heading() for pywinrt v3.x compatibility.
+    # Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference Windows.Perception.Spatial.SpatialLocator::CreateAttachedFrameOfReferenceAtCurrentHeading(Windows.Foundation.Numerics.Vector3)
+    @deprecated("Use create_attached_frame_of_reference_at_current_heading() instead.")
+    def create_attached_frame_of_reference_at_current_heading_with_position(self, relative_position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> SpatialLocatorAttachedFrameOfReference: ...
+    # Deprecated alias of create_attached_frame_of_reference_at_current_heading() for pywinrt v3.x compatibility.
+    # Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference Windows.Perception.Spatial.SpatialLocator::CreateAttachedFrameOfReferenceAtCurrentHeading(Windows.Foundation.Numerics.Vector3,Windows.Foundation.Numerics.Quaternion)
+    @deprecated("Use create_attached_frame_of_reference_at_current_heading() instead.")
+    def create_attached_frame_of_reference_at_current_heading_with_position_and_orientation(self, relative_position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], relative_orientation: typing.Union[windows_foundation_numerics.Quaternion, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> SpatialLocatorAttachedFrameOfReference: ...
+    # Deprecated alias of create_attached_frame_of_reference_at_current_heading() for pywinrt v3.x compatibility.
+    # Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference Windows.Perception.Spatial.SpatialLocator::CreateAttachedFrameOfReferenceAtCurrentHeading(Windows.Foundation.Numerics.Vector3,Windows.Foundation.Numerics.Quaternion,System.Double)
+    @deprecated("Use create_attached_frame_of_reference_at_current_heading() instead.")
     def create_attached_frame_of_reference_at_current_heading_with_position_and_orientation_and_relative_heading(self, relative_position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], relative_orientation: typing.Union[windows_foundation_numerics.Quaternion, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], relative_heading_in_radians: winrt.system.Double, /) -> SpatialLocatorAttachedFrameOfReference: ...
+    @typing.overload
     # Windows.Perception.Spatial.SpatialStationaryFrameOfReference Windows.Perception.Spatial.SpatialLocator::CreateStationaryFrameOfReferenceAtCurrentLocation()
     def create_stationary_frame_of_reference_at_current_location(self) -> SpatialStationaryFrameOfReference: ...
+    @typing.overload
     # Windows.Perception.Spatial.SpatialStationaryFrameOfReference Windows.Perception.Spatial.SpatialLocator::CreateStationaryFrameOfReferenceAtCurrentLocation(Windows.Foundation.Numerics.Vector3)
-    def create_stationary_frame_of_reference_at_current_location_with_position(self, relative_position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> SpatialStationaryFrameOfReference: ...
+    def create_stationary_frame_of_reference_at_current_location(self, relative_position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> SpatialStationaryFrameOfReference: ...
+    @typing.overload
     # Windows.Perception.Spatial.SpatialStationaryFrameOfReference Windows.Perception.Spatial.SpatialLocator::CreateStationaryFrameOfReferenceAtCurrentLocation(Windows.Foundation.Numerics.Vector3,Windows.Foundation.Numerics.Quaternion)
-    def create_stationary_frame_of_reference_at_current_location_with_position_and_orientation(self, relative_position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], relative_orientation: typing.Union[windows_foundation_numerics.Quaternion, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> SpatialStationaryFrameOfReference: ...
+    def create_stationary_frame_of_reference_at_current_location(self, relative_position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], relative_orientation: typing.Union[windows_foundation_numerics.Quaternion, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> SpatialStationaryFrameOfReference: ...
+    @typing.overload
     # Windows.Perception.Spatial.SpatialStationaryFrameOfReference Windows.Perception.Spatial.SpatialLocator::CreateStationaryFrameOfReferenceAtCurrentLocation(Windows.Foundation.Numerics.Vector3,Windows.Foundation.Numerics.Quaternion,System.Double)
+    def create_stationary_frame_of_reference_at_current_location(self, relative_position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], relative_orientation: typing.Union[windows_foundation_numerics.Quaternion, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], relative_heading_in_radians: winrt.system.Double, /) -> SpatialStationaryFrameOfReference: ...
+    # Deprecated alias of create_stationary_frame_of_reference_at_current_location() for pywinrt v3.x compatibility.
+    # Windows.Perception.Spatial.SpatialStationaryFrameOfReference Windows.Perception.Spatial.SpatialLocator::CreateStationaryFrameOfReferenceAtCurrentLocation(Windows.Foundation.Numerics.Vector3)
+    @deprecated("Use create_stationary_frame_of_reference_at_current_location() instead.")
+    def create_stationary_frame_of_reference_at_current_location_with_position(self, relative_position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> SpatialStationaryFrameOfReference: ...
+    # Deprecated alias of create_stationary_frame_of_reference_at_current_location() for pywinrt v3.x compatibility.
+    # Windows.Perception.Spatial.SpatialStationaryFrameOfReference Windows.Perception.Spatial.SpatialLocator::CreateStationaryFrameOfReferenceAtCurrentLocation(Windows.Foundation.Numerics.Vector3,Windows.Foundation.Numerics.Quaternion)
+    @deprecated("Use create_stationary_frame_of_reference_at_current_location() instead.")
+    def create_stationary_frame_of_reference_at_current_location_with_position_and_orientation(self, relative_position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], relative_orientation: typing.Union[windows_foundation_numerics.Quaternion, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> SpatialStationaryFrameOfReference: ...
+    # Deprecated alias of create_stationary_frame_of_reference_at_current_location() for pywinrt v3.x compatibility.
+    # Windows.Perception.Spatial.SpatialStationaryFrameOfReference Windows.Perception.Spatial.SpatialLocator::CreateStationaryFrameOfReferenceAtCurrentLocation(Windows.Foundation.Numerics.Vector3,Windows.Foundation.Numerics.Quaternion,System.Double)
+    @deprecated("Use create_stationary_frame_of_reference_at_current_location() instead.")
     def create_stationary_frame_of_reference_at_current_location_with_position_and_orientation_and_relative_heading(self, relative_position: typing.Union[windows_foundation_numerics.Vector3, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]], relative_orientation: typing.Union[windows_foundation_numerics.Quaternion, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], relative_heading_in_radians: winrt.system.Double, /) -> SpatialStationaryFrameOfReference: ...
     # Windows.Perception.Spatial.SpatialLocation Windows.Perception.Spatial.SpatialLocator::TryLocateAtTimestamp(Windows.Perception.PerceptionTimestamp,Windows.Perception.Spatial.SpatialCoordinateSystem)
     def try_locate_at_timestamp(self, timestamp: windows_perception.PerceptionTimestamp, coordinate_system: SpatialCoordinateSystem, /) -> typing.Optional[SpatialLocation]: ...

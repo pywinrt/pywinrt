@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -64,9 +65,15 @@ class DragOperation(winrt.system.Object, windows_foundation.IClosable):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # System.Void Microsoft.UI.Input.DragDrop.DragOperation::Close()
     def close(self) -> None: ...
+    @typing.overload
     # System.Void Microsoft.UI.Input.DragDrop.DragOperation::SetDragUIContentFromSoftwareBitmap(Windows.Graphics.Imaging.SoftwareBitmap)
     def set_drag_ui_content_from_software_bitmap(self, bitmap: windows_graphics_imaging.SoftwareBitmap, /) -> None: ...
+    @typing.overload
     # System.Void Microsoft.UI.Input.DragDrop.DragOperation::SetDragUIContentFromSoftwareBitmap(Windows.Graphics.Imaging.SoftwareBitmap,Windows.Foundation.Point)
+    def set_drag_ui_content_from_software_bitmap(self, bitmap: windows_graphics_imaging.SoftwareBitmap, anchor_point: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], /) -> None: ...
+    # Deprecated alias of set_drag_ui_content_from_software_bitmap() for pywinrt v3.x compatibility.
+    # System.Void Microsoft.UI.Input.DragDrop.DragOperation::SetDragUIContentFromSoftwareBitmap(Windows.Graphics.Imaging.SoftwareBitmap,Windows.Foundation.Point)
+    @deprecated("Use set_drag_ui_content_from_software_bitmap() instead.")
     def set_drag_ui_content_from_software_bitmap2(self, bitmap: windows_graphics_imaging.SoftwareBitmap, anchor_point: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], /) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.DataTransfer.DataPackageOperation> Microsoft.UI.Input.DragDrop.DragOperation::StartAsync(Microsoft.UI.Input.DragDrop.DragDropManager,Microsoft.UI.Input.PointerPoint)
     def start_async(self, initial_target: DragDropManager, initial_pointer_point: microsoft_ui_input.PointerPoint, /) -> windows_foundation.IAsyncOperation[windows_applicationmodel_datatransfer.DataPackageOperation]: ...
@@ -90,9 +97,15 @@ class DragOperation(winrt.system.Object, windows_foundation.IClosable):
 class DragUIOverride(winrt.system.Object):
     # System.Void Microsoft.UI.Input.DragDrop.DragUIOverride::Clear()
     def clear(self) -> None: ...
+    @typing.overload
     # System.Void Microsoft.UI.Input.DragDrop.DragUIOverride::SetContentFromSoftwareBitmap(Windows.Graphics.Imaging.SoftwareBitmap)
     def set_content_from_software_bitmap(self, bitmap: windows_graphics_imaging.SoftwareBitmap, /) -> None: ...
+    @typing.overload
     # System.Void Microsoft.UI.Input.DragDrop.DragUIOverride::SetContentFromSoftwareBitmap(Windows.Graphics.Imaging.SoftwareBitmap,Windows.Foundation.Point)
+    def set_content_from_software_bitmap(self, bitmap: windows_graphics_imaging.SoftwareBitmap, anchor_point: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], /) -> None: ...
+    # Deprecated alias of set_content_from_software_bitmap() for pywinrt v3.x compatibility.
+    # System.Void Microsoft.UI.Input.DragDrop.DragUIOverride::SetContentFromSoftwareBitmap(Windows.Graphics.Imaging.SoftwareBitmap,Windows.Foundation.Point)
+    @deprecated("Use set_content_from_software_bitmap() instead.")
     def set_content_from_software_bitmap2(self, bitmap: windows_graphics_imaging.SoftwareBitmap, anchor_point: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], /) -> None: ...
     # System.Boolean Microsoft.UI.Input.DragDrop.DragUIOverride::get_IsGlyphVisible()
     @_property

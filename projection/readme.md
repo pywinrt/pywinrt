@@ -94,6 +94,36 @@ When calling a projected method, Python/WinRT will compare the number of provide
 number of parameters each overload accepts. Providing too many or too few parameters will results in
 a type error. Providing parameters of the wrong type will also result in a type error.
 
+``` python
+folder.create_file_async("spam.txt")
+folder.create_file_async("spam.txt", CreationCollisionOption.REPLACE_EXISTING)
+```
+
+Some WinRT types have several overloads that take the same number of parameters. Those can't be
+told apart by the number of parameters, so each one is projected using the unique name it has in
+the WinRT metadata. One of them still keeps the shared name: an overload that has no unique name in
+the metadata, otherwise the one that the metadata marks as the default overload.
+
+``` python
+# Union(Rect, Point), the default overload
+RectHelper.union(rect, point)
+# Union(Rect, Rect)
+RectHelper.union_with_rect(rect, other_rect)
+```
+
+Overridable methods - the methods that a Python subclass of a composable type implements - are the
+exception to the rule. Python methods can't be overloaded, so each overload of an overridable
+method keeps its own unique name from the metadata.
+
+Python/WinRT v3.x used the unique name for every overload that had one, even when the overload
+could have been called by the number of parameters. Those names still work, but calling one raises
+a `DeprecationWarning` and they will be removed in a future release.
+
+``` python
+# deprecated, use folder.create_file_async("spam.txt") instead
+folder.create_file_async_overload_default_options("spam.txt")
+```
+
 ### Async Coroutines
 
 WinRT type methods that return an IAsync* interface are projected as coroutines in Python. This means

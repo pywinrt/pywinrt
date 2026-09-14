@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -70,14 +71,20 @@ class KnownSimpleHapticsControllerWaveforms(winrt.system.Object, metaclass=Known
 
 @typing.final
 class SimpleHapticsController(winrt.system.Object):
+    @typing.overload
     # System.Void Windows.Devices.Haptics.SimpleHapticsController::SendHapticFeedback(Windows.Devices.Haptics.SimpleHapticsControllerFeedback)
     def send_haptic_feedback(self, feedback: SimpleHapticsControllerFeedback, /) -> None: ...
+    @typing.overload
+    # System.Void Windows.Devices.Haptics.SimpleHapticsController::SendHapticFeedback(Windows.Devices.Haptics.SimpleHapticsControllerFeedback,System.Double)
+    def send_haptic_feedback(self, feedback: SimpleHapticsControllerFeedback, intensity: winrt.system.Double, /) -> None: ...
+    # Deprecated alias of send_haptic_feedback() for pywinrt v3.x compatibility.
+    # System.Void Windows.Devices.Haptics.SimpleHapticsController::SendHapticFeedback(Windows.Devices.Haptics.SimpleHapticsControllerFeedback,System.Double)
+    @deprecated("Use send_haptic_feedback() instead.")
+    def send_haptic_feedback_with_intensity(self, feedback: SimpleHapticsControllerFeedback, intensity: winrt.system.Double, /) -> None: ...
     # System.Void Windows.Devices.Haptics.SimpleHapticsController::SendHapticFeedbackForDuration(Windows.Devices.Haptics.SimpleHapticsControllerFeedback,System.Double,Windows.Foundation.TimeSpan)
     def send_haptic_feedback_for_duration(self, feedback: SimpleHapticsControllerFeedback, intensity: winrt.system.Double, play_duration: datetime.timedelta, /) -> None: ...
     # System.Void Windows.Devices.Haptics.SimpleHapticsController::SendHapticFeedbackForPlayCount(Windows.Devices.Haptics.SimpleHapticsControllerFeedback,System.Double,System.Int32,Windows.Foundation.TimeSpan)
     def send_haptic_feedback_for_play_count(self, feedback: SimpleHapticsControllerFeedback, intensity: winrt.system.Double, play_count: winrt.system.Int32, replay_pause_interval: datetime.timedelta, /) -> None: ...
-    # System.Void Windows.Devices.Haptics.SimpleHapticsController::SendHapticFeedback(Windows.Devices.Haptics.SimpleHapticsControllerFeedback,System.Double)
-    def send_haptic_feedback_with_intensity(self, feedback: SimpleHapticsControllerFeedback, intensity: winrt.system.Double, /) -> None: ...
     # System.Void Windows.Devices.Haptics.SimpleHapticsController::StopFeedback()
     def stop_feedback(self) -> None: ...
     # System.String Windows.Devices.Haptics.SimpleHapticsController::get_Id()

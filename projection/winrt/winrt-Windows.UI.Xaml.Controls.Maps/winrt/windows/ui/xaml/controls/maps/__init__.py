@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_ui_xaml_controls_maps import (
     MapZoomLevelRange,
@@ -225,3 +226,18 @@ class MapWatermarkMode(enum.IntEnum):
     AUTOMATIC = 0
     ON = 1
 
+winrt.runtime._internals.alias_method(MapControl, "find_map_elements_at_offset_with_radius", "find_map_elements_at_offset")
+winrt.runtime._internals.alias_method(MapControl, "get_location_from_offset_with_reference_system", "get_location_from_offset")
+winrt.runtime._internals.alias_method(MapControl, "try_get_location_from_offset_with_reference_system", "try_get_location_from_offset")
+winrt.runtime._internals.alias_method(MapControl, "try_set_scene_with_animation_async", "try_set_scene_async")
+winrt.runtime._internals.alias_method(MapControl, "try_set_view_with_center_and_zoom_async", "try_set_view_async")
+winrt.runtime._internals.alias_method(MapControl, "try_set_view_with_center_async", "try_set_view_async")
+winrt.runtime._internals.alias_method(MapControl, "try_set_view_with_center_zoom_heading_and_pitch_async", "try_set_view_async")
+winrt.runtime._internals.alias_method(MapControl, "try_set_view_with_center_zoom_heading_pitch_and_animation_async", "try_set_view_async")
+winrt.runtime._internals.alias_static_method(MapModel3D, "create_from_3mf_with_shading_option_async", "create_from_3mf_async")
+winrt.runtime._internals.alias_static_method(MapScene, "create_from_bounding_box_with_heading_and_pitch", "create_from_bounding_box")
+winrt.runtime._internals.alias_static_method(MapScene, "create_from_location_with_heading_and_pitch", "create_from_location")
+winrt.runtime._internals.alias_static_method(MapScene, "create_from_location_and_radius_with_heading_and_pitch", "create_from_location_and_radius")
+winrt.runtime._internals.alias_static_method(MapScene, "create_from_locations_with_heading_and_pitch", "create_from_locations")
+winrt.runtime._internals.alias_static_method(StreetsidePanorama, "find_nearby_with_location_and_radius_async", "find_nearby_async")
+winrt.runtime._internals.alias_static_method(StreetsidePanorama, "find_nearby_with_location_async", "find_nearby_async")

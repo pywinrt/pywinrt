@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -47,9 +48,15 @@ class DateTimeFormatter(winrt.system.Object, metaclass=DateTimeFormatter_Static)
     def __new__(cls: typing.Type[Self], year_format: YearFormat, month_format: MonthFormat, day_format: DayFormat, day_of_week_format: DayOfWeekFormat, hour_format: HourFormat, minute_format: MinuteFormat, second_format: SecondFormat, languages: typing.Iterable[str]) -> Self: ...
     @typing.overload
     def __new__(cls: typing.Type[Self], year_format: YearFormat, month_format: MonthFormat, day_format: DayFormat, day_of_week_format: DayOfWeekFormat, hour_format: HourFormat, minute_format: MinuteFormat, second_format: SecondFormat, languages: typing.Iterable[str], geographic_region: str, calendar: str, clock: str) -> Self: ...
+    @typing.overload
     # System.String Windows.Globalization.DateTimeFormatting.DateTimeFormatter::Format(Windows.Foundation.DateTime)
     def format(self, value: datetime.datetime, /) -> str: ...
+    @typing.overload
     # System.String Windows.Globalization.DateTimeFormatting.DateTimeFormatter::Format(Windows.Foundation.DateTime,System.String)
+    def format(self, datetime: datetime.datetime, time_zone_id: str, /) -> str: ...
+    # Deprecated alias of format() for pywinrt v3.x compatibility.
+    # System.String Windows.Globalization.DateTimeFormatting.DateTimeFormatter::Format(Windows.Foundation.DateTime,System.String)
+    @deprecated("Use format() instead.")
     def format_using_time_zone(self, datetime: datetime.datetime, time_zone_id: str, /) -> str: ...
     # System.String Windows.Globalization.DateTimeFormatting.DateTimeFormatter::get_NumeralSystem()
     @_property

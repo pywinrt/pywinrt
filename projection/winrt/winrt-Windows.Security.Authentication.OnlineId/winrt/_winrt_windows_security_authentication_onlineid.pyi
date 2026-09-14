@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -20,9 +21,15 @@ Self = typing.TypeVar('Self')
 @typing.final
 class OnlineIdAuthenticator(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
+    @typing.overload
     # Windows.Security.Authentication.OnlineId.UserAuthenticationOperation Windows.Security.Authentication.OnlineId.OnlineIdAuthenticator::AuthenticateUserAsync(Windows.Security.Authentication.OnlineId.OnlineIdServiceTicketRequest)
     def authenticate_user_async(self, request: OnlineIdServiceTicketRequest, /) -> UserAuthenticationOperation: ...
+    @typing.overload
     # Windows.Security.Authentication.OnlineId.UserAuthenticationOperation Windows.Security.Authentication.OnlineId.OnlineIdAuthenticator::AuthenticateUserAsync(Windows.Foundation.Collections.IIterable`1<Windows.Security.Authentication.OnlineId.OnlineIdServiceTicketRequest>,Windows.Security.Authentication.OnlineId.CredentialPromptType)
+    def authenticate_user_async(self, requests: typing.Iterable[OnlineIdServiceTicketRequest], credential_prompt_type: CredentialPromptType, /) -> UserAuthenticationOperation: ...
+    # Deprecated alias of authenticate_user_async() for pywinrt v3.x compatibility.
+    # Windows.Security.Authentication.OnlineId.UserAuthenticationOperation Windows.Security.Authentication.OnlineId.OnlineIdAuthenticator::AuthenticateUserAsync(Windows.Foundation.Collections.IIterable`1<Windows.Security.Authentication.OnlineId.OnlineIdServiceTicketRequest>,Windows.Security.Authentication.OnlineId.CredentialPromptType)
+    @deprecated("Use authenticate_user_async() instead.")
     def authenticate_user_async_advanced(self, requests: typing.Iterable[OnlineIdServiceTicketRequest], credential_prompt_type: CredentialPromptType, /) -> UserAuthenticationOperation: ...
     # Windows.Security.Authentication.OnlineId.SignOutUserOperation Windows.Security.Authentication.OnlineId.OnlineIdAuthenticator::SignOutUserAsync()
     def sign_out_user_async(self) -> SignOutUserOperation: ...

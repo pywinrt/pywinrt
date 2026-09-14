@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -65,9 +66,19 @@ class PopupMenu(winrt.system.Object):
     def __new__(cls: typing.Type[Self]) -> Self: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.UI.Popups.IUICommand> Windows.UI.Popups.PopupMenu::ShowAsync(Windows.Foundation.Point)
     def show_async(self, invocation_point: typing.Union[windows_foundation.Point, typing.Tuple[winrt.system.Single, winrt.system.Single]], /) -> windows_foundation.IAsyncOperation[IUICommand]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.UI.Popups.IUICommand> Windows.UI.Popups.PopupMenu::ShowForSelectionAsync(Windows.Foundation.Rect)
-    def show_async_with_rect(self, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> windows_foundation.IAsyncOperation[IUICommand]: ...
+    def show_for_selection_async(self, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> windows_foundation.IAsyncOperation[IUICommand]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.UI.Popups.IUICommand> Windows.UI.Popups.PopupMenu::ShowForSelectionAsync(Windows.Foundation.Rect,Windows.UI.Popups.Placement)
+    def show_for_selection_async(self, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], preferred_placement: Placement, /) -> windows_foundation.IAsyncOperation[IUICommand]: ...
+    # Deprecated alias of show_for_selection_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.UI.Popups.IUICommand> Windows.UI.Popups.PopupMenu::ShowForSelectionAsync(Windows.Foundation.Rect)
+    @deprecated("Use show_for_selection_async() instead.")
+    def show_async_with_rect(self, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> windows_foundation.IAsyncOperation[IUICommand]: ...
+    # Deprecated alias of show_for_selection_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.UI.Popups.IUICommand> Windows.UI.Popups.PopupMenu::ShowForSelectionAsync(Windows.Foundation.Rect,Windows.UI.Popups.Placement)
+    @deprecated("Use show_for_selection_async() instead.")
     def show_async_with_rect_and_placement(self, selection: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], preferred_placement: Placement, /) -> windows_foundation.IAsyncOperation[IUICommand]: ...
     # Windows.Foundation.Collections.IVector`1<Windows.UI.Popups.IUICommand> Windows.UI.Popups.PopupMenu::get_Commands()
     @_property

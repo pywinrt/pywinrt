@@ -1993,49 +1993,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
-        if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"RecognizeAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkStrokeContainer>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::UI::Input::Inking::InkRecognitionTarget>(args, 1);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.RecognizeAsync(param0, param1);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* InkManager_RecognizeAsync2(py::wrapper::Windows::UI::Input::Inking::InkManager* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
         if (arg_count == 1)
         {
             try
@@ -2059,6 +2016,38 @@ namespace py::cpp::Windows::UI::Input::Inking
                 {
                     auto _gil = release_gil();
                     return self->obj.RecognizeAsync(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"RecognizeAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkStrokeContainer>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Input::Inking::InkRecognitionTarget>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RecognizeAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -2468,7 +2457,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         { "process_pointer_up", reinterpret_cast<PyCFunction>(InkManager_ProcessPointerUp), METH_VARARGS, nullptr },
         { "process_pointer_update", reinterpret_cast<PyCFunction>(InkManager_ProcessPointerUpdate), METH_VARARGS, nullptr },
         { "recognize_async", reinterpret_cast<PyCFunction>(InkManager_RecognizeAsync), METH_VARARGS, nullptr },
-        { "recognize_async2", reinterpret_cast<PyCFunction>(InkManager_RecognizeAsync2), METH_VARARGS, nullptr },
         { "save_async", reinterpret_cast<PyCFunction>(InkManager_SaveAsync), METH_VARARGS, nullptr },
         { "select_with_line", reinterpret_cast<PyCFunction>(InkManager_SelectWithLine), METH_VARARGS, nullptr },
         { "select_with_poly_line", reinterpret_cast<PyCFunction>(InkManager_SelectWithPolyLine), METH_VARARGS, nullptr },
@@ -7464,18 +7452,7 @@ namespace py::cpp::Windows::UI::Input::Inking
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* InkStrokeContainer_SaveWithFormatAsync(py::wrapper::Windows::UI::Input::Inking::InkStrokeContainer* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -7710,7 +7687,6 @@ namespace py::cpp::Windows::UI::Input::Inking
         { "move_selected", reinterpret_cast<PyCFunction>(InkStrokeContainer_MoveSelected), METH_VARARGS, nullptr },
         { "paste_from_clipboard", reinterpret_cast<PyCFunction>(InkStrokeContainer_PasteFromClipboard), METH_VARARGS, nullptr },
         { "save_async", reinterpret_cast<PyCFunction>(InkStrokeContainer_SaveAsync), METH_VARARGS, nullptr },
-        { "save_with_format_async", reinterpret_cast<PyCFunction>(InkStrokeContainer_SaveWithFormatAsync), METH_VARARGS, nullptr },
         { "select_with_line", reinterpret_cast<PyCFunction>(InkStrokeContainer_SelectWithLine), METH_VARARGS, nullptr },
         { "select_with_poly_line", reinterpret_cast<PyCFunction>(InkStrokeContainer_SelectWithPolyLine), METH_VARARGS, nullptr },
         { "update_recognition_results", reinterpret_cast<PyCFunction>(InkStrokeContainer_UpdateRecognitionResults), METH_VARARGS, nullptr },

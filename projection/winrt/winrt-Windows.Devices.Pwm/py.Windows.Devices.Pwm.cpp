@@ -178,18 +178,7 @@ namespace py::cpp::Windows::Devices::Pwm
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PwmController_GetDeviceSelectorFromFriendlyName(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -491,7 +480,6 @@ namespace py::cpp::Windows::Devices::Pwm
         { "get_controllers_async", reinterpret_cast<PyCFunction>(PwmController_GetControllersAsync), METH_VARARGS, nullptr },
         { "get_default_async", reinterpret_cast<PyCFunction>(PwmController_GetDefaultAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(PwmController_GetDeviceSelector), METH_VARARGS, nullptr },
-        { "get_device_selector_from_friendly_name", reinterpret_cast<PyCFunction>(PwmController_GetDeviceSelectorFromFriendlyName), METH_VARARGS, nullptr },
         { }};
 
     static PyType_Slot type_slots_PwmController_Static[] = 

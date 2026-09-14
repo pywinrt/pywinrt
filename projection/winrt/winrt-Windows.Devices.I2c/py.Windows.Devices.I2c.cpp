@@ -646,18 +646,7 @@ namespace py::cpp::Windows::Devices::I2c
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* I2cDevice_GetDeviceSelectorFromFriendlyName(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -1098,7 +1087,6 @@ namespace py::cpp::Windows::Devices::I2c
     static PyMethodDef methods_I2cDevice_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(I2cDevice_FromIdAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(I2cDevice_GetDeviceSelector), METH_VARARGS, nullptr },
-        { "get_device_selector_from_friendly_name", reinterpret_cast<PyCFunction>(I2cDevice_GetDeviceSelectorFromFriendlyName), METH_VARARGS, nullptr },
         { }};
 
     static PyType_Slot type_slots_I2cDevice_Static[] = 
@@ -1211,18 +1199,7 @@ namespace py::cpp::Windows::Devices::I2c
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* II2cDeviceStatics_GetDeviceSelectorFromFriendlyName(py::wrapper::Windows::Devices::I2c::II2cDeviceStatics* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -1263,7 +1240,6 @@ namespace py::cpp::Windows::Devices::I2c
     static PyMethodDef _methods_II2cDeviceStatics[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(II2cDeviceStatics_FromIdAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(II2cDeviceStatics_GetDeviceSelector), METH_VARARGS, nullptr },
-        { "get_device_selector_from_friendly_name", reinterpret_cast<PyCFunction>(II2cDeviceStatics_GetDeviceSelectorFromFriendlyName), METH_VARARGS, nullptr },
         { }};
 
     static PyGetSetDef _getset_II2cDeviceStatics[] = {
@@ -1375,7 +1351,17 @@ namespace py::cpp::Windows::Devices::I2c
                 py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_device_selector_from_friendly_name")};
                 if (!method)
                 {
-                    throw python_exception();
+                    if (!PyErr_ExceptionMatches(PyExc_AttributeError))
+                    {
+                        throw python_exception();
+                    }
+
+                    PyErr_Clear();
+                    method.attach(PyObject_GetAttrString(self.get(), "get_device_selector"));
+                    if (!method)
+                    {
+                        throw python_exception();
+                    }
                 }
 
                 py::pyobj_handle py_param0{py::convert(param0)};

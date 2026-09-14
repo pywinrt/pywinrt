@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winui3._winui3_microsoft_ui_windowing import (
     AppWindow,
@@ -86,3 +87,10 @@ class TitleBarTheme(enum.IntEnum):
     LIGHT = 2
     DARK = 3
 
+winrt.runtime._internals.alias_static_method(AppWindow, "create_with_dispatcher_queue", "create")
+winrt.runtime._internals.alias_static_method(AppWindow, "create_with_presenter", "create")
+winrt.runtime._internals.alias_static_method(AppWindow, "create_with_presenter_and_owner", "create")
+winrt.runtime._internals.alias_method(AppWindow, "move_and_resize_relative_to_display_area", "move_and_resize")
+winrt.runtime._internals.alias_method(AppWindow, "show_with_activation", "show")
+winrt.runtime._internals.alias_method(OverlappedPresenter, "minimize_with_activation", "minimize")
+winrt.runtime._internals.alias_method(OverlappedPresenter, "restore_with_activation", "restore")

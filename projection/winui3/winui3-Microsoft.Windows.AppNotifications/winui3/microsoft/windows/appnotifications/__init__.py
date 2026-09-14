@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winui3._winui3_microsoft_windows_appnotifications import (
     AppNotification,
@@ -37,3 +38,4 @@ class AppNotificationSetting(enum.IntEnum):
     DISABLED_BY_MANIFEST = 4
     UNSUPPORTED = 5
 
+winrt.runtime._internals.alias_method(AppNotificationManager, "update_async2", "update_async")

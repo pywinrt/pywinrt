@@ -170,7 +170,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         Py_DECREF(tp);
     }
 
-    static PyObject* MarkupExtension_ProvideValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* MarkupExtension_ProvideValue_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -210,7 +210,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         }
     }
 
-    static PyObject* MarkupExtension_ProvideValueWithIXamlServiceProvider(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    static PyObject* MarkupExtension_ProvideValueWithIXamlServiceProvider_protected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -277,8 +277,8 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
     }
 
     static PyMethodDef _methods_MarkupExtension[] = {
-        { "_provide_value", reinterpret_cast<PyCFunction>(MarkupExtension_ProvideValue), METH_VARARGS, nullptr },
-        { "_provide_value_with_ixaml_service_provider", reinterpret_cast<PyCFunction>(MarkupExtension_ProvideValueWithIXamlServiceProvider), METH_VARARGS, nullptr },
+        { "_provide_value", reinterpret_cast<PyCFunction>(MarkupExtension_ProvideValue_protected), METH_VARARGS, nullptr },
+        { "_provide_value_with_ixaml_service_provider", reinterpret_cast<PyCFunction>(MarkupExtension_ProvideValueWithIXamlServiceProvider_protected), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MarkupExtension, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MarkupExtension), METH_O | METH_STATIC, nullptr },
         { }};

@@ -498,18 +498,7 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* BitmapDecoder_CreateWithIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -663,18 +652,7 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* BitmapDecoder_GetPixelDataTransformedAsync(py::wrapper::Windows::Graphics::Imaging::BitmapDecoder* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 5)
+        else if (arg_count == 5)
         {
             try
             {
@@ -789,18 +767,7 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* BitmapDecoder_GetSoftwareBitmapConvertedAsync(py::wrapper::Windows::Graphics::Imaging::BitmapDecoder* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -832,18 +799,7 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* BitmapDecoder_GetSoftwareBitmapTransformedAsync(py::wrapper::Windows::Graphics::Imaging::BitmapDecoder* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 5)
+        else if (arg_count == 5)
         {
             try
             {
@@ -1582,11 +1538,8 @@ namespace py::cpp::Windows::Graphics::Imaging
     static PyMethodDef _methods_BitmapDecoder[] = {
         { "get_frame_async", reinterpret_cast<PyCFunction>(BitmapDecoder_GetFrameAsync), METH_VARARGS, nullptr },
         { "get_pixel_data_async", reinterpret_cast<PyCFunction>(BitmapDecoder_GetPixelDataAsync), METH_VARARGS, nullptr },
-        { "get_pixel_data_transformed_async", reinterpret_cast<PyCFunction>(BitmapDecoder_GetPixelDataTransformedAsync), METH_VARARGS, nullptr },
         { "get_preview_async", reinterpret_cast<PyCFunction>(BitmapDecoder_GetPreviewAsync), METH_VARARGS, nullptr },
         { "get_software_bitmap_async", reinterpret_cast<PyCFunction>(BitmapDecoder_GetSoftwareBitmapAsync), METH_VARARGS, nullptr },
-        { "get_software_bitmap_converted_async", reinterpret_cast<PyCFunction>(BitmapDecoder_GetSoftwareBitmapConvertedAsync), METH_VARARGS, nullptr },
-        { "get_software_bitmap_transformed_async", reinterpret_cast<PyCFunction>(BitmapDecoder_GetSoftwareBitmapTransformedAsync), METH_VARARGS, nullptr },
         { "get_thumbnail_async", reinterpret_cast<PyCFunction>(BitmapDecoder_GetThumbnailAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BitmapDecoder, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BitmapDecoder), METH_O | METH_STATIC, nullptr },
@@ -1635,7 +1588,6 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyMethodDef methods_BitmapDecoder_Static[] = {
         { "create_async", reinterpret_cast<PyCFunction>(BitmapDecoder_CreateAsync), METH_VARARGS, nullptr },
-        { "create_with_id_async", reinterpret_cast<PyCFunction>(BitmapDecoder_CreateWithIdAsync), METH_VARARGS, nullptr },
         { "get_decoder_information_enumerator", reinterpret_cast<PyCFunction>(BitmapDecoder_GetDecoderInformationEnumerator), METH_VARARGS, nullptr },
         { }};
 
@@ -1699,6 +1651,39 @@ namespace py::cpp::Windows::Graphics::Imaging
                 {
                     auto _gil = release_gil();
                     return winrt::Windows::Graphics::Imaging::BitmapEncoder::CreateAsync(param0, param1);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"CreateAsync", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::guid>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Graphics::Imaging::BitmapTypedValue>>>(args, 2);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Imaging::BitmapEncoder::CreateAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -1784,50 +1769,6 @@ namespace py::cpp::Windows::Graphics::Imaging
                 {
                     auto _gil = release_gil();
                     return winrt::Windows::Graphics::Imaging::BitmapEncoder::CreateForTranscodingAsync(param0, param1);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* BitmapEncoder_CreateWithEncodingOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"CreateAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::guid>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Graphics::Imaging::BitmapTypedValue>>>(args, 2);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return winrt::Windows::Graphics::Imaging::BitmapEncoder::CreateAsync(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -1956,18 +1897,7 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* BitmapEncoder_GoToNextFrameWithEncodingOptionsAsync(py::wrapper::Windows::Graphics::Imaging::BitmapEncoder* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -2661,7 +2591,6 @@ namespace py::cpp::Windows::Graphics::Imaging
     static PyMethodDef _methods_BitmapEncoder[] = {
         { "flush_async", reinterpret_cast<PyCFunction>(BitmapEncoder_FlushAsync), METH_VARARGS, nullptr },
         { "go_to_next_frame_async", reinterpret_cast<PyCFunction>(BitmapEncoder_GoToNextFrameAsync), METH_VARARGS, nullptr },
-        { "go_to_next_frame_with_encoding_options_async", reinterpret_cast<PyCFunction>(BitmapEncoder_GoToNextFrameWithEncodingOptionsAsync), METH_VARARGS, nullptr },
         { "set_pixel_data", reinterpret_cast<PyCFunction>(BitmapEncoder_SetPixelData), METH_VARARGS, nullptr },
         { "set_software_bitmap", reinterpret_cast<PyCFunction>(BitmapEncoder_SetSoftwareBitmap), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BitmapEncoder, METH_O | METH_STATIC, nullptr },
@@ -2706,7 +2635,6 @@ namespace py::cpp::Windows::Graphics::Imaging
         { "create_async", reinterpret_cast<PyCFunction>(BitmapEncoder_CreateAsync), METH_VARARGS, nullptr },
         { "create_for_in_place_property_encoding_async", reinterpret_cast<PyCFunction>(BitmapEncoder_CreateForInPlacePropertyEncodingAsync), METH_VARARGS, nullptr },
         { "create_for_transcoding_async", reinterpret_cast<PyCFunction>(BitmapEncoder_CreateForTranscodingAsync), METH_VARARGS, nullptr },
-        { "create_with_encoding_options_async", reinterpret_cast<PyCFunction>(BitmapEncoder_CreateWithEncodingOptionsAsync), METH_VARARGS, nullptr },
         { "get_encoder_information_enumerator", reinterpret_cast<PyCFunction>(BitmapEncoder_GetEncoderInformationEnumerator), METH_VARARGS, nullptr },
         { }};
 
@@ -2775,18 +2703,7 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* BitmapFrame_GetPixelDataTransformedAsync(py::wrapper::Windows::Graphics::Imaging::BitmapFrame* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 5)
+        else if (arg_count == 5)
         {
             try
             {
@@ -2861,18 +2778,7 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* BitmapFrame_GetSoftwareBitmapConvertedAsync(py::wrapper::Windows::Graphics::Imaging::BitmapFrame* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -2904,18 +2810,7 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* BitmapFrame_GetSoftwareBitmapTransformedAsync(py::wrapper::Windows::Graphics::Imaging::BitmapFrame* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 5)
+        else if (arg_count == 5)
         {
             try
             {
@@ -3293,10 +3188,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyMethodDef _methods_BitmapFrame[] = {
         { "get_pixel_data_async", reinterpret_cast<PyCFunction>(BitmapFrame_GetPixelDataAsync), METH_VARARGS, nullptr },
-        { "get_pixel_data_transformed_async", reinterpret_cast<PyCFunction>(BitmapFrame_GetPixelDataTransformedAsync), METH_VARARGS, nullptr },
         { "get_software_bitmap_async", reinterpret_cast<PyCFunction>(BitmapFrame_GetSoftwareBitmapAsync), METH_VARARGS, nullptr },
-        { "get_software_bitmap_converted_async", reinterpret_cast<PyCFunction>(BitmapFrame_GetSoftwareBitmapConvertedAsync), METH_VARARGS, nullptr },
-        { "get_software_bitmap_transformed_async", reinterpret_cast<PyCFunction>(BitmapFrame_GetSoftwareBitmapTransformedAsync), METH_VARARGS, nullptr },
         { "get_thumbnail_async", reinterpret_cast<PyCFunction>(BitmapFrame_GetThumbnailAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BitmapFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BitmapFrame), METH_O | METH_STATIC, nullptr },
@@ -5655,18 +5547,7 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* SoftwareBitmap_ConvertWithAlpha(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -5915,6 +5796,41 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
         }
+        else if (arg_count == 5)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"CreateCopyFromBuffer", 5);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>(args, 1);
+                auto param2 = py::convert_to<int32_t>(args, 2);
+                auto param3 = py::convert_to<int32_t>(args, 3);
+                auto param4 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapAlphaMode>(args, 4);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Graphics::Imaging::SoftwareBitmap::CreateCopyFromBuffer(param0, param1, param2, param3, param4);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -5957,64 +5873,7 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* SoftwareBitmap_CreateCopyWithAlphaFromBuffer(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 5)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"CreateCopyFromBuffer", 5);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(5);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>(args, 1);
-                auto param2 = py::convert_to<int32_t>(args, 2);
-                auto param3 = py::convert_to<int32_t>(args, 3);
-                auto param4 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapAlphaMode>(args, 4);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return winrt::Windows::Graphics::Imaging::SoftwareBitmap::CreateCopyFromBuffer(param0, param1, param2, param3, param4);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* SoftwareBitmap_CreateCopyWithAlphaFromSurfaceAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -6512,12 +6371,9 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyMethodDef methods_SoftwareBitmap_Static[] = {
         { "convert", reinterpret_cast<PyCFunction>(SoftwareBitmap_Convert), METH_VARARGS, nullptr },
-        { "convert_with_alpha", reinterpret_cast<PyCFunction>(SoftwareBitmap_ConvertWithAlpha), METH_VARARGS, nullptr },
         { "copy", reinterpret_cast<PyCFunction>(SoftwareBitmap_Copy), METH_VARARGS, nullptr },
         { "create_copy_from_buffer", reinterpret_cast<PyCFunction>(SoftwareBitmap_CreateCopyFromBuffer), METH_VARARGS, nullptr },
         { "create_copy_from_surface_async", reinterpret_cast<PyCFunction>(SoftwareBitmap_CreateCopyFromSurfaceAsync), METH_VARARGS, nullptr },
-        { "create_copy_with_alpha_from_buffer", reinterpret_cast<PyCFunction>(SoftwareBitmap_CreateCopyWithAlphaFromBuffer), METH_VARARGS, nullptr },
-        { "create_copy_with_alpha_from_surface_async", reinterpret_cast<PyCFunction>(SoftwareBitmap_CreateCopyWithAlphaFromSurfaceAsync), METH_VARARGS, nullptr },
         { }};
 
     static PyType_Slot type_slots_SoftwareBitmap_Static[] = 
@@ -6587,18 +6443,7 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* IBitmapFrame_GetPixelDataTransformedAsync(py::wrapper::Windows::Graphics::Imaging::IBitmapFrame* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 5)
+        else if (arg_count == 5)
         {
             try
             {
@@ -6952,7 +6797,6 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyMethodDef _methods_IBitmapFrame[] = {
         { "get_pixel_data_async", reinterpret_cast<PyCFunction>(IBitmapFrame_GetPixelDataAsync), METH_VARARGS, nullptr },
-        { "get_pixel_data_transformed_async", reinterpret_cast<PyCFunction>(IBitmapFrame_GetPixelDataTransformedAsync), METH_VARARGS, nullptr },
         { "get_thumbnail_async", reinterpret_cast<PyCFunction>(IBitmapFrame_GetThumbnailAsync), METH_VARARGS, nullptr },
         { }};
 
@@ -7030,7 +6874,17 @@ namespace py::cpp::Windows::Graphics::Imaging
                 py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_pixel_data_transformed_async")};
                 if (!method)
                 {
-                    throw python_exception();
+                    if (!PyErr_ExceptionMatches(PyExc_AttributeError))
+                    {
+                        throw python_exception();
+                    }
+
+                    PyErr_Clear();
+                    method.attach(PyObject_GetAttrString(self.get(), "get_pixel_data_async"));
+                    if (!method)
+                    {
+                        throw python_exception();
+                    }
                 }
 
                 py::pyobj_handle py_param0{py::convert(param0)};
@@ -7424,18 +7278,7 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* IBitmapFrameWithSoftwareBitmap_GetPixelDataTransformedAsync(py::wrapper::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 5)
+        else if (arg_count == 5)
         {
             try
             {
@@ -7510,18 +7353,7 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* IBitmapFrameWithSoftwareBitmap_GetSoftwareBitmapConvertedAsync(py::wrapper::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -7553,18 +7385,7 @@ namespace py::cpp::Windows::Graphics::Imaging
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* IBitmapFrameWithSoftwareBitmap_GetSoftwareBitmapTransformedAsync(py::wrapper::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 5)
+        else if (arg_count == 5)
         {
             try
             {
@@ -7918,10 +7739,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyMethodDef _methods_IBitmapFrameWithSoftwareBitmap[] = {
         { "get_pixel_data_async", reinterpret_cast<PyCFunction>(IBitmapFrameWithSoftwareBitmap_GetPixelDataAsync), METH_VARARGS, nullptr },
-        { "get_pixel_data_transformed_async", reinterpret_cast<PyCFunction>(IBitmapFrameWithSoftwareBitmap_GetPixelDataTransformedAsync), METH_VARARGS, nullptr },
         { "get_software_bitmap_async", reinterpret_cast<PyCFunction>(IBitmapFrameWithSoftwareBitmap_GetSoftwareBitmapAsync), METH_VARARGS, nullptr },
-        { "get_software_bitmap_converted_async", reinterpret_cast<PyCFunction>(IBitmapFrameWithSoftwareBitmap_GetSoftwareBitmapConvertedAsync), METH_VARARGS, nullptr },
-        { "get_software_bitmap_transformed_async", reinterpret_cast<PyCFunction>(IBitmapFrameWithSoftwareBitmap_GetSoftwareBitmapTransformedAsync), METH_VARARGS, nullptr },
         { "get_thumbnail_async", reinterpret_cast<PyCFunction>(IBitmapFrameWithSoftwareBitmap_GetThumbnailAsync), METH_VARARGS, nullptr },
         { }};
 
@@ -7999,7 +7817,17 @@ namespace py::cpp::Windows::Graphics::Imaging
                 py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_pixel_data_transformed_async")};
                 if (!method)
                 {
-                    throw python_exception();
+                    if (!PyErr_ExceptionMatches(PyExc_AttributeError))
+                    {
+                        throw python_exception();
+                    }
+
+                    PyErr_Clear();
+                    method.attach(PyObject_GetAttrString(self.get(), "get_pixel_data_async"));
+                    if (!method)
+                    {
+                        throw python_exception();
+                    }
                 }
 
                 py::pyobj_handle py_param0{py::convert(param0)};
@@ -8087,7 +7915,17 @@ namespace py::cpp::Windows::Graphics::Imaging
                 py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_software_bitmap_converted_async")};
                 if (!method)
                 {
-                    throw python_exception();
+                    if (!PyErr_ExceptionMatches(PyExc_AttributeError))
+                    {
+                        throw python_exception();
+                    }
+
+                    PyErr_Clear();
+                    method.attach(PyObject_GetAttrString(self.get(), "get_software_bitmap_async"));
+                    if (!method)
+                    {
+                        throw python_exception();
+                    }
                 }
 
                 py::pyobj_handle py_param0{py::convert(param0)};
@@ -8131,7 +7969,17 @@ namespace py::cpp::Windows::Graphics::Imaging
                 py::pyobj_handle method{PyObject_GetAttrString(self.get(), "get_software_bitmap_transformed_async")};
                 if (!method)
                 {
-                    throw python_exception();
+                    if (!PyErr_ExceptionMatches(PyExc_AttributeError))
+                    {
+                        throw python_exception();
+                    }
+
+                    PyErr_Clear();
+                    method.attach(PyObject_GetAttrString(self.get(), "get_software_bitmap_async"));
+                    if (!method)
+                    {
+                        throw python_exception();
+                    }
                 }
 
                 py::pyobj_handle py_param0{py::convert(param0)};

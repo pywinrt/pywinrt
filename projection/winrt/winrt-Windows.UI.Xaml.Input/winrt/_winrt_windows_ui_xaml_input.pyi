@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -161,13 +162,25 @@ class FocusManager_Static(winrt._winrt.IInspectable_Static):
     def find_first_focusable_element(cls, search_scope: windows_ui_xaml.DependencyObject, /) -> windows_ui_xaml.DependencyObject: ...
     # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Input.FocusManager::FindLastFocusableElement(Windows.UI.Xaml.DependencyObject)
     def find_last_focusable_element(cls, search_scope: windows_ui_xaml.DependencyObject, /) -> windows_ui_xaml.DependencyObject: ...
+    @typing.overload
     # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Input.FocusManager::FindNextElement(Windows.UI.Xaml.Input.FocusNavigationDirection)
     def find_next_element(cls, focus_navigation_direction: FocusNavigationDirection, /) -> windows_ui_xaml.DependencyObject: ...
+    @typing.overload
     # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Input.FocusManager::FindNextElement(Windows.UI.Xaml.Input.FocusNavigationDirection,Windows.UI.Xaml.Input.FindNextElementOptions)
+    def find_next_element(cls, focus_navigation_direction: FocusNavigationDirection, focus_navigation_options: FindNextElementOptions, /) -> windows_ui_xaml.DependencyObject: ...
+    # Deprecated alias of find_next_element() for pywinrt v3.x compatibility.
+    # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Input.FocusManager::FindNextElement(Windows.UI.Xaml.Input.FocusNavigationDirection,Windows.UI.Xaml.Input.FindNextElementOptions)
+    @deprecated("Use find_next_element() instead.")
     def find_next_element_with_options(cls, focus_navigation_direction: FocusNavigationDirection, focus_navigation_options: FindNextElementOptions, /) -> windows_ui_xaml.DependencyObject: ...
+    @typing.overload
     # Windows.UI.Xaml.UIElement Windows.UI.Xaml.Input.FocusManager::FindNextFocusableElement(Windows.UI.Xaml.Input.FocusNavigationDirection)
     def find_next_focusable_element(cls, focus_navigation_direction: FocusNavigationDirection, /) -> windows_ui_xaml.UIElement: ...
+    @typing.overload
     # Windows.UI.Xaml.UIElement Windows.UI.Xaml.Input.FocusManager::FindNextFocusableElement(Windows.UI.Xaml.Input.FocusNavigationDirection,Windows.Foundation.Rect)
+    def find_next_focusable_element(cls, focus_navigation_direction: FocusNavigationDirection, hint_rect: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> windows_ui_xaml.UIElement: ...
+    # Deprecated alias of find_next_focusable_element() for pywinrt v3.x compatibility.
+    # Windows.UI.Xaml.UIElement Windows.UI.Xaml.Input.FocusManager::FindNextFocusableElement(Windows.UI.Xaml.Input.FocusNavigationDirection,Windows.Foundation.Rect)
+    @deprecated("Use find_next_focusable_element() instead.")
     def find_next_focusable_element_with_hint(cls, focus_navigation_direction: FocusNavigationDirection, hint_rect: typing.Union[windows_foundation.Rect, typing.Tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> windows_ui_xaml.UIElement: ...
     @typing.overload
     # System.Object Windows.UI.Xaml.Input.FocusManager::GetFocusedElement()
@@ -177,13 +190,25 @@ class FocusManager_Static(winrt._winrt.IInspectable_Static):
     def get_focused_element(cls, xaml_root: windows_ui_xaml.XamlRoot, /) -> winrt.system.Object: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.UI.Xaml.Input.FocusMovementResult> Windows.UI.Xaml.Input.FocusManager::TryFocusAsync(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.FocusState)
     def try_focus_async(cls, element: windows_ui_xaml.DependencyObject, value: windows_ui_xaml.FocusState, /) -> windows_foundation.IAsyncOperation[FocusMovementResult]: ...
+    @typing.overload
     # System.Boolean Windows.UI.Xaml.Input.FocusManager::TryMoveFocus(Windows.UI.Xaml.Input.FocusNavigationDirection)
     def try_move_focus(cls, focus_navigation_direction: FocusNavigationDirection, /) -> bool: ...
+    @typing.overload
+    # System.Boolean Windows.UI.Xaml.Input.FocusManager::TryMoveFocus(Windows.UI.Xaml.Input.FocusNavigationDirection,Windows.UI.Xaml.Input.FindNextElementOptions)
+    def try_move_focus(cls, focus_navigation_direction: FocusNavigationDirection, focus_navigation_options: FindNextElementOptions, /) -> bool: ...
+    # Deprecated alias of try_move_focus() for pywinrt v3.x compatibility.
+    # System.Boolean Windows.UI.Xaml.Input.FocusManager::TryMoveFocus(Windows.UI.Xaml.Input.FocusNavigationDirection,Windows.UI.Xaml.Input.FindNextElementOptions)
+    @deprecated("Use try_move_focus() instead.")
+    def try_move_focus_with_options(cls, focus_navigation_direction: FocusNavigationDirection, focus_navigation_options: FindNextElementOptions, /) -> bool: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.UI.Xaml.Input.FocusMovementResult> Windows.UI.Xaml.Input.FocusManager::TryMoveFocusAsync(Windows.UI.Xaml.Input.FocusNavigationDirection)
     def try_move_focus_async(cls, focus_navigation_direction: FocusNavigationDirection, /) -> windows_foundation.IAsyncOperation[FocusMovementResult]: ...
-    # System.Boolean Windows.UI.Xaml.Input.FocusManager::TryMoveFocus(Windows.UI.Xaml.Input.FocusNavigationDirection,Windows.UI.Xaml.Input.FindNextElementOptions)
-    def try_move_focus_with_options(cls, focus_navigation_direction: FocusNavigationDirection, focus_navigation_options: FindNextElementOptions, /) -> bool: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.UI.Xaml.Input.FocusMovementResult> Windows.UI.Xaml.Input.FocusManager::TryMoveFocusAsync(Windows.UI.Xaml.Input.FocusNavigationDirection,Windows.UI.Xaml.Input.FindNextElementOptions)
+    def try_move_focus_async(cls, focus_navigation_direction: FocusNavigationDirection, focus_navigation_options: FindNextElementOptions, /) -> windows_foundation.IAsyncOperation[FocusMovementResult]: ...
+    # Deprecated alias of try_move_focus_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.UI.Xaml.Input.FocusMovementResult> Windows.UI.Xaml.Input.FocusManager::TryMoveFocusAsync(Windows.UI.Xaml.Input.FocusNavigationDirection,Windows.UI.Xaml.Input.FindNextElementOptions)
+    @deprecated("Use try_move_focus_async() instead.")
     def try_move_focus_with_options_async(cls, focus_navigation_direction: FocusNavigationDirection, focus_navigation_options: FindNextElementOptions, /) -> windows_foundation.IAsyncOperation[FocusMovementResult]: ...
     # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Input.FocusManager::add_GettingFocus(Windows.Foundation.EventHandler`1<Windows.UI.Xaml.Input.GettingFocusEventArgs>)
     def add_getting_focus(cls, handler: windows_foundation.EventHandler[GettingFocusEventArgs], /) -> windows_foundation.EventRegistrationToken: ...

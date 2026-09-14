@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_devices_geolocation import (
     BasicGeoposition,
@@ -103,3 +104,7 @@ class VisitStateChange(enum.IntEnum):
     DEPARTED = 2
     OTHER_MOVEMENT = 3
 
+winrt.runtime._internals.alias_static_method(GeoboundingBox, "try_compute_with_altitude_reference", "try_compute")
+winrt.runtime._internals.alias_static_method(GeoboundingBox, "try_compute_with_altitude_reference_and_spatial_reference", "try_compute")
+winrt.runtime._internals.alias_method(Geolocator, "get_geoposition_async_with_age_and_timeout", "get_geoposition_async")
+winrt.runtime._internals.alias_static_method(Geolocator, "get_geoposition_history_with_duration_async", "get_geoposition_history_async")

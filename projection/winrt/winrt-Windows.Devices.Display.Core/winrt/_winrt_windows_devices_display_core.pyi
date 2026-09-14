@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -413,9 +414,15 @@ class DisplayState(winrt.system.Object):
     def can_connect_target_to_view(self, target: DisplayTarget, view: DisplayView, /) -> bool: ...
     # Windows.Devices.Display.Core.DisplayState Windows.Devices.Display.Core.DisplayState::Clone()
     def clone(self) -> DisplayState: ...
+    @typing.overload
     # Windows.Devices.Display.Core.DisplayPath Windows.Devices.Display.Core.DisplayState::ConnectTarget(Windows.Devices.Display.Core.DisplayTarget)
     def connect_target(self, target: DisplayTarget, /) -> DisplayPath: ...
+    @typing.overload
     # Windows.Devices.Display.Core.DisplayPath Windows.Devices.Display.Core.DisplayState::ConnectTarget(Windows.Devices.Display.Core.DisplayTarget,Windows.Devices.Display.Core.DisplayView)
+    def connect_target(self, target: DisplayTarget, view: DisplayView, /) -> DisplayPath: ...
+    # Deprecated alias of connect_target() for pywinrt v3.x compatibility.
+    # Windows.Devices.Display.Core.DisplayPath Windows.Devices.Display.Core.DisplayState::ConnectTarget(Windows.Devices.Display.Core.DisplayTarget,Windows.Devices.Display.Core.DisplayView)
+    @deprecated("Use connect_target() instead.")
     def connect_target_to_view(self, target: DisplayTarget, view: DisplayView, /) -> DisplayPath: ...
     # System.Void Windows.Devices.Display.Core.DisplayState::DisconnectTarget(Windows.Devices.Display.Core.DisplayTarget)
     def disconnect_target(self, target: DisplayTarget, /) -> None: ...

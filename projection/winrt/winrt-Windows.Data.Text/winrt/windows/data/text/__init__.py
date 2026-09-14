@@ -4,6 +4,7 @@ import enum
 import typing
 import uuid as _uuid
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_data_text import (
     TextSegment,
@@ -91,5 +92,8 @@ class UnicodeNumericType(enum.IntEnum):
     DIGIT = 2
     NUMERIC = 3
 
+winrt.runtime._internals.alias_method(TextConversionGenerator, "get_candidates_with_max_count_async", "get_candidates_async")
+winrt.runtime._internals.alias_method(TextPredictionGenerator, "get_candidates_with_max_count_async", "get_candidates_async")
+winrt.runtime._internals.alias_method(TextPredictionGenerator, "get_candidates_with_parameters_async", "get_candidates_async")
 SelectableWordSegmentsTokenizingHandler = typing.Callable[[typing.Iterable[SelectableWordSegment], typing.Iterable[SelectableWordSegment]], None]
 WordSegmentsTokenizingHandler = typing.Callable[[typing.Iterable[WordSegment], typing.Iterable[WordSegment]], None]

@@ -334,18 +334,7 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* GeoboundingBox_TryComputeWithAltitudeReference(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -377,18 +366,7 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* GeoboundingBox_TryComputeWithAltitudeReferenceAndSpatialReference(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -727,8 +705,6 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyMethodDef methods_GeoboundingBox_Static[] = {
         { "try_compute", reinterpret_cast<PyCFunction>(GeoboundingBox_TryCompute), METH_VARARGS, nullptr },
-        { "try_compute_with_altitude_reference", reinterpret_cast<PyCFunction>(GeoboundingBox_TryComputeWithAltitudeReference), METH_VARARGS, nullptr },
-        { "try_compute_with_altitude_reference_and_spatial_reference", reinterpret_cast<PyCFunction>(GeoboundingBox_TryComputeWithAltitudeReferenceAndSpatialReference), METH_VARARGS, nullptr },
         { }};
 
     static PyType_Slot type_slots_GeoboundingBox_Static[] = 
@@ -1821,18 +1797,7 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* Geolocator_GetGeopositionAsyncWithAgeAndTimeout(py::wrapper::Windows::Devices::Geolocation::Geolocator* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -1906,18 +1871,7 @@ namespace py::cpp::Windows::Devices::Geolocation
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* Geolocator_GetGeopositionHistoryWithDurationAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -2558,7 +2512,6 @@ namespace py::cpp::Windows::Devices::Geolocation
     static PyMethodDef _methods_Geolocator[] = {
         { "allow_fallback_to_consentless_positions", reinterpret_cast<PyCFunction>(Geolocator_AllowFallbackToConsentlessPositions), METH_VARARGS, nullptr },
         { "get_geoposition_async", reinterpret_cast<PyCFunction>(Geolocator_GetGeopositionAsync), METH_VARARGS, nullptr },
-        { "get_geoposition_async_with_age_and_timeout", reinterpret_cast<PyCFunction>(Geolocator_GetGeopositionAsyncWithAgeAndTimeout), METH_VARARGS, nullptr },
         { "add_position_changed", reinterpret_cast<PyCFunction>(Geolocator_add_PositionChanged), METH_O, nullptr },
         { "remove_position_changed", reinterpret_cast<PyCFunction>(Geolocator_remove_PositionChanged), METH_O, nullptr },
         { "add_status_changed", reinterpret_cast<PyCFunction>(Geolocator_add_StatusChanged), METH_O, nullptr },
@@ -2596,7 +2549,6 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyMethodDef methods_Geolocator_Static[] = {
         { "get_geoposition_history_async", reinterpret_cast<PyCFunction>(Geolocator_GetGeopositionHistoryAsync), METH_VARARGS, nullptr },
-        { "get_geoposition_history_with_duration_async", reinterpret_cast<PyCFunction>(Geolocator_GetGeopositionHistoryWithDurationAsync), METH_VARARGS, nullptr },
         { "request_access_async", reinterpret_cast<PyCFunction>(Geolocator_RequestAccessAsync), METH_VARARGS, nullptr },
         { }};
 

@@ -2405,11 +2405,43 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         return nullptr;
     }
 
-    static PyObject* WebAuthenticationCoreManagerHelper_RequestTokenWithUIElementHostingAndWebAccountAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    static PyObject* WebAuthenticationCoreManagerHelper_RequestTokenWithUIElementHostingAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
-        if (arg_count == 3)
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.WebAuthenticationCoreManagerHelper", L"RequestTokenWithUIElementHostingAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Web::Core::WebTokenRequest>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::ApplicationModel::Store::Preview::WebAuthenticationCoreManagerHelper::RequestTokenWithUIElementHostingAsync(param0, param1);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 3)
         {
             try
             {
@@ -2449,49 +2481,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         }
     }
 
-    static PyObject* WebAuthenticationCoreManagerHelper_RequestTokenWithUIElementHostingAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.WebAuthenticationCoreManagerHelper", L"RequestTokenWithUIElementHostingAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Web::Core::WebTokenRequest>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 1);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return winrt::Windows::ApplicationModel::Store::Preview::WebAuthenticationCoreManagerHelper::RequestTokenWithUIElementHostingAsync(param0, param1);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
     static PyMethodDef _methods_WebAuthenticationCoreManagerHelper[] = {
         { }};
 
@@ -2515,7 +2504,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
         { }};
 
     static PyMethodDef methods_WebAuthenticationCoreManagerHelper_Static[] = {
-        { "request_token_with_ui_element_hosting_and_web_account_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManagerHelper_RequestTokenWithUIElementHostingAndWebAccountAsync), METH_VARARGS, nullptr },
         { "request_token_with_ui_element_hosting_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManagerHelper_RequestTokenWithUIElementHostingAsync), METH_VARARGS, nullptr },
         { }};
 

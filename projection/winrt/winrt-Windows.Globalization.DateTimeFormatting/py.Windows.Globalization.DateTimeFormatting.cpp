@@ -197,18 +197,7 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* DateTimeFormatter_FormatUsingTimeZone(py::wrapper::Windows::Globalization::DateTimeFormatting::DateTimeFormatter* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -912,7 +901,6 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
 
     static PyMethodDef _methods_DateTimeFormatter[] = {
         { "format", reinterpret_cast<PyCFunction>(DateTimeFormatter_Format), METH_VARARGS, nullptr },
-        { "format_using_time_zone", reinterpret_cast<PyCFunction>(DateTimeFormatter_FormatUsingTimeZone), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DateTimeFormatter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DateTimeFormatter), METH_O | METH_STATIC, nullptr },
         { }};

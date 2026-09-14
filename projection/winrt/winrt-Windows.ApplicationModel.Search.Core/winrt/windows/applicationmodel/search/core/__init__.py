@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_applicationmodel_search_core import (
     RequestingFocusOnKeyboardInputEventArgs,
@@ -23,3 +24,6 @@ class SearchSuggestionKind(enum.IntEnum):
     RESULT = 1
     SEPARATOR = 2
 
+winrt.runtime._internals.alias_method(SearchSuggestionManager, "add_to_history_with_language", "add_to_history")
+winrt.runtime._internals.alias_method(SearchSuggestionManager, "set_query_with_language", "set_query")
+winrt.runtime._internals.alias_method(SearchSuggestionManager, "set_query_with_search_query_linguistic_details", "set_query")

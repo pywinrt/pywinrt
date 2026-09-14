@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -35,13 +36,25 @@ class DispatcherQueue(winrt.system.Object, metaclass=DispatcherQueue_Static):
     def enqueue_event_loop_exit(self) -> None: ...
     # System.Void Microsoft.UI.Dispatching.DispatcherQueue::EnsureSystemDispatcherQueue()
     def ensure_system_dispatcher_queue(self) -> None: ...
+    @typing.overload
     # System.Void Microsoft.UI.Dispatching.DispatcherQueue::RunEventLoop()
     def run_event_loop(self) -> None: ...
+    @typing.overload
     # System.Void Microsoft.UI.Dispatching.DispatcherQueue::RunEventLoop(Microsoft.UI.Dispatching.DispatcherRunOptions,Microsoft.UI.Dispatching.DispatcherExitDeferral)
+    def run_event_loop(self, options: DispatcherRunOptions, deferral: DispatcherExitDeferral, /) -> None: ...
+    # Deprecated alias of run_event_loop() for pywinrt v3.x compatibility.
+    # System.Void Microsoft.UI.Dispatching.DispatcherQueue::RunEventLoop(Microsoft.UI.Dispatching.DispatcherRunOptions,Microsoft.UI.Dispatching.DispatcherExitDeferral)
+    @deprecated("Use run_event_loop() instead.")
     def run_event_loop_with_options(self, options: DispatcherRunOptions, deferral: DispatcherExitDeferral, /) -> None: ...
+    @typing.overload
     # System.Boolean Microsoft.UI.Dispatching.DispatcherQueue::TryEnqueue(Microsoft.UI.Dispatching.DispatcherQueueHandler)
     def try_enqueue(self, callback: DispatcherQueueHandler, /) -> bool: ...
+    @typing.overload
     # System.Boolean Microsoft.UI.Dispatching.DispatcherQueue::TryEnqueue(Microsoft.UI.Dispatching.DispatcherQueuePriority,Microsoft.UI.Dispatching.DispatcherQueueHandler)
+    def try_enqueue(self, priority: DispatcherQueuePriority, callback: DispatcherQueueHandler, /) -> bool: ...
+    # Deprecated alias of try_enqueue() for pywinrt v3.x compatibility.
+    # System.Boolean Microsoft.UI.Dispatching.DispatcherQueue::TryEnqueue(Microsoft.UI.Dispatching.DispatcherQueuePriority,Microsoft.UI.Dispatching.DispatcherQueueHandler)
+    @deprecated("Use try_enqueue() instead.")
     def try_enqueue_with_priority(self, priority: DispatcherQueuePriority, callback: DispatcherQueueHandler, /) -> bool: ...
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.Dispatching.DispatcherQueue::add_ShutdownCompleted(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Dispatching.DispatcherQueue,System.Object>)
     def add_shutdown_completed(self, handler: windows_foundation.TypedEventHandler[DispatcherQueue, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...

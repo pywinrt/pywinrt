@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -25,14 +26,26 @@ class RfcommDeviceService_Static(winrt._winrt.IInspectable_Static):
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[RfcommDeviceService]: ...
     # System.String Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService::GetDeviceSelector(Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId)
     def get_device_selector(cls, service_id: RfcommServiceId, /) -> str: ...
+    @typing.overload
     # System.String Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService::GetDeviceSelectorForBluetoothDevice(Windows.Devices.Bluetooth.BluetoothDevice)
     def get_device_selector_for_bluetooth_device(cls, bluetooth_device: windows_devices_bluetooth.BluetoothDevice, /) -> str: ...
+    @typing.overload
+    # System.String Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService::GetDeviceSelectorForBluetoothDevice(Windows.Devices.Bluetooth.BluetoothDevice,Windows.Devices.Bluetooth.BluetoothCacheMode)
+    def get_device_selector_for_bluetooth_device(cls, bluetooth_device: windows_devices_bluetooth.BluetoothDevice, cache_mode: windows_devices_bluetooth.BluetoothCacheMode, /) -> str: ...
+    # Deprecated alias of get_device_selector_for_bluetooth_device() for pywinrt v3.x compatibility.
+    # System.String Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService::GetDeviceSelectorForBluetoothDevice(Windows.Devices.Bluetooth.BluetoothDevice,Windows.Devices.Bluetooth.BluetoothCacheMode)
+    @deprecated("Use get_device_selector_for_bluetooth_device() instead.")
+    def get_device_selector_for_bluetooth_device_with_cache_mode(cls, bluetooth_device: windows_devices_bluetooth.BluetoothDevice, cache_mode: windows_devices_bluetooth.BluetoothCacheMode, /) -> str: ...
+    @typing.overload
     # System.String Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService::GetDeviceSelectorForBluetoothDeviceAndServiceId(Windows.Devices.Bluetooth.BluetoothDevice,Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId)
     def get_device_selector_for_bluetooth_device_and_service_id(cls, bluetooth_device: windows_devices_bluetooth.BluetoothDevice, service_id: RfcommServiceId, /) -> str: ...
+    @typing.overload
     # System.String Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService::GetDeviceSelectorForBluetoothDeviceAndServiceId(Windows.Devices.Bluetooth.BluetoothDevice,Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId,Windows.Devices.Bluetooth.BluetoothCacheMode)
+    def get_device_selector_for_bluetooth_device_and_service_id(cls, bluetooth_device: windows_devices_bluetooth.BluetoothDevice, service_id: RfcommServiceId, cache_mode: windows_devices_bluetooth.BluetoothCacheMode, /) -> str: ...
+    # Deprecated alias of get_device_selector_for_bluetooth_device_and_service_id() for pywinrt v3.x compatibility.
+    # System.String Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService::GetDeviceSelectorForBluetoothDeviceAndServiceId(Windows.Devices.Bluetooth.BluetoothDevice,Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId,Windows.Devices.Bluetooth.BluetoothCacheMode)
+    @deprecated("Use get_device_selector_for_bluetooth_device_and_service_id() instead.")
     def get_device_selector_for_bluetooth_device_and_service_id_with_cache_mode(cls, bluetooth_device: windows_devices_bluetooth.BluetoothDevice, service_id: RfcommServiceId, cache_mode: windows_devices_bluetooth.BluetoothCacheMode, /) -> str: ...
-    # System.String Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService::GetDeviceSelectorForBluetoothDevice(Windows.Devices.Bluetooth.BluetoothDevice,Windows.Devices.Bluetooth.BluetoothCacheMode)
-    def get_device_selector_for_bluetooth_device_with_cache_mode(cls, bluetooth_device: windows_devices_bluetooth.BluetoothDevice, cache_mode: windows_devices_bluetooth.BluetoothCacheMode, /) -> str: ...
 
 @typing.final
 class RfcommDeviceService(winrt.system.Object, windows_foundation.IClosable, metaclass=RfcommDeviceService_Static):
@@ -40,9 +53,15 @@ class RfcommDeviceService(winrt.system.Object, windows_foundation.IClosable, met
     def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
     # System.Void Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService::Close()
     def close(self) -> None: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IMapView`2<System.UInt32,Windows.Storage.Streams.IBuffer>> Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService::GetSdpRawAttributesAsync()
     def get_sdp_raw_attributes_async(self) -> windows_foundation.IAsyncOperation[typing.Mapping[winrt.system.UInt32, winrt.system.Buffer]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IMapView`2<System.UInt32,Windows.Storage.Streams.IBuffer>> Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService::GetSdpRawAttributesAsync(Windows.Devices.Bluetooth.BluetoothCacheMode)
+    def get_sdp_raw_attributes_async(self, cache_mode: windows_devices_bluetooth.BluetoothCacheMode, /) -> windows_foundation.IAsyncOperation[typing.Mapping[winrt.system.UInt32, winrt.system.Buffer]]: ...
+    # Deprecated alias of get_sdp_raw_attributes_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IMapView`2<System.UInt32,Windows.Storage.Streams.IBuffer>> Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService::GetSdpRawAttributesAsync(Windows.Devices.Bluetooth.BluetoothCacheMode)
+    @deprecated("Use get_sdp_raw_attributes_async() instead.")
     def get_sdp_raw_attributes_with_cache_mode_async(self, cache_mode: windows_devices_bluetooth.BluetoothCacheMode, /) -> windows_foundation.IAsyncOperation[typing.Mapping[winrt.system.UInt32, winrt.system.Buffer]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Enumeration.DeviceAccessStatus> Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService::RequestAccessAsync()
     def request_access_async(self) -> windows_foundation.IAsyncOperation[windows_devices_enumeration.DeviceAccessStatus]: ...
@@ -119,9 +138,15 @@ class RfcommServiceProvider_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class RfcommServiceProvider(winrt.system.Object, metaclass=RfcommServiceProvider_Static):
+    @typing.overload
     # System.Void Windows.Devices.Bluetooth.Rfcomm.RfcommServiceProvider::StartAdvertising(Windows.Networking.Sockets.StreamSocketListener)
     def start_advertising(self, listener: windows_networking_sockets.StreamSocketListener, /) -> None: ...
+    @typing.overload
     # System.Void Windows.Devices.Bluetooth.Rfcomm.RfcommServiceProvider::StartAdvertising(Windows.Networking.Sockets.StreamSocketListener,System.Boolean)
+    def start_advertising(self, listener: windows_networking_sockets.StreamSocketListener, radio_discoverable: bool, /) -> None: ...
+    # Deprecated alias of start_advertising() for pywinrt v3.x compatibility.
+    # System.Void Windows.Devices.Bluetooth.Rfcomm.RfcommServiceProvider::StartAdvertising(Windows.Networking.Sockets.StreamSocketListener,System.Boolean)
+    @deprecated("Use start_advertising() instead.")
     def start_advertising_with_radio_discoverability(self, listener: windows_networking_sockets.StreamSocketListener, radio_discoverable: bool, /) -> None: ...
     # System.Void Windows.Devices.Bluetooth.Rfcomm.RfcommServiceProvider::StopAdvertising()
     def stop_advertising(self) -> None: ...

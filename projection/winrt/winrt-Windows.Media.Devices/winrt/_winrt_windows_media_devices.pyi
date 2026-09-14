@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -254,9 +255,15 @@ class DigitalWindowCapability(winrt.system.Object):
 
 @typing.final
 class DigitalWindowControl(winrt.system.Object):
+    @typing.overload
     # System.Void Windows.Media.Devices.DigitalWindowControl::Configure(Windows.Media.Devices.DigitalWindowMode)
     def configure(self, digital_window_mode: DigitalWindowMode, /) -> None: ...
+    @typing.overload
     # System.Void Windows.Media.Devices.DigitalWindowControl::Configure(Windows.Media.Devices.DigitalWindowMode,Windows.Media.Devices.DigitalWindowBounds)
+    def configure(self, digital_window_mode: DigitalWindowMode, digital_window_bounds: DigitalWindowBounds, /) -> None: ...
+    # Deprecated alias of configure() for pywinrt v3.x compatibility.
+    # System.Void Windows.Media.Devices.DigitalWindowControl::Configure(Windows.Media.Devices.DigitalWindowMode,Windows.Media.Devices.DigitalWindowBounds)
+    @deprecated("Use configure() instead.")
     def configure_with_bounds(self, digital_window_mode: DigitalWindowMode, digital_window_bounds: DigitalWindowBounds, /) -> None: ...
     # Windows.Media.Devices.DigitalWindowBounds Windows.Media.Devices.DigitalWindowControl::GetBounds()
     def get_bounds(self) -> DigitalWindowBounds: ...
@@ -385,9 +392,15 @@ class FocusControl(winrt.system.Object):
     def focus_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.Media.Devices.FocusControl::LockAsync()
     def lock_async(self) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Media.Devices.FocusControl::SetPresetAsync(Windows.Media.Devices.FocusPreset)
     def set_preset_async(self, preset: FocusPreset, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Media.Devices.FocusControl::SetPresetAsync(Windows.Media.Devices.FocusPreset,System.Boolean)
+    def set_preset_async(self, preset: FocusPreset, complete_before_focus: bool, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of set_preset_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Media.Devices.FocusControl::SetPresetAsync(Windows.Media.Devices.FocusPreset,System.Boolean)
+    @deprecated("Use set_preset_async() instead.")
     def set_preset_with_completion_option_async(self, preset: FocusPreset, complete_before_focus: bool, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.Media.Devices.FocusControl::SetValueAsync(System.UInt32)
     def set_value_async(self, focus: winrt.system.UInt32, /) -> windows_foundation.IAsyncAction: ...
@@ -807,9 +820,15 @@ class RegionOfInterest(winrt.system.Object):
 class RegionsOfInterestControl(winrt.system.Object):
     # Windows.Foundation.IAsyncAction Windows.Media.Devices.RegionsOfInterestControl::ClearRegionsAsync()
     def clear_regions_async(self) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Media.Devices.RegionsOfInterestControl::SetRegionsAsync(Windows.Foundation.Collections.IIterable`1<Windows.Media.Devices.RegionOfInterest>)
     def set_regions_async(self, regions: typing.Iterable[RegionOfInterest], /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Media.Devices.RegionsOfInterestControl::SetRegionsAsync(Windows.Foundation.Collections.IIterable`1<Windows.Media.Devices.RegionOfInterest>,System.Boolean)
+    def set_regions_async(self, regions: typing.Iterable[RegionOfInterest], lock_values: bool, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of set_regions_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.Media.Devices.RegionsOfInterestControl::SetRegionsAsync(Windows.Foundation.Collections.IIterable`1<Windows.Media.Devices.RegionOfInterest>,System.Boolean)
+    @deprecated("Use set_regions_async() instead.")
     def set_regions_with_lock_async(self, regions: typing.Iterable[RegionOfInterest], lock_values: bool, /) -> windows_foundation.IAsyncAction: ...
     # System.Boolean Windows.Media.Devices.RegionsOfInterestControl::get_AutoExposureSupported()
     @_property

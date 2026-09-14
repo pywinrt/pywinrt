@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -81,9 +82,15 @@ class StoreAppLicense(winrt.system.Object):
 
 @typing.final
 class StoreAvailability(winrt.system.Object):
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Store.StorePurchaseResult> Windows.Services.Store.StoreAvailability::RequestPurchaseAsync()
     def request_purchase_async(self) -> windows_foundation.IAsyncOperation[StorePurchaseResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Store.StorePurchaseResult> Windows.Services.Store.StoreAvailability::RequestPurchaseAsync(Windows.Services.Store.StorePurchaseProperties)
+    def request_purchase_async(self, store_purchase_properties: StorePurchaseProperties, /) -> windows_foundation.IAsyncOperation[StorePurchaseResult]: ...
+    # Deprecated alias of request_purchase_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Services.Store.StorePurchaseResult> Windows.Services.Store.StoreAvailability::RequestPurchaseAsync(Windows.Services.Store.StorePurchaseProperties)
+    @deprecated("Use request_purchase_async() instead.")
     def request_purchase_with_purchase_properties_async(self, store_purchase_properties: StorePurchaseProperties, /) -> windows_foundation.IAsyncOperation[StorePurchaseResult]: ...
     # Windows.Foundation.DateTime Windows.Services.Store.StoreAvailability::get_EndDate()
     @_property
@@ -191,9 +198,15 @@ class StoreContext(winrt.system.Object, metaclass=StoreContext_Static):
     def get_customer_purchase_id_async(self, service_ticket: str, publisher_user_id: str, /) -> windows_foundation.IAsyncOperation[str]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Store.StoreProductResult> Windows.Services.Store.StoreContext::GetStoreProductForCurrentAppAsync()
     def get_store_product_for_current_app_async(self) -> windows_foundation.IAsyncOperation[StoreProductResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Store.StoreProductQueryResult> Windows.Services.Store.StoreContext::GetStoreProductsAsync(Windows.Foundation.Collections.IIterable`1<System.String>,Windows.Foundation.Collections.IIterable`1<System.String>)
     def get_store_products_async(self, product_kinds: typing.Iterable[str], store_ids: typing.Iterable[str], /) -> windows_foundation.IAsyncOperation[StoreProductQueryResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Store.StoreProductQueryResult> Windows.Services.Store.StoreContext::GetStoreProductsAsync(Windows.Foundation.Collections.IIterable`1<System.String>,Windows.Foundation.Collections.IIterable`1<System.String>,Windows.Services.Store.StoreProductOptions)
+    def get_store_products_async(self, product_kinds: typing.Iterable[str], store_ids: typing.Iterable[str], store_product_options: StoreProductOptions, /) -> windows_foundation.IAsyncOperation[StoreProductQueryResult]: ...
+    # Deprecated alias of get_store_products_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Services.Store.StoreProductQueryResult> Windows.Services.Store.StoreContext::GetStoreProductsAsync(Windows.Foundation.Collections.IIterable`1<System.String>,Windows.Foundation.Collections.IIterable`1<System.String>,Windows.Services.Store.StoreProductOptions)
+    @deprecated("Use get_store_products_async() instead.")
     def get_store_products_with_options_async(self, product_kinds: typing.Iterable[str], store_ids: typing.Iterable[str], store_product_options: StoreProductOptions, /) -> windows_foundation.IAsyncOperation[StoreProductQueryResult]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Services.Store.StoreQueueItem>> Windows.Services.Store.StoreContext::GetStoreQueueItemsAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
     def get_store_queue_items_async(self, store_ids: typing.Iterable[str], /) -> windows_foundation.IAsyncOperation[typing.Sequence[StoreQueueItem]]: ...
@@ -207,18 +220,30 @@ class StoreContext(winrt.system.Object, metaclass=StoreContext_Static):
     def report_consumable_fulfillment_async(self, product_store_id: str, quantity: winrt.system.UInt32, tracking_id: _uuid.UUID, /) -> windows_foundation.IAsyncOperation[StoreConsumableResult]: ...
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Services.Store.StorePackageUpdateResult,Windows.Services.Store.StorePackageUpdateStatus> Windows.Services.Store.StoreContext::RequestDownloadAndInstallStorePackageUpdatesAsync(Windows.Foundation.Collections.IIterable`1<Windows.Services.Store.StorePackageUpdate>)
     def request_download_and_install_store_package_updates_async(self, store_package_updates: typing.Iterable[StorePackageUpdate], /) -> windows_foundation.IAsyncOperationWithProgress[StorePackageUpdateResult, StorePackageUpdateStatus]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Services.Store.StorePackageUpdateResult,Windows.Services.Store.StorePackageUpdateStatus> Windows.Services.Store.StoreContext::RequestDownloadAndInstallStorePackagesAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
     def request_download_and_install_store_packages_async(self, store_ids: typing.Iterable[str], /) -> windows_foundation.IAsyncOperationWithProgress[StorePackageUpdateResult, StorePackageUpdateStatus]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Services.Store.StorePackageUpdateResult,Windows.Services.Store.StorePackageUpdateStatus> Windows.Services.Store.StoreContext::RequestDownloadAndInstallStorePackagesAsync(Windows.Foundation.Collections.IIterable`1<System.String>,Windows.Services.Store.StorePackageInstallOptions)
+    def request_download_and_install_store_packages_async(self, store_ids: typing.Iterable[str], store_package_install_options: StorePackageInstallOptions, /) -> windows_foundation.IAsyncOperationWithProgress[StorePackageUpdateResult, StorePackageUpdateStatus]: ...
+    # Deprecated alias of request_download_and_install_store_packages_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Services.Store.StorePackageUpdateResult,Windows.Services.Store.StorePackageUpdateStatus> Windows.Services.Store.StoreContext::RequestDownloadAndInstallStorePackagesAsync(Windows.Foundation.Collections.IIterable`1<System.String>,Windows.Services.Store.StorePackageInstallOptions)
+    @deprecated("Use request_download_and_install_store_packages_async() instead.")
     def request_download_and_install_store_packages_with_install_options_async(self, store_ids: typing.Iterable[str], store_package_install_options: StorePackageInstallOptions, /) -> windows_foundation.IAsyncOperationWithProgress[StorePackageUpdateResult, StorePackageUpdateStatus]: ...
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Services.Store.StorePackageUpdateResult,Windows.Services.Store.StorePackageUpdateStatus> Windows.Services.Store.StoreContext::RequestDownloadStorePackageUpdatesAsync(Windows.Foundation.Collections.IIterable`1<Windows.Services.Store.StorePackageUpdate>)
     def request_download_store_package_updates_async(self, store_package_updates: typing.Iterable[StorePackageUpdate], /) -> windows_foundation.IAsyncOperationWithProgress[StorePackageUpdateResult, StorePackageUpdateStatus]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Store.StorePurchaseResult> Windows.Services.Store.StoreContext::RequestPurchaseAsync(System.String)
     def request_purchase_async(self, store_id: str, /) -> windows_foundation.IAsyncOperation[StorePurchaseResult]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Services.Store.StorePurchaseResult> Windows.Services.Store.StoreContext::RequestPurchaseAsync(System.String,Windows.Services.Store.StorePurchaseProperties)
+    def request_purchase_async(self, store_id: str, store_purchase_properties: StorePurchaseProperties, /) -> windows_foundation.IAsyncOperation[StorePurchaseResult]: ...
+    # Deprecated alias of request_purchase_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Services.Store.StorePurchaseResult> Windows.Services.Store.StoreContext::RequestPurchaseAsync(System.String,Windows.Services.Store.StorePurchaseProperties)
+    @deprecated("Use request_purchase_async() instead.")
+    def request_purchase_with_purchase_properties_async(self, store_id: str, store_purchase_properties: StorePurchaseProperties, /) -> windows_foundation.IAsyncOperation[StorePurchaseResult]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Store.StorePurchaseResult> Windows.Services.Store.StoreContext::RequestPurchaseByInAppOfferTokenAsync(System.String)
     def request_purchase_by_in_app_offer_token_async(self, in_app_offer_token: str, /) -> windows_foundation.IAsyncOperation[StorePurchaseResult]: ...
-    # Windows.Foundation.IAsyncOperation`1<Windows.Services.Store.StorePurchaseResult> Windows.Services.Store.StoreContext::RequestPurchaseAsync(System.String,Windows.Services.Store.StorePurchaseProperties)
-    def request_purchase_with_purchase_properties_async(self, store_id: str, store_purchase_properties: StorePurchaseProperties, /) -> windows_foundation.IAsyncOperation[StorePurchaseResult]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Store.StoreRateAndReviewResult> Windows.Services.Store.StoreContext::RequestRateAndReviewAppAsync()
     def request_rate_and_review_app_async(self) -> windows_foundation.IAsyncOperation[StoreRateAndReviewResult]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Store.StoreUninstallStorePackageResult> Windows.Services.Store.StoreContext::RequestUninstallStorePackageAsync(Windows.ApplicationModel.Package)
@@ -366,9 +391,15 @@ class StorePrice(winrt.system.Object):
 class StoreProduct(winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Services.Store.StoreProduct::GetIsAnySkuInstalledAsync()
     def get_is_any_sku_installed_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Store.StorePurchaseResult> Windows.Services.Store.StoreProduct::RequestPurchaseAsync()
     def request_purchase_async(self) -> windows_foundation.IAsyncOperation[StorePurchaseResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Store.StorePurchaseResult> Windows.Services.Store.StoreProduct::RequestPurchaseAsync(Windows.Services.Store.StorePurchaseProperties)
+    def request_purchase_async(self, store_purchase_properties: StorePurchaseProperties, /) -> windows_foundation.IAsyncOperation[StorePurchaseResult]: ...
+    # Deprecated alias of request_purchase_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Services.Store.StorePurchaseResult> Windows.Services.Store.StoreProduct::RequestPurchaseAsync(Windows.Services.Store.StorePurchaseProperties)
+    @deprecated("Use request_purchase_async() instead.")
     def request_purchase_with_purchase_properties_async(self, store_purchase_properties: StorePurchaseProperties, /) -> windows_foundation.IAsyncOperation[StorePurchaseResult]: ...
     # System.String Windows.Services.Store.StoreProduct::get_Description()
     @_property
@@ -572,9 +603,15 @@ class StoreSendRequestResult(winrt.system.Object):
 class StoreSku(winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Services.Store.StoreSku::GetIsInstalledAsync()
     def get_is_installed_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Store.StorePurchaseResult> Windows.Services.Store.StoreSku::RequestPurchaseAsync()
     def request_purchase_async(self) -> windows_foundation.IAsyncOperation[StorePurchaseResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Store.StorePurchaseResult> Windows.Services.Store.StoreSku::RequestPurchaseAsync(Windows.Services.Store.StorePurchaseProperties)
+    def request_purchase_async(self, store_purchase_properties: StorePurchaseProperties, /) -> windows_foundation.IAsyncOperation[StorePurchaseResult]: ...
+    # Deprecated alias of request_purchase_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Services.Store.StorePurchaseResult> Windows.Services.Store.StoreSku::RequestPurchaseAsync(Windows.Services.Store.StorePurchaseProperties)
+    @deprecated("Use request_purchase_async() instead.")
     def request_purchase_with_purchase_properties_async(self, store_purchase_properties: StorePurchaseProperties, /) -> windows_foundation.IAsyncOperation[StorePurchaseResult]: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Services.Store.StoreAvailability> Windows.Services.Store.StoreSku::get_Availabilities()
     @_property

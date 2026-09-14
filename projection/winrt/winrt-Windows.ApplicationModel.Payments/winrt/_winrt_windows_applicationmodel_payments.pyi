@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -205,9 +206,15 @@ class PaymentMediator(winrt.system.Object):
     def can_make_payment_async(self, payment_request: PaymentRequest, /) -> windows_foundation.IAsyncOperation[PaymentCanMakePaymentResult]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<System.String>> Windows.ApplicationModel.Payments.PaymentMediator::GetSupportedMethodIdsAsync()
     def get_supported_method_ids_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[str]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Payments.PaymentRequestSubmitResult> Windows.ApplicationModel.Payments.PaymentMediator::SubmitPaymentRequestAsync(Windows.ApplicationModel.Payments.PaymentRequest)
     def submit_payment_request_async(self, payment_request: PaymentRequest, /) -> windows_foundation.IAsyncOperation[PaymentRequestSubmitResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Payments.PaymentRequestSubmitResult> Windows.ApplicationModel.Payments.PaymentMediator::SubmitPaymentRequestAsync(Windows.ApplicationModel.Payments.PaymentRequest,Windows.ApplicationModel.Payments.PaymentRequestChangedHandler)
+    def submit_payment_request_async(self, payment_request: PaymentRequest, change_handler: PaymentRequestChangedHandler, /) -> windows_foundation.IAsyncOperation[PaymentRequestSubmitResult]: ...
+    # Deprecated alias of submit_payment_request_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Payments.PaymentRequestSubmitResult> Windows.ApplicationModel.Payments.PaymentMediator::SubmitPaymentRequestAsync(Windows.ApplicationModel.Payments.PaymentRequest,Windows.ApplicationModel.Payments.PaymentRequestChangedHandler)
+    @deprecated("Use submit_payment_request_async() instead.")
     def submit_payment_request_with_change_handler_async(self, payment_request: PaymentRequest, change_handler: PaymentRequestChangedHandler, /) -> windows_foundation.IAsyncOperation[PaymentRequestSubmitResult]: ...
 
 @typing.final

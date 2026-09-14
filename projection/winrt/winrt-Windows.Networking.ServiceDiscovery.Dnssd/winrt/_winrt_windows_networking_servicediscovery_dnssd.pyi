@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -39,13 +40,33 @@ class DnssdRegistrationResult(winrt.system.Object, windows_foundation.IStringabl
 class DnssdServiceInstance(winrt.system.Object, windows_foundation.IStringable):
     def __str__(self) -> str: ...
     def __new__(cls: typing.Type[Self], dnssd_service_instance_name: str, host_name: windows_networking.HostName, port: winrt.system.UInt16) -> Self: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult> Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance::RegisterDatagramSocketAsync(Windows.Networking.Sockets.DatagramSocket)
-    def register_datagram_socket_async1(self, socket: windows_networking_sockets.DatagramSocket, /) -> windows_foundation.IAsyncOperation[DnssdRegistrationResult]: ...
+    def register_datagram_socket_async(self, socket: windows_networking_sockets.DatagramSocket, /) -> windows_foundation.IAsyncOperation[DnssdRegistrationResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult> Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance::RegisterDatagramSocketAsync(Windows.Networking.Sockets.DatagramSocket,Windows.Networking.Connectivity.NetworkAdapter)
+    def register_datagram_socket_async(self, socket: windows_networking_sockets.DatagramSocket, adapter: windows_networking_connectivity.NetworkAdapter, /) -> windows_foundation.IAsyncOperation[DnssdRegistrationResult]: ...
+    # Deprecated alias of register_datagram_socket_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult> Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance::RegisterDatagramSocketAsync(Windows.Networking.Sockets.DatagramSocket)
+    @deprecated("Use register_datagram_socket_async() instead.")
+    def register_datagram_socket_async1(self, socket: windows_networking_sockets.DatagramSocket, /) -> windows_foundation.IAsyncOperation[DnssdRegistrationResult]: ...
+    # Deprecated alias of register_datagram_socket_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult> Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance::RegisterDatagramSocketAsync(Windows.Networking.Sockets.DatagramSocket,Windows.Networking.Connectivity.NetworkAdapter)
+    @deprecated("Use register_datagram_socket_async() instead.")
     def register_datagram_socket_async2(self, socket: windows_networking_sockets.DatagramSocket, adapter: windows_networking_connectivity.NetworkAdapter, /) -> windows_foundation.IAsyncOperation[DnssdRegistrationResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult> Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance::RegisterStreamSocketListenerAsync(Windows.Networking.Sockets.StreamSocketListener)
-    def register_stream_socket_listener_async1(self, socket: windows_networking_sockets.StreamSocketListener, /) -> windows_foundation.IAsyncOperation[DnssdRegistrationResult]: ...
+    def register_stream_socket_listener_async(self, socket: windows_networking_sockets.StreamSocketListener, /) -> windows_foundation.IAsyncOperation[DnssdRegistrationResult]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult> Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance::RegisterStreamSocketListenerAsync(Windows.Networking.Sockets.StreamSocketListener,Windows.Networking.Connectivity.NetworkAdapter)
+    def register_stream_socket_listener_async(self, socket: windows_networking_sockets.StreamSocketListener, adapter: windows_networking_connectivity.NetworkAdapter, /) -> windows_foundation.IAsyncOperation[DnssdRegistrationResult]: ...
+    # Deprecated alias of register_stream_socket_listener_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult> Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance::RegisterStreamSocketListenerAsync(Windows.Networking.Sockets.StreamSocketListener)
+    @deprecated("Use register_stream_socket_listener_async() instead.")
+    def register_stream_socket_listener_async1(self, socket: windows_networking_sockets.StreamSocketListener, /) -> windows_foundation.IAsyncOperation[DnssdRegistrationResult]: ...
+    # Deprecated alias of register_stream_socket_listener_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult> Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance::RegisterStreamSocketListenerAsync(Windows.Networking.Sockets.StreamSocketListener,Windows.Networking.Connectivity.NetworkAdapter)
+    @deprecated("Use register_stream_socket_listener_async() instead.")
     def register_stream_socket_listener_async2(self, socket: windows_networking_sockets.StreamSocketListener, adapter: windows_networking_connectivity.NetworkAdapter, /) -> windows_foundation.IAsyncOperation[DnssdRegistrationResult]: ...
     # System.String Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance::ToString()
     def to_string(self) -> str: ...

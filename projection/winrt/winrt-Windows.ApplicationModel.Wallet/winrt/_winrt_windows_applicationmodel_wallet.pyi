@@ -6,6 +6,7 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -240,11 +241,18 @@ class WalletItemStore(winrt.system.Object):
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Wallet.WalletItemStore::DeleteAsync(System.String)
     # @deprecated("IWalletItemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
     def delete_async(self, id: str, /) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Wallet.WalletItem>> Windows.ApplicationModel.Wallet.WalletItemStore::GetItemsAsync()
     # @deprecated("IWalletItemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_items_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[WalletItem]]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Wallet.WalletItem>> Windows.ApplicationModel.Wallet.WalletItemStore::GetItemsAsync(Windows.ApplicationModel.Wallet.WalletItemKind)
     # @deprecated("IWalletItemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
+    def get_items_async(self, kind: WalletItemKind, /) -> windows_foundation.IAsyncOperation[typing.Sequence[WalletItem]]: ...
+    # Deprecated alias of get_items_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Wallet.WalletItem>> Windows.ApplicationModel.Wallet.WalletItemStore::GetItemsAsync(Windows.ApplicationModel.Wallet.WalletItemKind)
+    # @deprecated("IWalletItemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("Use get_items_async() instead.")
     def get_items_with_kind_async(self, kind: WalletItemKind, /) -> windows_foundation.IAsyncOperation[typing.Sequence[WalletItem]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Wallet.WalletItem> Windows.ApplicationModel.Wallet.WalletItemStore::GetWalletItemAsync(System.String)
     # @deprecated("IWalletItemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -252,11 +260,18 @@ class WalletItemStore(winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Wallet.WalletItem> Windows.ApplicationModel.Wallet.WalletItemStore::ImportItemAsync(Windows.Storage.Streams.IRandomAccessStreamReference)
     # @deprecated("IWalletItemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
     def import_item_async(self, stream: windows_storage_streams.IRandomAccessStreamReference, /) -> windows_foundation.IAsyncOperation[WalletItem]: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Wallet.WalletItemStore::ShowAsync()
     # @deprecated("IWalletItemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
     def show_async(self) -> windows_foundation.IAsyncAction: ...
+    @typing.overload
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Wallet.WalletItemStore::ShowAsync(System.String)
     # @deprecated("IWalletItemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
+    def show_async(self, id: str, /) -> windows_foundation.IAsyncAction: ...
+    # Deprecated alias of show_async() for pywinrt v3.x compatibility.
+    # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Wallet.WalletItemStore::ShowAsync(System.String)
+    # @deprecated("IWalletItemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("Use show_async() instead.")
     def show_item_async(self, id: str, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Wallet.WalletItemStore::UpdateAsync(Windows.ApplicationModel.Wallet.WalletItem)
     # @deprecated("IWalletItemStore is deprecated and might not work on all platforms. For more info, see MSDN.")

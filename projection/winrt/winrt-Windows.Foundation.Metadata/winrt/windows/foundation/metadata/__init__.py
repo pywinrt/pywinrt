@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_foundation_metadata import (
     ApiInformation,
@@ -69,3 +70,6 @@ class ThreadingModel(enum.IntEnum):
     BOTH = 3
     INVALID_THREADING = 0
 
+winrt.runtime._internals.alias_static_method(ApiInformation, "is_api_contract_present_by_major", "is_api_contract_present")
+winrt.runtime._internals.alias_static_method(ApiInformation, "is_api_contract_present_by_major_and_minor", "is_api_contract_present")
+winrt.runtime._internals.alias_static_method(ApiInformation, "is_method_present_with_arity", "is_method_present")

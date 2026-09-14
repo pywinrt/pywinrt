@@ -98,18 +98,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Preview
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PalmRejectionDelayZonePreview_CreateForVisualWithViewportClip(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 4)
+        else if (arg_count == 4)
         {
             try
             {
@@ -227,7 +216,6 @@ namespace py::cpp::Windows::UI::Input::Inking::Preview
 
     static PyMethodDef methods_PalmRejectionDelayZonePreview_Static[] = {
         { "create_for_visual", reinterpret_cast<PyCFunction>(PalmRejectionDelayZonePreview_CreateForVisual), METH_VARARGS, nullptr },
-        { "create_for_visual_with_viewport_clip", reinterpret_cast<PyCFunction>(PalmRejectionDelayZonePreview_CreateForVisualWithViewportClip), METH_VARARGS, nullptr },
         { }};
 
     static PyType_Slot type_slots_PalmRejectionDelayZonePreview_Static[] = 

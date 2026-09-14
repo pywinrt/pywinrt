@@ -3894,6 +3894,113 @@ namespace py::cpp::Windows::Management::Deployment
                 return nullptr;
             }
         }
+        else if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"AddPackageAsync", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Management::Deployment::DeploymentOptions>(args, 2);
+                auto param3 = py::convert_to<winrt::Windows::Management::Deployment::PackageVolume>(args, 3);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AddPackageAsync(param0, param1, param2, param3);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 6)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"AddPackageAsync", 6);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(6);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Management::Deployment::DeploymentOptions>(args, 2);
+                auto param3 = py::convert_to<winrt::Windows::Management::Deployment::PackageVolume>(args, 3);
+                auto param4 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 4);
+                auto param5 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 5);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AddPackageAsync(param0, param1, param2, param3, param4, param5);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 7)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"AddPackageAsync", 7);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(7);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Management::Deployment::DeploymentOptions>(args, 2);
+                auto param3 = py::convert_to<winrt::Windows::Management::Deployment::PackageVolume>(args, 3);
+                auto param4 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 4);
+                auto param5 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 5);
+                auto param6 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 6);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.AddPackageAsync(param0, param1, param2, param3, param4, param5, param6);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -3973,146 +4080,6 @@ namespace py::cpp::Windows::Management::Deployment
                 {
                     auto _gil = release_gil();
                     return self->obj.AddPackageByUriAsync(param0, param1);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PackageManager_AddPackageToVolumeAndOptionalPackagesAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 6)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"AddPackageAsync", 6);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(6);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Management::Deployment::DeploymentOptions>(args, 2);
-                auto param3 = py::convert_to<winrt::Windows::Management::Deployment::PackageVolume>(args, 3);
-                auto param4 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 4);
-                auto param5 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 5);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.AddPackageAsync(param0, param1, param2, param3, param4, param5);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PackageManager_AddPackageToVolumeAndRelatedSetAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 7)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"AddPackageAsync", 7);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(7);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Management::Deployment::DeploymentOptions>(args, 2);
-                auto param3 = py::convert_to<winrt::Windows::Management::Deployment::PackageVolume>(args, 3);
-                auto param4 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 4);
-                auto param5 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 5);
-                auto param6 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 6);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.AddPackageAsync(param0, param1, param2, param3, param4, param5, param6);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PackageManager_AddPackageToVolumeAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"AddPackageAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Management::Deployment::DeploymentOptions>(args, 2);
-                auto param3 = py::convert_to<winrt::Windows::Management::Deployment::PackageVolume>(args, 3);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.AddPackageAsync(param0, param1, param2, param3);
                 }());
             }
             catch (...)
@@ -4299,7 +4266,7 @@ namespace py::cpp::Windows::Management::Deployment
         }
     }
 
-    static PyObject* PackageManager_FindPackageByPackageFullName(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
+    static PyObject* PackageManager_FindPackage(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -4341,7 +4308,7 @@ namespace py::cpp::Windows::Management::Deployment
         }
     }
 
-    static PyObject* PackageManager_FindPackageByUserSecurityIdPackageFullName(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
+    static PyObject* PackageManager_FindPackageForUser(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -4384,7 +4351,7 @@ namespace py::cpp::Windows::Management::Deployment
         }
     }
 
-    static PyObject* PackageManager_FindPackageVolumeByName(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
+    static PyObject* PackageManager_FindPackageVolume(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -4499,18 +4466,38 @@ namespace py::cpp::Windows::Management::Deployment
                 return nullptr;
             }
         }
-        else
+        else if (arg_count == 1)
         {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"FindPackages", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindPackages(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
         }
-    }
-
-    static PyObject* PackageManager_FindPackagesByNamePublisher(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -4549,136 +4536,7 @@ namespace py::cpp::Windows::Management::Deployment
         }
     }
 
-    static PyObject* PackageManager_FindPackagesByNamePublisherWithPackageTypes(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"FindPackagesWithPackageTypes", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Management::Deployment::PackageTypes>(args, 2);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.FindPackagesWithPackageTypes(param0, param1, param2);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PackageManager_FindPackagesByPackageFamilyName(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"FindPackages", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.FindPackages(param0);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PackageManager_FindPackagesByPackageFamilyNameWithPackageTypes(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"FindPackagesWithPackageTypes", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Management::Deployment::PackageTypes>(args, 1);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.FindPackagesWithPackageTypes(param0, param1);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PackageManager_FindPackagesByUserSecurityId(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
+    static PyObject* PackageManager_FindPackagesForUser(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -4713,18 +4571,39 @@ namespace py::cpp::Windows::Management::Deployment
                 return nullptr;
             }
         }
-        else
+        else if (arg_count == 2)
         {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"FindPackagesForUser", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindPackagesForUser(param0, param1);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
         }
-    }
-
-    static PyObject* PackageManager_FindPackagesByUserSecurityIdNamePublisher(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -4764,52 +4643,7 @@ namespace py::cpp::Windows::Management::Deployment
         }
     }
 
-    static PyObject* PackageManager_FindPackagesByUserSecurityIdNamePublisherWithPackageTypes(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"FindPackagesForUserWithPackageTypes", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-                auto param2 = py::convert_to<winrt::hstring>(args, 2);
-                auto param3 = py::convert_to<winrt::Windows::Management::Deployment::PackageTypes>(args, 3);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.FindPackagesForUserWithPackageTypes(param0, param1, param2, param3);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PackageManager_FindPackagesByUserSecurityIdPackageFamilyName(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
+    static PyObject* PackageManager_FindPackagesForUserWithPackageTypes(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -4821,7 +4655,7 @@ namespace py::cpp::Windows::Management::Deployment
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"FindPackagesForUser", 2);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"FindPackagesForUserWithPackageTypes", 2);
                 }
 
                 if (!is_overload_present.value())
@@ -4831,12 +4665,12 @@ namespace py::cpp::Windows::Management::Deployment
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param1 = py::convert_to<winrt::Windows::Management::Deployment::PackageTypes>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.FindPackagesForUser(param0, param1);
+                    return self->obj.FindPackagesForUserWithPackageTypes(param0, param1);
                 }());
             }
             catch (...)
@@ -4845,18 +4679,7 @@ namespace py::cpp::Windows::Management::Deployment
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PackageManager_FindPackagesByUserSecurityIdPackageFamilyNameWithPackageTypes(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -4889,18 +4712,7 @@ namespace py::cpp::Windows::Management::Deployment
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PackageManager_FindPackagesByUserSecurityIdWithPackageTypes(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 4)
         {
             try
             {
@@ -4908,22 +4720,24 @@ namespace py::cpp::Windows::Management::Deployment
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"FindPackagesForUserWithPackageTypes", 2);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"FindPackagesForUserWithPackageTypes", 4);
                 }
 
                 if (!is_overload_present.value())
                 {
-                    py::set_arg_count_version_error(2);
+                    py::set_arg_count_version_error(4);
                     return nullptr;
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Management::Deployment::PackageTypes>(args, 1);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::hstring>(args, 2);
+                auto param3 = py::convert_to<winrt::Windows::Management::Deployment::PackageTypes>(args, 3);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.FindPackagesForUserWithPackageTypes(param0, param1);
+                    return self->obj.FindPackagesForUserWithPackageTypes(param0, param1, param2, param3);
                 }());
             }
             catch (...)
@@ -4966,6 +4780,71 @@ namespace py::cpp::Windows::Management::Deployment
                 {
                     auto _gil = release_gil();
                     return self->obj.FindPackagesWithPackageTypes(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"FindPackagesWithPackageTypes", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Management::Deployment::PackageTypes>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindPackagesWithPackageTypes(param0, param1);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"FindPackagesWithPackageTypes", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Management::Deployment::PackageTypes>(args, 2);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindPackagesWithPackageTypes(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -5434,18 +5313,7 @@ namespace py::cpp::Windows::Management::Deployment
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PackageManager_ProvisionPackageForAllUsersWithOptionsAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -5521,6 +5389,40 @@ namespace py::cpp::Windows::Management::Deployment
                 return nullptr;
             }
         }
+        else if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"RegisterPackageAsync", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Management::Deployment::DeploymentOptions>(args, 2);
+                auto param3 = py::convert_to<winrt::Windows::Management::Deployment::PackageVolume>(args, 3);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RegisterPackageAsync(param0, param1, param2, param3);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -5528,7 +5430,7 @@ namespace py::cpp::Windows::Management::Deployment
         }
     }
 
-    static PyObject* PackageManager_RegisterPackageByFamilyNameAndOptionalPackagesAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
+    static PyObject* PackageManager_RegisterPackageByFamilyNameAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -5661,51 +5563,6 @@ namespace py::cpp::Windows::Management::Deployment
         }
     }
 
-    static PyObject* PackageManager_RegisterPackageWithAppDataVolumeAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"RegisterPackageAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Management::Deployment::DeploymentOptions>(args, 2);
-                auto param3 = py::convert_to<winrt::Windows::Management::Deployment::PackageVolume>(args, 3);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.RegisterPackageAsync(param0, param1, param2, param3);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
     static PyObject* PackageManager_RegisterPackagesByFullNameAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
@@ -5776,6 +5633,38 @@ namespace py::cpp::Windows::Management::Deployment
                 {
                     auto _gil = release_gil();
                     return self->obj.RemovePackageAsync(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"RemovePackageAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Management::Deployment::RemovalOptions>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RemovePackageAsync(param0, param1);
                 }());
             }
             catch (...)
@@ -5876,97 +5765,6 @@ namespace py::cpp::Windows::Management::Deployment
         }
     }
 
-    static PyObject* PackageManager_RemovePackageWithOptionsAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"RemovePackageAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Management::Deployment::RemovalOptions>(args, 1);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.RemovePackageAsync(param0, param1);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PackageManager_RequestAddPackageAndRelatedSetAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 7)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"RequestAddPackageAsync", 7);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(7);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Management::Deployment::DeploymentOptions>(args, 2);
-                auto param3 = py::convert_to<winrt::Windows::Management::Deployment::PackageVolume>(args, 3);
-                auto param4 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 4);
-                auto param5 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 5);
-                auto param6 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 6);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.RequestAddPackageAsync(param0, param1, param2, param3, param4, param5, param6);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
     static PyObject* PackageManager_RequestAddPackageAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
@@ -5999,6 +5797,43 @@ namespace py::cpp::Windows::Management::Deployment
                 {
                     auto _gil = release_gil();
                     return self->obj.RequestAddPackageAsync(param0, param1, param2, param3, param4, param5);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 7)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"RequestAddPackageAsync", 7);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(7);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Management::Deployment::DeploymentOptions>(args, 2);
+                auto param3 = py::convert_to<winrt::Windows::Management::Deployment::PackageVolume>(args, 3);
+                auto param4 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 4);
+                auto param5 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 5);
+                auto param6 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 6);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.RequestAddPackageAsync(param0, param1, param2, param3, param4, param5, param6);
                 }());
             }
             catch (...)
@@ -6353,6 +6188,146 @@ namespace py::cpp::Windows::Management::Deployment
                 return nullptr;
             }
         }
+        else if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"StagePackageAsync", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Management::Deployment::DeploymentOptions>(args, 2);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StagePackageAsync(param0, param1, param2);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"StagePackageAsync", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Management::Deployment::DeploymentOptions>(args, 2);
+                auto param3 = py::convert_to<winrt::Windows::Management::Deployment::PackageVolume>(args, 3);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StagePackageAsync(param0, param1, param2, param3);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 6)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"StagePackageAsync", 6);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(6);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Management::Deployment::DeploymentOptions>(args, 2);
+                auto param3 = py::convert_to<winrt::Windows::Management::Deployment::PackageVolume>(args, 3);
+                auto param4 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 4);
+                auto param5 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 5);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StagePackageAsync(param0, param1, param2, param3, param4, param5);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 7)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"StagePackageAsync", 7);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(7);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Management::Deployment::DeploymentOptions>(args, 2);
+                auto param3 = py::convert_to<winrt::Windows::Management::Deployment::PackageVolume>(args, 3);
+                auto param4 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 4);
+                auto param5 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 5);
+                auto param6 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 6);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.StagePackageAsync(param0, param1, param2, param3, param4, param5, param6);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -6403,190 +6378,6 @@ namespace py::cpp::Windows::Management::Deployment
         }
     }
 
-    static PyObject* PackageManager_StagePackageToVolumeAndOptionalPackagesAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 6)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"StagePackageAsync", 6);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(6);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Management::Deployment::DeploymentOptions>(args, 2);
-                auto param3 = py::convert_to<winrt::Windows::Management::Deployment::PackageVolume>(args, 3);
-                auto param4 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 4);
-                auto param5 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 5);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.StagePackageAsync(param0, param1, param2, param3, param4, param5);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PackageManager_StagePackageToVolumeAndRelatedSetAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 7)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"StagePackageAsync", 7);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(7);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Management::Deployment::DeploymentOptions>(args, 2);
-                auto param3 = py::convert_to<winrt::Windows::Management::Deployment::PackageVolume>(args, 3);
-                auto param4 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 4);
-                auto param5 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 5);
-                auto param6 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 6);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.StagePackageAsync(param0, param1, param2, param3, param4, param5, param6);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PackageManager_StagePackageToVolumeAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"StagePackageAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Management::Deployment::DeploymentOptions>(args, 2);
-                auto param3 = py::convert_to<winrt::Windows::Management::Deployment::PackageVolume>(args, 3);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.StagePackageAsync(param0, param1, param2, param3);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PackageManager_StagePackageWithOptionsAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"StagePackageAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Uri>>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Management::Deployment::DeploymentOptions>(args, 2);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.StagePackageAsync(param0, param1, param2);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
     static PyObject* PackageManager_StageUserDataAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
@@ -6622,18 +6413,7 @@ namespace py::cpp::Windows::Management::Deployment
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PackageManager_StageUserDataWithOptionsAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -6774,28 +6554,17 @@ namespace py::cpp::Windows::Management::Deployment
         { "add_package_async", reinterpret_cast<PyCFunction>(PackageManager_AddPackageAsync), METH_VARARGS, nullptr },
         { "add_package_by_app_installer_file_async", reinterpret_cast<PyCFunction>(PackageManager_AddPackageByAppInstallerFileAsync), METH_VARARGS, nullptr },
         { "add_package_by_uri_async", reinterpret_cast<PyCFunction>(PackageManager_AddPackageByUriAsync), METH_VARARGS, nullptr },
-        { "add_package_to_volume_and_optional_packages_async", reinterpret_cast<PyCFunction>(PackageManager_AddPackageToVolumeAndOptionalPackagesAsync), METH_VARARGS, nullptr },
-        { "add_package_to_volume_and_related_set_async", reinterpret_cast<PyCFunction>(PackageManager_AddPackageToVolumeAndRelatedSetAsync), METH_VARARGS, nullptr },
-        { "add_package_to_volume_async", reinterpret_cast<PyCFunction>(PackageManager_AddPackageToVolumeAsync), METH_VARARGS, nullptr },
         { "add_package_volume_async", reinterpret_cast<PyCFunction>(PackageManager_AddPackageVolumeAsync), METH_VARARGS, nullptr },
         { "cleanup_package_for_user_async", reinterpret_cast<PyCFunction>(PackageManager_CleanupPackageForUserAsync), METH_VARARGS, nullptr },
         { "clear_package_status", reinterpret_cast<PyCFunction>(PackageManager_ClearPackageStatus), METH_VARARGS, nullptr },
         { "deprovision_package_for_all_users_async", reinterpret_cast<PyCFunction>(PackageManager_DeprovisionPackageForAllUsersAsync), METH_VARARGS, nullptr },
-        { "find_package_by_package_full_name", reinterpret_cast<PyCFunction>(PackageManager_FindPackageByPackageFullName), METH_VARARGS, nullptr },
-        { "find_package_by_user_security_id_package_full_name", reinterpret_cast<PyCFunction>(PackageManager_FindPackageByUserSecurityIdPackageFullName), METH_VARARGS, nullptr },
-        { "find_package_volume_by_name", reinterpret_cast<PyCFunction>(PackageManager_FindPackageVolumeByName), METH_VARARGS, nullptr },
+        { "find_package", reinterpret_cast<PyCFunction>(PackageManager_FindPackage), METH_VARARGS, nullptr },
+        { "find_package_for_user", reinterpret_cast<PyCFunction>(PackageManager_FindPackageForUser), METH_VARARGS, nullptr },
+        { "find_package_volume", reinterpret_cast<PyCFunction>(PackageManager_FindPackageVolume), METH_VARARGS, nullptr },
         { "find_package_volumes", reinterpret_cast<PyCFunction>(PackageManager_FindPackageVolumes), METH_VARARGS, nullptr },
         { "find_packages", reinterpret_cast<PyCFunction>(PackageManager_FindPackages), METH_VARARGS, nullptr },
-        { "find_packages_by_name_publisher", reinterpret_cast<PyCFunction>(PackageManager_FindPackagesByNamePublisher), METH_VARARGS, nullptr },
-        { "find_packages_by_name_publisher_with_package_types", reinterpret_cast<PyCFunction>(PackageManager_FindPackagesByNamePublisherWithPackageTypes), METH_VARARGS, nullptr },
-        { "find_packages_by_package_family_name", reinterpret_cast<PyCFunction>(PackageManager_FindPackagesByPackageFamilyName), METH_VARARGS, nullptr },
-        { "find_packages_by_package_family_name_with_package_types", reinterpret_cast<PyCFunction>(PackageManager_FindPackagesByPackageFamilyNameWithPackageTypes), METH_VARARGS, nullptr },
-        { "find_packages_by_user_security_id", reinterpret_cast<PyCFunction>(PackageManager_FindPackagesByUserSecurityId), METH_VARARGS, nullptr },
-        { "find_packages_by_user_security_id_name_publisher", reinterpret_cast<PyCFunction>(PackageManager_FindPackagesByUserSecurityIdNamePublisher), METH_VARARGS, nullptr },
-        { "find_packages_by_user_security_id_name_publisher_with_package_types", reinterpret_cast<PyCFunction>(PackageManager_FindPackagesByUserSecurityIdNamePublisherWithPackageTypes), METH_VARARGS, nullptr },
-        { "find_packages_by_user_security_id_package_family_name", reinterpret_cast<PyCFunction>(PackageManager_FindPackagesByUserSecurityIdPackageFamilyName), METH_VARARGS, nullptr },
-        { "find_packages_by_user_security_id_package_family_name_with_package_types", reinterpret_cast<PyCFunction>(PackageManager_FindPackagesByUserSecurityIdPackageFamilyNameWithPackageTypes), METH_VARARGS, nullptr },
-        { "find_packages_by_user_security_id_with_package_types", reinterpret_cast<PyCFunction>(PackageManager_FindPackagesByUserSecurityIdWithPackageTypes), METH_VARARGS, nullptr },
+        { "find_packages_for_user", reinterpret_cast<PyCFunction>(PackageManager_FindPackagesForUser), METH_VARARGS, nullptr },
+        { "find_packages_for_user_with_package_types", reinterpret_cast<PyCFunction>(PackageManager_FindPackagesForUserWithPackageTypes), METH_VARARGS, nullptr },
         { "find_packages_with_package_types", reinterpret_cast<PyCFunction>(PackageManager_FindPackagesWithPackageTypes), METH_VARARGS, nullptr },
         { "find_provisioned_packages", reinterpret_cast<PyCFunction>(PackageManager_FindProvisionedPackages), METH_VARARGS, nullptr },
         { "find_users", reinterpret_cast<PyCFunction>(PackageManager_FindUsers), METH_VARARGS, nullptr },
@@ -6808,18 +6577,14 @@ namespace py::cpp::Windows::Management::Deployment
         { "is_package_removal_pending_for_user", reinterpret_cast<PyCFunction>(PackageManager_IsPackageRemovalPendingForUser), METH_VARARGS, nullptr },
         { "move_package_to_volume_async", reinterpret_cast<PyCFunction>(PackageManager_MovePackageToVolumeAsync), METH_VARARGS, nullptr },
         { "provision_package_for_all_users_async", reinterpret_cast<PyCFunction>(PackageManager_ProvisionPackageForAllUsersAsync), METH_VARARGS, nullptr },
-        { "provision_package_for_all_users_with_options_async", reinterpret_cast<PyCFunction>(PackageManager_ProvisionPackageForAllUsersWithOptionsAsync), METH_VARARGS, nullptr },
         { "register_package_async", reinterpret_cast<PyCFunction>(PackageManager_RegisterPackageAsync), METH_VARARGS, nullptr },
-        { "register_package_by_family_name_and_optional_packages_async", reinterpret_cast<PyCFunction>(PackageManager_RegisterPackageByFamilyNameAndOptionalPackagesAsync), METH_VARARGS, nullptr },
+        { "register_package_by_family_name_async", reinterpret_cast<PyCFunction>(PackageManager_RegisterPackageByFamilyNameAsync), METH_VARARGS, nullptr },
         { "register_package_by_full_name_async", reinterpret_cast<PyCFunction>(PackageManager_RegisterPackageByFullNameAsync), METH_VARARGS, nullptr },
         { "register_package_by_uri_async", reinterpret_cast<PyCFunction>(PackageManager_RegisterPackageByUriAsync), METH_VARARGS, nullptr },
-        { "register_package_with_app_data_volume_async", reinterpret_cast<PyCFunction>(PackageManager_RegisterPackageWithAppDataVolumeAsync), METH_VARARGS, nullptr },
         { "register_packages_by_full_name_async", reinterpret_cast<PyCFunction>(PackageManager_RegisterPackagesByFullNameAsync), METH_VARARGS, nullptr },
         { "remove_package_async", reinterpret_cast<PyCFunction>(PackageManager_RemovePackageAsync), METH_VARARGS, nullptr },
         { "remove_package_by_uri_async", reinterpret_cast<PyCFunction>(PackageManager_RemovePackageByUriAsync), METH_VARARGS, nullptr },
         { "remove_package_volume_async", reinterpret_cast<PyCFunction>(PackageManager_RemovePackageVolumeAsync), METH_VARARGS, nullptr },
-        { "remove_package_with_options_async", reinterpret_cast<PyCFunction>(PackageManager_RemovePackageWithOptionsAsync), METH_VARARGS, nullptr },
-        { "request_add_package_and_related_set_async", reinterpret_cast<PyCFunction>(PackageManager_RequestAddPackageAndRelatedSetAsync), METH_VARARGS, nullptr },
         { "request_add_package_async", reinterpret_cast<PyCFunction>(PackageManager_RequestAddPackageAsync), METH_VARARGS, nullptr },
         { "request_add_package_by_app_installer_file_async", reinterpret_cast<PyCFunction>(PackageManager_RequestAddPackageByAppInstallerFileAsync), METH_VARARGS, nullptr },
         { "set_default_package_volume", reinterpret_cast<PyCFunction>(PackageManager_SetDefaultPackageVolume), METH_VARARGS, nullptr },
@@ -6830,12 +6595,7 @@ namespace py::cpp::Windows::Management::Deployment
         { "set_package_volume_online_async", reinterpret_cast<PyCFunction>(PackageManager_SetPackageVolumeOnlineAsync), METH_VARARGS, nullptr },
         { "stage_package_async", reinterpret_cast<PyCFunction>(PackageManager_StagePackageAsync), METH_VARARGS, nullptr },
         { "stage_package_by_uri_async", reinterpret_cast<PyCFunction>(PackageManager_StagePackageByUriAsync), METH_VARARGS, nullptr },
-        { "stage_package_to_volume_and_optional_packages_async", reinterpret_cast<PyCFunction>(PackageManager_StagePackageToVolumeAndOptionalPackagesAsync), METH_VARARGS, nullptr },
-        { "stage_package_to_volume_and_related_set_async", reinterpret_cast<PyCFunction>(PackageManager_StagePackageToVolumeAndRelatedSetAsync), METH_VARARGS, nullptr },
-        { "stage_package_to_volume_async", reinterpret_cast<PyCFunction>(PackageManager_StagePackageToVolumeAsync), METH_VARARGS, nullptr },
-        { "stage_package_with_options_async", reinterpret_cast<PyCFunction>(PackageManager_StagePackageWithOptionsAsync), METH_VARARGS, nullptr },
         { "stage_user_data_async", reinterpret_cast<PyCFunction>(PackageManager_StageUserDataAsync), METH_VARARGS, nullptr },
-        { "stage_user_data_with_options_async", reinterpret_cast<PyCFunction>(PackageManager_StageUserDataWithOptionsAsync), METH_VARARGS, nullptr },
         { "update_package_async", reinterpret_cast<PyCFunction>(PackageManager_UpdatePackageAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PackageManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PackageManager), METH_O | METH_STATIC, nullptr },
@@ -6913,18 +6673,7 @@ namespace py::cpp::Windows::Management::Deployment
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PackageManagerDebugSettings_SetContentGroupStateWithPercentageAsync(py::wrapper::Windows::Management::Deployment::PackageManagerDebugSettings* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 4)
+        else if (arg_count == 4)
         {
             try
             {
@@ -6991,7 +6740,6 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyMethodDef _methods_PackageManagerDebugSettings[] = {
         { "set_content_group_state_async", reinterpret_cast<PyCFunction>(PackageManagerDebugSettings_SetContentGroupStateAsync), METH_VARARGS, nullptr },
-        { "set_content_group_state_with_percentage_async", reinterpret_cast<PyCFunction>(PackageManagerDebugSettings_SetContentGroupStateWithPercentageAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PackageManagerDebugSettings, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PackageManagerDebugSettings), METH_O | METH_STATIC, nullptr },
         { }};
@@ -7155,7 +6903,7 @@ namespace py::cpp::Windows::Management::Deployment
         Py_DECREF(tp);
     }
 
-    static PyObject* PackageVolume_FindPackageByPackageFullName(py::wrapper::Windows::Management::Deployment::PackageVolume* self, PyObject* args) noexcept
+    static PyObject* PackageVolume_FindPackage(py::wrapper::Windows::Management::Deployment::PackageVolume* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -7197,7 +6945,7 @@ namespace py::cpp::Windows::Management::Deployment
         }
     }
 
-    static PyObject* PackageVolume_FindPackageByUserSecurityIdPackageFullName(py::wrapper::Windows::Management::Deployment::PackageVolume* self, PyObject* args) noexcept
+    static PyObject* PackageVolume_FindPackageForUser(py::wrapper::Windows::Management::Deployment::PackageVolume* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -7273,18 +7021,38 @@ namespace py::cpp::Windows::Management::Deployment
                 return nullptr;
             }
         }
-        else
+        else if (arg_count == 1)
         {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageVolume", L"FindPackages", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindPackages(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
         }
-    }
-
-    static PyObject* PackageVolume_FindPackagesByNamePublisher(py::wrapper::Windows::Management::Deployment::PackageVolume* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -7323,136 +7091,7 @@ namespace py::cpp::Windows::Management::Deployment
         }
     }
 
-    static PyObject* PackageVolume_FindPackagesByNamePublisherWithPackagesTypes(py::wrapper::Windows::Management::Deployment::PackageVolume* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageVolume", L"FindPackagesWithPackageTypes", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Management::Deployment::PackageTypes>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-                auto param2 = py::convert_to<winrt::hstring>(args, 2);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.FindPackagesWithPackageTypes(param0, param1, param2);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PackageVolume_FindPackagesByPackageFamilyName(py::wrapper::Windows::Management::Deployment::PackageVolume* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageVolume", L"FindPackages", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.FindPackages(param0);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PackageVolume_FindPackagesByPackageFamilyNameWithPackageTypes(py::wrapper::Windows::Management::Deployment::PackageVolume* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageVolume", L"FindPackagesWithPackageTypes", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Management::Deployment::PackageTypes>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.FindPackagesWithPackageTypes(param0, param1);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PackageVolume_FindPackagesByUserSecurityId(py::wrapper::Windows::Management::Deployment::PackageVolume* self, PyObject* args) noexcept
+    static PyObject* PackageVolume_FindPackagesForUser(py::wrapper::Windows::Management::Deployment::PackageVolume* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -7487,18 +7126,39 @@ namespace py::cpp::Windows::Management::Deployment
                 return nullptr;
             }
         }
-        else
+        else if (arg_count == 2)
         {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageVolume", L"FindPackagesForUser", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindPackagesForUser(param0, param1);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
         }
-    }
-
-    static PyObject* PackageVolume_FindPackagesByUserSecurityIdNamePublisher(py::wrapper::Windows::Management::Deployment::PackageVolume* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -7538,52 +7198,7 @@ namespace py::cpp::Windows::Management::Deployment
         }
     }
 
-    static PyObject* PackageVolume_FindPackagesByUserSecurityIdNamePublisherWithPackageTypes(py::wrapper::Windows::Management::Deployment::PackageVolume* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageVolume", L"FindPackagesForUserWithPackageTypes", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Management::Deployment::PackageTypes>(args, 1);
-                auto param2 = py::convert_to<winrt::hstring>(args, 2);
-                auto param3 = py::convert_to<winrt::hstring>(args, 3);
-
-                return py::convert([&]()
-                {
-                    auto _gil = release_gil();
-                    return self->obj.FindPackagesForUserWithPackageTypes(param0, param1, param2, param3);
-                }());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PackageVolume_FindPackagesByUserSecurityIdPackageFamilyName(py::wrapper::Windows::Management::Deployment::PackageVolume* self, PyObject* args) noexcept
+    static PyObject* PackageVolume_FindPackagesForUserWithPackageTypes(py::wrapper::Windows::Management::Deployment::PackageVolume* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
 
@@ -7595,7 +7210,7 @@ namespace py::cpp::Windows::Management::Deployment
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageVolume", L"FindPackagesForUser", 2);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageVolume", L"FindPackagesForUserWithPackageTypes", 2);
                 }
 
                 if (!is_overload_present.value())
@@ -7605,12 +7220,12 @@ namespace py::cpp::Windows::Management::Deployment
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param1 = py::convert_to<winrt::Windows::Management::Deployment::PackageTypes>(args, 1);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.FindPackagesForUser(param0, param1);
+                    return self->obj.FindPackagesForUserWithPackageTypes(param0, param1);
                 }());
             }
             catch (...)
@@ -7619,18 +7234,7 @@ namespace py::cpp::Windows::Management::Deployment
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PackageVolume_FindPackagesByUserSecurityIdPackageFamilyNameWithPackagesTypes(py::wrapper::Windows::Management::Deployment::PackageVolume* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 3)
+        else if (arg_count == 3)
         {
             try
             {
@@ -7663,18 +7267,7 @@ namespace py::cpp::Windows::Management::Deployment
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PackageVolume_FindPackagesByUserSecurityIdWithPackageTypes(py::wrapper::Windows::Management::Deployment::PackageVolume* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 4)
         {
             try
             {
@@ -7682,22 +7275,24 @@ namespace py::cpp::Windows::Management::Deployment
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageVolume", L"FindPackagesForUserWithPackageTypes", 2);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageVolume", L"FindPackagesForUserWithPackageTypes", 4);
                 }
 
                 if (!is_overload_present.value())
                 {
-                    py::set_arg_count_version_error(2);
+                    py::set_arg_count_version_error(4);
                     return nullptr;
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Management::Deployment::PackageTypes>(args, 1);
+                auto param2 = py::convert_to<winrt::hstring>(args, 2);
+                auto param3 = py::convert_to<winrt::hstring>(args, 3);
 
                 return py::convert([&]()
                 {
                     auto _gil = release_gil();
-                    return self->obj.FindPackagesForUserWithPackageTypes(param0, param1);
+                    return self->obj.FindPackagesForUserWithPackageTypes(param0, param1, param2, param3);
                 }());
             }
             catch (...)
@@ -7740,6 +7335,71 @@ namespace py::cpp::Windows::Management::Deployment
                 {
                     auto _gil = release_gil();
                     return self->obj.FindPackagesWithPackageTypes(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageVolume", L"FindPackagesWithPackageTypes", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Management::Deployment::PackageTypes>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindPackagesWithPackageTypes(param0, param1);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageVolume", L"FindPackagesWithPackageTypes", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Management::Deployment::PackageTypes>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::hstring>(args, 2);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.FindPackagesWithPackageTypes(param0, param1, param2);
                 }());
             }
             catch (...)
@@ -8060,19 +7720,11 @@ namespace py::cpp::Windows::Management::Deployment
     }
 
     static PyMethodDef _methods_PackageVolume[] = {
-        { "find_package_by_package_full_name", reinterpret_cast<PyCFunction>(PackageVolume_FindPackageByPackageFullName), METH_VARARGS, nullptr },
-        { "find_package_by_user_security_id_package_full_name", reinterpret_cast<PyCFunction>(PackageVolume_FindPackageByUserSecurityIdPackageFullName), METH_VARARGS, nullptr },
+        { "find_package", reinterpret_cast<PyCFunction>(PackageVolume_FindPackage), METH_VARARGS, nullptr },
+        { "find_package_for_user", reinterpret_cast<PyCFunction>(PackageVolume_FindPackageForUser), METH_VARARGS, nullptr },
         { "find_packages", reinterpret_cast<PyCFunction>(PackageVolume_FindPackages), METH_VARARGS, nullptr },
-        { "find_packages_by_name_publisher", reinterpret_cast<PyCFunction>(PackageVolume_FindPackagesByNamePublisher), METH_VARARGS, nullptr },
-        { "find_packages_by_name_publisher_with_packages_types", reinterpret_cast<PyCFunction>(PackageVolume_FindPackagesByNamePublisherWithPackagesTypes), METH_VARARGS, nullptr },
-        { "find_packages_by_package_family_name", reinterpret_cast<PyCFunction>(PackageVolume_FindPackagesByPackageFamilyName), METH_VARARGS, nullptr },
-        { "find_packages_by_package_family_name_with_package_types", reinterpret_cast<PyCFunction>(PackageVolume_FindPackagesByPackageFamilyNameWithPackageTypes), METH_VARARGS, nullptr },
-        { "find_packages_by_user_security_id", reinterpret_cast<PyCFunction>(PackageVolume_FindPackagesByUserSecurityId), METH_VARARGS, nullptr },
-        { "find_packages_by_user_security_id_name_publisher", reinterpret_cast<PyCFunction>(PackageVolume_FindPackagesByUserSecurityIdNamePublisher), METH_VARARGS, nullptr },
-        { "find_packages_by_user_security_id_name_publisher_with_package_types", reinterpret_cast<PyCFunction>(PackageVolume_FindPackagesByUserSecurityIdNamePublisherWithPackageTypes), METH_VARARGS, nullptr },
-        { "find_packages_by_user_security_id_package_family_name", reinterpret_cast<PyCFunction>(PackageVolume_FindPackagesByUserSecurityIdPackageFamilyName), METH_VARARGS, nullptr },
-        { "find_packages_by_user_security_id_package_family_name_with_packages_types", reinterpret_cast<PyCFunction>(PackageVolume_FindPackagesByUserSecurityIdPackageFamilyNameWithPackagesTypes), METH_VARARGS, nullptr },
-        { "find_packages_by_user_security_id_with_package_types", reinterpret_cast<PyCFunction>(PackageVolume_FindPackagesByUserSecurityIdWithPackageTypes), METH_VARARGS, nullptr },
+        { "find_packages_for_user", reinterpret_cast<PyCFunction>(PackageVolume_FindPackagesForUser), METH_VARARGS, nullptr },
+        { "find_packages_for_user_with_package_types", reinterpret_cast<PyCFunction>(PackageVolume_FindPackagesForUserWithPackageTypes), METH_VARARGS, nullptr },
         { "find_packages_with_package_types", reinterpret_cast<PyCFunction>(PackageVolume_FindPackagesWithPackageTypes), METH_VARARGS, nullptr },
         { "get_available_space_async", reinterpret_cast<PyCFunction>(PackageVolume_GetAvailableSpaceAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PackageVolume, METH_O | METH_STATIC, nullptr },
@@ -9734,18 +9386,7 @@ namespace py::cpp::Windows::Management::Deployment
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* SharedPackageContainerManager_FindContainersWithOptions(py::wrapper::Windows::Management::Deployment::SharedPackageContainerManager* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -9975,7 +9616,6 @@ namespace py::cpp::Windows::Management::Deployment
         { "create_container", reinterpret_cast<PyCFunction>(SharedPackageContainerManager_CreateContainer), METH_VARARGS, nullptr },
         { "delete_container", reinterpret_cast<PyCFunction>(SharedPackageContainerManager_DeleteContainer), METH_VARARGS, nullptr },
         { "find_containers", reinterpret_cast<PyCFunction>(SharedPackageContainerManager_FindContainers), METH_VARARGS, nullptr },
-        { "find_containers_with_options", reinterpret_cast<PyCFunction>(SharedPackageContainerManager_FindContainersWithOptions), METH_VARARGS, nullptr },
         { "get_container", reinterpret_cast<PyCFunction>(SharedPackageContainerManager_GetContainer), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SharedPackageContainerManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SharedPackageContainerManager), METH_O | METH_STATIC, nullptr },

@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -57,9 +58,15 @@ class BadgeNotification(winrt.system.Object):
 
 @typing.final
 class BadgeUpdateManager_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.UI.Notifications.BadgeUpdater Windows.UI.Notifications.BadgeUpdateManager::CreateBadgeUpdaterForApplication()
     def create_badge_updater_for_application(cls) -> BadgeUpdater: ...
+    @typing.overload
     # Windows.UI.Notifications.BadgeUpdater Windows.UI.Notifications.BadgeUpdateManager::CreateBadgeUpdaterForApplication(System.String)
+    def create_badge_updater_for_application(cls, application_id: str, /) -> BadgeUpdater: ...
+    # Deprecated alias of create_badge_updater_for_application() for pywinrt v3.x compatibility.
+    # Windows.UI.Notifications.BadgeUpdater Windows.UI.Notifications.BadgeUpdateManager::CreateBadgeUpdaterForApplication(System.String)
+    @deprecated("Use create_badge_updater_for_application() instead.")
     def create_badge_updater_for_application_with_id(cls, application_id: str, /) -> BadgeUpdater: ...
     # Windows.UI.Notifications.BadgeUpdater Windows.UI.Notifications.BadgeUpdateManager::CreateBadgeUpdaterForSecondaryTile(System.String)
     def create_badge_updater_for_secondary_tile(cls, tile_id: str, /) -> BadgeUpdater: ...
@@ -74,9 +81,15 @@ class BadgeUpdateManager(winrt.system.Object, metaclass=BadgeUpdateManager_Stati
 
 @typing.final
 class BadgeUpdateManagerForUser(winrt.system.Object):
+    @typing.overload
     # Windows.UI.Notifications.BadgeUpdater Windows.UI.Notifications.BadgeUpdateManagerForUser::CreateBadgeUpdaterForApplication()
     def create_badge_updater_for_application(self) -> BadgeUpdater: ...
+    @typing.overload
     # Windows.UI.Notifications.BadgeUpdater Windows.UI.Notifications.BadgeUpdateManagerForUser::CreateBadgeUpdaterForApplication(System.String)
+    def create_badge_updater_for_application(self, application_id: str, /) -> BadgeUpdater: ...
+    # Deprecated alias of create_badge_updater_for_application() for pywinrt v3.x compatibility.
+    # Windows.UI.Notifications.BadgeUpdater Windows.UI.Notifications.BadgeUpdateManagerForUser::CreateBadgeUpdaterForApplication(System.String)
+    @deprecated("Use create_badge_updater_for_application() instead.")
     def create_badge_updater_for_application_with_id(self, application_id: str, /) -> BadgeUpdater: ...
     # Windows.UI.Notifications.BadgeUpdater Windows.UI.Notifications.BadgeUpdateManagerForUser::CreateBadgeUpdaterForSecondaryTile(System.String)
     def create_badge_updater_for_secondary_tile(self, tile_id: str, /) -> BadgeUpdater: ...
@@ -88,9 +101,15 @@ class BadgeUpdateManagerForUser(winrt.system.Object):
 class BadgeUpdater(winrt.system.Object):
     # System.Void Windows.UI.Notifications.BadgeUpdater::Clear()
     def clear(self) -> None: ...
+    @typing.overload
     # System.Void Windows.UI.Notifications.BadgeUpdater::StartPeriodicUpdate(Windows.Foundation.Uri,Windows.UI.Notifications.PeriodicUpdateRecurrence)
     def start_periodic_update(self, badge_content: windows_foundation.Uri, requested_interval: PeriodicUpdateRecurrence, /) -> None: ...
+    @typing.overload
     # System.Void Windows.UI.Notifications.BadgeUpdater::StartPeriodicUpdate(Windows.Foundation.Uri,Windows.Foundation.DateTime,Windows.UI.Notifications.PeriodicUpdateRecurrence)
+    def start_periodic_update(self, badge_content: windows_foundation.Uri, start_time: datetime.datetime, requested_interval: PeriodicUpdateRecurrence, /) -> None: ...
+    # Deprecated alias of start_periodic_update() for pywinrt v3.x compatibility.
+    # System.Void Windows.UI.Notifications.BadgeUpdater::StartPeriodicUpdate(Windows.Foundation.Uri,Windows.Foundation.DateTime,Windows.UI.Notifications.PeriodicUpdateRecurrence)
+    @deprecated("Use start_periodic_update() instead.")
     def start_periodic_update_at_time(self, badge_content: windows_foundation.Uri, start_time: datetime.datetime, requested_interval: PeriodicUpdateRecurrence, /) -> None: ...
     # System.Void Windows.UI.Notifications.BadgeUpdater::StopPeriodicUpdate()
     def stop_periodic_update(self) -> None: ...
@@ -388,9 +407,15 @@ class TileFlyoutNotification(winrt.system.Object):
 
 @typing.final
 class TileFlyoutUpdateManager_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.UI.Notifications.TileFlyoutUpdater Windows.UI.Notifications.TileFlyoutUpdateManager::CreateTileFlyoutUpdaterForApplication()
     def create_tile_flyout_updater_for_application(cls) -> TileFlyoutUpdater: ...
+    @typing.overload
     # Windows.UI.Notifications.TileFlyoutUpdater Windows.UI.Notifications.TileFlyoutUpdateManager::CreateTileFlyoutUpdaterForApplication(System.String)
+    def create_tile_flyout_updater_for_application(cls, application_id: str, /) -> TileFlyoutUpdater: ...
+    # Deprecated alias of create_tile_flyout_updater_for_application() for pywinrt v3.x compatibility.
+    # Windows.UI.Notifications.TileFlyoutUpdater Windows.UI.Notifications.TileFlyoutUpdateManager::CreateTileFlyoutUpdaterForApplication(System.String)
+    @deprecated("Use create_tile_flyout_updater_for_application() instead.")
     def create_tile_flyout_updater_for_application_with_id(cls, application_id: str, /) -> TileFlyoutUpdater: ...
     # Windows.UI.Notifications.TileFlyoutUpdater Windows.UI.Notifications.TileFlyoutUpdateManager::CreateTileFlyoutUpdaterForSecondaryTile(System.String)
     def create_tile_flyout_updater_for_secondary_tile(cls, tile_id: str, /) -> TileFlyoutUpdater: ...
@@ -405,9 +430,15 @@ class TileFlyoutUpdateManager(winrt.system.Object, metaclass=TileFlyoutUpdateMan
 class TileFlyoutUpdater(winrt.system.Object):
     # System.Void Windows.UI.Notifications.TileFlyoutUpdater::Clear()
     def clear(self) -> None: ...
+    @typing.overload
     # System.Void Windows.UI.Notifications.TileFlyoutUpdater::StartPeriodicUpdate(Windows.Foundation.Uri,Windows.UI.Notifications.PeriodicUpdateRecurrence)
     def start_periodic_update(self, tile_flyout_content: windows_foundation.Uri, requested_interval: PeriodicUpdateRecurrence, /) -> None: ...
+    @typing.overload
     # System.Void Windows.UI.Notifications.TileFlyoutUpdater::StartPeriodicUpdate(Windows.Foundation.Uri,Windows.Foundation.DateTime,Windows.UI.Notifications.PeriodicUpdateRecurrence)
+    def start_periodic_update(self, tile_flyout_content: windows_foundation.Uri, start_time: datetime.datetime, requested_interval: PeriodicUpdateRecurrence, /) -> None: ...
+    # Deprecated alias of start_periodic_update() for pywinrt v3.x compatibility.
+    # System.Void Windows.UI.Notifications.TileFlyoutUpdater::StartPeriodicUpdate(Windows.Foundation.Uri,Windows.Foundation.DateTime,Windows.UI.Notifications.PeriodicUpdateRecurrence)
+    @deprecated("Use start_periodic_update() instead.")
     def start_periodic_update_at_time(self, tile_flyout_content: windows_foundation.Uri, start_time: datetime.datetime, requested_interval: PeriodicUpdateRecurrence, /) -> None: ...
     # System.Void Windows.UI.Notifications.TileFlyoutUpdater::StopPeriodicUpdate()
     def stop_periodic_update(self) -> None: ...
@@ -438,9 +469,15 @@ class TileNotification(winrt.system.Object):
 
 @typing.final
 class TileUpdateManager_Static(winrt._winrt.IInspectable_Static):
+    @typing.overload
     # Windows.UI.Notifications.TileUpdater Windows.UI.Notifications.TileUpdateManager::CreateTileUpdaterForApplication()
     def create_tile_updater_for_application(cls) -> TileUpdater: ...
+    @typing.overload
     # Windows.UI.Notifications.TileUpdater Windows.UI.Notifications.TileUpdateManager::CreateTileUpdaterForApplication(System.String)
+    def create_tile_updater_for_application(cls, application_id: str, /) -> TileUpdater: ...
+    # Deprecated alias of create_tile_updater_for_application() for pywinrt v3.x compatibility.
+    # Windows.UI.Notifications.TileUpdater Windows.UI.Notifications.TileUpdateManager::CreateTileUpdaterForApplication(System.String)
+    @deprecated("Use create_tile_updater_for_application() instead.")
     def create_tile_updater_for_application_with_id(cls, application_id: str, /) -> TileUpdater: ...
     # Windows.UI.Notifications.TileUpdater Windows.UI.Notifications.TileUpdateManager::CreateTileUpdaterForSecondaryTile(System.String)
     def create_tile_updater_for_secondary_tile(cls, tile_id: str, /) -> TileUpdater: ...
@@ -455,10 +492,14 @@ class TileUpdateManager(winrt.system.Object, metaclass=TileUpdateManager_Static)
 
 @typing.final
 class TileUpdateManagerForUser(winrt.system.Object):
-    # Windows.UI.Notifications.TileUpdater Windows.UI.Notifications.TileUpdateManagerForUser::CreateTileUpdaterForApplicationForUser()
-    def create_tile_updater_for_application(self) -> TileUpdater: ...
     # Windows.UI.Notifications.TileUpdater Windows.UI.Notifications.TileUpdateManagerForUser::CreateTileUpdaterForApplication(System.String)
+    def create_tile_updater_for_application(self, application_id: str, /) -> TileUpdater: ...
+    # Deprecated alias of create_tile_updater_for_application() for pywinrt v3.x compatibility.
+    # Windows.UI.Notifications.TileUpdater Windows.UI.Notifications.TileUpdateManagerForUser::CreateTileUpdaterForApplication(System.String)
+    @deprecated("Use create_tile_updater_for_application() instead.")
     def create_tile_updater_for_application_with_id(self, application_id: str, /) -> TileUpdater: ...
+    # Windows.UI.Notifications.TileUpdater Windows.UI.Notifications.TileUpdateManagerForUser::CreateTileUpdaterForApplicationForUser()
+    def create_tile_updater_for_application_for_user(self) -> TileUpdater: ...
     # Windows.UI.Notifications.TileUpdater Windows.UI.Notifications.TileUpdateManagerForUser::CreateTileUpdaterForSecondaryTile(System.String)
     def create_tile_updater_for_secondary_tile(self, tile_id: str, /) -> TileUpdater: ...
     # Windows.System.User Windows.UI.Notifications.TileUpdateManagerForUser::get_User()
@@ -483,13 +524,25 @@ class TileUpdater(winrt.system.Object):
     def get_scheduled_tile_notifications(self) -> typing.Sequence[ScheduledTileNotification]: ...
     # System.Void Windows.UI.Notifications.TileUpdater::RemoveFromSchedule(Windows.UI.Notifications.ScheduledTileNotification)
     def remove_from_schedule(self, scheduled_tile: ScheduledTileNotification, /) -> None: ...
+    @typing.overload
     # System.Void Windows.UI.Notifications.TileUpdater::StartPeriodicUpdate(Windows.Foundation.Uri,Windows.UI.Notifications.PeriodicUpdateRecurrence)
     def start_periodic_update(self, tile_content: windows_foundation.Uri, requested_interval: PeriodicUpdateRecurrence, /) -> None: ...
+    @typing.overload
     # System.Void Windows.UI.Notifications.TileUpdater::StartPeriodicUpdate(Windows.Foundation.Uri,Windows.Foundation.DateTime,Windows.UI.Notifications.PeriodicUpdateRecurrence)
+    def start_periodic_update(self, tile_content: windows_foundation.Uri, start_time: datetime.datetime, requested_interval: PeriodicUpdateRecurrence, /) -> None: ...
+    # Deprecated alias of start_periodic_update() for pywinrt v3.x compatibility.
+    # System.Void Windows.UI.Notifications.TileUpdater::StartPeriodicUpdate(Windows.Foundation.Uri,Windows.Foundation.DateTime,Windows.UI.Notifications.PeriodicUpdateRecurrence)
+    @deprecated("Use start_periodic_update() instead.")
     def start_periodic_update_at_time(self, tile_content: windows_foundation.Uri, start_time: datetime.datetime, requested_interval: PeriodicUpdateRecurrence, /) -> None: ...
+    @typing.overload
     # System.Void Windows.UI.Notifications.TileUpdater::StartPeriodicUpdateBatch(Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Uri>,Windows.UI.Notifications.PeriodicUpdateRecurrence)
     def start_periodic_update_batch(self, tile_contents: typing.Iterable[windows_foundation.Uri], requested_interval: PeriodicUpdateRecurrence, /) -> None: ...
+    @typing.overload
     # System.Void Windows.UI.Notifications.TileUpdater::StartPeriodicUpdateBatch(Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Uri>,Windows.Foundation.DateTime,Windows.UI.Notifications.PeriodicUpdateRecurrence)
+    def start_periodic_update_batch(self, tile_contents: typing.Iterable[windows_foundation.Uri], start_time: datetime.datetime, requested_interval: PeriodicUpdateRecurrence, /) -> None: ...
+    # Deprecated alias of start_periodic_update_batch() for pywinrt v3.x compatibility.
+    # System.Void Windows.UI.Notifications.TileUpdater::StartPeriodicUpdateBatch(Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Uri>,Windows.Foundation.DateTime,Windows.UI.Notifications.PeriodicUpdateRecurrence)
+    @deprecated("Use start_periodic_update_batch() instead.")
     def start_periodic_update_batch_at_time(self, tile_contents: typing.Iterable[windows_foundation.Uri], start_time: datetime.datetime, requested_interval: PeriodicUpdateRecurrence, /) -> None: ...
     # System.Void Windows.UI.Notifications.TileUpdater::StopPeriodicUpdate()
     def stop_periodic_update(self) -> None: ...
@@ -648,24 +701,53 @@ class ToastNotificationActionTriggerDetail(winrt.system.Object):
 
 @typing.final
 class ToastNotificationHistory(winrt.system.Object):
+    @typing.overload
     # System.Void Windows.UI.Notifications.ToastNotificationHistory::Clear()
     def clear(self) -> None: ...
+    @typing.overload
     # System.Void Windows.UI.Notifications.ToastNotificationHistory::Clear(System.String)
+    def clear(self, application_id: str, /) -> None: ...
+    # Deprecated alias of clear() for pywinrt v3.x compatibility.
+    # System.Void Windows.UI.Notifications.ToastNotificationHistory::Clear(System.String)
+    @deprecated("Use clear() instead.")
     def clear_with_id(self, application_id: str, /) -> None: ...
+    @typing.overload
     # Windows.Foundation.Collections.IVectorView`1<Windows.UI.Notifications.ToastNotification> Windows.UI.Notifications.ToastNotificationHistory::GetHistory()
     def get_history(self) -> typing.Sequence[ToastNotification]: ...
+    @typing.overload
     # Windows.Foundation.Collections.IVectorView`1<Windows.UI.Notifications.ToastNotification> Windows.UI.Notifications.ToastNotificationHistory::GetHistory(System.String)
+    def get_history(self, application_id: str, /) -> typing.Sequence[ToastNotification]: ...
+    # Deprecated alias of get_history() for pywinrt v3.x compatibility.
+    # Windows.Foundation.Collections.IVectorView`1<Windows.UI.Notifications.ToastNotification> Windows.UI.Notifications.ToastNotificationHistory::GetHistory(System.String)
+    @deprecated("Use get_history() instead.")
     def get_history_with_id(self, application_id: str, /) -> typing.Sequence[ToastNotification]: ...
+    @typing.overload
     # System.Void Windows.UI.Notifications.ToastNotificationHistory::Remove(System.String)
     def remove(self, tag: str, /) -> None: ...
+    @typing.overload
+    # System.Void Windows.UI.Notifications.ToastNotificationHistory::Remove(System.String,System.String)
+    def remove(self, tag: str, group: str, /) -> None: ...
+    @typing.overload
+    # System.Void Windows.UI.Notifications.ToastNotificationHistory::Remove(System.String,System.String,System.String)
+    def remove(self, tag: str, group: str, application_id: str, /) -> None: ...
+    # Deprecated alias of remove() for pywinrt v3.x compatibility.
+    # System.Void Windows.UI.Notifications.ToastNotificationHistory::Remove(System.String,System.String)
+    @deprecated("Use remove() instead.")
+    def remove_grouped_tag(self, tag: str, group: str, /) -> None: ...
+    # Deprecated alias of remove() for pywinrt v3.x compatibility.
+    # System.Void Windows.UI.Notifications.ToastNotificationHistory::Remove(System.String,System.String,System.String)
+    @deprecated("Use remove() instead.")
+    def remove_grouped_tag_with_id(self, tag: str, group: str, application_id: str, /) -> None: ...
+    @typing.overload
     # System.Void Windows.UI.Notifications.ToastNotificationHistory::RemoveGroup(System.String)
     def remove_group(self, group: str, /) -> None: ...
+    @typing.overload
     # System.Void Windows.UI.Notifications.ToastNotificationHistory::RemoveGroup(System.String,System.String)
+    def remove_group(self, group: str, application_id: str, /) -> None: ...
+    # Deprecated alias of remove_group() for pywinrt v3.x compatibility.
+    # System.Void Windows.UI.Notifications.ToastNotificationHistory::RemoveGroup(System.String,System.String)
+    @deprecated("Use remove_group() instead.")
     def remove_group_with_id(self, group: str, application_id: str, /) -> None: ...
-    # System.Void Windows.UI.Notifications.ToastNotificationHistory::Remove(System.String,System.String)
-    def remove_grouped_tag(self, tag: str, group: str, /) -> None: ...
-    # System.Void Windows.UI.Notifications.ToastNotificationHistory::Remove(System.String,System.String,System.String)
-    def remove_grouped_tag_with_id(self, tag: str, group: str, application_id: str, /) -> None: ...
 
 @typing.final
 class ToastNotificationHistoryChangedTriggerDetail(winrt.system.Object):
@@ -680,9 +762,15 @@ class ToastNotificationHistoryChangedTriggerDetail(winrt.system.Object):
 class ToastNotificationManager_Static(winrt._winrt.IInspectable_Static):
     # System.Void Windows.UI.Notifications.ToastNotificationManager::ConfigureNotificationMirroring(Windows.UI.Notifications.NotificationMirroring)
     def configure_notification_mirroring(cls, value: NotificationMirroring, /) -> None: ...
+    @typing.overload
     # Windows.UI.Notifications.ToastNotifier Windows.UI.Notifications.ToastNotificationManager::CreateToastNotifier()
     def create_toast_notifier(cls) -> ToastNotifier: ...
+    @typing.overload
     # Windows.UI.Notifications.ToastNotifier Windows.UI.Notifications.ToastNotificationManager::CreateToastNotifier(System.String)
+    def create_toast_notifier(cls, application_id: str, /) -> ToastNotifier: ...
+    # Deprecated alias of create_toast_notifier() for pywinrt v3.x compatibility.
+    # Windows.UI.Notifications.ToastNotifier Windows.UI.Notifications.ToastNotificationManager::CreateToastNotifier(System.String)
+    @deprecated("Use create_toast_notifier() instead.")
     def create_toast_notifier_with_id(cls, application_id: str, /) -> ToastNotifier: ...
     # Windows.UI.Notifications.ToastNotificationManagerForUser Windows.UI.Notifications.ToastNotificationManager::GetDefault()
     def get_default(cls) -> ToastNotificationManagerForUser: ...
@@ -700,15 +788,27 @@ class ToastNotificationManager(winrt.system.Object, metaclass=ToastNotificationM
 
 @typing.final
 class ToastNotificationManagerForUser(winrt.system.Object):
+    @typing.overload
     # Windows.UI.Notifications.ToastNotifier Windows.UI.Notifications.ToastNotificationManagerForUser::CreateToastNotifier()
     def create_toast_notifier(self) -> ToastNotifier: ...
+    @typing.overload
     # Windows.UI.Notifications.ToastNotifier Windows.UI.Notifications.ToastNotificationManagerForUser::CreateToastNotifier(System.String)
+    def create_toast_notifier(self, application_id: str, /) -> ToastNotifier: ...
+    # Deprecated alias of create_toast_notifier() for pywinrt v3.x compatibility.
+    # Windows.UI.Notifications.ToastNotifier Windows.UI.Notifications.ToastNotificationManagerForUser::CreateToastNotifier(System.String)
+    @deprecated("Use create_toast_notifier() instead.")
     def create_toast_notifier_with_id(self, application_id: str, /) -> ToastNotifier: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.UI.Notifications.ToastNotificationHistory> Windows.UI.Notifications.ToastNotificationManagerForUser::GetHistoryForToastCollectionIdAsync(System.String)
     def get_history_for_toast_collection_id_async(self, collection_id: str, /) -> windows_foundation.IAsyncOperation[ToastNotificationHistory]: ...
+    @typing.overload
     # Windows.UI.Notifications.ToastCollectionManager Windows.UI.Notifications.ToastNotificationManagerForUser::GetToastCollectionManager()
     def get_toast_collection_manager(self) -> ToastCollectionManager: ...
+    @typing.overload
     # Windows.UI.Notifications.ToastCollectionManager Windows.UI.Notifications.ToastNotificationManagerForUser::GetToastCollectionManager(System.String)
+    def get_toast_collection_manager(self, app_id: str, /) -> ToastCollectionManager: ...
+    # Deprecated alias of get_toast_collection_manager() for pywinrt v3.x compatibility.
+    # Windows.UI.Notifications.ToastCollectionManager Windows.UI.Notifications.ToastNotificationManagerForUser::GetToastCollectionManager(System.String)
+    @deprecated("Use get_toast_collection_manager() instead.")
     def get_toast_collection_manager_with_app_id(self, app_id: str, /) -> ToastCollectionManager: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.UI.Notifications.ToastNotifier> Windows.UI.Notifications.ToastNotificationManagerForUser::GetToastNotifierForToastCollectionIdAsync(System.String)
     def get_toast_notifier_for_toast_collection_id_async(self, collection_id: str, /) -> windows_foundation.IAsyncOperation[ToastNotifier]: ...
@@ -738,9 +838,19 @@ class ToastNotifier(winrt.system.Object):
     def remove_from_schedule(self, scheduled_toast: ScheduledToastNotification, /) -> None: ...
     # System.Void Windows.UI.Notifications.ToastNotifier::Show(Windows.UI.Notifications.ToastNotification)
     def show(self, notification: ToastNotification, /) -> None: ...
+    @typing.overload
     # Windows.UI.Notifications.NotificationUpdateResult Windows.UI.Notifications.ToastNotifier::Update(Windows.UI.Notifications.NotificationData,System.String)
-    def update_with_tag(self, data: NotificationData, tag: str, /) -> NotificationUpdateResult: ...
+    def update(self, data: NotificationData, tag: str, /) -> NotificationUpdateResult: ...
+    @typing.overload
     # Windows.UI.Notifications.NotificationUpdateResult Windows.UI.Notifications.ToastNotifier::Update(Windows.UI.Notifications.NotificationData,System.String,System.String)
+    def update(self, data: NotificationData, tag: str, group: str, /) -> NotificationUpdateResult: ...
+    # Deprecated alias of update() for pywinrt v3.x compatibility.
+    # Windows.UI.Notifications.NotificationUpdateResult Windows.UI.Notifications.ToastNotifier::Update(Windows.UI.Notifications.NotificationData,System.String)
+    @deprecated("Use update() instead.")
+    def update_with_tag(self, data: NotificationData, tag: str, /) -> NotificationUpdateResult: ...
+    # Deprecated alias of update() for pywinrt v3.x compatibility.
+    # Windows.UI.Notifications.NotificationUpdateResult Windows.UI.Notifications.ToastNotifier::Update(Windows.UI.Notifications.NotificationData,System.String,System.String)
+    @deprecated("Use update() instead.")
     def update_with_tag_and_group(self, data: NotificationData, tag: str, group: str, /) -> NotificationUpdateResult: ...
     # Windows.Foundation.EventRegistrationToken Windows.UI.Notifications.ToastNotifier::add_ScheduledToastNotificationShowing(Windows.Foundation.TypedEventHandler`2<Windows.UI.Notifications.ToastNotifier,Windows.UI.Notifications.ScheduledToastNotificationShowingEventArgs>)
     def add_scheduled_toast_notification_showing(self, handler: windows_foundation.TypedEventHandler[ToastNotifier, ScheduledToastNotificationShowingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...

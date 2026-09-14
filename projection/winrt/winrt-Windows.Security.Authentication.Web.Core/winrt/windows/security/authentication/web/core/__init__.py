@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_security_authentication_web_core import (
     FindAllAccountsResult,
@@ -60,3 +61,10 @@ class WebTokenRequestStatus(enum.IntEnum):
     ACCOUNT_PROVIDER_NOT_AVAILABLE = 4
     PROVIDER_ERROR = 5
 
+winrt.runtime._internals.alias_static_method(WebAuthenticationCoreManager, "find_account_provider_with_authority_async", "find_account_provider_async")
+winrt.runtime._internals.alias_static_method(WebAuthenticationCoreManager, "find_account_provider_with_authority_for_user_async", "find_account_provider_async")
+winrt.runtime._internals.alias_static_method(WebAuthenticationCoreManager, "find_all_accounts_with_client_id_async", "find_all_accounts_async")
+winrt.runtime._internals.alias_static_method(WebAuthenticationCoreManager, "find_system_account_provider_with_authority_async", "find_system_account_provider_async")
+winrt.runtime._internals.alias_static_method(WebAuthenticationCoreManager, "find_system_account_provider_with_authority_for_user_async", "find_system_account_provider_async")
+winrt.runtime._internals.alias_static_method(WebAuthenticationCoreManager, "get_token_silently_with_web_account_async", "get_token_silently_async")
+winrt.runtime._internals.alias_static_method(WebAuthenticationCoreManager, "request_token_with_web_account_async", "request_token_async")

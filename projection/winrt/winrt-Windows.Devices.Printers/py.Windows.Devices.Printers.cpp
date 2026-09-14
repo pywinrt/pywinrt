@@ -5981,18 +5981,7 @@ namespace py::cpp::Windows::Devices::Printers
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* VirtualPrinterManager_FindAllVirtualPrinters2(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 1)
+        else if (arg_count == 1)
         {
             try
             {
@@ -6065,18 +6054,7 @@ namespace py::cpp::Windows::Devices::Printers
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* VirtualPrinterManager_InstallVirtualPrinterAsync2(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -6150,18 +6128,7 @@ namespace py::cpp::Windows::Devices::Printers
                 return nullptr;
             }
         }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* VirtualPrinterManager_InstallVirtualPrinterForAllUsersAsync2(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_GET_SIZE(args);
-
-        if (arg_count == 2)
+        else if (arg_count == 2)
         {
             try
             {
@@ -6308,11 +6275,8 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyMethodDef methods_VirtualPrinterManager_Static[] = {
         { "find_all_virtual_printers", reinterpret_cast<PyCFunction>(VirtualPrinterManager_FindAllVirtualPrinters), METH_VARARGS, nullptr },
-        { "find_all_virtual_printers2", reinterpret_cast<PyCFunction>(VirtualPrinterManager_FindAllVirtualPrinters2), METH_VARARGS, nullptr },
         { "install_virtual_printer_async", reinterpret_cast<PyCFunction>(VirtualPrinterManager_InstallVirtualPrinterAsync), METH_VARARGS, nullptr },
-        { "install_virtual_printer_async2", reinterpret_cast<PyCFunction>(VirtualPrinterManager_InstallVirtualPrinterAsync2), METH_VARARGS, nullptr },
         { "install_virtual_printer_for_all_users_async", reinterpret_cast<PyCFunction>(VirtualPrinterManager_InstallVirtualPrinterForAllUsersAsync), METH_VARARGS, nullptr },
-        { "install_virtual_printer_for_all_users_async2", reinterpret_cast<PyCFunction>(VirtualPrinterManager_InstallVirtualPrinterForAllUsersAsync2), METH_VARARGS, nullptr },
         { "remove_virtual_printer_async", reinterpret_cast<PyCFunction>(VirtualPrinterManager_RemoveVirtualPrinterAsync), METH_VARARGS, nullptr },
         { "remove_virtual_printer_for_all_users_async", reinterpret_cast<PyCFunction>(VirtualPrinterManager_RemoveVirtualPrinterForAllUsersAsync), METH_VARARGS, nullptr },
         { }};

@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_ui_windowmanagement import (
     AppWindow,
@@ -80,3 +81,4 @@ class WindowingEnvironmentKind(enum.IntEnum):
     OVERLAPPED = 1
     TILED = 2
 
+winrt.runtime._internals.alias_static_method(WindowingEnvironment, "find_all_with_kind", "find_all")

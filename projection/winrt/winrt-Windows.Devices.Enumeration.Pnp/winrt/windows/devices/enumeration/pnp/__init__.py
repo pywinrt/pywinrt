@@ -32,3 +32,5 @@ class PnpObjectType(enum.IntEnum):
     ASSOCIATION_ENDPOINT_PROTOCOL = 9
 
 winrt.runtime._internals.mixin_sequence(PnpObjectCollection)
+winrt.runtime._internals.alias_static_method(PnpObject, "create_watcher_aqs_filter", "create_watcher")
+winrt.runtime._internals.alias_static_method(PnpObject, "find_all_async_aqs_filter", "find_all_async")

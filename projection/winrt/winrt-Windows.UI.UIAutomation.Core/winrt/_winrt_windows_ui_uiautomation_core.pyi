@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -78,9 +79,15 @@ class CoreAutomationRemoteOperation(winrt.system.Object):
 class CoreAutomationRemoteOperationContext(winrt.system.Object):
     # System.Object Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperationContext::GetOperand(Windows.UI.UIAutomation.Core.AutomationRemoteOperationOperandId)
     def get_operand(self, id: typing.Union[AutomationRemoteOperationOperandId, typing.Tuple[winrt.system.Int32]], /) -> winrt.system.Object: ...
+    @typing.overload
     # System.Void Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperationContext::SetOperand(Windows.UI.UIAutomation.Core.AutomationRemoteOperationOperandId,System.Object)
     def set_operand(self, id: typing.Union[AutomationRemoteOperationOperandId, typing.Tuple[winrt.system.Int32]], operand: winrt.system.Object, /) -> None: ...
+    @typing.overload
     # System.Void Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperationContext::SetOperand(Windows.UI.UIAutomation.Core.AutomationRemoteOperationOperandId,System.Object,System.Guid)
+    def set_operand(self, id: typing.Union[AutomationRemoteOperationOperandId, typing.Tuple[winrt.system.Int32]], operand: winrt.system.Object, operand_interface_id: _uuid.UUID, /) -> None: ...
+    # Deprecated alias of set_operand() for pywinrt v3.x compatibility.
+    # System.Void Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperationContext::SetOperand(Windows.UI.UIAutomation.Core.AutomationRemoteOperationOperandId,System.Object,System.Guid)
+    @deprecated("Use set_operand() instead.")
     def set_operand2(self, id: typing.Union[AutomationRemoteOperationOperandId, typing.Tuple[winrt.system.Int32]], operand: winrt.system.Object, operand_interface_id: _uuid.UUID, /) -> None: ...
 
 @typing.final

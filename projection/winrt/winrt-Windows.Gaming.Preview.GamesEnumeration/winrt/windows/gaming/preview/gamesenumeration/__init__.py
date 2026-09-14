@@ -4,6 +4,7 @@ import enum
 import typing
 import uuid as _uuid
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_gaming_preview_gamesenumeration import (
     GameList,
@@ -37,5 +38,7 @@ class GameListEntryLaunchableState(enum.IntEnum):
     BY_USER_PROVIDED_PATH = 2
     BY_TILE = 3
 
+winrt.runtime._internals.alias_static_method(GameList, "find_all_async_package_family_name", "find_all_async")
+winrt.runtime._internals.alias_method(GameListEntry, "set_launcher_executable_file_with_params_async", "set_launcher_executable_file_async")
 GameListChangedEventHandler = typing.Callable[[GameListEntry], None]
 GameListRemovedEventHandler = typing.Callable[[str], None]

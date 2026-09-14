@@ -2,6 +2,7 @@
 
 import enum
 
+import winrt.runtime._internals
 import winrt.system
 from winrt._winrt_windows_storage_fileproperties import (
     BasicProperties,
@@ -77,3 +78,10 @@ class VideoOrientation(enum.IntEnum):
     ROTATE180 = 180
     ROTATE270 = 270
 
+winrt.runtime._internals.alias_method(BasicProperties, "save_properties_async_overload_default", "save_properties_async")
+winrt.runtime._internals.alias_method(DocumentProperties, "save_properties_async_overload_default", "save_properties_async")
+winrt.runtime._internals.alias_method(ImageProperties, "save_properties_async_overload_default", "save_properties_async")
+winrt.runtime._internals.alias_method(MusicProperties, "save_properties_async_overload_default", "save_properties_async")
+winrt.runtime._internals.alias_method(StorageItemContentProperties, "save_properties_async_overload_default", "save_properties_async")
+winrt.runtime._internals.alias_method(VideoProperties, "save_properties_async_overload_default", "save_properties_async")
+winrt.runtime._internals.alias_method(_IStorageItemExtraProperties, "save_properties_async_overload_default", "save_properties_async")

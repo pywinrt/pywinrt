@@ -89,7 +89,7 @@ def bind_model(
     binding = winml.LearningModelBinding(session)
     image_feature_value = winml.ImageFeatureValue.create_from_video_frame(image_frame)
     binding.bind("data_0", image_feature_value)
-    shape = winml.TensorFloat.create2([1, 1000, 1, 1])
+    shape = winml.TensorFloat.create([1, 1000, 1, 1])
     binding.bind("softmaxout_1", shape)
     return session, binding
 
