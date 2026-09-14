@@ -2,6 +2,7 @@
 
 from setuptools import Extension, setup
 from setuptools.command.build_ext import build_ext
+from winrt._include import get_include
 from winrt_sdk import get_include_dirs
 from winrt_windows_app_sdk import get_include_dirs as get_app_sdk_include_dirs
 
@@ -33,7 +34,7 @@ setup(
         Extension(
             "winui3._winui3_microsoft_windows_ai_text",
             sources=["py.Microsoft.Windows.AI.Text.cpp"],
-            include_dirs=get_include_dirs()+ get_app_sdk_include_dirs(),
+            include_dirs=[get_include()] + get_include_dirs()+ get_app_sdk_include_dirs(),
             libraries=["windowsapp"],
         )
     ],

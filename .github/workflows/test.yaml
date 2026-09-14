@@ -13,6 +13,11 @@ on:
       - '!projection/**/*.txt'
       - '!projection/**/setup.py'
       - projection/CMakeLists.txt
+      - runtime/**
+      - '!runtime/**/*.md'
+      - '!runtime/**/*.toml'
+      - '!runtime/**/*.txt'
+      - '!runtime/setup.py'
       - test/**
 
 jobs:
@@ -94,7 +99,9 @@ jobs:
       - name: merge packages
         run: |
           mkdir _install/lint -Force
-          Get-ChildItem -Path projection/*/* -Directory -Recurse | Where-Object Name -IN "winrt", "webview2", "winui2", "winui3", "test_winrt" | ForEach-Object { Copy-Item -Path $_.FullName -Filter "*.py*" -Destination _install/lint/ -Recurse -Force  }
+          # the runtime's package lives outside of projection/, so
+          # winrt.system, winrt.runtime and winrt._winrt come from runtime/python
+          Get-ChildItem -Path projection/*/*, runtime/python -Directory -Recurse | Where-Object Name -IN "winrt", "webview2", "winui2", "winui3", "test_winrt" | ForEach-Object { Copy-Item -Path $_.FullName -Filter "*.py*" -Destination _install/lint/ -Recurse -Force  }
       - name: Run mypy on winrt
         env:
           MYPYPATH: _install/lint

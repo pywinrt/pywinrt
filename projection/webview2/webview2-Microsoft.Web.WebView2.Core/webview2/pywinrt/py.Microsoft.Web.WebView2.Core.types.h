@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "pybase.h"
+#include <pywinrt/base.h>
 #include <winrt/impl/Microsoft.Web.WebView2.Core.2.h>
 
 namespace py::proj::Microsoft::Web::WebView2::Core

@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "pybase.h"
+#include <pywinrt/base.h>
 #include <winrt/impl/Microsoft.Windows.Media.Capture.2.h>
 
 namespace py::proj::Microsoft::Windows::Media::Capture

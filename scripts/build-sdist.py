@@ -32,6 +32,19 @@ os.environ["WEBVIEW2_PATH"] = os.fspath(WEBVIEW2_PATH)
 os.environ["MICROSOFT_UI_XAML_PATH"] = os.fspath(MICROSOFT_UI_XAML_PATH)
 os.environ["WINDOWS_APP_SDK_PATH"] = os.fspath(WINDOWS_APP_SDK_PATH)
 
+# setup.py imports winrt._include to locate the runtime headers, and the
+# runtime is not installed here (its own sdist is one of the things we build),
+# so point at its source tree instead
+os.environ["PYTHONPATH"] = os.pathsep.join(
+    filter(
+        None,
+        [
+            os.fspath(PROJECT_DIR / "runtime" / "python"),
+            os.environ.get("PYTHONPATH"),
+        ],
+    )
+)
+
 
 try:
     import winrt_sdk  # noqa: F401
@@ -45,7 +58,7 @@ except ImportError:
 
 
 for package_path in chain(
-    [os.fspath(PROJECTION_PATH / "winrt-runtime")],
+    [os.fspath(PROJECT_DIR / "runtime")],
     iglob(os.fspath(PROJECTION_PATH / "interop" / "winrt-*")),
     iglob(os.fspath(PROJECTION_PATH / "interop" / "winui3-*")),
     iglob(os.fspath(PROJECTION_PATH / "winrt" / "winrt-*")),

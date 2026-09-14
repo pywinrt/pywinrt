@@ -1,5 +1,5 @@
 #define PYWINRT_RUNTIME_MODULE
-#include "pybase.h"
+#include <pywinrt/base.h>
 
 #include <winrt/base.h>
 #include <Python.h>

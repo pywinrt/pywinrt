@@ -1,7 +1,7 @@
 #define PYWINRT_RUNTIME_MODULE
 #include <Python.h>
 #include <Robuffer.h>
-#include "pybase.h"
+#include <pywinrt/base.h>
 #include <winrt/base.h>
 
 namespace py::cpp::_winrt

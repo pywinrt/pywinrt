@@ -2,6 +2,7 @@
 
 from setuptools import Extension, setup
 from setuptools.command.build_ext import build_ext
+from winrt._include import get_include
 from winrt_sdk import get_include_dirs
 
 
@@ -31,8 +32,8 @@ setup(
     ext_modules=[
         Extension(
             "winrt._winrt",
-            sources=["_winrt.cpp", "_winrt_array.cpp", "_winrt_box.cpp", "_winrt_buffer.cpp", "runtime.cpp"],
-            include_dirs=get_include_dirs(),
+            sources=["src/_winrt.cpp", "src/_winrt_array.cpp", "src/_winrt_box.cpp", "src/_winrt_buffer.cpp", "src/runtime.cpp"],
+            include_dirs=[get_include()] + get_include_dirs(),
             libraries=["windowsapp"],
         )
     ],

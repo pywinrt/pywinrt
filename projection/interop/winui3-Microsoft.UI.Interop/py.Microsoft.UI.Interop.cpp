@@ -2,7 +2,7 @@
 
 #include <Python.h>
 #include <pythoncapi_compat.h>
-#include <pybase.h>
+#include <pywinrt/base.h>
 
 #include <winrt/Microsoft.UI.Interop.h>
 #include <py.Microsoft.UI.h>

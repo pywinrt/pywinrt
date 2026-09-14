@@ -13,7 +13,7 @@
 
 #include <Python.h>
 #include <pythoncapi_compat.h>
-#include <pybase.h>
+#include <pywinrt/base.h>
 
 // https://learn.microsoft.com/en-us/windows/apps/api-reference/bootstrapper-cpp-api/microsoft.windows.applicationmodel.dynamicdependency.bootstrap/microsoft.windows.applicationmodel.dynamicdependency.bootstrap#functions-in-themicrosoftwindowsapplicationmodeldynamicdependencybootstrap-namespace
 namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency::Bootstrap

@@ -9,7 +9,7 @@ on:
       - .github/workflows/generate.yaml
       - projection/**
       - '!projection/interop/**'
-      - '!projection/winrt-runtime/**'
+      - runtime/**
       - PyWinRT/**
       - scripts/fetch-tools.ps1
       - scripts/generate-cppwinrt.py

@@ -43,6 +43,25 @@ COMPONENT_PACKAGE_FIND_SRC = """
 exclude = ["cppwrint"]
 """
 
+# The runtime keeps its Python package tree in python/ so that src/ can hold the
+# C++ sources of the extension module. The C++ headers that the rest of the
+# projection compiles against live inside the package itself, as numpy and
+# pybind11 ship theirs, so that winrt._include.get_include() can find them from
+# __file__ both in a wheel and in this source tree.
+RUNTIME_PACKAGE_FIND_SRC = """
+[tool.setuptools.packages.find]
+where = ["python"]
+"""
+
+# pyruntime.h is private to the runtime's own translation units, so it is not
+# package data the way the public headers are, but the sdist still has to
+# carry it or building winrt-runtime from source fails.
+RUNTIME_MANIFEST_IN = """\
+# WARNING: Please don't edit this file. It was automatically generated.
+
+include src/pyruntime.h
+"""
+
 SDK_PACKAGE_TEMPLATE = """\
 [tool.setuptools.package-data]
 "*" = ["*.h"]
@@ -53,9 +72,9 @@ BINARY_PACKAGE_TEMPLATE = """\
 "*" = ["*.pyi", "py.typed"{component_package_data}]
 
 [tool.cibuildwheel]
-# use local winrt-sdk build dependency
-environment = {{ PYTHONPATH="{relative}/winrt-sdk/src{extra_python_path}" }}
-# don't install winrt-sdk from PyPI
+# use local winrt-sdk and winrt-runtime build dependencies
+environment = {{ PYTHONPATH="{relative}/winrt-sdk/src;{runtime_relative}/python{extra_python_path}" }}
+# don't install winrt-sdk or winrt-runtime from PyPI
 build-frontend = {{ name = "build[uv]", args = ["--skip-dependency-check", "--no-isolation"] }}
 before-build = "uv pip install setuptools"
 # don't build for PyPy
@@ -83,6 +102,7 @@ SETUP_PY_TEMPLATE = """\
 
 from setuptools import Extension, setup
 from setuptools.command.build_ext import build_ext
+from winrt._include import get_include
 from winrt_sdk import get_include_dirs{extra_imports}
 
 {extra_init}
@@ -113,7 +133,7 @@ setup(
         Extension(
             "{root_package}.{ext_module}",
             sources=[{sources}],
-            include_dirs=get_include_dirs(){extra_include_dirs},
+            include_dirs=[get_include()] + get_include_dirs(){extra_include_dirs},
             libraries=["windowsapp"{extra_libraries}],
         ){extra_extension}
     ],
@@ -124,7 +144,7 @@ EXTRA_EXT_MODULES = """,
         Extension(
             "{root_package}.{ext_module}",
             sources=[{sources}],
-            include_dirs=get_include_dirs(){extra_include_dirs},
+            include_dirs=[get_include()] + get_include_dirs(){extra_include_dirs},
             libraries=["windowsapp"],
         ),
 """
@@ -174,7 +194,7 @@ Example use in a `pyproject.toml` file:
 
 ```toml
 [build-system]
-requires = ["setuptools", "winrt-sdk"{extra_requires}]
+requires = ["setuptools", "winrt-runtime", "winrt-sdk"{extra_requires}]
 build-backend = "setuptools.build_meta"
 ```
 
@@ -182,11 +202,12 @@ Then in your `setup.py`:
 
 ```python
 from setuptools import setup
+from winrt._include import get_include
 from winrt_sdk import get_include_dirs{extra_imports}
 
 setup(
     ...
-    include_dirs=get_include_dirs(){extra_include_dirs}
+    include_dirs=[get_include()] + get_include_dirs(){extra_include_dirs}
 )
 ```
 
@@ -195,6 +216,7 @@ instead.
 """
 
 PROJECTION_PATH = (Path(__file__).parent.parent / "projection").resolve()
+RUNTIME_PATH = (Path(__file__).parent.parent / "runtime").resolve()
 
 PYTHON_KEYWORDS = {
     "and",
@@ -290,10 +312,13 @@ def write_project_files(
     ext_module_name: str,
     sources: List[str],
     second_ext_source_file: str | None = None,
+    package_name: str | None = None,
 ) -> None:
-    package_name = package_path.name
-    relative_package_path = package_path.relative_to(PROJECTION_PATH)
-    relative = "/".join([".."] * len(relative_package_path.parts))
+    # winrt-runtime is the one package whose directory name is not its
+    # distribution name, since it lives outside of projection/
+    package_name = package_name or package_path.name
+    relative = os.path.relpath(PROJECTION_PATH, package_path).replace(os.sep, "/")
+    runtime_relative = os.path.relpath(RUNTIME_PATH, package_path).replace(os.sep, "/")
     has_requirements = (package_path / "requirements.txt").exists()
     has_all_requirements = (package_path / "all-requirements.txt").exists()
     root_package = module_name.split(".")[0]
@@ -301,7 +326,12 @@ def write_project_files(
     with open(package_path / "pyproject.toml", "w", newline="\n") as f:
         f.write(
             PYPROJECT_TOML_TEMPLATE.format(
-                extra_requires=("" if is_sdk_package(package_name) else ', "winrt-sdk"')
+                extra_requires=(
+                    ""
+                    if is_sdk_package(package_name) or package_name == "winrt-runtime"
+                    else ', "winrt-runtime"'
+                )
+                + ("" if is_sdk_package(package_name) else ', "winrt-sdk"')
                 + (
                     ', "winrt-Microsoft.UI.Xaml"'
                     if is_microsoft_ui_xaml_package(package_name)
@@ -326,12 +356,16 @@ def write_project_files(
                     OPTIONAL_DEPENDENCIES if has_all_requirements else ""
                 ),
                 find_src=(
-                    FIND_SRC
-                    if (package_path / "src").exists()
+                    RUNTIME_PACKAGE_FIND_SRC
+                    if package_name == "winrt-runtime"
                     else (
-                        COMPONENT_PACKAGE_FIND_SRC
-                        if is_component_package(package_name)
-                        else ""
+                        FIND_SRC
+                        if (package_path / "src").exists()
+                        else (
+                            COMPONENT_PACKAGE_FIND_SRC
+                            if is_component_package(package_name)
+                            else ""
+                        )
                     )
                 ),
             )
@@ -343,9 +377,13 @@ def write_project_files(
             f.write(
                 BINARY_PACKAGE_TEMPLATE.format(
                     component_package_data=(
-                        ', "*.h"' if is_component_package(package_name) else ""
+                        ', "*.h"'
+                        if is_component_package(package_name)
+                        or package_name == "winrt-runtime"
+                        else ""
                     ),
                     relative=relative,
+                    runtime_relative=runtime_relative,
                     extra_python_path=(
                         f";{relative}/winrt-Microsoft.UI.Xaml/src"
                         if is_microsoft_ui_xaml_package(package_name)
@@ -371,6 +409,10 @@ def write_project_files(
                     ),
                 )
             )
+
+    if package_name == "winrt-runtime":
+        with open(package_path / "MANIFEST.in", "w", newline="\n") as f:
+            f.write(RUNTIME_MANIFEST_IN)
 
     if not is_sdk_package(package_name):
         with open(package_path / "setup.py", "w", newline="\n") as f:
@@ -545,16 +587,17 @@ for path in PROJECTION_PATH.glob("**/deps.json"):
 # create pyproject.toml files for all projected projects
 
 write_project_files(
-    PROJECTION_PATH / "winrt-runtime",
+    RUNTIME_PATH,
     "winrt.system",
     "_winrt",
     [
-        "_winrt.cpp",
-        "_winrt_array.cpp",
-        "_winrt_box.cpp",
-        "_winrt_buffer.cpp",
-        "runtime.cpp",
+        "src/_winrt.cpp",
+        "src/_winrt_array.cpp",
+        "src/_winrt_box.cpp",
+        "src/_winrt_buffer.cpp",
+        "src/runtime.cpp",
     ],
+    package_name="winrt-runtime",
 )
 
 for package_path in chain(
@@ -606,7 +649,7 @@ for path in itertools.chain(
 ):
     try:
         shutil.copy(
-            os.fspath(PROJECTION_PATH / "winrt-runtime" / "version.txt"),
+            os.fspath(RUNTIME_PATH / "version.txt"),
             os.fspath(path / "version.txt"),
         )
     except shutil.SameFileError:

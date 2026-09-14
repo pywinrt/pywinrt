@@ -60,6 +60,30 @@
   needs is linked into one module instead of all of them. This raises the minor
   ABI version, so this version of the projection packages needs at least this
   version of `winrt-runtime`.
+- BREAKING: The hand-written C++ headers that the projection compiles against
+  are now published by `winrt-runtime` instead of `winrt-sdk`, and `pybase.h`
+  is now `#include <pywinrt/base.h>`, mirroring C++/WinRT's own
+  `<winrt/base.h>`. The path to them comes from the new
+  `winrt._include.get_include()`, the way NumPy and pybind11 publish theirs, so
+  a projection module built against these headers was built against the runtime
+  that ships them. `winrt_sdk.get_include_dirs()` keeps returning the generated
+  headers, so a package that builds against a custom component needs both:
+
+  ```python
+  from winrt._include import get_include
+  from winrt_sdk import get_include_dirs
+
+  setup(..., include_dirs=[get_include()] + get_include_dirs())
+  ```
+
+  `winrt-runtime` is therefore now a build-time dependency of every projection
+  package as well as a runtime one.
+- The hand-written runtime moved out of `projection/` to a top-level `runtime/`
+  directory: `runtime/python/winrt/` for the Python package and the public
+  headers it ships, `runtime/src/` for the C++ sources of the extension module.
+  Everything under `projection/` is now generated except for the interop
+  modules. `pyruntime.h`, which is private to the runtime's own translation
+  units, is no longer shipped in the `winrt-sdk` wheel.
 - The projection is now compiled without RTTI (`/GR-` on MSVC, `-fno-rtti`
   otherwise). Nothing in it uses `dynamic_cast`, and the only uses of `typeid`
   were a dozen `typeid(T).name()` calls in the messages of

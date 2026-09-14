@@ -1,6 +1,6 @@
 #include <systemmediatransportcontrolsinterop.h>
 
-#include "pybase.h"
+#include <pywinrt/base.h>
 #include "py.Windows.Media.h"
 #include <winrt/Windows.Media.h>
 

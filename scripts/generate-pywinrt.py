@@ -17,6 +17,10 @@ def versioned_package(package: str) -> str:
 
 
 PROJECTION_PATH = REPO_ROOT_PATH / "projection"
+RUNTIME_PATH = REPO_ROOT_PATH / "runtime"
+# The hand-written runtime headers ship in the winrt-runtime wheel, so the
+# generated version header that they include has to land there too.
+RUNTIME_INCLUDE_PATH = RUNTIME_PATH / "python" / "winrt" / "include" / "pywinrt"
 
 DOTNET: list[str] = []
 PYWINRT_EXE: str | pathlib.Path
@@ -82,6 +86,8 @@ subprocess.check_call(
         PROJECTION_PATH / "winrt",
         "--header-path",
         SDK_PACKAGE_PATH,
+        "--base-header-path",
+        RUNTIME_INCLUDE_PATH,
         "--nullability-json",
         WINDOWS_SDK_NULLABILITY_JSON_PATH,
     ]
@@ -239,5 +245,5 @@ runtime_version = subprocess.check_output([PYWINRT_EXE, "--version"], text=True)
 
 assert re.match(r"^\d+\.\d+\.\d+$", runtime_version)
 
-with open(PROJECTION_PATH / "winrt-runtime" / "version.txt", "w", newline="\n") as f:
+with open(RUNTIME_PATH / "version.txt", "w", newline="\n") as f:
     f.write(runtime_version)

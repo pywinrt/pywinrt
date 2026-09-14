@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "pybase.h"
+#include <pywinrt/base.h>
 #include <winrt/impl/Windows.Media.Playlists.2.h>
 
 namespace py::proj::Windows::Media::Playlists

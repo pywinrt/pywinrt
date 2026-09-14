@@ -17,7 +17,7 @@ static class FileWriters
         w.WriteLine("#pragma once");
         w.WriteLine($"#define PYWINRT_VERSION \"{PyWinRT.VersionString}\"");
 
-        sw.WriteFileIfChanged(path, "pywinrt_version.h");
+        sw.WriteFileIfChanged(path, "version.h");
     }
 
     internal static void WriteNamespaceFiles(
@@ -601,14 +601,14 @@ static class FileWriters
         w.WriteBlankLine();
         w.WriteLine("#pragma once");
         w.WriteLine();
-        w.WriteLine("#include \"pybase.h\"");
+        w.WriteLine("#include <pywinrt/base.h>");
         w.WriteLine(
             $"static_assert(winrt::check_version(PYWINRT_VERSION, \"{PyWinRT.VersionString}\"), \"Mismatched Py/WinRT headers.\");"
         );
 
         // The GUIDs of the parameterized interfaces used by this package have
         // to be specialized before any full C++/WinRT header implicitly
-        // instantiates them (pybase.h already includes the winrt-sdk one).
+        // instantiates them (pywinrt/base.h already includes the winrt-sdk one).
         w.WriteLine($"#if __has_include(\"py.{ns.PyPackageModule}.guids.h\")");
         w.WriteLine($"#include \"py.{ns.PyPackageModule}.guids.h\"");
         w.WriteLine("#endif");
@@ -736,7 +736,7 @@ static class FileWriters
         w.WriteBlankLine();
         w.WriteLine("#pragma once");
         w.WriteLine();
-        w.WriteLine("#include \"pybase.h\"");
+        w.WriteLine("#include <pywinrt/base.h>");
         w.WriteLine($"#include <winrt/impl/{ns.Namespace}.2.h>");
         w.WriteBlankLine();
 
@@ -799,7 +799,7 @@ static class FileWriters
     /// SHA-1 in every translation unit that uses the type, which is a large
     /// part of the frontend time of a generated module. Forward declarations
     /// instead of the C++/WinRT headers keep the header cheap enough to live
-    /// in the precompiled header (pybase.h includes the winrt-sdk one), and
+    /// in the precompiled header (pywinrt/base.h includes the winrt-sdk one), and
     /// putting it there also guarantees that the specializations come before
     /// any implicit instantiation. The specializations are guarded by a macro
     /// so that the headers of two packages can both be included. Compiling

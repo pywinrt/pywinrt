@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "pybase.h"
+#include <pywinrt/base.h>
 #include <winrt/impl/Windows.UI.Xaml.Resources.2.h>
 
 namespace py::proj::Windows::UI::Xaml::Resources

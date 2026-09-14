@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "pybase.h"
+#include <pywinrt/base.h>
 #include <winrt/impl/Microsoft.UI.Composition.SystemBackdrops.2.h>
 
 namespace py::proj::Microsoft::UI::Composition::SystemBackdrops
