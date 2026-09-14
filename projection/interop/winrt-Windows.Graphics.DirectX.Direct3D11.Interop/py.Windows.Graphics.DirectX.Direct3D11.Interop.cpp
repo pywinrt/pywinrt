@@ -1,5 +1,14 @@
 #if __has_include("windows.graphics.directx.direct3d11.interop.h")
 #include <windows.graphics.directx.direct3d11.interop.h>
+
+#ifdef __MINGW32__
+// mingw-w64 generates this header from an .idl that is missing this
+// function, so declare it here. Everything else the header needs is
+// there, including the C++ IDirect3DDxgiInterfaceAccess and its uuid.
+extern "C" HRESULT __stdcall CreateDirect3D11SurfaceFromDXGISurface(
+    ::IDXGISurface* dgxiSurface, ::IInspectable** graphicsSurface);
+#endif
+
 #else
 // some environments like MSYS2 don't have the interop header
 #include <dxgi.h>
