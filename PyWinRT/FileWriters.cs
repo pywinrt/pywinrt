@@ -847,7 +847,9 @@ static class FileWriters
 
             if (def.IsCustomizedStruct() || def.IsCustomNumeric())
             {
-                // these are defined by base.h
+                // these are defined by C++/WinRT's <winrt/base.h>: DateTime and
+                // TimeSpan directly, the Numerics types through the
+                // <windowsnumerics.impl.h> that it includes
                 return;
             }
 
