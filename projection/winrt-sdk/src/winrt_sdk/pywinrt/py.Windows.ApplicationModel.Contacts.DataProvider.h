@@ -4,15 +4,21 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Foundation.h>
+#if __has_include("py.winrt.guids.h")
+#include "py.winrt.guids.h"
+#endif
 
-#include <winrt/Windows.ApplicationModel.Contacts.DataProvider.h>
 #include "py.Windows.ApplicationModel.Contacts.DataProvider.types.h"
-
-
 #if __has_include("py.Windows.ApplicationModel.Contacts.types.h")
 #include "py.Windows.ApplicationModel.Contacts.types.h"
 #endif
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
+#endif
+
+#include <winrt/Windows.Foundation.h>
+
+#include <winrt/Windows.ApplicationModel.Contacts.DataProvider.h>
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"

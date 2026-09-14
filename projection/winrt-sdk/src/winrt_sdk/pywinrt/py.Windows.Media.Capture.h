@@ -4,17 +4,71 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winrt.guids.h")
+#include "py.winrt.guids.h"
+#endif
+
+#include "py.Windows.Media.Capture.types.h"
+#if __has_include("py.Windows.Devices.Enumeration.types.h")
+#include "py.Windows.Devices.Enumeration.types.h"
+#endif
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
+#endif
+#if __has_include("py.Windows.Foundation.Collections.types.h")
+#include "py.Windows.Foundation.Collections.types.h"
+#endif
+#if __has_include("py.Windows.Graphics.DirectX.Direct3D11.types.h")
+#include "py.Windows.Graphics.DirectX.Direct3D11.types.h"
+#endif
+#if __has_include("py.Windows.Graphics.Imaging.types.h")
+#include "py.Windows.Graphics.Imaging.types.h"
+#endif
+#if __has_include("py.Windows.Media.types.h")
+#include "py.Windows.Media.types.h"
+#endif
+#if __has_include("py.Windows.Media.Capture.Core.types.h")
+#include "py.Windows.Media.Capture.Core.types.h"
+#endif
+#if __has_include("py.Windows.Media.Capture.Frames.types.h")
+#include "py.Windows.Media.Capture.Frames.types.h"
+#endif
+#if __has_include("py.Windows.Media.Core.types.h")
+#include "py.Windows.Media.Core.types.h"
+#endif
+#if __has_include("py.Windows.Media.Devices.types.h")
+#include "py.Windows.Media.Devices.types.h"
+#endif
+#if __has_include("py.Windows.Media.Effects.types.h")
+#include "py.Windows.Media.Effects.types.h"
+#endif
+#if __has_include("py.Windows.Media.MediaProperties.types.h")
+#include "py.Windows.Media.MediaProperties.types.h"
+#endif
+#if __has_include("py.Windows.Security.Authentication.Web.types.h")
+#include "py.Windows.Security.Authentication.Web.types.h"
+#endif
+#if __has_include("py.Windows.Security.Credentials.types.h")
+#include "py.Windows.Security.Credentials.types.h"
+#endif
+#if __has_include("py.Windows.Storage.types.h")
+#include "py.Windows.Storage.types.h"
+#endif
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
+#endif
+#if __has_include("py.Windows.System.types.h")
+#include "py.Windows.System.types.h"
+#endif
+#if __has_include("py.Windows.UI.WindowManagement.types.h")
+#include "py.Windows.UI.WindowManagement.types.h"
+#endif
+
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Storage.Streams.h>
 
 #include <winrt/Windows.Media.Capture.h>
-#include "py.Windows.Media.Capture.types.h"
-
-
-#if __has_include("py.Windows.Devices.Enumeration.types.h")
-#include "py.Windows.Devices.Enumeration.types.h"
-#endif
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -24,64 +78,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Graphics.DirectX.Direct3D11.types.h")
-#include "py.Windows.Graphics.DirectX.Direct3D11.types.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.Imaging.types.h")
-#include "py.Windows.Graphics.Imaging.types.h"
-#endif
-
-#if __has_include("py.Windows.Media.types.h")
-#include "py.Windows.Media.types.h"
-#endif
-
-#if __has_include("py.Windows.Media.Capture.Core.types.h")
-#include "py.Windows.Media.Capture.Core.types.h"
-#endif
-
-#if __has_include("py.Windows.Media.Capture.Frames.types.h")
-#include "py.Windows.Media.Capture.Frames.types.h"
-#endif
-
-#if __has_include("py.Windows.Media.Core.types.h")
-#include "py.Windows.Media.Core.types.h"
-#endif
-
-#if __has_include("py.Windows.Media.Devices.types.h")
-#include "py.Windows.Media.Devices.types.h"
-#endif
-
-#if __has_include("py.Windows.Media.Effects.types.h")
-#include "py.Windows.Media.Effects.types.h"
-#endif
-
-#if __has_include("py.Windows.Media.MediaProperties.types.h")
-#include "py.Windows.Media.MediaProperties.types.h"
-#endif
-
-#if __has_include("py.Windows.Security.Authentication.Web.types.h")
-#include "py.Windows.Security.Authentication.Web.types.h"
-#endif
-
-#if __has_include("py.Windows.Security.Credentials.types.h")
-#include "py.Windows.Security.Credentials.types.h"
-#endif
-
-#if __has_include("py.Windows.Storage.types.h")
-#include "py.Windows.Storage.types.h"
-#endif
-
 #if __has_include("py.Windows.Storage.Streams.h")
 #include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.System.types.h")
-#include "py.Windows.System.types.h"
-#endif
-
-#if __has_include("py.Windows.UI.WindowManagement.types.h")
-#include "py.Windows.UI.WindowManagement.types.h"
 #endif
 
 namespace py::impl::Windows::Media::Capture

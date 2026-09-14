@@ -4,30 +4,29 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winrt.guids.h")
+#include "py.winrt.guids.h"
+#endif
 
-#include <winrt/Windows.Devices.h>
 #include "py.Windows.Devices.types.h"
-
-
 #if __has_include("py.Windows.Devices.Adc.Provider.types.h")
 #include "py.Windows.Devices.Adc.Provider.types.h"
 #endif
-
 #if __has_include("py.Windows.Devices.Gpio.Provider.types.h")
 #include "py.Windows.Devices.Gpio.Provider.types.h"
 #endif
-
 #if __has_include("py.Windows.Devices.I2c.Provider.types.h")
 #include "py.Windows.Devices.I2c.Provider.types.h"
 #endif
-
 #if __has_include("py.Windows.Devices.Pwm.Provider.types.h")
 #include "py.Windows.Devices.Pwm.Provider.types.h"
 #endif
-
 #if __has_include("py.Windows.Devices.Spi.Provider.types.h")
 #include "py.Windows.Devices.Spi.Provider.types.h"
 #endif
+
+
+#include <winrt/Windows.Devices.h>
 
 namespace py::impl::Windows::Devices
 {

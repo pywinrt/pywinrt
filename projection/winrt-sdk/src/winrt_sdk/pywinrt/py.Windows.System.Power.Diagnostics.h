@@ -4,10 +4,14 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winrt.guids.h")
+#include "py.winrt.guids.h"
+#endif
 
-#include <winrt/Windows.System.Power.Diagnostics.h>
 #include "py.Windows.System.Power.Diagnostics.types.h"
 
+
+#include <winrt/Windows.System.Power.Diagnostics.h>
 
 namespace py::impl::Windows::System::Power::Diagnostics
 {

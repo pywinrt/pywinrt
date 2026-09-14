@@ -4,30 +4,33 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Foundation.h>
+#if __has_include("py.winui3.guids.h")
+#include "py.winui3.guids.h"
+#endif
 
-#include <winrt/Microsoft.UI.Input.DragDrop.h>
 #include "py.Microsoft.UI.Input.DragDrop.types.h"
-
-
 #if __has_include("py.Windows.ApplicationModel.DataTransfer.types.h")
 #include "py.Windows.ApplicationModel.DataTransfer.types.h"
 #endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
 #endif
-
 #if __has_include("py.Windows.Graphics.Imaging.types.h")
 #include "py.Windows.Graphics.Imaging.types.h"
 #endif
-
 #if __has_include("py.Microsoft.UI.Content.types.h")
 #include "py.Microsoft.UI.Content.types.h"
 #endif
-
 #if __has_include("py.Microsoft.UI.Input.types.h")
 #include "py.Microsoft.UI.Input.types.h"
+#endif
+
+#include <winrt/Windows.Foundation.h>
+
+#include <winrt/Microsoft.UI.Input.DragDrop.h>
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
 #endif
 
 namespace py::impl::Microsoft::UI::Input::DragDrop

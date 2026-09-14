@@ -4,6 +4,36 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winui2.guids.h")
+#include "py.winui2.guids.h"
+#endif
+
+#include "py.Microsoft.UI.Xaml.Controls.Primitives.types.h"
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
+#endif
+#if __has_include("py.Windows.Foundation.Numerics.types.h")
+#include "py.Windows.Foundation.Numerics.types.h"
+#endif
+#if __has_include("py.Windows.UI.types.h")
+#include "py.Windows.UI.types.h"
+#endif
+#if __has_include("py.Windows.UI.Xaml.types.h")
+#include "py.Windows.UI.Xaml.types.h"
+#endif
+#if __has_include("py.Windows.UI.Xaml.Automation.Peers.types.h")
+#include "py.Windows.UI.Xaml.Automation.Peers.types.h"
+#endif
+#if __has_include("py.Windows.UI.Xaml.Controls.types.h")
+#include "py.Windows.UI.Xaml.Controls.types.h"
+#endif
+#if __has_include("py.Windows.UI.Xaml.Interop.types.h")
+#include "py.Windows.UI.Xaml.Interop.types.h"
+#endif
+#if __has_include("py.Microsoft.UI.Xaml.Controls.types.h")
+#include "py.Microsoft.UI.Xaml.Controls.types.h"
+#endif
+
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.UI.Composition.h>
 #include <winrt/Windows.UI.Xaml.h>
@@ -13,35 +43,17 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Microsoft.UI.Xaml.Controls.h>
 
 #include <winrt/Microsoft.UI.Xaml.Controls.Primitives.h>
-#include "py.Microsoft.UI.Xaml.Controls.Primitives.types.h"
-
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Numerics.types.h")
-#include "py.Windows.Foundation.Numerics.types.h"
-#endif
-
-#if __has_include("py.Windows.UI.types.h")
-#include "py.Windows.UI.types.h"
 #endif
 
 #if __has_include("py.Windows.UI.Xaml.h")
 #include "py.Windows.UI.Xaml.h"
 #endif
 
-#if __has_include("py.Windows.UI.Xaml.Automation.Peers.types.h")
-#include "py.Windows.UI.Xaml.Automation.Peers.types.h"
-#endif
-
 #if __has_include("py.Windows.UI.Xaml.Controls.h")
 #include "py.Windows.UI.Xaml.Controls.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Interop.types.h")
-#include "py.Windows.UI.Xaml.Interop.types.h"
 #endif
 
 #if __has_include("py.Microsoft.UI.Xaml.Controls.h")

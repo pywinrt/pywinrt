@@ -4,6 +4,30 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winrt.guids.h")
+#include "py.winrt.guids.h"
+#endif
+
+#include "py.Windows.Storage.BulkAccess.types.h"
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
+#endif
+#if __has_include("py.Windows.Foundation.Collections.types.h")
+#include "py.Windows.Foundation.Collections.types.h"
+#endif
+#if __has_include("py.Windows.Storage.types.h")
+#include "py.Windows.Storage.types.h"
+#endif
+#if __has_include("py.Windows.Storage.FileProperties.types.h")
+#include "py.Windows.Storage.FileProperties.types.h"
+#endif
+#if __has_include("py.Windows.Storage.Search.types.h")
+#include "py.Windows.Storage.Search.types.h"
+#endif
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
+#endif
+
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Storage.h>
@@ -11,8 +35,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Storage.Streams.h>
 
 #include <winrt/Windows.Storage.BulkAccess.h>
-#include "py.Windows.Storage.BulkAccess.types.h"
-
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -24,10 +46,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 #if __has_include("py.Windows.Storage.h")
 #include "py.Windows.Storage.h"
-#endif
-
-#if __has_include("py.Windows.Storage.FileProperties.types.h")
-#include "py.Windows.Storage.FileProperties.types.h"
 #endif
 
 #if __has_include("py.Windows.Storage.Search.h")

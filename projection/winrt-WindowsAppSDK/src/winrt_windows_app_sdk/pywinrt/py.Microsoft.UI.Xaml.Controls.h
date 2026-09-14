@@ -4,6 +4,96 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winui3.guids.h")
+#include "py.winui3.guids.h"
+#endif
+
+#include "py.Microsoft.UI.Xaml.Controls.types.h"
+#if __has_include("py.Microsoft.Web.WebView2.Core.types.h")
+#include "py.Microsoft.Web.WebView2.Core.types.h"
+#endif
+#if __has_include("py.Windows.ApplicationModel.Contacts.types.h")
+#include "py.Windows.ApplicationModel.Contacts.types.h"
+#endif
+#if __has_include("py.Windows.ApplicationModel.DataTransfer.types.h")
+#include "py.Windows.ApplicationModel.DataTransfer.types.h"
+#endif
+#if __has_include("py.Windows.Devices.Geolocation.types.h")
+#include "py.Windows.Devices.Geolocation.types.h"
+#endif
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
+#endif
+#if __has_include("py.Windows.Foundation.Collections.types.h")
+#include "py.Windows.Foundation.Collections.types.h"
+#endif
+#if __has_include("py.Windows.Foundation.Numerics.types.h")
+#include "py.Windows.Foundation.Numerics.types.h"
+#endif
+#if __has_include("py.Windows.Globalization.types.h")
+#include "py.Windows.Globalization.types.h"
+#endif
+#if __has_include("py.Windows.Globalization.NumberFormatting.types.h")
+#include "py.Windows.Globalization.NumberFormatting.types.h"
+#endif
+#if __has_include("py.Windows.Media.Casting.types.h")
+#include "py.Windows.Media.Casting.types.h"
+#endif
+#if __has_include("py.Windows.Media.Playback.types.h")
+#include "py.Windows.Media.Playback.types.h"
+#endif
+#if __has_include("py.Windows.UI.types.h")
+#include "py.Windows.UI.types.h"
+#endif
+#if __has_include("py.Windows.UI.Text.types.h")
+#include "py.Windows.UI.Text.types.h"
+#endif
+#if __has_include("py.Windows.UI.Xaml.Interop.types.h")
+#include "py.Windows.UI.Xaml.Interop.types.h"
+#endif
+#if __has_include("py.Microsoft.UI.types.h")
+#include "py.Microsoft.UI.types.h"
+#endif
+#if __has_include("py.Microsoft.UI.Composition.types.h")
+#include "py.Microsoft.UI.Composition.types.h"
+#endif
+#if __has_include("py.Microsoft.UI.Input.types.h")
+#include "py.Microsoft.UI.Input.types.h"
+#endif
+#if __has_include("py.Microsoft.UI.Text.types.h")
+#include "py.Microsoft.UI.Text.types.h"
+#endif
+#if __has_include("py.Microsoft.UI.Xaml.types.h")
+#include "py.Microsoft.UI.Xaml.types.h"
+#endif
+#if __has_include("py.Microsoft.UI.Xaml.Automation.Peers.types.h")
+#include "py.Microsoft.UI.Xaml.Automation.Peers.types.h"
+#endif
+#if __has_include("py.Microsoft.UI.Xaml.Controls.Primitives.types.h")
+#include "py.Microsoft.UI.Xaml.Controls.Primitives.types.h"
+#endif
+#if __has_include("py.Microsoft.UI.Xaml.Data.types.h")
+#include "py.Microsoft.UI.Xaml.Data.types.h"
+#endif
+#if __has_include("py.Microsoft.UI.Xaml.Documents.types.h")
+#include "py.Microsoft.UI.Xaml.Documents.types.h"
+#endif
+#if __has_include("py.Microsoft.UI.Xaml.Input.types.h")
+#include "py.Microsoft.UI.Xaml.Input.types.h"
+#endif
+#if __has_include("py.Microsoft.UI.Xaml.Interop.types.h")
+#include "py.Microsoft.UI.Xaml.Interop.types.h"
+#endif
+#if __has_include("py.Microsoft.UI.Xaml.Media.types.h")
+#include "py.Microsoft.UI.Xaml.Media.types.h"
+#endif
+#if __has_include("py.Microsoft.UI.Xaml.Media.Animation.types.h")
+#include "py.Microsoft.UI.Xaml.Media.Animation.types.h"
+#endif
+#if __has_include("py.Microsoft.UI.Xaml.Navigation.types.h")
+#include "py.Microsoft.UI.Xaml.Navigation.types.h"
+#endif
+
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Microsoft.UI.Composition.h>
@@ -15,24 +105,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Microsoft.UI.Xaml.Navigation.h>
 
 #include <winrt/Microsoft.UI.Xaml.Controls.h>
-#include "py.Microsoft.UI.Xaml.Controls.types.h"
-
-
-#if __has_include("py.Microsoft.Web.WebView2.Core.types.h")
-#include "py.Microsoft.Web.WebView2.Core.types.h"
-#endif
-
-#if __has_include("py.Windows.ApplicationModel.Contacts.types.h")
-#include "py.Windows.ApplicationModel.Contacts.types.h"
-#endif
-
-#if __has_include("py.Windows.ApplicationModel.DataTransfer.types.h")
-#include "py.Windows.ApplicationModel.DataTransfer.types.h"
-#endif
-
-#if __has_include("py.Windows.Devices.Geolocation.types.h")
-#include "py.Windows.Devices.Geolocation.types.h"
-#endif
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -42,52 +114,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Foundation.Numerics.types.h")
-#include "py.Windows.Foundation.Numerics.types.h"
-#endif
-
-#if __has_include("py.Windows.Globalization.types.h")
-#include "py.Windows.Globalization.types.h"
-#endif
-
-#if __has_include("py.Windows.Globalization.NumberFormatting.types.h")
-#include "py.Windows.Globalization.NumberFormatting.types.h"
-#endif
-
-#if __has_include("py.Windows.Media.Casting.types.h")
-#include "py.Windows.Media.Casting.types.h"
-#endif
-
-#if __has_include("py.Windows.Media.Playback.types.h")
-#include "py.Windows.Media.Playback.types.h"
-#endif
-
-#if __has_include("py.Windows.UI.types.h")
-#include "py.Windows.UI.types.h"
-#endif
-
-#if __has_include("py.Windows.UI.Text.types.h")
-#include "py.Windows.UI.Text.types.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Interop.types.h")
-#include "py.Windows.UI.Xaml.Interop.types.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.types.h")
-#include "py.Microsoft.UI.types.h"
-#endif
-
 #if __has_include("py.Microsoft.UI.Composition.h")
 #include "py.Microsoft.UI.Composition.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Input.types.h")
-#include "py.Microsoft.UI.Input.types.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Text.types.h")
-#include "py.Microsoft.UI.Text.types.h"
 #endif
 
 #if __has_include("py.Microsoft.UI.Xaml.h")
@@ -106,24 +134,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include "py.Microsoft.UI.Xaml.Data.h"
 #endif
 
-#if __has_include("py.Microsoft.UI.Xaml.Documents.types.h")
-#include "py.Microsoft.UI.Xaml.Documents.types.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Xaml.Input.types.h")
-#include "py.Microsoft.UI.Xaml.Input.types.h"
-#endif
-
 #if __has_include("py.Microsoft.UI.Xaml.Interop.h")
 #include "py.Microsoft.UI.Xaml.Interop.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Xaml.Media.types.h")
-#include "py.Microsoft.UI.Xaml.Media.types.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Xaml.Media.Animation.types.h")
-#include "py.Microsoft.UI.Xaml.Media.Animation.types.h"
 #endif
 
 #if __has_include("py.Microsoft.UI.Xaml.Navigation.h")

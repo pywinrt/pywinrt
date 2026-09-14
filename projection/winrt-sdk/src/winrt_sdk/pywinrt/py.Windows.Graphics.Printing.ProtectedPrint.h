@@ -4,10 +4,14 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winrt.guids.h")
+#include "py.winrt.guids.h"
+#endif
 
-#include <winrt/Windows.Graphics.Printing.ProtectedPrint.h>
 #include "py.Windows.Graphics.Printing.ProtectedPrint.types.h"
 
+
+#include <winrt/Windows.Graphics.Printing.ProtectedPrint.h>
 
 namespace py::impl::Windows::Graphics::Printing::ProtectedPrint
 {

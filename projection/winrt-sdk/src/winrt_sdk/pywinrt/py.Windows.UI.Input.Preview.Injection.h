@@ -4,18 +4,24 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winrt.guids.h")
+#include "py.winrt.guids.h"
+#endif
+
+#include "py.Windows.UI.Input.Preview.Injection.types.h"
+#if __has_include("py.Windows.Foundation.Collections.types.h")
+#include "py.Windows.Foundation.Collections.types.h"
+#endif
+#if __has_include("py.Windows.Gaming.Input.types.h")
+#include "py.Windows.Gaming.Input.types.h"
+#endif
+
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.UI.Input.Preview.Injection.h>
-#include "py.Windows.UI.Input.Preview.Injection.types.h"
-
 
 #if __has_include("py.Windows.Foundation.Collections.h")
 #include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Gaming.Input.types.h")
-#include "py.Windows.Gaming.Input.types.h"
 #endif
 
 namespace py::impl::Windows::UI::Input::Preview::Injection

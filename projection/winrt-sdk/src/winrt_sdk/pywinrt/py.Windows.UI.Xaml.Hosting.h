@@ -4,34 +4,36 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Foundation.h>
-
-#include <winrt/Windows.UI.Xaml.Hosting.h>
-#include "py.Windows.UI.Xaml.Hosting.types.h"
-
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
+#if __has_include("py.winrt.guids.h")
+#include "py.winrt.guids.h"
 #endif
 
+#include "py.Windows.UI.Xaml.Hosting.types.h"
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
+#endif
 #if __has_include("py.Windows.UI.Composition.types.h")
 #include "py.Windows.UI.Composition.types.h"
 #endif
-
 #if __has_include("py.Windows.UI.WindowManagement.types.h")
 #include "py.Windows.UI.WindowManagement.types.h"
 #endif
-
 #if __has_include("py.Windows.UI.Xaml.types.h")
 #include "py.Windows.UI.Xaml.types.h"
 #endif
-
 #if __has_include("py.Windows.UI.Xaml.Controls.types.h")
 #include "py.Windows.UI.Xaml.Controls.types.h"
 #endif
-
 #if __has_include("py.Windows.UI.Xaml.Controls.Primitives.types.h")
 #include "py.Windows.UI.Xaml.Controls.Primitives.types.h"
+#endif
+
+#include <winrt/Windows.Foundation.h>
+
+#include <winrt/Windows.UI.Xaml.Hosting.h>
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
 #endif
 
 namespace py::impl::Windows::UI::Xaml::Hosting

@@ -4,18 +4,24 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winrt.guids.h")
+#include "py.winrt.guids.h"
+#endif
+
+#include "py.Windows.UI.Input.Inking.Preview.types.h"
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
+#endif
+#if __has_include("py.Windows.UI.Composition.types.h")
+#include "py.Windows.UI.Composition.types.h"
+#endif
+
 #include <winrt/Windows.Foundation.h>
 
 #include <winrt/Windows.UI.Input.Inking.Preview.h>
-#include "py.Windows.UI.Input.Inking.Preview.types.h"
-
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.UI.Composition.types.h")
-#include "py.Windows.UI.Composition.types.h"
 #endif
 
 namespace py::impl::Windows::UI::Input::Inking::Preview

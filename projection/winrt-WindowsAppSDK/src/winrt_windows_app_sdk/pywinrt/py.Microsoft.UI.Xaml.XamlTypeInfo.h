@@ -4,15 +4,21 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Microsoft.UI.Xaml.Markup.h>
+#if __has_include("py.winui3.guids.h")
+#include "py.winui3.guids.h"
+#endif
 
-#include <winrt/Microsoft.UI.Xaml.XamlTypeInfo.h>
 #include "py.Microsoft.UI.Xaml.XamlTypeInfo.types.h"
-
-
 #if __has_include("py.Windows.UI.Xaml.Interop.types.h")
 #include "py.Windows.UI.Xaml.Interop.types.h"
 #endif
+#if __has_include("py.Microsoft.UI.Xaml.Markup.types.h")
+#include "py.Microsoft.UI.Xaml.Markup.types.h"
+#endif
+
+#include <winrt/Microsoft.UI.Xaml.Markup.h>
+
+#include <winrt/Microsoft.UI.Xaml.XamlTypeInfo.h>
 
 #if __has_include("py.Microsoft.UI.Xaml.Markup.h")
 #include "py.Microsoft.UI.Xaml.Markup.h"

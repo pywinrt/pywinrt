@@ -4,10 +4,14 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winui3.guids.h")
+#include "py.winui3.guids.h"
+#endif
 
-#include <winrt/Microsoft.Graphics.DirectX.h>
 #include "py.Microsoft.Graphics.DirectX.types.h"
 
+
+#include <winrt/Microsoft.Graphics.DirectX.h>
 
 namespace py::impl::Microsoft::Graphics::DirectX
 {

@@ -4,14 +4,17 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winrt.guids.h")
+#include "py.winrt.guids.h"
+#endif
 
-#include <winrt/Windows.UI.Composition.Diagnostics.h>
 #include "py.Windows.UI.Composition.Diagnostics.types.h"
-
-
 #if __has_include("py.Windows.UI.Composition.types.h")
 #include "py.Windows.UI.Composition.types.h"
 #endif
+
+
+#include <winrt/Windows.UI.Composition.Diagnostics.h>
 
 namespace py::impl::Windows::UI::Composition::Diagnostics
 {

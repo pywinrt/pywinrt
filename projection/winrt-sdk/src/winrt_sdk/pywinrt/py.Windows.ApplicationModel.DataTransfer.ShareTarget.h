@@ -4,26 +4,30 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Foundation.Collections.h>
+#if __has_include("py.winrt.guids.h")
+#include "py.winrt.guids.h"
+#endif
 
-#include <winrt/Windows.ApplicationModel.DataTransfer.ShareTarget.h>
 #include "py.Windows.ApplicationModel.DataTransfer.ShareTarget.types.h"
-
-
 #if __has_include("py.Windows.ApplicationModel.Contacts.types.h")
 #include "py.Windows.ApplicationModel.Contacts.types.h"
 #endif
-
 #if __has_include("py.Windows.ApplicationModel.DataTransfer.types.h")
 #include "py.Windows.ApplicationModel.DataTransfer.types.h"
 #endif
+#if __has_include("py.Windows.Foundation.Collections.types.h")
+#include "py.Windows.Foundation.Collections.types.h"
+#endif
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
+#endif
+
+#include <winrt/Windows.Foundation.Collections.h>
+
+#include <winrt/Windows.ApplicationModel.DataTransfer.ShareTarget.h>
 
 #if __has_include("py.Windows.Foundation.Collections.h")
 #include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.types.h")
-#include "py.Windows.Storage.Streams.types.h"
 #endif
 
 namespace py::impl::Windows::ApplicationModel::DataTransfer::ShareTarget

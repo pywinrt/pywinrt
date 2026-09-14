@@ -4,18 +4,24 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winrt.guids.h")
+#include "py.winrt.guids.h"
+#endif
+
+#include "py.Windows.Foundation.Diagnostics.types.h"
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
+#endif
+#if __has_include("py.Windows.Storage.types.h")
+#include "py.Windows.Storage.types.h"
+#endif
+
 #include <winrt/Windows.Foundation.h>
 
 #include <winrt/Windows.Foundation.Diagnostics.h>
-#include "py.Windows.Foundation.Diagnostics.types.h"
-
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Storage.types.h")
-#include "py.Windows.Storage.types.h"
 #endif
 
 namespace py::impl::Windows::Foundation::Diagnostics

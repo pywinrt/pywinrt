@@ -4,22 +4,27 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Foundation.h>
-
-#include <winrt/Windows.Gaming.Input.Custom.h>
-#include "py.Windows.Gaming.Input.Custom.types.h"
-
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
+#if __has_include("py.winrt.guids.h")
+#include "py.winrt.guids.h"
 #endif
 
+#include "py.Windows.Gaming.Input.Custom.types.h"
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
+#endif
 #if __has_include("py.Windows.Gaming.Input.types.h")
 #include "py.Windows.Gaming.Input.types.h"
 #endif
-
 #if __has_include("py.Windows.Storage.Streams.types.h")
 #include "py.Windows.Storage.Streams.types.h"
+#endif
+
+#include <winrt/Windows.Foundation.h>
+
+#include <winrt/Windows.Gaming.Input.Custom.h>
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
 #endif
 
 namespace py::impl::Windows::Gaming::Input::Custom

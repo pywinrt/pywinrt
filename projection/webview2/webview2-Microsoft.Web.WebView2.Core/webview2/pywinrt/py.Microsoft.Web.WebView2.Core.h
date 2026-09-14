@@ -4,20 +4,40 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.webview2.guids.h")
+#include "py.webview2.guids.h"
+#endif
+
+#include "py.Microsoft.Web.WebView2.Core.types.h"
+#if __has_include("py.Windows.ApplicationModel.DataTransfer.types.h")
+#include "py.Windows.ApplicationModel.DataTransfer.types.h"
+#endif
+#if __has_include("py.Windows.ApplicationModel.DataTransfer.DragDrop.Core.types.h")
+#include "py.Windows.ApplicationModel.DataTransfer.DragDrop.Core.types.h"
+#endif
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
+#endif
+#if __has_include("py.Windows.Foundation.Collections.types.h")
+#include "py.Windows.Foundation.Collections.types.h"
+#endif
+#if __has_include("py.Windows.Security.Cryptography.Certificates.types.h")
+#include "py.Windows.Security.Cryptography.Certificates.types.h"
+#endif
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
+#endif
+#if __has_include("py.Windows.UI.types.h")
+#include "py.Windows.UI.types.h"
+#endif
+#if __has_include("py.Windows.UI.Core.types.h")
+#include "py.Windows.UI.Core.types.h"
+#endif
+
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Microsoft.Web.WebView2.Core.h>
-#include "py.Microsoft.Web.WebView2.Core.types.h"
-
-
-#if __has_include("py.Windows.ApplicationModel.DataTransfer.types.h")
-#include "py.Windows.ApplicationModel.DataTransfer.types.h"
-#endif
-
-#if __has_include("py.Windows.ApplicationModel.DataTransfer.DragDrop.Core.types.h")
-#include "py.Windows.ApplicationModel.DataTransfer.DragDrop.Core.types.h"
-#endif
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -25,22 +45,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 #if __has_include("py.Windows.Foundation.Collections.h")
 #include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Security.Cryptography.Certificates.types.h")
-#include "py.Windows.Security.Cryptography.Certificates.types.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.types.h")
-#include "py.Windows.Storage.Streams.types.h"
-#endif
-
-#if __has_include("py.Windows.UI.types.h")
-#include "py.Windows.UI.types.h"
-#endif
-
-#if __has_include("py.Windows.UI.Core.types.h")
-#include "py.Windows.UI.Core.types.h"
 #endif
 
 namespace py::impl::Microsoft::Web::WebView2::Core

@@ -4,16 +4,31 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winrt.guids.h")
+#include "py.winrt.guids.h"
+#endif
+
+#include "py.Windows.Services.Maps.LocalSearch.types.h"
+#if __has_include("py.Windows.Devices.Geolocation.types.h")
+#include "py.Windows.Devices.Geolocation.types.h"
+#endif
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
+#endif
+#if __has_include("py.Windows.Foundation.Collections.types.h")
+#include "py.Windows.Foundation.Collections.types.h"
+#endif
+#if __has_include("py.Windows.Globalization.types.h")
+#include "py.Windows.Globalization.types.h"
+#endif
+#if __has_include("py.Windows.Services.Maps.types.h")
+#include "py.Windows.Services.Maps.types.h"
+#endif
+
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.Services.Maps.LocalSearch.h>
-#include "py.Windows.Services.Maps.LocalSearch.types.h"
-
-
-#if __has_include("py.Windows.Devices.Geolocation.types.h")
-#include "py.Windows.Devices.Geolocation.types.h"
-#endif
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -21,14 +36,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 #if __has_include("py.Windows.Foundation.Collections.h")
 #include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Globalization.types.h")
-#include "py.Windows.Globalization.types.h"
-#endif
-
-#if __has_include("py.Windows.Services.Maps.types.h")
-#include "py.Windows.Services.Maps.types.h"
 #endif
 
 namespace py::impl::Windows::Services::Maps::LocalSearch

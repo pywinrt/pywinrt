@@ -4,13 +4,56 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winrt.guids.h")
+#include "py.winrt.guids.h"
+#endif
+
+#include "py.Windows.Media.Effects.types.h"
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
+#endif
+#if __has_include("py.Windows.Foundation.Collections.types.h")
+#include "py.Windows.Foundation.Collections.types.h"
+#endif
+#if __has_include("py.Windows.Foundation.Numerics.types.h")
+#include "py.Windows.Foundation.Numerics.types.h"
+#endif
+#if __has_include("py.Windows.Graphics.DirectX.Direct3D11.types.h")
+#include "py.Windows.Graphics.DirectX.Direct3D11.types.h"
+#endif
+#if __has_include("py.Windows.Media.types.h")
+#include "py.Windows.Media.types.h"
+#endif
+#if __has_include("py.Windows.Media.Capture.types.h")
+#include "py.Windows.Media.Capture.types.h"
+#endif
+#if __has_include("py.Windows.Media.Editing.types.h")
+#include "py.Windows.Media.Editing.types.h"
+#endif
+#if __has_include("py.Windows.Media.MediaProperties.types.h")
+#include "py.Windows.Media.MediaProperties.types.h"
+#endif
+#if __has_include("py.Windows.Media.Playback.types.h")
+#include "py.Windows.Media.Playback.types.h"
+#endif
+#if __has_include("py.Windows.Media.Render.types.h")
+#include "py.Windows.Media.Render.types.h"
+#endif
+#if __has_include("py.Windows.Media.Transcoding.types.h")
+#include "py.Windows.Media.Transcoding.types.h"
+#endif
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
+#endif
+#if __has_include("py.Windows.UI.types.h")
+#include "py.Windows.UI.types.h"
+#endif
+
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Media.h>
 
 #include <winrt/Windows.Media.Effects.h>
-#include "py.Windows.Media.Effects.types.h"
-
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -20,48 +63,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Foundation.Numerics.types.h")
-#include "py.Windows.Foundation.Numerics.types.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.DirectX.Direct3D11.types.h")
-#include "py.Windows.Graphics.DirectX.Direct3D11.types.h"
-#endif
-
 #if __has_include("py.Windows.Media.h")
 #include "py.Windows.Media.h"
-#endif
-
-#if __has_include("py.Windows.Media.Capture.types.h")
-#include "py.Windows.Media.Capture.types.h"
-#endif
-
-#if __has_include("py.Windows.Media.Editing.types.h")
-#include "py.Windows.Media.Editing.types.h"
-#endif
-
-#if __has_include("py.Windows.Media.MediaProperties.types.h")
-#include "py.Windows.Media.MediaProperties.types.h"
-#endif
-
-#if __has_include("py.Windows.Media.Playback.types.h")
-#include "py.Windows.Media.Playback.types.h"
-#endif
-
-#if __has_include("py.Windows.Media.Render.types.h")
-#include "py.Windows.Media.Render.types.h"
-#endif
-
-#if __has_include("py.Windows.Media.Transcoding.types.h")
-#include "py.Windows.Media.Transcoding.types.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.types.h")
-#include "py.Windows.Storage.Streams.types.h"
-#endif
-
-#if __has_include("py.Windows.UI.types.h")
-#include "py.Windows.UI.types.h"
 #endif
 
 namespace py::impl::Windows::Media::Effects

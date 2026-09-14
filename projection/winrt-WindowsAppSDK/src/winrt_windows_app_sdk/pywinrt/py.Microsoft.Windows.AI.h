@@ -4,14 +4,17 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winui3.guids.h")
+#include "py.winui3.guids.h"
+#endif
 
-#include <winrt/Microsoft.Windows.AI.h>
 #include "py.Microsoft.Windows.AI.types.h"
-
-
 #if __has_include("py.Windows.Foundation.types.h")
 #include "py.Windows.Foundation.types.h"
 #endif
+
+
+#include <winrt/Microsoft.Windows.AI.h>
 
 namespace py::impl::Microsoft::Windows::AI
 {

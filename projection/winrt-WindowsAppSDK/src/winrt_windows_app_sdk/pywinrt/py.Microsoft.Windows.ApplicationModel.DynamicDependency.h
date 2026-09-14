@@ -4,14 +4,17 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winui3.guids.h")
+#include "py.winui3.guids.h"
+#endif
 
-#include <winrt/Microsoft.Windows.ApplicationModel.DynamicDependency.h>
 #include "py.Microsoft.Windows.ApplicationModel.DynamicDependency.types.h"
-
-
 #if __has_include("py.Windows.ApplicationModel.types.h")
 #include "py.Windows.ApplicationModel.types.h"
 #endif
+
+
+#include <winrt/Microsoft.Windows.ApplicationModel.DynamicDependency.h>
 
 namespace py::impl::Microsoft::Windows::ApplicationModel::DynamicDependency
 {

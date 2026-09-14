@@ -4,13 +4,44 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winrt.guids.h")
+#include "py.winrt.guids.h"
+#endif
+
+#include "py.Windows.Networking.Sockets.types.h"
+#if __has_include("py.Windows.ApplicationModel.Background.types.h")
+#include "py.Windows.ApplicationModel.Background.types.h"
+#endif
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
+#endif
+#if __has_include("py.Windows.Foundation.Collections.types.h")
+#include "py.Windows.Foundation.Collections.types.h"
+#endif
+#if __has_include("py.Windows.Networking.types.h")
+#include "py.Windows.Networking.types.h"
+#endif
+#if __has_include("py.Windows.Networking.Connectivity.types.h")
+#include "py.Windows.Networking.Connectivity.types.h"
+#endif
+#if __has_include("py.Windows.Security.Credentials.types.h")
+#include "py.Windows.Security.Credentials.types.h"
+#endif
+#if __has_include("py.Windows.Security.Cryptography.Certificates.types.h")
+#include "py.Windows.Security.Cryptography.Certificates.types.h"
+#endif
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
+#endif
+#if __has_include("py.Windows.Web.types.h")
+#include "py.Windows.Web.types.h"
+#endif
+
 #include <winrt/Windows.ApplicationModel.Background.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.Networking.Sockets.h>
-#include "py.Windows.Networking.Sockets.types.h"
-
 
 #if __has_include("py.Windows.ApplicationModel.Background.h")
 #include "py.Windows.ApplicationModel.Background.h"
@@ -22,30 +53,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 #if __has_include("py.Windows.Foundation.Collections.h")
 #include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Networking.types.h")
-#include "py.Windows.Networking.types.h"
-#endif
-
-#if __has_include("py.Windows.Networking.Connectivity.types.h")
-#include "py.Windows.Networking.Connectivity.types.h"
-#endif
-
-#if __has_include("py.Windows.Security.Credentials.types.h")
-#include "py.Windows.Security.Credentials.types.h"
-#endif
-
-#if __has_include("py.Windows.Security.Cryptography.Certificates.types.h")
-#include "py.Windows.Security.Cryptography.Certificates.types.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.types.h")
-#include "py.Windows.Storage.Streams.types.h"
-#endif
-
-#if __has_include("py.Windows.Web.types.h")
-#include "py.Windows.Web.types.h"
 #endif
 
 namespace py::impl::Windows::Networking::Sockets

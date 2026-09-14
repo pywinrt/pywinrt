@@ -13,6 +13,16 @@
 #endif
 #include <unknwn.h>
 #undef GetCurrentTime
+#include <winrt/base.h>
+
+// Precomputed GUIDs of the parameterized interfaces used by the Windows SDK
+// projection, so that C++/WinRT does not have to compute them with a constexpr
+// SHA-1 in every module. This has to come before the C++/WinRT namespace
+// headers, which would otherwise instantiate some of them first.
+#if __has_include("py.winrt.guids.h")
+#include "py.winrt.guids.h"
+#endif
+
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Foundation.Metadata.h>

@@ -4,11 +4,18 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#if __has_include("py.winui3.guids.h")
+#include "py.winui3.guids.h"
+#endif
+
+#include "py.Microsoft.UI.Composition.Effects.types.h"
+#if __has_include("py.Windows.Graphics.Effects.types.h")
+#include "py.Windows.Graphics.Effects.types.h"
+#endif
+
 #include <winrt/Windows.Graphics.Effects.h>
 
 #include <winrt/Microsoft.UI.Composition.Effects.h>
-#include "py.Microsoft.UI.Composition.Effects.types.h"
-
 
 #if __has_include("py.Windows.Graphics.Effects.h")
 #include "py.Windows.Graphics.Effects.h"

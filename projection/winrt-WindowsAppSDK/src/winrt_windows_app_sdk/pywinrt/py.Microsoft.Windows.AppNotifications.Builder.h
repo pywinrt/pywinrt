@@ -4,22 +4,27 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Foundation.Collections.h>
+#if __has_include("py.winui3.guids.h")
+#include "py.winui3.guids.h"
+#endif
 
-#include <winrt/Microsoft.Windows.AppNotifications.Builder.h>
 #include "py.Microsoft.Windows.AppNotifications.Builder.types.h"
-
-
 #if __has_include("py.Windows.Foundation.types.h")
 #include "py.Windows.Foundation.types.h"
 #endif
+#if __has_include("py.Windows.Foundation.Collections.types.h")
+#include "py.Windows.Foundation.Collections.types.h"
+#endif
+#if __has_include("py.Microsoft.Windows.AppNotifications.types.h")
+#include "py.Microsoft.Windows.AppNotifications.types.h"
+#endif
+
+#include <winrt/Windows.Foundation.Collections.h>
+
+#include <winrt/Microsoft.Windows.AppNotifications.Builder.h>
 
 #if __has_include("py.Windows.Foundation.Collections.h")
 #include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Microsoft.Windows.AppNotifications.types.h")
-#include "py.Microsoft.Windows.AppNotifications.types.h"
 #endif
 
 namespace py::impl::Microsoft::Windows::AppNotifications::Builder

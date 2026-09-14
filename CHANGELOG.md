@@ -25,6 +25,11 @@
 - The CMake build now uses embedded (`/Z7`) debug information on MSVC, which
   roughly halves the time to build the precompiled header, and shares the
   precompiled header with the interop and test packages too.
+- The GUIDs of parameterized interfaces such as `IAsyncOperation[StorageFile]`
+  are now computed by the code generator and written to a new
+  `py.<package>.guids.h` header instead of being recomputed by a constexpr
+  SHA-1 in every module that uses them. Run `py .\scripts\verify-guids.py`
+  after regenerating to check them against C++/WinRT.
 
 ### Deprecated
 - The method names that v3.x generated from the
