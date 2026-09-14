@@ -4,178 +4,15 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Devices.Geolocation.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Services.Maps.h>
-#include <winrt/Windows.UI.h>
 
 #include <winrt/Windows.Services.Maps.Guidance.h>
-
-namespace py::proj::Windows::Services::Maps::Guidance
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Services::Maps::Guidance::GuidanceAudioMeasurementSystem> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Services::Maps::Guidance::GuidanceAudioNotificationKind> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Services::Maps::Guidance::GuidanceAudioNotifications> = "I";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Services::Maps::Guidance::GuidanceLaneMarkers> = "I";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Services::Maps::Guidance::GuidanceManeuverKind> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Services::Maps::Guidance::GuidanceMode> = "i";
+#include "py.Windows.Services.Maps.Guidance.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::Services::Maps::Guidance::GuidanceAudioMeasurementSystem>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.guidance.GuidanceAudioMeasurementSystem";
-        static constexpr const char* module_name = "winrt.windows.services.maps.guidance";
-        static constexpr const char* type_name = "GuidanceAudioMeasurementSystem";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Services::Maps::Guidance::GuidanceAudioNotificationKind>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.guidance.GuidanceAudioNotificationKind";
-        static constexpr const char* module_name = "winrt.windows.services.maps.guidance";
-        static constexpr const char* type_name = "GuidanceAudioNotificationKind";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Services::Maps::Guidance::GuidanceAudioNotifications>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.guidance.GuidanceAudioNotifications";
-        static constexpr const char* module_name = "winrt.windows.services.maps.guidance";
-        static constexpr const char* type_name = "GuidanceAudioNotifications";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Services::Maps::Guidance::GuidanceLaneMarkers>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.guidance.GuidanceLaneMarkers";
-        static constexpr const char* module_name = "winrt.windows.services.maps.guidance";
-        static constexpr const char* type_name = "GuidanceLaneMarkers";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Services::Maps::Guidance::GuidanceManeuverKind>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.guidance.GuidanceManeuverKind";
-        static constexpr const char* module_name = "winrt.windows.services.maps.guidance";
-        static constexpr const char* type_name = "GuidanceManeuverKind";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Services::Maps::Guidance::GuidanceMode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.guidance.GuidanceMode";
-        static constexpr const char* module_name = "winrt.windows.services.maps.guidance";
-        static constexpr const char* type_name = "GuidanceMode";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Services::Maps::Guidance::GuidanceAudioNotificationRequestedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.guidance.GuidanceAudioNotificationRequestedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.services.maps.guidance";
-        static constexpr const char* type_name = "GuidanceAudioNotificationRequestedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Services::Maps::Guidance::GuidanceLaneInfo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.guidance.GuidanceLaneInfo";
-        static constexpr const char* module_name = "winrt.windows.services.maps.guidance";
-        static constexpr const char* type_name = "GuidanceLaneInfo";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Services::Maps::Guidance::GuidanceManeuver>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.guidance.GuidanceManeuver";
-        static constexpr const char* module_name = "winrt.windows.services.maps.guidance";
-        static constexpr const char* type_name = "GuidanceManeuver";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Services::Maps::Guidance::GuidanceMapMatchedCoordinate>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.guidance.GuidanceMapMatchedCoordinate";
-        static constexpr const char* module_name = "winrt.windows.services.maps.guidance";
-        static constexpr const char* type_name = "GuidanceMapMatchedCoordinate";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Services::Maps::Guidance::GuidanceNavigator>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.guidance.GuidanceNavigator";
-        static constexpr const char* module_name = "winrt.windows.services.maps.guidance";
-        static constexpr const char* type_name = "GuidanceNavigator";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Services::Maps::Guidance::GuidanceReroutedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.guidance.GuidanceReroutedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.services.maps.guidance";
-        static constexpr const char* type_name = "GuidanceReroutedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Services::Maps::Guidance::GuidanceRoadSegment>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.guidance.GuidanceRoadSegment";
-        static constexpr const char* module_name = "winrt.windows.services.maps.guidance";
-        static constexpr const char* type_name = "GuidanceRoadSegment";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Services::Maps::Guidance::GuidanceRoadSignpost>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.guidance.GuidanceRoadSignpost";
-        static constexpr const char* module_name = "winrt.windows.services.maps.guidance";
-        static constexpr const char* type_name = "GuidanceRoadSignpost";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Services::Maps::Guidance::GuidanceRoute>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.guidance.GuidanceRoute";
-        static constexpr const char* module_name = "winrt.windows.services.maps.guidance";
-        static constexpr const char* type_name = "GuidanceRoute";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Services::Maps::Guidance::GuidanceTelemetryCollector>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.guidance.GuidanceTelemetryCollector";
-        static constexpr const char* module_name = "winrt.windows.services.maps.guidance";
-        static constexpr const char* type_name = "GuidanceTelemetryCollector";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.guidance.GuidanceUpdatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.services.maps.guidance";
-        static constexpr const char* type_name = "GuidanceUpdatedEventArgs";
-    };
-}
-
-#if __has_include("py.Windows.Devices.Geolocation.h")
-#include "py.Windows.Devices.Geolocation.h"
+#if __has_include("py.Windows.Devices.Geolocation.types.h")
+#include "py.Windows.Devices.Geolocation.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")
@@ -186,12 +23,12 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Services.Maps.h")
-#include "py.Windows.Services.Maps.h"
+#if __has_include("py.Windows.Services.Maps.types.h")
+#include "py.Windows.Services.Maps.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
+#if __has_include("py.Windows.UI.types.h")
+#include "py.Windows.UI.types.h"
 #endif
 
 namespace py::impl::Windows::Services::Maps::Guidance

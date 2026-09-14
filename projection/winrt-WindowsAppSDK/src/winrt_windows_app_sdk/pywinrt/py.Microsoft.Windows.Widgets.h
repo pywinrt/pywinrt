@@ -6,25 +6,8 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
 #include <winrt/Microsoft.Windows.Widgets.h>
+#include "py.Microsoft.Windows.Widgets.types.h"
 
-namespace py::proj::Microsoft::Windows::Widgets
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::Windows::Widgets::WidgetSize> = "i";
-
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::Widgets::WidgetSize>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.WidgetSize";
-        static constexpr const char* module_name = "winui3.microsoft.windows.widgets";
-        static constexpr const char* type_name = "WidgetSize";
-    };
-}
 
 namespace py::impl::Microsoft::Windows::Widgets
 {

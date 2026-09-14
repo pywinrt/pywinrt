@@ -4,28 +4,13 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Storage.h>
 
 #include <winrt/Windows.Management.Core.h>
+#include "py.Windows.Management.Core.types.h"
 
-namespace py::proj::Windows::Management::Core
-{
-}
 
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::Management::Core::ApplicationDataManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.management.core.ApplicationDataManager";
-        static constexpr const char* module_name = "winrt.windows.management.core";
-        static constexpr const char* type_name = "ApplicationDataManager";
-    };
-}
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
+#if __has_include("py.Windows.Storage.types.h")
+#include "py.Windows.Storage.types.h"
 #endif
 
 namespace py::impl::Windows::Management::Core

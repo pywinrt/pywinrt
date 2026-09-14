@@ -217,40 +217,9 @@ sealed class Members
                 }
             }
 
-            foreach (
-                var method in type
-                    .Constructors.Select(c => c.Method)
-                    .Concat(type.Methods.Select(m => m.Method))
-                    .Concat(
-                        type.Properties.SelectMany(p =>
-                            (IEnumerable<MethodDefinition>)(
-                                p.SetMethod is null
-                                    ? [p.GetMethod.Method]
-                                    : [p.GetMethod.Method, p.SetMethod.Method]
-                            )
-                        )
-                    )
-                    .Concat(
-                        type.Events.SelectMany(e =>
-                            (IEnumerable<MethodDefinition>)[e.Event.AddMethod, e.Event.RemoveMethod]
-                        )
-                    )
-            )
+            foreach (var t in GetForeignSignatureTypes(type))
             {
-                foreach (
-                    var t in method
-                        .Parameters.Select(p => p.ParameterType)
-                        .Append(method.ReturnType)
-                        .SelectMany(RecursiveGetTypes)
-                        .Where(t =>
-                            !string.IsNullOrEmpty(t.Namespace)
-                            && t.Namespace != "System"
-                            && t.Namespace != type.Namespace
-                        )
-                )
-                {
-                    namespaces.Add(t.GetQualifiedNamespace(packageMap));
-                }
+                namespaces.Add(t.GetQualifiedNamespace(packageMap));
             }
         }
 
@@ -271,6 +240,138 @@ sealed class Members
                 )
                 {
                     namespaces.Add(t.GetQualifiedNamespace(packageMap));
+                }
+            }
+        }
+
+        return namespaces;
+    }
+
+    /// <summary>
+    /// Gets every type from another namespace that appears in a member
+    /// signature (constructor, method, property or event) of <paramref name="type"/>,
+    /// including the arguments of generic instances.
+    /// </summary>
+    private static IEnumerable<TypeReference> GetForeignSignatureTypes(ProjectedType type)
+    {
+        return GetMemberMethods(type)
+            .SelectMany(m => m.Parameters.Select(p => p.ParameterType).Append(m.ReturnType))
+            .SelectMany(RecursiveGetTypes)
+            .Where(t =>
+                !string.IsNullOrEmpty(t.Namespace)
+                && t.Namespace != "System"
+                && t.Namespace != type.Namespace
+            );
+    }
+
+    /// <summary>
+    /// Gets the methods behind every member (constructor, method, property or
+    /// event) of <paramref name="type"/> that the generated code calls.
+    /// </summary>
+    private static IEnumerable<MethodDefinition> GetMemberMethods(ProjectedType type)
+    {
+        return type
+            .Constructors.Select(c => c.Method)
+            .Concat(type.Methods.Select(m => m.Method))
+            .Concat(
+                type.Properties.SelectMany(p =>
+                    (IEnumerable<MethodDefinition>)(
+                        p.SetMethod is null
+                            ? [p.GetMethod.Method]
+                            : [p.GetMethod.Method, p.SetMethod.Method]
+                    )
+                )
+            )
+            .Concat(
+                type.Events.SelectMany(e =>
+                    (IEnumerable<MethodDefinition>)[e.Event.AddMethod, e.Event.RemoveMethod]
+                )
+            );
+    }
+
+    private IReadOnlyCollection<QualifiedNamespace>? fullHeaderNamespacesCache;
+
+    /// <summary>
+    /// Gets the other namespaces whose full generated header (and therefore
+    /// full C++/WinRT header) the generated code of this namespace needs,
+    /// as opposed to just the light <c>py.*.types.h</c> header.
+    /// </summary>
+    /// <remarks>
+    /// Wrapping and unwrapping an object of a foreign type only needs its
+    /// Python type name and the C++/WinRT declarations (<c>impl/*.2.h</c>)
+    /// that the C++/WinRT header of this namespace already includes. The
+    /// exceptions are delegates, whose converting constructor is defined in
+    /// the full C++/WinRT header and whose Python wrapper is in the full
+    /// generated header; generic interfaces and delegates, whose Python
+    /// wrapper templates are in the full generated header (in practice only
+    /// Windows.Foundation and Windows.Foundation.Collections, which are
+    /// included by pybase.h anyway); and the interfaces that declare the
+    /// members being called (e.g. a required interface from another
+    /// namespace), whose C++/WinRT consume methods are defined in the full
+    /// C++/WinRT header; and, for composable classes, the base classes whose
+    /// overridable interfaces the C++/WinRT "FooT" template implements.
+    /// </remarks>
+    public IReadOnlyCollection<QualifiedNamespace> GetFullHeaderNamespaces(
+        IReadOnlyDictionary<string, string> packageMap
+    )
+    {
+        return fullHeaderNamespacesCache ??= ComputeFullHeaderNamespaces(packageMap);
+    }
+
+    private IReadOnlyCollection<QualifiedNamespace> ComputeFullHeaderNamespaces(
+        IReadOnlyDictionary<string, string> packageMap
+    )
+    {
+        var namespaces = new SortedSet<QualifiedNamespace>();
+
+        foreach (var type in Classes.Concat(Interfaces))
+        {
+            foreach (
+                var t in GetForeignSignatureTypes(type)
+                    .Where(t =>
+                        t is GenericInstanceType
+                        || (t.Resolve() is TypeDefinition def && def.IsDelegate())
+                    )
+            )
+            {
+                namespaces.Add(t.GetQualifiedNamespace(packageMap));
+            }
+
+            // A runtime class redeclares the methods of its interfaces, so the
+            // interface that actually declares (and whose C++/WinRT header
+            // implements) a class method is the one it overrides.
+            foreach (
+                var t in GetMemberMethods(type)
+                    .Select(m => m.HasOverrides ? m.Overrides[0].DeclaringType : m.DeclaringType)
+                    .Where(t => t.Namespace != "System" && t.Namespace != type.Namespace)
+            )
+            {
+                namespaces.Add(t.GetQualifiedNamespace(packageMap));
+            }
+
+            // The C++/WinRT "FooT<D>" template of a composable class implements
+            // the overridable interfaces of every base class, and the produce<>
+            // specializations for those live in the full header of the
+            // namespace of each base class (and of its interfaces).
+            if (type.IsComposable)
+            {
+                for (
+                    var baseTypeRef = type.Type.BaseType;
+                    baseTypeRef is not null && baseTypeRef.Namespace != "System";
+                    baseTypeRef = baseTypeRef.Resolve().BaseType
+                )
+                {
+                    var baseType = baseTypeRef.Resolve();
+
+                    foreach (
+                        var t in baseType
+                            .Interfaces.Select(i => i.InterfaceType)
+                            .Prepend(baseType)
+                            .Where(t => t.Namespace != "System" && t.Namespace != type.Namespace)
+                    )
+                    {
+                        namespaces.Add(t.GetQualifiedNamespace(packageMap));
+                    }
                 }
             }
         }

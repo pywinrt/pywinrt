@@ -4,79 +4,15 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.ApplicationModel.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Storage.h>
 
 #include <winrt/Windows.ApplicationModel.PackageExtensions.h>
+#include "py.Windows.ApplicationModel.PackageExtensions.types.h"
 
-namespace py::proj::Windows::ApplicationModel::PackageExtensions
-{
-}
 
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::PackageExtensions::PackageExtension>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.packageextensions.PackageExtension";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.packageextensions";
-        static constexpr const char* type_name = "PackageExtension";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::PackageExtensions::PackageExtensionCatalog>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.packageextensions.PackageExtensionCatalog";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.packageextensions";
-        static constexpr const char* type_name = "PackageExtensionCatalog";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::PackageExtensions::PackageExtensionPackageInstalledEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.packageextensions.PackageExtensionPackageInstalledEventArgs";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.packageextensions";
-        static constexpr const char* type_name = "PackageExtensionPackageInstalledEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::PackageExtensions::PackageExtensionPackageStatusChangedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.packageextensions.PackageExtensionPackageStatusChangedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.packageextensions";
-        static constexpr const char* type_name = "PackageExtensionPackageStatusChangedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::PackageExtensions::PackageExtensionPackageUninstallingEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.packageextensions.PackageExtensionPackageUninstallingEventArgs";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.packageextensions";
-        static constexpr const char* type_name = "PackageExtensionPackageUninstallingEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::PackageExtensions::PackageExtensionPackageUpdatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.packageextensions.PackageExtensionPackageUpdatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.packageextensions";
-        static constexpr const char* type_name = "PackageExtensionPackageUpdatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::PackageExtensions::PackageExtensionPackageUpdatingEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.packageextensions.PackageExtensionPackageUpdatingEventArgs";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.packageextensions";
-        static constexpr const char* type_name = "PackageExtensionPackageUpdatingEventArgs";
-    };
-}
-
-#if __has_include("py.Windows.ApplicationModel.h")
-#include "py.Windows.ApplicationModel.h"
+#if __has_include("py.Windows.ApplicationModel.types.h")
+#include "py.Windows.ApplicationModel.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")
@@ -87,8 +23,8 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
+#if __has_include("py.Windows.Storage.types.h")
+#include "py.Windows.Storage.types.h"
 #endif
 
 namespace py::impl::Windows::ApplicationModel::PackageExtensions

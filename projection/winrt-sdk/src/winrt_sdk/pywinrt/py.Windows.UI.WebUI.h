@@ -6,575 +6,14 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.ApplicationModel.h>
 #include <winrt/Windows.ApplicationModel.Activation.h>
-#include <winrt/Windows.ApplicationModel.Appointments.AppointmentsProvider.h>
 #include <winrt/Windows.ApplicationModel.Background.h>
-#include <winrt/Windows.ApplicationModel.Calls.h>
-#include <winrt/Windows.ApplicationModel.Contacts.h>
-#include <winrt/Windows.ApplicationModel.Contacts.Provider.h>
-#include <winrt/Windows.ApplicationModel.Core.h>
-#include <winrt/Windows.ApplicationModel.DataTransfer.h>
-#include <winrt/Windows.ApplicationModel.DataTransfer.ShareTarget.h>
-#include <winrt/Windows.ApplicationModel.Search.h>
-#include <winrt/Windows.ApplicationModel.UserDataAccounts.Provider.h>
-#include <winrt/Windows.ApplicationModel.Wallet.h>
-#include <winrt/Windows.Devices.Enumeration.h>
-#include <winrt/Windows.Devices.Printers.Extensions.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Media.SpeechRecognition.h>
-#include <winrt/Windows.Security.Authentication.Web.h>
-#include <winrt/Windows.Security.Authentication.Web.Provider.h>
-#include <winrt/Windows.Storage.h>
-#include <winrt/Windows.Storage.Pickers.Provider.h>
-#include <winrt/Windows.Storage.Provider.h>
-#include <winrt/Windows.Storage.Search.h>
-#include <winrt/Windows.Storage.Streams.h>
-#include <winrt/Windows.System.h>
-#include <winrt/Windows.UI.h>
-#include <winrt/Windows.Web.h>
-#include <winrt/Windows.Web.Http.h>
 #include <winrt/Windows.Web.UI.h>
 
 #include <winrt/Windows.UI.WebUI.h>
+#include "py.Windows.UI.WebUI.types.h"
 
-namespace py::proj::Windows::UI::WebUI
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::UI::WebUI::PrintContent> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::PrintContent>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.PrintContent";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "PrintContent";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::ActivatedDeferral>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.ActivatedDeferral";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "ActivatedDeferral";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::ActivatedOperation>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.ActivatedOperation";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "ActivatedOperation";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::BackgroundActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.BackgroundActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "BackgroundActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::EnteredBackgroundEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.EnteredBackgroundEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "EnteredBackgroundEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::HtmlPrintDocumentSource>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.HtmlPrintDocumentSource";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "HtmlPrintDocumentSource";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::LeavingBackgroundEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.LeavingBackgroundEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "LeavingBackgroundEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::NewWebUIViewCreatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.NewWebUIViewCreatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "NewWebUIViewCreatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::SuspendingDeferral>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.SuspendingDeferral";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "SuspendingDeferral";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::SuspendingEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.SuspendingEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "SuspendingEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::SuspendingOperation>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.SuspendingOperation";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "SuspendingOperation";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIApplication>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIApplication";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIApplication";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIAppointmentsProviderAddAppointmentActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIAppointmentsProviderAddAppointmentActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIAppointmentsProviderAddAppointmentActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIBackgroundTaskInstance>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIBackgroundTaskInstance";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIBackgroundTaskInstance";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIBackgroundTaskInstanceRuntimeClass>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIBackgroundTaskInstanceRuntimeClass";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIBackgroundTaskInstanceRuntimeClass";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIBarcodeScannerPreviewActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIBarcodeScannerPreviewActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIBarcodeScannerPreviewActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUICachedFileUpdaterActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUICachedFileUpdaterActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUICachedFileUpdaterActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUICameraSettingsActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUICameraSettingsActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUICameraSettingsActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUICommandLineActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUICommandLineActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUICommandLineActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIContactCallActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIContactCallActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIContactCallActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIContactMapActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIContactMapActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIContactMapActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIContactMessageActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIContactMessageActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIContactMessageActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIContactPanelActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIContactPanelActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIContactPanelActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIContactPickerActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIContactPickerActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIContactPickerActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIContactPostActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIContactPostActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIContactPostActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIContactVideoCallActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIContactVideoCallActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIContactVideoCallActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIDeviceActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIDeviceActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIDeviceActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIDevicePairingActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIDevicePairingActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIDevicePairingActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIDialReceiverActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIDialReceiverActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIDialReceiverActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIFileActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIFileActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIFileActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIFileOpenPickerActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIFileOpenPickerActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIFileOpenPickerActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIFileOpenPickerContinuationEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIFileOpenPickerContinuationEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIFileOpenPickerContinuationEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIFileSavePickerActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIFileSavePickerActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIFileSavePickerActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIFileSavePickerContinuationEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIFileSavePickerContinuationEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIFileSavePickerContinuationEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIFolderPickerContinuationEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIFolderPickerContinuationEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIFolderPickerContinuationEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUILaunchActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUILaunchActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUILaunchActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUILockScreenActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUILockScreenActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUILockScreenActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUILockScreenCallActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUILockScreenCallActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUILockScreenCallActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUILockScreenComponentActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUILockScreenComponentActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUILockScreenComponentActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUINavigatedDeferral>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUINavigatedDeferral";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUINavigatedDeferral";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUINavigatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUINavigatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUINavigatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUINavigatedOperation>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUINavigatedOperation";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUINavigatedOperation";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIPhoneCallActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIPhoneCallActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIPhoneCallActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIPrint3DWorkflowActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIPrint3DWorkflowActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIPrint3DWorkflowActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIPrintTaskSettingsActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIPrintTaskSettingsActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIPrintTaskSettingsActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIPrintWorkflowForegroundTaskActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIPrintWorkflowForegroundTaskActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIPrintWorkflowForegroundTaskActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIProtocolActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIProtocolActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIProtocolActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIProtocolForResultsActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIProtocolForResultsActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIProtocolForResultsActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIRestrictedLaunchActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIRestrictedLaunchActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIRestrictedLaunchActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUISearchActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUISearchActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUISearchActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIShareTargetActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIShareTargetActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIShareTargetActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIStartupTaskActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIStartupTaskActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIStartupTaskActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIToastNotificationActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIToastNotificationActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIToastNotificationActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIUserDataAccountProviderActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIUserDataAccountProviderActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIUserDataAccountProviderActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIView>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIView";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIView";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIVoiceCommandActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIVoiceCommandActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIVoiceCommandActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIWalletActionActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIWalletActionActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIWalletActionActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIWebAccountProviderActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIWebAccountProviderActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIWebAccountProviderActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::WebUIWebAuthenticationBrokerContinuationEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.WebUIWebAuthenticationBrokerContinuationEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "WebUIWebAuthenticationBrokerContinuationEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::IActivatedEventArgsDeferral>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui._IActivatedEventArgsDeferral";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "_IActivatedEventArgsDeferral";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::IWebUIBackgroundTaskInstance>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui._IWebUIBackgroundTaskInstance";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "_IWebUIBackgroundTaskInstance";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::IWebUINavigatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui._IWebUINavigatedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui";
-        static constexpr const char* type_name = "_IWebUINavigatedEventArgs";
-    };
-}
 
 #if __has_include("py.Windows.ApplicationModel.h")
 #include "py.Windows.ApplicationModel.h"
@@ -584,56 +23,56 @@ namespace py
 #include "py.Windows.ApplicationModel.Activation.h"
 #endif
 
-#if __has_include("py.Windows.ApplicationModel.Appointments.AppointmentsProvider.h")
-#include "py.Windows.ApplicationModel.Appointments.AppointmentsProvider.h"
+#if __has_include("py.Windows.ApplicationModel.Appointments.AppointmentsProvider.types.h")
+#include "py.Windows.ApplicationModel.Appointments.AppointmentsProvider.types.h"
 #endif
 
 #if __has_include("py.Windows.ApplicationModel.Background.h")
 #include "py.Windows.ApplicationModel.Background.h"
 #endif
 
-#if __has_include("py.Windows.ApplicationModel.Calls.h")
-#include "py.Windows.ApplicationModel.Calls.h"
+#if __has_include("py.Windows.ApplicationModel.Calls.types.h")
+#include "py.Windows.ApplicationModel.Calls.types.h"
 #endif
 
-#if __has_include("py.Windows.ApplicationModel.Contacts.h")
-#include "py.Windows.ApplicationModel.Contacts.h"
+#if __has_include("py.Windows.ApplicationModel.Contacts.types.h")
+#include "py.Windows.ApplicationModel.Contacts.types.h"
 #endif
 
-#if __has_include("py.Windows.ApplicationModel.Contacts.Provider.h")
-#include "py.Windows.ApplicationModel.Contacts.Provider.h"
+#if __has_include("py.Windows.ApplicationModel.Contacts.Provider.types.h")
+#include "py.Windows.ApplicationModel.Contacts.Provider.types.h"
 #endif
 
-#if __has_include("py.Windows.ApplicationModel.Core.h")
-#include "py.Windows.ApplicationModel.Core.h"
+#if __has_include("py.Windows.ApplicationModel.Core.types.h")
+#include "py.Windows.ApplicationModel.Core.types.h"
 #endif
 
-#if __has_include("py.Windows.ApplicationModel.DataTransfer.h")
-#include "py.Windows.ApplicationModel.DataTransfer.h"
+#if __has_include("py.Windows.ApplicationModel.DataTransfer.types.h")
+#include "py.Windows.ApplicationModel.DataTransfer.types.h"
 #endif
 
-#if __has_include("py.Windows.ApplicationModel.DataTransfer.ShareTarget.h")
-#include "py.Windows.ApplicationModel.DataTransfer.ShareTarget.h"
+#if __has_include("py.Windows.ApplicationModel.DataTransfer.ShareTarget.types.h")
+#include "py.Windows.ApplicationModel.DataTransfer.ShareTarget.types.h"
 #endif
 
-#if __has_include("py.Windows.ApplicationModel.Search.h")
-#include "py.Windows.ApplicationModel.Search.h"
+#if __has_include("py.Windows.ApplicationModel.Search.types.h")
+#include "py.Windows.ApplicationModel.Search.types.h"
 #endif
 
-#if __has_include("py.Windows.ApplicationModel.UserDataAccounts.Provider.h")
-#include "py.Windows.ApplicationModel.UserDataAccounts.Provider.h"
+#if __has_include("py.Windows.ApplicationModel.UserDataAccounts.Provider.types.h")
+#include "py.Windows.ApplicationModel.UserDataAccounts.Provider.types.h"
 #endif
 
-#if __has_include("py.Windows.ApplicationModel.Wallet.h")
-#include "py.Windows.ApplicationModel.Wallet.h"
+#if __has_include("py.Windows.ApplicationModel.Wallet.types.h")
+#include "py.Windows.ApplicationModel.Wallet.types.h"
 #endif
 
-#if __has_include("py.Windows.Devices.Enumeration.h")
-#include "py.Windows.Devices.Enumeration.h"
+#if __has_include("py.Windows.Devices.Enumeration.types.h")
+#include "py.Windows.Devices.Enumeration.types.h"
 #endif
 
-#if __has_include("py.Windows.Devices.Printers.Extensions.h")
-#include "py.Windows.Devices.Printers.Extensions.h"
+#if __has_include("py.Windows.Devices.Printers.Extensions.types.h")
+#include "py.Windows.Devices.Printers.Extensions.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")
@@ -644,52 +83,52 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Media.SpeechRecognition.h")
-#include "py.Windows.Media.SpeechRecognition.h"
+#if __has_include("py.Windows.Media.SpeechRecognition.types.h")
+#include "py.Windows.Media.SpeechRecognition.types.h"
 #endif
 
-#if __has_include("py.Windows.Security.Authentication.Web.h")
-#include "py.Windows.Security.Authentication.Web.h"
+#if __has_include("py.Windows.Security.Authentication.Web.types.h")
+#include "py.Windows.Security.Authentication.Web.types.h"
 #endif
 
-#if __has_include("py.Windows.Security.Authentication.Web.Provider.h")
-#include "py.Windows.Security.Authentication.Web.Provider.h"
+#if __has_include("py.Windows.Security.Authentication.Web.Provider.types.h")
+#include "py.Windows.Security.Authentication.Web.Provider.types.h"
 #endif
 
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
+#if __has_include("py.Windows.Storage.types.h")
+#include "py.Windows.Storage.types.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Pickers.Provider.h")
-#include "py.Windows.Storage.Pickers.Provider.h"
+#if __has_include("py.Windows.Storage.Pickers.Provider.types.h")
+#include "py.Windows.Storage.Pickers.Provider.types.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Provider.h")
-#include "py.Windows.Storage.Provider.h"
+#if __has_include("py.Windows.Storage.Provider.types.h")
+#include "py.Windows.Storage.Provider.types.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Search.h")
-#include "py.Windows.Storage.Search.h"
+#if __has_include("py.Windows.Storage.Search.types.h")
+#include "py.Windows.Storage.Search.types.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
+#if __has_include("py.Windows.System.types.h")
+#include "py.Windows.System.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
+#if __has_include("py.Windows.UI.types.h")
+#include "py.Windows.UI.types.h"
 #endif
 
-#if __has_include("py.Windows.Web.h")
-#include "py.Windows.Web.h"
+#if __has_include("py.Windows.Web.types.h")
+#include "py.Windows.Web.types.h"
 #endif
 
-#if __has_include("py.Windows.Web.Http.h")
-#include "py.Windows.Web.Http.h"
+#if __has_include("py.Windows.Web.Http.types.h")
+#include "py.Windows.Web.Http.types.h"
 #endif
 
 #if __has_include("py.Windows.Web.UI.h")

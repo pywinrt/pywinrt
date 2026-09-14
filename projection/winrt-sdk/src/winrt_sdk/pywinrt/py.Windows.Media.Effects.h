@@ -6,223 +6,11 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Foundation.Numerics.h>
-#include <winrt/Windows.Graphics.DirectX.Direct3D11.h>
 #include <winrt/Windows.Media.h>
-#include <winrt/Windows.Media.Capture.h>
-#include <winrt/Windows.Media.Editing.h>
-#include <winrt/Windows.Media.MediaProperties.h>
-#include <winrt/Windows.Media.Playback.h>
-#include <winrt/Windows.Media.Render.h>
-#include <winrt/Windows.Media.Transcoding.h>
-#include <winrt/Windows.Storage.Streams.h>
-#include <winrt/Windows.UI.h>
 
 #include <winrt/Windows.Media.Effects.h>
+#include "py.Windows.Media.Effects.types.h"
 
-namespace py::proj::Windows::Media::Effects
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::Effects::AudioEffectState> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::Effects::AudioEffectType> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::Effects::MediaEffectClosedReason> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::Effects::MediaMemoryTypes> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Media::Effects::AudioEffectState>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.AudioEffectState";
-        static constexpr const char* module_name = "winrt.windows.media.effects";
-        static constexpr const char* type_name = "AudioEffectState";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Effects::AudioEffectType>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.AudioEffectType";
-        static constexpr const char* module_name = "winrt.windows.media.effects";
-        static constexpr const char* type_name = "AudioEffectType";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Effects::MediaEffectClosedReason>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.MediaEffectClosedReason";
-        static constexpr const char* module_name = "winrt.windows.media.effects";
-        static constexpr const char* type_name = "MediaEffectClosedReason";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Effects::MediaMemoryTypes>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.MediaMemoryTypes";
-        static constexpr const char* module_name = "winrt.windows.media.effects";
-        static constexpr const char* type_name = "MediaMemoryTypes";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Effects::AcousticEchoCancellationConfiguration>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.AcousticEchoCancellationConfiguration";
-        static constexpr const char* module_name = "winrt.windows.media.effects";
-        static constexpr const char* type_name = "AcousticEchoCancellationConfiguration";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Effects::AudioCaptureEffectsManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.AudioCaptureEffectsManager";
-        static constexpr const char* module_name = "winrt.windows.media.effects";
-        static constexpr const char* type_name = "AudioCaptureEffectsManager";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Effects::AudioEffect>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.AudioEffect";
-        static constexpr const char* module_name = "winrt.windows.media.effects";
-        static constexpr const char* type_name = "AudioEffect";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Effects::AudioEffectDefinition>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.AudioEffectDefinition";
-        static constexpr const char* module_name = "winrt.windows.media.effects";
-        static constexpr const char* type_name = "AudioEffectDefinition";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Effects::AudioEffectsManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.AudioEffectsManager";
-        static constexpr const char* module_name = "winrt.windows.media.effects";
-        static constexpr const char* type_name = "AudioEffectsManager";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Effects::AudioRenderEffectsManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.AudioRenderEffectsManager";
-        static constexpr const char* module_name = "winrt.windows.media.effects";
-        static constexpr const char* type_name = "AudioRenderEffectsManager";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Effects::CompositeVideoFrameContext>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.CompositeVideoFrameContext";
-        static constexpr const char* module_name = "winrt.windows.media.effects";
-        static constexpr const char* type_name = "CompositeVideoFrameContext";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Effects::ProcessAudioFrameContext>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.ProcessAudioFrameContext";
-        static constexpr const char* module_name = "winrt.windows.media.effects";
-        static constexpr const char* type_name = "ProcessAudioFrameContext";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Effects::ProcessVideoFrameContext>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.ProcessVideoFrameContext";
-        static constexpr const char* module_name = "winrt.windows.media.effects";
-        static constexpr const char* type_name = "ProcessVideoFrameContext";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Effects::VideoCompositorDefinition>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.VideoCompositorDefinition";
-        static constexpr const char* module_name = "winrt.windows.media.effects";
-        static constexpr const char* type_name = "VideoCompositorDefinition";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Effects::VideoEffectDefinition>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.VideoEffectDefinition";
-        static constexpr const char* module_name = "winrt.windows.media.effects";
-        static constexpr const char* type_name = "VideoEffectDefinition";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Effects::VideoTransformEffectDefinition>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.VideoTransformEffectDefinition";
-        static constexpr const char* module_name = "winrt.windows.media.effects";
-        static constexpr const char* type_name = "VideoTransformEffectDefinition";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Effects::VideoTransformSphericalProjection>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.VideoTransformSphericalProjection";
-        static constexpr const char* module_name = "winrt.windows.media.effects";
-        static constexpr const char* type_name = "VideoTransformSphericalProjection";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Effects::IAudioEffectDefinition>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.effects._IAudioEffectDefinition";
-        static constexpr const char* module_name = "winrt.windows.media.effects";
-        static constexpr const char* type_name = "_IAudioEffectDefinition";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Effects::IBasicAudioEffect>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.effects._IBasicAudioEffect";
-        static constexpr const char* module_name = "winrt.windows.media.effects";
-        static constexpr const char* type_name = "_IBasicAudioEffect";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Effects::IBasicVideoEffect>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.effects._IBasicVideoEffect";
-        static constexpr const char* module_name = "winrt.windows.media.effects";
-        static constexpr const char* type_name = "_IBasicVideoEffect";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Effects::IVideoCompositor>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.effects._IVideoCompositor";
-        static constexpr const char* module_name = "winrt.windows.media.effects";
-        static constexpr const char* type_name = "_IVideoCompositor";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Effects::IVideoCompositorDefinition>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.effects._IVideoCompositorDefinition";
-        static constexpr const char* module_name = "winrt.windows.media.effects";
-        static constexpr const char* type_name = "_IVideoCompositorDefinition";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Effects::IVideoEffectDefinition>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.effects._IVideoEffectDefinition";
-        static constexpr const char* module_name = "winrt.windows.media.effects";
-        static constexpr const char* type_name = "_IVideoEffectDefinition";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -232,48 +20,48 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Foundation.Numerics.h")
-#include "py.Windows.Foundation.Numerics.h"
+#if __has_include("py.Windows.Foundation.Numerics.types.h")
+#include "py.Windows.Foundation.Numerics.types.h"
 #endif
 
-#if __has_include("py.Windows.Graphics.DirectX.Direct3D11.h")
-#include "py.Windows.Graphics.DirectX.Direct3D11.h"
+#if __has_include("py.Windows.Graphics.DirectX.Direct3D11.types.h")
+#include "py.Windows.Graphics.DirectX.Direct3D11.types.h"
 #endif
 
 #if __has_include("py.Windows.Media.h")
 #include "py.Windows.Media.h"
 #endif
 
-#if __has_include("py.Windows.Media.Capture.h")
-#include "py.Windows.Media.Capture.h"
+#if __has_include("py.Windows.Media.Capture.types.h")
+#include "py.Windows.Media.Capture.types.h"
 #endif
 
-#if __has_include("py.Windows.Media.Editing.h")
-#include "py.Windows.Media.Editing.h"
+#if __has_include("py.Windows.Media.Editing.types.h")
+#include "py.Windows.Media.Editing.types.h"
 #endif
 
-#if __has_include("py.Windows.Media.MediaProperties.h")
-#include "py.Windows.Media.MediaProperties.h"
+#if __has_include("py.Windows.Media.MediaProperties.types.h")
+#include "py.Windows.Media.MediaProperties.types.h"
 #endif
 
-#if __has_include("py.Windows.Media.Playback.h")
-#include "py.Windows.Media.Playback.h"
+#if __has_include("py.Windows.Media.Playback.types.h")
+#include "py.Windows.Media.Playback.types.h"
 #endif
 
-#if __has_include("py.Windows.Media.Render.h")
-#include "py.Windows.Media.Render.h"
+#if __has_include("py.Windows.Media.Render.types.h")
+#include "py.Windows.Media.Render.types.h"
 #endif
 
-#if __has_include("py.Windows.Media.Transcoding.h")
-#include "py.Windows.Media.Transcoding.h"
+#if __has_include("py.Windows.Media.Transcoding.types.h")
+#include "py.Windows.Media.Transcoding.types.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
+#if __has_include("py.Windows.UI.types.h")
+#include "py.Windows.UI.types.h"
 #endif
 
 namespace py::impl::Windows::Media::Effects

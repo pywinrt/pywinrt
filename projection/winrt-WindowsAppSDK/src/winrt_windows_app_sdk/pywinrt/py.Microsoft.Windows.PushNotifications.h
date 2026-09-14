@@ -8,69 +8,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Foundation.h>
 
 #include <winrt/Microsoft.Windows.PushNotifications.h>
+#include "py.Microsoft.Windows.PushNotifications.types.h"
 
-namespace py::proj::Microsoft::Windows::PushNotifications
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::Windows::PushNotifications::PushNotificationChannelStatus> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::Windows::PushNotifications::PushNotificationCreateChannelStatus> = "T{i:status:T{i:value:}:extended_error:I:retry_count:}";
-
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::PushNotifications::PushNotificationChannelStatus>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.pushnotifications.PushNotificationChannelStatus";
-        static constexpr const char* module_name = "winui3.microsoft.windows.pushnotifications";
-        static constexpr const char* type_name = "PushNotificationChannelStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::PushNotifications::PushNotificationChannel>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.pushnotifications.PushNotificationChannel";
-        static constexpr const char* module_name = "winui3.microsoft.windows.pushnotifications";
-        static constexpr const char* type_name = "PushNotificationChannel";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::PushNotifications::PushNotificationCreateChannelResult>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.pushnotifications.PushNotificationCreateChannelResult";
-        static constexpr const char* module_name = "winui3.microsoft.windows.pushnotifications";
-        static constexpr const char* type_name = "PushNotificationCreateChannelResult";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::PushNotifications::PushNotificationManager>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.pushnotifications.PushNotificationManager";
-        static constexpr const char* module_name = "winui3.microsoft.windows.pushnotifications";
-        static constexpr const char* type_name = "PushNotificationManager";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::PushNotifications::PushNotificationReceivedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.pushnotifications.PushNotificationReceivedEventArgs";
-        static constexpr const char* module_name = "winui3.microsoft.windows.pushnotifications";
-        static constexpr const char* type_name = "PushNotificationReceivedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::PushNotifications::PushNotificationCreateChannelStatus>
-    {
-        static constexpr std::string_view from_tuple = "winui3._winui3_microsoft_windows_pushnotifications.PushNotificationCreateChannelStatus_from_tuple";
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.pushnotifications.PushNotificationCreateChannelStatus";
-        static constexpr const char* module_name = "winui3.microsoft.windows.pushnotifications";
-        static constexpr const char* type_name = "PushNotificationCreateChannelStatus";
-    };
-}
 
 #if __has_include("py.Windows.ApplicationModel.Background.h")
 #include "py.Windows.ApplicationModel.Background.h"

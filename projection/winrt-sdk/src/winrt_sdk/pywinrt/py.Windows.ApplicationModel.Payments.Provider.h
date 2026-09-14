@@ -4,54 +4,15 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.ApplicationModel.Payments.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.ApplicationModel.Payments.Provider.h>
+#include "py.Windows.ApplicationModel.Payments.Provider.types.h"
 
-namespace py::proj::Windows::ApplicationModel::Payments::Provider
-{
-}
 
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Payments::Provider::PaymentAppCanMakePaymentTriggerDetails>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.payments.provider.PaymentAppCanMakePaymentTriggerDetails";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.payments.provider";
-        static constexpr const char* type_name = "PaymentAppCanMakePaymentTriggerDetails";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Payments::Provider::PaymentAppManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.payments.provider.PaymentAppManager";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.payments.provider";
-        static constexpr const char* type_name = "PaymentAppManager";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Payments::Provider::PaymentTransaction>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.payments.provider.PaymentTransaction";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.payments.provider";
-        static constexpr const char* type_name = "PaymentTransaction";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Payments::Provider::PaymentTransactionAcceptResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.payments.provider.PaymentTransactionAcceptResult";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.payments.provider";
-        static constexpr const char* type_name = "PaymentTransactionAcceptResult";
-    };
-}
-
-#if __has_include("py.Windows.ApplicationModel.Payments.h")
-#include "py.Windows.ApplicationModel.Payments.h"
+#if __has_include("py.Windows.ApplicationModel.Payments.types.h")
+#include "py.Windows.ApplicationModel.Payments.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")

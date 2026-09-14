@@ -4,64 +4,29 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Devices.Adc.Provider.h>
-#include <winrt/Windows.Devices.Gpio.Provider.h>
-#include <winrt/Windows.Devices.I2c.Provider.h>
-#include <winrt/Windows.Devices.Pwm.Provider.h>
-#include <winrt/Windows.Devices.Spi.Provider.h>
 
 #include <winrt/Windows.Devices.h>
+#include "py.Windows.Devices.types.h"
 
-namespace py::proj::Windows::Devices
-{
-}
 
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::Devices::LowLevelDevicesAggregateProvider>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.LowLevelDevicesAggregateProvider";
-        static constexpr const char* module_name = "winrt.windows.devices";
-        static constexpr const char* type_name = "LowLevelDevicesAggregateProvider";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::LowLevelDevicesController>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.LowLevelDevicesController";
-        static constexpr const char* module_name = "winrt.windows.devices";
-        static constexpr const char* type_name = "LowLevelDevicesController";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::ILowLevelDevicesAggregateProvider>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices._ILowLevelDevicesAggregateProvider";
-        static constexpr const char* module_name = "winrt.windows.devices";
-        static constexpr const char* type_name = "_ILowLevelDevicesAggregateProvider";
-    };
-}
-
-#if __has_include("py.Windows.Devices.Adc.Provider.h")
-#include "py.Windows.Devices.Adc.Provider.h"
+#if __has_include("py.Windows.Devices.Adc.Provider.types.h")
+#include "py.Windows.Devices.Adc.Provider.types.h"
 #endif
 
-#if __has_include("py.Windows.Devices.Gpio.Provider.h")
-#include "py.Windows.Devices.Gpio.Provider.h"
+#if __has_include("py.Windows.Devices.Gpio.Provider.types.h")
+#include "py.Windows.Devices.Gpio.Provider.types.h"
 #endif
 
-#if __has_include("py.Windows.Devices.I2c.Provider.h")
-#include "py.Windows.Devices.I2c.Provider.h"
+#if __has_include("py.Windows.Devices.I2c.Provider.types.h")
+#include "py.Windows.Devices.I2c.Provider.types.h"
 #endif
 
-#if __has_include("py.Windows.Devices.Pwm.Provider.h")
-#include "py.Windows.Devices.Pwm.Provider.h"
+#if __has_include("py.Windows.Devices.Pwm.Provider.types.h")
+#include "py.Windows.Devices.Pwm.Provider.types.h"
 #endif
 
-#if __has_include("py.Windows.Devices.Spi.Provider.h")
-#include "py.Windows.Devices.Spi.Provider.h"
+#if __has_include("py.Windows.Devices.Spi.Provider.types.h")
+#include "py.Windows.Devices.Spi.Provider.types.h"
 #endif
 
 namespace py::impl::Windows::Devices

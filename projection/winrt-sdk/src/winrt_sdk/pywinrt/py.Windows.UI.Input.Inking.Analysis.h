@@ -6,165 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.UI.Input.Inking.h>
 
 #include <winrt/Windows.UI.Input.Inking.Analysis.h>
+#include "py.Windows.UI.Input.Inking.Analysis.types.h"
 
-namespace py::proj::Windows::UI::Input::Inking::Analysis
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisDrawingKind> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisNodeKind> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisStatus> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisStrokeKind> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisDrawingKind>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.analysis.InkAnalysisDrawingKind";
-        static constexpr const char* module_name = "winrt.windows.ui.input.inking.analysis";
-        static constexpr const char* type_name = "InkAnalysisDrawingKind";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisNodeKind>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.analysis.InkAnalysisNodeKind";
-        static constexpr const char* module_name = "winrt.windows.ui.input.inking.analysis";
-        static constexpr const char* type_name = "InkAnalysisNodeKind";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.analysis.InkAnalysisStatus";
-        static constexpr const char* module_name = "winrt.windows.ui.input.inking.analysis";
-        static constexpr const char* type_name = "InkAnalysisStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisStrokeKind>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.analysis.InkAnalysisStrokeKind";
-        static constexpr const char* module_name = "winrt.windows.ui.input.inking.analysis";
-        static constexpr const char* type_name = "InkAnalysisStrokeKind";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisInkBullet>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.analysis.InkAnalysisInkBullet";
-        static constexpr const char* module_name = "winrt.windows.ui.input.inking.analysis";
-        static constexpr const char* type_name = "InkAnalysisInkBullet";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisInkDrawing>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.analysis.InkAnalysisInkDrawing";
-        static constexpr const char* module_name = "winrt.windows.ui.input.inking.analysis";
-        static constexpr const char* type_name = "InkAnalysisInkDrawing";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisInkWord>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.analysis.InkAnalysisInkWord";
-        static constexpr const char* module_name = "winrt.windows.ui.input.inking.analysis";
-        static constexpr const char* type_name = "InkAnalysisInkWord";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisLine>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.analysis.InkAnalysisLine";
-        static constexpr const char* module_name = "winrt.windows.ui.input.inking.analysis";
-        static constexpr const char* type_name = "InkAnalysisLine";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisListItem>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.analysis.InkAnalysisListItem";
-        static constexpr const char* module_name = "winrt.windows.ui.input.inking.analysis";
-        static constexpr const char* type_name = "InkAnalysisListItem";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisNode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.analysis.InkAnalysisNode";
-        static constexpr const char* module_name = "winrt.windows.ui.input.inking.analysis";
-        static constexpr const char* type_name = "InkAnalysisNode";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisParagraph>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.analysis.InkAnalysisParagraph";
-        static constexpr const char* module_name = "winrt.windows.ui.input.inking.analysis";
-        static constexpr const char* type_name = "InkAnalysisParagraph";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.analysis.InkAnalysisResult";
-        static constexpr const char* module_name = "winrt.windows.ui.input.inking.analysis";
-        static constexpr const char* type_name = "InkAnalysisResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisRoot>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.analysis.InkAnalysisRoot";
-        static constexpr const char* module_name = "winrt.windows.ui.input.inking.analysis";
-        static constexpr const char* type_name = "InkAnalysisRoot";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisWritingRegion>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.analysis.InkAnalysisWritingRegion";
-        static constexpr const char* module_name = "winrt.windows.ui.input.inking.analysis";
-        static constexpr const char* type_name = "InkAnalysisWritingRegion";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalyzer>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.analysis.InkAnalyzer";
-        static constexpr const char* module_name = "winrt.windows.ui.input.inking.analysis";
-        static constexpr const char* type_name = "InkAnalyzer";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.analysis._IInkAnalysisNode";
-        static constexpr const char* module_name = "winrt.windows.ui.input.inking.analysis";
-        static constexpr const char* type_name = "_IInkAnalysisNode";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalyzerFactory>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.analysis._IInkAnalyzerFactory";
-        static constexpr const char* module_name = "winrt.windows.ui.input.inking.analysis";
-        static constexpr const char* type_name = "_IInkAnalyzerFactory";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -174,8 +19,8 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.UI.Input.Inking.h")
-#include "py.Windows.UI.Input.Inking.h"
+#if __has_include("py.Windows.UI.Input.Inking.types.h")
+#include "py.Windows.UI.Input.Inking.types.h"
 #endif
 
 namespace py::impl::Windows::UI::Input::Inking::Analysis

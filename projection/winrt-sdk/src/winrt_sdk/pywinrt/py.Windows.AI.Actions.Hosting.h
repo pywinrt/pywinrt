@@ -4,78 +4,22 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.AI.Actions.h>
 #include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.UI.h>
 
 #include <winrt/Windows.AI.Actions.Hosting.h>
+#include "py.Windows.AI.Actions.Hosting.types.h"
 
-namespace py::proj::Windows::AI::Actions::Hosting
-{
-}
 
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::AI::Actions::Hosting::ActionCatalog>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ai.actions.hosting.ActionCatalog";
-        static constexpr const char* module_name = "winrt.windows.ai.actions.hosting";
-        static constexpr const char* type_name = "ActionCatalog";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::AI::Actions::Hosting::ActionDefinition>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ai.actions.hosting.ActionDefinition";
-        static constexpr const char* module_name = "winrt.windows.ai.actions.hosting";
-        static constexpr const char* type_name = "ActionDefinition";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::AI::Actions::Hosting::ActionEntityRegistrationInfo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ai.actions.hosting.ActionEntityRegistrationInfo";
-        static constexpr const char* module_name = "winrt.windows.ai.actions.hosting";
-        static constexpr const char* type_name = "ActionEntityRegistrationInfo";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::AI::Actions::Hosting::ActionInstance>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ai.actions.hosting.ActionInstance";
-        static constexpr const char* module_name = "winrt.windows.ai.actions.hosting";
-        static constexpr const char* type_name = "ActionInstance";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::AI::Actions::Hosting::ActionInstanceDisplayInfo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ai.actions.hosting.ActionInstanceDisplayInfo";
-        static constexpr const char* module_name = "winrt.windows.ai.actions.hosting";
-        static constexpr const char* type_name = "ActionInstanceDisplayInfo";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::AI::Actions::Hosting::ActionOverload>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ai.actions.hosting.ActionOverload";
-        static constexpr const char* module_name = "winrt.windows.ai.actions.hosting";
-        static constexpr const char* type_name = "ActionOverload";
-    };
-}
-
-#if __has_include("py.Windows.AI.Actions.h")
-#include "py.Windows.AI.Actions.h"
+#if __has_include("py.Windows.AI.Actions.types.h")
+#include "py.Windows.AI.Actions.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
 #endif
 
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
+#if __has_include("py.Windows.UI.types.h")
+#include "py.Windows.UI.types.h"
 #endif
 
 namespace py::impl::Windows::AI::Actions::Hosting

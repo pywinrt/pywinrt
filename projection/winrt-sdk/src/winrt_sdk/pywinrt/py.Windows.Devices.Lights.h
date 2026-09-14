@@ -5,93 +5,29 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.Foundation.Numerics.h>
-#include <winrt/Windows.Storage.Streams.h>
-#include <winrt/Windows.System.h>
-#include <winrt/Windows.UI.h>
 
 #include <winrt/Windows.Devices.Lights.h>
+#include "py.Windows.Devices.Lights.types.h"
 
-namespace py::proj::Windows::Devices::Lights
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::Lights::LampArrayKind> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::Lights::LampPurposes> = "I";
-
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Lights::LampArrayKind>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.LampArrayKind";
-        static constexpr const char* module_name = "winrt.windows.devices.lights";
-        static constexpr const char* type_name = "LampArrayKind";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Lights::LampPurposes>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.LampPurposes";
-        static constexpr const char* module_name = "winrt.windows.devices.lights";
-        static constexpr const char* type_name = "LampPurposes";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Lights::Lamp>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.Lamp";
-        static constexpr const char* module_name = "winrt.windows.devices.lights";
-        static constexpr const char* type_name = "Lamp";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Lights::LampArray>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.LampArray";
-        static constexpr const char* module_name = "winrt.windows.devices.lights";
-        static constexpr const char* type_name = "LampArray";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Lights::LampAvailabilityChangedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.LampAvailabilityChangedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.devices.lights";
-        static constexpr const char* type_name = "LampAvailabilityChangedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Lights::LampInfo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.LampInfo";
-        static constexpr const char* module_name = "winrt.windows.devices.lights";
-        static constexpr const char* type_name = "LampInfo";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
 #endif
 
-#if __has_include("py.Windows.Foundation.Numerics.h")
-#include "py.Windows.Foundation.Numerics.h"
+#if __has_include("py.Windows.Foundation.Numerics.types.h")
+#include "py.Windows.Foundation.Numerics.types.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
+#if __has_include("py.Windows.System.types.h")
+#include "py.Windows.System.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
+#if __has_include("py.Windows.UI.types.h")
+#include "py.Windows.UI.types.h"
 #endif
 
 namespace py::impl::Windows::Devices::Lights

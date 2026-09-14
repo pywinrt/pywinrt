@@ -7,63 +7,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Foundation.h>
 
 #include <winrt/Windows.ApplicationModel.ExtendedExecution.h>
+#include "py.Windows.ApplicationModel.ExtendedExecution.types.h"
 
-namespace py::proj::Windows::ApplicationModel::ExtendedExecution
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionReason> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionResult> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionRevokedReason> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionReason>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.extendedexecution.ExtendedExecutionReason";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.extendedexecution";
-        static constexpr const char* type_name = "ExtendedExecutionReason";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.extendedexecution.ExtendedExecutionResult";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.extendedexecution";
-        static constexpr const char* type_name = "ExtendedExecutionResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionRevokedReason>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.extendedexecution.ExtendedExecutionRevokedReason";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.extendedexecution";
-        static constexpr const char* type_name = "ExtendedExecutionRevokedReason";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionRevokedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.extendedexecution.ExtendedExecutionRevokedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.extendedexecution";
-        static constexpr const char* type_name = "ExtendedExecutionRevokedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionSession>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.extendedexecution.ExtendedExecutionSession";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.extendedexecution";
-        static constexpr const char* type_name = "ExtendedExecutionSession";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"

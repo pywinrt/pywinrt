@@ -7,22 +7,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Microsoft.Windows.System.h>
+#include "py.Microsoft.Windows.System.types.h"
 
-namespace py::proj::Microsoft::Windows::System
-{
-}
-
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::System::EnvironmentManager>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.system.EnvironmentManager";
-        static constexpr const char* module_name = "winui3.microsoft.windows.system";
-        static constexpr const char* type_name = "EnvironmentManager";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.Collections.h")
 #include "py.Windows.Foundation.Collections.h"

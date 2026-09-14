@@ -8,30 +8,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.Security.Authentication.Identity.h>
+#include "py.Windows.Security.Authentication.Identity.types.h"
 
-namespace py::proj::Windows::Security::Authentication::Identity
-{
-}
-
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationInfo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.identity.EnterpriseKeyCredentialRegistrationInfo";
-        static constexpr const char* module_name = "winrt.windows.security.authentication.identity";
-        static constexpr const char* type_name = "EnterpriseKeyCredentialRegistrationInfo";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.identity.EnterpriseKeyCredentialRegistrationManager";
-        static constexpr const char* module_name = "winrt.windows.security.authentication.identity";
-        static constexpr const char* type_name = "EnterpriseKeyCredentialRegistrationManager";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"

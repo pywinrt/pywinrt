@@ -6,57 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Storage.Streams.h>
 
 #include <winrt/Windows.ApplicationModel.LockScreen.h>
+#include "py.Windows.ApplicationModel.LockScreen.types.h"
 
-namespace py::proj::Windows::ApplicationModel::LockScreen
-{
-}
-
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::LockScreen::LockApplicationHost>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.lockscreen.LockApplicationHost";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.lockscreen";
-        static constexpr const char* type_name = "LockApplicationHost";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::LockScreen::LockScreenBadge>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.lockscreen.LockScreenBadge";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.lockscreen";
-        static constexpr const char* type_name = "LockScreenBadge";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::LockScreen::LockScreenInfo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.lockscreen.LockScreenInfo";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.lockscreen";
-        static constexpr const char* type_name = "LockScreenInfo";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::LockScreen::LockScreenUnlockingDeferral>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.lockscreen.LockScreenUnlockingDeferral";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.lockscreen";
-        static constexpr const char* type_name = "LockScreenUnlockingDeferral";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::LockScreen::LockScreenUnlockingEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.lockscreen.LockScreenUnlockingEventArgs";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.lockscreen";
-        static constexpr const char* type_name = "LockScreenUnlockingEventArgs";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -66,8 +19,8 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
 namespace py::impl::Windows::ApplicationModel::LockScreen

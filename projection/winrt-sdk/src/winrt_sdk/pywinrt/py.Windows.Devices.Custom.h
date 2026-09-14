@@ -5,100 +5,17 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.Storage.Streams.h>
 
 #include <winrt/Windows.Devices.Custom.h>
+#include "py.Windows.Devices.Custom.types.h"
 
-namespace py::proj::Windows::Devices::Custom
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::Custom::DeviceAccessMode> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::Custom::DeviceSharingMode> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::Custom::IOControlAccessMode> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::Custom::IOControlBufferingMethod> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Custom::DeviceAccessMode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.custom.DeviceAccessMode";
-        static constexpr const char* module_name = "winrt.windows.devices.custom";
-        static constexpr const char* type_name = "DeviceAccessMode";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Custom::DeviceSharingMode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.custom.DeviceSharingMode";
-        static constexpr const char* module_name = "winrt.windows.devices.custom";
-        static constexpr const char* type_name = "DeviceSharingMode";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Custom::IOControlAccessMode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.custom.IOControlAccessMode";
-        static constexpr const char* module_name = "winrt.windows.devices.custom";
-        static constexpr const char* type_name = "IOControlAccessMode";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Custom::IOControlBufferingMethod>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.custom.IOControlBufferingMethod";
-        static constexpr const char* module_name = "winrt.windows.devices.custom";
-        static constexpr const char* type_name = "IOControlBufferingMethod";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Custom::CustomDevice>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.custom.CustomDevice";
-        static constexpr const char* module_name = "winrt.windows.devices.custom";
-        static constexpr const char* type_name = "CustomDevice";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Custom::IOControlCode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.custom.IOControlCode";
-        static constexpr const char* module_name = "winrt.windows.devices.custom";
-        static constexpr const char* type_name = "IOControlCode";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Custom::KnownDeviceTypes>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.custom.KnownDeviceTypes";
-        static constexpr const char* module_name = "winrt.windows.devices.custom";
-        static constexpr const char* type_name = "KnownDeviceTypes";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Custom::IIOControlCode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.custom._IIOControlCode";
-        static constexpr const char* module_name = "winrt.windows.devices.custom";
-        static constexpr const char* type_name = "_IIOControlCode";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
 namespace py::impl::Windows::Devices::Custom

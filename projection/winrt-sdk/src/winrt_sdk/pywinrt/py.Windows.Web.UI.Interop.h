@@ -4,102 +4,16 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.ApplicationModel.DataTransfer.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Storage.Streams.h>
-#include <winrt/Windows.System.h>
-#include <winrt/Windows.UI.h>
-#include <winrt/Windows.UI.Core.h>
-#include <winrt/Windows.Web.h>
-#include <winrt/Windows.Web.Http.h>
 #include <winrt/Windows.Web.UI.h>
 
 #include <winrt/Windows.Web.UI.Interop.h>
-
-namespace py::proj::Windows::Web::UI::Interop
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Web::UI::Interop::WebViewControlAcceleratorKeyRoutingStage> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Web::UI::Interop::WebViewControlMoveFocusReason> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Web::UI::Interop::WebViewControlProcessCapabilityState> = "i";
+#include "py.Windows.Web.UI.Interop.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::Web::UI::Interop::WebViewControlAcceleratorKeyRoutingStage>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.interop.WebViewControlAcceleratorKeyRoutingStage";
-        static constexpr const char* module_name = "winrt.windows.web.ui.interop";
-        static constexpr const char* type_name = "WebViewControlAcceleratorKeyRoutingStage";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::UI::Interop::WebViewControlMoveFocusReason>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.interop.WebViewControlMoveFocusReason";
-        static constexpr const char* module_name = "winrt.windows.web.ui.interop";
-        static constexpr const char* type_name = "WebViewControlMoveFocusReason";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::UI::Interop::WebViewControlProcessCapabilityState>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.interop.WebViewControlProcessCapabilityState";
-        static constexpr const char* module_name = "winrt.windows.web.ui.interop";
-        static constexpr const char* type_name = "WebViewControlProcessCapabilityState";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::UI::Interop::WebViewControl>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.interop.WebViewControl";
-        static constexpr const char* module_name = "winrt.windows.web.ui.interop";
-        static constexpr const char* type_name = "WebViewControl";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::UI::Interop::WebViewControlAcceleratorKeyPressedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.interop.WebViewControlAcceleratorKeyPressedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.web.ui.interop";
-        static constexpr const char* type_name = "WebViewControlAcceleratorKeyPressedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::UI::Interop::WebViewControlMoveFocusRequestedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.interop.WebViewControlMoveFocusRequestedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.web.ui.interop";
-        static constexpr const char* type_name = "WebViewControlMoveFocusRequestedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::UI::Interop::WebViewControlProcess>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.interop.WebViewControlProcess";
-        static constexpr const char* module_name = "winrt.windows.web.ui.interop";
-        static constexpr const char* type_name = "WebViewControlProcess";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::UI::Interop::WebViewControlProcessOptions>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.interop.WebViewControlProcessOptions";
-        static constexpr const char* module_name = "winrt.windows.web.ui.interop";
-        static constexpr const char* type_name = "WebViewControlProcessOptions";
-    };
-}
-
-#if __has_include("py.Windows.ApplicationModel.DataTransfer.h")
-#include "py.Windows.ApplicationModel.DataTransfer.h"
+#if __has_include("py.Windows.ApplicationModel.DataTransfer.types.h")
+#include "py.Windows.ApplicationModel.DataTransfer.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")
@@ -110,28 +24,28 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
+#if __has_include("py.Windows.System.types.h")
+#include "py.Windows.System.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
+#if __has_include("py.Windows.UI.types.h")
+#include "py.Windows.UI.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.Core.h")
-#include "py.Windows.UI.Core.h"
+#if __has_include("py.Windows.UI.Core.types.h")
+#include "py.Windows.UI.Core.types.h"
 #endif
 
-#if __has_include("py.Windows.Web.h")
-#include "py.Windows.Web.h"
+#if __has_include("py.Windows.Web.types.h")
+#include "py.Windows.Web.types.h"
 #endif
 
-#if __has_include("py.Windows.Web.Http.h")
-#include "py.Windows.Web.Http.h"
+#if __has_include("py.Windows.Web.Http.types.h")
+#include "py.Windows.Web.Http.types.h"
 #endif
 
 #if __has_include("py.Windows.Web.UI.h")

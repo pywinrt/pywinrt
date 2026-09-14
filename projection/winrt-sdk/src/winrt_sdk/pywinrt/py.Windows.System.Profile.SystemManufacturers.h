@@ -4,52 +4,13 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Foundation.h>
 
 #include <winrt/Windows.System.Profile.SystemManufacturers.h>
+#include "py.Windows.System.Profile.SystemManufacturers.types.h"
 
-namespace py::proj::Windows::System::Profile::SystemManufacturers
-{
-}
 
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::System::Profile::SystemManufacturers::OemSupportInfo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.profile.systemmanufacturers.OemSupportInfo";
-        static constexpr const char* module_name = "winrt.windows.system.profile.systemmanufacturers";
-        static constexpr const char* type_name = "OemSupportInfo";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Profile::SystemManufacturers::SmbiosInformation>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.profile.systemmanufacturers.SmbiosInformation";
-        static constexpr const char* module_name = "winrt.windows.system.profile.systemmanufacturers";
-        static constexpr const char* type_name = "SmbiosInformation";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Profile::SystemManufacturers::SystemSupportDeviceInfo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.profile.systemmanufacturers.SystemSupportDeviceInfo";
-        static constexpr const char* module_name = "winrt.windows.system.profile.systemmanufacturers";
-        static constexpr const char* type_name = "SystemSupportDeviceInfo";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Profile::SystemManufacturers::SystemSupportInfo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.profile.systemmanufacturers.SystemSupportInfo";
-        static constexpr const char* module_name = "winrt.windows.system.profile.systemmanufacturers";
-        static constexpr const char* type_name = "SystemSupportInfo";
-    };
-}
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
 #endif
 
 namespace py::impl::Windows::System::Profile::SystemManufacturers

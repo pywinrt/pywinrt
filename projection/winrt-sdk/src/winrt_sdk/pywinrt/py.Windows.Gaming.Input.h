@@ -4,272 +4,19 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Devices.Haptics.h>
-#include <winrt/Windows.Devices.Power.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Gaming.Input.ForceFeedback.h>
-#include <winrt/Windows.System.h>
 
 #include <winrt/Windows.Gaming.Input.h>
-
-namespace py::proj::Windows::Gaming::Input
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Gaming::Input::ArcadeStickButtons> = "I";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Gaming::Input::FlightStickButtons> = "I";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Gaming::Input::GameControllerButtonLabel> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Gaming::Input::GameControllerSwitchKind> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Gaming::Input::GameControllerSwitchPosition> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Gaming::Input::GamepadButtons> = "I";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Gaming::Input::OptionalUINavigationButtons> = "I";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Gaming::Input::RacingWheelButtons> = "I";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Gaming::Input::RequiredUINavigationButtons> = "I";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Gaming::Input::ArcadeStickReading> = "T{Q:timestamp:I:buttons:}";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Gaming::Input::FlightStickReading> = "T{Q:timestamp:I:buttons:i:hat_switch:d:roll:d:pitch:d:yaw:d:throttle:}";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Gaming::Input::GamepadReading> = "T{Q:timestamp:I:buttons:d:left_trigger:d:right_trigger:d:left_thumbstick_x:d:left_thumbstick_y:d:right_thumbstick_x:d:right_thumbstick_y:}";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Gaming::Input::GamepadVibration> = "T{d:left_motor:d:right_motor:d:left_trigger:d:right_trigger:}";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Gaming::Input::RacingWheelReading> = "T{Q:timestamp:I:buttons:i:pattern_shifter_gear:d:wheel:d:throttle:d:brake:d:clutch:d:handbrake:}";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Gaming::Input::UINavigationReading> = "T{Q:timestamp:I:required_buttons:I:optional_buttons:}";
+#include "py.Windows.Gaming.Input.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::ArcadeStickButtons>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.ArcadeStickButtons";
-        static constexpr const char* module_name = "winrt.windows.gaming.input";
-        static constexpr const char* type_name = "ArcadeStickButtons";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::FlightStickButtons>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.FlightStickButtons";
-        static constexpr const char* module_name = "winrt.windows.gaming.input";
-        static constexpr const char* type_name = "FlightStickButtons";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::GameControllerButtonLabel>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.GameControllerButtonLabel";
-        static constexpr const char* module_name = "winrt.windows.gaming.input";
-        static constexpr const char* type_name = "GameControllerButtonLabel";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::GameControllerSwitchKind>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.GameControllerSwitchKind";
-        static constexpr const char* module_name = "winrt.windows.gaming.input";
-        static constexpr const char* type_name = "GameControllerSwitchKind";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::GameControllerSwitchPosition>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.GameControllerSwitchPosition";
-        static constexpr const char* module_name = "winrt.windows.gaming.input";
-        static constexpr const char* type_name = "GameControllerSwitchPosition";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::GamepadButtons>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.GamepadButtons";
-        static constexpr const char* module_name = "winrt.windows.gaming.input";
-        static constexpr const char* type_name = "GamepadButtons";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::OptionalUINavigationButtons>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.OptionalUINavigationButtons";
-        static constexpr const char* module_name = "winrt.windows.gaming.input";
-        static constexpr const char* type_name = "OptionalUINavigationButtons";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::RacingWheelButtons>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.RacingWheelButtons";
-        static constexpr const char* module_name = "winrt.windows.gaming.input";
-        static constexpr const char* type_name = "RacingWheelButtons";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::RequiredUINavigationButtons>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.RequiredUINavigationButtons";
-        static constexpr const char* module_name = "winrt.windows.gaming.input";
-        static constexpr const char* type_name = "RequiredUINavigationButtons";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::ArcadeStick>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.ArcadeStick";
-        static constexpr const char* module_name = "winrt.windows.gaming.input";
-        static constexpr const char* type_name = "ArcadeStick";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::FlightStick>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.FlightStick";
-        static constexpr const char* module_name = "winrt.windows.gaming.input";
-        static constexpr const char* type_name = "FlightStick";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::Gamepad>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.Gamepad";
-        static constexpr const char* module_name = "winrt.windows.gaming.input";
-        static constexpr const char* type_name = "Gamepad";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::Headset>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.Headset";
-        static constexpr const char* module_name = "winrt.windows.gaming.input";
-        static constexpr const char* type_name = "Headset";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::RacingWheel>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.RacingWheel";
-        static constexpr const char* module_name = "winrt.windows.gaming.input";
-        static constexpr const char* type_name = "RacingWheel";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::RawGameController>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.RawGameController";
-        static constexpr const char* module_name = "winrt.windows.gaming.input";
-        static constexpr const char* type_name = "RawGameController";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::UINavigationController>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.UINavigationController";
-        static constexpr const char* module_name = "winrt.windows.gaming.input";
-        static constexpr const char* type_name = "UINavigationController";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::IGameController>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input._IGameController";
-        static constexpr const char* module_name = "winrt.windows.gaming.input";
-        static constexpr const char* type_name = "_IGameController";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::IGameControllerBatteryInfo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input._IGameControllerBatteryInfo";
-        static constexpr const char* module_name = "winrt.windows.gaming.input";
-        static constexpr const char* type_name = "_IGameControllerBatteryInfo";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::ArcadeStickReading>
-    {
-        static constexpr std::string_view from_tuple = "winrt._winrt_windows_gaming_input.ArcadeStickReading_from_tuple";
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.ArcadeStickReading";
-        static constexpr const char* module_name = "winrt.windows.gaming.input";
-        static constexpr const char* type_name = "ArcadeStickReading";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::FlightStickReading>
-    {
-        static constexpr std::string_view from_tuple = "winrt._winrt_windows_gaming_input.FlightStickReading_from_tuple";
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.FlightStickReading";
-        static constexpr const char* module_name = "winrt.windows.gaming.input";
-        static constexpr const char* type_name = "FlightStickReading";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::GamepadReading>
-    {
-        static constexpr std::string_view from_tuple = "winrt._winrt_windows_gaming_input.GamepadReading_from_tuple";
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.GamepadReading";
-        static constexpr const char* module_name = "winrt.windows.gaming.input";
-        static constexpr const char* type_name = "GamepadReading";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::GamepadVibration>
-    {
-        static constexpr std::string_view from_tuple = "winrt._winrt_windows_gaming_input.GamepadVibration_from_tuple";
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.GamepadVibration";
-        static constexpr const char* module_name = "winrt.windows.gaming.input";
-        static constexpr const char* type_name = "GamepadVibration";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::RacingWheelReading>
-    {
-        static constexpr std::string_view from_tuple = "winrt._winrt_windows_gaming_input.RacingWheelReading_from_tuple";
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.RacingWheelReading";
-        static constexpr const char* module_name = "winrt.windows.gaming.input";
-        static constexpr const char* type_name = "RacingWheelReading";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::UINavigationReading>
-    {
-        static constexpr std::string_view from_tuple = "winrt._winrt_windows_gaming_input.UINavigationReading_from_tuple";
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.UINavigationReading";
-        static constexpr const char* module_name = "winrt.windows.gaming.input";
-        static constexpr const char* type_name = "UINavigationReading";
-    };
-}
-
-#if __has_include("py.Windows.Devices.Haptics.h")
-#include "py.Windows.Devices.Haptics.h"
+#if __has_include("py.Windows.Devices.Haptics.types.h")
+#include "py.Windows.Devices.Haptics.types.h"
 #endif
 
-#if __has_include("py.Windows.Devices.Power.h")
-#include "py.Windows.Devices.Power.h"
+#if __has_include("py.Windows.Devices.Power.types.h")
+#include "py.Windows.Devices.Power.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")
@@ -280,12 +27,12 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Gaming.Input.ForceFeedback.h")
-#include "py.Windows.Gaming.Input.ForceFeedback.h"
+#if __has_include("py.Windows.Gaming.Input.ForceFeedback.types.h")
+#include "py.Windows.Gaming.Input.ForceFeedback.types.h"
 #endif
 
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
+#if __has_include("py.Windows.System.types.h")
+#include "py.Windows.System.types.h"
 #endif
 
 namespace py::impl::Windows::Gaming::Input

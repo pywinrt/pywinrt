@@ -5,128 +5,34 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.UI.h>
-#include <winrt/Windows.UI.Composition.h>
-#include <winrt/Windows.UI.Core.h>
 #include <winrt/Microsoft.UI.h>
-#include <winrt/Microsoft.UI.Composition.h>
 
 #include <winrt/Microsoft.UI.Composition.SystemBackdrops.h>
+#include "py.Microsoft.UI.Composition.SystemBackdrops.types.h"
 
-namespace py::proj::Microsoft::UI::Composition::SystemBackdrops
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicKind> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Composition::SystemBackdrops::MicaKind> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Composition::SystemBackdrops::SystemBackdropState> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Composition::SystemBackdrops::SystemBackdropTheme> = "i";
-
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicKind>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.systembackdrops.DesktopAcrylicKind";
-        static constexpr const char* module_name = "winui3.microsoft.ui.composition.systembackdrops";
-        static constexpr const char* type_name = "DesktopAcrylicKind";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Composition::SystemBackdrops::MicaKind>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.systembackdrops.MicaKind";
-        static constexpr const char* module_name = "winui3.microsoft.ui.composition.systembackdrops";
-        static constexpr const char* type_name = "MicaKind";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Composition::SystemBackdrops::SystemBackdropState>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.systembackdrops.SystemBackdropState";
-        static constexpr const char* module_name = "winui3.microsoft.ui.composition.systembackdrops";
-        static constexpr const char* type_name = "SystemBackdropState";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Composition::SystemBackdrops::SystemBackdropTheme>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.systembackdrops.SystemBackdropTheme";
-        static constexpr const char* module_name = "winui3.microsoft.ui.composition.systembackdrops";
-        static constexpr const char* type_name = "SystemBackdropTheme";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.systembackdrops.DesktopAcrylicController";
-        static constexpr const char* module_name = "winui3.microsoft.ui.composition.systembackdrops";
-        static constexpr const char* type_name = "DesktopAcrylicController";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Composition::SystemBackdrops::MicaController>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.systembackdrops.MicaController";
-        static constexpr const char* module_name = "winui3.microsoft.ui.composition.systembackdrops";
-        static constexpr const char* type_name = "MicaController";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Composition::SystemBackdrops::SystemBackdropConfiguration>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.systembackdrops.SystemBackdropConfiguration";
-        static constexpr const char* module_name = "winui3.microsoft.ui.composition.systembackdrops";
-        static constexpr const char* type_name = "SystemBackdropConfiguration";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropController>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.systembackdrops._ISystemBackdropController";
-        static constexpr const char* module_name = "winui3.microsoft.ui.composition.systembackdrops";
-        static constexpr const char* type_name = "_ISystemBackdropController";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropControllerWithTargets>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.systembackdrops._ISystemBackdropControllerWithTargets";
-        static constexpr const char* module_name = "winui3.microsoft.ui.composition.systembackdrops";
-        static constexpr const char* type_name = "_ISystemBackdropControllerWithTargets";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
 #endif
 
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
+#if __has_include("py.Windows.UI.types.h")
+#include "py.Windows.UI.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.Composition.h")
-#include "py.Windows.UI.Composition.h"
+#if __has_include("py.Windows.UI.Composition.types.h")
+#include "py.Windows.UI.Composition.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.Core.h")
-#include "py.Windows.UI.Core.h"
+#if __has_include("py.Windows.UI.Core.types.h")
+#include "py.Windows.UI.Core.types.h"
 #endif
 
 #if __has_include("py.Microsoft.UI.h")
 #include "py.Microsoft.UI.h"
 #endif
 
-#if __has_include("py.Microsoft.UI.Composition.h")
-#include "py.Microsoft.UI.Composition.h"
+#if __has_include("py.Microsoft.UI.Composition.types.h")
+#include "py.Microsoft.UI.Composition.types.h"
 #endif
 
 namespace py::impl::Microsoft::UI::Composition::SystemBackdrops

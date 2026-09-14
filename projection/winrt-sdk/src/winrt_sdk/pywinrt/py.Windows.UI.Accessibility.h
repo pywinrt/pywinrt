@@ -7,30 +7,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Foundation.h>
 
 #include <winrt/Windows.UI.Accessibility.h>
+#include "py.Windows.UI.Accessibility.types.h"
 
-namespace py::proj::Windows::UI::Accessibility
-{
-}
-
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::UI::Accessibility::ScreenReaderPositionChangedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.accessibility.ScreenReaderPositionChangedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.accessibility";
-        static constexpr const char* type_name = "ScreenReaderPositionChangedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Accessibility::ScreenReaderService>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.accessibility.ScreenReaderService";
-        static constexpr const char* module_name = "winrt.windows.ui.accessibility";
-        static constexpr const char* type_name = "ScreenReaderService";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"

@@ -8,49 +8,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.ApplicationModel.Resources.Management.h>
+#include "py.Windows.ApplicationModel.Resources.Management.types.h"
 
-namespace py::proj::Windows::ApplicationModel::Resources::Management
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::Resources::Management::IndexedResourceType> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Resources::Management::IndexedResourceType>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.resources.management.IndexedResourceType";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.management";
-        static constexpr const char* type_name = "IndexedResourceType";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Resources::Management::IndexedResourceCandidate>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.resources.management.IndexedResourceCandidate";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.management";
-        static constexpr const char* type_name = "IndexedResourceCandidate";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Resources::Management::IndexedResourceQualifier>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.resources.management.IndexedResourceQualifier";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.management";
-        static constexpr const char* type_name = "IndexedResourceQualifier";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Resources::Management::ResourceIndexer>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.resources.management.ResourceIndexer";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.management";
-        static constexpr const char* type_name = "ResourceIndexer";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"

@@ -4,47 +4,13 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Storage.h>
 
 #include <winrt/Windows.Devices.Portable.h>
-
-namespace py::proj::Windows::Devices::Portable
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::Portable::ServiceDeviceType> = "i";
+#include "py.Windows.Devices.Portable.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::Devices::Portable::ServiceDeviceType>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.portable.ServiceDeviceType";
-        static constexpr const char* module_name = "winrt.windows.devices.portable";
-        static constexpr const char* type_name = "ServiceDeviceType";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Portable::ServiceDevice>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.portable.ServiceDevice";
-        static constexpr const char* module_name = "winrt.windows.devices.portable";
-        static constexpr const char* type_name = "ServiceDevice";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Portable::StorageDevice>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.portable.StorageDevice";
-        static constexpr const char* module_name = "winrt.windows.devices.portable";
-        static constexpr const char* type_name = "StorageDevice";
-    };
-}
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
+#if __has_include("py.Windows.Storage.types.h")
+#include "py.Windows.Storage.types.h"
 #endif
 
 namespace py::impl::Windows::Devices::Portable

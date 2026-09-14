@@ -6,117 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Storage.Streams.h>
-#include <winrt/Windows.System.h>
 
 #include <winrt/Windows.Gaming.XboxLive.Storage.h>
+#include "py.Windows.Gaming.XboxLive.Storage.types.h"
 
-namespace py::proj::Windows::Gaming::XboxLive::Storage
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Gaming::XboxLive::Storage::GameSaveErrorStatus> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveErrorStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.xboxlive.storage.GameSaveErrorStatus";
-        static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
-        static constexpr const char* type_name = "GameSaveErrorStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobGetResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.xboxlive.storage.GameSaveBlobGetResult";
-        static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
-        static constexpr const char* type_name = "GameSaveBlobGetResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.xboxlive.storage.GameSaveBlobInfo";
-        static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
-        static constexpr const char* type_name = "GameSaveBlobInfo";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfoGetResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.xboxlive.storage.GameSaveBlobInfoGetResult";
-        static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
-        static constexpr const char* type_name = "GameSaveBlobInfoGetResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfoQuery>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.xboxlive.storage.GameSaveBlobInfoQuery";
-        static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
-        static constexpr const char* type_name = "GameSaveBlobInfoQuery";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainer>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.xboxlive.storage.GameSaveContainer";
-        static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
-        static constexpr const char* type_name = "GameSaveContainer";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.xboxlive.storage.GameSaveContainerInfo";
-        static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
-        static constexpr const char* type_name = "GameSaveContainerInfo";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfoGetResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.xboxlive.storage.GameSaveContainerInfoGetResult";
-        static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
-        static constexpr const char* type_name = "GameSaveContainerInfoGetResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfoQuery>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.xboxlive.storage.GameSaveContainerInfoQuery";
-        static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
-        static constexpr const char* type_name = "GameSaveContainerInfoQuery";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveOperationResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.xboxlive.storage.GameSaveOperationResult";
-        static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
-        static constexpr const char* type_name = "GameSaveOperationResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveProvider>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.xboxlive.storage.GameSaveProvider";
-        static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
-        static constexpr const char* type_name = "GameSaveProvider";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveProviderGetResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.xboxlive.storage.GameSaveProviderGetResult";
-        static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
-        static constexpr const char* type_name = "GameSaveProviderGetResult";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -126,12 +19,12 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
+#if __has_include("py.Windows.System.types.h")
+#include "py.Windows.System.types.h"
 #endif
 
 namespace py::impl::Windows::Gaming::XboxLive::Storage

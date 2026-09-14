@@ -6,119 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Networking.h>
-#include <winrt/Windows.Networking.Sockets.h>
-#include <winrt/Windows.Storage.Streams.h>
 
 #include <winrt/Windows.Networking.Proximity.h>
+#include "py.Windows.Networking.Proximity.types.h"
 
-namespace py::proj::Windows::Networking::Proximity
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Networking::Proximity::PeerDiscoveryTypes> = "I";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Networking::Proximity::PeerRole> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Networking::Proximity::PeerWatcherStatus> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Networking::Proximity::TriggeredConnectState> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Networking::Proximity::PeerDiscoveryTypes>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.proximity.PeerDiscoveryTypes";
-        static constexpr const char* module_name = "winrt.windows.networking.proximity";
-        static constexpr const char* type_name = "PeerDiscoveryTypes";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Networking::Proximity::PeerRole>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.proximity.PeerRole";
-        static constexpr const char* module_name = "winrt.windows.networking.proximity";
-        static constexpr const char* type_name = "PeerRole";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Networking::Proximity::PeerWatcherStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.proximity.PeerWatcherStatus";
-        static constexpr const char* module_name = "winrt.windows.networking.proximity";
-        static constexpr const char* type_name = "PeerWatcherStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Networking::Proximity::TriggeredConnectState>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.proximity.TriggeredConnectState";
-        static constexpr const char* module_name = "winrt.windows.networking.proximity";
-        static constexpr const char* type_name = "TriggeredConnectState";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Networking::Proximity::ConnectionRequestedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.proximity.ConnectionRequestedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.networking.proximity";
-        static constexpr const char* type_name = "ConnectionRequestedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Networking::Proximity::PeerFinder>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.proximity.PeerFinder";
-        static constexpr const char* module_name = "winrt.windows.networking.proximity";
-        static constexpr const char* type_name = "PeerFinder";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Networking::Proximity::PeerInformation>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.proximity.PeerInformation";
-        static constexpr const char* module_name = "winrt.windows.networking.proximity";
-        static constexpr const char* type_name = "PeerInformation";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Networking::Proximity::PeerWatcher>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.proximity.PeerWatcher";
-        static constexpr const char* module_name = "winrt.windows.networking.proximity";
-        static constexpr const char* type_name = "PeerWatcher";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Networking::Proximity::ProximityDevice>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.proximity.ProximityDevice";
-        static constexpr const char* module_name = "winrt.windows.networking.proximity";
-        static constexpr const char* type_name = "ProximityDevice";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Networking::Proximity::ProximityMessage>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.proximity.ProximityMessage";
-        static constexpr const char* module_name = "winrt.windows.networking.proximity";
-        static constexpr const char* type_name = "ProximityMessage";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Networking::Proximity::TriggeredConnectionStateChangedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.proximity.TriggeredConnectionStateChangedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.networking.proximity";
-        static constexpr const char* type_name = "TriggeredConnectionStateChangedEventArgs";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -128,16 +19,16 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Networking.h")
-#include "py.Windows.Networking.h"
+#if __has_include("py.Windows.Networking.types.h")
+#include "py.Windows.Networking.types.h"
 #endif
 
-#if __has_include("py.Windows.Networking.Sockets.h")
-#include "py.Windows.Networking.Sockets.h"
+#if __has_include("py.Windows.Networking.Sockets.types.h")
+#include "py.Windows.Networking.Sockets.types.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
 namespace py::impl::Windows::Networking::Proximity

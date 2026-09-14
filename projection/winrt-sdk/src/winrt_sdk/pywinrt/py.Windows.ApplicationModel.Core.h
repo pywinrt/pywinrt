@@ -4,120 +4,19 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.ApplicationModel.h>
-#include <winrt/Windows.ApplicationModel.Activation.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.System.h>
-#include <winrt/Windows.UI.Core.h>
 
 #include <winrt/Windows.ApplicationModel.Core.h>
-
-namespace py::proj::Windows::ApplicationModel::Core
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::Core::AppRestartFailureReason> = "i";
+#include "py.Windows.ApplicationModel.Core.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Core::AppRestartFailureReason>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.core.AppRestartFailureReason";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.core";
-        static constexpr const char* type_name = "AppRestartFailureReason";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Core::AppListEntry>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.core.AppListEntry";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.core";
-        static constexpr const char* type_name = "AppListEntry";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Core::CoreApplication>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.core.CoreApplication";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.core";
-        static constexpr const char* type_name = "CoreApplication";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Core::CoreApplicationView>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.core.CoreApplicationView";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.core";
-        static constexpr const char* type_name = "CoreApplicationView";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Core::CoreApplicationViewTitleBar>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.core.CoreApplicationViewTitleBar";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.core";
-        static constexpr const char* type_name = "CoreApplicationViewTitleBar";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Core::HostedViewClosingEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.core.HostedViewClosingEventArgs";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.core";
-        static constexpr const char* type_name = "HostedViewClosingEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Core::UnhandledError>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.core.UnhandledError";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.core";
-        static constexpr const char* type_name = "UnhandledError";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Core::UnhandledErrorDetectedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.core.UnhandledErrorDetectedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.core";
-        static constexpr const char* type_name = "UnhandledErrorDetectedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Core::ICoreApplicationUnhandledError>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.core._ICoreApplicationUnhandledError";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.core";
-        static constexpr const char* type_name = "_ICoreApplicationUnhandledError";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Core::IFrameworkView>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.core._IFrameworkView";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.core";
-        static constexpr const char* type_name = "_IFrameworkView";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Core::IFrameworkViewSource>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.core._IFrameworkViewSource";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.core";
-        static constexpr const char* type_name = "_IFrameworkViewSource";
-    };
-}
-
-#if __has_include("py.Windows.ApplicationModel.h")
-#include "py.Windows.ApplicationModel.h"
+#if __has_include("py.Windows.ApplicationModel.types.h")
+#include "py.Windows.ApplicationModel.types.h"
 #endif
 
-#if __has_include("py.Windows.ApplicationModel.Activation.h")
-#include "py.Windows.ApplicationModel.Activation.h"
+#if __has_include("py.Windows.ApplicationModel.Activation.types.h")
+#include "py.Windows.ApplicationModel.Activation.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")
@@ -128,12 +27,12 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
+#if __has_include("py.Windows.System.types.h")
+#include "py.Windows.System.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.Core.h")
-#include "py.Windows.UI.Core.h"
+#if __has_include("py.Windows.UI.Core.types.h")
+#include "py.Windows.UI.Core.types.h"
 #endif
 
 namespace py::impl::Windows::ApplicationModel::Core

@@ -4,83 +4,14 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.ApplicationModel.UserDataAccounts.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.ApplicationModel.UserDataAccounts.Provider.h>
-
-namespace py::proj::Windows::ApplicationModel::UserDataAccounts::Provider
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderOperationKind> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderPartnerAccountKind> = "i";
+#include "py.Windows.ApplicationModel.UserDataAccounts.Provider.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderOperationKind>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdataaccounts.provider.UserDataAccountProviderOperationKind";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts.provider";
-        static constexpr const char* type_name = "UserDataAccountProviderOperationKind";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderPartnerAccountKind>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdataaccounts.provider.UserDataAccountProviderPartnerAccountKind";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts.provider";
-        static constexpr const char* type_name = "UserDataAccountProviderPartnerAccountKind";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountPartnerAccountInfo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdataaccounts.provider.UserDataAccountPartnerAccountInfo";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts.provider";
-        static constexpr const char* type_name = "UserDataAccountPartnerAccountInfo";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderAddAccountOperation>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdataaccounts.provider.UserDataAccountProviderAddAccountOperation";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts.provider";
-        static constexpr const char* type_name = "UserDataAccountProviderAddAccountOperation";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderResolveErrorsOperation>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdataaccounts.provider.UserDataAccountProviderResolveErrorsOperation";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts.provider";
-        static constexpr const char* type_name = "UserDataAccountProviderResolveErrorsOperation";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderSettingsOperation>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdataaccounts.provider.UserDataAccountProviderSettingsOperation";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts.provider";
-        static constexpr const char* type_name = "UserDataAccountProviderSettingsOperation";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderOperation>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdataaccounts.provider._IUserDataAccountProviderOperation";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts.provider";
-        static constexpr const char* type_name = "_IUserDataAccountProviderOperation";
-    };
-}
-
-#if __has_include("py.Windows.ApplicationModel.UserDataAccounts.h")
-#include "py.Windows.ApplicationModel.UserDataAccounts.h"
+#if __has_include("py.Windows.ApplicationModel.UserDataAccounts.types.h")
+#include "py.Windows.ApplicationModel.UserDataAccounts.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.Collections.h")

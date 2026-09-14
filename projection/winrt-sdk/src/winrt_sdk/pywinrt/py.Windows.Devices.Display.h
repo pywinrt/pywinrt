@@ -5,76 +5,17 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.Graphics.h>
 
 #include <winrt/Windows.Devices.Display.h>
+#include "py.Windows.Devices.Display.types.h"
 
-namespace py::proj::Windows::Devices::Display
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::Display::DisplayMonitorConnectionKind> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::Display::DisplayMonitorDescriptorKind> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::Display::DisplayMonitorPhysicalConnectorKind> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::Display::DisplayMonitorUsageKind> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Display::DisplayMonitorConnectionKind>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.DisplayMonitorConnectionKind";
-        static constexpr const char* module_name = "winrt.windows.devices.display";
-        static constexpr const char* type_name = "DisplayMonitorConnectionKind";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Display::DisplayMonitorDescriptorKind>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.DisplayMonitorDescriptorKind";
-        static constexpr const char* module_name = "winrt.windows.devices.display";
-        static constexpr const char* type_name = "DisplayMonitorDescriptorKind";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Display::DisplayMonitorPhysicalConnectorKind>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.DisplayMonitorPhysicalConnectorKind";
-        static constexpr const char* module_name = "winrt.windows.devices.display";
-        static constexpr const char* type_name = "DisplayMonitorPhysicalConnectorKind";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Display::DisplayMonitorUsageKind>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.DisplayMonitorUsageKind";
-        static constexpr const char* module_name = "winrt.windows.devices.display";
-        static constexpr const char* type_name = "DisplayMonitorUsageKind";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Display::DisplayMonitor>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.DisplayMonitor";
-        static constexpr const char* module_name = "winrt.windows.devices.display";
-        static constexpr const char* type_name = "DisplayMonitor";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
 #endif
 
-#if __has_include("py.Windows.Graphics.h")
-#include "py.Windows.Graphics.h"
+#if __has_include("py.Windows.Graphics.types.h")
+#include "py.Windows.Graphics.types.h"
 #endif
 
 namespace py::impl::Windows::Devices::Display

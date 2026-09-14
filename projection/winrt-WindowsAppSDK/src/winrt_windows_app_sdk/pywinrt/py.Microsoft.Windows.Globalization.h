@@ -7,22 +7,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Microsoft.Windows.Globalization.h>
+#include "py.Microsoft.Windows.Globalization.types.h"
 
-namespace py::proj::Microsoft::Windows::Globalization
-{
-}
-
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::Globalization::ApplicationLanguages>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.globalization.ApplicationLanguages";
-        static constexpr const char* module_name = "winui3.microsoft.windows.globalization";
-        static constexpr const char* type_name = "ApplicationLanguages";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.Collections.h")
 #include "py.Windows.Foundation.Collections.h"

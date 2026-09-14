@@ -4,82 +4,14 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Graphics.DirectX.h>
+#include <winrt/Windows.Foundation.h>
 
 #include <winrt/Windows.Graphics.DirectX.Direct3D11.h>
-
-namespace py::proj::Windows::Graphics::DirectX::Direct3D11
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DBindings> = "I";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DUsage> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription> = "T{i:count:i:quality:}";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription> = "T{i:width:i:height:i:format:T{i:count:i:quality:}:multisample_description:}";
+#include "py.Windows.Graphics.DirectX.Direct3D11.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DBindings>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.directx.direct3d11.Direct3DBindings";
-        static constexpr const char* module_name = "winrt.windows.graphics.directx.direct3d11";
-        static constexpr const char* type_name = "Direct3DBindings";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DUsage>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.directx.direct3d11.Direct3DUsage";
-        static constexpr const char* module_name = "winrt.windows.graphics.directx.direct3d11";
-        static constexpr const char* type_name = "Direct3DUsage";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.directx.direct3d11._IDirect3DDevice";
-        static constexpr const char* module_name = "winrt.windows.graphics.directx.direct3d11";
-        static constexpr const char* type_name = "_IDirect3DDevice";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.directx.direct3d11._IDirect3DSurface";
-        static constexpr const char* module_name = "winrt.windows.graphics.directx.direct3d11";
-        static constexpr const char* type_name = "_IDirect3DSurface";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription>
-    {
-        static constexpr std::string_view from_tuple = "winrt._winrt_windows_graphics_directx_direct3d11.Direct3DMultisampleDescription_from_tuple";
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.directx.direct3d11.Direct3DMultisampleDescription";
-        static constexpr const char* module_name = "winrt.windows.graphics.directx.direct3d11";
-        static constexpr const char* type_name = "Direct3DMultisampleDescription";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription>
-    {
-        static constexpr std::string_view from_tuple = "winrt._winrt_windows_graphics_directx_direct3d11.Direct3DSurfaceDescription_from_tuple";
-        static constexpr std::string_view qualified_name = "winrt.windows.graphics.directx.direct3d11.Direct3DSurfaceDescription";
-        static constexpr const char* module_name = "winrt.windows.graphics.directx.direct3d11";
-        static constexpr const char* type_name = "Direct3DSurfaceDescription";
-    };
-}
-
-#if __has_include("py.Windows.Graphics.DirectX.h")
-#include "py.Windows.Graphics.DirectX.h"
+#if __has_include("py.Windows.Graphics.DirectX.types.h")
+#include "py.Windows.Graphics.DirectX.types.h"
 #endif
 
 namespace py::impl::Windows::Graphics::DirectX::Direct3D11

@@ -4,127 +4,26 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Graphics.Imaging.h>
-#include <winrt/Windows.Storage.Streams.h>
 
 #include <winrt/Windows.ApplicationModel.SocialInfo.h>
-
-namespace py::proj::Windows::ApplicationModel::SocialInfo
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedItemStyle> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedKind> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedUpdateMode> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::SocialInfo::SocialItemBadgeStyle> = "i";
+#include "py.Windows.ApplicationModel.SocialInfo.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedItemStyle>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.socialinfo.SocialFeedItemStyle";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo";
-        static constexpr const char* type_name = "SocialFeedItemStyle";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedKind>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.socialinfo.SocialFeedKind";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo";
-        static constexpr const char* type_name = "SocialFeedKind";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedUpdateMode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.socialinfo.SocialFeedUpdateMode";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo";
-        static constexpr const char* type_name = "SocialFeedUpdateMode";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialItemBadgeStyle>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.socialinfo.SocialItemBadgeStyle";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo";
-        static constexpr const char* type_name = "SocialItemBadgeStyle";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedChildItem>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.socialinfo.SocialFeedChildItem";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo";
-        static constexpr const char* type_name = "SocialFeedChildItem";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedContent>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.socialinfo.SocialFeedContent";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo";
-        static constexpr const char* type_name = "SocialFeedContent";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedItem>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.socialinfo.SocialFeedItem";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo";
-        static constexpr const char* type_name = "SocialFeedItem";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedSharedItem>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.socialinfo.SocialFeedSharedItem";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo";
-        static constexpr const char* type_name = "SocialFeedSharedItem";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.socialinfo.SocialItemThumbnail";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo";
-        static constexpr const char* type_name = "SocialItemThumbnail";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialUserInfo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.socialinfo.SocialUserInfo";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo";
-        static constexpr const char* type_name = "SocialUserInfo";
-    };
-}
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.Collections.h")
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Graphics.Imaging.h")
-#include "py.Windows.Graphics.Imaging.h"
+#if __has_include("py.Windows.Graphics.Imaging.types.h")
+#include "py.Windows.Graphics.Imaging.types.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
 namespace py::impl::Windows::ApplicationModel::SocialInfo

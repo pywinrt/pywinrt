@@ -4,79 +4,15 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Devices.Geolocation.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.Services.Maps.OfflineMaps.h>
-
-namespace py::proj::Windows::Services::Maps::OfflineMaps
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackageQueryStatus> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackageStartDownloadStatus> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackageStatus> = "i";
+#include "py.Windows.Services.Maps.OfflineMaps.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackageQueryStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.offlinemaps.OfflineMapPackageQueryStatus";
-        static constexpr const char* module_name = "winrt.windows.services.maps.offlinemaps";
-        static constexpr const char* type_name = "OfflineMapPackageQueryStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackageStartDownloadStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.offlinemaps.OfflineMapPackageStartDownloadStatus";
-        static constexpr const char* module_name = "winrt.windows.services.maps.offlinemaps";
-        static constexpr const char* type_name = "OfflineMapPackageStartDownloadStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackageStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.offlinemaps.OfflineMapPackageStatus";
-        static constexpr const char* module_name = "winrt.windows.services.maps.offlinemaps";
-        static constexpr const char* type_name = "OfflineMapPackageStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackage>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.offlinemaps.OfflineMapPackage";
-        static constexpr const char* module_name = "winrt.windows.services.maps.offlinemaps";
-        static constexpr const char* type_name = "OfflineMapPackage";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackageQueryResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.offlinemaps.OfflineMapPackageQueryResult";
-        static constexpr const char* module_name = "winrt.windows.services.maps.offlinemaps";
-        static constexpr const char* type_name = "OfflineMapPackageQueryResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackageStartDownloadResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.offlinemaps.OfflineMapPackageStartDownloadResult";
-        static constexpr const char* module_name = "winrt.windows.services.maps.offlinemaps";
-        static constexpr const char* type_name = "OfflineMapPackageStartDownloadResult";
-    };
-}
-
-#if __has_include("py.Windows.Devices.Geolocation.h")
-#include "py.Windows.Devices.Geolocation.h"
+#if __has_include("py.Windows.Devices.Geolocation.types.h")
+#include "py.Windows.Devices.Geolocation.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")

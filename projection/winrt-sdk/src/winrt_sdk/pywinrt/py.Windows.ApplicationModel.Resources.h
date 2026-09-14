@@ -4,33 +4,17 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.UI.h>
 
 #include <winrt/Windows.ApplicationModel.Resources.h>
+#include "py.Windows.ApplicationModel.Resources.types.h"
 
-namespace py::proj::Windows::ApplicationModel::Resources
-{
-}
 
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Resources::ResourceLoader>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.resources.ResourceLoader";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.resources";
-        static constexpr const char* type_name = "ResourceLoader";
-    };
-}
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
+#if __has_include("py.Windows.UI.types.h")
+#include "py.Windows.UI.types.h"
 #endif
 
 namespace py::impl::Windows::ApplicationModel::Resources

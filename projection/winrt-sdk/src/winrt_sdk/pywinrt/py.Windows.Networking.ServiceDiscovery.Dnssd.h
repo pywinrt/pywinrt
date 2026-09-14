@@ -6,73 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Networking.h>
-#include <winrt/Windows.Networking.Connectivity.h>
-#include <winrt/Windows.Networking.Sockets.h>
 
 #include <winrt/Windows.Networking.ServiceDiscovery.Dnssd.h>
+#include "py.Windows.Networking.ServiceDiscovery.Dnssd.types.h"
 
-namespace py::proj::Windows::Networking::ServiceDiscovery::Dnssd
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationStatus> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcherStatus> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.servicediscovery.dnssd.DnssdRegistrationStatus";
-        static constexpr const char* module_name = "winrt.windows.networking.servicediscovery.dnssd";
-        static constexpr const char* type_name = "DnssdRegistrationStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcherStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.servicediscovery.dnssd.DnssdServiceWatcherStatus";
-        static constexpr const char* module_name = "winrt.windows.networking.servicediscovery.dnssd";
-        static constexpr const char* type_name = "DnssdServiceWatcherStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.servicediscovery.dnssd.DnssdRegistrationResult";
-        static constexpr const char* module_name = "winrt.windows.networking.servicediscovery.dnssd";
-        static constexpr const char* type_name = "DnssdRegistrationResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.servicediscovery.dnssd.DnssdServiceInstance";
-        static constexpr const char* module_name = "winrt.windows.networking.servicediscovery.dnssd";
-        static constexpr const char* type_name = "DnssdServiceInstance";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstanceCollection>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.servicediscovery.dnssd.DnssdServiceInstanceCollection";
-        static constexpr const char* module_name = "winrt.windows.networking.servicediscovery.dnssd";
-        static constexpr const char* type_name = "DnssdServiceInstanceCollection";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.networking.servicediscovery.dnssd.DnssdServiceWatcher";
-        static constexpr const char* module_name = "winrt.windows.networking.servicediscovery.dnssd";
-        static constexpr const char* type_name = "DnssdServiceWatcher";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -82,16 +19,16 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Networking.h")
-#include "py.Windows.Networking.h"
+#if __has_include("py.Windows.Networking.types.h")
+#include "py.Windows.Networking.types.h"
 #endif
 
-#if __has_include("py.Windows.Networking.Connectivity.h")
-#include "py.Windows.Networking.Connectivity.h"
+#if __has_include("py.Windows.Networking.Connectivity.types.h")
+#include "py.Windows.Networking.Connectivity.types.h"
 #endif
 
-#if __has_include("py.Windows.Networking.Sockets.h")
-#include "py.Windows.Networking.Sockets.h"
+#if __has_include("py.Windows.Networking.Sockets.types.h")
+#include "py.Windows.Networking.Sockets.types.h"
 #endif
 
 namespace py::impl::Windows::Networking::ServiceDiscovery::Dnssd

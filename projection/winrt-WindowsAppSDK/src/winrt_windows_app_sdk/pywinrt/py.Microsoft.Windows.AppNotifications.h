@@ -8,79 +8,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Microsoft.Windows.AppNotifications.h>
+#include "py.Microsoft.Windows.AppNotifications.types.h"
 
-namespace py::proj::Microsoft::Windows::AppNotifications
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::Windows::AppNotifications::AppNotificationPriority> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::Windows::AppNotifications::AppNotificationProgressResult> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::Windows::AppNotifications::AppNotificationSetting> = "i";
-
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::AppNotifications::AppNotificationPriority>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.appnotifications.AppNotificationPriority";
-        static constexpr const char* module_name = "winui3.microsoft.windows.appnotifications";
-        static constexpr const char* type_name = "AppNotificationPriority";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::AppNotifications::AppNotificationProgressResult>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.appnotifications.AppNotificationProgressResult";
-        static constexpr const char* module_name = "winui3.microsoft.windows.appnotifications";
-        static constexpr const char* type_name = "AppNotificationProgressResult";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::AppNotifications::AppNotificationSetting>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.appnotifications.AppNotificationSetting";
-        static constexpr const char* module_name = "winui3.microsoft.windows.appnotifications";
-        static constexpr const char* type_name = "AppNotificationSetting";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::AppNotifications::AppNotification>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.appnotifications.AppNotification";
-        static constexpr const char* module_name = "winui3.microsoft.windows.appnotifications";
-        static constexpr const char* type_name = "AppNotification";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::AppNotifications::AppNotificationActivatedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.appnotifications.AppNotificationActivatedEventArgs";
-        static constexpr const char* module_name = "winui3.microsoft.windows.appnotifications";
-        static constexpr const char* type_name = "AppNotificationActivatedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::AppNotifications::AppNotificationManager>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.appnotifications.AppNotificationManager";
-        static constexpr const char* module_name = "winui3.microsoft.windows.appnotifications";
-        static constexpr const char* type_name = "AppNotificationManager";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::AppNotifications::AppNotificationProgressData>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.appnotifications.AppNotificationProgressData";
-        static constexpr const char* module_name = "winui3.microsoft.windows.appnotifications";
-        static constexpr const char* type_name = "AppNotificationProgressData";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"

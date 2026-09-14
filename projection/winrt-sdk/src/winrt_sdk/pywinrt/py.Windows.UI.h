@@ -6,70 +6,8 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
 #include <winrt/Windows.UI.h>
+#include "py.Windows.UI.types.h"
 
-namespace py::proj::Windows::UI
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::UI::Color> = "T{B:a:B:r:B:g:B:b:}";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::UI::WindowId> = "T{Q:value:}";
-
-
-    template<>
-    struct py_type<winrt::Windows::UI::ColorHelper>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.ColorHelper";
-        static constexpr const char* module_name = "winrt.windows.ui";
-        static constexpr const char* type_name = "ColorHelper";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Colors>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.Colors";
-        static constexpr const char* module_name = "winrt.windows.ui";
-        static constexpr const char* type_name = "Colors";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::UIContentRoot>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.UIContentRoot";
-        static constexpr const char* module_name = "winrt.windows.ui";
-        static constexpr const char* type_name = "UIContentRoot";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::UIContext>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.UIContext";
-        static constexpr const char* module_name = "winrt.windows.ui";
-        static constexpr const char* type_name = "UIContext";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Color>
-    {
-        static constexpr std::string_view from_tuple = "winrt._winrt_windows_ui.Color_from_tuple";
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.Color";
-        static constexpr const char* module_name = "winrt.windows.ui";
-        static constexpr const char* type_name = "Color";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WindowId>
-    {
-        static constexpr std::string_view from_tuple = "winrt._winrt_windows_ui.WindowId_from_tuple";
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.WindowId";
-        static constexpr const char* module_name = "winrt.windows.ui";
-        static constexpr const char* type_name = "WindowId";
-    };
-}
 
 namespace py::impl::Windows::UI
 {

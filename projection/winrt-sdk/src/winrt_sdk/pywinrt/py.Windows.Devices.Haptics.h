@@ -8,57 +8,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.Devices.Haptics.h>
+#include "py.Windows.Devices.Haptics.types.h"
 
-namespace py::proj::Windows::Devices::Haptics
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::Haptics::VibrationAccessStatus> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Haptics::VibrationAccessStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.haptics.VibrationAccessStatus";
-        static constexpr const char* module_name = "winrt.windows.devices.haptics";
-        static constexpr const char* type_name = "VibrationAccessStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.haptics.KnownSimpleHapticsControllerWaveforms";
-        static constexpr const char* module_name = "winrt.windows.devices.haptics";
-        static constexpr const char* type_name = "KnownSimpleHapticsControllerWaveforms";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Haptics::SimpleHapticsController>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.haptics.SimpleHapticsController";
-        static constexpr const char* module_name = "winrt.windows.devices.haptics";
-        static constexpr const char* type_name = "SimpleHapticsController";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Haptics::SimpleHapticsControllerFeedback>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.haptics.SimpleHapticsControllerFeedback";
-        static constexpr const char* module_name = "winrt.windows.devices.haptics";
-        static constexpr const char* type_name = "SimpleHapticsControllerFeedback";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Haptics::VibrationDevice>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.haptics.VibrationDevice";
-        static constexpr const char* module_name = "winrt.windows.devices.haptics";
-        static constexpr const char* type_name = "VibrationDevice";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"

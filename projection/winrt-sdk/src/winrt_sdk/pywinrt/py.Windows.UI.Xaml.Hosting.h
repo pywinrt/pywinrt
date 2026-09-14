@@ -5,178 +5,33 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.UI.Composition.h>
-#include <winrt/Windows.UI.WindowManagement.h>
-#include <winrt/Windows.UI.Xaml.h>
-#include <winrt/Windows.UI.Xaml.Controls.h>
-#include <winrt/Windows.UI.Xaml.Controls.Primitives.h>
 
 #include <winrt/Windows.UI.Xaml.Hosting.h>
+#include "py.Windows.UI.Xaml.Hosting.types.h"
 
-namespace py::proj::Windows::UI::Xaml::Hosting
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::UI::Xaml::Hosting::DesignerAppViewState> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationReason> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::UI::Xaml::Hosting::DesignerAppViewState>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.hosting.DesignerAppViewState";
-        static constexpr const char* module_name = "winrt.windows.ui.xaml.hosting";
-        static constexpr const char* type_name = "DesignerAppViewState";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationReason>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.hosting.XamlSourceFocusNavigationReason";
-        static constexpr const char* module_name = "winrt.windows.ui.xaml.hosting";
-        static constexpr const char* type_name = "XamlSourceFocusNavigationReason";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Xaml::Hosting::DesignerAppExitedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.hosting.DesignerAppExitedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.xaml.hosting";
-        static constexpr const char* type_name = "DesignerAppExitedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Xaml::Hosting::DesignerAppManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.hosting.DesignerAppManager";
-        static constexpr const char* module_name = "winrt.windows.ui.xaml.hosting";
-        static constexpr const char* type_name = "DesignerAppManager";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Xaml::Hosting::DesignerAppView>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.hosting.DesignerAppView";
-        static constexpr const char* module_name = "winrt.windows.ui.xaml.hosting";
-        static constexpr const char* type_name = "DesignerAppView";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.hosting.DesktopWindowXamlSource";
-        static constexpr const char* module_name = "winrt.windows.ui.xaml.hosting";
-        static constexpr const char* type_name = "DesktopWindowXamlSource";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceGotFocusEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.hosting.DesktopWindowXamlSourceGotFocusEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.xaml.hosting";
-        static constexpr const char* type_name = "DesktopWindowXamlSourceGotFocusEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceTakeFocusRequestedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.hosting.DesktopWindowXamlSourceTakeFocusRequestedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.xaml.hosting";
-        static constexpr const char* type_name = "DesktopWindowXamlSourceTakeFocusRequestedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Xaml::Hosting::ElementCompositionPreview>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.hosting.ElementCompositionPreview";
-        static constexpr const char* module_name = "winrt.windows.ui.xaml.hosting";
-        static constexpr const char* type_name = "ElementCompositionPreview";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Xaml::Hosting::WindowsXamlManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.hosting.WindowsXamlManager";
-        static constexpr const char* module_name = "winrt.windows.ui.xaml.hosting";
-        static constexpr const char* type_name = "WindowsXamlManager";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationRequest>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.hosting.XamlSourceFocusNavigationRequest";
-        static constexpr const char* module_name = "winrt.windows.ui.xaml.hosting";
-        static constexpr const char* type_name = "XamlSourceFocusNavigationRequest";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.hosting.XamlSourceFocusNavigationResult";
-        static constexpr const char* module_name = "winrt.windows.ui.xaml.hosting";
-        static constexpr const char* type_name = "XamlSourceFocusNavigationResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Xaml::Hosting::XamlUIPresenter>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.hosting.XamlUIPresenter";
-        static constexpr const char* module_name = "winrt.windows.ui.xaml.hosting";
-        static constexpr const char* type_name = "XamlUIPresenter";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.hosting._IXamlUIPresenterHost";
-        static constexpr const char* module_name = "winrt.windows.ui.xaml.hosting";
-        static constexpr const char* type_name = "_IXamlUIPresenterHost";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost2>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.hosting._IXamlUIPresenterHost2";
-        static constexpr const char* module_name = "winrt.windows.ui.xaml.hosting";
-        static constexpr const char* type_name = "_IXamlUIPresenterHost2";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost3>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.hosting._IXamlUIPresenterHost3";
-        static constexpr const char* module_name = "winrt.windows.ui.xaml.hosting";
-        static constexpr const char* type_name = "_IXamlUIPresenterHost3";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
 #endif
 
-#if __has_include("py.Windows.UI.Composition.h")
-#include "py.Windows.UI.Composition.h"
+#if __has_include("py.Windows.UI.Composition.types.h")
+#include "py.Windows.UI.Composition.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.WindowManagement.h")
-#include "py.Windows.UI.WindowManagement.h"
+#if __has_include("py.Windows.UI.WindowManagement.types.h")
+#include "py.Windows.UI.WindowManagement.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.Xaml.h")
-#include "py.Windows.UI.Xaml.h"
+#if __has_include("py.Windows.UI.Xaml.types.h")
+#include "py.Windows.UI.Xaml.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.Xaml.Controls.h")
-#include "py.Windows.UI.Xaml.Controls.h"
+#if __has_include("py.Windows.UI.Xaml.Controls.types.h")
+#include "py.Windows.UI.Xaml.Controls.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.Xaml.Controls.Primitives.h")
-#include "py.Windows.UI.Xaml.Controls.Primitives.h"
+#if __has_include("py.Windows.UI.Xaml.Controls.Primitives.types.h")
+#include "py.Windows.UI.Xaml.Controls.Primitives.types.h"
 #endif
 
 namespace py::impl::Windows::UI::Xaml::Hosting

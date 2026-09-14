@@ -6,120 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Storage.h>
-#include <winrt/Windows.Storage.Streams.h>
 
 #include <winrt/Windows.Devices.HumanInterfaceDevice.h>
+#include "py.Windows.Devices.HumanInterfaceDevice.types.h"
 
-namespace py::proj::Windows::Devices::HumanInterfaceDevice
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::HumanInterfaceDevice::HidCollectionType> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::HumanInterfaceDevice::HidReportType> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidCollectionType>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.humaninterfacedevice.HidCollectionType";
-        static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
-        static constexpr const char* type_name = "HidCollectionType";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidReportType>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.humaninterfacedevice.HidReportType";
-        static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
-        static constexpr const char* type_name = "HidReportType";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControl>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.humaninterfacedevice.HidBooleanControl";
-        static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
-        static constexpr const char* type_name = "HidBooleanControl";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.humaninterfacedevice.HidBooleanControlDescription";
-        static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
-        static constexpr const char* type_name = "HidBooleanControlDescription";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidCollection>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.humaninterfacedevice.HidCollection";
-        static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
-        static constexpr const char* type_name = "HidCollection";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidDevice>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.humaninterfacedevice.HidDevice";
-        static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
-        static constexpr const char* type_name = "HidDevice";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidFeatureReport>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.humaninterfacedevice.HidFeatureReport";
-        static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
-        static constexpr const char* type_name = "HidFeatureReport";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidInputReport>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.humaninterfacedevice.HidInputReport";
-        static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
-        static constexpr const char* type_name = "HidInputReport";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidInputReportReceivedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.humaninterfacedevice.HidInputReportReceivedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
-        static constexpr const char* type_name = "HidInputReportReceivedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControl>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.humaninterfacedevice.HidNumericControl";
-        static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
-        static constexpr const char* type_name = "HidNumericControl";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.humaninterfacedevice.HidNumericControlDescription";
-        static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
-        static constexpr const char* type_name = "HidNumericControlDescription";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidOutputReport>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.humaninterfacedevice.HidOutputReport";
-        static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
-        static constexpr const char* type_name = "HidOutputReport";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -129,12 +19,12 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
+#if __has_include("py.Windows.Storage.types.h")
+#include "py.Windows.Storage.types.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
 namespace py::impl::Windows::Devices::HumanInterfaceDevice

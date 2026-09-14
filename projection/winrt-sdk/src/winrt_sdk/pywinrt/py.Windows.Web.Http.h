@@ -6,240 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Networking.Sockets.h>
-#include <winrt/Windows.Security.Cryptography.Certificates.h>
-#include <winrt/Windows.Storage.Streams.h>
-#include <winrt/Windows.Web.Http.Filters.h>
-#include <winrt/Windows.Web.Http.Headers.h>
 
 #include <winrt/Windows.Web.Http.h>
+#include "py.Windows.Web.Http.types.h"
 
-namespace py::proj::Windows::Web::Http
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Web::Http::HttpCompletionOption> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Web::Http::HttpProgressStage> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Web::Http::HttpResponseMessageSource> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Web::Http::HttpStatusCode> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Web::Http::HttpVersion> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Web::Http::HttpProgress> = "T{i:stage:Q:bytes_sent:P:total_bytes_to_send:Q:bytes_received:P:total_bytes_to_receive:I:retries:}";
-
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::HttpCompletionOption>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpCompletionOption";
-        static constexpr const char* module_name = "winrt.windows.web.http";
-        static constexpr const char* type_name = "HttpCompletionOption";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::HttpProgressStage>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpProgressStage";
-        static constexpr const char* module_name = "winrt.windows.web.http";
-        static constexpr const char* type_name = "HttpProgressStage";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::HttpResponseMessageSource>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpResponseMessageSource";
-        static constexpr const char* module_name = "winrt.windows.web.http";
-        static constexpr const char* type_name = "HttpResponseMessageSource";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::HttpStatusCode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpStatusCode";
-        static constexpr const char* module_name = "winrt.windows.web.http";
-        static constexpr const char* type_name = "HttpStatusCode";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::HttpVersion>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpVersion";
-        static constexpr const char* module_name = "winrt.windows.web.http";
-        static constexpr const char* type_name = "HttpVersion";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::HttpBufferContent>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpBufferContent";
-        static constexpr const char* module_name = "winrt.windows.web.http";
-        static constexpr const char* type_name = "HttpBufferContent";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::HttpClient>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpClient";
-        static constexpr const char* module_name = "winrt.windows.web.http";
-        static constexpr const char* type_name = "HttpClient";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::HttpCookie>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpCookie";
-        static constexpr const char* module_name = "winrt.windows.web.http";
-        static constexpr const char* type_name = "HttpCookie";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::HttpCookieCollection>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpCookieCollection";
-        static constexpr const char* module_name = "winrt.windows.web.http";
-        static constexpr const char* type_name = "HttpCookieCollection";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::HttpCookieManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpCookieManager";
-        static constexpr const char* module_name = "winrt.windows.web.http";
-        static constexpr const char* type_name = "HttpCookieManager";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::HttpFormUrlEncodedContent>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpFormUrlEncodedContent";
-        static constexpr const char* module_name = "winrt.windows.web.http";
-        static constexpr const char* type_name = "HttpFormUrlEncodedContent";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::HttpGetBufferResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpGetBufferResult";
-        static constexpr const char* module_name = "winrt.windows.web.http";
-        static constexpr const char* type_name = "HttpGetBufferResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::HttpGetInputStreamResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpGetInputStreamResult";
-        static constexpr const char* module_name = "winrt.windows.web.http";
-        static constexpr const char* type_name = "HttpGetInputStreamResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::HttpGetStringResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpGetStringResult";
-        static constexpr const char* module_name = "winrt.windows.web.http";
-        static constexpr const char* type_name = "HttpGetStringResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::HttpMethod>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpMethod";
-        static constexpr const char* module_name = "winrt.windows.web.http";
-        static constexpr const char* type_name = "HttpMethod";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::HttpMultipartContent>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpMultipartContent";
-        static constexpr const char* module_name = "winrt.windows.web.http";
-        static constexpr const char* type_name = "HttpMultipartContent";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::HttpMultipartFormDataContent>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpMultipartFormDataContent";
-        static constexpr const char* module_name = "winrt.windows.web.http";
-        static constexpr const char* type_name = "HttpMultipartFormDataContent";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::HttpRequestMessage>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpRequestMessage";
-        static constexpr const char* module_name = "winrt.windows.web.http";
-        static constexpr const char* type_name = "HttpRequestMessage";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::HttpRequestResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpRequestResult";
-        static constexpr const char* module_name = "winrt.windows.web.http";
-        static constexpr const char* type_name = "HttpRequestResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::HttpResponseMessage>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpResponseMessage";
-        static constexpr const char* module_name = "winrt.windows.web.http";
-        static constexpr const char* type_name = "HttpResponseMessage";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::HttpStreamContent>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpStreamContent";
-        static constexpr const char* module_name = "winrt.windows.web.http";
-        static constexpr const char* type_name = "HttpStreamContent";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::HttpStringContent>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpStringContent";
-        static constexpr const char* module_name = "winrt.windows.web.http";
-        static constexpr const char* type_name = "HttpStringContent";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::HttpTransportInformation>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpTransportInformation";
-        static constexpr const char* module_name = "winrt.windows.web.http";
-        static constexpr const char* type_name = "HttpTransportInformation";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::IHttpContent>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http._IHttpContent";
-        static constexpr const char* module_name = "winrt.windows.web.http";
-        static constexpr const char* type_name = "_IHttpContent";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::HttpProgress>
-    {
-        static constexpr std::string_view from_tuple = "winrt._winrt_windows_web_http.HttpProgress_from_tuple";
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpProgress";
-        static constexpr const char* module_name = "winrt.windows.web.http";
-        static constexpr const char* type_name = "HttpProgress";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -249,24 +19,24 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Networking.Sockets.h")
-#include "py.Windows.Networking.Sockets.h"
+#if __has_include("py.Windows.Networking.Sockets.types.h")
+#include "py.Windows.Networking.Sockets.types.h"
 #endif
 
-#if __has_include("py.Windows.Security.Cryptography.Certificates.h")
-#include "py.Windows.Security.Cryptography.Certificates.h"
+#if __has_include("py.Windows.Security.Cryptography.Certificates.types.h")
+#include "py.Windows.Security.Cryptography.Certificates.types.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
-#if __has_include("py.Windows.Web.Http.Filters.h")
-#include "py.Windows.Web.Http.Filters.h"
+#if __has_include("py.Windows.Web.Http.Filters.types.h")
+#include "py.Windows.Web.Http.Filters.types.h"
 #endif
 
-#if __has_include("py.Windows.Web.Http.Headers.h")
-#include "py.Windows.Web.Http.Headers.h"
+#if __has_include("py.Windows.Web.Http.Headers.types.h")
+#include "py.Windows.Web.Http.Headers.types.h"
 #endif
 
 namespace py::impl::Windows::Web::Http

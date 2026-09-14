@@ -6,34 +6,8 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
 #include <winrt/Microsoft.Windows.Security.AccessControl.h>
+#include "py.Microsoft.Windows.Security.AccessControl.types.h"
 
-namespace py::proj::Microsoft::Windows::Security::AccessControl
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::Windows::Security::AccessControl::AppContainerNameAndAccess> = "T{P:app_container_name:I:access_mask:}";
-
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::Security::AccessControl::SecurityDescriptorHelpers>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.security.accesscontrol.SecurityDescriptorHelpers";
-        static constexpr const char* module_name = "winui3.microsoft.windows.security.accesscontrol";
-        static constexpr const char* type_name = "SecurityDescriptorHelpers";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::Security::AccessControl::AppContainerNameAndAccess>
-    {
-        static constexpr std::string_view from_tuple = "winui3._winui3_microsoft_windows_security_accesscontrol.AppContainerNameAndAccess_from_tuple";
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.security.accesscontrol.AppContainerNameAndAccess";
-        static constexpr const char* module_name = "winui3.microsoft.windows.security.accesscontrol";
-        static constexpr const char* type_name = "AppContainerNameAndAccess";
-    };
-}
 
 namespace py::impl::Microsoft::Windows::Security::AccessControl
 {

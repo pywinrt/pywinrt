@@ -4,162 +4,16 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Devices.Geolocation.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Storage.h>
 #include <winrt/Windows.Storage.Streams.h>
 
 #include <winrt/Windows.Storage.FileProperties.h>
-
-namespace py::proj::Windows::Storage::FileProperties
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Storage::FileProperties::PhotoOrientation> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Storage::FileProperties::PropertyPrefetchOptions> = "I";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Storage::FileProperties::ThumbnailMode> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Storage::FileProperties::ThumbnailOptions> = "I";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Storage::FileProperties::ThumbnailType> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Storage::FileProperties::VideoOrientation> = "i";
+#include "py.Windows.Storage.FileProperties.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::Storage::FileProperties::PhotoOrientation>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.fileproperties.PhotoOrientation";
-        static constexpr const char* module_name = "winrt.windows.storage.fileproperties";
-        static constexpr const char* type_name = "PhotoOrientation";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::FileProperties::PropertyPrefetchOptions>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.fileproperties.PropertyPrefetchOptions";
-        static constexpr const char* module_name = "winrt.windows.storage.fileproperties";
-        static constexpr const char* type_name = "PropertyPrefetchOptions";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::FileProperties::ThumbnailMode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.fileproperties.ThumbnailMode";
-        static constexpr const char* module_name = "winrt.windows.storage.fileproperties";
-        static constexpr const char* type_name = "ThumbnailMode";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::FileProperties::ThumbnailOptions>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.fileproperties.ThumbnailOptions";
-        static constexpr const char* module_name = "winrt.windows.storage.fileproperties";
-        static constexpr const char* type_name = "ThumbnailOptions";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::FileProperties::ThumbnailType>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.fileproperties.ThumbnailType";
-        static constexpr const char* module_name = "winrt.windows.storage.fileproperties";
-        static constexpr const char* type_name = "ThumbnailType";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::FileProperties::VideoOrientation>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.fileproperties.VideoOrientation";
-        static constexpr const char* module_name = "winrt.windows.storage.fileproperties";
-        static constexpr const char* type_name = "VideoOrientation";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::FileProperties::BasicProperties>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.fileproperties.BasicProperties";
-        static constexpr const char* module_name = "winrt.windows.storage.fileproperties";
-        static constexpr const char* type_name = "BasicProperties";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::FileProperties::DocumentProperties>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.fileproperties.DocumentProperties";
-        static constexpr const char* module_name = "winrt.windows.storage.fileproperties";
-        static constexpr const char* type_name = "DocumentProperties";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::FileProperties::GeotagHelper>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.fileproperties.GeotagHelper";
-        static constexpr const char* module_name = "winrt.windows.storage.fileproperties";
-        static constexpr const char* type_name = "GeotagHelper";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::FileProperties::ImageProperties>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.fileproperties.ImageProperties";
-        static constexpr const char* module_name = "winrt.windows.storage.fileproperties";
-        static constexpr const char* type_name = "ImageProperties";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::FileProperties::MusicProperties>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.fileproperties.MusicProperties";
-        static constexpr const char* module_name = "winrt.windows.storage.fileproperties";
-        static constexpr const char* type_name = "MusicProperties";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::FileProperties::StorageItemContentProperties>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.fileproperties.StorageItemContentProperties";
-        static constexpr const char* module_name = "winrt.windows.storage.fileproperties";
-        static constexpr const char* type_name = "StorageItemContentProperties";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::FileProperties::StorageItemThumbnail>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.fileproperties.StorageItemThumbnail";
-        static constexpr const char* module_name = "winrt.windows.storage.fileproperties";
-        static constexpr const char* type_name = "StorageItemThumbnail";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::FileProperties::VideoProperties>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.fileproperties.VideoProperties";
-        static constexpr const char* module_name = "winrt.windows.storage.fileproperties";
-        static constexpr const char* type_name = "VideoProperties";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::FileProperties::IStorageItemExtraProperties>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.fileproperties._IStorageItemExtraProperties";
-        static constexpr const char* module_name = "winrt.windows.storage.fileproperties";
-        static constexpr const char* type_name = "_IStorageItemExtraProperties";
-    };
-}
-
-#if __has_include("py.Windows.Devices.Geolocation.h")
-#include "py.Windows.Devices.Geolocation.h"
+#if __has_include("py.Windows.Devices.Geolocation.types.h")
+#include "py.Windows.Devices.Geolocation.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")
@@ -170,8 +24,8 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
+#if __has_include("py.Windows.Storage.types.h")
+#include "py.Windows.Storage.types.h"
 #endif
 
 #if __has_include("py.Windows.Storage.Streams.h")

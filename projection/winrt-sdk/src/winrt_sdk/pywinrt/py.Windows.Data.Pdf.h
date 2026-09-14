@@ -5,77 +5,25 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.Storage.h>
-#include <winrt/Windows.Storage.Streams.h>
-#include <winrt/Windows.UI.h>
 
 #include <winrt/Windows.Data.Pdf.h>
+#include "py.Windows.Data.Pdf.types.h"
 
-namespace py::proj::Windows::Data::Pdf
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Data::Pdf::PdfPageRotation> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Data::Pdf::PdfPageRotation>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.pdf.PdfPageRotation";
-        static constexpr const char* module_name = "winrt.windows.data.pdf";
-        static constexpr const char* type_name = "PdfPageRotation";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Pdf::PdfDocument>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.pdf.PdfDocument";
-        static constexpr const char* module_name = "winrt.windows.data.pdf";
-        static constexpr const char* type_name = "PdfDocument";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Pdf::PdfPage>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.pdf.PdfPage";
-        static constexpr const char* module_name = "winrt.windows.data.pdf";
-        static constexpr const char* type_name = "PdfPage";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Pdf::PdfPageDimensions>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.pdf.PdfPageDimensions";
-        static constexpr const char* module_name = "winrt.windows.data.pdf";
-        static constexpr const char* type_name = "PdfPageDimensions";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Pdf::PdfPageRenderOptions>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.pdf.PdfPageRenderOptions";
-        static constexpr const char* module_name = "winrt.windows.data.pdf";
-        static constexpr const char* type_name = "PdfPageRenderOptions";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
 #endif
 
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
+#if __has_include("py.Windows.Storage.types.h")
+#include "py.Windows.Storage.types.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
+#if __has_include("py.Windows.UI.types.h")
+#include "py.Windows.UI.types.h"
 #endif
 
 namespace py::impl::Windows::Data::Pdf

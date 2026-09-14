@@ -5,56 +5,17 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.Web.Http.h>
 
 #include <winrt/Windows.System.Implementation.FileExplorer.h>
+#include "py.Windows.System.Implementation.FileExplorer.types.h"
 
-namespace py::proj::Windows::System::Implementation::FileExplorer
-{
-}
-
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::System::Implementation::FileExplorer::SysStorageProviderEventReceivedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.implementation.fileexplorer.SysStorageProviderEventReceivedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.system.implementation.fileexplorer";
-        static constexpr const char* type_name = "SysStorageProviderEventReceivedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderEventSource>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.implementation.fileexplorer._ISysStorageProviderEventSource";
-        static constexpr const char* module_name = "winrt.windows.system.implementation.fileexplorer";
-        static constexpr const char* type_name = "_ISysStorageProviderEventSource";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHandlerFactory>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.implementation.fileexplorer._ISysStorageProviderHandlerFactory";
-        static constexpr const char* module_name = "winrt.windows.system.implementation.fileexplorer";
-        static constexpr const char* type_name = "_ISysStorageProviderHandlerFactory";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHttpRequestProvider>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.implementation.fileexplorer._ISysStorageProviderHttpRequestProvider";
-        static constexpr const char* module_name = "winrt.windows.system.implementation.fileexplorer";
-        static constexpr const char* type_name = "_ISysStorageProviderHttpRequestProvider";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
 #endif
 
-#if __has_include("py.Windows.Web.Http.h")
-#include "py.Windows.Web.Http.h"
+#if __has_include("py.Windows.Web.Http.types.h")
+#include "py.Windows.Web.Http.types.h"
 #endif
 
 namespace py::impl::Windows::System::Implementation::FileExplorer

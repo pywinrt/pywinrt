@@ -4,211 +4,15 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Devices.PointOfService.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Graphics.Imaging.h>
-#include <winrt/Windows.Storage.Streams.h>
 
 #include <winrt/Windows.Devices.PointOfService.Provider.h>
-
-namespace py::proj::Windows::Devices::PointOfService::Provider
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerTriggerState> = "i";
+#include "py.Windows.Devices.PointOfService.Provider.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerTriggerState>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.pointofservice.provider.BarcodeScannerTriggerState";
-        static constexpr const char* module_name = "winrt.windows.devices.pointofservice.provider";
-        static constexpr const char* type_name = "BarcodeScannerTriggerState";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerDisableScannerRequest>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.pointofservice.provider.BarcodeScannerDisableScannerRequest";
-        static constexpr const char* module_name = "winrt.windows.devices.pointofservice.provider";
-        static constexpr const char* type_name = "BarcodeScannerDisableScannerRequest";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerDisableScannerRequestEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.pointofservice.provider.BarcodeScannerDisableScannerRequestEventArgs";
-        static constexpr const char* module_name = "winrt.windows.devices.pointofservice.provider";
-        static constexpr const char* type_name = "BarcodeScannerDisableScannerRequestEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerEnableScannerRequest>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.pointofservice.provider.BarcodeScannerEnableScannerRequest";
-        static constexpr const char* module_name = "winrt.windows.devices.pointofservice.provider";
-        static constexpr const char* type_name = "BarcodeScannerEnableScannerRequest";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerEnableScannerRequestEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.pointofservice.provider.BarcodeScannerEnableScannerRequestEventArgs";
-        static constexpr const char* module_name = "winrt.windows.devices.pointofservice.provider";
-        static constexpr const char* type_name = "BarcodeScannerEnableScannerRequestEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReader>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.pointofservice.provider.BarcodeScannerFrameReader";
-        static constexpr const char* module_name = "winrt.windows.devices.pointofservice.provider";
-        static constexpr const char* type_name = "BarcodeScannerFrameReader";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReaderFrameArrivedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.pointofservice.provider.BarcodeScannerFrameReaderFrameArrivedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.devices.pointofservice.provider";
-        static constexpr const char* type_name = "BarcodeScannerFrameReaderFrameArrivedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerGetSymbologyAttributesRequest>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.pointofservice.provider.BarcodeScannerGetSymbologyAttributesRequest";
-        static constexpr const char* module_name = "winrt.windows.devices.pointofservice.provider";
-        static constexpr const char* type_name = "BarcodeScannerGetSymbologyAttributesRequest";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerGetSymbologyAttributesRequestEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.pointofservice.provider.BarcodeScannerGetSymbologyAttributesRequestEventArgs";
-        static constexpr const char* module_name = "winrt.windows.devices.pointofservice.provider";
-        static constexpr const char* type_name = "BarcodeScannerGetSymbologyAttributesRequestEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerHideVideoPreviewRequest>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.pointofservice.provider.BarcodeScannerHideVideoPreviewRequest";
-        static constexpr const char* module_name = "winrt.windows.devices.pointofservice.provider";
-        static constexpr const char* type_name = "BarcodeScannerHideVideoPreviewRequest";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerHideVideoPreviewRequestEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.pointofservice.provider.BarcodeScannerHideVideoPreviewRequestEventArgs";
-        static constexpr const char* module_name = "winrt.windows.devices.pointofservice.provider";
-        static constexpr const char* type_name = "BarcodeScannerHideVideoPreviewRequestEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.pointofservice.provider.BarcodeScannerProviderConnection";
-        static constexpr const char* module_name = "winrt.windows.devices.pointofservice.provider";
-        static constexpr const char* type_name = "BarcodeScannerProviderConnection";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderTriggerDetails>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.pointofservice.provider.BarcodeScannerProviderTriggerDetails";
-        static constexpr const char* module_name = "winrt.windows.devices.pointofservice.provider";
-        static constexpr const char* type_name = "BarcodeScannerProviderTriggerDetails";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerSetActiveSymbologiesRequest>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.pointofservice.provider.BarcodeScannerSetActiveSymbologiesRequest";
-        static constexpr const char* module_name = "winrt.windows.devices.pointofservice.provider";
-        static constexpr const char* type_name = "BarcodeScannerSetActiveSymbologiesRequest";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerSetActiveSymbologiesRequestEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.pointofservice.provider.BarcodeScannerSetActiveSymbologiesRequestEventArgs";
-        static constexpr const char* module_name = "winrt.windows.devices.pointofservice.provider";
-        static constexpr const char* type_name = "BarcodeScannerSetActiveSymbologiesRequestEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequest>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.pointofservice.provider.BarcodeScannerSetSymbologyAttributesRequest";
-        static constexpr const char* module_name = "winrt.windows.devices.pointofservice.provider";
-        static constexpr const char* type_name = "BarcodeScannerSetSymbologyAttributesRequest";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequestEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.pointofservice.provider.BarcodeScannerSetSymbologyAttributesRequestEventArgs";
-        static constexpr const char* module_name = "winrt.windows.devices.pointofservice.provider";
-        static constexpr const char* type_name = "BarcodeScannerSetSymbologyAttributesRequestEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerStartSoftwareTriggerRequest>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.pointofservice.provider.BarcodeScannerStartSoftwareTriggerRequest";
-        static constexpr const char* module_name = "winrt.windows.devices.pointofservice.provider";
-        static constexpr const char* type_name = "BarcodeScannerStartSoftwareTriggerRequest";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerStartSoftwareTriggerRequestEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.pointofservice.provider.BarcodeScannerStartSoftwareTriggerRequestEventArgs";
-        static constexpr const char* module_name = "winrt.windows.devices.pointofservice.provider";
-        static constexpr const char* type_name = "BarcodeScannerStartSoftwareTriggerRequestEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerStopSoftwareTriggerRequest>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.pointofservice.provider.BarcodeScannerStopSoftwareTriggerRequest";
-        static constexpr const char* module_name = "winrt.windows.devices.pointofservice.provider";
-        static constexpr const char* type_name = "BarcodeScannerStopSoftwareTriggerRequest";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerStopSoftwareTriggerRequestEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.pointofservice.provider.BarcodeScannerStopSoftwareTriggerRequestEventArgs";
-        static constexpr const char* module_name = "winrt.windows.devices.pointofservice.provider";
-        static constexpr const char* type_name = "BarcodeScannerStopSoftwareTriggerRequestEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerVideoFrame>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.pointofservice.provider.BarcodeScannerVideoFrame";
-        static constexpr const char* module_name = "winrt.windows.devices.pointofservice.provider";
-        static constexpr const char* type_name = "BarcodeScannerVideoFrame";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeSymbologyAttributesBuilder>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.pointofservice.provider.BarcodeSymbologyAttributesBuilder";
-        static constexpr const char* module_name = "winrt.windows.devices.pointofservice.provider";
-        static constexpr const char* type_name = "BarcodeSymbologyAttributesBuilder";
-    };
-}
-
-#if __has_include("py.Windows.Devices.PointOfService.h")
-#include "py.Windows.Devices.PointOfService.h"
+#if __has_include("py.Windows.Devices.PointOfService.types.h")
+#include "py.Windows.Devices.PointOfService.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")
@@ -219,12 +23,12 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Graphics.Imaging.h")
-#include "py.Windows.Graphics.Imaging.h"
+#if __has_include("py.Windows.Graphics.Imaging.types.h")
+#include "py.Windows.Graphics.Imaging.types.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
 namespace py::impl::Windows::Devices::PointOfService::Provider

@@ -6,22 +6,8 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
 #include <winrt/Windows.System.Display.h>
+#include "py.Windows.System.Display.types.h"
 
-namespace py::proj::Windows::System::Display
-{
-}
-
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::System::Display::DisplayRequest>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.display.DisplayRequest";
-        static constexpr const char* module_name = "winrt.windows.system.display";
-        static constexpr const char* type_name = "DisplayRequest";
-    };
-}
 
 namespace py::impl::Windows::System::Display
 {

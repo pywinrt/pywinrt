@@ -6,119 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Security.Credentials.h>
-#include <winrt/Windows.System.h>
-#include <winrt/Windows.UI.h>
-#include <winrt/Windows.UI.Shell.h>
 
 #include <winrt/Windows.ApplicationModel.UserActivities.h>
+#include "py.Windows.ApplicationModel.UserActivities.types.h"
 
-namespace py::proj::Windows::ApplicationModel::UserActivities
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::UserActivities::UserActivityState> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityState>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.useractivities.UserActivityState";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
-        static constexpr const char* type_name = "UserActivityState";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivity>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.useractivities.UserActivity";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
-        static constexpr const char* type_name = "UserActivity";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityAttribution>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.useractivities.UserActivityAttribution";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
-        static constexpr const char* type_name = "UserActivityAttribution";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityChannel>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.useractivities.UserActivityChannel";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
-        static constexpr const char* type_name = "UserActivityChannel";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityContentInfo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.useractivities.UserActivityContentInfo";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
-        static constexpr const char* type_name = "UserActivityContentInfo";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequest>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.useractivities.UserActivityRequest";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
-        static constexpr const char* type_name = "UserActivityRequest";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.useractivities.UserActivityRequestManager";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
-        static constexpr const char* type_name = "UserActivityRequestManager";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.useractivities.UserActivityRequestedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
-        static constexpr const char* type_name = "UserActivityRequestedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivitySession>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.useractivities.UserActivitySession";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
-        static constexpr const char* type_name = "UserActivitySession";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.useractivities.UserActivitySessionHistoryItem";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
-        static constexpr const char* type_name = "UserActivitySessionHistoryItem";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityVisualElements>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.useractivities.UserActivityVisualElements";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
-        static constexpr const char* type_name = "UserActivityVisualElements";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::UserActivities::IUserActivityContentInfo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.useractivities._IUserActivityContentInfo";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
-        static constexpr const char* type_name = "_IUserActivityContentInfo";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -128,20 +19,20 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Security.Credentials.h")
-#include "py.Windows.Security.Credentials.h"
+#if __has_include("py.Windows.Security.Credentials.types.h")
+#include "py.Windows.Security.Credentials.types.h"
 #endif
 
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
+#if __has_include("py.Windows.System.types.h")
+#include "py.Windows.System.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
+#if __has_include("py.Windows.UI.types.h")
+#include "py.Windows.UI.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.Shell.h")
-#include "py.Windows.UI.Shell.h"
+#if __has_include("py.Windows.UI.Shell.types.h")
+#include "py.Windows.UI.Shell.types.h"
 #endif
 
 namespace py::impl::Windows::ApplicationModel::UserActivities

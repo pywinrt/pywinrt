@@ -6,122 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Storage.h>
 
 #include <winrt/Windows.ApplicationModel.Store.h>
+#include "py.Windows.ApplicationModel.Store.types.h"
 
-namespace py::proj::Windows::ApplicationModel::Store
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::Store::FulfillmentResult> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::Store::ProductPurchaseStatus> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::Store::ProductType> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::FulfillmentResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.FulfillmentResult";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
-        static constexpr const char* type_name = "FulfillmentResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::ProductPurchaseStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.ProductPurchaseStatus";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
-        static constexpr const char* type_name = "ProductPurchaseStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::ProductType>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.ProductType";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
-        static constexpr const char* type_name = "ProductType";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::CurrentApp>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.CurrentApp";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
-        static constexpr const char* type_name = "CurrentApp";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::CurrentAppSimulator>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.CurrentAppSimulator";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
-        static constexpr const char* type_name = "CurrentAppSimulator";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::LicenseInformation>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.LicenseInformation";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
-        static constexpr const char* type_name = "LicenseInformation";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::ListingInformation>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.ListingInformation";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
-        static constexpr const char* type_name = "ListingInformation";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::ProductLicense>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.ProductLicense";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
-        static constexpr const char* type_name = "ProductLicense";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::ProductListing>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.ProductListing";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
-        static constexpr const char* type_name = "ProductListing";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::ProductPurchaseDisplayProperties>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.ProductPurchaseDisplayProperties";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
-        static constexpr const char* type_name = "ProductPurchaseDisplayProperties";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::PurchaseResults>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.PurchaseResults";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
-        static constexpr const char* type_name = "PurchaseResults";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::UnfulfilledConsumable>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.UnfulfilledConsumable";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
-        static constexpr const char* type_name = "UnfulfilledConsumable";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -131,8 +19,8 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
+#if __has_include("py.Windows.Storage.types.h")
+#include "py.Windows.Storage.types.h"
 #endif
 
 namespace py::impl::Windows::ApplicationModel::Store

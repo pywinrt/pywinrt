@@ -4,78 +4,15 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.ApplicationModel.DataTransfer.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Storage.Streams.h>
-#include <winrt/Windows.System.h>
 
 #include <winrt/Windows.Services.Cortana.h>
-
-namespace py::proj::Windows::Services::Cortana
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Services::Cortana::CortanaPermission> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Services::Cortana::CortanaPermissionsChangeResult> = "i";
+#include "py.Windows.Services.Cortana.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::Services::Cortana::CortanaPermission>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.cortana.CortanaPermission";
-        static constexpr const char* module_name = "winrt.windows.services.cortana";
-        static constexpr const char* type_name = "CortanaPermission";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Services::Cortana::CortanaPermissionsChangeResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.cortana.CortanaPermissionsChangeResult";
-        static constexpr const char* module_name = "winrt.windows.services.cortana";
-        static constexpr const char* type_name = "CortanaPermissionsChangeResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Services::Cortana::CortanaActionableInsights>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.cortana.CortanaActionableInsights";
-        static constexpr const char* module_name = "winrt.windows.services.cortana";
-        static constexpr const char* type_name = "CortanaActionableInsights";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Services::Cortana::CortanaActionableInsightsOptions>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.cortana.CortanaActionableInsightsOptions";
-        static constexpr const char* module_name = "winrt.windows.services.cortana";
-        static constexpr const char* type_name = "CortanaActionableInsightsOptions";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Services::Cortana::CortanaPermissionsManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.cortana.CortanaPermissionsManager";
-        static constexpr const char* module_name = "winrt.windows.services.cortana";
-        static constexpr const char* type_name = "CortanaPermissionsManager";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Services::Cortana::CortanaSettings>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.services.cortana.CortanaSettings";
-        static constexpr const char* module_name = "winrt.windows.services.cortana";
-        static constexpr const char* type_name = "CortanaSettings";
-    };
-}
-
-#if __has_include("py.Windows.ApplicationModel.DataTransfer.h")
-#include "py.Windows.ApplicationModel.DataTransfer.h"
+#if __has_include("py.Windows.ApplicationModel.DataTransfer.types.h")
+#include "py.Windows.ApplicationModel.DataTransfer.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")
@@ -86,12 +23,12 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
+#if __has_include("py.Windows.System.types.h")
+#include "py.Windows.System.types.h"
 #endif
 
 namespace py::impl::Windows::Services::Cortana

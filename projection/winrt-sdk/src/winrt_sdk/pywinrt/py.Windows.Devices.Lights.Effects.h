@@ -4,129 +4,15 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Devices.Lights.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Graphics.Imaging.h>
-#include <winrt/Windows.UI.h>
 
 #include <winrt/Windows.Devices.Lights.Effects.h>
-
-namespace py::proj::Windows::Devices::Lights::Effects
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::Lights::Effects::LampArrayEffectCompletionBehavior> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::Lights::Effects::LampArrayEffectStartMode> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::Lights::Effects::LampArrayRepetitionMode> = "i";
+#include "py.Windows.Devices.Lights.Effects.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::Devices::Lights::Effects::LampArrayEffectCompletionBehavior>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.effects.LampArrayEffectCompletionBehavior";
-        static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
-        static constexpr const char* type_name = "LampArrayEffectCompletionBehavior";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Lights::Effects::LampArrayEffectStartMode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.effects.LampArrayEffectStartMode";
-        static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
-        static constexpr const char* type_name = "LampArrayEffectStartMode";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Lights::Effects::LampArrayRepetitionMode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.effects.LampArrayRepetitionMode";
-        static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
-        static constexpr const char* type_name = "LampArrayRepetitionMode";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Lights::Effects::LampArrayBitmapEffect>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.effects.LampArrayBitmapEffect";
-        static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
-        static constexpr const char* type_name = "LampArrayBitmapEffect";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Lights::Effects::LampArrayBitmapRequestedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.effects.LampArrayBitmapRequestedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
-        static constexpr const char* type_name = "LampArrayBitmapRequestedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Lights::Effects::LampArrayBlinkEffect>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.effects.LampArrayBlinkEffect";
-        static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
-        static constexpr const char* type_name = "LampArrayBlinkEffect";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Lights::Effects::LampArrayColorRampEffect>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.effects.LampArrayColorRampEffect";
-        static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
-        static constexpr const char* type_name = "LampArrayColorRampEffect";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Lights::Effects::LampArrayCustomEffect>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.effects.LampArrayCustomEffect";
-        static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
-        static constexpr const char* type_name = "LampArrayCustomEffect";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.effects.LampArrayEffectPlaylist";
-        static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
-        static constexpr const char* type_name = "LampArrayEffectPlaylist";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Lights::Effects::LampArraySolidEffect>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.effects.LampArraySolidEffect";
-        static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
-        static constexpr const char* type_name = "LampArraySolidEffect";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Lights::Effects::LampArrayUpdateRequestedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.effects.LampArrayUpdateRequestedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
-        static constexpr const char* type_name = "LampArrayUpdateRequestedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Lights::Effects::ILampArrayEffect>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.effects._ILampArrayEffect";
-        static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
-        static constexpr const char* type_name = "_ILampArrayEffect";
-    };
-}
-
-#if __has_include("py.Windows.Devices.Lights.h")
-#include "py.Windows.Devices.Lights.h"
+#if __has_include("py.Windows.Devices.Lights.types.h")
+#include "py.Windows.Devices.Lights.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")
@@ -137,12 +23,12 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Graphics.Imaging.h")
-#include "py.Windows.Graphics.Imaging.h"
+#if __has_include("py.Windows.Graphics.Imaging.types.h")
+#include "py.Windows.Graphics.Imaging.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
+#if __has_include("py.Windows.UI.types.h")
+#include "py.Windows.UI.types.h"
 #endif
 
 namespace py::impl::Windows::Devices::Lights::Effects

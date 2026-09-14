@@ -5,99 +5,25 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.Storage.h>
-#include <winrt/Windows.Storage.Streams.h>
-#include <winrt/Windows.System.h>
 
 #include <winrt/Windows.Security.DataProtection.h>
+#include "py.Windows.Security.DataProtection.types.h"
 
-namespace py::proj::Windows::Security::DataProtection
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Security::DataProtection::UserDataAvailability> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Security::DataProtection::UserDataBufferUnprotectStatus> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Security::DataProtection::UserDataStorageItemProtectionStatus> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Security::DataProtection::UserDataAvailability>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.dataprotection.UserDataAvailability";
-        static constexpr const char* module_name = "winrt.windows.security.dataprotection";
-        static constexpr const char* type_name = "UserDataAvailability";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::DataProtection::UserDataBufferUnprotectStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.dataprotection.UserDataBufferUnprotectStatus";
-        static constexpr const char* module_name = "winrt.windows.security.dataprotection";
-        static constexpr const char* type_name = "UserDataBufferUnprotectStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::DataProtection::UserDataStorageItemProtectionStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.dataprotection.UserDataStorageItemProtectionStatus";
-        static constexpr const char* module_name = "winrt.windows.security.dataprotection";
-        static constexpr const char* type_name = "UserDataStorageItemProtectionStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::DataProtection::UserDataAvailabilityStateChangedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.dataprotection.UserDataAvailabilityStateChangedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.security.dataprotection";
-        static constexpr const char* type_name = "UserDataAvailabilityStateChangedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::DataProtection::UserDataBufferUnprotectResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.dataprotection.UserDataBufferUnprotectResult";
-        static constexpr const char* module_name = "winrt.windows.security.dataprotection";
-        static constexpr const char* type_name = "UserDataBufferUnprotectResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::DataProtection::UserDataProtectionManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.dataprotection.UserDataProtectionManager";
-        static constexpr const char* module_name = "winrt.windows.security.dataprotection";
-        static constexpr const char* type_name = "UserDataProtectionManager";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::DataProtection::UserDataStorageItemProtectionInfo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.dataprotection.UserDataStorageItemProtectionInfo";
-        static constexpr const char* module_name = "winrt.windows.security.dataprotection";
-        static constexpr const char* type_name = "UserDataStorageItemProtectionInfo";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
 #endif
 
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
+#if __has_include("py.Windows.Storage.types.h")
+#include "py.Windows.Storage.types.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
+#if __has_include("py.Windows.System.types.h")
+#include "py.Windows.System.types.h"
 #endif
 
 namespace py::impl::Windows::Security::DataProtection

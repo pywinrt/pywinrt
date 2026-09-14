@@ -6,140 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Security.Authentication.Web.Core.h>
-#include <winrt/Windows.Security.Credentials.h>
-#include <winrt/Windows.Storage.Streams.h>
-#include <winrt/Windows.System.h>
-#include <winrt/Windows.UI.Xaml.h>
 
 #include <winrt/Windows.ApplicationModel.Store.Preview.h>
+#include "py.Windows.ApplicationModel.Store.Preview.types.h"
 
-namespace py::proj::Windows::ApplicationModel::Store::Preview
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::Store::Preview::DeliveryOptimizationDownloadMode> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::Store::Preview::DeliveryOptimizationDownloadModeSource> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::Store::Preview::StoreLogOptions> = "I";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewProductPurchaseStatus> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::Store::Preview::StoreSystemFeature> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::DeliveryOptimizationDownloadMode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.DeliveryOptimizationDownloadMode";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview";
-        static constexpr const char* type_name = "DeliveryOptimizationDownloadMode";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::DeliveryOptimizationDownloadModeSource>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.DeliveryOptimizationDownloadModeSource";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview";
-        static constexpr const char* type_name = "DeliveryOptimizationDownloadModeSource";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::StoreLogOptions>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.StoreLogOptions";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview";
-        static constexpr const char* type_name = "StoreLogOptions";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewProductPurchaseStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.StorePreviewProductPurchaseStatus";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview";
-        static constexpr const char* type_name = "StorePreviewProductPurchaseStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::StoreSystemFeature>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.StoreSystemFeature";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview";
-        static constexpr const char* type_name = "StoreSystemFeature";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::DeliveryOptimizationSettings>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.DeliveryOptimizationSettings";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview";
-        static constexpr const char* type_name = "DeliveryOptimizationSettings";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::StoreConfiguration>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.StoreConfiguration";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview";
-        static constexpr const char* type_name = "StoreConfiguration";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::StoreHardwareManufacturerInfo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.StoreHardwareManufacturerInfo";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview";
-        static constexpr const char* type_name = "StoreHardwareManufacturerInfo";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreview>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.StorePreview";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview";
-        static constexpr const char* type_name = "StorePreview";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.StorePreviewProductInfo";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview";
-        static constexpr const char* type_name = "StorePreviewProductInfo";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewPurchaseResults>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.StorePreviewPurchaseResults";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview";
-        static constexpr const char* type_name = "StorePreviewPurchaseResults";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.StorePreviewSkuInfo";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview";
-        static constexpr const char* type_name = "StorePreviewSkuInfo";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::WebAuthenticationCoreManagerHelper>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.WebAuthenticationCoreManagerHelper";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview";
-        static constexpr const char* type_name = "WebAuthenticationCoreManagerHelper";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -149,24 +19,24 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Security.Authentication.Web.Core.h")
-#include "py.Windows.Security.Authentication.Web.Core.h"
+#if __has_include("py.Windows.Security.Authentication.Web.Core.types.h")
+#include "py.Windows.Security.Authentication.Web.Core.types.h"
 #endif
 
-#if __has_include("py.Windows.Security.Credentials.h")
-#include "py.Windows.Security.Credentials.h"
+#if __has_include("py.Windows.Security.Credentials.types.h")
+#include "py.Windows.Security.Credentials.types.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
+#if __has_include("py.Windows.System.types.h")
+#include "py.Windows.System.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.Xaml.h")
-#include "py.Windows.UI.Xaml.h"
+#if __has_include("py.Windows.UI.Xaml.types.h")
+#include "py.Windows.UI.Xaml.types.h"
 #endif
 
 namespace py::impl::Windows::ApplicationModel::Store::Preview

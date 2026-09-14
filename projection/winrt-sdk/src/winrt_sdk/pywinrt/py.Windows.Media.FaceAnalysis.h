@@ -6,42 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Graphics.Imaging.h>
-#include <winrt/Windows.Media.h>
 
 #include <winrt/Windows.Media.FaceAnalysis.h>
+#include "py.Windows.Media.FaceAnalysis.types.h"
 
-namespace py::proj::Windows::Media::FaceAnalysis
-{
-}
-
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::Media::FaceAnalysis::DetectedFace>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.faceanalysis.DetectedFace";
-        static constexpr const char* module_name = "winrt.windows.media.faceanalysis";
-        static constexpr const char* type_name = "DetectedFace";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::FaceAnalysis::FaceDetector>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.faceanalysis.FaceDetector";
-        static constexpr const char* module_name = "winrt.windows.media.faceanalysis";
-        static constexpr const char* type_name = "FaceDetector";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::FaceAnalysis::FaceTracker>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.faceanalysis.FaceTracker";
-        static constexpr const char* module_name = "winrt.windows.media.faceanalysis";
-        static constexpr const char* type_name = "FaceTracker";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -51,12 +19,12 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Graphics.Imaging.h")
-#include "py.Windows.Graphics.Imaging.h"
+#if __has_include("py.Windows.Graphics.Imaging.types.h")
+#include "py.Windows.Graphics.Imaging.types.h"
 #endif
 
-#if __has_include("py.Windows.Media.h")
-#include "py.Windows.Media.h"
+#if __has_include("py.Windows.Media.types.h")
+#include "py.Windows.Media.types.h"
 #endif
 
 namespace py::impl::Windows::Media::FaceAnalysis

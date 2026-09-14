@@ -6,44 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.System.h>
 
 #include <winrt/Windows.Security.Authorization.AppCapabilityAccess.h>
+#include "py.Windows.Security.Authorization.AppCapabilityAccess.types.h"
 
-namespace py::proj::Windows::Security::Authorization::AppCapabilityAccess
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessStatus> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.authorization.appcapabilityaccess.AppCapabilityAccessStatus";
-        static constexpr const char* module_name = "winrt.windows.security.authorization.appcapabilityaccess";
-        static constexpr const char* type_name = "AppCapabilityAccessStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapability>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.authorization.appcapabilityaccess.AppCapability";
-        static constexpr const char* module_name = "winrt.windows.security.authorization.appcapabilityaccess";
-        static constexpr const char* type_name = "AppCapability";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessChangedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.authorization.appcapabilityaccess.AppCapabilityAccessChangedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.security.authorization.appcapabilityaccess";
-        static constexpr const char* type_name = "AppCapabilityAccessChangedEventArgs";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -53,8 +19,8 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
+#if __has_include("py.Windows.System.types.h")
+#include "py.Windows.System.types.h"
 #endif
 
 namespace py::impl::Windows::Security::Authorization::AppCapabilityAccess

@@ -5,87 +5,17 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.UI.h>
 
 #include <winrt/Windows.Media.ClosedCaptioning.h>
+#include "py.Windows.Media.ClosedCaptioning.types.h"
 
-namespace py::proj::Windows::Media::ClosedCaptioning
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionColor> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionEdgeEffect> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionOpacity> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionSize> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionStyle> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionColor>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.closedcaptioning.ClosedCaptionColor";
-        static constexpr const char* module_name = "winrt.windows.media.closedcaptioning";
-        static constexpr const char* type_name = "ClosedCaptionColor";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionEdgeEffect>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.closedcaptioning.ClosedCaptionEdgeEffect";
-        static constexpr const char* module_name = "winrt.windows.media.closedcaptioning";
-        static constexpr const char* type_name = "ClosedCaptionEdgeEffect";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionOpacity>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.closedcaptioning.ClosedCaptionOpacity";
-        static constexpr const char* module_name = "winrt.windows.media.closedcaptioning";
-        static constexpr const char* type_name = "ClosedCaptionOpacity";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionSize>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.closedcaptioning.ClosedCaptionSize";
-        static constexpr const char* module_name = "winrt.windows.media.closedcaptioning";
-        static constexpr const char* type_name = "ClosedCaptionSize";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionStyle>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.closedcaptioning.ClosedCaptionStyle";
-        static constexpr const char* module_name = "winrt.windows.media.closedcaptioning";
-        static constexpr const char* type_name = "ClosedCaptionStyle";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.closedcaptioning.ClosedCaptionProperties";
-        static constexpr const char* module_name = "winrt.windows.media.closedcaptioning";
-        static constexpr const char* type_name = "ClosedCaptionProperties";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
 #endif
 
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
+#if __has_include("py.Windows.UI.types.h")
+#include "py.Windows.UI.types.h"
 #endif
 
 namespace py::impl::Windows::Media::ClosedCaptioning

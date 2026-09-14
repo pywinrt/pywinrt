@@ -6,161 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.UI.Text.Core.h>
 
 #include <winrt/Windows.Data.Text.h>
+#include "py.Windows.Data.Text.types.h"
 
-namespace py::proj::Windows::Data::Text
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Data::Text::AlternateNormalizationFormat> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Data::Text::TextPredictionOptions> = "I";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Data::Text::UnicodeGeneralCategory> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Data::Text::UnicodeNumericType> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Data::Text::TextSegment> = "T{I:start_position:I:length:}";
-
-
-    template<>
-    struct py_type<winrt::Windows::Data::Text::AlternateNormalizationFormat>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.text.AlternateNormalizationFormat";
-        static constexpr const char* module_name = "winrt.windows.data.text";
-        static constexpr const char* type_name = "AlternateNormalizationFormat";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Text::TextPredictionOptions>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.text.TextPredictionOptions";
-        static constexpr const char* module_name = "winrt.windows.data.text";
-        static constexpr const char* type_name = "TextPredictionOptions";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Text::UnicodeGeneralCategory>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.text.UnicodeGeneralCategory";
-        static constexpr const char* module_name = "winrt.windows.data.text";
-        static constexpr const char* type_name = "UnicodeGeneralCategory";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Text::UnicodeNumericType>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.text.UnicodeNumericType";
-        static constexpr const char* module_name = "winrt.windows.data.text";
-        static constexpr const char* type_name = "UnicodeNumericType";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Text::AlternateWordForm>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.text.AlternateWordForm";
-        static constexpr const char* module_name = "winrt.windows.data.text";
-        static constexpr const char* type_name = "AlternateWordForm";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Text::SelectableWordSegment>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.text.SelectableWordSegment";
-        static constexpr const char* module_name = "winrt.windows.data.text";
-        static constexpr const char* type_name = "SelectableWordSegment";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Text::SelectableWordsSegmenter>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.text.SelectableWordsSegmenter";
-        static constexpr const char* module_name = "winrt.windows.data.text";
-        static constexpr const char* type_name = "SelectableWordsSegmenter";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Text::SemanticTextQuery>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.text.SemanticTextQuery";
-        static constexpr const char* module_name = "winrt.windows.data.text";
-        static constexpr const char* type_name = "SemanticTextQuery";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Text::TextConversionGenerator>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.text.TextConversionGenerator";
-        static constexpr const char* module_name = "winrt.windows.data.text";
-        static constexpr const char* type_name = "TextConversionGenerator";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Text::TextPhoneme>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.text.TextPhoneme";
-        static constexpr const char* module_name = "winrt.windows.data.text";
-        static constexpr const char* type_name = "TextPhoneme";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Text::TextPredictionGenerator>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.text.TextPredictionGenerator";
-        static constexpr const char* module_name = "winrt.windows.data.text";
-        static constexpr const char* type_name = "TextPredictionGenerator";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Text::TextReverseConversionGenerator>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.text.TextReverseConversionGenerator";
-        static constexpr const char* module_name = "winrt.windows.data.text";
-        static constexpr const char* type_name = "TextReverseConversionGenerator";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Text::UnicodeCharacters>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.text.UnicodeCharacters";
-        static constexpr const char* module_name = "winrt.windows.data.text";
-        static constexpr const char* type_name = "UnicodeCharacters";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Text::WordSegment>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.text.WordSegment";
-        static constexpr const char* module_name = "winrt.windows.data.text";
-        static constexpr const char* type_name = "WordSegment";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Text::WordsSegmenter>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.text.WordsSegmenter";
-        static constexpr const char* module_name = "winrt.windows.data.text";
-        static constexpr const char* type_name = "WordsSegmenter";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Data::Text::TextSegment>
-    {
-        static constexpr std::string_view from_tuple = "winrt._winrt_windows_data_text.TextSegment_from_tuple";
-        static constexpr std::string_view qualified_name = "winrt.windows.data.text.TextSegment";
-        static constexpr const char* module_name = "winrt.windows.data.text";
-        static constexpr const char* type_name = "TextSegment";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -170,8 +19,8 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.UI.Text.Core.h")
-#include "py.Windows.UI.Text.Core.h"
+#if __has_include("py.Windows.UI.Text.Core.types.h")
+#include "py.Windows.UI.Text.Core.types.h"
 #endif
 
 namespace py::impl::Windows::Data::Text

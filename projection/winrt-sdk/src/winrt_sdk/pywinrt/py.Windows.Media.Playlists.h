@@ -6,36 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Storage.h>
 
 #include <winrt/Windows.Media.Playlists.h>
+#include "py.Windows.Media.Playlists.types.h"
 
-namespace py::proj::Windows::Media::Playlists
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::Playlists::PlaylistFormat> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Media::Playlists::PlaylistFormat>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.playlists.PlaylistFormat";
-        static constexpr const char* module_name = "winrt.windows.media.playlists";
-        static constexpr const char* type_name = "PlaylistFormat";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Playlists::Playlist>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.playlists.Playlist";
-        static constexpr const char* module_name = "winrt.windows.media.playlists";
-        static constexpr const char* type_name = "Playlist";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -45,8 +19,8 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
+#if __has_include("py.Windows.Storage.types.h")
+#include "py.Windows.Storage.types.h"
 #endif
 
 namespace py::impl::Windows::Media::Playlists

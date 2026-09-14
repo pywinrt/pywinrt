@@ -4,182 +4,15 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Devices.Enumeration.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Networking.h>
-#include <winrt/Windows.Security.Credentials.h>
-#include <winrt/Windows.Storage.Streams.h>
 
 #include <winrt/Windows.Devices.WiFiDirect.h>
-
-namespace py::proj::Windows::Devices::WiFiDirect
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementListenStateDiscoverability> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatus> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::WiFiDirect::WiFiDirectConfigurationMethod> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionStatus> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::WiFiDirect::WiFiDirectDeviceSelectorType> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::WiFiDirect::WiFiDirectError> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::WiFiDirect::WiFiDirectPairingProcedure> = "i";
+#include "py.Windows.Devices.WiFiDirect.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementListenStateDiscoverability>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifidirect.WiFiDirectAdvertisementListenStateDiscoverability";
-        static constexpr const char* module_name = "winrt.windows.devices.wifidirect";
-        static constexpr const char* type_name = "WiFiDirectAdvertisementListenStateDiscoverability";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifidirect.WiFiDirectAdvertisementPublisherStatus";
-        static constexpr const char* module_name = "winrt.windows.devices.wifidirect";
-        static constexpr const char* type_name = "WiFiDirectAdvertisementPublisherStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectConfigurationMethod>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifidirect.WiFiDirectConfigurationMethod";
-        static constexpr const char* module_name = "winrt.windows.devices.wifidirect";
-        static constexpr const char* type_name = "WiFiDirectConfigurationMethod";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifidirect.WiFiDirectConnectionStatus";
-        static constexpr const char* module_name = "winrt.windows.devices.wifidirect";
-        static constexpr const char* type_name = "WiFiDirectConnectionStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectDeviceSelectorType>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifidirect.WiFiDirectDeviceSelectorType";
-        static constexpr const char* module_name = "winrt.windows.devices.wifidirect";
-        static constexpr const char* type_name = "WiFiDirectDeviceSelectorType";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectError>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifidirect.WiFiDirectError";
-        static constexpr const char* module_name = "winrt.windows.devices.wifidirect";
-        static constexpr const char* type_name = "WiFiDirectError";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectPairingProcedure>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifidirect.WiFiDirectPairingProcedure";
-        static constexpr const char* module_name = "winrt.windows.devices.wifidirect";
-        static constexpr const char* type_name = "WiFiDirectPairingProcedure";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisement>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifidirect.WiFiDirectAdvertisement";
-        static constexpr const char* module_name = "winrt.windows.devices.wifidirect";
-        static constexpr const char* type_name = "WiFiDirectAdvertisement";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisher>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifidirect.WiFiDirectAdvertisementPublisher";
-        static constexpr const char* module_name = "winrt.windows.devices.wifidirect";
-        static constexpr const char* type_name = "WiFiDirectAdvertisementPublisher";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatusChangedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifidirect.WiFiDirectAdvertisementPublisherStatusChangedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.devices.wifidirect";
-        static constexpr const char* type_name = "WiFiDirectAdvertisementPublisherStatusChangedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionListener>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifidirect.WiFiDirectConnectionListener";
-        static constexpr const char* module_name = "winrt.windows.devices.wifidirect";
-        static constexpr const char* type_name = "WiFiDirectConnectionListener";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionParameters>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifidirect.WiFiDirectConnectionParameters";
-        static constexpr const char* module_name = "winrt.windows.devices.wifidirect";
-        static constexpr const char* type_name = "WiFiDirectConnectionParameters";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequest>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifidirect.WiFiDirectConnectionRequest";
-        static constexpr const char* module_name = "winrt.windows.devices.wifidirect";
-        static constexpr const char* type_name = "WiFiDirectConnectionRequest";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequestedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifidirect.WiFiDirectConnectionRequestedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.devices.wifidirect";
-        static constexpr const char* type_name = "WiFiDirectConnectionRequestedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectDevice>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifidirect.WiFiDirectDevice";
-        static constexpr const char* module_name = "winrt.windows.devices.wifidirect";
-        static constexpr const char* type_name = "WiFiDirectDevice";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectInformationElement>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifidirect.WiFiDirectInformationElement";
-        static constexpr const char* module_name = "winrt.windows.devices.wifidirect";
-        static constexpr const char* type_name = "WiFiDirectInformationElement";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectLegacySettings>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifidirect.WiFiDirectLegacySettings";
-        static constexpr const char* module_name = "winrt.windows.devices.wifidirect";
-        static constexpr const char* type_name = "WiFiDirectLegacySettings";
-    };
-}
-
-#if __has_include("py.Windows.Devices.Enumeration.h")
-#include "py.Windows.Devices.Enumeration.h"
+#if __has_include("py.Windows.Devices.Enumeration.types.h")
+#include "py.Windows.Devices.Enumeration.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")
@@ -190,16 +23,16 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Networking.h")
-#include "py.Windows.Networking.h"
+#if __has_include("py.Windows.Networking.types.h")
+#include "py.Windows.Networking.types.h"
 #endif
 
-#if __has_include("py.Windows.Security.Credentials.h")
-#include "py.Windows.Security.Credentials.h"
+#if __has_include("py.Windows.Security.Credentials.types.h")
+#include "py.Windows.Security.Credentials.types.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
 namespace py::impl::Windows::Devices::WiFiDirect

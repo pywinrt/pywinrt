@@ -6,56 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Storage.h>
-#include <winrt/Windows.System.h>
 
 #include <winrt/Microsoft.Windows.Storage.h>
+#include "py.Microsoft.Windows.Storage.types.h"
 
-namespace py::proj::Microsoft::Windows::Storage
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::Windows::Storage::ApplicationDataCreateDisposition> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::Windows::Storage::ApplicationDataLocality> = "i";
-
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::Storage::ApplicationDataCreateDisposition>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.storage.ApplicationDataCreateDisposition";
-        static constexpr const char* module_name = "winui3.microsoft.windows.storage";
-        static constexpr const char* type_name = "ApplicationDataCreateDisposition";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::Storage::ApplicationDataLocality>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.storage.ApplicationDataLocality";
-        static constexpr const char* module_name = "winui3.microsoft.windows.storage";
-        static constexpr const char* type_name = "ApplicationDataLocality";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::Storage::ApplicationData>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.storage.ApplicationData";
-        static constexpr const char* module_name = "winui3.microsoft.windows.storage";
-        static constexpr const char* type_name = "ApplicationData";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::Storage::ApplicationDataContainer>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.storage.ApplicationDataContainer";
-        static constexpr const char* module_name = "winui3.microsoft.windows.storage";
-        static constexpr const char* type_name = "ApplicationDataContainer";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -65,12 +19,12 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
+#if __has_include("py.Windows.Storage.types.h")
+#include "py.Windows.Storage.types.h"
 #endif
 
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
+#if __has_include("py.Windows.System.types.h")
+#include "py.Windows.System.types.h"
 #endif
 
 namespace py::impl::Microsoft::Windows::Storage

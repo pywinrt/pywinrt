@@ -5,73 +5,17 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.Security.Authentication.Web.h>
+#include "py.Windows.Security.Authentication.Web.types.h"
 
-namespace py::proj::Windows::Security::Authentication::Web
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Security::Authentication::Web::TokenBindingKeyType> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Security::Authentication::Web::WebAuthenticationOptions> = "I";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Security::Authentication::Web::WebAuthenticationStatus> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Security::Authentication::Web::TokenBindingKeyType>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.web.TokenBindingKeyType";
-        static constexpr const char* module_name = "winrt.windows.security.authentication.web";
-        static constexpr const char* type_name = "TokenBindingKeyType";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::Authentication::Web::WebAuthenticationOptions>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.web.WebAuthenticationOptions";
-        static constexpr const char* module_name = "winrt.windows.security.authentication.web";
-        static constexpr const char* type_name = "WebAuthenticationOptions";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::Authentication::Web::WebAuthenticationStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.web.WebAuthenticationStatus";
-        static constexpr const char* module_name = "winrt.windows.security.authentication.web";
-        static constexpr const char* type_name = "WebAuthenticationStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::Authentication::Web::WebAuthenticationBroker>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.web.WebAuthenticationBroker";
-        static constexpr const char* module_name = "winrt.windows.security.authentication.web";
-        static constexpr const char* type_name = "WebAuthenticationBroker";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Security::Authentication::Web::WebAuthenticationResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.web.WebAuthenticationResult";
-        static constexpr const char* module_name = "winrt.windows.security.authentication.web";
-        static constexpr const char* type_name = "WebAuthenticationResult";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
 #endif
 
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
+#if __has_include("py.Windows.Foundation.Collections.types.h")
+#include "py.Windows.Foundation.Collections.types.h"
 #endif
 
 namespace py::impl::Windows::Security::Authentication::Web

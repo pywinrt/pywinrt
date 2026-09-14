@@ -5,127 +5,17 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.Foundation.Numerics.h>
 
 #include <winrt/Windows.Gaming.Input.ForceFeedback.h>
+#include "py.Windows.Gaming.Input.ForceFeedback.types.h"
 
-namespace py::proj::Windows::Gaming::Input::ForceFeedback
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Gaming::Input::ForceFeedback::ConditionForceEffectKind> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Gaming::Input::ForceFeedback::ForceFeedbackEffectAxes> = "I";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Gaming::Input::ForceFeedback::ForceFeedbackEffectState> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Gaming::Input::ForceFeedback::ForceFeedbackLoadEffectResult> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Gaming::Input::ForceFeedback::PeriodicForceEffectKind> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::ForceFeedback::ConditionForceEffectKind>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.forcefeedback.ConditionForceEffectKind";
-        static constexpr const char* module_name = "winrt.windows.gaming.input.forcefeedback";
-        static constexpr const char* type_name = "ConditionForceEffectKind";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::ForceFeedback::ForceFeedbackEffectAxes>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.forcefeedback.ForceFeedbackEffectAxes";
-        static constexpr const char* module_name = "winrt.windows.gaming.input.forcefeedback";
-        static constexpr const char* type_name = "ForceFeedbackEffectAxes";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::ForceFeedback::ForceFeedbackEffectState>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.forcefeedback.ForceFeedbackEffectState";
-        static constexpr const char* module_name = "winrt.windows.gaming.input.forcefeedback";
-        static constexpr const char* type_name = "ForceFeedbackEffectState";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::ForceFeedback::ForceFeedbackLoadEffectResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.forcefeedback.ForceFeedbackLoadEffectResult";
-        static constexpr const char* module_name = "winrt.windows.gaming.input.forcefeedback";
-        static constexpr const char* type_name = "ForceFeedbackLoadEffectResult";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::ForceFeedback::PeriodicForceEffectKind>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.forcefeedback.PeriodicForceEffectKind";
-        static constexpr const char* module_name = "winrt.windows.gaming.input.forcefeedback";
-        static constexpr const char* type_name = "PeriodicForceEffectKind";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::ForceFeedback::ConditionForceEffect>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.forcefeedback.ConditionForceEffect";
-        static constexpr const char* module_name = "winrt.windows.gaming.input.forcefeedback";
-        static constexpr const char* type_name = "ConditionForceEffect";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::ForceFeedback::ConstantForceEffect>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.forcefeedback.ConstantForceEffect";
-        static constexpr const char* module_name = "winrt.windows.gaming.input.forcefeedback";
-        static constexpr const char* type_name = "ConstantForceEffect";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::ForceFeedback::ForceFeedbackMotor>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.forcefeedback.ForceFeedbackMotor";
-        static constexpr const char* module_name = "winrt.windows.gaming.input.forcefeedback";
-        static constexpr const char* type_name = "ForceFeedbackMotor";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::ForceFeedback::PeriodicForceEffect>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.forcefeedback.PeriodicForceEffect";
-        static constexpr const char* module_name = "winrt.windows.gaming.input.forcefeedback";
-        static constexpr const char* type_name = "PeriodicForceEffect";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::ForceFeedback::RampForceEffect>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.forcefeedback.RampForceEffect";
-        static constexpr const char* module_name = "winrt.windows.gaming.input.forcefeedback";
-        static constexpr const char* type_name = "RampForceEffect";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Input::ForceFeedback::IForceFeedbackEffect>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.forcefeedback._IForceFeedbackEffect";
-        static constexpr const char* module_name = "winrt.windows.gaming.input.forcefeedback";
-        static constexpr const char* type_name = "_IForceFeedbackEffect";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
 #endif
 
-#if __has_include("py.Windows.Foundation.Numerics.h")
-#include "py.Windows.Foundation.Numerics.h"
+#if __has_include("py.Windows.Foundation.Numerics.types.h")
+#include "py.Windows.Foundation.Numerics.types.h"
 #endif
 
 namespace py::impl::Windows::Gaming::Input::ForceFeedback

@@ -4,36 +4,13 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Foundation.h>
 
 #include <winrt/Windows.Devices.Background.h>
+#include "py.Windows.Devices.Background.types.h"
 
-namespace py::proj::Windows::Devices::Background
-{
-}
 
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Background::DeviceServicingDetails>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.background.DeviceServicingDetails";
-        static constexpr const char* module_name = "winrt.windows.devices.background";
-        static constexpr const char* type_name = "DeviceServicingDetails";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Background::DeviceUseDetails>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.background.DeviceUseDetails";
-        static constexpr const char* module_name = "winrt.windows.devices.background";
-        static constexpr const char* type_name = "DeviceUseDetails";
-    };
-}
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
 #endif
 
 namespace py::impl::Windows::Devices::Background

@@ -4,44 +4,18 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Graphics.Imaging.h>
-#include <winrt/Windows.Storage.Streams.h>
+#include <winrt/Windows.Foundation.h>
 
 #include <winrt/Microsoft.Graphics.Imaging.h>
-
-namespace py::proj::Microsoft::Graphics::Imaging
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::Graphics::Imaging::ImageBufferPixelFormat> = "i";
+#include "py.Microsoft.Graphics.Imaging.types.h"
 
 
-    template<>
-    struct py_type<winrt::Microsoft::Graphics::Imaging::ImageBufferPixelFormat>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.graphics.imaging.ImageBufferPixelFormat";
-        static constexpr const char* module_name = "winui3.microsoft.graphics.imaging";
-        static constexpr const char* type_name = "ImageBufferPixelFormat";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Graphics::Imaging::ImageBuffer>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.graphics.imaging.ImageBuffer";
-        static constexpr const char* module_name = "winui3.microsoft.graphics.imaging";
-        static constexpr const char* type_name = "ImageBuffer";
-    };
-}
-
-#if __has_include("py.Windows.Graphics.Imaging.h")
-#include "py.Windows.Graphics.Imaging.h"
+#if __has_include("py.Windows.Graphics.Imaging.types.h")
+#include "py.Windows.Graphics.Imaging.types.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
 namespace py::impl::Microsoft::Graphics::Imaging

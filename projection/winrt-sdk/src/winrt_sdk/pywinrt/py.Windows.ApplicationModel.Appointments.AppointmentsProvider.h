@@ -4,53 +4,14 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.ApplicationModel.Appointments.h>
 #include <winrt/Windows.Foundation.h>
 
 #include <winrt/Windows.ApplicationModel.Appointments.AppointmentsProvider.h>
+#include "py.Windows.ApplicationModel.Appointments.AppointmentsProvider.types.h"
 
-namespace py::proj::Windows::ApplicationModel::Appointments::AppointmentsProvider
-{
-}
 
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::AddAppointmentOperation>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appointments.appointmentsprovider.AddAppointmentOperation";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments.appointmentsprovider";
-        static constexpr const char* type_name = "AddAppointmentOperation";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::AppointmentsProviderLaunchActionVerbs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appointments.appointmentsprovider.AppointmentsProviderLaunchActionVerbs";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments.appointmentsprovider";
-        static constexpr const char* type_name = "AppointmentsProviderLaunchActionVerbs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::RemoveAppointmentOperation>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appointments.appointmentsprovider.RemoveAppointmentOperation";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments.appointmentsprovider";
-        static constexpr const char* type_name = "RemoveAppointmentOperation";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::ReplaceAppointmentOperation>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appointments.appointmentsprovider.ReplaceAppointmentOperation";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments.appointmentsprovider";
-        static constexpr const char* type_name = "ReplaceAppointmentOperation";
-    };
-}
-
-#if __has_include("py.Windows.ApplicationModel.Appointments.h")
-#include "py.Windows.ApplicationModel.Appointments.h"
+#if __has_include("py.Windows.ApplicationModel.Appointments.types.h")
+#include "py.Windows.ApplicationModel.Appointments.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")

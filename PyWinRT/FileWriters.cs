@@ -79,6 +79,7 @@ static class FileWriters
         // are read-only while the writers run in parallel.
         members.GetReferencedNamespaces(packageMap, includeDelegates: true);
         members.GetReferencedNamespaces(packageMap, includeInheritedInterfaces: true);
+        members.GetFullHeaderNamespaces(packageMap);
 
         // The generated files are independent of each other, so write them
         // in parallel. This helps the largest namespaces, which would
@@ -87,6 +88,7 @@ static class FileWriters
             () => WriteNamespaceCpp(nsPackageDir, ns, packageMap, members, componentDlls, 0),
             () => WriteNamespaceCpp(nsPackageDir, ns, packageMap, members, componentDlls, 1),
             () => WriteNamespaceH(headerDir, ns, packageMap, members, componentDlls),
+            () => WriteNamespaceTypesH(headerDir, ns, members),
             () =>
                 WriteNamespaceDunderInitPy(
                     nsDir,
@@ -584,6 +586,7 @@ static class FileWriters
             packageMap,
             includeDelegates: true
         );
+        var fullHeaderNamespaces = members.GetFullHeaderNamespaces(packageMap);
 
         w.WriteLicense();
         w.WriteBlankLine();
@@ -594,63 +597,35 @@ static class FileWriters
             $"static_assert(winrt::check_version(PYWINRT_VERSION, \"{PyWinRT.VersionString}\"), \"Mismatched Py/WinRT headers.\");"
         );
 
-        foreach (var rns in referencedNamespaces)
+        // The C++/WinRT header of this namespace already includes the
+        // declarations (impl/*.2.h) of every namespace it references, which is
+        // all that is needed to wrap and unwrap objects of those types. The
+        // full (and much larger) header of another namespace is only needed
+        // for its delegates and generic types.
+        foreach (var rns in fullHeaderNamespaces)
         {
             w.WriteLine($"#include <winrt/{rns.Namespace}.h>");
         }
 
         w.WriteBlankLine();
         w.WriteLine($"#include <winrt/{ns.Namespace}.h>");
+        w.WriteLine($"#include \"py.{ns.Namespace}.types.h\"");
         w.WriteBlankLine();
 
-        w.WriteLine($"namespace py::proj::{ns.Namespace.ToCppNamespace()}");
-        w.WriteBlock(() =>
-        {
-            foreach (
-                var (i, iface) in members
-                    .Interfaces.Where(i => i.IsGeneric)
-                    .Select((iface, i) => (i, iface))
-            )
-            {
-                if (i > 0)
-                {
-                    w.WriteBlankLine();
-                }
-
-                w.WriteGenericInterfaceDecl(iface);
-            }
-        });
-
-        w.WriteBlankLine();
-        w.WriteLine("namespace py");
-        w.WriteBlock(() =>
-        {
-            foreach (var type in members.Enums)
-            {
-                w.WriteEnumBufferFormat(type);
-            }
-
-            foreach (var type in members.Structs.Where(s => !s.Type.IsCustomizedStruct()))
-            {
-                w.WriteStructBufferFormat(type);
-            }
-
-            foreach (
-                var type in members
-                    .Enums.Concat(members.Classes)
-                    .Concat(members.Interfaces)
-                    .Concat(members.Structs)
-            )
-            {
-                w.WritePyTypeSpecializationStruct(type, ns);
-            }
-        });
-
+        // Only the Python type names of the referenced namespaces are needed
+        // to convert their types, so include the light "types" header of each
+        // one. The full header, which drags in the full C++/WinRT header of
+        // that namespace and its own dependencies, is only needed for the
+        // delegate and generic interface wrappers.
         foreach (var rns in referencedNamespaces)
         {
+            var header = fullHeaderNamespaces.Contains(rns)
+                ? $"py.{rns.Namespace}.h"
+                : $"py.{rns.Namespace}.types.h";
+
             w.WriteBlankLine();
-            w.WriteLine($"#if __has_include(\"py.{rns.Namespace}.h\")");
-            w.WriteLine($"#include \"py.{rns.Namespace}.h\"");
+            w.WriteLine($"#if __has_include(\"{header}\")");
+            w.WriteLine($"#include \"{header}\"");
             w.WriteLine("#endif");
         }
 
@@ -711,6 +686,82 @@ static class FileWriters
         });
 
         sw.WriteFileIfChanged(headerDir, $"py.{ns.Namespace}.h");
+    }
+
+    /// <summary>
+    /// Writes the light <c>py.Namespace.types.h</c> header, which only maps
+    /// the C++/WinRT types of a namespace to their Python type names.
+    /// </summary>
+    /// <remarks>
+    /// This is what other namespaces include to convert types from this
+    /// namespace. It depends only on the C++/WinRT type declarations
+    /// (<c>impl/*.2.h</c>), not on the full C++/WinRT header, which keeps the
+    /// include fan-out (and compile time) of every module that references
+    /// this namespace small.
+    /// </remarks>
+    private static void WriteNamespaceTypesH(
+        DirectoryInfo headerDir,
+        QualifiedNamespace ns,
+        Members members
+    )
+    {
+        using var sw = new StringWriter();
+        using var w = new IndentedTextWriter(sw) { NewLine = "\n" };
+
+        w.WriteLicense();
+        w.WriteBlankLine();
+        w.WriteLine("#pragma once");
+        w.WriteLine();
+        w.WriteLine("#include \"pybase.h\"");
+        w.WriteLine($"#include <winrt/impl/{ns.Namespace}.2.h>");
+        w.WriteBlankLine();
+
+        // The Python wrapper of a generic interface is its abstract "proj"
+        // type, which the py_type specializations below refer to.
+        w.WriteLine($"namespace py::proj::{ns.Namespace.ToCppNamespace()}");
+        w.WriteBlock(() =>
+        {
+            foreach (
+                var (i, iface) in members
+                    .Interfaces.Where(i => i.IsGeneric)
+                    .Select((iface, i) => (i, iface))
+            )
+            {
+                if (i > 0)
+                {
+                    w.WriteBlankLine();
+                }
+
+                w.WriteGenericInterfaceDecl(iface);
+            }
+        });
+
+        w.WriteBlankLine();
+        w.WriteLine("namespace py");
+        w.WriteBlock(() =>
+        {
+            foreach (var type in members.Enums)
+            {
+                w.WriteEnumBufferFormat(type);
+            }
+
+            foreach (var type in members.Structs.Where(s => !s.Type.IsCustomizedStruct()))
+            {
+                w.WriteStructBufferFormat(type);
+            }
+
+            foreach (
+                var type in members
+                    .Enums.Concat(members.Classes)
+                    .Concat(members.Interfaces)
+                    .Concat(members.Structs)
+            )
+            {
+                w.WritePyTypeSpecializationStruct(type, ns);
+            }
+        });
+
+        sw.WriteFileIfChanged(headerDir, $"py.{ns.Namespace}.types.h");
     }
 
     private static void WriteNamespaceCpp(

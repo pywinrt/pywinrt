@@ -4,211 +4,26 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Storage.Streams.h>
-#include <winrt/Microsoft.Windows.Widgets.Notifications.h>
 
 #include <winrt/Microsoft.Windows.Widgets.Feeds.Providers.h>
+#include "py.Microsoft.Windows.Widgets.Feeds.Providers.types.h"
 
-namespace py::proj::Microsoft::Windows::Widgets::Feeds::Providers
-{
-}
 
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::CustomQueryParametersRequestedArgs>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.feeds.providers.CustomQueryParametersRequestedArgs";
-        static constexpr const char* module_name = "winui3.microsoft.windows.widgets.feeds.providers";
-        static constexpr const char* type_name = "CustomQueryParametersRequestedArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::CustomQueryParametersUpdateOptions>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.feeds.providers.CustomQueryParametersUpdateOptions";
-        static constexpr const char* module_name = "winui3.microsoft.windows.widgets.feeds.providers";
-        static constexpr const char* type_name = "CustomQueryParametersUpdateOptions";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedAnalyticsInfoReportedArgs>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.feeds.providers.FeedAnalyticsInfoReportedArgs";
-        static constexpr const char* module_name = "winui3.microsoft.windows.widgets.feeds.providers";
-        static constexpr const char* type_name = "FeedAnalyticsInfoReportedArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedDisabledArgs>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.feeds.providers.FeedDisabledArgs";
-        static constexpr const char* module_name = "winui3.microsoft.windows.widgets.feeds.providers";
-        static constexpr const char* type_name = "FeedDisabledArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedEnabledArgs>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.feeds.providers.FeedEnabledArgs";
-        static constexpr const char* module_name = "winui3.microsoft.windows.widgets.feeds.providers";
-        static constexpr const char* type_name = "FeedEnabledArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedErrorInfoReportedArgs>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.feeds.providers.FeedErrorInfoReportedArgs";
-        static constexpr const char* module_name = "winui3.microsoft.windows.widgets.feeds.providers";
-        static constexpr const char* type_name = "FeedErrorInfoReportedArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedManager>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.feeds.providers.FeedManager";
-        static constexpr const char* module_name = "winui3.microsoft.windows.widgets.feeds.providers";
-        static constexpr const char* type_name = "FeedManager";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedMessageReceivedArgs>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.feeds.providers.FeedMessageReceivedArgs";
-        static constexpr const char* module_name = "winui3.microsoft.windows.widgets.feeds.providers";
-        static constexpr const char* type_name = "FeedMessageReceivedArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedProviderDisabledArgs>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.feeds.providers.FeedProviderDisabledArgs";
-        static constexpr const char* module_name = "winui3.microsoft.windows.widgets.feeds.providers";
-        static constexpr const char* type_name = "FeedProviderDisabledArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedProviderEnabledArgs>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.feeds.providers.FeedProviderEnabledArgs";
-        static constexpr const char* module_name = "winui3.microsoft.windows.widgets.feeds.providers";
-        static constexpr const char* type_name = "FeedProviderEnabledArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedProviderInfo>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.feeds.providers.FeedProviderInfo";
-        static constexpr const char* module_name = "winui3.microsoft.windows.widgets.feeds.providers";
-        static constexpr const char* type_name = "FeedProviderInfo";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequest>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.feeds.providers.FeedResourceRequest";
-        static constexpr const char* module_name = "winui3.microsoft.windows.widgets.feeds.providers";
-        static constexpr const char* type_name = "FeedResourceRequest";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequestedArgs>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.feeds.providers.FeedResourceRequestedArgs";
-        static constexpr const char* module_name = "winui3.microsoft.windows.widgets.feeds.providers";
-        static constexpr const char* type_name = "FeedResourceRequestedArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceResponse>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.feeds.providers.FeedResourceResponse";
-        static constexpr const char* module_name = "winui3.microsoft.windows.widgets.feeds.providers";
-        static constexpr const char* type_name = "FeedResourceResponse";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedAnnouncementInvokedTarget>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.feeds.providers._IFeedAnnouncementInvokedTarget";
-        static constexpr const char* module_name = "winui3.microsoft.windows.widgets.feeds.providers";
-        static constexpr const char* type_name = "_IFeedAnnouncementInvokedTarget";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.feeds.providers._IFeedManager";
-        static constexpr const char* module_name = "winui3.microsoft.windows.widgets.feeds.providers";
-        static constexpr const char* type_name = "_IFeedManager";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager2>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.feeds.providers._IFeedManager2";
-        static constexpr const char* module_name = "winui3.microsoft.windows.widgets.feeds.providers";
-        static constexpr const char* type_name = "_IFeedManager2";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProvider>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.feeds.providers._IFeedProvider";
-        static constexpr const char* module_name = "winui3.microsoft.windows.widgets.feeds.providers";
-        static constexpr const char* type_name = "_IFeedProvider";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderAnalytics>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.feeds.providers._IFeedProviderAnalytics";
-        static constexpr const char* module_name = "winui3.microsoft.windows.widgets.feeds.providers";
-        static constexpr const char* type_name = "_IFeedProviderAnalytics";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderErrors>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.feeds.providers._IFeedProviderErrors";
-        static constexpr const char* module_name = "winui3.microsoft.windows.widgets.feeds.providers";
-        static constexpr const char* type_name = "_IFeedProviderErrors";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderMessage>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.feeds.providers._IFeedProviderMessage";
-        static constexpr const char* module_name = "winui3.microsoft.windows.widgets.feeds.providers";
-        static constexpr const char* type_name = "_IFeedProviderMessage";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceProvider>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.feeds.providers._IFeedResourceProvider";
-        static constexpr const char* module_name = "winui3.microsoft.windows.widgets.feeds.providers";
-        static constexpr const char* type_name = "_IFeedResourceProvider";
-    };
-}
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.Collections.h")
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
-#if __has_include("py.Microsoft.Windows.Widgets.Notifications.h")
-#include "py.Microsoft.Windows.Widgets.Notifications.h"
+#if __has_include("py.Microsoft.Windows.Widgets.Notifications.types.h")
+#include "py.Microsoft.Windows.Widgets.Notifications.types.h"
 #endif
 
 namespace py::impl::Microsoft::Windows::Widgets::Feeds::Providers

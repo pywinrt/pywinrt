@@ -8,55 +8,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.Devices.Radios.h>
+#include "py.Windows.Devices.Radios.types.h"
 
-namespace py::proj::Windows::Devices::Radios
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::Radios::RadioAccessStatus> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::Radios::RadioKind> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::Radios::RadioState> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Radios::RadioAccessStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.radios.RadioAccessStatus";
-        static constexpr const char* module_name = "winrt.windows.devices.radios";
-        static constexpr const char* type_name = "RadioAccessStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Radios::RadioKind>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.radios.RadioKind";
-        static constexpr const char* module_name = "winrt.windows.devices.radios";
-        static constexpr const char* type_name = "RadioKind";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Radios::RadioState>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.radios.RadioState";
-        static constexpr const char* module_name = "winrt.windows.devices.radios";
-        static constexpr const char* type_name = "RadioState";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Radios::Radio>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.radios.Radio";
-        static constexpr const char* module_name = "winrt.windows.devices.radios";
-        static constexpr const char* type_name = "Radio";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"

@@ -4,40 +4,14 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Devices.Geolocation.h>
 #include <winrt/Windows.Foundation.h>
 
 #include <winrt/Windows.Devices.Geolocation.Provider.h>
-
-namespace py::proj::Windows::Devices::Geolocation::Provider
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::Geolocation::Provider::LocationOverrideStatus> = "i";
+#include "py.Windows.Devices.Geolocation.Provider.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::Devices::Geolocation::Provider::LocationOverrideStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.provider.LocationOverrideStatus";
-        static constexpr const char* module_name = "winrt.windows.devices.geolocation.provider";
-        static constexpr const char* type_name = "LocationOverrideStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Geolocation::Provider::GeolocationProvider>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.provider.GeolocationProvider";
-        static constexpr const char* module_name = "winrt.windows.devices.geolocation.provider";
-        static constexpr const char* type_name = "GeolocationProvider";
-    };
-}
-
-#if __has_include("py.Windows.Devices.Geolocation.h")
-#include "py.Windows.Devices.Geolocation.h"
+#if __has_include("py.Windows.Devices.Geolocation.types.h")
+#include "py.Windows.Devices.Geolocation.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")

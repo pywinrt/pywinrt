@@ -8,30 +8,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.ApplicationModel.CommunicationBlocking.h>
+#include "py.Windows.ApplicationModel.CommunicationBlocking.types.h"
 
-namespace py::proj::Windows::ApplicationModel::CommunicationBlocking
-{
-}
-
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAccessManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.communicationblocking.CommunicationBlockingAccessManager";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.communicationblocking";
-        static constexpr const char* type_name = "CommunicationBlockingAccessManager";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAppManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.communicationblocking.CommunicationBlockingAppManager";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.communicationblocking";
-        static constexpr const char* type_name = "CommunicationBlockingAppManager";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"

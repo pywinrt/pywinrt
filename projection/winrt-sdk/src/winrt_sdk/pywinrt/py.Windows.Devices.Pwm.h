@@ -4,49 +4,15 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Devices.Pwm.Provider.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.Devices.Pwm.h>
-
-namespace py::proj::Windows::Devices::Pwm
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::Pwm::PwmPulsePolarity> = "i";
+#include "py.Windows.Devices.Pwm.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::Devices::Pwm::PwmPulsePolarity>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.pwm.PwmPulsePolarity";
-        static constexpr const char* module_name = "winrt.windows.devices.pwm";
-        static constexpr const char* type_name = "PwmPulsePolarity";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Pwm::PwmController>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.pwm.PwmController";
-        static constexpr const char* module_name = "winrt.windows.devices.pwm";
-        static constexpr const char* type_name = "PwmController";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Pwm::PwmPin>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.pwm.PwmPin";
-        static constexpr const char* module_name = "winrt.windows.devices.pwm";
-        static constexpr const char* type_name = "PwmPin";
-    };
-}
-
-#if __has_include("py.Windows.Devices.Pwm.Provider.h")
-#include "py.Windows.Devices.Pwm.Provider.h"
+#if __has_include("py.Windows.Devices.Pwm.Provider.types.h")
+#include "py.Windows.Devices.Pwm.Provider.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")

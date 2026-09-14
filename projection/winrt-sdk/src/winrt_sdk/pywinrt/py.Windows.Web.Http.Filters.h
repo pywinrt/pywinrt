@@ -6,86 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Networking.Sockets.h>
-#include <winrt/Windows.Security.Credentials.h>
-#include <winrt/Windows.Security.Cryptography.Certificates.h>
-#include <winrt/Windows.System.h>
-#include <winrt/Windows.Web.Http.h>
 
 #include <winrt/Windows.Web.Http.Filters.h>
+#include "py.Windows.Web.Http.Filters.types.h"
 
-namespace py::proj::Windows::Web::Http::Filters
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Web::Http::Filters::HttpCacheReadBehavior> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Web::Http::Filters::HttpCacheWriteBehavior> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Web::Http::Filters::HttpCookieUsageBehavior> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Filters::HttpCacheReadBehavior>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.filters.HttpCacheReadBehavior";
-        static constexpr const char* module_name = "winrt.windows.web.http.filters";
-        static constexpr const char* type_name = "HttpCacheReadBehavior";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Filters::HttpCacheWriteBehavior>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.filters.HttpCacheWriteBehavior";
-        static constexpr const char* module_name = "winrt.windows.web.http.filters";
-        static constexpr const char* type_name = "HttpCacheWriteBehavior";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Filters::HttpCookieUsageBehavior>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.filters.HttpCookieUsageBehavior";
-        static constexpr const char* module_name = "winrt.windows.web.http.filters";
-        static constexpr const char* type_name = "HttpCookieUsageBehavior";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Filters::HttpBaseProtocolFilter>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.filters.HttpBaseProtocolFilter";
-        static constexpr const char* module_name = "winrt.windows.web.http.filters";
-        static constexpr const char* type_name = "HttpBaseProtocolFilter";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Filters::HttpCacheControl>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.filters.HttpCacheControl";
-        static constexpr const char* module_name = "winrt.windows.web.http.filters";
-        static constexpr const char* type_name = "HttpCacheControl";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Filters::HttpServerCustomValidationRequestedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.filters.HttpServerCustomValidationRequestedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.web.http.filters";
-        static constexpr const char* type_name = "HttpServerCustomValidationRequestedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::Http::Filters::IHttpFilter>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.http.filters._IHttpFilter";
-        static constexpr const char* module_name = "winrt.windows.web.http.filters";
-        static constexpr const char* type_name = "_IHttpFilter";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -95,24 +19,24 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Networking.Sockets.h")
-#include "py.Windows.Networking.Sockets.h"
+#if __has_include("py.Windows.Networking.Sockets.types.h")
+#include "py.Windows.Networking.Sockets.types.h"
 #endif
 
-#if __has_include("py.Windows.Security.Credentials.h")
-#include "py.Windows.Security.Credentials.h"
+#if __has_include("py.Windows.Security.Credentials.types.h")
+#include "py.Windows.Security.Credentials.types.h"
 #endif
 
-#if __has_include("py.Windows.Security.Cryptography.Certificates.h")
-#include "py.Windows.Security.Cryptography.Certificates.h"
+#if __has_include("py.Windows.Security.Cryptography.Certificates.types.h")
+#include "py.Windows.Security.Cryptography.Certificates.types.h"
 #endif
 
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
+#if __has_include("py.Windows.System.types.h")
+#include "py.Windows.System.types.h"
 #endif
 
-#if __has_include("py.Windows.Web.Http.h")
-#include "py.Windows.Web.Http.h"
+#if __has_include("py.Windows.Web.Http.types.h")
+#include "py.Windows.Web.Http.types.h"
 #endif
 
 namespace py::impl::Windows::Web::Http::Filters

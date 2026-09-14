@@ -4,99 +4,15 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Devices.I2c.Provider.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.Devices.I2c.h>
-
-namespace py::proj::Windows::Devices::I2c
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::I2c::I2cBusSpeed> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::I2c::I2cSharingMode> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::I2c::I2cTransferStatus> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::I2c::I2cTransferResult> = "T{i:status:I:bytes_transferred:}";
+#include "py.Windows.Devices.I2c.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::Devices::I2c::I2cBusSpeed>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.i2c.I2cBusSpeed";
-        static constexpr const char* module_name = "winrt.windows.devices.i2c";
-        static constexpr const char* type_name = "I2cBusSpeed";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::I2c::I2cSharingMode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.i2c.I2cSharingMode";
-        static constexpr const char* module_name = "winrt.windows.devices.i2c";
-        static constexpr const char* type_name = "I2cSharingMode";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::I2c::I2cTransferStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.i2c.I2cTransferStatus";
-        static constexpr const char* module_name = "winrt.windows.devices.i2c";
-        static constexpr const char* type_name = "I2cTransferStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::I2c::I2cConnectionSettings>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.i2c.I2cConnectionSettings";
-        static constexpr const char* module_name = "winrt.windows.devices.i2c";
-        static constexpr const char* type_name = "I2cConnectionSettings";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::I2c::I2cController>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.i2c.I2cController";
-        static constexpr const char* module_name = "winrt.windows.devices.i2c";
-        static constexpr const char* type_name = "I2cController";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::I2c::I2cDevice>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.i2c.I2cDevice";
-        static constexpr const char* module_name = "winrt.windows.devices.i2c";
-        static constexpr const char* type_name = "I2cDevice";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::I2c::II2cDeviceStatics>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.i2c._II2cDeviceStatics";
-        static constexpr const char* module_name = "winrt.windows.devices.i2c";
-        static constexpr const char* type_name = "_II2cDeviceStatics";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::I2c::I2cTransferResult>
-    {
-        static constexpr std::string_view from_tuple = "winrt._winrt_windows_devices_i2c.I2cTransferResult_from_tuple";
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.i2c.I2cTransferResult";
-        static constexpr const char* module_name = "winrt.windows.devices.i2c";
-        static constexpr const char* type_name = "I2cTransferResult";
-    };
-}
-
-#if __has_include("py.Windows.Devices.I2c.Provider.h")
-#include "py.Windows.Devices.I2c.Provider.h"
+#if __has_include("py.Windows.Devices.I2c.Provider.types.h")
+#include "py.Windows.Devices.I2c.Provider.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")

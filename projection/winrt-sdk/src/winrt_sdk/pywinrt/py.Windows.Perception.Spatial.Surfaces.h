@@ -6,60 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Foundation.Numerics.h>
-#include <winrt/Windows.Graphics.DirectX.h>
-#include <winrt/Windows.Perception.Spatial.h>
-#include <winrt/Windows.Storage.Streams.h>
 
 #include <winrt/Windows.Perception.Spatial.Surfaces.h>
+#include "py.Windows.Perception.Spatial.Surfaces.types.h"
 
-namespace py::proj::Windows::Perception::Spatial::Surfaces
-{
-}
-
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceInfo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.surfaces.SpatialSurfaceInfo";
-        static constexpr const char* module_name = "winrt.windows.perception.spatial.surfaces";
-        static constexpr const char* type_name = "SpatialSurfaceInfo";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMesh>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.surfaces.SpatialSurfaceMesh";
-        static constexpr const char* module_name = "winrt.windows.perception.spatial.surfaces";
-        static constexpr const char* type_name = "SpatialSurfaceMesh";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshBuffer>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.surfaces.SpatialSurfaceMeshBuffer";
-        static constexpr const char* module_name = "winrt.windows.perception.spatial.surfaces";
-        static constexpr const char* type_name = "SpatialSurfaceMeshBuffer";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshOptions>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.surfaces.SpatialSurfaceMeshOptions";
-        static constexpr const char* module_name = "winrt.windows.perception.spatial.surfaces";
-        static constexpr const char* type_name = "SpatialSurfaceMeshOptions";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceObserver>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.surfaces.SpatialSurfaceObserver";
-        static constexpr const char* module_name = "winrt.windows.perception.spatial.surfaces";
-        static constexpr const char* type_name = "SpatialSurfaceObserver";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -69,20 +19,20 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Foundation.Numerics.h")
-#include "py.Windows.Foundation.Numerics.h"
+#if __has_include("py.Windows.Foundation.Numerics.types.h")
+#include "py.Windows.Foundation.Numerics.types.h"
 #endif
 
-#if __has_include("py.Windows.Graphics.DirectX.h")
-#include "py.Windows.Graphics.DirectX.h"
+#if __has_include("py.Windows.Graphics.DirectX.types.h")
+#include "py.Windows.Graphics.DirectX.types.h"
 #endif
 
-#if __has_include("py.Windows.Perception.Spatial.h")
-#include "py.Windows.Perception.Spatial.h"
+#if __has_include("py.Windows.Perception.Spatial.types.h")
+#include "py.Windows.Perception.Spatial.types.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
 namespace py::impl::Windows::Perception::Spatial::Surfaces

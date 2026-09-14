@@ -6,41 +6,8 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
 #include <winrt/Windows.Management.Workplace.h>
+#include "py.Windows.Management.Workplace.types.h"
 
-namespace py::proj::Windows::Management::Workplace
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Management::Workplace::MessagingSyncPolicy> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Management::Workplace::MessagingSyncPolicy>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.management.workplace.MessagingSyncPolicy";
-        static constexpr const char* module_name = "winrt.windows.management.workplace";
-        static constexpr const char* type_name = "MessagingSyncPolicy";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Management::Workplace::MdmPolicy>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.management.workplace.MdmPolicy";
-        static constexpr const char* module_name = "winrt.windows.management.workplace";
-        static constexpr const char* type_name = "MdmPolicy";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Management::Workplace::WorkplaceSettings>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.management.workplace.WorkplaceSettings";
-        static constexpr const char* module_name = "winrt.windows.management.workplace";
-        static constexpr const char* type_name = "WorkplaceSettings";
-    };
-}
 
 namespace py::impl::Windows::Management::Workplace
 {

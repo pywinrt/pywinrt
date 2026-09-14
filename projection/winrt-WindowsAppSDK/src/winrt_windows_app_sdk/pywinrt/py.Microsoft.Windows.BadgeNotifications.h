@@ -6,33 +6,8 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
 #include <winrt/Microsoft.Windows.BadgeNotifications.h>
+#include "py.Microsoft.Windows.BadgeNotifications.types.h"
 
-namespace py::proj::Microsoft::Windows::BadgeNotifications
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::Windows::BadgeNotifications::BadgeNotificationGlyph> = "i";
-
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::BadgeNotifications::BadgeNotificationGlyph>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.badgenotifications.BadgeNotificationGlyph";
-        static constexpr const char* module_name = "winui3.microsoft.windows.badgenotifications";
-        static constexpr const char* type_name = "BadgeNotificationGlyph";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::BadgeNotifications::BadgeNotificationManager>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.badgenotifications.BadgeNotificationManager";
-        static constexpr const char* module_name = "winui3.microsoft.windows.badgenotifications";
-        static constexpr const char* type_name = "BadgeNotificationManager";
-    };
-}
 
 namespace py::impl::Microsoft::Windows::BadgeNotifications
 {

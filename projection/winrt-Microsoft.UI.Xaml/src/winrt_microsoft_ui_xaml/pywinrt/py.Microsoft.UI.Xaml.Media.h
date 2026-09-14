@@ -6,82 +6,13 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.UI.h>
 #include <winrt/Windows.UI.Composition.h>
 #include <winrt/Windows.UI.Xaml.h>
 #include <winrt/Windows.UI.Xaml.Media.h>
 
 #include <winrt/Microsoft.UI.Xaml.Media.h>
+#include "py.Microsoft.UI.Xaml.Media.types.h"
 
-namespace py::proj::Microsoft::UI::Xaml::Media
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Media::AcrylicBackgroundSource> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Media::RevealBrushState> = "i";
-
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Media::AcrylicBackgroundSource>
-    {
-        static constexpr std::string_view qualified_name = "winui2.microsoft.ui.xaml.media.AcrylicBackgroundSource";
-        static constexpr const char* module_name = "winui2.microsoft.ui.xaml.media";
-        static constexpr const char* type_name = "AcrylicBackgroundSource";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Media::RevealBrushState>
-    {
-        static constexpr std::string_view qualified_name = "winui2.microsoft.ui.xaml.media.RevealBrushState";
-        static constexpr const char* module_name = "winui2.microsoft.ui.xaml.media";
-        static constexpr const char* type_name = "RevealBrushState";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>
-    {
-        static constexpr std::string_view qualified_name = "winui2.microsoft.ui.xaml.media.AcrylicBrush";
-        static constexpr const char* module_name = "winui2.microsoft.ui.xaml.media";
-        static constexpr const char* type_name = "AcrylicBrush";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>
-    {
-        static constexpr std::string_view qualified_name = "winui2.microsoft.ui.xaml.media.RadialGradientBrush";
-        static constexpr const char* module_name = "winui2.microsoft.ui.xaml.media";
-        static constexpr const char* type_name = "RadialGradientBrush";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Media::RevealBackgroundBrush>
-    {
-        static constexpr std::string_view qualified_name = "winui2.microsoft.ui.xaml.media.RevealBackgroundBrush";
-        static constexpr const char* module_name = "winui2.microsoft.ui.xaml.media";
-        static constexpr const char* type_name = "RevealBackgroundBrush";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Media::RevealBorderBrush>
-    {
-        static constexpr std::string_view qualified_name = "winui2.microsoft.ui.xaml.media.RevealBorderBrush";
-        static constexpr const char* module_name = "winui2.microsoft.ui.xaml.media";
-        static constexpr const char* type_name = "RevealBorderBrush";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Media::RevealBrush>
-    {
-        static constexpr std::string_view qualified_name = "winui2.microsoft.ui.xaml.media.RevealBrush";
-        static constexpr const char* module_name = "winui2.microsoft.ui.xaml.media";
-        static constexpr const char* type_name = "RevealBrush";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -91,8 +22,8 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
+#if __has_include("py.Windows.UI.types.h")
+#include "py.Windows.UI.types.h"
 #endif
 
 #if __has_include("py.Windows.UI.Composition.h")

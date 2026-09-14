@@ -4,33 +4,17 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.UI.Input.h>
-#include <winrt/Windows.UI.WindowManagement.h>
 
 #include <winrt/Windows.UI.Input.Preview.h>
+#include "py.Windows.UI.Input.Preview.types.h"
 
-namespace py::proj::Windows::UI::Input::Preview
-{
-}
 
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::UI::Input::Preview::InputActivationListenerPreview>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.preview.InputActivationListenerPreview";
-        static constexpr const char* module_name = "winrt.windows.ui.input.preview";
-        static constexpr const char* type_name = "InputActivationListenerPreview";
-    };
-}
-
-#if __has_include("py.Windows.UI.Input.h")
-#include "py.Windows.UI.Input.h"
+#if __has_include("py.Windows.UI.Input.types.h")
+#include "py.Windows.UI.Input.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.WindowManagement.h")
-#include "py.Windows.UI.WindowManagement.h"
+#if __has_include("py.Windows.UI.WindowManagement.types.h")
+#include "py.Windows.UI.WindowManagement.types.h"
 #endif
 
 namespace py::impl::Windows::UI::Input::Preview

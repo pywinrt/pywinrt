@@ -7,51 +7,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Storage.h>
-#include <winrt/Windows.Storage.FileProperties.h>
 #include <winrt/Windows.Storage.Search.h>
 #include <winrt/Windows.Storage.Streams.h>
 
 #include <winrt/Windows.Storage.BulkAccess.h>
+#include "py.Windows.Storage.BulkAccess.types.h"
 
-namespace py::proj::Windows::Storage::BulkAccess
-{
-}
-
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::Storage::BulkAccess::FileInformation>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.bulkaccess.FileInformation";
-        static constexpr const char* module_name = "winrt.windows.storage.bulkaccess";
-        static constexpr const char* type_name = "FileInformation";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::BulkAccess::FileInformationFactory>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.bulkaccess.FileInformationFactory";
-        static constexpr const char* module_name = "winrt.windows.storage.bulkaccess";
-        static constexpr const char* type_name = "FileInformationFactory";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::BulkAccess::FolderInformation>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.bulkaccess.FolderInformation";
-        static constexpr const char* module_name = "winrt.windows.storage.bulkaccess";
-        static constexpr const char* type_name = "FolderInformation";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Storage::BulkAccess::IStorageItemInformation>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.storage.bulkaccess._IStorageItemInformation";
-        static constexpr const char* module_name = "winrt.windows.storage.bulkaccess";
-        static constexpr const char* type_name = "_IStorageItemInformation";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -65,8 +26,8 @@ namespace py
 #include "py.Windows.Storage.h"
 #endif
 
-#if __has_include("py.Windows.Storage.FileProperties.h")
-#include "py.Windows.Storage.FileProperties.h"
+#if __has_include("py.Windows.Storage.FileProperties.types.h")
+#include "py.Windows.Storage.FileProperties.types.h"
 #endif
 
 #if __has_include("py.Windows.Storage.Search.h")

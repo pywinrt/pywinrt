@@ -6,30 +6,8 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
 #include <winrt/Windows.System.Power.Diagnostics.h>
+#include "py.Windows.System.Power.Diagnostics.types.h"
 
-namespace py::proj::Windows::System::Power::Diagnostics
-{
-}
-
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Windows::System::Power::Diagnostics::BackgroundEnergyDiagnostics>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.power.diagnostics.BackgroundEnergyDiagnostics";
-        static constexpr const char* module_name = "winrt.windows.system.power.diagnostics";
-        static constexpr const char* type_name = "BackgroundEnergyDiagnostics";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Power::Diagnostics::ForegroundEnergyDiagnostics>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.power.diagnostics.ForegroundEnergyDiagnostics";
-        static constexpr const char* module_name = "winrt.windows.system.power.diagnostics";
-        static constexpr const char* type_name = "ForegroundEnergyDiagnostics";
-    };
-}
 
 namespace py::impl::Windows::System::Power::Diagnostics
 {

@@ -4,113 +4,15 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Devices.Enumeration.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Storage.Streams.h>
-#include <winrt/Windows.UI.Popups.h>
 
 #include <winrt/Windows.Media.Casting.h>
-
-namespace py::proj::Windows::Media::Casting
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::Casting::CastingConnectionErrorStatus> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::Casting::CastingConnectionState> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Media::Casting::CastingPlaybackTypes> = "I";
+#include "py.Windows.Media.Casting.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::Media::Casting::CastingConnectionErrorStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.casting.CastingConnectionErrorStatus";
-        static constexpr const char* module_name = "winrt.windows.media.casting";
-        static constexpr const char* type_name = "CastingConnectionErrorStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Casting::CastingConnectionState>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.casting.CastingConnectionState";
-        static constexpr const char* module_name = "winrt.windows.media.casting";
-        static constexpr const char* type_name = "CastingConnectionState";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Casting::CastingPlaybackTypes>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.casting.CastingPlaybackTypes";
-        static constexpr const char* module_name = "winrt.windows.media.casting";
-        static constexpr const char* type_name = "CastingPlaybackTypes";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Casting::CastingConnection>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.casting.CastingConnection";
-        static constexpr const char* module_name = "winrt.windows.media.casting";
-        static constexpr const char* type_name = "CastingConnection";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Casting::CastingConnectionErrorOccurredEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.casting.CastingConnectionErrorOccurredEventArgs";
-        static constexpr const char* module_name = "winrt.windows.media.casting";
-        static constexpr const char* type_name = "CastingConnectionErrorOccurredEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Casting::CastingDevice>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.casting.CastingDevice";
-        static constexpr const char* module_name = "winrt.windows.media.casting";
-        static constexpr const char* type_name = "CastingDevice";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Casting::CastingDevicePicker>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.casting.CastingDevicePicker";
-        static constexpr const char* module_name = "winrt.windows.media.casting";
-        static constexpr const char* type_name = "CastingDevicePicker";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Casting::CastingDevicePickerFilter>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.casting.CastingDevicePickerFilter";
-        static constexpr const char* module_name = "winrt.windows.media.casting";
-        static constexpr const char* type_name = "CastingDevicePickerFilter";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Casting::CastingDeviceSelectedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.casting.CastingDeviceSelectedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.media.casting";
-        static constexpr const char* type_name = "CastingDeviceSelectedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Media::Casting::CastingSource>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.media.casting.CastingSource";
-        static constexpr const char* module_name = "winrt.windows.media.casting";
-        static constexpr const char* type_name = "CastingSource";
-    };
-}
-
-#if __has_include("py.Windows.Devices.Enumeration.h")
-#include "py.Windows.Devices.Enumeration.h"
+#if __has_include("py.Windows.Devices.Enumeration.types.h")
+#include "py.Windows.Devices.Enumeration.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")
@@ -121,12 +23,12 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.Popups.h")
-#include "py.Windows.UI.Popups.h"
+#if __has_include("py.Windows.UI.Popups.types.h")
+#include "py.Windows.UI.Popups.types.h"
 #endif
 
 namespace py::impl::Windows::Media::Casting

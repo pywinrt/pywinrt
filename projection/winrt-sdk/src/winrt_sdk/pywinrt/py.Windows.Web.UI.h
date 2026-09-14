@@ -4,176 +4,15 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.ApplicationModel.DataTransfer.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Storage.Streams.h>
-#include <winrt/Windows.UI.h>
-#include <winrt/Windows.Web.h>
-#include <winrt/Windows.Web.Http.h>
 
 #include <winrt/Windows.Web.UI.h>
-
-namespace py::proj::Windows::Web::UI
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Web::UI::WebViewControlPermissionState> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Web::UI::WebViewControlPermissionType> = "i";
+#include "py.Windows.Web.UI.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::Web::UI::WebViewControlPermissionState>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.WebViewControlPermissionState";
-        static constexpr const char* module_name = "winrt.windows.web.ui";
-        static constexpr const char* type_name = "WebViewControlPermissionState";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::UI::WebViewControlPermissionType>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.WebViewControlPermissionType";
-        static constexpr const char* module_name = "winrt.windows.web.ui";
-        static constexpr const char* type_name = "WebViewControlPermissionType";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::UI::WebViewControlContentLoadingEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.WebViewControlContentLoadingEventArgs";
-        static constexpr const char* module_name = "winrt.windows.web.ui";
-        static constexpr const char* type_name = "WebViewControlContentLoadingEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::UI::WebViewControlDOMContentLoadedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.WebViewControlDOMContentLoadedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.web.ui";
-        static constexpr const char* type_name = "WebViewControlDOMContentLoadedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::UI::WebViewControlDeferredPermissionRequest>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.WebViewControlDeferredPermissionRequest";
-        static constexpr const char* module_name = "winrt.windows.web.ui";
-        static constexpr const char* type_name = "WebViewControlDeferredPermissionRequest";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::UI::WebViewControlLongRunningScriptDetectedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.WebViewControlLongRunningScriptDetectedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.web.ui";
-        static constexpr const char* type_name = "WebViewControlLongRunningScriptDetectedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::UI::WebViewControlNavigationCompletedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.WebViewControlNavigationCompletedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.web.ui";
-        static constexpr const char* type_name = "WebViewControlNavigationCompletedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::UI::WebViewControlNavigationStartingEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.WebViewControlNavigationStartingEventArgs";
-        static constexpr const char* module_name = "winrt.windows.web.ui";
-        static constexpr const char* type_name = "WebViewControlNavigationStartingEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::UI::WebViewControlNewWindowRequestedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.WebViewControlNewWindowRequestedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.web.ui";
-        static constexpr const char* type_name = "WebViewControlNewWindowRequestedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::UI::WebViewControlPermissionRequest>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.WebViewControlPermissionRequest";
-        static constexpr const char* module_name = "winrt.windows.web.ui";
-        static constexpr const char* type_name = "WebViewControlPermissionRequest";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::UI::WebViewControlPermissionRequestedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.WebViewControlPermissionRequestedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.web.ui";
-        static constexpr const char* type_name = "WebViewControlPermissionRequestedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::UI::WebViewControlScriptNotifyEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.WebViewControlScriptNotifyEventArgs";
-        static constexpr const char* module_name = "winrt.windows.web.ui";
-        static constexpr const char* type_name = "WebViewControlScriptNotifyEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::UI::WebViewControlSettings>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.WebViewControlSettings";
-        static constexpr const char* module_name = "winrt.windows.web.ui";
-        static constexpr const char* type_name = "WebViewControlSettings";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::UI::WebViewControlUnsupportedUriSchemeIdentifiedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.WebViewControlUnsupportedUriSchemeIdentifiedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.web.ui";
-        static constexpr const char* type_name = "WebViewControlUnsupportedUriSchemeIdentifiedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::UI::WebViewControlUnviewableContentIdentifiedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.WebViewControlUnviewableContentIdentifiedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.web.ui";
-        static constexpr const char* type_name = "WebViewControlUnviewableContentIdentifiedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::UI::WebViewControlWebResourceRequestedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.WebViewControlWebResourceRequestedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.web.ui";
-        static constexpr const char* type_name = "WebViewControlWebResourceRequestedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::UI::IWebViewControl>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.ui._IWebViewControl";
-        static constexpr const char* module_name = "winrt.windows.web.ui";
-        static constexpr const char* type_name = "_IWebViewControl";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Web::UI::IWebViewControl2>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.web.ui._IWebViewControl2";
-        static constexpr const char* module_name = "winrt.windows.web.ui";
-        static constexpr const char* type_name = "_IWebViewControl2";
-    };
-}
-
-#if __has_include("py.Windows.ApplicationModel.DataTransfer.h")
-#include "py.Windows.ApplicationModel.DataTransfer.h"
+#if __has_include("py.Windows.ApplicationModel.DataTransfer.types.h")
+#include "py.Windows.ApplicationModel.DataTransfer.types.h"
 #endif
 
 #if __has_include("py.Windows.Foundation.h")
@@ -184,20 +23,20 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
+#if __has_include("py.Windows.Storage.Streams.types.h")
+#include "py.Windows.Storage.Streams.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
+#if __has_include("py.Windows.UI.types.h")
+#include "py.Windows.UI.types.h"
 #endif
 
-#if __has_include("py.Windows.Web.h")
-#include "py.Windows.Web.h"
+#if __has_include("py.Windows.Web.types.h")
+#include "py.Windows.Web.types.h"
 #endif
 
-#if __has_include("py.Windows.Web.Http.h")
-#include "py.Windows.Web.Http.h"
+#if __has_include("py.Windows.Web.Http.types.h")
+#include "py.Windows.Web.Http.types.h"
 #endif
 
 namespace py::impl::Windows::Web::UI

@@ -4,89 +4,29 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.UI.h>
-#include <winrt/Windows.UI.Xaml.h>
-#include <winrt/Windows.UI.Xaml.Media.h>
-#include <winrt/Windows.UI.Xaml.Media.Media3D.h>
 
 #include <winrt/Windows.UI.Xaml.Core.Direct.h>
-
-namespace py::proj::Windows::UI::Xaml::Core::Direct
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::UI::Xaml::Core::Direct::XamlEventIndex> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::UI::Xaml::Core::Direct::XamlTypeIndex> = "i";
+#include "py.Windows.UI.Xaml.Core.Direct.types.h"
 
 
-    template<>
-    struct py_type<winrt::Windows::UI::Xaml::Core::Direct::XamlEventIndex>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.core.direct.XamlEventIndex";
-        static constexpr const char* module_name = "winrt.windows.ui.xaml.core.direct";
-        static constexpr const char* type_name = "XamlEventIndex";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.core.direct.XamlPropertyIndex";
-        static constexpr const char* module_name = "winrt.windows.ui.xaml.core.direct";
-        static constexpr const char* type_name = "XamlPropertyIndex";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Xaml::Core::Direct::XamlTypeIndex>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.core.direct.XamlTypeIndex";
-        static constexpr const char* module_name = "winrt.windows.ui.xaml.core.direct";
-        static constexpr const char* type_name = "XamlTypeIndex";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Xaml::Core::Direct::XamlDirect>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.core.direct.XamlDirect";
-        static constexpr const char* module_name = "winrt.windows.ui.xaml.core.direct";
-        static constexpr const char* type_name = "XamlDirect";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.core.direct._IXamlDirectObject";
-        static constexpr const char* module_name = "winrt.windows.ui.xaml.core.direct";
-        static constexpr const char* type_name = "_IXamlDirectObject";
-    };
-}
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
+#if __has_include("py.Windows.Foundation.types.h")
+#include "py.Windows.Foundation.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
+#if __has_include("py.Windows.UI.types.h")
+#include "py.Windows.UI.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.Xaml.h")
-#include "py.Windows.UI.Xaml.h"
+#if __has_include("py.Windows.UI.Xaml.types.h")
+#include "py.Windows.UI.Xaml.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.Xaml.Media.h")
-#include "py.Windows.UI.Xaml.Media.h"
+#if __has_include("py.Windows.UI.Xaml.Media.types.h")
+#include "py.Windows.UI.Xaml.Media.types.h"
 #endif
 
-#if __has_include("py.Windows.UI.Xaml.Media.Media3D.h")
-#include "py.Windows.UI.Xaml.Media.Media3D.h"
+#if __has_include("py.Windows.UI.Xaml.Media.Media3D.types.h")
+#include "py.Windows.UI.Xaml.Media.Media3D.types.h"
 #endif
 
 namespace py::impl::Windows::UI::Xaml::Core::Direct

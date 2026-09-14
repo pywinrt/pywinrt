@@ -4,28 +4,13 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Windows.ApplicationModel.Background.h>
 
 #include <winrt/Microsoft.Windows.ApplicationModel.Background.h>
+#include "py.Microsoft.Windows.ApplicationModel.Background.types.h"
 
-namespace py::proj::Microsoft::Windows::ApplicationModel::Background
-{
-}
 
-namespace py
-{
-
-    template<>
-    struct py_type<winrt::Microsoft::Windows::ApplicationModel::Background::BackgroundTaskBuilder>
-    {
-        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.applicationmodel.background.BackgroundTaskBuilder";
-        static constexpr const char* module_name = "winui3.microsoft.windows.applicationmodel.background";
-        static constexpr const char* type_name = "BackgroundTaskBuilder";
-    };
-}
-
-#if __has_include("py.Windows.ApplicationModel.Background.h")
-#include "py.Windows.ApplicationModel.Background.h"
+#if __has_include("py.Windows.ApplicationModel.Background.types.h")
+#include "py.Windows.ApplicationModel.Background.types.h"
 #endif
 
 namespace py::impl::Microsoft::Windows::ApplicationModel::Background

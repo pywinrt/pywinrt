@@ -7,41 +7,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.Devices.Adc.Provider.h>
+#include "py.Windows.Devices.Adc.Provider.types.h"
 
-namespace py::proj::Windows::Devices::Adc::Provider
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Devices::Adc::Provider::ProviderAdcChannelMode> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Adc::Provider::ProviderAdcChannelMode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.adc.provider.ProviderAdcChannelMode";
-        static constexpr const char* module_name = "winrt.windows.devices.adc.provider";
-        static constexpr const char* type_name = "ProviderAdcChannelMode";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Adc::Provider::IAdcControllerProvider>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.adc.provider._IAdcControllerProvider";
-        static constexpr const char* module_name = "winrt.windows.devices.adc.provider";
-        static constexpr const char* type_name = "_IAdcControllerProvider";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Devices::Adc::Provider::IAdcProvider>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.devices.adc.provider._IAdcProvider";
-        static constexpr const char* module_name = "winrt.windows.devices.adc.provider";
-        static constexpr const char* type_name = "_IAdcProvider";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.Collections.h")
 #include "py.Windows.Foundation.Collections.h"

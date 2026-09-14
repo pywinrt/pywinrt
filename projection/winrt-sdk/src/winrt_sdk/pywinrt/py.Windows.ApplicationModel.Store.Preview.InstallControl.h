@@ -6,129 +6,10 @@
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Management.Deployment.h>
-#include <winrt/Windows.System.h>
 
 #include <winrt/Windows.ApplicationModel.Store.Preview.InstallControl.h>
+#include "py.Windows.ApplicationModel.Store.Preview.InstallControl.types.h"
 
-namespace py::proj::Windows::ApplicationModel::Store::Preview::InstallControl
-{
-}
-
-namespace py
-{
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallState> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallType> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallationToastNotificationMode> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AutoUpdateSetting> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::GetEntitlementStatus> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallState>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallState";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview.installcontrol";
-        static constexpr const char* type_name = "AppInstallState";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallType>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallType";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview.installcontrol";
-        static constexpr const char* type_name = "AppInstallType";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallationToastNotificationMode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallationToastNotificationMode";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview.installcontrol";
-        static constexpr const char* type_name = "AppInstallationToastNotificationMode";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AutoUpdateSetting>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.installcontrol.AutoUpdateSetting";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview.installcontrol";
-        static constexpr const char* type_name = "AutoUpdateSetting";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::GetEntitlementStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.installcontrol.GetEntitlementStatus";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview.installcontrol";
-        static constexpr const char* type_name = "GetEntitlementStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallItem";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview.installcontrol";
-        static constexpr const char* type_name = "AppInstallItem";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallManager";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview.installcontrol";
-        static constexpr const char* type_name = "AppInstallManager";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManagerItemEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallManagerItemEventArgs";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview.installcontrol";
-        static constexpr const char* type_name = "AppInstallManagerItemEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallOptions";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview.installcontrol";
-        static constexpr const char* type_name = "AppInstallOptions";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallStatus>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallStatus";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview.installcontrol";
-        static constexpr const char* type_name = "AppInstallStatus";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppUpdateOptions>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.installcontrol.AppUpdateOptions";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview.installcontrol";
-        static constexpr const char* type_name = "AppUpdateOptions";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::GetEntitlementResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.installcontrol.GetEntitlementResult";
-        static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview.installcontrol";
-        static constexpr const char* type_name = "GetEntitlementResult";
-    };
-}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -138,12 +19,12 @@ namespace py
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Management.Deployment.h")
-#include "py.Windows.Management.Deployment.h"
+#if __has_include("py.Windows.Management.Deployment.types.h")
+#include "py.Windows.Management.Deployment.types.h"
 #endif
 
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
+#if __has_include("py.Windows.System.types.h")
+#include "py.Windows.System.types.h"
 #endif
 
 namespace py::impl::Windows::ApplicationModel::Store::Preview::InstallControl
