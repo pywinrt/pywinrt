@@ -30,6 +30,10 @@
   `py.<package>.guids.h` header instead of being recomputed by a constexpr
   SHA-1 in every module that uses them. Run `py .\scripts\verify-guids.py`
   after regenerating to check them against C++/WinRT.
+- The generated C++/WinRT headers now refer to the declarations of their parent
+  namespace instead of including its full header, which C++/WinRT does by
+  default even though it only uses the declarations. The full header is
+  included by the generated PyWinRT code where it is actually needed.
 
 ### Deprecated
 - The method names that v3.x generated from the
