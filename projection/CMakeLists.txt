@@ -28,10 +28,13 @@ string(JSON TEST_WINRT_VERSION GET ${TOOLS_JSON} "PyWinRT.TestWinRT")
 set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL")
 link_libraries("RuntimeObject.lib")
 
+# /GR- (-fno-rtti): nothing in the projection uses dynamic_cast or typeid, but
+# the RTTI data MSVC emits anyway is about 15% of the size of a module, most of
+# it type descriptors in writable .data.
 if (MSVC)
-    add_compile_options(/bigobj /permissive- /W4 /WX /Gy)
+    add_compile_options(/bigobj /permissive- /W4 /WX /Gy /GR-)
 else()
-    add_compile_options(-Werror -Wall -Wextra)
+    add_compile_options(-Werror -Wall -Wextra -fno-rtti)
 
     if (MINGW)
         add_definitions(-D_WIN32_WINNT=_WIN32_WINNT_WIN10)
