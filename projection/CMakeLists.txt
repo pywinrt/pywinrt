@@ -2,6 +2,11 @@ cmake_minimum_required(VERSION 3.31)
 cmake_policy(SET CMP0091 NEW)
 project(pywinrt-projection LANGUAGES CXX)
 
+# Embedded (/Z7) debug info instead of /Zi: the compiler no longer has to
+# serialize through mspdbsrv, the precompiled header is not tied to a .pdb (so
+# CMake does not have to copy it for every target that reuses the PCH), and it
+# roughly halves the time to build the PCH. Also required for compiler caches.
+set(CMAKE_MSVC_DEBUG_INFORMATION_FORMAT "$<$<CONFIG:Debug,RelWithDebInfo>:Embedded>")
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -212,7 +217,7 @@ foreach(package ${packages} ${winui2_packages} ${winui3_packages} ${webview2_pac
     pywinrt_add_namespace_package(${package})
 
     # speed up builds by precompiling frequently used headers
-    if (package IN_LIST packages OR package IN_LIST winui2_packages OR package IN_LIST winui3_packages)
+    if (NOT package IN_LIST winui3_interop_packages)
         if (NOT first_target)
             set(first_target ${package_target})
 
@@ -309,5 +314,7 @@ endforeach()
 ################################################################################
 
 pywinrt_add_namespace_package("test-winrt/test-winrt-TestComponent")
+target_precompile_headers(${package_target} REUSE_FROM ${first_target})
+set_target_properties(${package_target} PROPERTIES DEFINE_SYMBOL "")
 install(FILES "../_tools/PyWinRT.TestWinRT.${TEST_WINRT_VERSION}/runtimes/win10-${WINDOWS_APP_SDK_ARCH}/native/TestComponent.dll"
     DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/test_winrt/testcomponent/")
