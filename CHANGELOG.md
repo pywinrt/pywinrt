@@ -4,6 +4,10 @@
 
 ## [Unreleased]
 
+### Fixed
+- Fixed Windows wheels selecting an arbitrary older MSVC C++ runtime from the
+  build environment instead of the newest compatible redistributable.
+
 ## [v3.2.1] - 2025-06-06
 
 ## Changed
